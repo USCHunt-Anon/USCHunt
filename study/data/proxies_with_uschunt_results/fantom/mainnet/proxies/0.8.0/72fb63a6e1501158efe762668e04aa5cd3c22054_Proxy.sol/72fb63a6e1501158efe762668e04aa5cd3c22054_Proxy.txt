@@ -1,0 +1,270 @@
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_12941_158_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+size_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _balances (Slither line:1689)
+Checking _allowances (Slither line:1689)
+Checking _totalSupply (Slither line:1689)
+Checking _name (Slither line:1689)
+Checking _symbol (Slither line:1689)
+Checking _owner (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(uint256,string,string,address) returns() (Slither line:3127)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == _owner)
+implementation = _address
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_address
+Checking function: constructor (Slither line:2988)
+Checking function: upgradeTo (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for implementation at slot 6 in contract ERC20 (Slither line:1355)
+Found counter at slot 6 in contract ERC20 (Slither line:1362)
+
+Begin ERC20.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_address
+Checking function: constructor (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: 18 (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _beforeTokenTransfer (Slither line:2988)
+Checking function: _afterTokenTransfer (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End ERC20.find_getter_in_contract (Slither line:3083)
+
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner)
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = _owner = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _owner = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = _totalSupply = initialSupply (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _totalSupply = initialSupply (proxy_features line:912)
+functions_writing_to_variable: exp = _name = token_name (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _name = token_name (proxy_features line:912)
+functions_writing_to_variable: exp = _symbol = token_symbol (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _symbol = token_symbol (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementaion_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementaion_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementaion_
+functions_writing_to_variable: exp = _balances[_owner] = initialSupply (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _balances[_owner] = initialSupply (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: _balances[_owner] (proxy_features line:920)
+functions_writing_to_variable: constructor writes implementaion_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == _owner) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _address (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _address (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _address
+functions_writing_to_variable: upgradeTo writes _address to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_address', 'implementaion_']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == _owner)
+has_compatibility_checks: condition msg.sender == _owner
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0)
+Found public function: constructor
+Found public function: upgradeTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == _owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _address

@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#22-87)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#22-87) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#238-302)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#238-302) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "RainSpiritStrategyProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#314-436)",
+        "elements": [],
+        "description": "RainSpiritStrategyProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#314-436) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "1b3e1c581395a73f9bc54385cc1eb98ae4da433817406e5230154f6c32a9f3cf",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "RainSpiritStrategyProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy._implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.6.12/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol/099EA71e5B0C7E350dee2f5EA397AB4E7C489580_RainSpiritStrategyProxy.sol#238-302)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "RainSpiritStrategyProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "RainSpiritStrategyProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

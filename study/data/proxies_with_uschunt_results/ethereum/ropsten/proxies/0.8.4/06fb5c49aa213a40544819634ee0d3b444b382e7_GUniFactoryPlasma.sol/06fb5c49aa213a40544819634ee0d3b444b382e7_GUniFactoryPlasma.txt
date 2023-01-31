@@ -1,0 +1,1444 @@
+
+Begin IEIP173Proxy.is_proxy (Slither line:1425)
+
+
+End IEIP173Proxy.is_proxy (Slither line:1428)
+
+
+Begin IEIP173Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IEIP173Proxy 
+
+End IEIP173Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementationAddress'
+Looking for corresponding Variable
+Current function: _fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementationAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+_fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1517:66:0', 'type': '', 'value': '0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc'} (Slither line:1899)
+Found hardcoded storage slot in _fallback: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1917)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is constant (Slither line:1146)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: receive() returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: _fallback() returns() (Slither line:3117)
+Checking function: _setImplementation(address,bytes) returns() (Slither line:3117)
+Visibility: internal
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: receive (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: _fallback (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+Begin IEIP173Proxy.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IEIP173Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Begin IEIP173Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: proxyAdmin() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: transferProxyAdmin(address) returns() (Slither line:3117)
+Visibility: external
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: external
+Checking function: upgradeToAndCall(address,bytes) returns() (Slither line:3117)
+Visibility: external
+
+End IEIP173Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Begin ERC165.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End ERC165.find_getter_in_contract (Slither line:3073)
+
+
+Begin ERC165.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3117)
+Visibility: external
+
+End ERC165.find_setter_in_contract (Slither line:3315)
+
+
+Begin OwnableUninitialized.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2978)
+Checking function: manager (Slither line:2978)
+manager returns address variable  (Slither line:2998)
+RETURN node expression: _manager (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+
+End OwnableUninitialized.find_getter_in_contract (Slither line:3073)
+
+
+Begin OwnableUninitialized.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: manager() returns(address) (Slither line:3117)
+Visibility: public
+_manager
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+_manager = address(0)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+onlyManager()
+OwnershipTransferred(_manager,address(0))
+_manager
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+OwnershipTransferred(_manager,newOwner)
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+require(bool,string)(newOwner != address(0),Ownable: new manager is the zero address)
+_manager = newOwner
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+onlyManager()
+_manager
+
+End OwnableUninitialized.find_setter_in_contract (Slither line:3315)
+
+
+Begin IGUniPoolStorage.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IGUniPoolStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin IGUniPoolStorage.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: initialize(string,string,address,uint16,int24,int24,address) returns() (Slither line:3117)
+
+End IGUniPoolStorage.find_setter_in_contract (Slither line:3315)
+
+
+Begin IGUniFactory.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IGUniFactory.find_getter_in_contract (Slither line:3073)
+
+
+Begin IGUniFactory.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: createPool(address,address,uint24,int24,int24) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: createManagedPool(address,address,uint24,uint16,int24,int24) returns(address) (Slither line:3117)
+Visibility: external
+
+End IGUniFactory.find_setter_in_contract (Slither line:3315)
+
+
+Begin IUniswapV3TickSpacing.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IUniswapV3TickSpacing.find_getter_in_contract (Slither line:3073)
+
+
+Begin IUniswapV3TickSpacing.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: tickSpacing() returns(int24) (Slither line:3117)
+Visibility: external
+
+End IUniswapV3TickSpacing.find_setter_in_contract (Slither line:3315)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IERC20.find_getter_in_contract (Slither line:3073)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: totalSupply() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+
+End IERC20.find_setter_in_contract (Slither line:3315)
+
+
+Begin IERC20Metadata.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IERC20Metadata.find_getter_in_contract (Slither line:3073)
+
+
+Begin IERC20Metadata.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: name() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3117)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+
+End IERC20Metadata.find_setter_in_contract (Slither line:3315)
+
+
+Begin IUniswapV3Factory.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IUniswapV3Factory.find_getter_in_contract (Slither line:3073)
+
+
+Begin IUniswapV3Factory.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: owner() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: feeAmountTickSpacing(uint24) returns(int24) (Slither line:3117)
+Visibility: external
+Checking function: getPool(address,address,uint24) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: createPool(address,address,uint24) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: setOwner(address) returns() (Slither line:3117)
+Visibility: external
+Checking function: enableFeeAmount(uint24,int24) returns() (Slither line:3117)
+Visibility: external
+
+End IUniswapV3Factory.find_setter_in_contract (Slither line:3315)
+
+
+Begin EnumerableSet.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: _add (Slither line:2978)
+_add returns bool variable  (Slither line:2998)
+RETURN node expression: false (Slither line:3018)
+RETURN node expression: true (Slither line:3018)
+Checking function: _remove (Slither line:2978)
+_remove returns bool variable  (Slither line:2998)
+RETURN node expression: false (Slither line:3018)
+RETURN node expression: true (Slither line:3018)
+Checking function: _contains (Slither line:2978)
+_contains returns bool variable  (Slither line:2998)
+RETURN node expression: set._indexes[value] != 0 (Slither line:3018)
+Checking function: _length (Slither line:2978)
+_length returns uint256 variable  (Slither line:2998)
+RETURN node expression: set._values.length (Slither line:3018)
+Checking function: _at (Slither line:2978)
+_at returns bytes32 variable  (Slither line:2998)
+RETURN node expression: set._values[index] (Slither line:3018)
+Checking function: _values (Slither line:2978)
+_values returns bytes32[] variable  (Slither line:2998)
+RETURN node expression: set._values (Slither line:3018)
+Checking function: add (Slither line:2978)
+add returns bool variable  (Slither line:2998)
+RETURN node expression: _add(set._inner,value) (Slither line:3018)
+Checking function: remove (Slither line:2978)
+remove returns bool variable  (Slither line:2998)
+RETURN node expression: _remove(set._inner,value) (Slither line:3018)
+Checking function: contains (Slither line:2978)
+contains returns bool variable  (Slither line:2998)
+RETURN node expression: _contains(set._inner,value) (Slither line:3018)
+Checking function: length (Slither line:2978)
+length returns uint256 variable  (Slither line:2998)
+RETURN node expression: _length(set._inner) (Slither line:3018)
+Checking function: at (Slither line:2978)
+at returns bytes32 variable  (Slither line:2998)
+RETURN node expression: _at(set._inner,index) (Slither line:3018)
+Checking function: values (Slither line:2978)
+values returns bytes32[] variable  (Slither line:2998)
+RETURN node expression: _values(set._inner) (Slither line:3018)
+Checking function: add (Slither line:2978)
+add returns bool variable  (Slither line:2998)
+RETURN node expression: _add(set._inner,bytes32(uint256(uint160(value)))) (Slither line:3018)
+Checking function: remove (Slither line:2978)
+remove returns bool variable  (Slither line:2998)
+RETURN node expression: _remove(set._inner,bytes32(uint256(uint160(value)))) (Slither line:3018)
+Checking function: contains (Slither line:2978)
+contains returns bool variable  (Slither line:2998)
+RETURN node expression: _contains(set._inner,bytes32(uint256(uint160(value)))) (Slither line:3018)
+Checking function: length (Slither line:2978)
+length returns uint256 variable  (Slither line:2998)
+RETURN node expression: _length(set._inner) (Slither line:3018)
+Checking function: at (Slither line:2978)
+at returns address variable  (Slither line:2998)
+RETURN node expression: address(uint160(uint256(_at(set._inner,index)))) (Slither line:3018)
+Checking function: values (Slither line:2978)
+values returns address[] variable  (Slither line:2998)
+RETURN node expression: result (Slither line:3018)
+Checking function: add (Slither line:2978)
+add returns bool variable  (Slither line:2998)
+RETURN node expression: _add(set._inner,bytes32(value)) (Slither line:3018)
+Checking function: remove (Slither line:2978)
+remove returns bool variable  (Slither line:2998)
+RETURN node expression: _remove(set._inner,bytes32(value)) (Slither line:3018)
+Checking function: contains (Slither line:2978)
+contains returns bool variable  (Slither line:2998)
+RETURN node expression: _contains(set._inner,bytes32(value)) (Slither line:3018)
+Checking function: length (Slither line:2978)
+length returns uint256 variable  (Slither line:2998)
+RETURN node expression: _length(set._inner) (Slither line:3018)
+Checking function: at (Slither line:2978)
+at returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(_at(set._inner,index)) (Slither line:3018)
+Checking function: values (Slither line:2978)
+values returns uint256[] variable  (Slither line:2998)
+RETURN node expression: result (Slither line:3018)
+
+End EnumerableSet.find_getter_in_contract (Slither line:3073)
+
+
+Begin EnumerableSet.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: _add(EnumerableSet.Set,bytes32) returns(bool) (Slither line:3117)
+Visibility: private
+Checking function: _remove(EnumerableSet.Set,bytes32) returns(bool) (Slither line:3117)
+Visibility: private
+Checking function: _contains(EnumerableSet.Set,bytes32) returns(bool) (Slither line:3117)
+Visibility: private
+Checking function: _length(EnumerableSet.Set) returns(uint256) (Slither line:3117)
+Visibility: private
+Checking function: _at(EnumerableSet.Set,uint256) returns(bytes32) (Slither line:3117)
+Visibility: private
+Checking function: _values(EnumerableSet.Set) returns(bytes32[]) (Slither line:3117)
+Visibility: private
+Checking function: add(EnumerableSet.Bytes32Set,bytes32) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: remove(EnumerableSet.Bytes32Set,bytes32) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: contains(EnumerableSet.Bytes32Set,bytes32) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: length(EnumerableSet.Bytes32Set) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: at(EnumerableSet.Bytes32Set,uint256) returns(bytes32) (Slither line:3117)
+Visibility: internal
+Checking function: values(EnumerableSet.Bytes32Set) returns(bytes32[]) (Slither line:3117)
+Visibility: internal
+Checking function: add(EnumerableSet.AddressSet,address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: remove(EnumerableSet.AddressSet,address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: contains(EnumerableSet.AddressSet,address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: length(EnumerableSet.AddressSet) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: at(EnumerableSet.AddressSet,uint256) returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: values(EnumerableSet.AddressSet) returns(address[]) (Slither line:3117)
+Visibility: internal
+Checking function: add(EnumerableSet.UintSet,uint256) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: remove(EnumerableSet.UintSet,uint256) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: contains(EnumerableSet.UintSet,uint256) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: length(EnumerableSet.UintSet) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: at(EnumerableSet.UintSet,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: values(EnumerableSet.UintSet) returns(uint256[]) (Slither line:3117)
+Visibility: internal
+
+End EnumerableSet.find_setter_in_contract (Slither line:3315)
+
+
+Begin Initializable.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End Initializable.find_getter_in_contract (Slither line:3073)
+
+
+Begin Initializable.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+
+End Initializable.find_setter_in_contract (Slither line:3315)
+
+
+Begin GUniFactoryStorage.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2978)
+Checking function: manager (Slither line:2978)
+manager returns address variable  (Slither line:2998)
+RETURN node expression: _manager (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: initialize (Slither line:2978)
+Checking function: setPoolImplementation (Slither line:2978)
+Checking function: setGelatoDeployer (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End GUniFactoryStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin GUniFactoryStorage.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: initialize(address,address,address) returns() (Slither line:3117)
+Checking function: setPoolImplementation(address) returns() (Slither line:3117)
+Visibility: external
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+UpdatePoolImplementation(poolImplementation,nextImplementation)
+_manager
+poolImplementation = nextImplementation
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: setGelatoDeployer(address) returns() (Slither line:3117)
+Visibility: external
+onlyManager()
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+UpdateGelatoDeployer(gelatoDeployer,nextGelatoDeployer)
+_manager
+gelatoDeployer = nextGelatoDeployer
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: manager() returns(address) (Slither line:3117)
+Visibility: public
+_manager
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+_manager
+OwnershipTransferred(_manager,address(0))
+_manager = address(0)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+_manager = newOwner
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+require(bool,string)(newOwner != address(0),Ownable: new manager is the zero address)
+_manager
+OwnershipTransferred(_manager,newOwner)
+
+End GUniFactoryStorage.find_setter_in_contract (Slither line:3315)
+
+
+Begin GUniFactoryPlasma.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2978)
+Checking function: initialize (Slither line:2978)
+Checking function: setPoolImplementation (Slither line:2978)
+Checking function: setGelatoDeployer (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: manager (Slither line:2978)
+manager returns address variable  (Slither line:2998)
+RETURN node expression: _manager (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: createManagedPool (Slither line:2978)
+createManagedPool returns address variable called pool (Slither line:2998)
+RETURN node expression: _createPool(tokenA,tokenB,uniFee,managerFee,lowerTick,upperTick,msg.sender) (Slither line:3018)
+Checking function: createPool (Slither line:2978)
+createPool returns address variable called pool (Slither line:2998)
+RETURN node expression: _createPool(tokenA,tokenB,uniFee,0,lowerTick,upperTick,address(0)) (Slither line:3018)
+Checking function: _createPool (Slither line:2978)
+_createPool returns address variable called pool (Slither line:2998)
+Checking function: _validateTickSpacing (Slither line:2978)
+_validateTickSpacing returns bool variable  (Slither line:2998)
+RETURN node expression: lowerTick < upperTick && lowerTick % spacing == 0 && upperTick % spacing == 0 (Slither line:3018)
+Checking function: getTokenName (Slither line:2978)
+getTokenName returns string variable  (Slither line:2998)
+RETURN node expression: _append(Gelato Uniswap ,symbol0,/,symbol1, LP) (Slither line:3018)
+Checking function: upgradePools (Slither line:2978)
+Checking function: upgradePoolsAndCall (Slither line:2978)
+Checking function: makePoolsImmutable (Slither line:2978)
+Checking function: isPoolImmutable (Slither line:2978)
+isPoolImmutable returns bool variable  (Slither line:2998)
+RETURN node expression: address(0) == getProxyAdmin(pool) (Slither line:3018)
+Checking function: getGelatoPools (Slither line:2978)
+getGelatoPools returns address[] variable  (Slither line:2998)
+RETURN node expression: getPools(gelatoDeployer) (Slither line:3018)
+Checking function: getDeployers (Slither line:2978)
+getDeployers returns address[] variable  (Slither line:2998)
+RETURN node expression: deployers (Slither line:3018)
+Checking function: getPools (Slither line:2978)
+getPools returns address[] variable  (Slither line:2998)
+RETURN node expression: pools (Slither line:3018)
+Checking function: numPools (Slither line:2978)
+numPools returns uint256 variable called result (Slither line:2998)
+Checking function: numDeployers (Slither line:2978)
+numDeployers returns uint256 variable  (Slither line:2998)
+RETURN node expression: _deployers.length() (Slither line:3018)
+Checking function: numPools (Slither line:2978)
+numPools returns uint256 variable  (Slither line:2998)
+RETURN node expression: _pools[deployer].length() (Slither line:3018)
+Checking function: getProxyAdmin (Slither line:2978)
+getProxyAdmin returns address variable  (Slither line:2998)
+RETURN node expression: IEIP173Proxy(pool).proxyAdmin() (Slither line:3018)
+Checking function: _getDeployer (Slither line:2978)
+_getDeployer returns address variable  (Slither line:2998)
+RETURN node expression: _deployers.at(index) (Slither line:3018)
+Checking function: _getPool (Slither line:2978)
+_getPool returns address variable  (Slither line:2998)
+RETURN node expression: _pools[deployer].at(index) (Slither line:3018)
+Checking function: _getTokenOrder (Slither line:2978)
+_getTokenOrder returns address variable called token0 (Slither line:2998)
+_getTokenOrder returns address variable called token1 (Slither line:2998)
+Checking function: _append (Slither line:2978)
+_append returns string variable  (Slither line:2998)
+RETURN node expression: string(abi.encodePacked(a,b,c,d,e)) (Slither line:3018)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End GUniFactoryPlasma.find_getter_in_contract (Slither line:3073)
+
+
+Begin GUniFactoryPlasma.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: createManagedPool(address,address,uint24,uint16,int24,int24) returns(address) (Slither line:3117)
+Visibility: external
+set._indexes[value] != 0
+(token0,token1) = (tokenA,tokenB)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_deployers.add(msg.sender)
+set._values.push(value)
+(token0,token1) = (tokenB,tokenA)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_pools[msg.sender].add(pool)
+set._indexes[value] = set._values.length
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+PoolCreated(uniPool,manager,pool)
+true
+_createPool(tokenA,tokenB,uniFee,managerFee,lowerTick,upperTick,msg.sender)
+false
+(token0,token1) = _getTokenOrder(tokenA,tokenB)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+pool = address(new EIP173Proxy(poolImplementation,address(this),))
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+lowerTick < upperTick && lowerTick % spacing == 0 && upperTick % spacing == 0
+name = result
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_add(set._inner,bytes32(uint256(uint160(value))))
+require(bool,string)(tokenA != tokenB,same token)
+require(bool,string)(token0 != address(0),no address zero)
+require(bool,string)(uniPool != address(0),uniswap pool does not exist)
+require(bool,string)(_validateTickSpacing(uniPool,lowerTick,upperTick),tickSpacing mismatch)
+IGUniPoolStorage(pool).initialize(name,G-UNI,uniPool,managerFee,lowerTick,upperTick,manager)
+Checking function: createPool(address,address,uint24,int24,int24) returns(address) (Slither line:3117)
+Visibility: external
+set._indexes[value] != 0
+(token0,token1) = (tokenA,tokenB)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_deployers.add(msg.sender)
+set._values.push(value)
+(token0,token1) = (tokenB,tokenA)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_pools[msg.sender].add(pool)
+set._indexes[value] = set._values.length
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+PoolCreated(uniPool,manager,pool)
+true
+false
+(token0,token1) = _getTokenOrder(tokenA,tokenB)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+pool = address(new EIP173Proxy(poolImplementation,address(this),))
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+lowerTick < upperTick && lowerTick % spacing == 0 && upperTick % spacing == 0
+name = result
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_add(set._inner,bytes32(uint256(uint160(value))))
+require(bool,string)(tokenA != tokenB,same token)
+_createPool(tokenA,tokenB,uniFee,0,lowerTick,upperTick,address(0))
+require(bool,string)(token0 != address(0),no address zero)
+require(bool,string)(uniPool != address(0),uniswap pool does not exist)
+require(bool,string)(_validateTickSpacing(uniPool,lowerTick,upperTick),tickSpacing mismatch)
+IGUniPoolStorage(pool).initialize(name,G-UNI,uniPool,managerFee,lowerTick,upperTick,manager)
+Checking function: _createPool(address,address,uint24,uint16,int24,int24,address) returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _validateTickSpacing(address,int24,int24) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: getTokenName(address,address) returns(string) (Slither line:3117)
+Visibility: external
+string(abi.encodePacked(a,b,c,d,e))
+_append(Gelato Uniswap ,symbol0,/,symbol1, LP)
+Checking function: upgradePools(address[]) returns() (Slither line:3117)
+Visibility: external
+onlyManager()
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+i ++
+IEIP173Proxy(pools[i]).upgradeTo(poolImplementation)
+_manager
+Checking function: upgradePoolsAndCall(address[],bytes[]) returns() (Slither line:3117)
+Visibility: external
+require(bool,string)(pools.length == datas.length,mismatching array length)
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+i ++
+IEIP173Proxy(pools[i]).upgradeToAndCall(poolImplementation,datas[i])
+_manager
+Checking function: makePoolsImmutable(address[]) returns() (Slither line:3117)
+Visibility: external
+IEIP173Proxy(pools[i]).transferProxyAdmin(address(0))
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+_manager
+i ++
+Checking function: isPoolImmutable(address) returns(bool) (Slither line:3117)
+Visibility: external
+IEIP173Proxy(pool).proxyAdmin()
+address(0) == getProxyAdmin(pool)
+Checking function: getGelatoPools() returns(address[]) (Slither line:3117)
+Visibility: external
+_pools[deployer].length()
+_pools[deployer].at(index)
+i ++
+pools[i] = _getPool(deployer,i)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_length(set._inner)
+pools
+set._values.length
+set._values[index]
+getPools(gelatoDeployer)
+address(uint160(uint256(_at(set._inner,index))))
+Checking function: getDeployers() returns(address[]) (Slither line:3117)
+Visibility: public
+deployers
+_length(set._inner)
+set._values.length
+set._values[index]
+_deployers.at(index)
+_deployers.length()
+i ++
+deployers[i] = _getDeployer(i)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+address(uint160(uint256(_at(set._inner,index))))
+Checking function: getPools(address) returns(address[]) (Slither line:3117)
+Visibility: public
+_pools[deployer].length()
+_pools[deployer].at(index)
+i ++
+pools[i] = _getPool(deployer,i)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_length(set._inner)
+pools
+set._values.length
+set._values[index]
+address(uint160(uint256(_at(set._inner,index))))
+Checking function: numPools() returns(uint256) (Slither line:3117)
+Visibility: public
+deployers
+_pools[deployer].length()
+_length(set._inner)
+set._values.length
+i ++
+result += numPools(deployers[i])
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+set._values[index]
+_deployers.at(index)
+_deployers.length()
+i ++
+deployers[i] = _getDeployer(i)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+address(uint160(uint256(_at(set._inner,index))))
+Checking function: numDeployers() returns(uint256) (Slither line:3117)
+Visibility: public
+_deployers.length()
+_length(set._inner)
+set._values.length
+Checking function: numPools(address) returns(uint256) (Slither line:3117)
+Visibility: public
+_pools[deployer].length()
+_length(set._inner)
+set._values.length
+Checking function: getProxyAdmin(address) returns(address) (Slither line:3117)
+Visibility: public
+IEIP173Proxy(pool).proxyAdmin()
+Checking function: _getDeployer(uint256) returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _getPool(address,uint256) returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _getTokenOrder(address,address) returns(address,address) (Slither line:3117)
+Visibility: internal
+Checking function: _append(string,string,string,string,string) returns(string) (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: createPool(address,address,uint24,int24,int24) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: createManagedPool(address,address,uint24,uint16,int24,int24) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: initialize(address,address,address) returns() (Slither line:3117)
+Checking function: setPoolImplementation(address) returns() (Slither line:3117)
+Visibility: external
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+UpdatePoolImplementation(poolImplementation,nextImplementation)
+_manager
+poolImplementation = nextImplementation
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: setGelatoDeployer(address) returns() (Slither line:3117)
+Visibility: external
+onlyManager()
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+UpdateGelatoDeployer(gelatoDeployer,nextGelatoDeployer)
+gelatoDeployer = nextGelatoDeployer
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_manager
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: manager() returns(address) (Slither line:3117)
+Visibility: public
+_manager
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+_manager = address(0)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+OwnershipTransferred(_manager,address(0))
+_manager
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+_manager = newOwner
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(manager() == msg.sender,Ownable: caller is not the manager)
+onlyManager()
+require(bool,string)(newOwner != address(0),Ownable: new manager is the zero address)
+_manager
+OwnershipTransferred(_manager,newOwner)
+
+End GUniFactoryPlasma.find_setter_in_contract (Slither line:3315)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC165.is_proxy (Slither line:1425)
+
+
+End ERC165.is_proxy (Slither line:1428)
+
+
+Begin ERC165.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC165 
+
+End ERC165.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EIP173Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin EIP173Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: retSz__fallback_asm_0 = returndatasize()() (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: returndatasize()
+Type of call: uint256 (Slither line:2807)
+Args:
+
+End EIP173Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin EIP173Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,retSz__fallback_asm_0) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+retSz__fallback_asm_0
+
+End EIP173Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin EIP173Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: success__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementationAddress__fallback_asm_0,0x0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+implementationAddress__fallback_asm_0
+0x0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is implementationAddress__fallback_asm_0 (Slither line:2818)
+dest.value: implementationAddress__fallback_asm_0 (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin EIP173Proxy.find_delegate_variable_from_name
+Searching for implementationAddress__fallback_asm_0 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+_fallback contains assembly, searching for sload (Slither line:1875)
+
+End EIP173Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End EIP173Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin EIP173Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2792)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End EIP173Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin EIP173Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,retSz__fallback_asm_0) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+retSz__fallback_asm_0
+
+End EIP173Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin EIP173Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1963_181_0__fallback_asm_0 = success__fallback_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End EIP173Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EIP173Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementationAddress'
+Looking for corresponding Variable
+Current function: _fallback
+
+Begin EIP173Proxy.find_delegate_variable_from_name
+Searching for implementationAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+_fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1517:66:0', 'type': '', 'value': '0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc'} (Slither line:1899)
+Found hardcoded storage slot in _fallback: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1917)
+
+End EIP173Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End EIP173Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting EIP173Proxy._delegate_variable = EIP173Proxy._proxy_impl_slot: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1473)
+
+
+End EIP173Proxy.is_proxy (Slither line:1476)
+
+
+Begin EIP173Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EIP173Proxy 
+Call destination 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is constant (Slither line:1146)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is the implementation storage slot (Slither line:1149)
+
+EIP173Proxy is delegating to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Looking for setter (Slither line:1200)
+
+
+Begin EIP173Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: constructor(address,address,bytes) returns() (Slither line:3117)
+Checking function: proxyAdmin() returns(address) (Slither line:3117)
+Visibility: external
+_proxyAdmin()
+adminAddress = sload(uint256)(0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3117)
+Visibility: external
+supportsInterface contains assembly (Slither line:3143)
+implementation = sload(uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+support
+false
+true
+false
+Checking function: transferProxyAdmin(address) returns() (Slither line:3117)
+Visibility: external
+ProxyAdminTransferred(previousAdmin,newAdmin)
+adminAddress = sload(uint256)(0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+sstore(uint256,uint256)(0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103,newAdmin)
+sstore(uint256,uint256)
+onlyProxyAdmin()
+_setProxyAdmin(newAdmin)
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: external
+sstore(uint256,uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc,newImplementation)
+sstore(uint256,uint256)
+
+End EIP173Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: EIP173Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin EIP173Proxy.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: receive (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: _fallback (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: proxyAdmin (Slither line:2978)
+proxyAdmin returns address variable  (Slither line:2998)
+RETURN node expression: _proxyAdmin() (Slither line:3018)
+Checking function: supportsInterface (Slither line:2978)
+supportsInterface returns bool variable  (Slither line:2998)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+RETURN node expression: support (Slither line:3018)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+RETURN node expression: false (Slither line:3018)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+supportsInterface contains assembly (Slither line:3041)
+RETURN node expression: true (Slither line:3018)
+supportsInterface contains assembly (Slither line:3041)
+RETURN node expression: false (Slither line:3018)
+supportsInterface contains assembly (Slither line:3041)
+Checking function: transferProxyAdmin (Slither line:2978)
+Checking function: upgradeTo (Slither line:2978)
+Checking function: upgradeToAndCall (Slither line:2978)
+Checking function: _proxyAdmin (Slither line:2978)
+_proxyAdmin returns address variable called adminAddress (Slither line:2998)
+_proxyAdmin contains assembly (Slither line:3041)
+_proxyAdmin contains assembly (Slither line:3041)
+_proxyAdmin contains assembly (Slither line:3041)
+Checking function: _setProxyAdmin (Slither line:2978)
+
+End EIP173Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in EIP173Proxy (Slither line:1305)
+
+Begin IEIP173Proxy.find_getter_in_contract (Slither line:2964)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IEIP173Proxy.find_getter_in_contract (Slither line:3073)
+
+detect_storage_slot: EIP173Proxy
+Setter found in contract EIP173Proxy
+Checking external function proxyAdmin
+Checking external function supportsInterface
+Checking external function transferProxyAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function EIP173Proxy.proxyAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy.transferProxyAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy.upgradeToAndCall (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc,newImplementation)
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function EIP173Proxy.constructor (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc,newImplementation)
+functions_writing_to_variable: constructor writes newImplementation to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function EIP173Proxy._setProxyAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy.supportsInterface (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy.upgradeTo (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc,newImplementation)
+functions_writing_to_variable: upgradeTo writes newImplementation to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function EIP173Proxy._setImplementation (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc,newImplementation)
+functions_writing_to_variable: _setImplementation writes newImplementation to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function EIP173Proxy._proxyAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function EIP173Proxy.receive (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function upgradeToAndCall
+has_compatibility_checks: IF node exp = data.length > 0
+has_compatibility_checks: IF node exp = ! success
+require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+has_compatibility_checks: condition msg.sender == _proxyAdmin()
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = data.length > 0
+has_compatibility_checks: IF node exp = ! success
+has_compatibility_checks: checking external function upgradeTo
+has_compatibility_checks: IF node exp = data.length > 0
+has_compatibility_checks: IF node exp = ! success
+require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+has_compatibility_checks: condition msg.sender == _proxyAdmin()
+has_compatibility_checks: skipping internal function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: success__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementationAddress__fallback_asm_0,0x0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: implementationAddress__fallback_asm_0 = sload(uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found external function: receive
+Found fallback
+Found public function: constructor
+Found external function: proxyAdmin
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc,newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0,0,returnDataSize__setImplementation_asm_2)
+has_time_delay: (node.type) IF
+(Expression) data.length > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0,returnDataSize__setImplementation_asm_2)
+has_time_delay: (node.type) IF
+(Expression) ! success
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success) = newImplementation.delegatecall(data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation,)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == _proxyAdmin(),NOT_AUTHORIZED)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyProxyAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) adminAddress = sload(uint256)(0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103)
+has_time_delay: (node.type) EXPRESSION
+(Expression) previousImplementation = sload(uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc)
+has_time_delay: (node.type) EXPRESSION
+(Expression) returnDataSize__setImplementation_asm_2 = returndatasize()()
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyImplementationUpdated(previousImplementation,newImplementation)
+
+Begin OwnableUninitialized.is_proxy (Slither line:1425)
+
+
+End OwnableUninitialized.is_proxy (Slither line:1428)
+
+
+Begin OwnableUninitialized.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnableUninitialized 
+
+End OwnableUninitialized.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGUniPoolStorage.is_proxy (Slither line:1425)
+
+
+End IGUniPoolStorage.is_proxy (Slither line:1428)
+
+
+Begin IGUniPoolStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGUniPoolStorage 
+
+End IGUniPoolStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGUniFactory.is_proxy (Slither line:1425)
+
+
+End IGUniFactory.is_proxy (Slither line:1428)
+
+
+Begin IGUniFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGUniFactory 
+
+End IGUniFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV3TickSpacing.is_proxy (Slither line:1425)
+
+
+End IUniswapV3TickSpacing.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV3TickSpacing.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV3TickSpacing 
+
+End IUniswapV3TickSpacing.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20Metadata.is_proxy (Slither line:1425)
+
+
+End IERC20Metadata.is_proxy (Slither line:1428)
+
+
+Begin IERC20Metadata.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20Metadata 
+
+End IERC20Metadata.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV3Factory.is_proxy (Slither line:1425)
+
+
+End IUniswapV3Factory.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV3Factory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV3Factory 
+
+End IUniswapV3Factory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EnumerableSet.is_proxy (Slither line:1425)
+
+
+End EnumerableSet.is_proxy (Slither line:1428)
+
+
+Begin EnumerableSet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EnumerableSet 
+
+End EnumerableSet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GUniFactoryStorage.is_proxy (Slither line:1425)
+
+
+End GUniFactoryStorage.is_proxy (Slither line:1428)
+
+
+Begin GUniFactoryStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GUniFactoryStorage 
+
+End GUniFactoryStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GUniFactoryPlasma.is_proxy (Slither line:1425)
+
+
+End GUniFactoryPlasma.is_proxy (Slither line:1428)
+
+
+Begin GUniFactoryPlasma.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GUniFactoryPlasma 
+
+End GUniFactoryPlasma.is_upgradeable_proxy (Slither line:1407)
+

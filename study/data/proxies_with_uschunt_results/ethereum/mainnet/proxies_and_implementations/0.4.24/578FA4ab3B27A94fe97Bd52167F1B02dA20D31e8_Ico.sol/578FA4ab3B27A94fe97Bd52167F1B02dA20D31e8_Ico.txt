@@ -1,0 +1,1396 @@
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenDB.is_proxy (Slither line:1425)
+
+
+End TokenDB.is_proxy (Slither line:1428)
+
+
+Begin TokenDB.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenDB 
+
+End TokenDB.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Token.find_delegatecall_in_exp_node
+
+Found Expression Node: revert()() (Slither line:2802)
+Expression called: revert()
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Token.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Token.is_proxy (Slither line:1476)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ico.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Ico.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let m := mload(0x40) (Slither line:1576)
+    calldatacopy(m, 0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(gas(), _trg, m, calldatasize(), m, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_trg'
+Looking for corresponding Variable
+Current function: buy
+
+Begin Ico.find_delegate_variable_from_name
+Searching for _trg (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking KYC (Slither line:1689)
+Checking transferRight (Slither line:1689)
+Checking vesting (Slither line:1689)
+Checking currentPhase (Slither line:1689)
+Checking currentRate (Slither line:1689)
+Checking currentRateM (Slither line:1689)
+Checking privateSale1Hardcap (Slither line:1689)
+Checking privateSale2Hardcap (Slither line:1689)
+Checking thisBalance (Slither line:1689)
+Checking offchainUploaderAddress (Slither line:1689)
+Checking setKYCAddress (Slither line:1689)
+Checking setRateAddress (Slither line:1689)
+Checking libAddress (Slither line:1689)
+Checking token (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _trg (Slither line:1703)
+_trg is a Local Variable in Ico.buy (Slither line:1707)
+Expression: libAddress (Slither line:1719)
+Identifier value: libAddress (Slither line:1725)
+libAddress is a State Variable in contract Ico (Slither line:1730)
+
+End Ico.find_delegate_variable_by_name
+
+
+End Ico.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Ico.is_proxy (Slither line:1476)
+
+
+Begin Ico.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ico 
+Ico is delegating to libAddress
+Looking for setter (Slither line:1200)
+
+
+Begin Ico.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address,address,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: changeLibAddress(address) returns() (Slither line:3127)
+Visibility: external
+owner == msg.sender
+libAddress = _libAddress
+is an Assignment Operation (Slither line:3216)
+
+End Ico.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: changeLibAddress in contract: Ico (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Ico.find_getter_in_contract (Slither line:2974)
+
+libAddress is a Variable object
+_libAddress
+Checking function: constructor (Slither line:2988)
+Checking function: replaceOwner (Slither line:2988)
+replaceOwner returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: owner == msg.sender (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: changeLibAddress (Slither line:2988)
+Checking function: changeOffchainUploaderAddress (Slither line:2988)
+Checking function: changeKYCAddress (Slither line:2988)
+Checking function: changeSetRateAddress (Slither line:2988)
+Checking function: setVesting (Slither line:2988)
+Checking function: claimVesting (Slither line:2988)
+Checking function: setKYC (Slither line:2988)
+Checking function: setTransferRight (Slither line:2988)
+Checking function: setCurrentRate (Slither line:2988)
+Checking function: setCurrentPhase (Slither line:2988)
+Checking function: offchainUpload (Slither line:2988)
+Checking function: buy (Slither line:2988)
+Checking function: allowTransfer (Slither line:2988)
+allowTransfer returns bool variable called _success (Slither line:3008)
+allowTransfer returns bool variable called _allow (Slither line:3008)
+Checking function: calculateReward (Slither line:2988)
+calculateReward returns bool variable called _success (Slither line:3008)
+calculateReward returns uint256 variable called _reward (Slither line:3008)
+Checking function: calcVesting (Slither line:2988)
+calcVesting returns bool variable called _success (Slither line:3008)
+calcVesting returns uint256 variable called _reward (Slither line:3008)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End Ico.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Ico (Slither line:1305)
+Checking for libAddress at slot 13 in contract IcoLib (Slither line:1355)
+Found libAddress at slot 13 in contract IcoLib (Slither line:1362)
+
+Begin IcoLib.find_getter_in_contract (Slither line:2974)
+
+libAddress is a Variable object
+_libAddress
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: changeLibAddress (Slither line:2988)
+Checking function: changeOffchainUploaderAddress (Slither line:2988)
+Checking function: changeKYCAddress (Slither line:2988)
+Checking function: changeSetRateAddress (Slither line:2988)
+Checking function: setVesting (Slither line:2988)
+Checking function: claimVesting (Slither line:2988)
+Checking function: setKYC (Slither line:2988)
+Checking function: setTransferRight (Slither line:2988)
+Checking function: setCurrentRate (Slither line:2988)
+Checking function: setCurrentPhase (Slither line:2988)
+Checking function: offchainUpload (Slither line:2988)
+Checking function: buy (Slither line:2988)
+Checking function: allowTransfer (Slither line:2988)
+allowTransfer returns bool variable called _success (Slither line:3008)
+allowTransfer returns bool variable called _allow (Slither line:3008)
+Checking function: calculateReward (Slither line:2988)
+calculateReward returns bool variable called _success (Slither line:3008)
+calculateReward returns uint256 variable called _reward (Slither line:3008)
+Checking function: calcVesting (Slither line:2988)
+calcVesting returns bool variable called _success (Slither line:3008)
+calcVesting returns uint256 variable called _reward (Slither line:3008)
+Checking function: constructor (Slither line:2988)
+Checking function: replaceOwner (Slither line:2988)
+replaceOwner returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: owner == msg.sender (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: setVesting (Slither line:2988)
+Checking function: claimVesting (Slither line:2988)
+Checking function: setKYC (Slither line:2988)
+Checking function: setTransferRight (Slither line:2988)
+Checking function: setCurrentRate (Slither line:2988)
+Checking function: setCurrentPhase (Slither line:2988)
+Checking function: offchainUpload (Slither line:2988)
+Checking function: buy (Slither line:2988)
+Checking function: allowTransfer (Slither line:2988)
+allowTransfer returns bool variable called _success (Slither line:3008)
+allowTransfer returns bool variable called _allow (Slither line:3008)
+RETURN node expression: (true,_owner == address(this) || transferRight[_owner] || currentPhase == phaseType.preFinish || currentPhase == phaseType.finish) (Slither line:3028)
+Checking function: calculateReward (Slither line:2988)
+calculateReward returns bool variable called _success (Slither line:3008)
+calculateReward returns uint256 variable called _reward (Slither line:3008)
+RETURN node expression: None (Slither line:3028)
+RETURN node expression: None (Slither line:3028)
+Checking function: calcVesting (Slither line:2988)
+calcVesting returns bool variable called _success (Slither line:3008)
+calcVesting returns uint256 variable called _reward (Slither line:3008)
+RETURN node expression: (true,_reward.sub(_vesting.claimedAmount)) (Slither line:3028)
+RETURN node expression: (true,0) (Slither line:3028)
+RETURN node expression: (true,0) (Slither line:3028)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End IcoLib.find_getter_in_contract (Slither line:3083)
+
+Checking external function replaceOwner
+Checking external function replaceOwner
+Checking external function changeLibAddress
+Checking external function changeOffchainUploaderAddress
+Checking external function changeKYCAddress
+Checking external function changeSetRateAddress
+Checking external function setVesting
+Checking external function claimVesting
+Checking external function setKYC
+Checking external function setTransferRight
+Checking external function setCurrentRate
+Checking external function setCurrentPhase
+Checking external function offchainUpload
+Checking public function buy
+Checking public function allowTransfer
+Checking public function calculateReward
+Checking public function calcVesting
+Checking public function fallback
+functions_writing_to_variable: libAddress
+functions_writing_to_variable: checking function Ico.replaceOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.changeLibAddress (proxy_features line:898)
+functions_writing_to_variable: exp = libAddress = _libAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: libAddress = _libAddress (proxy_features line:912)
+functions_writing_to_variable: Identifier: libAddress (proxy_features line:924)
+get_value_assigned: libAddress = _libAddress
+functions_writing_to_variable: exp = forOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:909)
+functions_writing_to_variable: exp = owner == msg.sender (proxy_features line:909)
+functions_writing_to_variable: changeLibAddress writes _libAddress to libAddress (proxy_features line:929)
+functions_writing_to_variable: checking function Ico.calcVesting (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.setTransferRight (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = currentPhase = phaseType.pause (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: currentPhase = phaseType.pause (proxy_features line:912)
+functions_writing_to_variable: exp = libAddress = _libAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: libAddress = _libAddress (proxy_features line:912)
+functions_writing_to_variable: Identifier: libAddress (proxy_features line:924)
+get_value_assigned: libAddress = _libAddress
+functions_writing_to_variable: exp = token = Token(_tokenAddress) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: token = Token(_tokenAddress) (proxy_features line:912)
+functions_writing_to_variable: exp = offchainUploaderAddress = _offchainUploaderAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: offchainUploaderAddress = _offchainUploaderAddress (proxy_features line:912)
+functions_writing_to_variable: exp = setKYCAddress = _setKYCAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: setKYCAddress = _setKYCAddress (proxy_features line:912)
+functions_writing_to_variable: exp = setRateAddress = _setRateAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: setRateAddress = _setRateAddress (proxy_features line:912)
+functions_writing_to_variable: exp = Owned(_owner) (proxy_features line:909)
+functions_writing_to_variable: constructor writes _libAddress to libAddress (proxy_features line:929)
+functions_writing_to_variable: checking function Ico.changeOffchainUploaderAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.setCurrentRate (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.changeKYCAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.setCurrentPhase (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.changeSetRateAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.offchainUpload (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.setVesting (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.buy (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.claimVesting (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.allowTransfer (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.setKYC (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.calculateReward (proxy_features line:898)
+functions_writing_to_variable: checking function Ico.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_libAddress', '_libAddress']
+has_compatibility_checks: checking external function changeLibAddress
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let m := mload(0x40)
+    calldatacopy(m, 0, calldatasize())
+    let success := delegatecall(gas(), _trg, m, calldatasize(), m, 0)
+    switch success
+    case 0 {
+        revert(0, 0)
+    }
+    default {
+        return(m, 0)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _trg = libAddress
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found external function: replaceOwner
+has_time_delay: (node.type) RETURN
+(Expression) owner == msg.sender
+has_time_delay: (node.type) EXPRESSION
+(Expression) libAddress = _libAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) forOwner()
+
+Begin IcoLib.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: assert(bool)(c == 0 || c / a == b) (Slither line:2802)
+Expression called: assert(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+c == 0 || c / a == b
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(117).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(117).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(112).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(112).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _success = true (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: buy() (Slither line:2802)
+Expression called: buy
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _amount = _input.mul(1e8).mul(100).mul(currentRate).div(1e18).div(currentRateM) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _input.mul(1e8).mul(100).mul(currentRate).div(1e18).div
+Type of call: uint256 (Slither line:2817)
+Args:
+currentRateM
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: c = a - b (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: assert(bool)(c <= a) (Slither line:2802)
+Expression called: assert(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+c <= a
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(109).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(109).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = 0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(102).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(102).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: c = a * b (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(142).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(142).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: Brought(msg.sender,msg.sender,msg.value,_reward) (Slither line:2802)
+Expression called: Brought
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender
+msg.sender
+msg.value
+_reward
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(137).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(137).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(token.transfer(msg.sender,_reward)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+token.transfer(msg.sender,_reward)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: privateSale1Hardcap = privateSale1Hardcap.sub(_reward) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: privateSale1Hardcap.sub
+Type of call: uint256 (Slither line:2817)
+Args:
+_reward
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(133).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(133).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: privateSale2Hardcap = privateSale2Hardcap.sub(_reward) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: privateSale2Hardcap.sub
+Type of call: uint256 (Slither line:2817)
+Args:
+_reward
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = 0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(129).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(129).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(124).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(124).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(currentPhase == phaseType.privateSale2 || currentPhase == phaseType.sales1 || currentPhase == phaseType.sales2 || currentPhase == phaseType.sales3 || currentPhase == phaseType.sales4 || currentPhase == phaseType.preFinish) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+currentPhase == phaseType.privateSale2 || currentPhase == phaseType.sales1 || currentPhase == phaseType.sales2 || currentPhase == phaseType.sales3 || currentPhase == phaseType.sales4 || currentPhase == phaseType.preFinish
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = _amount.mul(121).div(100) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _amount.mul(121).div
+Type of call: uint256 (Slither line:2817)
+Args:
+100
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(KYC[msg.sender]) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+KYC[msg.sender]
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: (_subResult,_reward) = calculateReward(msg.value) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: calculateReward
+Type of call: tuple(bool,uint256) (Slither line:2817)
+Args:
+msg.value
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_reward > 0 && _subResult) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_reward > 0 && _subResult
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: thisBalance = thisBalance.sub(_reward) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: thisBalance.sub
+Type of call: uint256 (Slither line:2817)
+Args:
+_reward
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: _reward = 0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin IcoLib.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(owner.send(msg.value)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+owner.send(msg.value)
+
+End IcoLib.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End IcoLib.is_proxy (Slither line:1476)
+
+
+Begin IcoLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IcoLib 
+
+End IcoLib.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,364 @@
+
+Begin BackingStore.is_proxy (Slither line:1425)
+
+
+End BackingStore.is_proxy (Slither line:1428)
+
+
+Begin BackingStore.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BackingStore 
+
+End BackingStore.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin VeloxProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VeloxProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End VeloxProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VeloxProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr__fallback_asm_0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr__fallback_asm_0
+0
+calldatasize()()
+
+End VeloxProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VeloxProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr__fallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+target
+ptr__fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is target (Slither line:2828)
+dest.value: target (Slither line:2831)
+Expression: MAIN_CONTRACT (Slither line:2836)
+
+End VeloxProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End VeloxProxy.is_proxy (Slither line:1476)
+
+
+Begin VeloxProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VeloxProxy 
+VeloxProxy is delegating to MAIN_CONTRACT
+Looking for setter (Slither line:1200)
+
+Looking for setter in BackingStore (Slither line:1204)
+
+
+Begin BackingStore.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End BackingStore.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BackingStore 
+Looking in VeloxProxy (Slither line:1213)
+
+Begin VeloxProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: setAdminAddress(address) returns(bool) (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_c != owner(),VELOXPROXY_ADMIN_OWNER)
+_owner
+ADMIN_ADDRESS = _c
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+true
+address(msg.sender)
+Checking function: setMainContract(address) returns(bool) (Slither line:3127)
+Visibility: public
+MAIN_CONTRACT = _c
+is an Assignment Operation (Slither line:3216)
+
+End VeloxProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setMainContract in contract: VeloxProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BackingStore.find_getter_in_contract (Slither line:2974)
+
+MAIN_CONTRACT is a Variable object
+_c
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End BackingStore.find_getter_in_contract (Slither line:3083)
+
+
+Begin VeloxProxy.find_getter_in_contract (Slither line:2974)
+
+MAIN_CONTRACT is a Variable object
+_c
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: address(msg.sender) (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: setAdminAddress (Slither line:2988)
+setAdminAddress returns bool variable called succeeded (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: setMainContract (Slither line:2988)
+setMainContract returns bool variable called succeeded (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _fallback (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: isContract (Slither line:2988)
+isContract returns bool variable  (Slither line:3008)
+RETURN node expression: size > 0 (Slither line:3028)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End VeloxProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in VeloxProxy (Slither line:1305)
+or in BackingStore (Slither line:1319)
+Checking for MAIN_CONTRACT at slot 0 in contract BackingStore (Slither line:1355)
+Found MAIN_CONTRACT at slot 0 in contract BackingStore (Slither line:1362)
+
+Begin BackingStore.find_getter_in_contract (Slither line:2974)
+
+MAIN_CONTRACT is a Variable object
+_c
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End BackingStore.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _c
+impl_address_from_contract_call: StateVariable MAIN_CONTRACT
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(ptr__fallback_asm_0,0,calldatasize()())
+impl_address_from_contract_call: arg is ptr__fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr__fallback_asm_0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(ptr__fallback_asm_0,size__fallback_asm_0)
+impl_address_from_contract_call: arg is ptr__fallback_asm_0
+impl_address_from_contract_call: arg is size__fallback_asm_0
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(ptr__fallback_asm_0,size__fallback_asm_0)
+impl_address_from_contract_call: arg is ptr__fallback_asm_0
+impl_address_from_contract_call: arg is size__fallback_asm_0
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(ptr__fallback_asm_0,0,size__fallback_asm_0)
+impl_address_from_contract_call: arg is ptr__fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is size__fallback_asm_0
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+Checking public function owner
+Checking public function renounceOwnership
+Checking public function transferOwnership
+Checking public function setAdminAddress
+Checking public function setMainContract
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: MAIN_CONTRACT
+functions_writing_to_variable: checking function VeloxProxy.setAdminAddress (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.owner (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.setMainContract (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_c != address(this),VELOXPROXY_CIRCULAR_REFERENCE) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(isContract(_c),VELOXPROXY_NOT_CONTRACT) (proxy_features line:909)
+functions_writing_to_variable: exp = MAIN_CONTRACT = _c (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAIN_CONTRACT = _c (proxy_features line:912)
+functions_writing_to_variable: Identifier: MAIN_CONTRACT (proxy_features line:924)
+get_value_assigned: MAIN_CONTRACT = _c
+functions_writing_to_variable: exp = true (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner) (proxy_features line:909)
+functions_writing_to_variable: exp = size = extcodesize(uint256)(addr) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: size = extcodesize(uint256)(addr) (proxy_features line:912)
+functions_writing_to_variable: exp = size > 0 (proxy_features line:909)
+functions_writing_to_variable: exp = address(msg.sender) (proxy_features line:909)
+functions_writing_to_variable: setMainContract writes _c to MAIN_CONTRACT (proxy_features line:929)
+functions_writing_to_variable: checking function VeloxProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.isContract (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function VeloxProxy.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_c']
+has_compatibility_checks: checking public function setMainContract
+require(bool,string)(_c != address(this),VELOXPROXY_CIRCULAR_REFERENCE)
+has_compatibility_checks: condition _c != address(this)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition _c != address(this)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition _owner == _msgSender()
+require(bool,string)(isContract(_c),VELOXPROXY_NOT_CONTRACT)
+has_compatibility_checks: condition isContract(_c)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition extcodesize(uint256)(addr) > 0
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr__fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr__fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr__fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = MAIN_CONTRACT
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) MAIN_CONTRACT = _c
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_c != address(this),VELOXPROXY_CIRCULAR_REFERENCE)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(_c),VELOXPROXY_NOT_CONTRACT)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) address(msg.sender)
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(addr)

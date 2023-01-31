@@ -1,0 +1,147 @@
+
+Begin MasterCopy.is_proxy (Slither line:1425)
+
+
+End MasterCopy.is_proxy (Slither line:1428)
+
+
+Begin MasterCopy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MasterCopy 
+
+End MasterCopy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IArtistSetup.is_proxy (Slither line:1425)
+
+
+End IArtistSetup.is_proxy (Slither line:1428)
+
+
+Begin IArtistSetup.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IArtistSetup 
+
+End IArtistSetup.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IArtistFactory.is_proxy (Slither line:1425)
+
+
+End IArtistFactory.is_proxy (Slither line:1428)
+
+
+Begin IArtistFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IArtistFactory 
+
+End IArtistFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ArtistFactory.is_proxy (Slither line:1425)
+
+
+End ArtistFactory.is_proxy (Slither line:1428)
+
+
+Begin ArtistFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ArtistFactory 
+
+End ArtistFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SimpleProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin SimpleProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let masterCopy := and(sload(_IMPLEMENTATION_SLOT), 0xffffffffffffffffffffffffffffffffffffffff) (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'masterCopy'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin SimpleProxy.find_delegate_variable_from_name
+Searching for masterCopy (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End SimpleProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin SimpleProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+slot: _IMPLEMENTATION_SLOT (Slither line:2679)
+
+Begin SimpleProxy.find_delegate_variable_from_name
+Searching for IMPLEMENTATION_SLOT (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End SimpleProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End SimpleProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End SimpleProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End SimpleProxy.is_proxy (Slither line:1476)
+
+
+Begin SimpleProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SimpleProxy 
+
+End SimpleProxy.is_upgradeable_proxy (Slither line:1407)
+

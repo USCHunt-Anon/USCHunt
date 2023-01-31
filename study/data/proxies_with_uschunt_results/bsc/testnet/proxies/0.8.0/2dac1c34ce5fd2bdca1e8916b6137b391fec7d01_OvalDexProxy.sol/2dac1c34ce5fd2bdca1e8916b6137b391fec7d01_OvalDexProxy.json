@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#278-348)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#278-348) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#443-461)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#443-461) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "211e994b39210eb9069681dcc1b67b974889fdbc5a5da463a2722040444f5164",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OvalDexProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#463-552)",
+        "elements": [],
+        "description": "OvalDexProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#463-552) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "d758d7e277d42442fafc42624dc476fb5a729ea9ec25e6225a33b9e8866ca9ae",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "OvalDexProxy.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "OvalDexProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol/2dac1c34ce5fd2bdca1e8916b6137b391fec7d01_OvalDexProxy.sol#463-552)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ERC1967Proxy.constructor(address)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "OvalDexProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "OvalDexProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "OvalDexProxy.constructor(address,address)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1008-1043)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1008-1043) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BaseProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1045-1081)",
+        "elements": [],
+        "description": "BaseProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1045-1081) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "18035c53463824ff1469ed175de100033999db2dbad79b493152abe1248ded51",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "MKTProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1083-1135)",
+        "elements": [],
+        "description": "MKTProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1083-1135) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "5e44c3335a42d1f97c16de5a9133f76021c89656da5bef2e96093c380c148471",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "MKTProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseProxy._implementation()",
+          "impl_address_location": "BaseProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol/32542b59b8b0380d53eefa2522948054abf13a3e_MKTProxy.sol#1045-1081)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MKTProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseProxy.initialize(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "MKTProxy.initialize(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "initialize(address)",
+              "initialize(address,address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

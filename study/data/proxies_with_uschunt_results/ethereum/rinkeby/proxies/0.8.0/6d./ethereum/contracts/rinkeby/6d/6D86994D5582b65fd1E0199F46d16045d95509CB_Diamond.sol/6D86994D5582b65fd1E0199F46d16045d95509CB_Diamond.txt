@@ -1,0 +1,686 @@
+
+Begin Diamond.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2848)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Diamond.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Diamond.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Diamond.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Diamond.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(facet != address(0),Diamond: Function does not exist) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+facet != address(0)
+Diamond: Function does not exist
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+facet
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is facet (Slither line:2818)
+dest.value: facet (Slither line:2821)
+Expression: ds.selectorToFacetAndPosition[msg.sig].facetAddress (Slither line:2826)
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Diamond.is_proxy (Slither line:1476)
+
+
+Begin Diamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Diamond 
+Local Variable: facet (Slither line:1164)
+Diamond is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin Diamond.find_setter_in_contract (Slither line:3109)
+
+Expression: ds.selectorToFacetAndPosition[msg.sig].facetAddress (Slither line:3112)
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: ds.selectorToFacetAndPosition[_selector].functionSelectorPosition = _selectorPosition (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut) (Slither line:3284)
+require(bool,string)
+Expression: ds.facetFunctionSelectors[_facetAddress].functionSelectors.push(_selector) (Slither line:3284)
+ds.facetFunctionSelectors[_facetAddress].functionSelectors.push
+Expression: ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(oldFacetAddress == address(0),LibDiamondCut: Can't add function that already exists) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0)) (Slither line:3284)
+require(bool,string)
+Expression: addFunction(ds,selector,selectorPosition,_facetAddress) (Slither line:3284)
+addFunction
+Expression: selectorPosition ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: facetIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: addFacet(ds,_facetAddress) (Slither line:3284)
+addFacet
+Expression: initializeDiamondCut(_init,_calldata) (Slither line:3284)
+initializeDiamondCut
+Expression: DiamondCut(_diamondCut,_init,_calldata) (Slither line:3284)
+DiamondCut
+Expression: addFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors) (Slither line:3284)
+addFunctions
+Expression: replaceFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors) (Slither line:3284)
+replaceFunctions
+Expression: require(bool,string)(_calldata.length == 0,LibDiamondCut: _init is address(0) but_calldata is not empty) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(_facetAddress != address(0),LibDiamondCut: Can't remove function that doesn't exist) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(_calldata.length > 0,LibDiamondCut: _calldata is empty but _init is not address(0)) (Slither line:3284)
+require(bool,string)
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: require(bool,string)(_facetAddress != address(this),LibDiamondCut: Can't remove immutable function) (Slither line:3284)
+require(bool,string)
+Expression: ds = position (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors) (Slither line:3284)
+removeFunctions
+Expression: enforceHasContractCode(_init,LibDiamondCut: _init address has no code) (Slither line:3284)
+enforceHasContractCode
+Expression: revert(string)(LibDiamondCut: Incorrect FacetCutAction) (Slither line:3284)
+revert(string)
+Expression: require(bool,string)(oldFacetAddress != _facetAddress,LibDiamondCut: Can't replace function with same function) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut) (Slither line:3284)
+require(bool,string)
+Expression: removeFunction(ds,oldFacetAddress,selector) (Slither line:3284)
+removeFunction
+Expression: (success,error) = _init.delegatecall(_calldata) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: ds.facetFunctionSelectors[_facetAddress].functionSelectors.pop() (Slither line:3284)
+ds.facetFunctionSelectors[_facetAddress].functionSelectors.pop
+Expression: addFunction(ds,selector,selectorPosition,_facetAddress) (Slither line:3284)
+addFunction
+Expression: require(bool,string)(_facetAddress == address(0),LibDiamondCut: Remove facet address must be address(0)) (Slither line:3284)
+require(bool,string)
+Expression: selectorPosition ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: ds.facetFunctionSelectors[_facetAddress].functionSelectors[selectorPosition] = lastSelector (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: ds.selectorToFacetAndPosition[lastSelector].functionSelectorPosition = uint96(selectorPosition) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: LibDiamond.setContractOwner(_contractOwner) (Slither line:3284)
+LibDiamond.setContractOwner
+Expression: ds.contractOwner = _newOwner (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: OwnershipTransferred(previousOwner,_newOwner) (Slither line:3284)
+OwnershipTransferred
+Expression: delete ds.selectorToFacetAndPosition[_selector] (Slither line:3284)
+Expression type: delete (Slither line:3286)
+Expression: revert(string)(string(error)) (Slither line:3284)
+revert(string)
+Expression: functionSelectors[0] = IDiamondCut.diamondCut.selector (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: cut[0] = IDiamondCut.FacetCut(_diamondCutFacet,IDiamondCut.FacetCutAction.Add,functionSelectors) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: revert(string)(LibDiamondCut: _init function reverted) (Slither line:3284)
+revert(string)
+Expression: LibDiamond.diamondCut(cut,address(0),) (Slither line:3284)
+LibDiamond.diamondCut
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End Diamond.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: diamondCut in contract: LibDiamond (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Diamond.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+ds.selectorToFacetAndPosition[msg.sig].facetAddress
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: receive (Slither line:2978)
+
+End Diamond.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Diamond (Slither line:1305)
+
+Begin LibDiamond.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+ds.selectorToFacetAndPosition[msg.sig].facetAddress
+Checking function: diamondStorage (Slither line:2978)
+diamondStorage returns LibDiamond.DiamondStorage variable called ds (Slither line:2998)
+Checking function: setContractOwner (Slither line:2978)
+Checking function: contractOwner (Slither line:2978)
+contractOwner returns address variable called contractOwner_ (Slither line:2998)
+Checking function: enforceIsContractOwner (Slither line:2978)
+Checking function: diamondCut (Slither line:2978)
+Checking function: addFunctions (Slither line:2978)
+Checking function: replaceFunctions (Slither line:2978)
+Checking function: removeFunctions (Slither line:2978)
+Checking function: addFacet (Slither line:2978)
+Checking function: addFunction (Slither line:2978)
+Checking function: removeFunction (Slither line:2978)
+Checking function: initializeDiamondCut (Slither line:2978)
+Checking function: enforceHasContractCode (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End LibDiamond.find_getter_in_contract (Slither line:3073)
+
+Looking for Loupe functions in LibDiamond
+diamondStorage() returns(LibDiamond.DiamondStorage)
+setContractOwner(address) returns()
+contractOwner() returns(address)
+enforceIsContractOwner() returns()
+diamondCut(IDiamondCut.FacetCut[],address,bytes) returns()
+addFunctions(address,bytes4[]) returns()
+replaceFunctions(address,bytes4[]) returns()
+removeFunctions(address,bytes4[]) returns()
+addFacet(LibDiamond.DiamondStorage,address) returns()
+addFunction(LibDiamond.DiamondStorage,bytes4,uint96,address) returns()
+removeFunction(LibDiamond.DiamondStorage,address,bytes4) returns()
+initializeDiamondCut(address,bytes) returns()
+enforceHasContractCode(address,string) returns()
+slitherConstructorConstantVariables() returns()
+impl_address_from_contract_call: ds.selectorToFacetAndPosition[msg.sig].facetAddress
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: facet
+functions_writing_to_variable: checking function LibDiamond.removeFunction (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.setContractOwner (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.enforceHasContractCode (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.addFunctions (proxy_features line:893)
+get_value_assigned: ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress
+functions_writing_to_variable: addFunctions writes _facetAddress to ds.selectorToFacetAndPosition[_selector].facetAddress (proxy_features line:1033)
+functions_writing_to_variable: checking function LibDiamond.removeFunctions (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.addFacet (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.contractOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Diamond.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Diamond.constructor (proxy_features line:893)
+get_value_assigned: ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress
+functions_writing_to_variable: constructor writes _facetAddress to ds.selectorToFacetAndPosition[_selector].facetAddress (proxy_features line:1033)
+functions_writing_to_variable: checking function LibDiamond.initializeDiamondCut (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.diamondStorage (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.diamondCut (proxy_features line:893)
+get_value_assigned: ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress
+functions_writing_to_variable: diamondCut writes _facetAddress to ds.selectorToFacetAndPosition[_selector].facetAddress (proxy_features line:1033)
+functions_writing_to_variable: checking function LibDiamond.replaceFunctions (proxy_features line:893)
+get_value_assigned: ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress
+functions_writing_to_variable: replaceFunctions writes _facetAddress to ds.selectorToFacetAndPosition[_selector].facetAddress (proxy_features line:1033)
+functions_writing_to_variable: checking function LibDiamond.enforceIsContractOwner (proxy_features line:893)
+functions_writing_to_variable: checking function LibDiamond.addFunction (proxy_features line:893)
+get_value_assigned: ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress
+functions_writing_to_variable: addFunction writes _facetAddress to ds.selectorToFacetAndPosition[_selector].facetAddress (proxy_features line:1033)
+has_compatibility_checks: dependencies: ['ds', 'REF_10', 'REF_12', 'REF_11']
+has_compatibility_checks: skipping internal function addFunctions
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_compatibility_checks: condition _functionSelectors.length > 0
+require(bool,string)(oldFacetAddress == address(0),LibDiamondCut: Can't add function that already exists)
+has_compatibility_checks: condition oldFacetAddress == address(0)
+require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))
+has_compatibility_checks: condition _facetAddress != address(0)
+check_condition_from_expression: condition _facetAddress != address(0)
+has_compatibility_checks: IF node exp = selectorPosition == 0
+has_compatibility_checks: IF node exp = action == IDiamondCut.FacetCutAction.Add
+has_compatibility_checks: IF node exp = _init == address(0)
+has_compatibility_checks: IF node exp = action == IDiamondCut.FacetCutAction.Replace
+require(bool,string)(_calldata.length == 0,LibDiamondCut: _init is address(0) but_calldata is not empty)
+has_compatibility_checks: condition _calldata.length == 0
+has_compatibility_checks: IF node exp = action == IDiamondCut.FacetCutAction.Remove
+has_compatibility_checks: IF node can lead to revert ['removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)', 'revert(string)(LibDiamondCut: Incorrect FacetCutAction)']
+has_compatibility_checks: IF node can lead to revert ['removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)', 'revert(string)(LibDiamondCut: Incorrect FacetCutAction)']
+has_compatibility_checks: ConditionalExpression if action == IDiamondCut.FacetCutAction.Remove then removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors) else revert(string)(LibDiamondCut: Incorrect FacetCutAction)
+require(bool,string)(_facetAddress != address(0),LibDiamondCut: Can't remove function that doesn't exist)
+has_compatibility_checks: condition _facetAddress != address(0)
+check_condition_from_expression: condition _facetAddress != address(0)
+require(bool,string)(_calldata.length > 0,LibDiamondCut: _calldata is empty but _init is not address(0))
+has_compatibility_checks: condition _calldata.length > 0
+require(bool,string)(_facetAddress != address(this),LibDiamondCut: Can't remove immutable function)
+has_compatibility_checks: condition _facetAddress != address(this)
+check_condition_from_expression: condition _facetAddress != address(this)
+has_compatibility_checks: IF node exp = _init != address(this)
+has_compatibility_checks: IF node exp = ! success
+require(bool,string)(oldFacetAddress != _facetAddress,LibDiamondCut: Can't replace function with same function)
+has_compatibility_checks: condition oldFacetAddress != _facetAddress
+check_condition_from_expression: condition ds.selectorToFacetAndPosition[selector].facetAddress != _facetAddress
+require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_compatibility_checks: condition _functionSelectors.length > 0
+has_compatibility_checks: IF node exp = selectorPosition != lastSelectorPosition
+require(bool,string)(_facetAddress == address(0),LibDiamondCut: Remove facet address must be address(0))
+has_compatibility_checks: condition _facetAddress == address(0)
+check_condition_from_expression: condition _facetAddress == address(0)
+has_compatibility_checks: IF node exp = error.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(string(error))', 'revert(string)(LibDiamondCut: _init function reverted)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(string(error))', 'revert(string)(LibDiamondCut: _init function reverted)']
+has_compatibility_checks: ConditionalExpression if error.length > 0 then revert(string)(string(error)) else revert(string)(LibDiamondCut: _init function reverted)
+has_compatibility_checks: IF node exp = lastSelectorPosition == 0
+has_compatibility_checks: IF node exp = facetAddressPosition != lastFacetAddressPosition
+require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_compatibility_checks: condition _functionSelectors.length > 0
+require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))
+has_compatibility_checks: condition _facetAddress != address(0)
+check_condition_from_expression: condition _facetAddress != address(0)
+has_compatibility_checks: IF node exp = selectorPosition == 0
+require(bool,string)(contractSize > 0,_errorMessage)
+has_compatibility_checks: condition contractSize > 0
+has_compatibility_checks: checking internal function diamondCut
+require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_compatibility_checks: condition _functionSelectors.length > 0
+require(bool,string)(oldFacetAddress == address(0),LibDiamondCut: Can't add function that already exists)
+has_compatibility_checks: condition oldFacetAddress == address(0)
+require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))
+has_compatibility_checks: condition _facetAddress != address(0)
+check_condition_from_expression: condition _facetAddress != address(0)
+has_compatibility_checks: IF node exp = selectorPosition == 0
+has_compatibility_checks: IF node exp = action == IDiamondCut.FacetCutAction.Add
+has_compatibility_checks: IF node exp = _init == address(0)
+has_compatibility_checks: IF node exp = action == IDiamondCut.FacetCutAction.Replace
+require(bool,string)(_calldata.length == 0,LibDiamondCut: _init is address(0) but_calldata is not empty)
+has_compatibility_checks: condition _calldata.length == 0
+has_compatibility_checks: IF node exp = action == IDiamondCut.FacetCutAction.Remove
+has_compatibility_checks: IF node can lead to revert ['removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)', 'revert(string)(LibDiamondCut: Incorrect FacetCutAction)']
+has_compatibility_checks: IF node can lead to revert ['removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)', 'revert(string)(LibDiamondCut: Incorrect FacetCutAction)']
+has_compatibility_checks: ConditionalExpression if action == IDiamondCut.FacetCutAction.Remove then removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors) else revert(string)(LibDiamondCut: Incorrect FacetCutAction)
+require(bool,string)(_facetAddress != address(0),LibDiamondCut: Can't remove function that doesn't exist)
+has_compatibility_checks: condition _facetAddress != address(0)
+check_condition_from_expression: condition _facetAddress != address(0)
+require(bool,string)(_calldata.length > 0,LibDiamondCut: _calldata is empty but _init is not address(0))
+has_compatibility_checks: condition _calldata.length > 0
+require(bool,string)(_facetAddress != address(this),LibDiamondCut: Can't remove immutable function)
+has_compatibility_checks: condition _facetAddress != address(this)
+check_condition_from_expression: condition _facetAddress != address(this)
+has_compatibility_checks: IF node exp = _init != address(this)
+has_compatibility_checks: IF node exp = ! success
+require(bool,string)(oldFacetAddress != _facetAddress,LibDiamondCut: Can't replace function with same function)
+has_compatibility_checks: condition oldFacetAddress != _facetAddress
+check_condition_from_expression: condition ds.selectorToFacetAndPosition[selector].facetAddress != _facetAddress
+require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_compatibility_checks: condition _functionSelectors.length > 0
+has_compatibility_checks: IF node exp = selectorPosition != lastSelectorPosition
+require(bool,string)(_facetAddress == address(0),LibDiamondCut: Remove facet address must be address(0))
+has_compatibility_checks: condition _facetAddress == address(0)
+check_condition_from_expression: condition _facetAddress == address(0)
+has_compatibility_checks: IF node exp = error.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(string(error))', 'revert(string)(LibDiamondCut: _init function reverted)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(string(error))', 'revert(string)(LibDiamondCut: _init function reverted)']
+has_compatibility_checks: ConditionalExpression if error.length > 0 then revert(string)(string(error)) else revert(string)(LibDiamondCut: _init function reverted)
+has_compatibility_checks: IF node exp = lastSelectorPosition == 0
+has_compatibility_checks: IF node exp = facetAddressPosition != lastFacetAddressPosition
+require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_compatibility_checks: condition _functionSelectors.length > 0
+require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))
+has_compatibility_checks: condition _facetAddress != address(0)
+check_condition_from_expression: condition _facetAddress != address(0)
+has_compatibility_checks: IF node exp = selectorPosition == 0
+require(bool,string)(contractSize > 0,_errorMessage)
+has_compatibility_checks: condition contractSize > 0
+has_compatibility_checks: skipping internal function replaceFunctions
+has_compatibility_checks: skipping internal function addFunction
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: facet = ds.selectorToFacetAndPosition[msg.sig].facetAddress
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(facet != address(0),Diamond: Function does not exist)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ds = position
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: position = LibDiamond.DIAMOND_STORAGE_POSITION
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: receive
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex ++
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = _functionSelectors[selectorIndex]
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.selectorToFacetAndPosition[_selector].functionSelectorPosition = _selectorPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetFunctionSelectors[_facetAddress].functionSelectors.push(_selector)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldFacetAddress = ds.selectorToFacetAndPosition[selector].facetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ds = diamondStorage()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacetAddress == address(0),LibDiamondCut: Can't add function that already exists)
+has_time_delay: (node.type) IF_LOOP
+(Expression) facetIndex < _diamondCut.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) addFunction(ds,selector,selectorPosition,_facetAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorPosition ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) facetIndex ++
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selectorPosition = uint96(ds.facetFunctionSelectors[_facetAddress].functionSelectors.length)
+has_time_delay: (node.type) IF
+(Expression) selectorPosition == 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) action = _diamondCut[facetIndex].action
+has_time_delay: (node.type) IF
+(Expression) action == IDiamondCut.FacetCutAction.Add
+has_time_delay: (node.type) EXPRESSION
+(Expression) addFacet(ds,_facetAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) initializeDiamondCut(_init,_calldata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) DiamondCut(_diamondCut,_init,_calldata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)
+has_time_delay: (node.type) IF
+(Expression) _init == address(0)
+has_time_delay: (node.type) IF
+(Expression) action == IDiamondCut.FacetCutAction.Replace
+has_time_delay: (node.type) EXPRESSION
+(Expression) replaceFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_calldata.length == 0,LibDiamondCut: _init is address(0) but_calldata is not empty)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = DIAMOND_STORAGE_POSITION
+has_time_delay: (node.type) IF_LOOP
+(Expression) selectorIndex < _functionSelectors.length
+has_time_delay: (node.type) IF
+(Expression) action == IDiamondCut.FacetCutAction.Remove
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_facetAddress != address(0),LibDiamondCut: Can't remove function that doesn't exist)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_calldata.length > 0,LibDiamondCut: _calldata is empty but _init is not address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_facetAddress != address(this),LibDiamondCut: Can't remove immutable function)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds = position
+has_time_delay: (node.type) IF
+(Expression) _init != address(this)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = _functionSelectors[selectorIndex]
+has_time_delay: (node.type) EXPRESSION
+(Expression) removeFunctions(_diamondCut[facetIndex].facetAddress,_diamondCut[facetIndex].functionSelectors)
+has_time_delay: (node.type) IF
+(Expression) ! success
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selectorPosition = ds.selectorToFacetAndPosition[_selector].functionSelectorPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldFacetAddress = ds.selectorToFacetAndPosition[selector].facetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) enforceHasContractCode(_init,LibDiamondCut: _init address has no code)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(LibDiamondCut: Incorrect FacetCutAction)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacetAddress != _facetAddress,LibDiamondCut: Can't replace function with same function)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastSelectorPosition = ds.facetFunctionSelectors[_facetAddress].functionSelectors.length - 1
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_time_delay: (node.type) IF
+(Expression) selectorPosition != lastSelectorPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) removeFunction(ds,oldFacetAddress,selector)
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,error) = _init.delegatecall(_calldata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetFunctionSelectors[_facetAddress].functionSelectors.pop()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ds = diamondStorage()
+has_time_delay: (node.type) EXPRESSION
+(Expression) addFunction(ds,selector,selectorPosition,_facetAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_facetAddress == address(0),LibDiamondCut: Remove facet address must be address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorPosition ++
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastSelector = ds.facetFunctionSelectors[_facetAddress].functionSelectors[lastSelectorPosition]
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetFunctionSelectors[_facetAddress].functionSelectors[selectorPosition] = lastSelector
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.selectorToFacetAndPosition[lastSelector].functionSelectorPosition = uint96(selectorPosition)
+has_time_delay: (node.type) IF
+(Expression) error.length > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) delete ds.selectorToFacetAndPosition[_selector]
+has_time_delay: (node.type) IF
+(Expression) lastSelectorPosition == 0
+has_time_delay: (node.type) IF_LOOP
+(Expression) selectorIndex < _functionSelectors.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(string(error))
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(LibDiamondCut: _init function reverted)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastFacetAddressPosition = ds.facetAddresses.length - 1
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = _functionSelectors[selectorIndex]
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) facetAddressPosition = ds.facetFunctionSelectors[_facetAddress].facetAddressPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldFacetAddress = ds.selectorToFacetAndPosition[selector].facetAddress
+has_time_delay: (node.type) IF
+(Expression) facetAddressPosition != lastFacetAddressPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) removeFunction(ds,oldFacetAddress,selector)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetAddresses.pop()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_functionSelectors.length > 0,LibDiamondCut: No selectors in facet to cut)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastFacetAddress = ds.facetAddresses[lastFacetAddressPosition]
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ds = diamondStorage()
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetAddresses[facetAddressPosition] = lastFacetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetFunctionSelectors[lastFacetAddress].facetAddressPosition = facetAddressPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) enforceHasContractCode(_facetAddress,LibDiamondCut: New facet has no code)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delete ds.facetFunctionSelectors[_facetAddress].facetAddressPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetFunctionSelectors[_facetAddress].facetAddressPosition = ds.facetAddresses.length
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selectorPosition = uint96(ds.facetFunctionSelectors[_facetAddress].functionSelectors.length)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facetAddresses.push(_facetAddress)
+has_time_delay: (node.type) IF
+(Expression) selectorPosition == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(contractSize > 0,_errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) contractSize = extcodesize(uint256)(_contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addFacet(ds,_facetAddress)
+has_time_delay: (node.type) IF_LOOP
+(Expression) selectorIndex < _functionSelectors.length
+has_time_delay: comparing (Identifier) contractSize to 0
+
+Begin LibDiamond.is_proxy (Slither line:1425)
+
+
+End LibDiamond.is_proxy (Slither line:1428)
+
+
+Begin LibDiamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibDiamond 
+
+End LibDiamond.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDiamondCut.is_proxy (Slither line:1425)
+
+
+End IDiamondCut.is_proxy (Slither line:1428)
+
+
+Begin IDiamondCut.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondCut 
+
+End IDiamondCut.is_upgradeable_proxy (Slither line:1407)
+

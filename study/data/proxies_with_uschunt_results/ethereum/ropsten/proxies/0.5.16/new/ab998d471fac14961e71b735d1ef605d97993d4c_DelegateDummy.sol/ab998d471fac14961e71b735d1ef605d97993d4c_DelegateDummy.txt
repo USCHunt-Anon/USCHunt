@@ -1,0 +1,108 @@
+
+Begin DummyProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+Found LowLevelCall (Slither line:2738)
+
+
+Found delegatecall in LowLevelCall (Slither line:2740)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+End DummyProxy.is_proxy (Slither line:1476)
+
+
+Begin DummyProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DummyProxy 
+DummyProxy is delegating to delegateDummy
+Looking for setter (Slither line:1200)
+
+
+Begin DummyProxy.find_setter_in_contract (Slither line:3117)
+
+Checking function: constructor(address,address) returns() (Slither line:3125)
+Checking function: fallback() returns() (Slither line:3125)
+
+End DummyProxy.find_setter_in_contract (Slither line:3343)
+
+
+Could not find implementation setter in DummyProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin DummyProxy.find_getter_in_contract (Slither line:2972)
+
+delegateDummy is a Variable object
+Checking function: constructor (Slither line:2986)
+Checking function: fallback (Slither line:2986)
+
+End DummyProxy.find_getter_in_contract (Slither line:3081)
+
+Could not find implementation getter in DummyProxy (Slither line:1305)
+Checking for delegateDummy at slot 0 in contract DelegateDummy (Slither line:1355)
+Found delegateDummy at slot 0 in contract DelegateDummy (Slither line:1362)
+
+Begin DelegateDummy.find_getter_in_contract (Slither line:2972)
+
+delegateDummy is a Variable object
+Checking function: constructor (Slither line:2986)
+Checking function: setValueDummy (Slither line:2986)
+
+End DelegateDummy.find_getter_in_contract (Slither line:3081)
+
+
+Begin DelegateDummy.find_setter_in_contract (Slither line:3117)
+
+Checking function: constructor() returns() (Slither line:3125)
+Checking function: setValueDummy() returns() (Slither line:3125)
+Visibility: external
+valueDummy = ! valueDummy
+is an Assignment Operation (Slither line:3214)
+
+End DelegateDummy.find_setter_in_contract (Slither line:3343)
+
+Checking for delegateDummy at slot 0 in contract DummyImpl (Slither line:1355)
+Found value at slot 0 in contract DummyImpl (Slither line:1362)
+Checking node of type EXPRESSION (Slither line:1395)
+delegateDummy.delegatecall(abi.encodeWithSignature(setValueDummy()))
+Checking node of type NEW VARIABLE (Slither line:1395)
+impl_m
+impl_m = implementation
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type ENTRY_POINT (Slither line:1395)
+
+End DummyProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateDummy.is_proxy (Slither line:1425)
+
+
+End DelegateDummy.is_proxy (Slither line:1428)
+
+
+Begin DelegateDummy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateDummy 
+
+End DelegateDummy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DummyImpl.is_proxy (Slither line:1425)
+
+
+End DummyImpl.is_proxy (Slither line:1428)
+
+
+Begin DummyImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DummyImpl 
+
+End DummyImpl.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#9-79)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#9-79) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UAbleProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#533-551)",
+        "elements": [],
+        "description": "UAbleProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#533-551) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "6a0686ba14ed705cb692099a48829ab0b20263030597734b81e6af7a1bf14623",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "Runner (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#619-715)",
+        "elements": [],
+        "description": "Runner (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#619-715) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "a1089218914ab04181ff07a8b726462989e2c7e30926196395421afa3b07e947",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UAbleUpgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "Runner.upgradeTo(address)",
+          "impl_address_getter": "UAbleUpgrade._getImplementation()",
+          "impl_address_location": "Runner (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol/3392F0b6aca965E4803D6D1422ff1039AB104752_ProxyAdmin.sol#619-715)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Runner.upgradeTo(address)": {
+                "check": "require(bool,string)(account.code.length > 0,UAble: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "Runner.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,UAble: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "EnclavesDEXProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.18/bf45f4280cfbe7c2d2515a7d984b8c71c15e82b7_EnclavesDEXProxy.sol/bf45f4280cfbe7c2d2515a7d984b8c71c15e82b7_EnclavesDEXProxy.sol#193-286)",
+        "elements": [],
+        "description": "EnclavesDEXProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.18/bf45f4280cfbe7c2d2515a7d984b8c71c15e82b7_EnclavesDEXProxy.sol/bf45f4280cfbe7c2d2515a7d984b8c71c15e82b7_EnclavesDEXProxy.sol#193-286) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "9976dc5b2bec0404e72371542477fda45d48cfb52ced9360257f9df288c01388",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "EnclavesDEXProxy.implementation",
+          "impl_address_setter": "EnclavesDEXProxy.upgrade()",
+          "impl_address_getter": "EnclavesDEXProxy.getImplementation()",
+          "impl_address_location": "EnclavesDEXProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.18/bf45f4280cfbe7c2d2515a7d984b8c71c15e82b7_EnclavesDEXProxy.sol/bf45f4280cfbe7c2d2515a7d984b8c71c15e82b7_EnclavesDEXProxy.sol#193-286)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "EnclavesDEXProxy.upgrade()": {
+                "check": "require(bool)(proposedImplementation != address(0))",
+                "is_correct": true
+              },
+              "EnclavesDEXProxy.proposeUpgrade(address)": {
+                "check": "require(bool)(_proposedImplementation != address(0))",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getImplementation()",
+              "proposeUpgrade(address)",
+              "upgrade()"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "proposedTimestamp < now",
+            "timestamp_variable": "proposedTimestamp",
+            "timestamp_setters": [
+              "EnclavesDEXProxy.proposeUpgrade(address)"
+            ],
+            "delay_duration": "2 weeks"
+          }
+        }
+      }
+    ]
+  }
+}

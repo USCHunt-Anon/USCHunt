@@ -1,0 +1,647 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenHandler.is_proxy (Slither line:1425)
+
+
+End TokenHandler.is_proxy (Slither line:1428)
+
+
+Begin TokenHandler.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenHandler 
+
+End TokenHandler.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin HasWorkers.is_proxy (Slither line:1425)
+
+
+End HasWorkers.is_proxy (Slither line:1428)
+
+
+Begin HasWorkers.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HasWorkers 
+
+End HasWorkers.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ControllerStorage.is_proxy (Slither line:1425)
+
+
+End ControllerStorage.is_proxy (Slither line:1428)
+
+
+Begin ControllerStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ControllerStorage 
+
+End ControllerStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WalletStorage.is_proxy (Slither line:1425)
+
+
+End WalletStorage.is_proxy (Slither line:1428)
+
+
+Begin WalletStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WalletStorage 
+
+End WalletStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateProxy.is_proxy (Slither line:1425)
+
+
+End DelegateProxy.is_proxy (Slither line:1428)
+
+
+Begin DelegateProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateProxy 
+
+End DelegateProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateProvider.is_proxy (Slither line:1425)
+
+
+End DelegateProvider.is_proxy (Slither line:1428)
+
+
+Begin DelegateProvider.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateProvider 
+
+End DelegateProvider.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ControllerProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ControllerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin ControllerProxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking walletsDelegate (Slither line:1689)
+Checking controllerDelegate (Slither line:1689)
+Checking forward (Slither line:1689)
+Checking createdWallets (Slither line:1689)
+Checking gStorage (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking workerToIndex (Slither line:1689)
+Checking workers (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in ControllerProxy.delegatedFwd (Slither line:1805)
+CallExpression: delegatedFwd(controllerDelegate,msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(controllerDelegate,msg.data) (Slither line:1832)
+The value passed to parameter #0 is controllerDelegate (Slither line:1835)
+which is an Identifier with value controllerDelegate (Slither line:1839)
+controllerDelegate is a State Variable (Slither line:1842)
+
+End ControllerProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End ControllerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ControllerProxy.is_proxy (Slither line:1476)
+
+
+Begin ControllerProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ControllerProxy 
+ControllerProxy is delegating to controllerDelegate
+Looking for setter (Slither line:1200)
+
+Looking for setter in ControllerStorage (Slither line:1204)
+
+
+Begin ControllerStorage.find_setter_in_contract (Slither line:3119)
+
+
+End ControllerStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ControllerStorage 
+Looking in ControllerProxy (Slither line:1213)
+
+Begin ControllerProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: getDelegate() returns(address) (Slither line:3127)
+Visibility: public
+delegate = walletsDelegate
+is an Assignment Operation (Slither line:3216)
+Checking function: setWalletsDelegate(address) returns(bool) (Slither line:3127)
+Visibility: public
+walletsDelegate = _delegate
+is an Assignment Operation (Slither line:3216)
+true
+onlyOwner()
+require(bool)(msg.sender == owner)
+Checking function: setControllerDelegate(address) returns(bool) (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool)(msg.sender == owner)
+controllerDelegate = _delegate
+is an Assignment Operation (Slither line:3216)
+
+End ControllerProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setControllerDelegate in contract: ControllerProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ControllerStorage.find_getter_in_contract (Slither line:2974)
+
+controllerDelegate is a Variable object
+_delegate
+
+End ControllerStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin ControllerProxy.find_getter_in_contract (Slither line:2974)
+
+controllerDelegate is a Variable object
+_delegate
+Checking function: delegatedFwd (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: isWorker (Slither line:2988)
+isWorker returns bool variable  (Slither line:3008)
+RETURN node expression: workerToIndex[_worker] != 0 (Slither line:3028)
+Checking function: allWorkers (Slither line:2988)
+allWorkers returns address[] variable called result (Slither line:3008)
+Checking function: addWorker (Slither line:2988)
+addWorker returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: removeWorker (Slither line:2988)
+removeWorker returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: setOwner (Slither line:2988)
+setOwner returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: getDelegate (Slither line:2988)
+getDelegate returns address variable called delegate (Slither line:3008)
+Checking function: setWalletsDelegate (Slither line:2988)
+setWalletsDelegate returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: setControllerDelegate (Slither line:2988)
+setControllerDelegate returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+
+End ControllerProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in ControllerProxy (Slither line:1305)
+or in ControllerStorage (Slither line:1319)
+
+Begin Controller.find_getter_in_contract (Slither line:2974)
+
+controllerDelegate is a Variable object
+_delegate
+Checking function: constructor (Slither line:2988)
+Checking function: isWorker (Slither line:2988)
+isWorker returns bool variable  (Slither line:3008)
+RETURN node expression: workerToIndex[_worker] != 0 (Slither line:3028)
+Checking function: allWorkers (Slither line:2988)
+allWorkers returns address[] variable called result (Slither line:3008)
+Checking function: addWorker (Slither line:2988)
+addWorker returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: removeWorker (Slither line:2988)
+removeWorker returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: setOwner (Slither line:2988)
+setOwner returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: executeTransaction (Slither line:2988)
+executeTransaction returns bool variable  (Slither line:3008)
+RETURN node expression: destination.call.value(value)(_bytes) (Slither line:3028)
+Checking function: setForward (Slither line:2988)
+setForward returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: createWallets (Slither line:2988)
+createWallets returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: withdrawEth (Slither line:2988)
+withdrawEth returns bool variable called result (Slither line:3008)
+Checking function: withdrawEthBatch (Slither line:2988)
+withdrawEthBatch returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: withdrawERC20 (Slither line:2988)
+withdrawERC20 returns bool variable called result (Slither line:3008)
+Checking function: withdrawERC20Batch (Slither line:2988)
+withdrawERC20Batch returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+
+End Controller.find_getter_in_contract (Slither line:3083)
+
+
+End ControllerProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: _delegate
+impl_address_from_contract_call: StateVariable controllerDelegate
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression delegatedFwd(controllerDelegate,msg.data)
+impl_address_from_contract_call: arg is controllerDelegate
+impl_address_from_contract_call: arg is msg.data
+Checking public function getDelegate
+Checking public function isWorker
+Checking public function allWorkers
+Checking public function addWorker
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removeWorker
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getDelegate
+Checking public function setWalletsDelegate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setControllerDelegate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: controllerDelegate
+functions_writing_to_variable: checking function ControllerProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.delegatedFwd (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.allWorkers (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.setWalletsDelegate (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.setControllerDelegate (proxy_features line:898)
+functions_writing_to_variable: exp = controllerDelegate = _delegate (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: controllerDelegate = _delegate (proxy_features line:912)
+functions_writing_to_variable: Identifier: controllerDelegate (proxy_features line:924)
+get_value_assigned: controllerDelegate = _delegate
+functions_writing_to_variable: exp = true (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: setControllerDelegate writes _delegate to controllerDelegate (proxy_features line:929)
+functions_writing_to_variable: checking function ControllerProxy.getDelegate (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.addWorker (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.isWorker (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.removeWorker (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.getDelegate (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_delegate']
+has_compatibility_checks: checking public function setControllerDelegate
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: getDelegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) controllerDelegate = _delegate
+has_time_delay: (node.type) RETURN
+(Expression) true
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WalletProxy.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin WalletProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin WalletProxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in WalletProxy.delegatedFwd (Slither line:1805)
+CallExpression: ReceivedETH(msg.sender,msg.value) (Slither line:1819)
+CallExpression: delegatedFwd(DelegateProvider(owner).getDelegate(),msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(DelegateProvider(owner).getDelegate(),msg.data) (Slither line:1832)
+The value passed to parameter #0 is DelegateProvider(owner).getDelegate() (Slither line:1835)
+
+Begin WalletProxy.find_delegate_from_call_exp
+
+DelegateProvider(owner).getDelegate() (Slither line:2003)
+called = DelegateProvider(owner).getDelegate (Slither line:2010)
+Called member of DelegateProvider(owner) (Slither line:2017)
+
+Begin WalletProxy.find_delegate_from_member_access
+
+Expression: DelegateProvider(owner).getDelegate() (Slither line:2358)
+DelegateProvider(owner) (Slither line:2371)
+getDelegate is a member of the contract type: DelegateProvider (Slither line:2416)
+Which is an interface (Slither line:2420)
+ControllerProxy inherits DelegateProvider (Slither line:2427)
+Looking for getDelegate in ControllerProxy (Slither line:2523)
+Found the function called getDelegate (Slither line:2527)
+Returns a variable of type address called delegate (Slither line:2532)
+Found the function called getDelegate (Slither line:2527)
+Returns a variable of type address called delegate (Slither line:2532)
+Found the return value from getDelegate
+It's a state variable in ControllerProxy called walletsDelegate (Slither line:2630)
+
+End WalletProxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End WalletProxy.find_delegate_from_call_exp (Slither line:2019)
+
+
+End WalletProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End WalletProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End WalletProxy.is_proxy (Slither line:1476)
+
+
+Begin WalletProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WalletProxy 
+WalletProxy is delegating to walletsDelegate
+Looking for setter (Slither line:1200)
+
+Looking for setter in ControllerStorage (Slither line:1204)
+
+
+Begin ControllerStorage.find_setter_in_contract (Slither line:3119)
+
+
+End ControllerStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ControllerStorage 
+Looking in WalletProxy (Slither line:1213)
+
+Begin WalletProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: delegatedFwd(address,bytes) returns() (Slither line:3127)
+Visibility: internal
+
+End WalletProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in WalletProxy (Slither line:1220)
+Looking for setter in ControllerProxy (Slither line:1228)
+
+
+Begin ControllerProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: getDelegate() returns(address) (Slither line:3127)
+Visibility: public
+delegate = walletsDelegate
+is an Assignment Operation (Slither line:3216)
+Checking function: setWalletsDelegate(address) returns(bool) (Slither line:3127)
+Visibility: public
+walletsDelegate = _delegate
+is an Assignment Operation (Slither line:3216)
+
+End ControllerProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setWalletsDelegate in contract: ControllerProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: getDelegate in contract: ControllerProxy (Slither line:1285)
+
+End WalletProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _delegate
+impl_address_from_contract_call: StateVariable walletsDelegate
+impl_address_from_contract_call: getter is getDelegate
+getter.full_name = getDelegate()
+impl_address_from_contract_call: CallExpression ReceivedETH(msg.sender,msg.value)
+impl_address_from_contract_call: arg is msg.sender
+impl_address_from_contract_call: arg is msg.value
+impl_address_from_contract_call: CallExpression delegatedFwd(DelegateProvider(owner).getDelegate(),msg.data)
+impl_address_from_contract_call: arg is DelegateProvider(owner).getDelegate()
+impl_address_from_contract_call: CallExpression DelegateProvider(owner).getDelegate()
+found MemberAccess calling getter in another contract: DelegateProvider(owner).getDelegate()
+called: DelegateProvider(owner).getDelegate
+found MemberAccess: DelegateProvider(owner).getDelegate
+TypeConversion: DelegateProvider(owner)
+find_registry_address_source: DelegateProvider(owner).getDelegate()
+MemberAccess: DelegateProvider(owner).getDelegate
+TypeConversion: DelegateProvider(owner)
+Identifier: owner
+Checking public function fallback
+functions_writing_to_variable: walletsDelegate
+functions_writing_to_variable: checking function WalletProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.delegatedFwd (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.allWorkers (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.setWalletsDelegate (proxy_features line:898)
+functions_writing_to_variable: exp = walletsDelegate = _delegate (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: walletsDelegate = _delegate (proxy_features line:912)
+functions_writing_to_variable: Identifier: walletsDelegate (proxy_features line:924)
+get_value_assigned: walletsDelegate = _delegate
+functions_writing_to_variable: exp = true (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: setWalletsDelegate writes _delegate to walletsDelegate (proxy_features line:929)
+functions_writing_to_variable: checking function ControllerProxy.setControllerDelegate (proxy_features line:898)
+functions_writing_to_variable: checking function WalletProxy.delegatedFwd (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.getDelegate (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function WalletProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.addWorker (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.isWorker (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.removeWorker (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerProxy.getDelegate (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_delegate']
+has_compatibility_checks: checking public function setWalletsDelegate
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+has_time_delay: (node.type) EXPRESSION
+(Expression) walletsDelegate = _delegate
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+
+Begin Wallet.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Wallet.is_proxy (Slither line:1476)
+
+
+Begin Wallet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Wallet 
+
+End Wallet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Controller.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Controller.is_proxy (Slither line:1476)
+
+
+Begin Controller.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Controller 
+
+End Controller.is_upgradeable_proxy (Slither line:1407)
+

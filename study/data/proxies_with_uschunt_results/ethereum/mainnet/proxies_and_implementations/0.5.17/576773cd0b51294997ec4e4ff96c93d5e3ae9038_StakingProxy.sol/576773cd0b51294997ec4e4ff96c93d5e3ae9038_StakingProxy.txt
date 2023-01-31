@@ -1,0 +1,496 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EnumerableBytes32Set.is_proxy (Slither line:1425)
+
+
+End EnumerableBytes32Set.is_proxy (Slither line:1428)
+
+
+Begin EnumerableBytes32Set.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EnumerableBytes32Set 
+
+End EnumerableBytes32Set.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StakingState.is_proxy (Slither line:1425)
+
+
+End StakingState.is_proxy (Slither line:1428)
+
+
+Begin StakingState.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StakingState 
+
+End StakingState.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StakingProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin StakingProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin StakingProxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _owner (Slither line:1689)
+Checking initialCirculatingSupply (Slither line:1689)
+Checking ZERO_ADDRESS (Slither line:1689)
+Checking BZRX (Slither line:1689)
+Checking vBZRX (Slither line:1689)
+Checking LPToken (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking isInit (Slither line:1689)
+Checking isActive (Slither line:1689)
+Checking _totalSupplyPerToken (Slither line:1689)
+Checking _balancesPerToken (Slither line:1689)
+Checking _checkpointPerToken (Slither line:1689)
+Checking delegate (Slither line:1689)
+Checking repStakedPerToken (Slither line:1689)
+Checking reps (Slither line:1689)
+Checking rewardPerTokenStored (Slither line:1689)
+Checking userRewardPerTokenPaid (Slither line:1689)
+Checking rewards (Slither line:1689)
+Checking repStakedSet (Slither line:1689)
+Checking lastUpdateTime (Slither line:1689)
+Checking periodFinish (Slither line:1689)
+Checking rewardRate (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in StakingProxy.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract StakingState (Slither line:1730)
+
+End StakingProxy.find_delegate_variable_by_name
+
+
+End StakingProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End StakingProxy.is_proxy (Slither line:1476)
+
+
+Begin StakingProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StakingProxy 
+StakingProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in StakingState (Slither line:1204)
+
+
+Begin StakingState.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: isOwner() returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+_msgSender() == _owner
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,newOwner)
+_msgSender() == _owner
+require(bool,string)(isOwner(),unauthorized)
+msg.sender
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+_transferOwnership(newOwner)
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End StakingState.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in StakingState 
+Looking in StakingProxy (Slither line:1213)
+
+Begin StakingProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: replaceImplementation(address) returns() (Slither line:3127)
+Visibility: public
+(codehash != accountHash && codehash != 0x0)
+_msgSender() == _owner
+onlyOwner()
+msg.sender
+require(bool,string)(Address.isContract(impl),not a contract)
+require(bool,string)(isOwner(),unauthorized)
+implementation = impl
+is an Assignment Operation (Slither line:3216)
+
+End StakingProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: replaceImplementation in contract: StakingProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin StakingState.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _msgSender() == _owner (Slither line:3028)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End StakingState.find_getter_in_contract (Slither line:3083)
+
+
+Begin StakingProxy.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _msgSender() == _owner (Slither line:3028)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: replaceImplementation (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End StakingProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in StakingProxy (Slither line:1305)
+or in StakingState (Slither line:1319)
+
+Begin StakingInterim.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _msgSender() == _owner (Slither line:3028)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: init (Slither line:2988)
+Checking function: setActive (Slither line:2988)
+Checking function: rescueToken (Slither line:2988)
+rescueToken returns uint256 variable called withdrawAmount (Slither line:3008)
+Checking function: stake (Slither line:2988)
+Checking function: stakeWithDelegate (Slither line:2988)
+Checking function: setRepActive (Slither line:2988)
+Checking function: getRepVotes (Slither line:2988)
+getRepVotes returns StakingInterim.RepStakedTokens[] variable called repStakedArr (Slither line:3008)
+RETURN node expression: repStakedArr (Slither line:3028)
+Checking function: lastTimeRewardApplicable (Slither line:2988)
+lastTimeRewardApplicable returns uint256 variable  (Slither line:3008)
+RETURN node expression: periodFinish.min256(_getTimestamp()) (Slither line:3028)
+Checking function: rewardsPerToken (Slither line:2988)
+rewardsPerToken returns uint256 variable  (Slither line:3008)
+RETURN node expression: rewardPerTokenStored.add(lastTimeRewardApplicable().sub(lastUpdateTime).mul(rewardRate).mul(1e18).div(totalTokens)) (Slither line:3028)
+RETURN node expression: rewardPerTokenStored (Slither line:3028)
+Checking function: earned (Slither line:2988)
+earned returns uint256 variable  (Slither line:3008)
+RETURN node expression: _earned(account,rewardsPerToken()) (Slither line:3028)
+Checking function: _earned (Slither line:2988)
+_earned returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalTokens.mul(_rewardsPerToken.sub(userRewardPerTokenPaid[account])).div(1e18).add(rewards[account]) (Slither line:3028)
+Checking function: notifyRewardAmount (Slither line:2988)
+Checking function: stakeableByAsset (Slither line:2988)
+stakeableByAsset returns uint256 variable  (Slither line:3008)
+RETURN node expression: walletBalance - stakedBalance (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: balanceOfByAssetWalletAware (Slither line:2988)
+balanceOfByAssetWalletAware returns uint256 variable called balance (Slither line:3008)
+Checking function: balanceOfByAsset (Slither line:2988)
+balanceOfByAsset returns uint256 variable called balance (Slither line:3008)
+Checking function: balanceOfByAssetNormed (Slither line:2988)
+balanceOfByAssetNormed returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalSupplyByAssetNormed(LPToken).mul(balanceOfByAsset(LPToken,account)).div(lptokenBalance) (Slither line:3028)
+RETURN node expression: balanceOfByAsset(token,account) (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalSupplyByAsset(BZRX).add(totalSupplyByAsset(vBZRX)).add(totalSupplyByAsset(LPToken)) (Slither line:3028)
+Checking function: totalSupplyNormed (Slither line:2988)
+totalSupplyNormed returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalSupplyByAssetNormed(BZRX).add(totalSupplyByAssetNormed(vBZRX)).add(totalSupplyByAssetNormed(LPToken)) (Slither line:3028)
+Checking function: totalSupplyByAsset (Slither line:2988)
+totalSupplyByAsset returns uint256 variable called supply (Slither line:3008)
+Checking function: totalSupplyByAssetNormed (Slither line:2988)
+totalSupplyByAssetNormed returns uint256 variable  (Slither line:3008)
+RETURN node expression: circulatingSupply - totalSupplyByAsset(BZRX) (Slither line:3028)
+RETURN node expression: totalSupplyByAsset(token) (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: _setDelegate (Slither line:2988)
+_setDelegate returns address variable called currentDelegate (Slither line:3008)
+Checking function: _getTimestamp (Slither line:2988)
+_getTimestamp returns uint256 variable  (Slither line:3008)
+RETURN node expression: block.timestamp (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End StakingInterim.find_getter_in_contract (Slither line:3083)
+
+
+End StakingProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+Checking public function owner
+Checking public function isOwner
+Checking public function transferOwnership
+Checking public function replaceImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function StakingProxy.constructor (proxy_features line:898)
+get_value_assigned: implementation = impl
+functions_writing_to_variable: constructor writes impl to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function StakingProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy.owner (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy.replaceImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(impl),not a contract) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = impl
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(isOwner(),unauthorized) (proxy_features line:909)
+functions_writing_to_variable: exp = accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 (proxy_features line:912)
+functions_writing_to_variable: exp = (codehash != accountHash && codehash != 0x0) (proxy_features line:909)
+functions_writing_to_variable: exp = _msgSender() == _owner (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender (proxy_features line:909)
+functions_writing_to_variable: replaceImplementation writes impl to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function StakingProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function StakingProxy.isOwner (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl', '_impl']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function replaceImplementation
+require(bool,string)(Address.isContract(impl),not a contract)
+has_compatibility_checks: condition Address.isContract(impl)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+require(bool,string)(isOwner(),unauthorized)
+has_compatibility_checks: condition isOwner()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 { revert(ptr, size) }
+    default { return(ptr, size) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: gasleft()() <= 2300
+can_toggle_delegatecall_on_off: successors:
+ NodeType: INLINE ASM  expression: {
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 { revert(ptr, size) }
+    default { return(ptr, size) }
+}
+can_toggle_delegatecall_on_off: delegatecall_condition = False
+ NodeType: NEW VARIABLE  expression: impl = implementation
+ NodeType: END_IF  expression: None
+ NodeType: NEW VARIABLE  expression: data = msg.data
+ NodeType: RETURN  expression: None
+Found public function: owner
+has_time_delay: (node.type) RETURN
+(Expression) (codehash != accountHash && codehash != 0x0)
+has_time_delay: (node.type) RETURN
+(Expression) _msgSender() == _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(impl),not a contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isOwner(),unauthorized)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = impl
+
+Begin ILoanPool.is_proxy (Slither line:1425)
+
+
+End ILoanPool.is_proxy (Slither line:1428)
+
+
+Begin ILoanPool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ILoanPool 
+
+End ILoanPool.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StakingInterim.is_proxy (Slither line:1425)
+
+
+End StakingInterim.is_proxy (Slither line:1428)
+
+
+Begin StakingInterim.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StakingInterim 
+
+End StakingInterim.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/proxies_to_reanalyze/0.6.12/f394C68541038d7BB061175580FDa557effFc742_Proxy.sol/f394C68541038d7BB061175580FDa557effFc742_Proxy.sol#9-40)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/proxies_to_reanalyze/0.6.12/f394C68541038d7BB061175580FDa557effFc742_Proxy.sol/f394C68541038d7BB061175580FDa557effFc742_Proxy.sol#9-40) is an upgradeable proxy.\nPROXIABLE_MEM_SLOT is declared in the proxy.\nPROXIABLE_MEM_SLOT is a state variable of type uint256\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCodeAddress from TokenSoftToken\n",
+        "id": "06ef9d5f4d145b302a7de0d94e56bab4b4ba72964543da2d781dfef3f477eb81",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.PROXIABLE_MEM_SLOT",
+          "impl_address_setter": "TokenSoftToken.updateCodeAddress(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/proxies_to_reanalyze/0.6.12/f394C68541038d7BB061175580FDa557effFc742_Proxy.sol/f394C68541038d7BB061175580FDa557effFc742_Proxy.sol#9-40)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "uint256",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.constructor(address)": {
+                "check": "require(bool,string)(contractLogic != address(0),Contract Logic cannot be 0x0)",
+                "is_correct": true
+              },
+              "TokenSoftToken.updateCodeAddress(address)": {
+                "check": "require(bool,string)(bytes32(PROXIABLE_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCodeAddress from TokenSoftToken"
+        }
+      }
+    ]
+  }
+}

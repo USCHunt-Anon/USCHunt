@@ -1,0 +1,290 @@
+
+Begin Account.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Account.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(LogicManager(manager).isAuthorized(logic),must be an authorized logic for static call) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+LogicManager(manager).isAuthorized(logic)
+must be an authorized logic for static call
+
+End Account.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Account.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := staticcall(gas(), logic, 0, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(0, 0, returndatasize()) (Slither line:1576)
+    switch result (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(0, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(0, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End Account.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Account.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := staticcall(gas(), logic, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'logic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Account.find_delegate_variable_from_name
+Searching for logic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementation (Slither line:1689)
+Checking manager (Slither line:1689)
+Checking enabled (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking logic (Slither line:1703)
+logic is a Local Variable in Account.fallback (Slither line:1707)
+Expression: enabled[msg.sig] (Slither line:1719)
+enabled is a State Variable in contract Account (Slither line:1749)
+
+End Account.find_delegate_variable_by_name
+
+
+End Account.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Account.is_proxy (Slither line:1476)
+
+
+Begin Account.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Account 
+Account is delegating to enabled
+Looking for setter (Slither line:1200)
+
+
+Begin Account.find_setter_in_contract (Slither line:3119)
+
+Checking function: init(address,address,address[],address[],address[]) returns() (Slither line:3127)
+Checking function: invoke(address,uint256,bytes) returns(bytes) (Slither line:3127)
+Visibility: external
+(success,_res) = _target.call.value(_value)(_data)
+is an Assignment Operation (Slither line:3216)
+allowAuthorizedLogicContractsCallsOnly()
+require(bool,string)(success,call to target failed)
+Invoked(msg.sender,_target,_value,_data)
+require(bool,string)(LogicManager(manager).isAuthorized(msg.sender),not an authorized logic)
+Checking function: enableStaticCall(address,bytes4) returns() (Slither line:3127)
+Visibility: external
+allowAuthorizedLogicContractsCallsOnly()
+EnabledStaticCall(_module,_method)
+enabled[_method] = _module
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+
+End Account.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: enableStaticCall in contract: Account (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Account.find_getter_in_contract (Slither line:2974)
+
+enabled is a Variable object
+_module
+Checking function: init (Slither line:2988)
+Checking function: invoke (Slither line:2988)
+invoke returns bytes variable called _res (Slither line:3008)
+Checking function: enableStaticCall (Slither line:2988)
+Checking function: changeManager (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Account.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Account (Slither line:1305)
+Checking for enabled at slot 2 in contract LogicManager (Slither line:1355)
+Found authorizedLogics at slot 2 in contract LogicManager (Slither line:1362)
+Checking for authorizedLogics at slot 2 in contract AccountStorage (Slither line:1355)
+Found backupData at slot 2 in contract AccountStorage (Slither line:1362)
+Checking for backupData at slot 2 in contract BaseLogic (Slither line:1355)
+Found accountStorage at slot 2 in contract BaseLogic (Slither line:1362)
+Checking for accountStorage at slot 2 in contract AccountBaseLogic (Slither line:1355)
+Found accountStorage at slot 2 in contract AccountBaseLogic (Slither line:1362)
+Checking for accountStorage at slot 2 in contract CommonStaticLogic (Slither line:1355)
+Found accountStorage at slot 2 in contract CommonStaticLogic (Slither line:1362)
+
+Begin Owned.find_getter_in_contract (Slither line:2974)
+
+enabled is a Variable object
+_module
+Checking function: constructor (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+
+End Owned.find_getter_in_contract (Slither line:3083)
+
+Checking external function init
+Checking external function invoke
+Checking external function enableStaticCall
+Checking external function changeManager
+Checking external function fallback
+functions_writing_to_variable: enabled
+functions_writing_to_variable: checking function Account.init (proxy_features line:898)
+functions_writing_to_variable: checking function Account.enableStaticCall (proxy_features line:898)
+functions_writing_to_variable: exp = enabled[_method] = _module (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: enabled[_method] = _module (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: enabled[_method] (proxy_features line:920)
+functions_writing_to_variable: Identifier: enabled (proxy_features line:924)
+get_value_assigned: enabled[_method] = _module
+functions_writing_to_variable: exp = EnabledStaticCall(_module,_method) (proxy_features line:909)
+functions_writing_to_variable: exp = allowAuthorizedLogicContractsCallsOnly() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(LogicManager(manager).isAuthorized(msg.sender),not an authorized logic) (proxy_features line:909)
+functions_writing_to_variable: enableStaticCall writes _module to enabled (proxy_features line:929)
+functions_writing_to_variable: checking function Account.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Account.invoke (proxy_features line:898)
+functions_writing_to_variable: checking function Account.changeManager (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_module']
+has_compatibility_checks: checking external function enableStaticCall
+require(bool,string)(LogicManager(manager).isAuthorized(msg.sender),not an authorized logic)
+has_compatibility_checks: condition LogicManager(manager).isAuthorized(msg.sender)
+Found external function: init
+has_time_delay: (node.type) EXPRESSION
+(Expression) allowAuthorizedLogicContractsCallsOnly()
+has_time_delay: (node.type) EXPRESSION
+(Expression) EnabledStaticCall(_module,_method)
+has_time_delay: (node.type) EXPRESSION
+(Expression) enabled[_method] = _module
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(LogicManager(manager).isAuthorized(msg.sender),not an authorized logic)
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LogicManager.is_proxy (Slither line:1425)
+
+
+End LogicManager.is_proxy (Slither line:1428)
+
+
+Begin LogicManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LogicManager 
+
+End LogicManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AccountStorage.is_proxy (Slither line:1425)
+
+
+End AccountStorage.is_proxy (Slither line:1428)
+
+
+Begin AccountStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AccountStorage 
+
+End AccountStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BaseLogic.is_proxy (Slither line:1425)
+
+
+End BaseLogic.is_proxy (Slither line:1428)
+
+
+Begin BaseLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BaseLogic 
+
+End BaseLogic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AccountBaseLogic.is_proxy (Slither line:1425)
+
+
+End AccountBaseLogic.is_proxy (Slither line:1428)
+
+
+Begin AccountBaseLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AccountBaseLogic 
+
+End AccountBaseLogic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CommonStaticLogic.is_proxy (Slither line:1425)
+
+
+End CommonStaticLogic.is_proxy (Slither line:1428)
+
+
+Begin CommonStaticLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CommonStaticLogic 
+
+End CommonStaticLogic.is_upgradeable_proxy (Slither line:1407)
+

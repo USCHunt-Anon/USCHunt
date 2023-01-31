@@ -1,0 +1,229 @@
+
+Begin CropJoin.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CropJoin.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+_impl
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is _impl (Slither line:2828)
+dest.value: _impl (Slither line:2831)
+Expression: implementation (Slither line:2836)
+
+End CropJoin.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End CropJoin.is_proxy (Slither line:1476)
+
+
+Begin CropJoin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CropJoin 
+CropJoin is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin CropJoin.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: rely(address) returns() (Slither line:3127)
+Visibility: external
+Rely(msg.sender)
+require(bool,string)(wards[msg.sender] == 1,CropJoin/not-authed)
+auth()
+wards[usr] = 1
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: deny(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(wards[msg.sender] == 1,CropJoin/not-authed)
+wards[usr] = 0
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Deny(msg.sender)
+auth()
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(wards[msg.sender] == 1,CropJoin/not-authed)
+auth()
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End CropJoin.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: CropJoin (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CropJoin.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: rely (Slither line:2988)
+Checking function: deny (Slither line:2988)
+Checking function: setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End CropJoin.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in CropJoin (Slither line:1305)
+Checking for implementation at slot 0 in contract CropJoinImp (Slither line:1355)
+Found slot0 at slot 0 in contract CropJoinImp (Slither line:1362)
+Checking for slot0 at slot 0 in contract SynthetixJoinImp (Slither line:1355)
+Found slot0 at slot 0 in contract SynthetixJoinImp (Slither line:1362)
+
+Begin VatLike_14.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+
+End VatLike_14.find_getter_in_contract (Slither line:3083)
+
+Checking external function rely
+Checking external function deny
+Checking external function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function CropJoin.rely (proxy_features line:898)
+functions_writing_to_variable: checking function CropJoin.setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = SetImplementation(implementation_) (proxy_features line:909)
+functions_writing_to_variable: exp = auth() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(wards[msg.sender] == 1,CropJoin/not-authed) (proxy_features line:909)
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CropJoin.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CropJoin.deny (proxy_features line:898)
+functions_writing_to_variable: checking function CropJoin.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation_']
+has_compatibility_checks: checking external function setImplementation
+require(bool,string)(wards[msg.sender] == 1,CropJoin/not-authed)
+has_compatibility_checks: condition wards[msg.sender] == 1
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+Found public function: constructor
+Found external function: rely
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(wards[msg.sender] == 1,CropJoin/not-authed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) auth()
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) SetImplementation(implementation_)
+
+Begin VatLike_14.is_proxy (Slither line:1425)
+
+
+End VatLike_14.is_proxy (Slither line:1428)
+
+
+Begin VatLike_14.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VatLike_14 
+
+End VatLike_14.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CropJoinImp.is_proxy (Slither line:1425)
+
+
+End CropJoinImp.is_proxy (Slither line:1428)
+
+
+Begin CropJoinImp.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CropJoinImp 
+
+End CropJoinImp.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StakingRewardsLike_1.is_proxy (Slither line:1425)
+
+
+End StakingRewardsLike_1.is_proxy (Slither line:1428)
+
+
+Begin StakingRewardsLike_1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StakingRewardsLike_1 
+
+End StakingRewardsLike_1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SynthetixJoinImp.is_proxy (Slither line:1425)
+
+
+End SynthetixJoinImp.is_proxy (Slither line:1428)
+
+
+Begin SynthetixJoinImp.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SynthetixJoinImp 
+
+End SynthetixJoinImp.is_upgradeable_proxy (Slither line:1407)
+

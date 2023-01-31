@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.7/0f./ethereum/contracts/goerli/0f/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol#18-63)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.7/0f./ethereum/contracts/goerli/0f/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol#18-63) is an upgradeable proxy.\ndelegate was found in a different contract.\ndelegate is an address state variable.\nStorage.delegate (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.7/0f./ethereum/contracts/goerli/0f/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol#6) gets value from a cross-contract call: Storage(store).delegate()\nStorage appears to be a Beacon contract for the proxy\nThe address of Storage is stored as a state variable: Proxy.store\nCould not find setter for store\nMissing compatibility check in Storage.setDelegate(address)\nTo remove upgradeability, delete setDelegate from Storage\n",
+        "id": "59ce7840c80d3d96a4b5d1cc9f99efbc172d3921931fbe1f3e0ed8dbe020497b",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Storage.delegate",
+          "impl_address_setter": "Storage.setDelegate(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Storage (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.7/0f./ethereum/contracts/goerli/0f/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol/0F1AE882272032D494926D5D983E4FBE253CB544_Proxy.sol#4-16)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "Storage(store).delegate()",
+          "beacon": "Storage",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "Proxy.store",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Storage.setDelegate(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setDelegate from Storage",
+          "immutable_functions": {
+            "other": [
+              "upgradeDelegate(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

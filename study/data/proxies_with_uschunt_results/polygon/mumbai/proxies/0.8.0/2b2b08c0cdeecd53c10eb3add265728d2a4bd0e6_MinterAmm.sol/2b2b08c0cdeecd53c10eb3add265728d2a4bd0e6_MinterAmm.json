@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/2b2b08c0cdeecd53c10eb3add265728d2a4bd0e6_MinterAmm.sol/2b2b08c0cdeecd53c10eb3add265728d2a4bd0e6_MinterAmm.sol#1190-1231)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/2b2b08c0cdeecd53c10eb3add265728d2a4bd0e6_MinterAmm.sol/2b2b08c0cdeecd53c10eb3add265728d2a4bd0e6_MinterAmm.sol#1190-1231) is an upgradeable proxy.\nPROXY_MEM_SLOT is declared in the proxy.\nPROXY_MEM_SLOT is a state variable of type uint256\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateImplementation from MinterAmm\n",
+        "id": "76a0c26795dd3c3a73af2ad1582e5101d65080b20a84af6b4c2180ee212005d5",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.PROXY_MEM_SLOT",
+          "impl_address_setter": "MinterAmm.updateImplementation(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/2b2b08c0cdeecd53c10eb3add265728d2a4bd0e6_MinterAmm.sol/2b2b08c0cdeecd53c10eb3add265728d2a4bd0e6_MinterAmm.sol#1190-1231)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "uint256",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.constructor(address)": {
+                "check": "require(bool,string)(contractLogic != address(0),Contract Logic cannot be 0x0)",
+                "is_correct": true
+              },
+              "MinterAmm.updateImplementation(address)": {
+                "check": "require(bool,string)(bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateImplementation from MinterAmm"
+        }
+      }
+    ]
+  }
+}

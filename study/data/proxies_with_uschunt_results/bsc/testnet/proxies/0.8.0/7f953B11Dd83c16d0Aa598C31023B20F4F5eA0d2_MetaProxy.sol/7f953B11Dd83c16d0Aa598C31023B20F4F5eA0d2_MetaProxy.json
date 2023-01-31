@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "MetaProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/7f953B11Dd83c16d0Aa598C31023B20F4F5eA0d2_MetaProxy.sol/7f953B11Dd83c16d0Aa598C31023B20F4F5eA0d2_MetaProxy.sol#4-142)",
+        "elements": [],
+        "description": "MetaProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/7f953B11Dd83c16d0Aa598C31023B20F4F5eA0d2_MetaProxy.sol/7f953B11Dd83c16d0Aa598C31023B20F4F5eA0d2_MetaProxy.sol#4-142) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.meta.proxy:2022)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "1df459473bf40c6ce4ed4b4284e84af5bd1f22af2cc6a0c1fb402b14dc5cc199",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "MetaProxy.implementationPosition",
+          "impl_address_setter": "MetaProxy.upgradeTo(address)",
+          "impl_address_getter": "MetaProxy.implementation()",
+          "impl_address_location": "MetaProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/7f953B11Dd83c16d0Aa598C31023B20F4F5eA0d2_MetaProxy.sol/7f953B11Dd83c16d0Aa598C31023B20F4F5eA0d2_MetaProxy.sol#4-142)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.meta.proxy:2022)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MetaProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(currentImpl != impl,MetaProxy: upgrade to current implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "upgradeTo(address)",
+              "executeMetaTransaction(uint256[],address[],bytes[],bytes32,uint8,bytes32,bytes32)",
+              "transferProxyOwnership(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

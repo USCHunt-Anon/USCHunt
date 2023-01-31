@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ASAPProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/ea./bsc/contracts/testnet/ea/EaEB6cF450690E8d4162405b437f40873492C09d_ASAPProxy.sol/EaEB6cF450690E8d4162405b437f40873492C09d_ASAPProxy.sol#11-103)",
+        "elements": [],
+        "description": "ASAPProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/ea./bsc/contracts/testnet/ea/EaEB6cF450690E8d4162405b437f40873492C09d_ASAPProxy.sol/EaEB6cF450690E8d4162405b437f40873492C09d_ASAPProxy.sol#11-103) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.ASAP:2022)\nMissing compatibility check in ASAPProxy.constructor(address)\nFound compatibility check in ASAPProxy.upgradeTo(address)\n",
+        "id": "ba35e73e0f3ccfcb2c35db7db185de9e6415b3c863e9a6ad4d27e6882ae4725d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ASAPProxy.implementationPosition",
+          "impl_address_setter": "ASAPProxy.upgradeTo(address)",
+          "impl_address_getter": "ASAPProxy.implementation()",
+          "impl_address_location": "ASAPProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/ea./bsc/contracts/testnet/ea/EaEB6cF450690E8d4162405b437f40873492C09d_ASAPProxy.sol/EaEB6cF450690E8d4162405b437f40873492C09d_ASAPProxy.sol#11-103)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.ASAP:2022)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ASAPProxy.constructor(address)": "missing",
+              "ASAPProxy.upgradeTo(address)": "require(bool)(currentImplementation != _newImplementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "setAdmin(address,bool)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.4.22/133940188703f0ed807b140e8a902d12117f643e_Proxy.sol/133940188703f0ed807b140e8a902d12117f643e_Proxy.sol#9-40)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.4.22/133940188703f0ed807b140e8a902d12117f643e_Proxy.sol/133940188703f0ed807b140e8a902d12117f643e_Proxy.sol#9-40) may be an upgradeable proxy.\nProxy uses `call` instead of `delegatecall`\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "7aa640f720f0735aaad03bde63e98ea3c8d71c944698657325a37346a2504b76",
+        "features": {
+          "upgradeable": "maybe",
+          "uses_call_instead_of_delegatecall": true,
+          "impl_address_variable": "Proxy.masterCopy",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.4.22/133940188703f0ed807b140e8a902d12117f643e_Proxy.sol/133940188703f0ed807b140e8a902d12117f643e_Proxy.sol#9-40)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.constructor(address)": {
+                "check": "require(bool,string)(_masterCopy != address(0x0),MasterCopy address MUST BE != 0x0)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

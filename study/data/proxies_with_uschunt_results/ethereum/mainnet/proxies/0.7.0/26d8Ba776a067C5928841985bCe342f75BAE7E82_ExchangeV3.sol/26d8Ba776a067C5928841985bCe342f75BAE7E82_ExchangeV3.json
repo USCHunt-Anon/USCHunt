@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#612-643)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#612-643) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#656-703)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#656-703) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OwnedUpgradabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#716-793)",
+        "elements": [],
+        "description": "OwnedUpgradabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#716-793) is an upgradeable proxy.\nimplementationPosition was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(org.zeppelinos.proxy.implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "64c6edd729d5433e775acbe81a0d7572b9632c750733b6235157c55820607218",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.implementationPosition",
+          "impl_address_setter": "OwnedUpgradabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy.implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol/26d8Ba776a067C5928841985bCe342f75BAE7E82_ExchangeV3.sol#656-703)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(org.zeppelinos.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool)(currentImplementation != newImplementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradabilityProxy.upgradeTo(address)": {
+                "check": "require(bool)(currentImplementation != newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "implementation()",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OrderBookProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.5/f16f6f6141D8cB67d85c82f1C1979DA80Bb0F3fc_OrderBookProxy.sol/f16f6f6141D8cB67d85c82f1C1979DA80Bb0F3fc_OrderBookProxy.sol#11-129)",
+        "elements": [],
+        "description": "OrderBookProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.5/f16f6f6141D8cB67d85c82f1C1979DA80Bb0F3fc_OrderBookProxy.sol/f16f6f6141D8cB67d85c82f1C1979DA80Bb0F3fc_OrderBookProxy.sol#11-129) is an upgradeable proxy.\nfacet is declared in the proxy.\nfacets probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete diamondCut from LibDiamond\n",
+        "id": "1d067e152074183d1eae21934e27a06c26bbccfe0bfb238b77b97a44d39d91f2",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OrderBookProxy.fallback().facet",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "OrderBookProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.5/f16f6f6141D8cB67d85c82f1C1979DA80Bb0F3fc_OrderBookProxy.sol/f16f6f6141D8cB67d85c82f1C1979DA80Bb0F3fc_OrderBookProxy.sol#11-129)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => bytes32)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove diamondCut from LibDiamond",
+          "immutable_functions": {
+            "other": [
+              "depositERC20(uint256,address)",
+              "withdrawERC20(uint256,address)",
+              "depositETH()",
+              "withdrawETH(uint256)",
+              "getTokenBalance(address,address)",
+              "updateWETH(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

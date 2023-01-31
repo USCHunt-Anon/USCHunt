@@ -1,0 +1,76 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#15-83)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#15-83) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#101-162)",
+        "elements": [],
+        "description": "UpgradeableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#101-162) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "6498cef87413584e0151e2db149e748f6a8bbf5f5e1bfa6a9d5cf68d98a5879e",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "TradeFloorProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#369-477)",
+        "elements": [],
+        "description": "TradeFloorProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#369-477) is an upgradeable proxy.\n_IMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "2cb3d202208b3988b1cfa56a5b5d192058e484734218e44965c30c70224dc104",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableProxy._IMPLEMENTATION_SLOT",
+          "impl_address_setter": "TradeFloorProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeableProxy._implementation()",
+          "impl_address_location": "UpgradeableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/4e./ethereum/contracts/rinkeby/4e/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol/4Ed4A62d88e8941D9086E6487E7a19be93B027B0_TradeFloorProxy.sol#101-162)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TradeFloorProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableProxy: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TradeFloorProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableProxy: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UpgradeableProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableProxy: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TradeFloorProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableProxy: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

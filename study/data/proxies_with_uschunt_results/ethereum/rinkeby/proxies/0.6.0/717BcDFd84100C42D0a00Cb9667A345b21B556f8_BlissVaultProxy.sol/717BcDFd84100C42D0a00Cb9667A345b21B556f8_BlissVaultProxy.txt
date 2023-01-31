@@ -1,0 +1,197 @@
+
+Begin BlissVaultProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin BlissVaultProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End BlissVaultProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin BlissVaultProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),addr,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+addr
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is addr (Slither line:2818)
+dest.value: addr (Slither line:2821)
+Expression: implementation() (Slither line:2826)
+
+Begin BlissVaultProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+AssignmentOperation: impl = sload(uint256)(position) (Slither line:2107)
+CallExpression: sload(uint256) (Slither line:2113)
+Found storage slot: implementationPosition (Slither line:2130)
+implementation returns a variable of type address   called impl (Slither line:2183)
+implementation contains assembly - looking for sload (Slither line:2189)
+
+End BlissVaultProxy.find_delegate_from_call_exp (Slither line:2318)
+
+
+End BlissVaultProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+Setting BlissVaultProxy._delegate_variable = BlissVaultProxy._proxy_impl_slot: implementationPosition (Slither line:1473)
+
+
+End BlissVaultProxy.is_proxy (Slither line:1476)
+
+
+Begin BlissVaultProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BlissVaultProxy 
+Call destination implementationPosition is constant (Slither line:1146)
+
+implementationPosition is the implementation storage slot (Slither line:1149)
+
+BlissVaultProxy is delegating to implementationPosition
+Looking for setter (Slither line:1200)
+
+
+Begin BlissVaultProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: bytes32(uint256(keccak256(bytes)(bliss.vault.impl)) - 1) (Slither line:3112)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: setup(address) returns() (Slither line:3117)
+Visibility: external
+require(bool)(msg.sender == proxyOwner())
+require(bool)(msg.sender == proxyOwner())
+sstore(uint256,uint256)(position,_newImplementation)
+sstore(uint256,uint256)
+
+End BlissVaultProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setup in contract: BlissVaultProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BlissVaultProxy.find_getter_in_contract (Slither line:2964)
+
+implementationPosition is a Variable object
+bytes32(uint256(keccak256(bytes)(bliss.vault.impl)) - 1)
+Checking function: constructor (Slither line:2978)
+Checking function: setup (Slither line:2978)
+Checking function: setupOwner (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable called impl (Slither line:2998)
+implementation contains assembly (Slither line:3041)
+
+End BlissVaultProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: BlissVaultProxy (Slither line:1285)
+
+End BlissVaultProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: BlissVaultProxy
+Setter found in contract BlissVaultProxy
+Checking external function setup
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyOwner())
+Checking external function setupOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyOwner())
+Checking external function setup
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyOwner())
+Checking external function setupOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyOwner())
+Checking public function implementation
+Checking public function proxyOwner
+Checking external function fallback
+functions_writing_to_variable: implementationPosition
+functions_writing_to_variable: checking function BlissVaultProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function BlissVaultProxy._setUpgradeabilityOwner (proxy_features line:893)
+functions_writing_to_variable: checking function BlissVaultProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function BlissVaultProxy.proxyOwner (proxy_features line:893)
+functions_writing_to_variable: checking function BlissVaultProxy._setImplementation (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: _setImplementation writes _newImplementation to implementationPosition using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function BlissVaultProxy.setupOwner (proxy_features line:893)
+functions_writing_to_variable: checking function BlissVaultProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function BlissVaultProxy.setup (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: setup writes _newImplementation to implementationPosition using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function BlissVaultProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = implementationPosition = bytes32(uint256(keccak256(bytes)(bliss.vault.impl)) - 1) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = bytes32(uint256(keccak256(bytes)(bliss.vault.impl)) - 1) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:919)
+get_value_assigned: implementationPosition = bytes32(uint256(keccak256(bytes)(bliss.vault.impl)) - 1)
+functions_writing_to_variable: exp = proxyOwnerPosition = bytes32(uint256(keccak256(bytes)(bliss.vault.owner)) - 1) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxyOwnerPosition = bytes32(uint256(keccak256(bytes)(bliss.vault.owner)) - 1) (proxy_features line:907)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking external function setup
+require(bool)(msg.sender == proxyOwner())
+has_compatibility_checks: condition msg.sender == proxyOwner()
+require(bool)(msg.sender == proxyOwner())
+has_compatibility_checks: condition msg.sender == proxyOwner()
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),addr,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: addr = implementation()
+Found public function: constructor
+Found external function: setup
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == proxyOwner())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = proxyOwnerPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == proxyOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(position,_newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) owner = sload(uint256)(position)

@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "CartesiDApp (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/1f61F0CaE7c7554fbE2164AeDf3EDc50cE6ee915_CartesiDApp.sol/1f61F0CaE7c7554fbE2164AeDf3EDc50cE6ee915_CartesiDApp.sol#14-62)",
+        "elements": [],
+        "description": "CartesiDApp (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/1f61F0CaE7c7554fbE2164AeDf3EDc50cE6ee915_CartesiDApp.sol/1f61F0CaE7c7554fbE2164AeDf3EDc50cE6ee915_CartesiDApp.sol#14-62) is an upgradeable proxy.\nfacet is declared in the proxy.\nfacets probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete diamondCut from LibDiamond\n",
+        "id": "dfd8e03778ba016b80f626293416f11e5a36559e6bd009d7c8829d08071e6928",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "CartesiDApp.fallback().facet",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "CartesiDApp (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/1f61F0CaE7c7554fbE2164AeDf3EDc50cE6ee915_CartesiDApp.sol/1f61F0CaE7c7554fbE2164AeDf3EDc50cE6ee915_CartesiDApp.sol#14-62)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => bytes32)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove diamondCut from LibDiamond"
+        }
+      }
+    ]
+  }
+}

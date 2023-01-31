@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.23/5982f9decc836248b2c72cf23af1ec2a64173fcc_Proxy.sol/5982f9decc836248b2c72cf23af1ec2a64173fcc_Proxy.sol#40-94)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.23/5982f9decc836248b2c72cf23af1ec2a64173fcc_Proxy.sol/5982f9decc836248b2c72cf23af1ec2a64173fcc_Proxy.sol#40-94) is an upgradeable proxy.\ntarget was found in a different contract.\ntarget is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "e0fa5cea6f7b780bf62e81088313cc47181c7b0fc82448dcc98ab1ed92440532",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxied.target",
+          "impl_address_setter": "Proxy.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxied (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.23/5982f9decc836248b2c72cf23af1ec2a64173fcc_Proxy.sol/5982f9decc836248b2c72cf23af1ec2a64173fcc_Proxy.sol#30-38)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.upgradeTo(address,bytes)": {
+                "check": "assert(bool)(target != _target)",
+                "is_correct": true
+              },
+              "Proxy.upgradeTo(address)": {
+                "check": "assert(bool)(target != _target)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "upgradeTo(address)",
+              "transferOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeTo(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

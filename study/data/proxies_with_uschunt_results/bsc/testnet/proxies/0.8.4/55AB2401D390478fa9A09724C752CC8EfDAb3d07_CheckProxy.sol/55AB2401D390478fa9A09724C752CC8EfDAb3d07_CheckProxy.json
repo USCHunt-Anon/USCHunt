@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#346-416)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#346-416) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#600-618)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#600-618) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "211e994b39210eb9069681dcc1b67b974889fdbc5a5da463a2722040444f5164",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "CheckProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#623-698)",
+        "elements": [],
+        "description": "CheckProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#623-698) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "3790fcdb6b9362503a7451914a9fbcd7c8cc482d761cfa01978e489027a127ab",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "CheckProxy.proxy_upgradeTo(address,bytes)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "CheckProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol/55AB2401D390478fa9A09724C752CC8EfDAb3d07_CheckProxy.sol#623-698)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "CheckProxy.constructor(address,address)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "CheckProxy.proxy_upgradeTo(address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "proxy_upgradeTo(address,bytes)",
+              "proxy_getAdmin()",
+              "proxy_changeAdmin(address)",
+              "proxy_getIsOssified()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

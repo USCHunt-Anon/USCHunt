@@ -1,0 +1,1467 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2800)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2815)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2800)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2815)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2800)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2815)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2800)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2815)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2800)
+Expression Type: = (Slither line:2803)
+Checking right side of assignment expression... (Slither line:2811)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2815)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2822)
+
+Destination is implementation (Slither line:2826)
+dest.value: implementation (Slither line:2829)
+Expression: None (Slither line:2834)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2001)
+called = _implementation (Slither line:2008)
+Got abstract function, looking for overriding function (Slither line:2023)
+Failure (Slither line:2031)
+_implementation returns a variable of type address   (Slither line:2191)
+Return value is LocalVariable:  (Slither line:2264)
+has no expression (Slither line:2324)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2326)
+
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1947)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2800)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2815)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2800)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2815)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2001)
+called = _implementation (Slither line:2008)
+Got abstract function, looking for overriding function (Slither line:2023)
+Failure (Slither line:2031)
+_implementation returns a variable of type address   (Slither line:2191)
+Return value is LocalVariable:  (Slither line:2264)
+has no expression (Slither line:2324)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2326)
+
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1947)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2800)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2815)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1689_220_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2800)
+Expression Type: = (Slither line:2803)
+Checking right side of assignment expression... (Slither line:2811)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageSlot.is_proxy (Slither line:1425)
+
+
+End StorageSlot.is_proxy (Slither line:1428)
+
+
+Begin StorageSlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageSlot 
+
+End StorageSlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Upgrade.is_proxy (Slither line:1425)
+
+
+End ERC1967Upgrade.is_proxy (Slither line:1428)
+
+
+Begin ERC1967Upgrade.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Upgrade 
+
+End ERC1967Upgrade.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2800)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2815)
+Args:
+0
+returndatasize()()
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2800)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2815)
+Args:
+0
+0
+calldatasize()()
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2800)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2815)
+Args:
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2800)
+Expression Type: = (Slither line:2803)
+Checking right side of assignment expression... (Slither line:2811)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2815)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2822)
+
+Destination is implementation (Slither line:2826)
+dest.value: implementation (Slither line:2829)
+Expression: None (Slither line:2834)
+
+Begin ERC1967Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ROLLBACK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in ERC1967Proxy._delegate (Slither line:1805)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: slot (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin ERC1967Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2001)
+called = _implementation (Slither line:2008)
+Return node of function ERC1967Proxy._implementation(): RETURN ERC1967Upgrade._getImplementation() (Slither line:2039)
+Encountered call expression at RETURN node: ERC1967Upgrade._getImplementation() (Slither line:2051)
+Encountered member access expression: ERC1967Upgrade._getImplementation (Slither line:2055)
+
+Begin ERC1967Proxy.find_delegate_from_member_access
+
+Expression: ERC1967Upgrade._getImplementation (Slither line:2356)
+ERC1967Upgrade (Slither line:2369)
+_getImplementation is a member of the contract type: ERC1967Upgrade (Slither line:2414)
+Looking for _getImplementation in ERC1967Upgrade (Slither line:2521)
+Found the function called _getImplementation (Slither line:2525)
+Returns a variable of type address (Slither line:2530)
+Found RETURN node: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:2542)
+Found another MemberAccess (Slither line:2550)
+Member name: value
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT)
+MemberAccess after CallExpression: StorageSlot.getAddressSlot (Slither line:2554)
+Too many MemberAccesses: returning (Slither line:2558)
+find_delegate_from_member_access returned None (Slither line:2563)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2576)
+
+End ERC1967Proxy.find_delegate_from_member_access (Slither line:2643)
+
+
+End ERC1967Proxy.find_delegate_from_call_exp (Slither line:2102)
+
+
+End ERC1967Proxy.find_delegate_variable_from_name (Slither line:1947)
+
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2856)
+
+
+End ERC1967Proxy.is_proxy (Slither line:1476)
+
+
+Begin ERC1967Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Proxy 
+Local Variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:1164)
+ERC1967Proxy is delegating to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Looking for setter (Slither line:1200)
+
+Looking for setter in ERC1967Upgrade (Slither line:1238)
+
+
+Begin ERC1967Upgrade.find_setter_in_contract (Slither line:3117)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3120)
+Checking function: _getImplementation() returns(address) (Slither line:3125)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3125)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3125)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3125)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3125)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3125)
+Visibility: private
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3125)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3125)
+Visibility: internal
+
+End ERC1967Upgrade.find_setter_in_contract (Slither line:3343)
+
+
+Could not find setter in ERC1967Upgrade (Slither line:1245)
+Looking for setter in UUPSUpgradeable (Slither line:1252)
+
+
+Begin UUPSUpgradeable.find_setter_in_contract (Slither line:3117)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3120)
+Checking function: upgradeTo(address) returns() (Slither line:3125)
+Visibility: external
+_upgradeTo(newImplementation)
+_setImplementation(newImplementation)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+r = slot
+is an Assignment Operation (Slither line:3214)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+_verifyCallResult(success,returndata,errorMessage)
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3214)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Address.functionDelegateCall(newImplementation,data)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3214)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+_setImplementation(newImplementation)
+Upgraded(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+
+End UUPSUpgradeable.find_setter_in_contract (Slither line:3343)
+
+Looking for setter in EasyTrack (Slither line:1252)
+
+
+Begin EasyTrack.find_setter_in_contract (Slither line:3117)
+
+Expression: newImplementation (Slither line:3120)
+Checking function: createMotion(address,bytes) returns(uint256) (Slither line:3125)
+Visibility: external
+_paused
+result = mload(uint256)(data + 0x20 + location)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+false
+false
+true
+(methodToCall,callDataLength) = _getNextMethodId(_evmScript,location)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+location += PERMISSION_LENGTH
+is an Assignment Operation (Slither line:3214)
+newImplementation
+true
+location += PERMISSION_LENGTH + callDataLength
+is an Assignment Operation (Slither line:3214)
+newImplementation
+false
+_evmScript = IEVMScriptFactory(_evmScriptFactory).createEVMScript(_creator,_evmScriptCallData)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_newMotionId = ++ lastMotionId
+is an Assignment Operation (Slither line:3214)
+newImplementation
+require(bool,string)(permissions.canExecuteEVMScript(_evmScript),HAS_NO_PERMISSIONS)
+newMotion.id = _newMotionId
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+newMotion.creator = msg.sender
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+result = word & 0xffffffffffffffffffffffffffffffffffffffff000000000000000000000000 / 0x1000000000000000000000000
+is an Assignment Operation (Slither line:3214)
+newImplementation
+newMotion.startDate = block.timestamp
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+newMotion.snapshotBlock = block.number
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+newMotion.duration = motionDuration
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+newMotion.objectionsThreshold = objectionsThreshold
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+(bytes24(uint192(methodId)) | bytes20(recipient),callDataLength)
+newMotion.evmScriptFactory = _evmScriptFactory
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+newMotion.evmScriptHash = keccak256(bytes)(evmScript)
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+evmScriptFactoryIndices[_maybeEVMScriptFactory] > 0
+require(bool,string)(! paused(),Pausable: paused)
+motionIndicesByMotionId[_newMotionId] = motions.length
+is an Assignment Operation (Slither line:3214)
+newImplementation
+MotionCreated(_newMotionId,msg.sender,_evmScriptFactory,_evmScriptCallData,evmScript)
+whenNotPaused()
+result = word & 0xffffffff00000000000000000000000000000000000000000000000000000000 / 0x100000000000000000000000000000000000000000000000000000000
+is an Assignment Operation (Slither line:3214)
+newImplementation
+require(bool,string)(motions.length < motionsCountLimit,ERROR_MOTIONS_LIMIT_REACHED)
+result = word
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_permissions.length > 0 && _permissions.length % PERMISSION_LENGTH == 0
+require(bool,string)(_isEVMScriptFactory(_evmScriptFactory),EVM_SCRIPT_FACTORY_NOT_FOUND)
+Checking function: enactMotion(uint256,bytes) returns() (Slither line:3125)
+Visibility: external
+_paused
+result = mload(uint256)(data + 0x20 + location)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+false
+false
+true
+(methodToCall,callDataLength) = _getNextMethodId(_evmScript,location)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+location += PERMISSION_LENGTH
+is an Assignment Operation (Slither line:3214)
+newImplementation
+true
+location += PERMISSION_LENGTH + callDataLength
+is an Assignment Operation (Slither line:3214)
+newImplementation
+false
+_evmScript = IEVMScriptFactory(_evmScriptFactory).createEVMScript(_creator,_evmScriptCallData)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motions[index] = lastMotion
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motionIndicesByMotionId[lastMotion.id] = index + 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+require(bool,string)(permissions.canExecuteEVMScript(_evmScript),HAS_NO_PERMISSIONS)
+delete motionIndicesByMotionId[_motionId]
+result = word & 0xffffffffffffffffffffffffffffffffffffffff000000000000000000000000 / 0x1000000000000000000000000
+is an Assignment Operation (Slither line:3214)
+newImplementation
+require(bool,string)(motion.startDate + motion.duration <= block.timestamp,ERROR_MOTION_NOT_PASSED)
+(bytes24(uint192(methodId)) | bytes20(recipient),callDataLength)
+require(bool,string)(_motionIndex > 0,ERROR_MOTION_NOT_FOUND)
+motions[_motionIndex - 1]
+require(bool,string)(motion.evmScriptHash == keccak256(bytes)(evmScript),ERROR_UNEXPECTED_EVM_SCRIPT)
+evmScriptFactoryIndices[_maybeEVMScriptFactory] > 0
+require(bool,string)(! paused(),Pausable: paused)
+evmScriptExecutor.executeEVMScript(evmScript)
+_deleteMotion(_motionId)
+MotionEnacted(_motionId)
+whenNotPaused()
+result = word & 0xffffffff00000000000000000000000000000000000000000000000000000000 / 0x100000000000000000000000000000000000000000000000000000000
+is an Assignment Operation (Slither line:3214)
+newImplementation
+result = word
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_permissions.length > 0 && _permissions.length % PERMISSION_LENGTH == 0
+motions.pop()
+require(bool,string)(_isEVMScriptFactory(_evmScriptFactory),EVM_SCRIPT_FACTORY_NOT_FOUND)
+Checking function: objectToMotion(uint256) returns() (Slither line:3125)
+Visibility: external
+motions[index] = lastMotion
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motionIndicesByMotionId[lastMotion.id] = index + 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+MotionObjected(_motionId,msg.sender,objectorBalance,newObjectionsAmount,newObjectionsAmountPct)
+delete motionIndicesByMotionId[_motionId]
+require(bool,string)(! objections[_motionId][msg.sender],ERROR_ALREADY_OBJECTED)
+objections[_motionId][msg.sender] = true
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motion.objectionsAmount = newObjectionsAmount
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+motion.objectionsAmountPct = newObjectionsAmountPct
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+require(bool,string)(_motionIndex > 0,ERROR_MOTION_NOT_FOUND)
+motions[_motionIndex - 1]
+_deleteMotion(_motionId)
+require(bool,string)(objectorBalance > 0,ERROR_NOT_ENOUGH_BALANCE)
+MotionRejected(_motionId)
+motions.pop()
+Checking function: cancelMotion(uint256) returns() (Slither line:3125)
+Visibility: external
+motions[index] = lastMotion
+is an Assignment Operation (Slither line:3214)
+newImplementation
+require(bool,string)(motion.creator == msg.sender,ERROR_NOT_CREATOR)
+motionIndicesByMotionId[lastMotion.id] = index + 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_deleteMotion(_motionId)
+MotionCanceled(_motionId)
+delete motionIndicesByMotionId[_motionId]
+require(bool,string)(_motionIndex > 0,ERROR_MOTION_NOT_FOUND)
+motions[_motionIndex - 1]
+motions.pop()
+Checking function: cancelMotions(uint256[]) returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motions[index] = lastMotion
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_deleteMotion(_motionIds[i])
+_checkRole(role,_msgSender())
+motionIndicesByMotionId[lastMotion.id] = index + 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+MotionCanceled(_motionIds[i])
+onlyRole(CANCEL_ROLE)
+delete motionIndicesByMotionId[_motionId]
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motions.pop()
+++ i
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+string(buffer)
+Checking function: cancelAllMotions() returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motions[index] = lastMotion
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_checkRole(role,_msgSender())
+motionIndicesByMotionId[lastMotion.id] = index + 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motionsCount -= 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+delete motionIndicesByMotionId[_motionId]
+_deleteMotion(motionId)
+MotionCanceled(motionId)
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+onlyRole(CANCEL_ROLE)
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+motions.pop()
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+string(buffer)
+Checking function: setEVMScriptExecutor(address) returns() (Slither line:3125)
+Visibility: external
+EVMScriptExecutorChanged(_evmScriptExecutor)
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+onlyRole(DEFAULT_ADMIN_ROLE)
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_checkRole(role,_msgSender())
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+evmScriptExecutor = IEVMScriptExecutor(_evmScriptExecutor)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+string(buffer)
+Checking function: pause() returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+string(buffer)
+_checkRole(role,_msgSender())
+_paused
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+_paused = true
+is an Assignment Operation (Slither line:3214)
+newImplementation
+-- i
+Paused(_msgSender())
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_pause()
+require(bool,string)(! paused(),Pausable: paused)
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+whenNotPaused()
+whenNotPaused()
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+onlyRole(PAUSE_ROLE)
+Checking function: unpause() returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_checkRole(role,_msgSender())
+require(bool,string)(paused(),Pausable: not paused)
+_paused = false
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_paused
+Unpaused(_msgSender())
+_unpause()
+whenPaused()
+whenPaused()
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+onlyRole(UNPAUSE_ROLE)
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+string(buffer)
+Checking function: canObjectToMotion(uint256,address) returns(bool) (Slither line:3125)
+Visibility: external
+require(bool,string)(_motionIndex > 0,ERROR_MOTION_NOT_FOUND)
+balance > 0 && ! objections[_motionId][_objector]
+motions[_motionIndex - 1]
+Checking function: getMotions() returns(Motion[]) (Slither line:3125)
+Visibility: external
+motions
+Checking function: getMotion(uint256) returns(Motion) (Slither line:3125)
+Visibility: external
+require(bool,string)(_motionIndex > 0,ERROR_MOTION_NOT_FOUND)
+_getMotion(_motionId)
+motions[_motionIndex - 1]
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _deleteMotion(uint256) returns() (Slither line:3125)
+Visibility: private
+Checking function: _getMotion(uint256) returns(Motion) (Slither line:3125)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3125)
+Visibility: internal
+Checking function: addEVMScriptFactory(address,bytes) returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+evmScriptFactoryPermissions[_evmScriptFactory] = _permissions
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+EVMScriptFactoryAdded(_evmScriptFactory,_permissions)
+_checkRole(role,_msgSender())
+onlyRole(DEFAULT_ADMIN_ROLE)
+_permissions.length > 0 && _permissions.length % PERMISSION_LENGTH == 0
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+evmScriptFactoryIndices[_maybeEVMScriptFactory] > 0
+require(bool,string)(_permissions.isValidPermissions(),INVALID_PERMISSIONS)
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+require(bool,string)(! _isEVMScriptFactory(_evmScriptFactory),EVM_SCRIPT_FACTORY_ALREADY_ADDED)
+evmScriptFactories.push(_evmScriptFactory)
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+evmScriptFactoryIndices[_evmScriptFactory] = evmScriptFactories.length
+is an Assignment Operation (Slither line:3214)
+newImplementation
+string(buffer)
+Checking function: removeEVMScriptFactory(address) returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+string(buffer)
+_checkRole(role,_msgSender())
+evmScriptFactories.pop()
+evmScriptFactories[index] = lastEVMScriptFactory
+is an Assignment Operation (Slither line:3214)
+newImplementation
+evmScriptFactoryIndices[lastEVMScriptFactory] = index + 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+_index = evmScriptFactoryIndices[_evmScriptFactory]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+delete evmScriptFactoryIndices[_evmScriptFactory]
+require(bool,string)(_index > 0,EVM_SCRIPT_FACTORY_NOT_FOUND)
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+delete evmScriptFactoryPermissions[_evmScriptFactory]
+_index -= 1
+is an Assignment Operation (Slither line:3214)
+newImplementation
+EVMScriptFactoryRemoved(_evmScriptFactory)
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+onlyRole(DEFAULT_ADMIN_ROLE)
+Checking function: getEVMScriptFactories() returns(address[]) (Slither line:3125)
+Visibility: external
+evmScriptFactories
+Checking function: isEVMScriptFactory(address) returns(bool) (Slither line:3125)
+Visibility: external
+_isEVMScriptFactory(_maybeEVMScriptFactory)
+evmScriptFactoryIndices[_maybeEVMScriptFactory] > 0
+Checking function: _createEVMScript(address,address,bytes) returns(bytes) (Slither line:3125)
+Visibility: internal
+Checking function: _getEVMScriptFactoryIndex(address) returns(uint256) (Slither line:3125)
+Visibility: private
+Checking function: _isEVMScriptFactory(address) returns(bool) (Slither line:3125)
+Visibility: private
+Checking function: __EasyTrackStorage_init(address,address) returns() (Slither line:3125)
+Checking function: __AccessControl_init() returns() (Slither line:3125)
+Checking function: __AccessControl_init_unchained() returns() (Slither line:3125)
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3125)
+Visibility: public
+interfaceId == type()(IERC165Upgradeable).interfaceId
+interfaceId == type()(IAccessControlUpgradeable).interfaceId || super.supportsInterface(interfaceId)
+Checking function: hasRole(bytes32,address) returns(bool) (Slither line:3125)
+Visibility: public
+_roles[role].members[account]
+Checking function: _checkRole(bytes32,address) returns() (Slither line:3125)
+Visibility: internal
+Checking function: getRoleAdmin(bytes32) returns(bytes32) (Slither line:3125)
+Visibility: public
+_roles[role].adminRole
+Checking function: grantRole(bytes32,address) returns() (Slither line:3125)
+Visibility: public
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].adminRole
+_checkRole(role,_msgSender())
+_grantRole(role,account)
+onlyRole(getRoleAdmin(role))
+_roles[role].members[account] = true
+is an Assignment Operation (Slither line:3214)
+newImplementation
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+RoleGranted(role,account,_msgSender())
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+onlyRole(getRoleAdmin(role))
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+string(buffer)
+Checking function: revokeRole(bytes32,address) returns() (Slither line:3125)
+Visibility: public
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].adminRole
+_checkRole(role,_msgSender())
+_revokeRole(role,account)
+onlyRole(getRoleAdmin(role))
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+onlyRole(getRoleAdmin(role))
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account] = false
+is an Assignment Operation (Slither line:3214)
+newImplementation
+RoleRevoked(role,account,_msgSender())
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+string(buffer)
+Checking function: renounceRole(bytes32,address) returns() (Slither line:3125)
+Visibility: public
+_revokeRole(role,account)
+_roles[role].members[account] = false
+is an Assignment Operation (Slither line:3214)
+newImplementation
+RoleRevoked(role,account,_msgSender())
+_roles[role].members[account]
+require(bool,string)(account == _msgSender(),AccessControl: can only renounce roles for self)
+msg.sender
+Checking function: _setupRole(bytes32,address) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _setRoleAdmin(bytes32,bytes32) returns() (Slither line:3125)
+Visibility: internal
+Checking function: _grantRole(bytes32,address) returns() (Slither line:3125)
+Visibility: private
+Checking function: _revokeRole(bytes32,address) returns() (Slither line:3125)
+Visibility: private
+Checking function: __ERC165_init() returns() (Slither line:3125)
+Checking function: __ERC165_init_unchained() returns() (Slither line:3125)
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3125)
+Visibility: public
+interfaceId == type()(IERC165Upgradeable).interfaceId
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3125)
+Visibility: external
+Checking function: hasRole(bytes32,address) returns(bool) (Slither line:3125)
+Visibility: external
+Checking function: getRoleAdmin(bytes32) returns(bytes32) (Slither line:3125)
+Visibility: external
+Checking function: grantRole(bytes32,address) returns() (Slither line:3125)
+Visibility: external
+Checking function: revokeRole(bytes32,address) returns() (Slither line:3125)
+Visibility: external
+Checking function: renounceRole(bytes32,address) returns() (Slither line:3125)
+Visibility: external
+Checking function: __Context_init() returns() (Slither line:3125)
+Checking function: __Context_init_unchained() returns() (Slither line:3125)
+Checking function: _msgSender() returns(address) (Slither line:3125)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3125)
+Visibility: internal
+Checking function: __Pausable_init() returns() (Slither line:3125)
+Checking function: __Pausable_init_unchained() returns() (Slither line:3125)
+Checking function: paused() returns(bool) (Slither line:3125)
+Visibility: public
+_paused
+Checking function: _pause() returns() (Slither line:3125)
+Visibility: internal
+Checking function: _unpause() returns() (Slither line:3125)
+Visibility: internal
+Checking function: setMotionDuration(uint256) returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+string(buffer)
+require(bool,string)(_motionDuration >= MIN_MOTION_DURATION,ERROR_VALUE_TOO_SMALL)
+_checkRole(role,_msgSender())
+motionDuration = _motionDuration
+is an Assignment Operation (Slither line:3214)
+newImplementation
+MotionDurationChanged(_motionDuration)
+onlyRole(DEFAULT_ADMIN_ROLE)
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+Checking function: setObjectionsThreshold(uint256) returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_checkRole(role,_msgSender())
+require(bool,string)(_objectionsThreshold <= MAX_OBJECTIONS_THRESHOLD,ERROR_VALUE_TOO_LARGE)
+objectionsThreshold = _objectionsThreshold
+is an Assignment Operation (Slither line:3214)
+newImplementation
+ObjectionsThresholdChanged(_objectionsThreshold)
+onlyRole(DEFAULT_ADMIN_ROLE)
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+string(buffer)
+Checking function: setMotionsCountLimit(uint256) returns() (Slither line:3125)
+Visibility: external
+buffer[0] = 0
+is an Assignment Operation (Slither line:3214)
+newImplementation
+buffer[1] = x
+is an Assignment Operation (Slither line:3214)
+newImplementation
+string(buffer)
+_checkRole(role,_msgSender())
+require(bool,string)(_motionsCountLimit < MAX_MOTIONS_LIMIT,ERROR_VALUE_TOO_LARGE)
+motionsCountLimit = _motionsCountLimit
+is an Assignment Operation (Slither line:3214)
+newImplementation
+MotionsCountLimitChanged(_motionsCountLimit)
+revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))
+onlyRole(DEFAULT_ADMIN_ROLE)
+-- i
+msg.sender
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3214)
+newImplementation
+value >>= 4
+is an Assignment Operation (Slither line:3214)
+newImplementation
+_roles[role].members[account]
+require(bool,string)(value == 0,Strings: hex length insufficient)
+Checking function: upgradeTo(address) returns() (Slither line:3125)
+Visibility: external
+Address.functionDelegateCall(newImplementation,data)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3214)
+newImplementation
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+_upgradeTo(newImplementation)
+revert(string)(errorMessage)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3214)
+Left side is a MemberAccess (Slither line:3217)
+
+End EasyTrack.find_setter_in_contract (Slither line:3343)
+
+
+Implementation set by function: upgradeTo in contract: EasyTrack (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: _getImplementation in contract: ERC1967Upgrade (Slither line:1285)
+
+End ERC1967Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: ERC1967Proxy
+Setter found in contract EasyTrack
+Found fallback
+Found external function: receive
+Found public function: constructor
+impl_address_from_contract_call: newImplementation
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeBeaconToAndCall (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.enactMotion (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.getRoleAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.getRoleAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeToAndCallSecure (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack.objectToMotion (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.upgradeToAndCall (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function ERC1967Proxy._delegate (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.cancelMotion (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.grantRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._authorizeUpgrade (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.cancelMotions (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.grantRole (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._getAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.cancelAllMotions (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._implementation (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.setEVMScriptExecutor (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.revokeRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._getImplementation (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.revokeRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.pause (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._fallback (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._setImplementation (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack.unpause (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._setAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.renounceRole (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy.fallback (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.canObjectToMotion (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.renounceRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._upgradeTo (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function ERC1967Proxy._changeAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy.receive (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.getMotions (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._setupRole (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._beforeFallback (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._upgradeToAndCall (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack.createMotion (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.getMotion (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._getBeacon (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__Context_init (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._authorizeUpgrade (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._upgradeToAndCallSecure (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function ERC1967Proxy._setBeacon (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._setRoleAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._deleteMotion (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__Context_init_unchained (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._getMotion (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy.constructor (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack._isEVMScriptFactory (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._msgSender (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._implementation (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._grantRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._msgData (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._getAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.addEVMScriptFactory (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.removeEVMScriptFactory (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__EasyTrackStorage_init (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__Pausable_init (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._revokeRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.getEVMScriptFactories (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._setAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__Pausable_init_unchained (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__AccessControl_init (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.paused (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__ERC165_init (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.isEVMScriptFactory (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._changeAdmin (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._pause (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy.slitherConstructorConstantVariables (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__AccessControl_init_unchained (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._getBeacon (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._createEVMScript (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.__ERC165_init_unchained (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._unpause (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.supportsInterface (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._setImplementation (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack.supportsInterface (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.setMotionDuration (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.hasRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._setBeacon (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._getImplementation (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.supportsInterface (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._getEVMScriptFactoryIndex (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.setObjectionsThreshold (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack._upgradeBeaconToAndCall (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.slitherConstructorConstantVariables (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeTo (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack._checkRole (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.setMotionsCountLimit (proxy_features line:895)
+functions_writing_to_variable: checking function EasyTrack.hasRole (proxy_features line:895)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeToAndCall (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+functions_writing_to_variable: checking function EasyTrack.upgradeTo (proxy_features line:895)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:989)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: checking external function upgradeToAndCall
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = ! rollbackTesting.value
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_compatibility_checks: condition oldImplementation == _getImplementation()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = ! hasRole(role,account)
+has_compatibility_checks: IF node can lead to revert ['revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(string(abi.encodePacked(AccessControl: account ,StringsUpgradeable.toHexString(uint160(account),20), is missing role ,StringsUpgradeable.toHexString(uint256(role),32))))']

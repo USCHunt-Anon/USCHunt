@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/bf/contracts/mainnet/bf/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol#278-304)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/bf/contracts/mainnet/bf/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol#278-304) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OracleProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/bf/contracts/mainnet/bf/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol#339-355)",
+        "elements": [],
+        "description": "OracleProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/bf/contracts/mainnet/bf/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol#339-355) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "15dcc528a4231aefd8404fa9c174a4816143afcd862fbf731c5ecff733fd2adf",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy._implementation",
+          "impl_address_setter": "OracleProxy.upgradeTo(address)",
+          "impl_address_getter": "Proxy.implementation()",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/bf/contracts/mainnet/bf/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol/Bf9076B4ea99C1fcE5E2B0FC7Ac5955333f47d18_OracleProxy.sol#278-304)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OracleProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(impl != address(0),Cannot upgrade to invalid address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "transferOwner(address)",
+              "changeOwner(address)",
+              "acceptOwnership()",
+              "renounceOwnership()",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

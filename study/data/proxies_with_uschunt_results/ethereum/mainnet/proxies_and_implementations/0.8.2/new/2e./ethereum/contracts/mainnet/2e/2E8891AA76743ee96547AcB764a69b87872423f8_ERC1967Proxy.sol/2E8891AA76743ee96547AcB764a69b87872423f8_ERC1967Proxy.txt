@@ -1,0 +1,1392 @@
+
+Begin StorageSlot.is_proxy (Slither line:1425)
+
+
+End StorageSlot.is_proxy (Slither line:1428)
+
+
+Begin StorageSlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageSlot 
+
+End StorageSlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Upgrade.is_proxy (Slither line:1425)
+
+
+End ERC1967Upgrade.is_proxy (Slither line:1428)
+
+
+Begin ERC1967Upgrade.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Upgrade 
+
+End ERC1967Upgrade.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2802)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is implementation (Slither line:2828)
+dest.value: implementation (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_18970_164_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2802)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is implementation (Slither line:2828)
+dest.value: implementation (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin ERC1967Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ROLLBACK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in ERC1967Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+AssignmentOperation: slot (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin ERC1967Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function ERC1967Proxy._implementation(): RETURN ERC1967Upgrade._getImplementation() (Slither line:2041)
+Encountered call expression at RETURN node: ERC1967Upgrade._getImplementation() (Slither line:2053)
+Encountered member access expression: ERC1967Upgrade._getImplementation (Slither line:2057)
+
+Begin ERC1967Proxy.find_delegate_from_member_access
+
+Expression: ERC1967Upgrade._getImplementation (Slither line:2358)
+ERC1967Upgrade (Slither line:2371)
+_getImplementation is a member of the contract type: ERC1967Upgrade (Slither line:2416)
+Looking for _getImplementation in ERC1967Upgrade (Slither line:2523)
+Found the function called _getImplementation (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:2544)
+Found another MemberAccess (Slither line:2552)
+Member name: value
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT)
+MemberAccess after CallExpression: StorageSlot.getAddressSlot (Slither line:2556)
+Too many MemberAccesses: returning (Slither line:2560)
+find_delegate_from_member_access returned None (Slither line:2565)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2578)
+
+End ERC1967Proxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End ERC1967Proxy.find_delegate_from_call_exp (Slither line:2104)
+
+
+End ERC1967Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End ERC1967Proxy.is_proxy (Slither line:1476)
+
+
+Begin ERC1967Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Proxy 
+Local Variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:1164)
+ERC1967Proxy is delegating to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Looking for setter (Slither line:1200)
+
+Looking for setter in ERC1967Upgrade (Slither line:1238)
+
+
+Begin ERC1967Upgrade.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC1967Upgrade.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ERC1967Upgrade (Slither line:1245)
+Looking for setter in UUPSUpgradeable (Slither line:1252)
+
+
+Begin UUPSUpgradeable.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+Address.functionDelegateCall(newImplementation,data)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End UUPSUpgradeable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in OnePlanetCarbonOffsetRootV1 (Slither line:1252)
+
+
+Begin OnePlanetCarbonOffsetRootV1.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: initialize() returns() (Slither line:3127)
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply - balances[address(0)]
+Checking function: maxSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_maxSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+balances[tokenOwner]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+balances[to] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Transfer(msg.sender,to,tokens)
+true
+balances[msg.sender] -= tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+allowed[msg.sender][spender] = tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Approval(msg.sender,spender,tokens)
+true
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+balances[from] -= tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+true
+allowed[from][msg.sender] -= tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+balances[to] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Transfer(from,to,tokens)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+allowed[tokenOwner][spender]
+Checking function: approveAndCall(address,uint256,bytes) returns(bool) (Slither line:3127)
+Visibility: public
+true
+allowed[msg.sender][spender] = tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Approval(msg.sender,spender,tokens)
+ApproveAndCallFallBack(spender).receiveApproval(msg.sender,tokens,address(this),data)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _getTokenAmount(uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: buy1PLwithDAI(uint256) returns(bool) (Slither line:3127)
+Visibility: public
+Transfer(address(0),msg.sender,tokens)
+require(bool,string)(daiAmount > 0,You need to send at least some DAI)
+require(bool,string)(daiAllowance >= daiAmount,You need to approve more DAI to be spent)
+DAIpaymentInstance.transferFrom(msg.sender,address(this),daiAmount)
+true
+require(bool,string)(DAIpaymentInstance.balanceOf(address(msg.sender)) >= daiAmount,Not enough DAI)
+balances[msg.sender] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_totalSupply += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+tokens *= 100
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: buy1PLwithUSDT(uint256) returns(bool) (Slither line:3127)
+Visibility: public
+Transfer(address(0),msg.sender,tokens)
+TETHERpaymentInstance.transferFrom(msg.sender,address(this),tetherAmount)
+require(bool,string)(tetherAmount > 0,You need to send at least some TETHER)
+require(bool,string)(tetherAllowance >= tetherAmount,You need to approve more TETHER to be spent)
+true
+balances[msg.sender] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(TETHERpaymentInstance.balanceOf(address(msg.sender)) >= tetherAmount,Not enough TETHER)
+_totalSupply += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: buy1PLwithUSDC(uint256) returns(bool) (Slither line:3127)
+Visibility: public
+Transfer(address(0),msg.sender,tokens)
+USDCpaymentInstance.transferFrom(msg.sender,address(this),usdcAmount)
+true
+require(bool,string)(usdcAmount > 0,You need to send at least some USDC)
+require(bool,string)(usdcAllowance >= usdcAmount,You need to approve more USDC to be spent)
+balances[msg.sender] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(USDCpaymentInstance.balanceOf(address(msg.sender)) >= usdcAmount,Not enough USDC)
+_totalSupply += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: retire1PLCO2(uint256,string) returns(bool) (Slither line:3127)
+Visibility: external
+CarbonOffset(message)
+balances[to] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+tokens /= offsetSigDigits
+is an Assignment Operation (Slither line:3216)
+newImplementation
+true
+Transfer(msg.sender,to,tokens)
+tokens *= offsetSigDigits
+is an Assignment Operation (Slither line:3216)
+newImplementation
+true
+transfer(retireAddress,tokens)
+balances[msg.sender] -= tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(tokens > offsetSigDigits,Retire at least 0.001 (1kg) 1PLCO2)
+Checking function: offsetDirect(string) returns(bool) (Slither line:3127)
+Visibility: external
+_totalSupply += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+getLatestPrice()
+ethPrice1PL = temp / ethPrice
+is an Assignment Operation (Slither line:3216)
+newImplementation
+true
+require(bool,string)(timeStamp > 0,Round not complete)
+(roundID,price,startedAt,timeStamp,answeredInRound) = priceFeed.latestRoundData()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+ethPrice = uint256(price) / 1000000
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(msg.value > 0,You need to send at least some ETH)
+ethAmount = msg.value * (1e18 / offsetSigDigits)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+tokens *= offsetSigDigits
+is an Assignment Operation (Slither line:3216)
+newImplementation
+balances[retireAddress] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Transfer(address(0),retireAddress,tokens)
+CarbonOffset(message)
+Checking function: update1PLpriceInt(uint256) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+tokenPrice = price
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: setOracleAddress(address) returns() (Slither line:3127)
+Visibility: public
+priceFeed = AggregatorV3Interface(oracleAddress)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+oracleAddress = newOracleAddress
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: setRetireAddress(address) returns() (Slither line:3127)
+Visibility: public
+retireAddress = newAddress
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: updateGasCO2factor(uint256) returns() (Slither line:3127)
+Visibility: external
+gasCO2factor = CO2factor
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: updateCO2factor1(uint256) returns() (Slither line:3127)
+Visibility: external
+CO2factor1 = CO2factor
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: updateCO2factor2(uint256) returns() (Slither line:3127)
+Visibility: external
+CO2factor2 = CO2factor
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: updateCO2factor3(uint256) returns() (Slither line:3127)
+Visibility: external
+CO2factor3 = CO2factor
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: updateCO2factor4(uint256) returns() (Slither line:3127)
+Visibility: external
+CO2factor4 = CO2factor
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: updateCO2factor5(uint256) returns() (Slither line:3127)
+Visibility: external
+CO2factor5 = CO2factor
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: setOracleUpdateInterval(uint256) returns() (Slither line:3127)
+Visibility: public
+updateInterval = interval
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: genAndSendTokens(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+require(bool)(block.timestamp >= startDate && block.timestamp <= endDate)
+Transfer(address(0),to,tokens)
+_owner
+require(bool)(_maxSupply >= (_totalSupply + tokens))
+true
+balances[to] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+onlyOwner()
+_totalSupply += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: getLatestPrice() returns() (Slither line:3127)
+Visibility: public
+(roundID,price,startedAt,timeStamp,answeredInRound) = priceFeed.latestRoundData()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+ethPrice1PL = temp / ethPrice
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(timeStamp > 0,Round not complete)
+ethPrice = uint256(price) / 1000000
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: updateEthPriceManually(uint256) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+ethPrice = price
+is an Assignment Operation (Slither line:3216)
+newImplementation
+msg.sender
+Checking function: update1PLethPriceManually(uint256) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+_owner
+ethPrice1PL = price
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: setMaxVolume(uint256) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+_owner
+_maxSupply = maxVolume
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: setSigDigits(uint256) returns() (Slither line:3127)
+Visibility: external
+_owner
+sigDigits = digits
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+onlyOwner()
+Checking function: setOffsetSigDigits(uint256) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+offsetSigDigits = digits
+is an Assignment Operation (Slither line:3216)
+newImplementation
+msg.sender
+Checking function: topUpBalance() returns() (Slither line:3127)
+Visibility: public
+Checking function: withdrawFromBalance() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+address(owner()).transfer(address(this).balance)
+Checking function: transferAnyERC20Token(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_owner
+ERC20Interface(tokenAddress).transfer(address(owner()),tokens)
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+Checking function: removePermanently(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+onlyOwner()
+_totalSupply -= amount
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(account != address(0),ERC20: burn from the zero address)
+_owner
+Transfer(account,address(0),amount)
+_beforeTokenTransfer(account,address(0),amount)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+true
+msg.sender
+balances[account] -= amount
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: _beforeTokenTransfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: mint(address,uint256) returns() (Slither line:3127)
+Visibility: external
+gasEst = gasAtStart - gasleft()()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(to != address(0),ERC20: mint to the zero address)
+require(bool)(block.timestamp >= startDate && block.timestamp <= endDate)
+require(bool)(msg.sender == MintableERC20PredicateProxy)
+require(bool)(_maxSupply >= (_totalSupply + tokens))
+_beforeTokenTransfer(address(0),to,tokens)
+balances[to] += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_totalSupply += tokens
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Transfer(address(0),to,tokens)
+_mint(user,amount)
+estGas()
+onlyPredicate()
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: updatePredicate(address) returns() (Slither line:3127)
+Visibility: external
+MintableERC20PredicateProxy = newERC20PredicateProxy
+is an Assignment Operation (Slither line:3216)
+newImplementation
+onlyOwner()
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+require(bool,string)(newERC20PredicateProxy != address(0),Bad ERC20PredicateProxy address)
+msg.sender
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Address.functionDelegateCall(newImplementation,data)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+onlyOwner()
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End OnePlanetCarbonOffsetRootV1.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: OnePlanetCarbonOffsetRootV1 (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: _getImplementation in contract: ERC1967Upgrade (Slither line:1285)
+
+End ERC1967Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: ERC1967Proxy
+Setter found in contract OnePlanetCarbonOffsetRootV1
+Found fallback
+Found external function: receive
+Found public function: constructor
+impl_address_from_contract_call: newImplementation
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+functions_writing_to_variable: checking function ERC1967Proxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updatePredicate (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._authorizeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.maxSupply (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.__Ownable_init (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.approve (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.__Ownable_init_unchained (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.owner (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.approveAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.receive (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._getTokenAmount (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.buy1PLwithDAI (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.__Context_init (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.buy1PLwithUSDT (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.genAndSendTokens (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.__Context_init_unchained (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.buy1PLwithUSDC (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.getLatestPrice (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.retire1PLCO2 (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateEthPriceManually (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.offsetDirect (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.update1PLethPriceManually (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.update1PLpriceInt (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.setMaxVolume (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.setOracleAddress (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.setSigDigits (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.setRetireAddress (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.setOffsetSigDigits (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateGasCO2factor (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.topUpBalance (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateCO2factor1 (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.withdrawFromBalance (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateCO2factor2 (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.transferAnyERC20Token (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._authorizeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateCO2factor3 (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.removePermanently (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateCO2factor4 (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._beforeTokenTransfer (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.updateCO2factor5 (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.mint (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.approve (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1.setOracleUpdateInterval (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._mint (proxy_features line:898)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function OnePlanetCarbonOffsetRootV1._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: checking external function upgradeTo
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = ! rollbackTesting.value
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_compatibility_checks: condition oldImplementation == _getImplementation()
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition owner() == _msgSender()
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = ! rollbackTesting.value
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_compatibility_checks: condition oldImplementation == _getImplementation()
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition owner() == _msgSender()
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Address.functionDelegateCall(newImplementation,data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) r = slot
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) rollbackTesting = StorageSlot.getBooleanSlot(_ROLLBACK_SLOT)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+has_time_delay: (node.type) IF
+(Expression) ! rollbackTesting.value
+has_time_delay: (node.type) RETURN
+(Expression) _owner
+has_time_delay: (node.type) IF
+(Expression) success
+has_time_delay: (node.type) RETURN
+(Expression) functionDelegateCall(target,data,Address: low-level delegate call failed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _authorizeUpgrade(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) EXPRESSION
+(Expression) rollbackTesting.value = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeToAndCallSecure(newImplementation,bytes(),false)
+has_time_delay: (node.type) RETURN
+(Expression) returndata
+has_time_delay: (node.type) EXPRESSION
+(Expression) Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) r = slot
+has_time_delay: (node.type) EXPRESSION
+(Expression) rollbackTesting.value = false
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) IF
+(Expression) returndata.length > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = _getImplementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_time_delay: (node.type) IF
+(Expression) data.length > 0 || forceCall
+has_time_delay: (node.type) RETURN
+(Expression) _verifyCallResult(success,returndata,errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,returndata) = target.delegatecall(data)
+
+Begin UUPSUpgradeable.is_proxy (Slither line:1425)
+
+
+End UUPSUpgradeable.is_proxy (Slither line:1428)
+
+
+Begin UUPSUpgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UUPSUpgradeable 
+
+End UUPSUpgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ContextUpgradeable.is_proxy (Slither line:1425)
+
+
+End ContextUpgradeable.is_proxy (Slither line:1428)
+
+
+Begin ContextUpgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ContextUpgradeable 
+
+End ContextUpgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnableUpgradeable.is_proxy (Slither line:1425)
+
+
+End OwnableUpgradeable.is_proxy (Slither line:1428)
+
+
+Begin OwnableUpgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnableUpgradeable 
+
+End OwnableUpgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AggregatorV3Interface.is_proxy (Slither line:1425)
+
+
+End AggregatorV3Interface.is_proxy (Slither line:1428)
+
+
+Begin AggregatorV3Interface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AggregatorV3Interface 
+
+End AggregatorV3Interface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Interface.is_proxy (Slither line:1425)
+
+
+End ERC20Interface.is_proxy (Slither line:1428)
+
+
+Begin ERC20Interface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Interface 
+
+End ERC20Interface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ApproveAndCallFallBack.is_proxy (Slither line:1425)
+
+
+End ApproveAndCallFallBack.is_proxy (Slither line:1428)
+
+
+Begin ApproveAndCallFallBack.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ApproveAndCallFallBack 
+
+End ApproveAndCallFallBack.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OnePlanetCarbonOffsetRootV1.is_proxy (Slither line:1425)
+
+
+End OnePlanetCarbonOffsetRootV1.is_proxy (Slither line:1428)
+
+
+Begin OnePlanetCarbonOffsetRootV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OnePlanetCarbonOffsetRootV1 
+
+End OnePlanetCarbonOffsetRootV1.is_upgradeable_proxy (Slither line:1407)
+

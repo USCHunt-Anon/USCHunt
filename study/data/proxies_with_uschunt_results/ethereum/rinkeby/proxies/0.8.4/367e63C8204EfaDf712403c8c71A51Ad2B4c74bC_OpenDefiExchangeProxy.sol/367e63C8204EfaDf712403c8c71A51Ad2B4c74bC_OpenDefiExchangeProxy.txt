@@ -1,0 +1,263 @@
+
+Begin OpenDefiExchangeProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin OpenDefiExchangeProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End OpenDefiExchangeProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin OpenDefiExchangeProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End OpenDefiExchangeProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin OpenDefiExchangeProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End OpenDefiExchangeProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin OpenDefiExchangeProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin OpenDefiExchangeProxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking beacon (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in OpenDefiExchangeProxy.fallback (Slither line:1707)
+Expression: _implementation() (Slither line:1719)
+
+Begin OpenDefiExchangeProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Return node of function OpenDefiExchangeProxy._implementation(): RETURN IBeacon(beacon).implementation() (Slither line:2031)
+Encountered call expression at RETURN node: IBeacon(beacon).implementation() (Slither line:2043)
+Encountered member access expression: IBeacon(beacon).implementation (Slither line:2047)
+
+Begin OpenDefiExchangeProxy.find_delegate_from_member_access
+
+Expression: IBeacon(beacon).implementation (Slither line:2348)
+IBeacon(beacon) (Slither line:2361)
+implementation is a member of the contract type: IBeacon (Slither line:2406)
+Which is an interface (Slither line:2410)
+Could not find a contract that inherits IBeacon (Slither line:2431)
+
+End OpenDefiExchangeProxy.find_delegate_from_call_exp (Slither line:2094)
+
+Call Expression
+End OpenDefiExchangeProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End OpenDefiExchangeProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End OpenDefiExchangeProxy.is_proxy (Slither line:1476)
+
+
+Begin OpenDefiExchangeProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OpenDefiExchangeProxy 
+Local Variable: impl (Slither line:1164)
+OpenDefiExchangeProxy is delegating to impl
+Looking for setter (Slither line:1200)
+
+
+Begin OpenDefiExchangeProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: _implementation() (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+
+End OpenDefiExchangeProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in OpenDefiExchangeProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin OpenDefiExchangeProxy.find_getter_in_contract (Slither line:2964)
+
+impl is a Variable object
+_implementation()
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: _implementation (Slither line:2978)
+
+_implementation appears to be the implementation getter (Slither line:2983)
+
+
+End OpenDefiExchangeProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: OpenDefiExchangeProxy (Slither line:1285)
+
+Begin OpenDefiExchangeProxy.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2878)
+RETURN: IBeacon(beacon).implementation() (Slither line:2878)
+
+End OpenDefiExchangeProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: OpenDefiExchangeProxy
+impl is dependent on beacon
+Expression for impl: _implementation()
+Called: _implementation
+impl_address_from_contract_call: _implementation()
+called: _implementation
+_implementation returns IBeacon(beacon).implementation()
+called: IBeacon(beacon).implementation
+found MemberAccess: IBeacon(beacon).implementation
+TypeConversion: IBeacon(beacon)
+find_registry_address_source: IBeacon(beacon).implementation()
+MemberAccess: IBeacon(beacon).implementation
+TypeConversion: IBeacon(beacon)
+Identifier: beacon
+Checking external function fallback
+functions_writing_to_variable: impl
+functions_writing_to_variable: checking function OpenDefiExchangeProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function OpenDefiExchangeProxy._implementation (proxy_features line:893)
+has_compatibility_checks: dependencies: ['TMP_3', '_beacon', '', 'beacon', 'TMP_16', 'TMP_17']
+functions_writing_to_variable: beacon
+functions_writing_to_variable: checking function OpenDefiExchangeProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(_beacon != address(0),OpenDefiExchangeProxy: ZERO_ADDRESS ) (proxy_features line:904)
+functions_writing_to_variable: exp = beacon = _beacon (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: beacon = _beacon (proxy_features line:907)
+functions_writing_to_variable: Identifier: beacon (proxy_features line:919)
+get_value_assigned: beacon = _beacon
+functions_writing_to_variable: constructor writes _beacon to beacon (proxy_features line:924)
+functions_writing_to_variable: checking function OpenDefiExchangeProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function OpenDefiExchangeProxy.fallback (proxy_features line:893)
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_beacon != address(0),OpenDefiExchangeProxy: ZERO_ADDRESS )
+has_compatibility_checks: condition _beacon != address(0)
+check_condition_from_expression: condition _beacon != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = _implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+

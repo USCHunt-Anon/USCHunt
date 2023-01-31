@@ -1,0 +1,365 @@
+
+Begin UpgradeabilityProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _implementation (Slither line:2818)
+dest.value: _implementation (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin UpgradeabilityProxy.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking proxyOwnerPosition (Slither line:1689)
+Checking newProxyOwnerPosition (Slither line:1689)
+Checking implementationPosition (Slither line:1689)
+Checking newImplementationPosition (Slither line:1689)
+Checking timelockPosition (Slither line:1689)
+Checking timelockPeriod (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _implementation (Slither line:1800)
+_implementation is a Parameter in UpgradeabilityProxy._delegate (Slither line:1805)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: sload(uint256)(position) (Slither line:1811)
+CallExpression: sload(uint256)(position) (Slither line:1819)
+AssignmentOperation: implementationPosition (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(implementation()) (Slither line:1832)
+The value passed to parameter #0 is implementation() (Slither line:1835)
+
+Begin UpgradeabilityProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+AssignmentOperation: _implementation = sload(uint256)(position) (Slither line:2107)
+CallExpression: sload(uint256) (Slither line:2113)
+Found storage slot: implementationPosition (Slither line:2130)
+implementation returns a variable of type address   called _implementation (Slither line:2183)
+implementation contains assembly - looking for sload (Slither line:2189)
+
+End UpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2318)
+
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End UpgradeabilityProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End UpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+Setting UpgradeabilityProxy._delegate_variable = UpgradeabilityProxy._proxy_impl_slot: implementationPosition (Slither line:1473)
+
+
+End UpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityProxy 
+Call destination implementationPosition is constant (Slither line:1146)
+
+implementationPosition is the implementation storage slot (Slither line:1149)
+
+UpgradeabilityProxy is delegating to implementationPosition
+Looking for setter (Slither line:1200)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: keccak256(bytes)(proxy.implementation) (Slither line:3112)
+Checking function: constructor(address,address,bytes,bool) returns() (Slither line:3117)
+Checking function: proxyOwner() returns(address) (Slither line:3117)
+Visibility: public
+proxyOwner contains assembly (Slither line:3143)
+_proxyOwner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+Checking function: newProxyOwner() returns(address) (Slither line:3117)
+Visibility: public
+newProxyOwner contains assembly (Slither line:3143)
+_newProxyOwner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+Checking function: _setProxyOwner(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: setNewProxyOwner(address) returns() (Slither line:3117)
+Visibility: public
+setNewProxyOwner contains assembly (Slither line:3143)
+_proxyOwner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only current proxy owner can set new proxy owner.)
+sstore(uint256,uint256)(position,_newProxyOwner)
+sstore(uint256,uint256)
+Checking function: transferProxyOwnership() returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(msg.sender == _newProxyOwner,UpgradeabilityProxy: only new owner can transfer ownership.)
+sstore(uint256,uint256)(position,_newProxyOwner)
+sstore(uint256,uint256)
+_setProxyOwner(_newProxyOwner)
+_newProxyOwner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: public
+implementation contains assembly (Slither line:3143)
+_implementation = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+Checking function: newImplementation() returns(address) (Slither line:3117)
+Visibility: public
+newImplementation contains assembly (Slither line:3143)
+_newImplementation = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+Checking function: timelock() returns(uint256) (Slither line:3117)
+Visibility: public
+timelock contains assembly (Slither line:3143)
+_timelock = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+Checking function: _setTimelock(uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: setNewImplementation(address) returns() (Slither line:3117)
+Visibility: public
+setNewImplementation contains assembly (Slither line:3143)
+require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only current proxy owner can set new implementation.)
+_proxyOwner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+sstore(uint256,uint256)(position,_newImplementation)
+sstore(uint256,uint256)
+_setTimelock(newTimelock)
+sstore(uint256,uint256)(position,newTimelock)
+sstore(uint256,uint256)
+Checking function: transferImplementation() returns() (Slither line:3117)
+Visibility: public
+_timelock = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+_newImplementation = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only proxy owner can transfer implementation.)
+_proxyOwner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(proxy.implementation)
+require(bool,string)(block.timestamp >= timelock(),UpgradeabilityProxy: cannot transfer implementation yet.)
+_setImplementation(newImplementation())
+sstore(uint256,uint256)(position,_newImplementation)
+sstore(uint256,uint256)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: transferImplementation in contract: UpgradeabilityProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2964)
+
+implementationPosition is a Variable object
+keccak256(bytes)(proxy.implementation)
+Checking function: constructor (Slither line:2978)
+Checking function: proxyOwner (Slither line:2978)
+proxyOwner returns address variable called _proxyOwner (Slither line:2998)
+proxyOwner contains assembly (Slither line:3041)
+proxyOwner contains assembly (Slither line:3041)
+proxyOwner contains assembly (Slither line:3041)
+proxyOwner contains assembly (Slither line:3041)
+Checking function: newProxyOwner (Slither line:2978)
+newProxyOwner returns address variable called _newProxyOwner (Slither line:2998)
+newProxyOwner contains assembly (Slither line:3041)
+newProxyOwner contains assembly (Slither line:3041)
+newProxyOwner contains assembly (Slither line:3041)
+newProxyOwner contains assembly (Slither line:3041)
+Checking function: _setProxyOwner (Slither line:2978)
+Checking function: setNewProxyOwner (Slither line:2978)
+Checking function: transferProxyOwnership (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable called _implementation (Slither line:2998)
+implementation contains assembly (Slither line:3041)
+implementation contains assembly (Slither line:3041)
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: UpgradeabilityProxy (Slither line:1285)
+
+End UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: UpgradeabilityProxy
+Setter found in contract UpgradeabilityProxy
+Checking public function proxyOwner
+Checking public function newProxyOwner
+Checking public function setNewProxyOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only current proxy owner can set new proxy owner.)
+Checking public function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _newProxyOwner,UpgradeabilityProxy: only new owner can transfer ownership.)
+Checking public function implementation
+Checking public function newImplementation
+Checking public function timelock
+Checking public function setNewImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only current proxy owner can set new implementation.)
+Checking public function transferImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only proxy owner can transfer implementation.)
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: implementationPosition
+functions_writing_to_variable: checking function UpgradeabilityProxy._setTimelock (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.constructor (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: constructor writes _newImplementation to implementationPosition using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function UpgradeabilityProxy._setProxyOwner (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = proxyOwnerPosition = keccak256(bytes)(proxy.owner) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxyOwnerPosition = keccak256(bytes)(proxy.owner) (proxy_features line:907)
+functions_writing_to_variable: exp = newProxyOwnerPosition = keccak256(bytes)(proxy.newOwner) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: newProxyOwnerPosition = keccak256(bytes)(proxy.newOwner) (proxy_features line:907)
+functions_writing_to_variable: exp = implementationPosition = keccak256(bytes)(proxy.implementation) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = keccak256(bytes)(proxy.implementation) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:919)
+get_value_assigned: implementationPosition = keccak256(bytes)(proxy.implementation)
+functions_writing_to_variable: exp = newImplementationPosition = keccak256(bytes)(proxy.newImplementation) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: newImplementationPosition = keccak256(bytes)(proxy.newImplementation) (proxy_features line:907)
+functions_writing_to_variable: exp = timelockPosition = keccak256(bytes)(proxy.timelock) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: timelockPosition = keccak256(bytes)(proxy.timelock) (proxy_features line:907)
+functions_writing_to_variable: exp = timelockPeriod = 21600 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: timelockPeriod = 21600 (proxy_features line:907)
+functions_writing_to_variable: checking function UpgradeabilityProxy.setNewImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.timelock (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.newProxyOwner (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.transferProxyOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy._setImplementation (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: _setImplementation writes _newImplementation to implementationPosition using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function UpgradeabilityProxy.setNewProxyOwner (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.proxyOwner (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.newImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeabilityProxy.transferImplementation (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: transferImplementation writes _newImplementation to implementationPosition using sstore (proxy_features line:993)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: IF node exp = initializationData.length > 0 || forceCall
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking public function transferImplementation
+require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only proxy owner can transfer implementation.)
+has_compatibility_checks: condition msg.sender == proxyOwner()
+require(bool,string)(block.timestamp >= timelock(),UpgradeabilityProxy: cannot transfer implementation yet.)
+has_compatibility_checks: condition block.timestamp >= timelock()
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: proxyOwner
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = proxyOwnerPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) _timelock = sload(uint256)(position)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _newImplementation = sload(uint256)(position)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == proxyOwner(),UpgradeabilityProxy: only proxy owner can transfer implementation.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _proxyOwner = sload(uint256)(position)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(block.timestamp >= timelock(),UpgradeabilityProxy: cannot transfer implementation yet.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(position,_newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = timelockPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = newImplementationPosition
+has_time_delay: comparing (Identifier) block.timestamp to timelock()
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+

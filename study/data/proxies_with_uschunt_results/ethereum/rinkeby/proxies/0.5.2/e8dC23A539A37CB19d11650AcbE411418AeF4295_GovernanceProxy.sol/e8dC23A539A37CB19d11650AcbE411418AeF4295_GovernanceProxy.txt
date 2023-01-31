@@ -1,0 +1,669 @@
+
+Begin ERCProxy.is_proxy (Slither line:1425)
+
+
+End ERCProxy.is_proxy (Slither line:1428)
+
+
+Begin ERCProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERCProxy 
+
+End ERCProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateProxyForwarder.is_proxy (Slither line:1425)
+
+
+End DelegateProxyForwarder.is_proxy (Slither line:1428)
+
+
+Begin DelegateProxyForwarder.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateProxyForwarder 
+
+End DelegateProxyForwarder.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateProxy.is_proxy (Slither line:1425)
+
+
+End DelegateProxy.is_proxy (Slither line:1428)
+
+
+Begin DelegateProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateProxy 
+
+End DelegateProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyStorage.is_proxy (Slither line:1425)
+
+
+End ProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyStorage 
+
+End ProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _owner (Slither line:1689)
+Checking proxyTo (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in Proxy.delegatedFwd (Slither line:1805)
+CallExpression: delegatedFwd(proxyTo,msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(proxyTo,msg.data) (Slither line:1832)
+The value passed to parameter #0 is proxyTo (Slither line:1835)
+which is an Identifier with value proxyTo (Slither line:1839)
+proxyTo is a State Variable (Slither line:1842)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to proxyTo
+Looking for setter (Slither line:1200)
+
+Looking for setter in ProxyStorage (Slither line:1204)
+
+
+Begin ProxyStorage.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: owner() returns(address) (Slither line:3117)
+Visibility: public
+_owner
+Checking function: isOwner() returns(bool) (Slither line:3117)
+Visibility: public
+msg.sender == _owner
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+require(bool)(isOwner())
+_owner = address(0)
+is an Assignment Operation (Slither line:3206)
+msg.sender == _owner
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+_owner = newOwner
+is an Assignment Operation (Slither line:3206)
+_transferOwnership(newOwner)
+require(bool)(newOwner != address(0))
+require(bool)(isOwner())
+OwnershipTransferred(_owner,newOwner)
+onlyOwner()
+msg.sender == _owner
+Checking function: _transferOwnership(address) returns() (Slither line:3117)
+Visibility: internal
+
+End ProxyStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in ProxyStorage 
+Looking in Proxy (Slither line:1213)
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: external
+proxyTo
+Checking function: updateImplementation(address) returns() (Slither line:3117)
+Visibility: public
+proxyTo = _newProxyTo
+is an Assignment Operation (Slither line:3206)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: updateImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyStorage.find_getter_in_contract (Slither line:2964)
+
+proxyTo is a Variable object
+_newProxyTo
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: isOwner (Slither line:2978)
+isOwner returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+
+End ProxyStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+proxyTo is a Variable object
+_newProxyTo
+Checking function: proxyType (Slither line:2978)
+proxyType returns uint256 variable called proxyTypeId (Slither line:2998)
+Checking function: delegatedFwd (Slither line:2978)
+Checking function: isContract (Slither line:2978)
+isContract returns bool variable  (Slither line:2998)
+RETURN node expression: false (Slither line:3018)
+RETURN node expression: size > 0 (Slither line:3018)
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: isOwner (Slither line:2978)
+isOwner returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable  (Slither line:2998)
+RETURN node expression: proxyTo (Slither line:3018)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newProxyTo
+impl_address_from_contract_call: StateVariable proxyTo
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression delegatedFwd(proxyTo,msg.data)
+impl_address_from_contract_call: arg is proxyTo
+impl_address_from_contract_call: arg is msg.data
+Checking external function proxyType
+Checking external function implementation
+Checking external function proxyType
+Checking external function implementation
+Checking public function owner
+Checking public function isOwner
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking external function implementation
+Checking public function updateImplementation
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking external function fallback
+functions_writing_to_variable: proxyTo
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isContract (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.proxyType (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.delegatedFwd (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+get_value_assigned: proxyTo = _newProxyTo
+functions_writing_to_variable: constructor writes _newProxyTo to proxyTo (proxy_features line:1008)
+functions_writing_to_variable: checking function Proxy.updateImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT) (proxy_features line:904)
+functions_writing_to_variable: exp = ProxyUpdated(_newProxyTo,proxyTo) (proxy_features line:904)
+functions_writing_to_variable: exp = proxyTo = _newProxyTo (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxyTo = _newProxyTo (proxy_features line:907)
+functions_writing_to_variable: Identifier: proxyTo (proxy_features line:919)
+get_value_assigned: proxyTo = _newProxyTo
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:904)
+functions_writing_to_variable: exp = _target == address(0) (proxy_features line:904)
+functions_writing_to_variable: exp = false (proxy_features line:904)
+functions_writing_to_variable: exp = size > 0 (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: updateImplementation writes _newProxyTo to proxyTo (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.owner (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.proxyType (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isContract (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_proxyTo', '_newProxyTo', '_proxyTo']
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_compatibility_checks: condition isContract(_newProxyTo)
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+has_compatibility_checks: IF node exp = _target == address(0)
+has_compatibility_checks: checking public function updateImplementation
+require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_compatibility_checks: condition isContract(_newProxyTo)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+has_compatibility_checks: IF node exp = _target == address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found external function: proxyType
+has_time_delay: (node.type) EXPRESSION
+(Expression) proxyTo = _newProxyTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) false
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyUpdated(_newProxyTo,proxyTo)
+has_time_delay: (node.type) IF
+(Expression) _target == address(0)
+
+Begin GovernanceProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin GovernanceProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: delegatedFwd(proxyTo,msg.data) (Slither line:2792)
+Expression called: delegatedFwd
+Type of call: tuple() (Slither line:2807)
+Args:
+proxyTo
+msg.data
+
+End GovernanceProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GovernanceProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin GovernanceProxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _owner (Slither line:1689)
+Checking proxyTo (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in GovernanceProxy.delegatedFwd (Slither line:1805)
+CallExpression: delegatedFwd(proxyTo,msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(proxyTo,msg.data) (Slither line:1832)
+The value passed to parameter #0 is proxyTo (Slither line:1835)
+which is an Identifier with value proxyTo (Slither line:1839)
+proxyTo is a State Variable (Slither line:1842)
+
+End GovernanceProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End GovernanceProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End GovernanceProxy.is_proxy (Slither line:1476)
+
+
+Begin GovernanceProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GovernanceProxy 
+GovernanceProxy is delegating to proxyTo
+Looking for setter (Slither line:1200)
+
+Looking for setter in ProxyStorage (Slither line:1204)
+
+
+Begin ProxyStorage.find_setter_in_contract (Slither line:3109)
+
+Expression: _newProxyTo (Slither line:3112)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: owner() returns(address) (Slither line:3117)
+Visibility: public
+_owner
+Checking function: isOwner() returns(bool) (Slither line:3117)
+Visibility: public
+msg.sender == _owner
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+require(bool)(isOwner())
+_owner = address(0)
+is an Assignment Operation (Slither line:3206)
+_newProxyTo
+msg.sender == _owner
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+_owner = newOwner
+is an Assignment Operation (Slither line:3206)
+_newProxyTo
+_transferOwnership(newOwner)
+require(bool)(newOwner != address(0))
+require(bool)(isOwner())
+OwnershipTransferred(_owner,newOwner)
+onlyOwner()
+msg.sender == _owner
+Checking function: _transferOwnership(address) returns() (Slither line:3117)
+Visibility: internal
+
+End ProxyStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in ProxyStorage 
+Looking in GovernanceProxy (Slither line:1213)
+
+Begin GovernanceProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: _newProxyTo (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: external
+proxyTo
+Checking function: updateImplementation(address) returns() (Slither line:3117)
+Visibility: public
+proxyTo = _newProxyTo
+is an Assignment Operation (Slither line:3206)
+_newProxyTo
+
+End GovernanceProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: updateImplementation in contract: GovernanceProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyStorage.find_getter_in_contract (Slither line:2964)
+
+proxyTo is a Variable object
+_newProxyTo
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: isOwner (Slither line:2978)
+isOwner returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+
+End ProxyStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin GovernanceProxy.find_getter_in_contract (Slither line:2964)
+
+proxyTo is a Variable object
+_newProxyTo
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable  (Slither line:2998)
+RETURN node expression: proxyTo (Slither line:3018)
+
+End GovernanceProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: GovernanceProxy (Slither line:1285)
+
+End GovernanceProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newProxyTo
+impl_address_from_contract_call: StateVariable proxyTo
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression delegatedFwd(proxyTo,msg.data)
+impl_address_from_contract_call: arg is proxyTo
+impl_address_from_contract_call: arg is msg.data
+Checking external function implementation
+Checking public function updateImplementation
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking external function proxyType
+Checking external function implementation
+Checking external function proxyType
+Checking external function implementation
+Checking public function owner
+Checking public function isOwner
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking external function fallback
+functions_writing_to_variable: proxyTo
+functions_writing_to_variable: checking function GovernanceProxy.owner (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.constructor (proxy_features line:893)
+get_value_assigned: proxyTo = _newProxyTo
+functions_writing_to_variable: constructor writes _newProxyTo to proxyTo (proxy_features line:1008)
+functions_writing_to_variable: checking function GovernanceProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.proxyType (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.updateImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT) (proxy_features line:904)
+functions_writing_to_variable: exp = ProxyUpdated(_newProxyTo,proxyTo) (proxy_features line:904)
+functions_writing_to_variable: exp = proxyTo = _newProxyTo (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxyTo = _newProxyTo (proxy_features line:907)
+functions_writing_to_variable: Identifier: proxyTo (proxy_features line:919)
+get_value_assigned: proxyTo = _newProxyTo
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:904)
+functions_writing_to_variable: exp = _target == address(0) (proxy_features line:904)
+functions_writing_to_variable: exp = false (proxy_features line:904)
+functions_writing_to_variable: exp = size > 0 (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: updateImplementation writes _newProxyTo to proxyTo (proxy_features line:924)
+functions_writing_to_variable: checking function GovernanceProxy.isContract (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.isContract (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.delegatedFwd (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.isOwner (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.constructor (proxy_features line:893)
+get_value_assigned: proxyTo = _newProxyTo
+functions_writing_to_variable: constructor writes _newProxyTo to proxyTo (proxy_features line:1008)
+functions_writing_to_variable: checking function GovernanceProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function GovernanceProxy.proxyType (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_proxyTo', '_newProxyTo']
+has_compatibility_checks: checking public function constructor
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+has_compatibility_checks: IF node exp = _target == address(0)
+require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_compatibility_checks: condition isContract(_newProxyTo)
+has_compatibility_checks: checking public function updateImplementation
+require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_compatibility_checks: condition isContract(_newProxyTo)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+has_compatibility_checks: IF node exp = _target == address(0)
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_compatibility_checks: condition isContract(_newProxyTo)
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+has_compatibility_checks: IF node exp = _target == address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) proxyTo = _newProxyTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(_newProxyTo),DESTINATION_ADDRESS_IS_NOT_A_CONTRACT)
+has_time_delay: (node.type) RETURN
+(Expression) false
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyUpdated(_newProxyTo,proxyTo)
+has_time_delay: (node.type) IF
+(Expression) _target == address(0)

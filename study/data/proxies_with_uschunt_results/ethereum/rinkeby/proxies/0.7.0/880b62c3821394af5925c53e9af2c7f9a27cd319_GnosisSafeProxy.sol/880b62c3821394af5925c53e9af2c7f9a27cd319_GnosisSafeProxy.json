@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "GnosisSafeProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/880b62c3821394af5925c53e9af2c7f9a27cd319_GnosisSafeProxy.sol/880b62c3821394af5925c53e9af2c7f9a27cd319_GnosisSafeProxy.sol#11-45)",
+        "elements": [],
+        "description": "GnosisSafeProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/880b62c3821394af5925c53e9af2c7f9a27cd319_GnosisSafeProxy.sol/880b62c3821394af5925c53e9af2c7f9a27cd319_GnosisSafeProxy.sol#11-45) may be an upgradeable proxy.\nsingleton is declared in the proxy.\nsingleton is an address state variable\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: calldataload(uint256)(0) == 0xa619486e00000000000000000000000000000000000000000000000000000000\n",
+        "id": "c20f6fc73825f50b444ed044e10a20b78ee314798380928b4be2f96e3656f0d5",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "GnosisSafeProxy.singleton",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "GnosisSafeProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.7.0/880b62c3821394af5925c53e9af2c7f9a27cd319_GnosisSafeProxy.sol/880b62c3821394af5925c53e9af2c7f9a27cd319_GnosisSafeProxy.sol#11-45)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "GnosisSafeProxy.constructor(address)": {
+                "check": "require(bool,string)(_singleton != address(0),Invalid singleton address provided)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "calldataload(uint256)(0) != 0xa619486e00000000000000000000000000000000000000000000000000000000",
+          "toggle_alternative_logic": "return(uint256,uint256)(0,0x20)"
+        }
+      }
+    ]
+  }
+}

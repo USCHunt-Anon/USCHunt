@@ -1,0 +1,205 @@
+
+Begin IOwnable.is_proxy (Slither line:1425)
+
+
+End IOwnable.is_proxy (Slither line:1428)
+
+
+Begin IOwnable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IOwnable 
+
+End IOwnable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAuthorizable.is_proxy (Slither line:1425)
+
+
+End IAuthorizable.is_proxy (Slither line:1428)
+
+
+Begin IAuthorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAuthorizable 
+
+End IAuthorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MAuthorizable.is_proxy (Slither line:1425)
+
+
+End MAuthorizable.is_proxy (Slither line:1428)
+
+
+Begin MAuthorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MAuthorizable 
+
+End MAuthorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MixinAuthorizable.is_proxy (Slither line:1425)
+
+
+End MixinAuthorizable.is_proxy (Slither line:1428)
+
+
+Begin MixinAuthorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MixinAuthorizable 
+
+End MixinAuthorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC721Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ERC721Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let selector := and(calldataload(0), 0xffffffff00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    if eq(selector, 0xa85e59e400000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        let start := mload(64) (Slither line:1576)
+        mstore(start, and(caller(), 0xffffffffffffffffffffffffffffffffffffffff)) (Slither line:1576)
+        mstore(add(start, 32), authorized_slot) (Slither line:1576)
+        if iszero(sload(keccak256(start, 64))) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000001553454e4445525f4e4f545f415554484f52495a454400000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        if sub(calldataload(100), 1) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000000e494e56414c49445f414d4f554e540000000000000000000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        mstore(0, 0x23b872dd00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+        calldatacopy(4, 36, 64) (Slither line:1576)
+        let assetDataOffset := calldataload(4) (Slither line:1576)
+        calldatacopy(68, add(assetDataOffset, 72), 32) (Slither line:1576)
+        let token := calldataload(add(assetDataOffset, 40)) (Slither line:1576)
+        let success := call(gas(), token, 0, 0, 100, 0, 0) (Slither line:1576)
+        if success (Slither line:1576)
+        { (Slither line:1576)
+            return(0, 0) (Slither line:1576)
+        } (Slither line:1576)
+        mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+        mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+        mstore(64, 0x0000000f5452414e534645525f4641494c454400000000000000000000000000) (Slither line:1576)
+        mstore(96, 0) (Slither line:1576)
+        revert(0, 100) (Slither line:1576)
+    } (Slither line:1576)
+    revert(0, 0) (Slither line:1576)
+} (Slither line:1576)
+
+End ERC721Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ERC721Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let selector := and(calldataload(0), 0xffffffff00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    if eq(selector, 0xa85e59e400000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        let start := mload(64) (Slither line:1576)
+        mstore(start, and(caller(), 0xffffffffffffffffffffffffffffffffffffffff)) (Slither line:1576)
+        mstore(add(start, 32), authorized_slot) (Slither line:1576)
+        if iszero(sload(keccak256(start, 64))) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000001553454e4445525f4e4f545f415554484f52495a454400000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        if sub(calldataload(100), 1) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000000e494e56414c49445f414d4f554e540000000000000000000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        mstore(0, 0x23b872dd00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+        calldatacopy(4, 36, 64) (Slither line:1576)
+        let assetDataOffset := calldataload(4) (Slither line:1576)
+        calldatacopy(68, add(assetDataOffset, 72), 32) (Slither line:1576)
+        let token := calldataload(add(assetDataOffset, 40)) (Slither line:1576)
+        let success := call(gas(), token, 0, 0, 100, 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'token'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin ERC721Proxy.find_delegate_variable_from_name
+Searching for token (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking authorized (Slither line:1689)
+Checking authorities (Slither line:1689)
+Checking PROXY_ID (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End ERC721Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin ERC721Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End ERC721Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End ERC721Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ERC721Proxy.is_proxy (Slither line:1476)
+
+
+Begin ERC721Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC721Proxy 
+
+End ERC721Proxy.is_upgradeable_proxy (Slither line:1407)
+

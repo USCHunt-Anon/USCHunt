@@ -1,0 +1,531 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking impl (Slither line:1800)
+impl is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(implementation()) (Slither line:1832)
+The value passed to parameter #0 is implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Got abstract function, looking for overriding function (Slither line:2015)
+Failure (Slither line:2023)
+implementation returns a variable of type address   (Slither line:2183)
+Return value is LocalVariable:  (Slither line:2256)
+has no expression (Slither line:2316)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(implementation()) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2792)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+impl
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is impl (Slither line:2818)
+dest.value: impl (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking impl (Slither line:1800)
+impl is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(implementation()) (Slither line:1832)
+The value passed to parameter #0 is implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Got abstract function, looking for overriding function (Slither line:2015)
+Failure (Slither line:2023)
+implementation returns a variable of type address   (Slither line:2183)
+Return value is LocalVariable:  (Slither line:2256)
+has no expression (Slither line:2316)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2792)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_484_178_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FinaMarket.is_proxy (Slither line:1425)
+
+
+End FinaMarket.is_proxy (Slither line:1428)
+
+
+Begin FinaMarket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FinaMarket 
+
+End FinaMarket.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FinaCard.is_proxy (Slither line:1425)
+
+
+End FinaCard.is_proxy (Slither line:1428)
+
+
+Begin FinaCard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FinaCard 
+
+End FinaCard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Fina.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Fina.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Fina.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _impl (Slither line:1689)
+Checking _require_rarity (Slither line:1689)
+Checking _mar (Slither line:1689)
+Checking _card (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking impl (Slither line:1800)
+impl is a Parameter in Fina._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(implementation()) (Slither line:1832)
+The value passed to parameter #0 is implementation() (Slither line:1835)
+
+Begin Fina.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Return node of function Fina.implementation(): RETURN _impl (Slither line:2031)
+_impl (Slither line:2038)
+implementation returns a variable of type address   called _impl (Slither line:2183)
+
+End Fina.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Fina.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Fina.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Fina.is_proxy (Slither line:1476)
+
+
+Begin Fina.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Fina 
+Fina is delegating to _impl
+Looking for setter (Slither line:1200)
+
+
+Begin Fina.find_setter_in_contract (Slither line:3109)
+
+Checking function: _randModulus(uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: external
+_impl = _addr
+is an Assignment Operation (Slither line:3206)
+
+End Fina.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: Fina (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Fina.find_getter_in_contract (Slither line:2964)
+
+_impl is a Variable object
+_addr
+Checking function: _delegate (Slither line:2978)
+Checking function: _fallback (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: receive (Slither line:2978)
+Checking function: _beforeFallback (Slither line:2978)
+Checking function: _randModulus (Slither line:2978)
+_randModulus returns uint256 variable  (Slither line:2998)
+RETURN node expression: rand (Slither line:3018)
+Checking function: setImplementation (Slither line:2978)
+Checking function: set_require_rarity (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable  (Slither line:2998)
+RETURN node expression: _impl (Slither line:3018)
+
+End Fina.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Fina (Slither line:1285)
+
+End Fina.is_upgradeable_proxy (Slither line:1293)
+
+Checking external function setImplementation
+Checking external function set_require_rarity
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: _impl
+functions_writing_to_variable: checking function Fina.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Fina._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Fina.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Fina._beforeFallback (proxy_features line:893)
+functions_writing_to_variable: checking function Fina.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = _impl = _addr (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _impl = _addr (proxy_features line:907)
+functions_writing_to_variable: Identifier: _impl (proxy_features line:919)
+get_value_assigned: _impl = _addr
+functions_writing_to_variable: setImplementation writes _addr to _impl (proxy_features line:924)
+functions_writing_to_variable: checking function Fina._randModulus (proxy_features line:893)
+functions_writing_to_variable: checking function Fina._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Fina.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Fina.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Fina.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function Fina._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function Fina.set_require_rarity (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_addr']
+has_compatibility_checks: checking external function setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found fallback
+Found external function: receive
+Found external function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) _impl = _addr

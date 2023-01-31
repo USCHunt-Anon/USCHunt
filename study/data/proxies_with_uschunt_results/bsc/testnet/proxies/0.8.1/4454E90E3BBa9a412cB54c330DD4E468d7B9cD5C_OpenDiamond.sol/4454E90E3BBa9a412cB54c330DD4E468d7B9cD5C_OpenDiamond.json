@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OpenDiamond (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.1/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol#2754-2810)",
+        "elements": [],
+        "description": "OpenDiamond (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.1/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol#2754-2810) is an upgradeable proxy.\nfacet is declared in the proxy.\nfacetAddressAndSelectorPosition maps function signatures to addresses, suggesting multiple implementations.\nfacetAddressAndSelectorPosition is stored in the structure specified by EIP-2535: LibDiamond.DiamondStorage\nLoupe functions located in missing\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete the LibDiamond facet\n",
+        "id": "db8d16e8939a0b136b94f1dbb8a8a5a59939e288b2905926b98a17926f7f8923",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OpenDiamond.fallback().facet",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "OpenDiamond (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.1/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol#2754-2810)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => LibDiamond.FacetAddressAndSelectorPosition)",
+          "impl_mapping_from_msg_sig": true,
+          "diamond_storage": true,
+          "diamond_storage_location": "LibDiamond (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.1/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol/4454E90E3BBa9a412cB54c330DD4E468d7B9cD5C_OpenDiamond.sol#730-830)",
+          "eip_2535": true,
+          "diamond_loupe_facets": {
+            "facets() returns(IDiamondLoupe.Facet[])": "missing",
+            "facetAddresses() returns(address[])": "missing",
+            "facetAddress(bytes4) returns(address)": "missing",
+            "facetFunctionSelectors(address) returns(bytes4[])": "missing"
+          },
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)": {
+                "check": "require(bool,string)(oldFacetAddress != _facetAddress,LibDiamondCut: Can't replace function with same function)",
+                "is_correct": true
+              },
+              "OpenDiamond.constructor(address,address)": {
+                "check": "require(bool,string)(oldFacetAddress != _facetAddress,LibDiamondCut: Can't replace function with same function)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove LibDiamond facet",
+          "immutable_functions": {
+            "other": [
+              "addFairPriceAddress(bytes32,address)",
+              "getFairPriceAddress(bytes32)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

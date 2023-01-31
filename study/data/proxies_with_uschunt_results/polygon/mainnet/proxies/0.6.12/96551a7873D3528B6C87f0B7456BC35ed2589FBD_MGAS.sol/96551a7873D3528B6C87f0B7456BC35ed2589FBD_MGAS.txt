@@ -1,0 +1,1214 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Market.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Market.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'nft'
+Looking for corresponding Variable
+Current function: _act
+
+Begin Market.find_delegate_variable_from_name
+Searching for nft (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking nft (Slither line:1800)
+nft is a Parameter in Market._act (Slither line:1805)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _gonadeal() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+CallExpression: _deal() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _act(_nft()) (Slither line:1819)
+Found where _act is called: _act(_nft()) (Slither line:1832)
+The value passed to parameter #0 is _nft() (Slither line:1835)
+
+Begin Market.find_delegate_from_call_exp
+
+_nft() (Slither line:2003)
+called = _nft (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_nft returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Market.find_delegate_from_call_exp (Slither line:2328)
+
+_act contains assembly, searching for sload (Slither line:1875)
+
+End Market.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Market.find_delegatecall_in_asm (Slither line:1637)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_14973_202_0__act_asm_0 = result__act_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: _gonadeal() (Slither line:2802)
+Expression called: _gonadeal
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: _deal() (Slither line:2802)
+Expression called: _deal
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+nft
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is nft (Slither line:2828)
+dest.value: nft (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Market.find_delegate_variable_from_name
+Searching for nft (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking nft (Slither line:1800)
+nft is a Parameter in Market._act (Slither line:1805)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _gonadeal() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+CallExpression: _deal() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _act(_nft()) (Slither line:1819)
+Found where _act is called: _act(_nft()) (Slither line:1832)
+The value passed to parameter #0 is _nft() (Slither line:1835)
+
+Begin Market.find_delegate_from_call_exp
+
+_nft() (Slither line:2003)
+called = _nft (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_nft returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Market.find_delegate_from_call_exp (Slither line:2328)
+
+_act contains assembly, searching for sload (Slither line:1875)
+
+End Market.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Market.find_delegatecall_in_exp_node
+
+Found Expression Node: _act(_nft()) (Slither line:2802)
+Expression called: _act
+Type of call: tuple() (Slither line:2817)
+Args:
+_nft()
+
+End Market.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Market.is_proxy (Slither line:1476)
+
+
+Begin Market.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Market 
+
+End Market.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin NFTMarket.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTMarket.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_14973_202_0__act_asm_0 = result__act_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End NFTMarket.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTMarket.find_delegatecall_in_exp_node
+
+Found Expression Node: _gonadeal() (Slither line:2802)
+Expression called: _gonadeal
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End NFTMarket.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTMarket.find_delegatecall_in_exp_node
+
+Found Expression Node: _act(_nft()) (Slither line:2802)
+Expression called: _act
+Type of call: tuple() (Slither line:2817)
+Args:
+_nft()
+
+End NFTMarket.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTMarket.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End NFTMarket.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin NFTMarket.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'nft'
+Looking for corresponding Variable
+Current function: _act
+
+Begin NFTMarket.find_delegate_variable_from_name
+Searching for nft (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking NFTMARKET (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking nft (Slither line:1800)
+nft is a Parameter in NFTMarket._act (Slither line:1805)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+CallExpression: _gonadeal() (Slither line:1819)
+CallExpression: _act(_nft()) (Slither line:1819)
+Found where _act is called: _act(_nft()) (Slither line:1832)
+The value passed to parameter #0 is _nft() (Slither line:1835)
+
+Begin NFTMarket.find_delegate_from_call_exp
+
+_nft() (Slither line:2003)
+called = _nft (Slither line:2010)
+AssignmentOperation: nft = sload(uint256)(market) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: NFTMARKET (Slither line:2140)
+_nft returns a variable of type address   called nft (Slither line:2193)
+_nft contains assembly - looking for sload (Slither line:2199)
+
+End NFTMarket.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: NFTMARKET (Slither line:1811)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _deal() (Slither line:1819)
+AssignmentOperation: sload(uint256)(market) (Slither line:1811)
+CallExpression: sload(uint256)(market) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+_act contains assembly, searching for sload (Slither line:1875)
+
+End NFTMarket.find_delegate_variable_from_name (Slither line:1949)
+
+
+End NFTMarket.find_delegatecall_in_asm (Slither line:1637)
+
+Setting NFTMarket._delegate_variable = NFTMarket._proxy_impl_slot: NFTMARKET (Slither line:1473)
+
+
+End NFTMarket.is_proxy (Slither line:1476)
+
+
+Begin NFTMarket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: NFTMarket 
+Call destination NFTMARKET is constant (Slither line:1146)
+
+NFTMARKET is the implementation storage slot (Slither line:1149)
+
+NFTMarket is delegating to NFTMARKET
+Looking for setter (Slither line:1200)
+
+
+Begin NFTMarket.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: _nft() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _approval(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setBusiness(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _nft() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _act(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _gonadeal() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _deal() returns() (Slither line:3127)
+Visibility: internal
+
+End NFTMarket.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in NFTMarket (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin NFTMarket.find_getter_in_contract (Slither line:2974)
+
+NFTMARKET is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _act (Slither line:2988)
+Checking function: _gonadeal (Slither line:2988)
+Checking function: _deal (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _nft (Slither line:2988)
+_nft returns address variable called nft (Slither line:3008)
+_nft contains assembly (Slither line:3051)
+_nft contains assembly (Slither line:3051)
+
+End NFTMarket.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _nft in contract: NFTMarket (Slither line:1285)
+
+Begin NFTMarket.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+NEW VARIABLE: market = NFTMARKET (Slither line:2888)
+EXPRESSION: nft = sload(uint256)(market) (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+INLINE ASM: None (Slither line:2888)
+
+End NFTMarket.getter_return_is_non_constant (Slither line:2942)
+
+
+End NFTMarket.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin MGAS.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MGAS.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.sender != _customer(),Cannot call from the customer) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender != _customer()
+Cannot call from the customer
+
+End MGAS.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MGAS.find_delegatecall_in_exp_node
+
+Found Expression Node: _gonadeal() (Slither line:2802)
+Expression called: _gonadeal
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End MGAS.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MGAS.find_delegatecall_in_exp_node
+
+Found Expression Node: _act(_nft()) (Slither line:2802)
+Expression called: _act
+Type of call: tuple() (Slither line:2817)
+Args:
+_nft()
+
+End MGAS.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MGAS.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End MGAS.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MGAS.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'nft'
+Looking for corresponding Variable
+Current function: _act
+
+Begin MGAS.find_delegate_variable_from_name
+Searching for nft (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking NFTMARKET (Slither line:1689)
+Checking CUSTOMER (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking nft (Slither line:1800)
+nft is a Parameter in MGAS._act (Slither line:1805)
+CallExpression: require(bool,string)(msg.sender != _customer(),Cannot call from the customer) (Slither line:1819)
+CallExpression: _gonadeal() (Slither line:1819)
+CallExpression: _act(_nft()) (Slither line:1819)
+Found where _act is called: _act(_nft()) (Slither line:1832)
+The value passed to parameter #0 is _nft() (Slither line:1835)
+
+Begin MGAS.find_delegate_from_call_exp
+
+_nft() (Slither line:2003)
+called = _nft (Slither line:2010)
+AssignmentOperation: nft = sload(uint256)(market) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: NFTMARKET (Slither line:2140)
+_nft returns a variable of type address   called nft (Slither line:2193)
+_nft contains assembly - looking for sload (Slither line:2199)
+
+End MGAS.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: super._gonadeal() (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: NFTMARKET (Slither line:1811)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _deal() (Slither line:1819)
+AssignmentOperation: CUSTOMER (Slither line:1811)
+AssignmentOperation: sload(uint256)(market) (Slither line:1811)
+CallExpression: sload(uint256)(market) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: sload(uint256)(subject) (Slither line:1811)
+CallExpression: sload(uint256)(subject) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+_act contains assembly, searching for sload (Slither line:1875)
+
+End MGAS.find_delegate_variable_from_name (Slither line:1949)
+
+
+End MGAS.find_delegatecall_in_asm (Slither line:1637)
+
+Setting MGAS._delegate_variable = MGAS._proxy_impl_slot: NFTMARKET (Slither line:1473)
+
+
+End MGAS.is_proxy (Slither line:1476)
+
+
+Begin MGAS.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MGAS 
+Call destination NFTMARKET is constant (Slither line:1146)
+
+NFTMARKET is the implementation storage slot (Slither line:1149)
+
+MGAS is delegating to NFTMARKET
+Looking for setter (Slither line:1200)
+
+Looking for setter in NFTMarket (Slither line:1204)
+
+
+Begin NFTMarket.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: _nft() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _approval(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setBusiness(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _nft() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _act(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _gonadeal() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _deal() returns() (Slither line:3127)
+Visibility: internal
+
+End NFTMarket.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in NFTMarket 
+Looking in MGAS (Slither line:1213)
+
+Begin MGAS.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: Approve(address) returns() (Slither line:3127)
+Visibility: external
+switch_expr_14973_202_0__act_asm_0 = result__act_asm_0
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+sstore(uint256,uint256)(market,business)
+sstore(uint256,uint256)
+
+End MGAS.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: Approve in contract: MGAS (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin NFTMarket.find_getter_in_contract (Slither line:2974)
+
+NFTMARKET is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End NFTMarket.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _nft in contract: NFTMarket (Slither line:1285)
+
+End MGAS.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: MGAS
+Setter found in contract MGAS
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable NFTMARKET
+impl_address_from_contract_call: getter is _nft
+getter.full_name = _nft()
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.sender != _customer(),Cannot call from the customer)
+impl_address_from_contract_call: arg is msg.sender != _customer()
+impl_address_from_contract_call: arg is Cannot call from the customer
+impl_address_from_contract_call: CallExpression _gonadeal()
+impl_address_from_contract_call: CallExpression _act(_nft())
+impl_address_from_contract_call: arg is _nft()
+impl_address_from_contract_call: CallExpression _nft()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression super._gonadeal()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression _deal()
+impl_address_from_contract_call: CallExpression sload(uint256)(market)
+impl_address_from_contract_call: arg is market
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression sload(uint256)(subject)
+impl_address_from_contract_call: arg is subject
+Checking external function fallback
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _customer(),Cannot call from the customer)
+Checking external function receive
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _customer(),Cannot call from the customer)
+Checking external function Approve
+Found 'msg.sender ==' in expression: msg.sender == _customer()
+functions_writing_to_variable: NFTMARKET
+functions_writing_to_variable: checking function MGAS._nft (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS.Approve (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(market,business)
+functions_writing_to_variable: Approve writes business to NFTMARKET using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MGAS._gonadeal (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(market,business)
+functions_writing_to_variable: constructor writes business to NFTMARKET using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MGAS.receive (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS._nft (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS._gonadeal (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS._setBusiness (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(market,business)
+functions_writing_to_variable: _setBusiness writes business to NFTMARKET using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MGAS._act (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS._approval (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(market,business)
+functions_writing_to_variable: _approval writes business to NFTMARKET using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MGAS._deal (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(market,business)
+functions_writing_to_variable: constructor writes business to NFTMARKET using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MGAS._customer (proxy_features line:898)
+functions_writing_to_variable: checking function MGAS.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = NFTMARKET = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: NFTMARKET = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: NFTMARKET (proxy_features line:924)
+get_value_assigned: NFTMARKET = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = CUSTOMER = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: CUSTOMER = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function Approve
+require(bool,string)(msg.sender != _customer(),Cannot call from the customer)
+has_compatibility_checks: condition msg.sender != _customer()
+has_compatibility_checks: IF node exp = switch_expr_14973_202_0__act_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_14973_202_0__act_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _customer()
+require(bool)(Address.isContract(business))
+has_compatibility_checks: condition Address.isContract(business)
+check_condition_from_expression: modifier calls: ['isCustomer()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _setBusiness
+has_compatibility_checks: skipping internal function _approval
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: receive
+Found public function: constructor
+Found external function: Approve
+has_time_delay: (node.type) EXPRESSION
+(Expression) switch_expr_14973_202_0__act_asm_0 = result__act_asm_0
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(market,business)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _approval(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setBusiness(business)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender != _customer(),Cannot call from the customer)
+has_time_delay: (node.type) EXPRESSION
+(Expression) isCustomer()
+has_time_delay: (node.type) IF
+(Expression) switch_expr_14973_202_0__act_asm_0 == 0
+has_time_delay: (node.type) IF
+(Expression) msg.sender == _customer()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _gonadeal()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _act(_nft())
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) return(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) super._gonadeal()
+has_time_delay: (node.type) EXPRESSION
+(Expression) calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) market = NFTMARKET
+has_time_delay: (node.type) EXPRESSION
+(Expression) result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),nft,0,calldatasize()(),0,0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _deal()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) subject = CUSTOMER
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(Address.isContract(business))
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) nft = sload(uint256)(market)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) market = NFTMARKET
+has_time_delay: (node.type) EXPRESSION
+(Expression) customer = sload(uint256)(subject)
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router01.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router01.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router01.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router01 
+
+End IUniswapV2Router01.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router02.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router02.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router02.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router02 
+
+End IUniswapV2Router02.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Factory.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Factory.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Factory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Factory 
+
+End IUniswapV2Factory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Pair.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Pair.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Pair.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Pair 
+
+End IUniswapV2Pair.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MGas.is_proxy (Slither line:1425)
+
+
+End MGas.is_proxy (Slither line:1428)
+
+
+Begin MGas.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MGas 
+
+End MGas.is_upgradeable_proxy (Slither line:1407)
+

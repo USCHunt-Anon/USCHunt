@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.16/6e1A19F235bE7ED8E3369eF73b196C07257494DE_Proxy.sol/6e1A19F235bE7ED8E3369eF73b196C07257494DE_Proxy.sol#43-68)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.16/6e1A19F235bE7ED8E3369eF73b196C07257494DE_Proxy.sol/6e1A19F235bE7ED8E3369eF73b196C07257494DE_Proxy.sol#43-68) is an upgradeable proxy.\n0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 (UUPS) with slot = keccak256('PROXIABLE')\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCodeAddress from TokenSoftToken\n",
+        "id": "c6acaf2bf036ff292b83dade3b8bca7fc766fc807995da37b61924ec0a80d89d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "impl_address_setter": "TokenSoftToken.updateCodeAddress(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.16/6e1A19F235bE7ED8E3369eF73b196C07257494DE_Proxy.sol/6e1A19F235bE7ED8E3369eF73b196C07257494DE_Proxy.sol#43-68)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TokenSoftToken.updateCodeAddress(address)": {
+                "check": "require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCodeAddress from TokenSoftToken"
+        }
+      }
+    ]
+  }
+}

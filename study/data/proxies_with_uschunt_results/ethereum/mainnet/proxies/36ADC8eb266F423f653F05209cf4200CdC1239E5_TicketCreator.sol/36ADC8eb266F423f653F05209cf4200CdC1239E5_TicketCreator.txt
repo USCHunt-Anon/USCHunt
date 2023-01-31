@@ -1,0 +1,395 @@
+
+Begin WrapAddresses.is_proxy (Slither line:1425)
+
+
+End WrapAddresses.is_proxy (Slither line:1428)
+
+
+Begin WrapAddresses.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WrapAddresses 
+
+End WrapAddresses.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Commander.is_proxy (Slither line:1425)
+
+
+End Commander.is_proxy (Slither line:1428)
+
+
+Begin Commander.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Commander 
+
+End Commander.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ticket.is_proxy (Slither line:1425)
+
+
+End Ticket.is_proxy (Slither line:1428)
+
+
+Begin Ticket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ticket 
+
+End Ticket.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Coupon.is_proxy (Slither line:1425)
+
+
+End Coupon.is_proxy (Slither line:1428)
+
+
+Begin Coupon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Coupon 
+
+End Coupon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Subscription.is_proxy (Slither line:1425)
+
+
+End Subscription.is_proxy (Slither line:1428)
+
+
+Begin Subscription.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Subscription 
+
+End Subscription.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TicketPack.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+0
+returndatasize()()
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),tikcet_commander,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+tikcet_commander
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is tikcet_commander (Slither line:2828)
+dest.value: tikcet_commander (Slither line:2831)
+Expression: abi.decode(result0,(address)) (Slither line:2836)
+
+Begin TicketPack.find_delegate_from_call_exp
+
+abi.decode(result0,(address)) (Slither line:2003)
+called = abi.decode (Slither line:2010)
+Called member of abi (Slither line:2017)
+
+Begin TicketPack.find_delegate_from_member_access
+
+Expression: abi.decode(result0,(address)) (Slither line:2358)
+abi (Slither line:2371)
+abi is an address variable (Slither line:2468)
+
+End TicketPack.find_delegate_from_member_access (Slither line:2645)
+
+
+End TicketPack.find_delegate_from_call_exp (Slither line:2019)
+
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(ptr_fallback_asm_0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+returndatasize()()
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: (result0) = address(iAddresses).staticcall(abi.encodeWithSignature(viewAddress(uint16),10000)) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: address(iAddresses).staticcall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+abi.encodeWithSignature(viewAddress(uint16),10000)
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TicketPack.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'tikcet_commander'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin TicketPack.find_delegate_variable_from_name
+Searching for tikcet_commander (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking iAddresses (Slither line:1689)
+Checking ver (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking quantity (Slither line:1689)
+Checking refundCount (Slither line:1689)
+Checking buyList (Slither line:1689)
+Checking packInfo (Slither line:1689)
+Checking isCalculated (Slither line:1689)
+Checking totalUsedCount (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking tikcet_commander (Slither line:1703)
+tikcet_commander is a Local Variable in TicketPack.fallback (Slither line:1707)
+Expression: abi.decode(result0,(address)) (Slither line:1719)
+
+Begin TicketPack.find_delegate_from_call_exp
+
+abi.decode(result0,(address)) (Slither line:2003)
+called = abi.decode (Slither line:2010)
+Called member of abi (Slither line:2017)
+
+Begin TicketPack.find_delegate_from_member_access
+
+Expression: abi.decode(result0,(address)) (Slither line:2358)
+abi (Slither line:2371)
+abi is an address variable (Slither line:2468)
+
+End TicketPack.find_delegate_from_member_access (Slither line:2645)
+
+
+End TicketPack.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End TicketPack.find_delegate_variable_by_name (Slither line:1739)
+
+
+End TicketPack.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+returndatasize()()
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_10506_229_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: ptr_fallback_asm_0 = mload(uint256)(0x40) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: mload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+0x40
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TicketPack.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+0
+calldatasize()()
+
+End TicketPack.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End TicketPack.is_proxy (Slither line:1476)
+
+
+Begin TicketPack.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TicketPack 
+
+End TicketPack.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TicketCreator.is_proxy (Slither line:1425)
+
+
+End TicketCreator.is_proxy (Slither line:1428)
+
+
+Begin TicketCreator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TicketCreator 
+
+End TicketCreator.is_upgradeable_proxy (Slither line:1407)
+

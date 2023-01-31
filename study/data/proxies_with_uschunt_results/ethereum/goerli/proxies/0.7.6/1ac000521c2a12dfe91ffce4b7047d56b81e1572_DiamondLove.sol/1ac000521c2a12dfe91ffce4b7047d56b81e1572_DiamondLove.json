@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "DiamondLove (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.7.6/1ac000521c2a12dfe91ffce4b7047d56b81e1572_DiamondLove.sol/1ac000521c2a12dfe91ffce4b7047d56b81e1572_DiamondLove.sol#939-1036)",
+        "elements": [],
+        "description": "DiamondLove (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.7.6/1ac000521c2a12dfe91ffce4b7047d56b81e1572_DiamondLove.sol/1ac000521c2a12dfe91ffce4b7047d56b81e1572_DiamondLove.sol#939-1036) is an upgradeable proxy.\nfacet is declared in the proxy.\nfacets probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete diamondCut from DiamondCutFacet\n",
+        "id": "c6d8d60c1ebab70c5a8c7bc6fa7b1eba4c0110d0899a0cb1162035fcf4b438ce",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "DiamondLove.fallback().facet",
+          "impl_address_setter": "IDiamondCut.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "DiamondLove (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.7.6/1ac000521c2a12dfe91ffce4b7047d56b81e1572_DiamondLove.sol/1ac000521c2a12dfe91ffce4b7047d56b81e1572_DiamondLove.sol#939-1036)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => bytes32)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove diamondCut from DiamondCutFacet"
+        }
+      }
+    ]
+  }
+}

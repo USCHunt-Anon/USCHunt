@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/f970FA9E6797d0eBfdEE8e764FC5f3123Dc6befD_Proxy.sol/f970FA9E6797d0eBfdEE8e764FC5f3123Dc6befD_Proxy.sol#285-321)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/f970FA9E6797d0eBfdEE8e764FC5f3123Dc6befD_Proxy.sol/f970FA9E6797d0eBfdEE8e764FC5f3123Dc6befD_Proxy.sol#285-321) is an upgradeable proxy.\nimplementation was found in a different contract.\nimplementation is an address state variable.\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: gasleft()() <= 2300\n",
+        "id": "efbcbed5ab0e28d27b5e860bde001619976aab85f1c83dad23e3cb2d11d33c3d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Upgradeable.implementation",
+          "impl_address_setter": "Proxy.replaceImplementation(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Upgradeable (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/f970FA9E6797d0eBfdEE8e764FC5f3123Dc6befD_Proxy.sol/f970FA9E6797d0eBfdEE8e764FC5f3123Dc6befD_Proxy.sol#281-283)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.replaceImplementation(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!gasleft()() <= 2300",
+          "toggle_alternative_logic": "None",
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "replaceImplementation(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

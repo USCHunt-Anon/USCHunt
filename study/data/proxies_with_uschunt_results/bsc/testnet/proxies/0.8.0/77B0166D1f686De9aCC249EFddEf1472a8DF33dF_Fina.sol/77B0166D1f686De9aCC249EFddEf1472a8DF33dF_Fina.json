@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol#10-45)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol#10-45) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "Fina (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol#54-101)",
+        "elements": [],
+        "description": "Fina (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol#54-101) is an upgradeable proxy.\n_impl is declared in the proxy.\n_impl is an address state variable\nMissing compatibility check in Fina.setImplementation(address)\n",
+        "id": "0b5a985c98c5c1e380edfd728861b1e00d5ba60d28940c955c830c8d2c2c2661",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Fina._impl",
+          "impl_address_setter": "Fina.setImplementation(address)",
+          "impl_address_getter": "Fina.implementation()",
+          "impl_address_location": "Fina (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol/77B0166D1f686De9aCC249EFddEf1472a8DF33dF_Fina.sol#54-101)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Fina.setImplementation(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "setImplementation(address)",
+              "set_require_rarity(uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

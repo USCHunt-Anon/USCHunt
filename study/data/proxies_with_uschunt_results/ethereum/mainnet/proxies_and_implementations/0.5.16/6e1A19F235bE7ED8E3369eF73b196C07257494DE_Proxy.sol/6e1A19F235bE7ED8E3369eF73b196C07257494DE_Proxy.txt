@@ -1,0 +1,2929 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let contractLogic := sload(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0x0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(gas(), contractLogic, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+Found sload in assembly:     let contractLogic := sload(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) (Slither line:1884)
+dest: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1887)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+slot: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:2689)
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is constant (Slither line:1146)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+Begin Proxiable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _updateCodeAddress (Slither line:2988)
+Checking function: getLogicAddress (Slither line:2988)
+getLogicAddress returns address variable called logicAddress (Slither line:3008)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3028)
+
+End Proxiable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _updateCodeAddress(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: getLogicAddress() returns(address) (Slither line:3127)
+Visibility: public
+getLogicAddress contains assembly (Slither line:3153)
+Checking function: proxiableUUID() returns(bytes32) (Slither line:3127)
+Visibility: public
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+
+Begin Initializable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+
+End Initializable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Initializable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End Initializable.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC20Detailed.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: initialize (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: _decimals (Slither line:3028)
+
+End ERC20Detailed.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC20Detailed.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: initialize(string,string,uint8) returns() (Slither line:3127)
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: public
+_name
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: public
+_symbol
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: public
+_decimals
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End ERC20Detailed.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC1404.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End ERC1404.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC1404.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: detectTransferRestriction(address,address,uint256) returns(uint8) (Slither line:3127)
+Visibility: public
+Checking function: messageForTransferRestriction(uint8) returns(string) (Slither line:3127)
+Visibility: public
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End ERC1404.find_setter_in_contract (Slither line:3345)
+
+
+Begin Roles.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: add (Slither line:2988)
+Checking function: remove (Slither line:2988)
+Checking function: has (Slither line:2988)
+has returns bool variable  (Slither line:3008)
+RETURN node expression: role.bearer[account] (Slither line:3028)
+
+End Roles.find_getter_in_contract (Slither line:3083)
+
+
+Begin Roles.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: add(Roles.Role,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: remove(Roles.Role,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: has(Roles.Role,address) returns(bool) (Slither line:3127)
+Visibility: internal
+
+End Roles.find_setter_in_contract (Slither line:3345)
+
+
+Begin OwnerRole.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+
+End OwnerRole.find_getter_in_contract (Slither line:3083)
+
+
+Begin OwnerRole.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+_owners.has(account)
+require(bool,string)(! has(role,account),Roles: account already has role)
+_owners.add(account)
+_addOwner(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+OwnerAdded(account,msg.sender)
+onlyOwner()
+role.bearer[account]
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+_owners.has(account)
+_owners.remove(account)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_removeOwner(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+role.bearer[account]
+require(bool,string)(has(role,account),Roles: account does not have role)
+OwnerRemoved(account,msg.sender)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End OwnerRole.find_setter_in_contract (Slither line:3345)
+
+
+Begin WhitelisterRole.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: isWhitelister (Slither line:2988)
+isWhitelister returns bool variable  (Slither line:3008)
+RETURN node expression: _whitelisters.has(account) (Slither line:3028)
+Checking function: _addWhitelister (Slither line:2988)
+Checking function: _removeWhitelister (Slither line:2988)
+Checking function: addWhitelister (Slither line:2988)
+Checking function: removeWhitelister (Slither line:2988)
+
+End WhitelisterRole.find_getter_in_contract (Slither line:3083)
+
+
+Begin WhitelisterRole.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isWhitelister(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_whitelisters.has(account)
+role.bearer[account]
+Checking function: _addWhitelister(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeWhitelister(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addWhitelister(address) returns() (Slither line:3127)
+Visibility: public
+WhitelisterAdded(account,msg.sender)
+require(bool,string)(! has(role,account),Roles: account already has role)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_whitelisters.add(account)
+_owners.has(account)
+role.bearer[account]
+onlyOwner()
+_addWhitelister(account)
+Checking function: removeWhitelister(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+WhitelisterRemoved(account,msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_removeWhitelister(account)
+_whitelisters.remove(account)
+_owners.has(account)
+role.bearer[account]
+require(bool,string)(has(role,account),Roles: account does not have role)
+onlyOwner()
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+OwnerAdded(account,msg.sender)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+_owners.add(account)
+_addOwner(account)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+OwnerRemoved(account,msg.sender)
+_owners.remove(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+_removeOwner(account)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End WhitelisterRole.find_setter_in_contract (Slither line:3345)
+
+
+Begin Whitelistable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isWhitelister (Slither line:2988)
+isWhitelister returns bool variable  (Slither line:3008)
+RETURN node expression: _whitelisters.has(account) (Slither line:3028)
+Checking function: _addWhitelister (Slither line:2988)
+Checking function: _removeWhitelister (Slither line:2988)
+Checking function: addWhitelister (Slither line:2988)
+Checking function: removeWhitelister (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: _setWhitelistEnabled (Slither line:2988)
+Checking function: _addToWhitelist (Slither line:2988)
+Checking function: _removeFromWhitelist (Slither line:2988)
+Checking function: _updateOutboundWhitelistEnabled (Slither line:2988)
+Checking function: checkWhitelistAllowed (Slither line:2988)
+checkWhitelistAllowed returns bool variable  (Slither line:3008)
+RETURN node expression: outboundWhitelistsEnabled[senderWhiteList][receiverWhiteList] (Slither line:3028)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+Checking function: setWhitelistEnabled (Slither line:2988)
+Checking function: addToWhitelist (Slither line:2988)
+Checking function: removeFromWhitelist (Slither line:2988)
+Checking function: updateOutboundWhitelistEnabled (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Whitelistable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Whitelistable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _setWhitelistEnabled(bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _addToWhitelist(address,uint8) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeFromWhitelist(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _updateOutboundWhitelistEnabled(uint8,uint8,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: checkWhitelistAllowed(address,address) returns(bool) (Slither line:3127)
+Visibility: public
+outboundWhitelistsEnabled[senderWhiteList][receiverWhiteList]
+true
+false
+Checking function: setWhitelistEnabled(bool) returns() (Slither line:3127)
+Visibility: public
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+isWhitelistEnabled = enabled
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+WhitelistEnabledUpdated(msg.sender,enabled)
+_setWhitelistEnabled(enabled)
+Checking function: addToWhitelist(address,uint8) returns() (Slither line:3127)
+Visibility: public
+_whitelisters.has(account)
+require(bool,string)(addressToAdd != address(0),Cannot add address 0x0 to a whitelist.)
+_addToWhitelist(addressToAdd,whitelist)
+require(bool,string)(whitelist != NO_WHITELIST,Invalid whitelist ID supplied)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyWhitelister()
+require(bool,string)(isWhitelister(msg.sender),WhitelisterRole: caller does not have the Whitelister role)
+role.bearer[account]
+addressWhitelists[addressToAdd] = whitelist
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+AddressAddedToWhitelist(addressToAdd,whitelist,msg.sender)
+AddressRemovedFromWhitelist(addressToAdd,previousWhitelist,msg.sender)
+Checking function: removeFromWhitelist(address) returns() (Slither line:3127)
+Visibility: public
+AddressRemovedFromWhitelist(addressToRemove,previousWhitelist,msg.sender)
+_removeFromWhitelist(addressToRemove)
+require(bool,string)(addressToRemove != address(0),Cannot remove address 0x0 from a whitelist.)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyWhitelister()
+require(bool,string)(previousWhitelist != NO_WHITELIST,Address cannot be removed from invalid whitelist.)
+require(bool,string)(isWhitelister(msg.sender),WhitelisterRole: caller does not have the Whitelister role)
+_whitelisters.has(account)
+role.bearer[account]
+addressWhitelists[addressToRemove] = NO_WHITELIST
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: updateOutboundWhitelistEnabled(uint8,uint8,bool) returns() (Slither line:3127)
+Visibility: public
+_updateOutboundWhitelistEnabled(sourceWhitelist,destinationWhitelist,newEnabledValue)
+OutboundWhitelistUpdated(msg.sender,sourceWhitelist,destinationWhitelist,oldEnabledValue,newEnabledValue)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+outboundWhitelistsEnabled[sourceWhitelist][destinationWhitelist] = newEnabledValue
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyWhitelister()
+require(bool,string)(isWhitelister(msg.sender),WhitelisterRole: caller does not have the Whitelister role)
+_whitelisters.has(account)
+role.bearer[account]
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: isWhitelister(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_whitelisters.has(account)
+role.bearer[account]
+Checking function: _addWhitelister(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeWhitelister(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addWhitelister(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+onlyOwner()
+WhitelisterAdded(account,msg.sender)
+_addWhitelister(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+_owners.has(account)
+_whitelisters.add(account)
+Checking function: removeWhitelister(address) returns() (Slither line:3127)
+Visibility: public
+_owners.has(account)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(account != address(0),Roles: account is the zero address)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+WhitelisterRemoved(account,msg.sender)
+_whitelisters.remove(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+_removeWhitelister(account)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+_owners.has(account)
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_addOwner(account)
+_owners.add(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+OwnerAdded(account,msg.sender)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+_owners.has(account)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(has(role,account),Roles: account does not have role)
+_owners.remove(account)
+_removeOwner(account)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+OwnerRemoved(account,msg.sender)
+role.bearer[account]
+_owners.has(account)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End Whitelistable.find_setter_in_contract (Slither line:3345)
+
+
+Begin Context.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End Context.find_getter_in_contract (Slither line:3083)
+
+
+Begin Context.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End Context.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeMath.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: add (Slither line:2988)
+add returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: sub(a,b,SafeMath: subtraction overflow) (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mul (Slither line:2988)
+mul returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: c (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: div(a,b,SafeMath: division by zero) (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: mod(a,b,SafeMath: modulo by zero) (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: a % b (Slither line:3028)
+
+End SafeMath.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeMath.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: add(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+
+End SafeMath.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC20.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _burnFrom (Slither line:2988)
+
+End ERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+_transfer(_msgSender(),recipient,amount)
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+require(bool,string)(b <= a,errorMessage)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+true
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Approval(owner,spender,amount)
+msg.sender
+_approve(_msgSender(),spender,amount)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+Transfer(sender,recipient,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Approval(owner,spender,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+_transfer(sender,recipient,amount)
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+require(bool,string)(b <= a,errorMessage)
+true
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+Approval(owner,spender,amount)
+msg.sender
+c
+true
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Approval(owner,spender,amount)
+msg.sender
+c
+require(bool,string)(b <= a,errorMessage)
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burnFrom(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End ERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin MinterRole.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: isMinter (Slither line:2988)
+isMinter returns bool variable  (Slither line:3008)
+RETURN node expression: _minters.has(account) (Slither line:3028)
+Checking function: _addMinter (Slither line:2988)
+Checking function: _removeMinter (Slither line:2988)
+Checking function: addMinter (Slither line:2988)
+Checking function: removeMinter (Slither line:2988)
+
+End MinterRole.find_getter_in_contract (Slither line:3083)
+
+
+Begin MinterRole.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isMinter(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_minters.has(account)
+role.bearer[account]
+Checking function: _addMinter(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeMinter(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addMinter(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_owners.has(account)
+_minters.add(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+MinterAdded(account,msg.sender)
+_addMinter(account)
+role.bearer[account]
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: removeMinter(address) returns() (Slither line:3127)
+Visibility: public
+_minters.remove(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+_removeMinter(account)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+role.bearer[account]
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+MinterRemoved(account,msg.sender)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_addOwner(account)
+_owners.add(account)
+role.bearer[account]
+OwnerAdded(account,msg.sender)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(has(role,account),Roles: account does not have role)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+OwnerRemoved(account,msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.remove(account)
+_removeOwner(account)
+role.bearer[account]
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End MinterRole.find_setter_in_contract (Slither line:3345)
+
+
+Begin Mintable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isMinter (Slither line:2988)
+isMinter returns bool variable  (Slither line:3008)
+RETURN node expression: _minters.has(account) (Slither line:3028)
+Checking function: _addMinter (Slither line:2988)
+Checking function: _removeMinter (Slither line:2988)
+Checking function: addMinter (Slither line:2988)
+Checking function: removeMinter (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _burnFrom (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: _mint (Slither line:2988)
+_mint returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: mint (Slither line:2988)
+mint returns bool variable  (Slither line:3008)
+RETURN node expression: Mintable._mint(msg.sender,account,amount) (Slither line:3028)
+
+End Mintable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Mintable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _mint(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: mint(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+require(bool,string)(account != address(0),ERC20: mint to the zero address)
+_minters.has(account)
+_totalSupply = _totalSupply.add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isMinter(msg.sender),MinterRole: caller does not have the Minter role)
+_balances[account] = _balances[account].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(address(0),account,amount)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+role.bearer[account]
+Mintable._mint(msg.sender,account,amount)
+c
+onlyMinter()
+ERC20._mint(to,amount)
+Mint(minter,to,amount)
+Checking function: isMinter(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_minters.has(account)
+role.bearer[account]
+Checking function: _addMinter(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeMinter(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addMinter(address) returns() (Slither line:3127)
+Visibility: public
+MinterAdded(account,msg.sender)
+_addMinter(account)
+onlyOwner()
+require(bool,string)(! has(role,account),Roles: account already has role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+_owners.has(account)
+_minters.add(account)
+Checking function: removeMinter(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+MinterRemoved(account,msg.sender)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+_minters.remove(account)
+_removeMinter(account)
+_owners.has(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+_owners.has(account)
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+_addOwner(account)
+_owners.add(account)
+require(bool,string)(! has(role,account),Roles: account already has role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+OwnerAdded(account,msg.sender)
+onlyOwner()
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+_owners.has(account)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+OwnerRemoved(account,msg.sender)
+role.bearer[account]
+_owners.has(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+_owners.remove(account)
+_removeOwner(account)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_transfer(_msgSender(),recipient,amount)
+Transfer(sender,recipient,amount)
+true
+c
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+msg.sender
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+require(bool,string)(b <= a,errorMessage)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Approval(owner,spender,amount)
+msg.sender
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+Transfer(sender,recipient,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+Approval(owner,spender,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_transfer(sender,recipient,amount)
+c
+msg.sender
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+true
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+require(bool,string)(b <= a,errorMessage)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Approval(owner,spender,amount)
+c
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+msg.sender
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(b <= a,errorMessage)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Approval(owner,spender,amount)
+c
+msg.sender
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burnFrom(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End Mintable.find_setter_in_contract (Slither line:3345)
+
+
+Begin BurnerRole.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: isBurner (Slither line:2988)
+isBurner returns bool variable  (Slither line:3008)
+RETURN node expression: _burners.has(account) (Slither line:3028)
+Checking function: _addBurner (Slither line:2988)
+Checking function: _removeBurner (Slither line:2988)
+Checking function: addBurner (Slither line:2988)
+Checking function: removeBurner (Slither line:2988)
+
+End BurnerRole.find_getter_in_contract (Slither line:3083)
+
+
+Begin BurnerRole.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isBurner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_burners.has(account)
+role.bearer[account]
+Checking function: _addBurner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeBurner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addBurner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+_burners.add(account)
+role.bearer[account]
+BurnerAdded(account,msg.sender)
+onlyOwner()
+_addBurner(account)
+Checking function: removeBurner(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+BurnerRemoved(account,msg.sender)
+_burners.remove(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+_removeBurner(account)
+role.bearer[account]
+onlyOwner()
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+OwnerAdded(account,msg.sender)
+require(bool,string)(! has(role,account),Roles: account already has role)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+_addOwner(account)
+_owners.add(account)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(has(role,account),Roles: account does not have role)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+OwnerRemoved(account,msg.sender)
+role.bearer[account]
+_owners.remove(account)
+_removeOwner(account)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End BurnerRole.find_setter_in_contract (Slither line:3345)
+
+
+Begin Burnable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isBurner (Slither line:2988)
+isBurner returns bool variable  (Slither line:3008)
+RETURN node expression: _burners.has(account) (Slither line:3028)
+Checking function: _addBurner (Slither line:2988)
+Checking function: _removeBurner (Slither line:2988)
+Checking function: addBurner (Slither line:2988)
+Checking function: removeBurner (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _burnFrom (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: _burn (Slither line:2988)
+_burn returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: burn (Slither line:2988)
+burn returns bool variable  (Slither line:3008)
+RETURN node expression: _burn(msg.sender,account,amount) (Slither line:3028)
+
+End Burnable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Burnable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _burn(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: burn(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_totalSupply = _totalSupply.sub(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(account,address(0),amount)
+_burners.has(account)
+c
+require(bool,string)(isBurner(msg.sender),BurnerRole: caller does not have the Burner role)
+_burn(msg.sender,account,amount)
+sub(a,b,SafeMath: subtraction overflow)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyBurner()
+require(bool,string)(account != address(0),ERC20: burn from the zero address)
+role.bearer[account]
+ERC20._burn(from,amount)
+Burn(burner,from,amount)
+require(bool,string)(b <= a,errorMessage)
+true
+_balances[account] = _balances[account].sub(amount,ERC20: burn amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isBurner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_burners.has(account)
+role.bearer[account]
+Checking function: _addBurner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeBurner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addBurner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+BurnerAdded(account,msg.sender)
+onlyOwner()
+_addBurner(account)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account]
+_owners.has(account)
+_burners.add(account)
+Checking function: removeBurner(address) returns() (Slither line:3127)
+Visibility: public
+_burners.remove(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+BurnerRemoved(account,msg.sender)
+_owners.has(account)
+_removeBurner(account)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+_owners.has(account)
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_owners.add(account)
+_addOwner(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+OwnerAdded(account,msg.sender)
+onlyOwner()
+role.bearer[account]
+_owners.has(account)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+_owners.remove(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_removeOwner(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+role.bearer[account]
+_owners.has(account)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+OwnerRemoved(account,msg.sender)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+c
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_transfer(_msgSender(),recipient,amount)
+Transfer(sender,recipient,amount)
+true
+require(bool,string)(b <= a,errorMessage)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Approval(owner,spender,amount)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+_transfer(sender,recipient,amount)
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+true
+require(bool,string)(c >= a,SafeMath: addition overflow)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+c
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+Transfer(sender,recipient,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(b <= a,errorMessage)
+Approval(owner,spender,amount)
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+msg.sender
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+Approval(owner,spender,amount)
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+require(bool,string)(b <= a,errorMessage)
+true
+Approval(owner,spender,amount)
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burnFrom(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End Burnable.find_setter_in_contract (Slither line:3345)
+
+
+Begin RevokerRole.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: isRevoker (Slither line:2988)
+isRevoker returns bool variable  (Slither line:3008)
+RETURN node expression: _revokers.has(account) (Slither line:3028)
+Checking function: _addRevoker (Slither line:2988)
+Checking function: _removeRevoker (Slither line:2988)
+Checking function: addRevoker (Slither line:2988)
+Checking function: removeRevoker (Slither line:2988)
+
+End RevokerRole.find_getter_in_contract (Slither line:3083)
+
+
+Begin RevokerRole.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isRevoker(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_revokers.has(account)
+role.bearer[account]
+Checking function: _addRevoker(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeRevoker(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addRevoker(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+_revokers.add(account)
+role.bearer[account]
+onlyOwner()
+RevokerAdded(account,msg.sender)
+_addRevoker(account)
+Checking function: removeRevoker(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+RevokerRemoved(account,msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_removeRevoker(account)
+_revokers.remove(account)
+_owners.has(account)
+role.bearer[account]
+onlyOwner()
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+OwnerAdded(account,msg.sender)
+require(bool,string)(! has(role,account),Roles: account already has role)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+role.bearer[account]
+_owners.add(account)
+_addOwner(account)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+OwnerRemoved(account,msg.sender)
+_owners.remove(account)
+_removeOwner(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End RevokerRole.find_setter_in_contract (Slither line:3345)
+
+
+Begin Revocable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isRevoker (Slither line:2988)
+isRevoker returns bool variable  (Slither line:3008)
+RETURN node expression: _revokers.has(account) (Slither line:3028)
+Checking function: _addRevoker (Slither line:2988)
+Checking function: _removeRevoker (Slither line:2988)
+Checking function: addRevoker (Slither line:2988)
+Checking function: removeRevoker (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _burnFrom (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: _revoke (Slither line:2988)
+_revoke returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: revoke (Slither line:2988)
+revoke returns bool variable  (Slither line:3008)
+RETURN node expression: _revoke(from,amount) (Slither line:3028)
+
+End Revocable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Revocable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _revoke(address,uint256) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: revoke(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+_revoke(from,amount)
+ERC20._transfer(_from,msg.sender,_amount)
+onlyRevoker()
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+Revoke(msg.sender,_from,_amount)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+true
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+role.bearer[account]
+c
+_revokers.has(account)
+require(bool,string)(isRevoker(msg.sender),RevokerRole: caller does not have the Revoker role)
+require(bool,string)(b <= a,errorMessage)
+Checking function: isRevoker(address) returns(bool) (Slither line:3127)
+Visibility: public
+_revokers.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+Checking function: _addRevoker(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeRevoker(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addRevoker(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+_revokers.add(account)
+role.bearer[account]
+onlyOwner()
+RevokerAdded(account,msg.sender)
+_addRevoker(account)
+Checking function: removeRevoker(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+RevokerRemoved(account,msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_removeRevoker(account)
+_revokers.remove(account)
+_owners.has(account)
+role.bearer[account]
+onlyOwner()
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+role.bearer[account]
+_owners.add(account)
+_addOwner(account)
+OwnerAdded(account,msg.sender)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+_removeOwner(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+OwnerRemoved(account,msg.sender)
+role.bearer[account]
+_owners.remove(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_transfer(_msgSender(),recipient,amount)
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+require(bool,string)(b <= a,errorMessage)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_approve(_msgSender(),spender,amount)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+true
+Approval(owner,spender,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_transfer(sender,recipient,amount)
+c
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+true
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+Approval(owner,spender,amount)
+require(bool,string)(b <= a,errorMessage)
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+Approval(owner,spender,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+c
+msg.sender
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(b <= a,errorMessage)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+Approval(owner,spender,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+c
+msg.sender
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burnFrom(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End Revocable.find_setter_in_contract (Slither line:3345)
+
+
+Begin PauserRole.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: isPauser (Slither line:2988)
+isPauser returns bool variable  (Slither line:3008)
+RETURN node expression: _pausers.has(account) (Slither line:3028)
+Checking function: _addPauser (Slither line:2988)
+Checking function: _removePauser (Slither line:2988)
+Checking function: addPauser (Slither line:2988)
+Checking function: removePauser (Slither line:2988)
+
+End PauserRole.find_getter_in_contract (Slither line:3083)
+
+
+Begin PauserRole.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isPauser(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_pausers.has(account)
+role.bearer[account]
+Checking function: _addPauser(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removePauser(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addPauser(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_addPauser(account)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+_pausers.add(account)
+role.bearer[account]
+PauserAdded(account,msg.sender)
+onlyOwner()
+Checking function: removePauser(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(has(role,account),Roles: account does not have role)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+PauserRemoved(account,msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_pausers.remove(account)
+_removePauser(account)
+_owners.has(account)
+role.bearer[account]
+onlyOwner()
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+OwnerAdded(account,msg.sender)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+role.bearer[account]
+_addOwner(account)
+_owners.add(account)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.has(account)
+OwnerRemoved(account,msg.sender)
+role.bearer[account]
+_owners.remove(account)
+_removeOwner(account)
+require(bool,string)(has(role,account),Roles: account does not have role)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End PauserRole.find_setter_in_contract (Slither line:3345)
+
+
+Begin Pausable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isPauser (Slither line:2988)
+isPauser returns bool variable  (Slither line:3008)
+RETURN node expression: _pausers.has(account) (Slither line:3028)
+Checking function: _addPauser (Slither line:2988)
+Checking function: _removePauser (Slither line:2988)
+Checking function: addPauser (Slither line:2988)
+Checking function: removePauser (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: paused (Slither line:2988)
+paused returns bool variable  (Slither line:3008)
+RETURN node expression: _paused (Slither line:3028)
+Checking function: _pause (Slither line:2988)
+Checking function: _unpause (Slither line:2988)
+Checking function: pause (Slither line:2988)
+Checking function: unpause (Slither line:2988)
+
+End Pausable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Pausable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: paused() returns(bool) (Slither line:3127)
+Visibility: public
+_paused
+Checking function: _pause() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _unpause() returns() (Slither line:3127)
+Visibility: internal
+Checking function: pause() returns() (Slither line:3127)
+Visibility: public
+Paused(msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+whenNotPaused()
+require(bool,string)(isPauser(msg.sender),PauserRole: caller does not have the Pauser role)
+role.bearer[account]
+_paused = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(! _paused,Pausable: paused)
+_pausers.has(account)
+onlyPauser()
+Pausable._pause()
+Checking function: unpause() returns() (Slither line:3127)
+Visibility: public
+whenPaused()
+require(bool,string)(_paused,Pausable: not paused)
+Pausable._unpause()
+require(bool,string)(account != address(0),Roles: account is the zero address)
+Unpaused(msg.sender)
+onlyPauser()
+_paused = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+role.bearer[account]
+_pausers.has(account)
+require(bool,string)(isPauser(msg.sender),PauserRole: caller does not have the Pauser role)
+Checking function: isPauser(address) returns(bool) (Slither line:3127)
+Visibility: public
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+_pausers.has(account)
+Checking function: _addPauser(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removePauser(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: addPauser(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_owners.has(account)
+_pausers.add(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+PauserAdded(account,msg.sender)
+_addPauser(account)
+role.bearer[account]
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: removePauser(address) returns() (Slither line:3127)
+Visibility: public
+_removePauser(account)
+_pausers.remove(account)
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+onlyOwner()
+role.bearer[account]
+require(bool,string)(has(role,account),Roles: account does not have role)
+PauserRemoved(account,msg.sender)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: isOwner(address) returns(bool) (Slither line:3127)
+Visibility: public
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account]
+Checking function: addOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(! has(role,account),Roles: account already has role)
+_owners.has(account)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+role.bearer[account] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.add(account)
+_addOwner(account)
+role.bearer[account]
+OwnerAdded(account,msg.sender)
+onlyOwner()
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: removeOwner(address) returns() (Slither line:3127)
+Visibility: public
+role.bearer[account] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owners.has(account)
+OwnerRemoved(account,msg.sender)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+_owners.remove(account)
+_removeOwner(account)
+role.bearer[account]
+onlyOwner()
+require(bool,string)(has(role,account),Roles: account does not have role)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+Checking function: _addOwner(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _removeOwner(address) returns() (Slither line:3127)
+Visibility: internal
+
+End Pausable.find_setter_in_contract (Slither line:3345)
+
+
+Begin TokenSoftToken.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: paused (Slither line:2988)
+paused returns bool variable  (Slither line:3008)
+RETURN node expression: _paused (Slither line:3028)
+Checking function: _pause (Slither line:2988)
+Checking function: _unpause (Slither line:2988)
+Checking function: pause (Slither line:2988)
+Checking function: unpause (Slither line:2988)
+Checking function: isPauser (Slither line:2988)
+isPauser returns bool variable  (Slither line:3008)
+RETURN node expression: _pausers.has(account) (Slither line:3028)
+Checking function: _addPauser (Slither line:2988)
+Checking function: _removePauser (Slither line:2988)
+Checking function: addPauser (Slither line:2988)
+Checking function: removePauser (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _owners.has(account) (Slither line:3028)
+Checking function: addOwner (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: _addOwner (Slither line:2988)
+Checking function: _removeOwner (Slither line:2988)
+Checking function: _revoke (Slither line:2988)
+_revoke returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: revoke (Slither line:2988)
+revoke returns bool variable  (Slither line:3008)
+RETURN node expression: _revoke(from,amount) (Slither line:3028)
+Checking function: isRevoker (Slither line:2988)
+isRevoker returns bool variable  (Slither line:3008)
+RETURN node expression: _revokers.has(account) (Slither line:3028)
+Checking function: _addRevoker (Slither line:2988)
+Checking function: _removeRevoker (Slither line:2988)
+Checking function: addRevoker (Slither line:2988)
+Checking function: removeRevoker (Slither line:2988)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _burnFrom (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: _burn (Slither line:2988)
+_burn returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: burn (Slither line:2988)
+burn returns bool variable  (Slither line:3008)
+RETURN node expression: _burn(msg.sender,account,amount) (Slither line:3028)
+Checking function: isBurner (Slither line:2988)
+isBurner returns bool variable  (Slither line:3008)
+RETURN node expression: _burners.has(account) (Slither line:3028)
+Checking function: _addBurner (Slither line:2988)
+Checking function: _removeBurner (Slither line:2988)
+Checking function: addBurner (Slither line:2988)
+Checking function: removeBurner (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+_mint returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: mint (Slither line:2988)
+mint returns bool variable  (Slither line:3008)
+RETURN node expression: Mintable._mint(msg.sender,account,amount) (Slither line:3028)
+Checking function: isMinter (Slither line:2988)
+isMinter returns bool variable  (Slither line:3008)
+RETURN node expression: _minters.has(account) (Slither line:3028)
+Checking function: _addMinter (Slither line:2988)
+Checking function: _removeMinter (Slither line:2988)
+Checking function: addMinter (Slither line:2988)
+Checking function: removeMinter (Slither line:2988)
+Checking function: _setWhitelistEnabled (Slither line:2988)
+Checking function: _addToWhitelist (Slither line:2988)
+Checking function: _removeFromWhitelist (Slither line:2988)
+Checking function: _updateOutboundWhitelistEnabled (Slither line:2988)
+Checking function: checkWhitelistAllowed (Slither line:2988)
+checkWhitelistAllowed returns bool variable  (Slither line:3008)
+RETURN node expression: outboundWhitelistsEnabled[senderWhiteList][receiverWhiteList] (Slither line:3028)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+Checking function: setWhitelistEnabled (Slither line:2988)
+Checking function: addToWhitelist (Slither line:2988)
+Checking function: removeFromWhitelist (Slither line:2988)
+Checking function: updateOutboundWhitelistEnabled (Slither line:2988)
+Checking function: isWhitelister (Slither line:2988)
+isWhitelister returns bool variable  (Slither line:3008)
+RETURN node expression: _whitelisters.has(account) (Slither line:3028)
+Checking function: _addWhitelister (Slither line:2988)
+Checking function: _removeWhitelister (Slither line:2988)
+Checking function: addWhitelister (Slither line:2988)
+Checking function: removeWhitelister (Slither line:2988)
+Checking function: initialize (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: _decimals (Slither line:3028)
+Checking function: _updateCodeAddress (Slither line:2988)
+Checking function: getLogicAddress (Slither line:2988)
+getLogicAddress returns address variable called logicAddress (Slither line:3008)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3028)
+Checking function: initialize (Slither line:2988)
+Checking function: updateCodeAddress (Slither line:2988)
+Checking function: detectTransferRestriction (Slither line:2988)
+detectTransferRestriction returns uint8 variable  (Slither line:3008)
+RETURN node expression: SUCCESS_CODE (Slither line:3028)
+RETURN node expression: SUCCESS_CODE (Slither line:3028)
+RETURN node expression: FAILURE_NON_WHITELIST (Slither line:3028)
+RETURN node expression: FAILURE_PAUSED (Slither line:3028)
+Checking function: messageForTransferRestriction (Slither line:2988)
+messageForTransferRestriction returns string variable  (Slither line:3008)
+RETURN node expression: SUCCESS_MESSAGE (Slither line:3028)
+RETURN node expression: FAILURE_NON_WHITELIST_MESSAGE (Slither line:3028)
+RETURN node expression: FAILURE_PAUSED_MESSAGE (Slither line:3028)
+RETURN node expression: UNKNOWN_ERROR (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable called success (Slither line:3008)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable called success (Slither line:3008)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End TokenSoftToken.find_getter_in_contract (Slither line:3083)
+
+
+Begin TokenSoftToken.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: initialize(address,string,string,uint8,uint256,bool) returns() (Slither line:3127)
+Checking function: updateCodeAddress(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+CodeAddressUpdated(newAddress)
+require(bool,string)(account != address(0),Roles: account is the zero address)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+_owners.has(account)
+role.bearer[account]
+require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+Proxiable._updateCodeAddress(newAddress)
+    sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, newAddress) (Slither line:3163)
+
+End TokenSoftToken.find_setter_in_contract (Slither line:3345)
+
+detect_storage_slot: Proxy
+Setter found in contract TokenSoftToken
+Found public function: constructor
+Found fallback
+Checking external function fallback
+functions_writing_to_variable: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+functions_writing_to_variable: checking function TokenSoftToken.paused (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.setWhitelistEnabled (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removeWhitelister (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isRevoker (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._burn (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._burnFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addWhitelister (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.burn (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.removeMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._pause (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addToWhitelist (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.removeWhitelister (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.updateCodeAddress (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, newAddress)
+(proxy_features line:953)
+newAddress
+functions_writing_to_variable: updateCodeAddress writes newAddress to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function TokenSoftToken._unpause (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addRevoker (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._setWhitelistEnabled (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.removeFromWhitelist (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.detectTransferRestriction (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.pause (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addToWhitelist (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isBurner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.messageForTransferRestriction (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removeRevoker (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.detectTransferRestriction (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.messageForTransferRestriction (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removeFromWhitelist (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.updateOutboundWhitelistEnabled (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isPauser (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addPauser (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addRevoker (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addBurner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isWhitelister (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._updateOutboundWhitelistEnabled (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.removeRevoker (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removePauser (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removeBurner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.checkWhitelistAllowed (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addWhitelister (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addPauser (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isConstructor (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addBurner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.name (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.removePauser (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.removeBurner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.symbol (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.decreaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._mint (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.addOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.decimals (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.mint (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._updateCodeAddress (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, newAddress)
+(proxy_features line:953)
+newAddress
+functions_writing_to_variable: _updateCodeAddress writes newAddress to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function TokenSoftToken.removeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.getLogicAddress (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.isMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._mint (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.proxiableUUID (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._addMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._burn (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, contractLogic)
+(proxy_features line:953)
+contractLogic
+functions_writing_to_variable: constructor writes contractLogic to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function TokenSoftToken._revoke (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.revoke (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.increaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._removeMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TokenSoftToken._approve (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function updateCodeAddress
+require(bool,string)(account != address(0),Roles: account is the zero address)
+has_compatibility_checks: condition account != address(0)
+require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+has_compatibility_checks: condition isOwner(msg.sender)
+require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_compatibility_checks: condition bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID()
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID()
+has_compatibility_checks: skipping internal function _updateCodeAddress
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let contractLogic := sload(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7)
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0x0, calldatasize())
+    let success := delegatecall(gas(), contractLogic, ptr, calldatasize(), 0, 0)
+    let retSz := returndatasize()
+    returndatacopy(ptr, 0, retSz)
+    switch success
+    case 0 { revert(ptr, retSz) }
+    default { return(ptr, retSz) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) CodeAddressUpdated(newAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(account != address(0),Roles: account is the zero address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isOwner(msg.sender),OwnerRole: caller does not have the Owner role)
+has_time_delay: (node.type) RETURN
+(Expression) _owners.has(account)
+has_time_delay: (node.type) RETURN
+(Expression) role.bearer[account]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Proxiable._updateCodeAddress(newAddress)
+
+Begin Proxiable.is_proxy (Slither line:1425)
+
+
+End Proxiable.is_proxy (Slither line:1428)
+
+
+Begin Proxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxiable 
+
+End Proxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Detailed.is_proxy (Slither line:1425)
+
+
+End ERC20Detailed.is_proxy (Slither line:1428)
+
+
+Begin ERC20Detailed.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Detailed 
+
+End ERC20Detailed.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1404.is_proxy (Slither line:1425)
+
+
+End ERC1404.is_proxy (Slither line:1428)
+
+
+Begin ERC1404.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1404 
+
+End ERC1404.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Roles.is_proxy (Slither line:1425)
+
+
+End Roles.is_proxy (Slither line:1428)
+
+
+Begin Roles.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Roles 
+
+End Roles.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnerRole.is_proxy (Slither line:1425)
+
+
+End OwnerRole.is_proxy (Slither line:1428)
+
+
+Begin OwnerRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnerRole 
+
+End OwnerRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WhitelisterRole.is_proxy (Slither line:1425)
+
+
+End WhitelisterRole.is_proxy (Slither line:1428)
+
+
+Begin WhitelisterRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WhitelisterRole 
+
+End WhitelisterRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Whitelistable.is_proxy (Slither line:1425)
+
+
+End Whitelistable.is_proxy (Slither line:1428)
+
+
+Begin Whitelistable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Whitelistable 
+
+End Whitelistable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MinterRole.is_proxy (Slither line:1425)
+
+
+End MinterRole.is_proxy (Slither line:1428)
+
+
+Begin MinterRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MinterRole 
+
+End MinterRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Mintable.is_proxy (Slither line:1425)
+
+
+End Mintable.is_proxy (Slither line:1428)
+
+
+Begin Mintable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Mintable 
+
+End Mintable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BurnerRole.is_proxy (Slither line:1425)
+
+
+End BurnerRole.is_proxy (Slither line:1428)
+
+
+Begin BurnerRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BurnerRole 
+
+End BurnerRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Burnable.is_proxy (Slither line:1425)
+
+
+End Burnable.is_proxy (Slither line:1428)
+
+
+Begin Burnable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Burnable 
+
+End Burnable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RevokerRole.is_proxy (Slither line:1425)
+
+
+End RevokerRole.is_proxy (Slither line:1428)
+
+
+Begin RevokerRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RevokerRole 
+
+End RevokerRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Revocable.is_proxy (Slither line:1425)
+
+
+End Revocable.is_proxy (Slither line:1428)
+
+
+Begin Revocable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Revocable 
+
+End Revocable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PauserRole.is_proxy (Slither line:1425)
+
+
+End PauserRole.is_proxy (Slither line:1428)
+
+
+Begin PauserRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PauserRole 
+
+End PauserRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenSoftToken.is_proxy (Slither line:1425)
+
+
+End TokenSoftToken.is_proxy (Slither line:1428)
+
+
+Begin TokenSoftToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenSoftToken 
+
+End TokenSoftToken.is_upgradeable_proxy (Slither line:1407)
+

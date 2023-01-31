@@ -1,0 +1,238 @@
+
+Begin IGan.is_proxy (Slither line:1425)
+
+
+End IGan.is_proxy (Slither line:1428)
+
+
+Begin IGan.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGan 
+
+End IGan.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FarmAdminStorage.is_proxy (Slither line:1425)
+
+
+End FarmAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin FarmAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FarmAdminStorage 
+
+End FarmAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FarmStorageV1.is_proxy (Slither line:1425)
+
+
+End FarmStorageV1.is_proxy (Slither line:1428)
+
+
+Begin FarmStorageV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FarmStorageV1 
+
+End FarmStorageV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FarmDelegator.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin FarmDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End FarmDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin FarmDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End FarmDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End FarmDelegator.is_proxy (Slither line:1476)
+
+
+Begin FarmDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FarmDelegator 
+FarmDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in FarmAdminStorage (Slither line:1204)
+
+
+Begin FarmAdminStorage.find_setter_in_contract (Slither line:3109)
+
+
+End FarmAdminStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in FarmAdminStorage 
+Looking in FarmDelegator (Slither line:1213)
+
+Begin FarmDelegator.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address,uint256,uint256,uint256,uint256,address) returns() (Slither line:3117)
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End FarmDelegator.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _setImplementation in contract: FarmDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin FarmAdminStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+
+End FarmAdminStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin FarmDelegator.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: _setAdmin (Slither line:2978)
+Checking function: delegateTo (Slither line:2978)
+delegateTo returns bytes variable  (Slither line:2998)
+RETURN node expression: returnData (Slither line:3018)
+Checking function: receive (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+
+End FarmDelegator.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in FarmDelegator (Slither line:1305)
+or in FarmAdminStorage (Slither line:1319)
+
+Begin FarmStorageV1.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: slitherConstructorVariables (Slither line:2978)
+
+End FarmStorageV1.find_getter_in_contract (Slither line:3073)
+
+
+End FarmDelegator.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,_setImplementation: Caller must be admin)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,_setImplementation: Caller must be admin)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function FarmDelegator._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,_setImplementation: Caller must be admin) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:907)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:904)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function FarmDelegator.delegateTo (proxy_features line:893)
+functions_writing_to_variable: checking function FarmDelegator.slitherConstructorVariables (proxy_features line:893)
+functions_writing_to_variable: checking function FarmDelegator.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function FarmDelegator.constructor (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function FarmDelegator._setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function FarmDelegator.receive (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_implementation', 'implementation_']
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == admin,_setImplementation: Caller must be admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: checking public function constructor
+require(bool,string)(msg.sender == admin,_setImplementation: Caller must be admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: IF node exp = success == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if success == 0 then revert(uint256,uint256)(returnData + 0x20,returndatasize()()) else returnData
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,_setImplementation: Caller must be admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)

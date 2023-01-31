@@ -1,0 +1,721 @@
+
+Begin Router.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Router.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End Router.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Router.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Router.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking WETH (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking entered (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in Router.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract Router (Slither line:1730)
+
+End Router.find_delegate_variable_by_name
+
+
+End Router.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Router.is_proxy (Slither line:1476)
+
+
+Begin Router.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Router 
+Router is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Router.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(implementation != _newImp)
+require(bool)(msg.sender == owner)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End Router.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Router (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Router.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Router.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Router (Slither line:1305)
+Checking for implementation at slot 4 in contract RouterImpl (Slither line:1355)
+Found implementation at slot 4 in contract RouterImpl (Slither line:1362)
+
+Begin RouterImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: MESHswapRouter20220511 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: approvePair (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: stepPos (Slither line:2988)
+Checking function: stepNeg (Slither line:2988)
+Checking function: _swapPos (Slither line:2988)
+Checking function: _swapNeg (Slither line:2988)
+Checking function: sendTokenToExchange (Slither line:2988)
+Checking function: swapExactTokensForTokens (Slither line:2988)
+swapExactTokensForTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapTokensForExactTokens (Slither line:2988)
+swapTokensForExactTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapExactETHForTokens (Slither line:2988)
+swapExactETHForTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapTokensForExactETH (Slither line:2988)
+swapTokensForExactETH returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapExactTokensForETH (Slither line:2988)
+swapExactTokensForETH returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapETHForExactTokens (Slither line:2988)
+swapETHForExactTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: addLiquidity (Slither line:2988)
+addLiquidity returns uint256 variable called amount0 (Slither line:3008)
+addLiquidity returns uint256 variable called amount1 (Slither line:3008)
+addLiquidity returns uint256 variable called liquidity (Slither line:3008)
+Checking function: addLiquidityETH (Slither line:2988)
+addLiquidityETH returns uint256 variable called amountToken (Slither line:3008)
+addLiquidityETH returns uint256 variable called amountETH (Slither line:3008)
+addLiquidityETH returns uint256 variable called liquidity (Slither line:3008)
+Checking function: removeLiquidity (Slither line:2988)
+removeLiquidity returns uint256 variable called amount0 (Slither line:3008)
+removeLiquidity returns uint256 variable called amount1 (Slither line:3008)
+Checking function: removeLiquidityETH (Slither line:2988)
+removeLiquidityETH returns uint256 variable called amountToken (Slither line:3008)
+removeLiquidityETH returns uint256 variable called amountETH (Slither line:3008)
+Checking function: removeLiquidityWithPermit (Slither line:2988)
+removeLiquidityWithPermit returns uint256 variable called amount0 (Slither line:3008)
+removeLiquidityWithPermit returns uint256 variable called amount1 (Slither line:3008)
+Checking function: removeLiquidityETHWithPermit (Slither line:2988)
+removeLiquidityETHWithPermit returns uint256 variable called amountToken (Slither line:3008)
+removeLiquidityETHWithPermit returns uint256 variable called amountETH (Slither line:3008)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimRewardList (Slither line:2988)
+Checking function: quote (Slither line:2988)
+quote returns uint256 variable called amount1 (Slither line:3008)
+RETURN node expression: MESHswapLibrary.quote(amount0,reserveA,reserveB) (Slither line:3028)
+Checking function: getAmountsOut (Slither line:2988)
+getAmountsOut returns uint256[] variable called amounts (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountsOut(factory,amountIn,path) (Slither line:3028)
+Checking function: getAmountsIn (Slither line:2988)
+getAmountsIn returns uint256[] variable called amounts (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountsIn(factory,amountOut,path) (Slither line:3028)
+Checking function: getAmountOut (Slither line:2988)
+getAmountOut returns uint256 variable called amountOut (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountOut(amountIn,reserveIn,reserveOut) (Slither line:3028)
+Checking function: getAmountIn (Slither line:2988)
+getAmountIn returns uint256 variable called amountIn (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountIn(amountOut,reserveIn,reserveOut) (Slither line:3028)
+
+End RouterImpl.find_getter_in_contract (Slither line:3083)
+
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Router._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Router.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = factory = _factory (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: factory = _factory (proxy_features line:912)
+functions_writing_to_variable: exp = WETH = _WETH (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: WETH = _WETH (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Router.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImp', '_implementation', 'TMP_160']
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MESHswapLibrary.is_proxy (Slither line:1425)
+
+
+End MESHswapLibrary.is_proxy (Slither line:1428)
+
+
+Begin MESHswapLibrary.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MESHswapLibrary 
+
+End MESHswapLibrary.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFactory.is_proxy (Slither line:1425)
+
+
+End IFactory.is_proxy (Slither line:1428)
+
+
+Begin IFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactory 
+
+End IFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IExchange.is_proxy (Slither line:1425)
+
+
+End IExchange.is_proxy (Slither line:1428)
+
+
+Begin IExchange.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IExchange 
+
+End IExchange.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IWETH.is_proxy (Slither line:1425)
+
+
+End IWETH.is_proxy (Slither line:1428)
+
+
+Begin IWETH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IWETH 
+
+End IWETH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RouterImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin RouterImpl.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin RouterImpl.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking WETH (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking entered (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in RouterImpl.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract Router (Slither line:1730)
+
+End RouterImpl.find_delegate_variable_by_name
+
+
+End RouterImpl.find_delegatecall_in_asm (Slither line:1637)
+
+
+End RouterImpl.is_proxy (Slither line:1476)
+
+
+Begin RouterImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RouterImpl 
+RouterImpl is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Router (Slither line:1204)
+
+
+Begin Router.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImp (Slither line:3122)
+Checking function: constructor(address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(implementation != _newImp)
+require(bool)(msg.sender == owner)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+_newImp
+
+End Router.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Router (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Router.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Router.find_getter_in_contract (Slither line:3083)
+
+
+Begin RouterImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: MESHswapRouter20220511 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: approvePair (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: stepPos (Slither line:2988)
+Checking function: stepNeg (Slither line:2988)
+Checking function: _swapPos (Slither line:2988)
+Checking function: _swapNeg (Slither line:2988)
+Checking function: sendTokenToExchange (Slither line:2988)
+Checking function: swapExactTokensForTokens (Slither line:2988)
+swapExactTokensForTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapTokensForExactTokens (Slither line:2988)
+swapTokensForExactTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapExactETHForTokens (Slither line:2988)
+swapExactETHForTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapTokensForExactETH (Slither line:2988)
+swapTokensForExactETH returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapExactTokensForETH (Slither line:2988)
+swapExactTokensForETH returns uint256[] variable called amounts (Slither line:3008)
+Checking function: swapETHForExactTokens (Slither line:2988)
+swapETHForExactTokens returns uint256[] variable called amounts (Slither line:3008)
+Checking function: addLiquidity (Slither line:2988)
+addLiquidity returns uint256 variable called amount0 (Slither line:3008)
+addLiquidity returns uint256 variable called amount1 (Slither line:3008)
+addLiquidity returns uint256 variable called liquidity (Slither line:3008)
+Checking function: addLiquidityETH (Slither line:2988)
+addLiquidityETH returns uint256 variable called amountToken (Slither line:3008)
+addLiquidityETH returns uint256 variable called amountETH (Slither line:3008)
+addLiquidityETH returns uint256 variable called liquidity (Slither line:3008)
+Checking function: removeLiquidity (Slither line:2988)
+removeLiquidity returns uint256 variable called amount0 (Slither line:3008)
+removeLiquidity returns uint256 variable called amount1 (Slither line:3008)
+Checking function: removeLiquidityETH (Slither line:2988)
+removeLiquidityETH returns uint256 variable called amountToken (Slither line:3008)
+removeLiquidityETH returns uint256 variable called amountETH (Slither line:3008)
+Checking function: removeLiquidityWithPermit (Slither line:2988)
+removeLiquidityWithPermit returns uint256 variable called amount0 (Slither line:3008)
+removeLiquidityWithPermit returns uint256 variable called amount1 (Slither line:3008)
+Checking function: removeLiquidityETHWithPermit (Slither line:2988)
+removeLiquidityETHWithPermit returns uint256 variable called amountToken (Slither line:3008)
+removeLiquidityETHWithPermit returns uint256 variable called amountETH (Slither line:3008)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimRewardList (Slither line:2988)
+Checking function: quote (Slither line:2988)
+quote returns uint256 variable called amount1 (Slither line:3008)
+RETURN node expression: MESHswapLibrary.quote(amount0,reserveA,reserveB) (Slither line:3028)
+Checking function: getAmountsOut (Slither line:2988)
+getAmountsOut returns uint256[] variable called amounts (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountsOut(factory,amountIn,path) (Slither line:3028)
+Checking function: getAmountsIn (Slither line:2988)
+getAmountsIn returns uint256[] variable called amounts (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountsIn(factory,amountOut,path) (Slither line:3028)
+Checking function: getAmountOut (Slither line:2988)
+getAmountOut returns uint256 variable called amountOut (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountOut(amountIn,reserveIn,reserveOut) (Slither line:3028)
+Checking function: getAmountIn (Slither line:2988)
+getAmountIn returns uint256 variable called amountIn (Slither line:3008)
+RETURN node expression: MESHswapLibrary.getAmountIn(amountOut,reserveIn,reserveOut) (Slither line:3028)
+
+End RouterImpl.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in RouterImpl (Slither line:1305)
+or in Router (Slither line:1319)
+Checking for implementation at slot 4 in contract Router (Slither line:1355)
+Found implementation at slot 4 in contract Router (Slither line:1362)
+
+Begin Router.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Router.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _newImp
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool)(impl != address(0))
+impl_address_from_contract_call: arg is impl != address(0)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function version
+Checking public function changeNextOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nextOwner)
+Checking public function approvePair
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == factory)
+Checking public function sendTokenToExchange
+Checking external function swapExactTokensForTokens
+Checking external function swapTokensForExactTokens
+Checking external function swapExactETHForTokens
+Checking external function swapTokensForExactETH
+Checking external function swapExactTokensForETH
+Checking external function swapETHForExactTokens
+Checking external function addLiquidity
+Checking external function addLiquidityETH
+Checking public function removeLiquidity
+Checking public function removeLiquidityETH
+Checking external function removeLiquidityWithPermit
+Checking external function removeLiquidityETHWithPermit
+Checking external function claimReward
+Checking external function claimReward
+Checking external function claimRewardList
+Checking public function quote
+Checking public function getAmountsOut
+Checking public function getAmountsIn
+Checking public function getAmountOut
+Checking public function getAmountIn
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function RouterImpl.quote (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.stepPos (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.removeLiquidityETH (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.swapExactETHForTokens (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.getAmountsOut (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.constructor (proxy_features line:898)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function RouterImpl.stepNeg (proxy_features line:898)
+functions_writing_to_variable: checking function Router.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = factory = _factory (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: factory = _factory (proxy_features line:912)
+functions_writing_to_variable: exp = WETH = _WETH (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: WETH = _WETH (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function RouterImpl.removeLiquidityWithPermit (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.swapTokensForExactETH (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.getAmountsIn (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl._swapPos (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.removeLiquidityETHWithPermit (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.swapExactTokensForETH (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.getAmountOut (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.changeNextOwner (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl._swapNeg (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.swapETHForExactTokens (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.getAmountIn (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = factory = _factory (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: factory = _factory (proxy_features line:912)
+functions_writing_to_variable: exp = WETH = _WETH (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: WETH = _WETH (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function RouterImpl.sendTokenToExchange (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.addLiquidity (proxy_features line:898)
+functions_writing_to_variable: checking function Router._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function RouterImpl._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function RouterImpl.approvePair (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.swapExactTokensForTokens (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.claimRewardList (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.addLiquidityETH (proxy_features line:898)
+functions_writing_to_variable: checking function Router.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.swapTokensForExactTokens (proxy_features line:898)
+functions_writing_to_variable: checking function RouterImpl.removeLiquidity (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImp', '_implementation', 'TMP_160', '_implementation', '_newImp']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp

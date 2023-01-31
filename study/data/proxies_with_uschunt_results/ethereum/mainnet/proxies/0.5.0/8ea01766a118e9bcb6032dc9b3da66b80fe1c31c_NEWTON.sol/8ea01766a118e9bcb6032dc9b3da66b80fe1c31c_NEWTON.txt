@@ -1,0 +1,714 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Roles.is_proxy (Slither line:1425)
+
+
+End Roles.is_proxy (Slither line:1428)
+
+
+Begin Roles.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Roles 
+
+End Roles.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PauserRole.is_proxy (Slither line:1425)
+
+
+End PauserRole.is_proxy (Slither line:1428)
+
+
+Begin PauserRole.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PauserRole 
+
+End PauserRole.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Pausable.is_proxy (Slither line:1425)
+
+
+End ERC20Pausable.is_proxy (Slither line:1428)
+
+
+Begin ERC20Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Pausable 
+
+End ERC20Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Detailed.is_proxy (Slither line:1425)
+
+
+End ERC20Detailed.is_proxy (Slither line:1428)
+
+
+Begin ERC20Detailed.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Detailed 
+
+End ERC20Detailed.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin NEWTON.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NEWTON.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End NEWTON.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin NEWTON.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin NEWTON.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _name (Slither line:1689)
+Checking _symbol (Slither line:1689)
+Checking _decimals (Slither line:1689)
+Checking _balances (Slither line:1689)
+Checking _allowed (Slither line:1689)
+Checking _totalSupply (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking _pausers (Slither line:1689)
+Checking _paused (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking timelockList (Slither line:1689)
+Checking frozenAccount (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in NEWTON.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract NEWTON (Slither line:1730)
+
+End NEWTON.find_delegate_variable_by_name
+
+
+End NEWTON.find_delegatecall_in_asm (Slither line:1637)
+
+
+End NEWTON.is_proxy (Slither line:1476)
+
+
+Begin NEWTON.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: NEWTON 
+NEWTON is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin NEWTON.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[owner]
+totalBalance
+c
+require(bool)(c >= a)
+i ++
+totalBalance = totalBalance.add(timelockList[owner][i]._amount)
+is an Assignment Operation (Slither line:3216)
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+timelockList[holder].length -= 1
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Unlock(holder,releaseAmount)
+_balances[holder] = _balances[holder].add(releaseAmount)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool)(! _paused)
+true
+super.transfer(to,value)
+super.transfer(to,value)
+idx ++
+_autoUnlock(msg.sender)
+_transfer(msg.sender,to,value)
+whenNotPaused()
+true
+require(bool)(! frozenAccount[_holder])
+true
+require(bool)(b <= a)
+require(bool)(to != address(0))
+notFrozen(msg.sender)
+require(bool)(c >= a)
+_balances[from] = _balances[from].sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+c
+_balances[to] = _balances[to].add(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+c
+idx -= 1
+is an Assignment Operation (Slither line:3216)
+delete timelockList[holder][idx]
+Transfer(from,to,value)
+timelockList[holder][idx] = timelockList[holder][timelockList[holder].length.sub(1)]
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+timelockList[holder].length -= 1
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+whenNotPaused()
+Unlock(holder,releaseAmount)
+notFrozen(from)
+_balances[holder] = _balances[holder].add(releaseAmount)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool)(! _paused)
+true
+idx ++
+true
+require(bool)(! frozenAccount[_holder])
+_allowed[from][msg.sender] = _allowed[from][msg.sender].sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool)(b <= a)
+require(bool)(to != address(0))
+_transfer(from,to,value)
+timelockList[holder][idx] = timelockList[holder][timelockList[holder].length.sub(1)]
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool)(c >= a)
+_balances[from] = _balances[from].sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Approval(from,msg.sender,_allowed[from][msg.sender])
+c
+_balances[to] = _balances[to].add(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+c
+true
+super.transferFrom(from,to,value)
+idx -= 1
+is an Assignment Operation (Slither line:3216)
+delete timelockList[holder][idx]
+Transfer(from,to,value)
+_autoUnlock(from)
+super.transferFrom(from,to,value)
+Checking function: freezeAccount(address) returns(bool) (Slither line:3127)
+Visibility: public
+Freeze(holder)
+true
+_pausers.has(account)
+frozenAccount[holder] = true
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool)(account != address(0))
+require(bool)(isPauser(msg.sender) || isOwner(msg.sender))
+true
+role.bearer[account]
+require(bool)(! frozenAccount[holder])
+onlyPauser()
+false
+Checking function: unfreezeAccount(address) returns(bool) (Slither line:3127)
+Visibility: public
+frozenAccount[holder] = false
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+onlyPauser()
+_pausers.has(account)
+true
+require(bool)(isPauser(msg.sender) || isOwner(msg.sender))
+require(bool)(account != address(0))
+Unfreeze(holder)
+role.bearer[account]
+true
+require(bool)(frozenAccount[holder])
+false
+Checking function: lock(address,uint256,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+require(bool)(isPauser(msg.sender) || isOwner(msg.sender))
+_balances[holder] = _balances[holder].sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+false
+timelockList[holder].push(LockInfo(releaseTime,value))
+_pausers.has(account)
+Lock(holder,value,releaseTime)
+true
+require(bool)(account != address(0))
+role.bearer[account]
+require(bool)(b <= a)
+require(bool,string)(_balances[holder] >= value,There is not enough balances of holder.)
+_lock(holder,value,releaseTime)
+c
+true
+onlyPauser()
+Checking function: transferWithLock(address,uint256,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_transfer(msg.sender,holder,value)
+true
+require(bool)(isPauser(msg.sender) || isOwner(msg.sender))
+_lock(holder,value,releaseTime)
+_balances[holder] = _balances[holder].sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+true
+false
+timelockList[holder].push(LockInfo(releaseTime,value))
+onlyPauser()
+_pausers.has(account)
+Lock(holder,value,releaseTime)
+true
+require(bool)(account != address(0))
+role.bearer[account]
+require(bool)(b <= a)
+require(bool)(to != address(0))
+require(bool)(c >= a)
+_balances[from] = _balances[from].sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+c
+_balances[to] = _balances[to].add(value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+c
+Transfer(from,to,value)
+Checking function: unlock(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+timelockList[holder].length -= 1
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+true
+require(bool)(isPauser(msg.sender) || isOwner(msg.sender))
+Unlock(holder,releaseAmount)
+require(bool,string)(timelockList[holder].length > idx,There is not lock info.)
+_balances[holder] = _balances[holder].add(releaseAmount)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_unlock(holder,idx)
+false
+true
+true
+_pausers.has(account)
+onlyPauser()
+require(bool)(account != address(0))
+role.bearer[account]
+require(bool)(b <= a)
+require(bool)(c >= a)
+c
+c
+delete timelockList[holder][idx]
+timelockList[holder][idx] = timelockList[holder][timelockList[holder].length.sub(1)]
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool)(msg.sender == owner)
+require(bool)(implementation != _newImplementation)
+_setImplementation(_newImplementation)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End NEWTON.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: NEWTON (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin NEWTON.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: super.transfer(to,value) (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: super.transferFrom(from,to,value) (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: paused (Slither line:2988)
+paused returns bool variable  (Slither line:3008)
+RETURN node expression: _paused (Slither line:3028)
+Checking function: pause (Slither line:2988)
+Checking function: unpause (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: isPauser (Slither line:2988)
+isPauser returns bool variable  (Slither line:3008)
+RETURN node expression: _pausers.has(account) (Slither line:3028)
+Checking function: addPauser (Slither line:2988)
+Checking function: removePauser (Slither line:2988)
+Checking function: renouncePauser (Slither line:2988)
+Checking function: _addPauser (Slither line:2988)
+Checking function: _removePauser (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: acceptOwnership (Slither line:2988)
+acceptOwnership returns bool variable  (Slither line:3008)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[owner] (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowed[owner][spender] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _burnFrom (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: _decimals (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalBalance (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: super.transfer(to,value) (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: super.transferFrom(from,to,value) (Slither line:3028)
+Checking function: freezeAccount (Slither line:2988)
+freezeAccount returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: unfreezeAccount (Slither line:2988)
+unfreezeAccount returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: lock (Slither line:2988)
+lock returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferWithLock (Slither line:2988)
+transferWithLock returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: unlock (Slither line:2988)
+unlock returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: upgradeTo (Slither line:2988)
+Checking function: _lock (Slither line:2988)
+_lock returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _unlock (Slither line:2988)
+_unlock returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _autoUnlock (Slither line:2988)
+_autoUnlock returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: mint (Slither line:2988)
+mint returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End NEWTON.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in NEWTON (Slither line:1305)
+
+Begin SafeMath.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: mul (Slither line:2988)
+mul returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: c (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: a % b (Slither line:3028)
+
+End SafeMath.find_getter_in_contract (Slither line:3083)
+
+Checking public function transfer
+Checking public function transfer
+Checking public function transferFrom
+Checking public function paused
+Checking public function pause
+Checking public function unpause
+Checking public function isPauser
+Checking public function addPauser
+Checking public function removePauser
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function renouncePauser
+Checking public function isOwner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == newOwner)
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function allowance
+Checking public function transfer
+Checking public function approve
+Checking public function transferFrom
+Checking public function increaseAllowance
+Checking public function decreaseAllowance
+Checking external function transfer
+Checking external function approve
+Checking external function transferFrom
+Checking external function totalSupply
+Checking external function balanceOf
+Checking external function allowance
+Checking public function name
+Checking public function symbol
+Checking public function decimals
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferFrom
+Checking public function freezeAccount
+Checking public function unfreezeAccount
+Checking public function lock
+Checking public function transferWithLock
+Checking public function unlock
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function mint
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function NEWTON.addPauser (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._unlock (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._burn (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.freezeAccount (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.approve (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.unfreezeAccount (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.decimals (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._autoUnlock (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.paused (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._transfer (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.increaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.lock (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.removePauser (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.pause (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.mint (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.approve (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._burnFrom (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transferWithLock (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function NEWTON.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.name (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.renouncePauser (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.unlock (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._mint (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.upgradeTo (proxy_features line:898)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: upgradeTo writes _newImp to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function NEWTON.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._addPauser (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.decreaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.isPauser (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._lock (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON._removePauser (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.symbol (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function NEWTON.totalSupply (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImp', '_newImplementation']
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(implementation != _newImplementation)
+has_compatibility_checks: condition implementation != _newImplementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition _newImp != _newImplementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+Found public function: transfer
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp

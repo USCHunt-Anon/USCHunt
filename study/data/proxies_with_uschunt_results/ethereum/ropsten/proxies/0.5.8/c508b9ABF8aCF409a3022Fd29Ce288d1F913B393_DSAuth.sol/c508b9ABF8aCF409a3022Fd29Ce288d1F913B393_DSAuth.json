@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "EtherRouter (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.8/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol#140-186)",
+        "elements": [],
+        "description": "EtherRouter (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.8/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol#140-186) is an upgradeable proxy.\npointers was found in a different contract.\npointers is a mapping of type mapping(bytes4 => address)\npointers probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nResolver.pointers (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.8/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol#121) gets value from a cross-contract call: resolver.lookup(msg.sig)\nResolver appears to be a Registry contract for the proxy\nThe address of Resolver is stored as a state variable: EtherRouter.resolver\nresolver can be updated by the following function(s): ['EtherRouter.setResolver(address)']\nMissing compatibility check in Resolver.register(string,address)\nTo remove upgradeability, delete register from Resolver\nCan toggle delegatecall on/off: condition: msg.sig == 0\n",
+        "id": "746da56c0bf1d97940bf8f5a0ed67e3a49173570802c787dd10b4208ac07d7eb",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Resolver.pointers",
+          "impl_address_setter": "Resolver.register(string,address)",
+          "impl_address_getter": "Resolver.lookup(bytes4)",
+          "impl_address_location": "Resolver (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.8/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol/c508b9ABF8aCF409a3022Fd29Ce288d1F913B393_DSAuth.sol#120-136)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes4 => address)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "impl_address_from_contract_call": "resolver.lookup(msg.sig)",
+          "registry": "Resolver",
+          "registry_source_type": "Resolver",
+          "registry_source_variable": "EtherRouter.resolver",
+          "registry_source_constant": false,
+          "registry_source_setters": "EtherRouter.setResolver(address)",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Resolver.register(string,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove register from Resolver",
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "msg.sig != 0",
+          "toggle_alternative_logic": "None",
+          "immutable_functions": {
+            "other": [
+              "setOwner(address)",
+              "setAuthority(DSAuthority)",
+              "setResolver(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,279 @@
+
+Begin VatLike.is_proxy (Slither line:1425)
+
+
+End VatLike.is_proxy (Slither line:1428)
+
+
+Begin VatLike.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VatLike 
+
+End VatLike.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SpotterLike.is_proxy (Slither line:1425)
+
+
+End SpotterLike.is_proxy (Slither line:1428)
+
+
+Begin SpotterLike.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SpotterLike 
+
+End SpotterLike.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GemLike.is_proxy (Slither line:1425)
+
+
+End GemLike.is_proxy (Slither line:1428)
+
+
+Begin GemLike.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GemLike 
+
+End GemLike.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ManagedGemJoinLike.is_proxy (Slither line:1425)
+
+
+End ManagedGemJoinLike.is_proxy (Slither line:1428)
+
+
+Begin ManagedGemJoinLike.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ManagedGemJoinLike 
+
+End ManagedGemJoinLike.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UrnProxy.is_proxy (Slither line:1425)
+
+
+End UrnProxy.is_proxy (Slither line:1428)
+
+
+Begin UrnProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UrnProxy 
+
+End UrnProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CharterManager.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CharterManager.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2792)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2807)
+Args:
+_impl != address(0)
+
+End CharterManager.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CharterManager.find_delegatecall_in_exp_node
+
+Found Expression Node: size_fallback_asm_0 = returndatasize()() (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: returndatasize()
+Type of call: uint256 (Slither line:2807)
+Args:
+
+End CharterManager.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CharterManager.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_impl
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _impl (Slither line:2818)
+dest.value: _impl (Slither line:2821)
+Expression: implementation (Slither line:2826)
+
+End CharterManager.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End CharterManager.is_proxy (Slither line:1476)
+
+
+Begin CharterManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CharterManager 
+CharterManager is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin CharterManager.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: rely(address) returns() (Slither line:3117)
+Visibility: external
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+Rely(usr)
+wards[usr] = 1
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+auth()
+Checking function: deny(address) returns() (Slither line:3117)
+Visibility: external
+auth()
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+wards[usr] = 0
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+Deny(usr)
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: external
+auth()
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End CharterManager.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: CharterManager (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CharterManager.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: rely (Slither line:2978)
+Checking function: deny (Slither line:2978)
+Checking function: setImplementation (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End CharterManager.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in CharterManager (Slither line:1305)
+Checking for implementation at slot 0 in contract UrnProxy (Slither line:1355)
+Found usr at slot 0 in contract UrnProxy (Slither line:1362)
+Checking for usr at slot 0 in contract CharterManagerImp (Slither line:1355)
+Found slot0 at slot 0 in contract CharterManagerImp (Slither line:1362)
+
+Begin VatLike.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+
+End VatLike.find_getter_in_contract (Slither line:3073)
+
+Checking external function rely
+Checking external function deny
+Checking external function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function CharterManager.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function CharterManager.deny (proxy_features line:893)
+functions_writing_to_variable: checking function CharterManager.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function CharterManager.rely (proxy_features line:893)
+functions_writing_to_variable: checking function CharterManager.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = SetImplementation(implementation_) (proxy_features line:904)
+functions_writing_to_variable: exp = auth() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed) (proxy_features line:904)
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:924)
+has_compatibility_checks: dependencies: ['implementation_']
+has_compatibility_checks: checking external function setImplementation
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+has_compatibility_checks: condition wards[msg.sender] == 1
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+Found public function: constructor
+Found external function: rely
+has_time_delay: (node.type) EXPRESSION
+(Expression) auth()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) SetImplementation(implementation_)
+
+Begin CharterManagerImp.is_proxy (Slither line:1425)
+
+
+End CharterManagerImp.is_proxy (Slither line:1428)
+
+
+Begin CharterManagerImp.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CharterManagerImp 
+
+End CharterManagerImp.is_upgradeable_proxy (Slither line:1407)
+

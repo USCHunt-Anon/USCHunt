@@ -1,0 +1,695 @@
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(implementationAddress != address(0),No Implementation set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+implementationAddress != address(0)
+No Implementation set
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    codehash := extcodehash(account) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    codehash := extcodehash(account) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(Address.isContract(implementationAddress),Invalid contract address) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+Address.isContract(implementationAddress)
+Invalid contract address
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let newCallDataPosition := mload(0x40) (Slither line:1576)
+    mstore(0x40, add(newCallDataPosition, calldatasize())) (Slither line:1576)
+    calldatacopy(newCallDataPosition, 0, calldatasize()) (Slither line:1576)
+    let delegatecallSuccess := delegatecall(gas(), implementationAddress, newCallDataPosition, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementationAddress'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementationAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking OWNER_POSITION (Slither line:1689)
+Checking IMPLEMENTATION_POSITION (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking implementationPosition (Slither line:1703)
+Checking implementationAddress (Slither line:1703)
+implementationAddress is a Local Variable in Proxy.fallback (Slither line:1707)
+No expression found for implementationAddress
+Looking for assignment operation (Slither line:1761)
+AssignmentOperation: implementationPosition = IMPLEMENTATION_POSITION (Slither line:1767)
+AssignmentOperation: accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 (Slither line:1767)
+CallExpression: require(bool,string)(implementationAddress != address(0),No Implementation set) (Slither line:1775)
+
+Begin Proxy.find_delegate_from_call_exp
+
+require(bool,string)(implementationAddress != address(0),No Implementation set) (Slither line:2003)
+called = require(bool,string) (Slither line:2010)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: require(bool,string)(Address.isContract(implementationAddress),Invalid contract address) (Slither line:1775)
+
+Begin Proxy.find_delegate_from_call_exp
+
+require(bool,string)(Address.isContract(implementationAddress),Invalid contract address) (Slither line:2003)
+called = require(bool,string) (Slither line:2010)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+Found sload in assembly:     implementationAddress := sload(implementationPosition) (Slither line:1884)
+dest: implementationPosition (Slither line:1887)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: IMPLEMENTATION_POSITION (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination IMPLEMENTATION_POSITION is constant (Slither line:1146)
+
+IMPLEMENTATION_POSITION is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to IMPLEMENTATION_POSITION
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+    sstore(position, newOwner) (Slither line:3163)
+_transferOwnership reads and/or writes to variable position (Slither line:3170)
+_transferOwnership reads and/or writes to variable OWNER_POSITION (Slither line:3170)
+_transferOwnership reads and/or writes to variable newOwner (Slither line:3170)
+_setOwner(newOwner)
+require(bool,string)(newOwner != address(0),owner cannot be 0)
+OwnerSet(newOwner)
+onlyOwner()
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking function: _setAndInitializeImplementation(address,bytes) returns() (Slither line:3127)
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: external
+_getImplementation contains assembly (Slither line:3153)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+_setImplementation contains assembly (Slither line:3153)
+onlyOwner()
+    sstore(implementationPosition, implementation) (Slither line:3163)
+_setImplementation reads and/or writes to variable implementationPosition (Slither line:3170)
+_setImplementation reads and/or writes to variable Address (Slither line:3170)
+_setImplementation reads and/or writes to variable IMPLEMENTATION_POSITION (Slither line:3170)
+_setImplementation reads and/or writes to variable implementation (Slither line:3170)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_POSITION is a Variable object
+bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: _setAndInitializeImplementation (Slither line:2988)
+Checking function: _getImplementation (Slither line:2988)
+_getImplementation returns address variable called implementation (Slither line:3008)
+_getImplementation contains assembly (Slither line:3051)
+_getImplementation contains assembly (Slither line:3051)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _getImplementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+Setter found in contract Proxy
+Checking external function _transferOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking external function _setAndInitializeImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking external function _getImplementation
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking public function _getOwner
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_POSITION
+functions_writing_to_variable: checking function Proxy._getOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(implementationPosition, implementation)
+(proxy_features line:953)
+implementation
+functions_writing_to_variable: _setImplementation writes implementation to IMPLEMENTATION_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function Proxy._setAndInitializeImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(implementationPosition, implementation)
+(proxy_features line:953)
+implementation
+functions_writing_to_variable: _setAndInitializeImplementation writes implementation to IMPLEMENTATION_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function Proxy._setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = OWNER_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.admin)) - 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.admin)) - 1) (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_POSITION (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_compatibility_checks: condition Address.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+has_compatibility_checks: condition msg.sender == _getOwner()
+has_compatibility_checks: checking external function _setAndInitializeImplementation
+require(bool,string)(success,initialization callback failed)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+has_compatibility_checks: condition msg.sender == _getOwner()
+require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_compatibility_checks: condition Address.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let newCallDataPosition := mload(0x40)
+    mstore(0x40, add(newCallDataPosition, calldatasize()))
+    calldatacopy(newCallDataPosition, 0, calldatasize())
+    let delegatecallSuccess := delegatecall(gas(), implementationAddress, newCallDataPosition, calldatasize(), 0, 0)
+    let returnDataSize := returndatasize()
+    let returnDataPosition := mload(0x40)
+    mstore(0x40, add(returnDataPosition, returnDataSize))
+    returndatacopy(returnDataPosition, 0, returnDataSize)
+    switch delegatecallSuccess
+    case 0 {
+        revert(returnDataPosition, returnDataSize)
+    }
+    default {
+        return(returnDataPosition, returnDataSize)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: implementationPosition = IMPLEMENTATION_POSITION
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(implementationAddress != address(0),No Implementation set)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(Address.isContract(implementationAddress),Invalid contract address)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: _transferOwnership
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) implementationPosition = IMPLEMENTATION_POSITION
+has_time_delay: (node.type) RETURN
+(Expression) (codehash != accountHash && codehash != 0x0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ImplementationSet(implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = OWNER_POSITION
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+
+Begin GovernanceSlasherProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GovernanceSlasherProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let newCallDataPosition := mload(0x40) (Slither line:1576)
+    mstore(0x40, add(newCallDataPosition, calldatasize())) (Slither line:1576)
+    calldatacopy(newCallDataPosition, 0, calldatasize()) (Slither line:1576)
+    let delegatecallSuccess := delegatecall(gas(), implementationAddress, newCallDataPosition, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementationAddress'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin GovernanceSlasherProxy.find_delegate_variable_from_name
+Searching for implementationAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking OWNER_POSITION (Slither line:1689)
+Checking IMPLEMENTATION_POSITION (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking implementationPosition (Slither line:1703)
+Checking implementationAddress (Slither line:1703)
+implementationAddress is a Local Variable in GovernanceSlasherProxy.fallback (Slither line:1707)
+No expression found for implementationAddress
+Looking for assignment operation (Slither line:1761)
+AssignmentOperation: accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 (Slither line:1767)
+AssignmentOperation: implementationPosition = IMPLEMENTATION_POSITION (Slither line:1767)
+CallExpression: require(bool,string)(implementationAddress != address(0),No Implementation set) (Slither line:1775)
+
+Begin GovernanceSlasherProxy.find_delegate_from_call_exp
+
+require(bool,string)(implementationAddress != address(0),No Implementation set) (Slither line:2003)
+called = require(bool,string) (Slither line:2010)
+
+End GovernanceSlasherProxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: require(bool,string)(Address.isContract(implementationAddress),Invalid contract address) (Slither line:1775)
+
+Begin GovernanceSlasherProxy.find_delegate_from_call_exp
+
+require(bool,string)(Address.isContract(implementationAddress),Invalid contract address) (Slither line:2003)
+called = require(bool,string) (Slither line:2010)
+
+End GovernanceSlasherProxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+Found sload in assembly:     implementationAddress := sload(implementationPosition) (Slither line:1884)
+dest: implementationPosition (Slither line:1887)
+
+End GovernanceSlasherProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin GovernanceSlasherProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End GovernanceSlasherProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End GovernanceSlasherProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting GovernanceSlasherProxy._delegate_variable = GovernanceSlasherProxy._proxy_impl_slot: IMPLEMENTATION_POSITION (Slither line:1473)
+
+
+End GovernanceSlasherProxy.is_proxy (Slither line:1476)
+
+
+Begin GovernanceSlasherProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GovernanceSlasherProxy 
+Call destination IMPLEMENTATION_POSITION is constant (Slither line:1146)
+
+IMPLEMENTATION_POSITION is the implementation storage slot (Slither line:1149)
+
+GovernanceSlasherProxy is delegating to IMPLEMENTATION_POSITION
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+    sstore(position, newOwner) (Slither line:3163)
+_transferOwnership reads and/or writes to variable position (Slither line:3170)
+_transferOwnership reads and/or writes to variable OWNER_POSITION (Slither line:3170)
+_transferOwnership reads and/or writes to variable newOwner (Slither line:3170)
+_setOwner(newOwner)
+require(bool,string)(newOwner != address(0),owner cannot be 0)
+OwnerSet(newOwner)
+onlyOwner()
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking function: _setAndInitializeImplementation(address,bytes) returns() (Slither line:3127)
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: external
+_getImplementation contains assembly (Slither line:3153)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+_setImplementation contains assembly (Slither line:3153)
+onlyOwner()
+    sstore(implementationPosition, implementation) (Slither line:3163)
+_setImplementation reads and/or writes to variable implementationPosition (Slither line:3170)
+_setImplementation reads and/or writes to variable Address (Slither line:3170)
+_setImplementation reads and/or writes to variable IMPLEMENTATION_POSITION (Slither line:3170)
+_setImplementation reads and/or writes to variable implementation (Slither line:3170)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_POSITION is a Variable object
+bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _getImplementation in contract: Proxy (Slither line:1285)
+
+End GovernanceSlasherProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: GovernanceSlasherProxy
+Setter found in contract Proxy
+impl_address_from_contract_call: bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_POSITION
+impl_address_from_contract_call: getter is _getImplementation
+getter.full_name = _getImplementation()
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression require(bool,string)(implementationAddress != address(0),No Implementation set)
+impl_address_from_contract_call: arg is implementationAddress != address(0)
+impl_address_from_contract_call: arg is No Implementation set
+impl_address_from_contract_call: CallExpression require(bool,string)(Address.isContract(implementationAddress),Invalid contract address)
+impl_address_from_contract_call: arg is Address.isContract(implementationAddress)
+impl_address_from_contract_call: CallExpression Address.isContract(implementationAddress)
+Checking external function _transferOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking external function _setAndInitializeImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking external function _getImplementation
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+Checking public function _getOwner
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_POSITION
+functions_writing_to_variable: checking function GovernanceSlasherProxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._getOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceSlasherProxy._setAndInitializeImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(implementationPosition, implementation)
+(proxy_features line:953)
+implementation
+functions_writing_to_variable: _setAndInitializeImplementation writes implementation to IMPLEMENTATION_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function Proxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceSlasherProxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(implementationPosition, implementation)
+(proxy_features line:953)
+implementation
+functions_writing_to_variable: _setImplementation writes implementation to IMPLEMENTATION_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GovernanceSlasherProxy._setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceSlasherProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceSlasherProxy._getOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._setAndInitializeImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(implementationPosition, implementation)
+(proxy_features line:953)
+implementation
+functions_writing_to_variable: _setAndInitializeImplementation writes implementation to IMPLEMENTATION_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function Proxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(implementationPosition, implementation)
+(proxy_features line:953)
+implementation
+functions_writing_to_variable: _setImplementation writes implementation to IMPLEMENTATION_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GovernanceSlasherProxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = OWNER_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.admin)) - 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.admin)) - 1) (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_POSITION (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+functions_writing_to_variable: checking function Proxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceSlasherProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = OWNER_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.admin)) - 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.admin)) - 1) (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1) (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_POSITION (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_POSITION = bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceSlasherProxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function _setAndInitializeImplementation
+require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_compatibility_checks: condition Address.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+require(bool,string)(success,initialization callback failed)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+has_compatibility_checks: condition msg.sender == _getOwner()
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+has_compatibility_checks: condition msg.sender == _getOwner()
+require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_compatibility_checks: condition Address.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+has_compatibility_checks: checking external function _setAndInitializeImplementation
+require(bool,string)(success,initialization callback failed)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+has_compatibility_checks: condition msg.sender == _getOwner()
+require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_compatibility_checks: condition Address.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_compatibility_checks: condition Address.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+require(bool,string)(msg.sender == _getOwner(),sender was not owner)
+has_compatibility_checks: condition msg.sender == _getOwner()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let newCallDataPosition := mload(0x40)
+    mstore(0x40, add(newCallDataPosition, calldatasize()))
+    calldatacopy(newCallDataPosition, 0, calldatasize())
+    let delegatecallSuccess := delegatecall(gas(), implementationAddress, newCallDataPosition, calldatasize(), 0, 0)
+    let returnDataSize := returndatasize()
+    let returnDataPosition := mload(0x40)
+    mstore(0x40, add(returnDataPosition, returnDataSize))
+    returndatacopy(returnDataPosition, 0, returnDataSize)
+    switch delegatecallSuccess
+    case 0 {
+        revert(returnDataPosition, returnDataSize)
+    }
+    default {
+        return(returnDataPosition, returnDataSize)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: implementationPosition = IMPLEMENTATION_POSITION
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(implementationAddress != address(0),No Implementation set)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(Address.isContract(implementationAddress),Invalid contract address)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: _transferOwnership
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) implementationPosition = IMPLEMENTATION_POSITION
+has_time_delay: (node.type) RETURN
+(Expression) (codehash != accountHash && codehash != 0x0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ImplementationSet(implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = OWNER_POSITION
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(implementation),Invalid contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == _getOwner(),sender was not owner)

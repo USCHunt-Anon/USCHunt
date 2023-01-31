@@ -1,0 +1,62 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Room (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#352-387)",
+        "elements": [],
+        "description": "Room (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#352-387) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "50f95bf991265fbb629c6207089c08722b82df93b44cdddf571d9a56f31471bd",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "LiveRoom (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#389-416)",
+        "elements": [],
+        "description": "LiveRoom (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#389-416) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "8bad0959bca4caab10903d60c1b3d20b269b8b2ed7b32f6b754d3d7104300736",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "DOGE18 (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#418-455)",
+        "elements": [],
+        "description": "DOGE18 (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#418-455) is an upgradeable proxy.\nLIVEROOM_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "d4e7c0c884361a1911aad76ea637fa7ef18ef257d36a99d9784374659d820eae",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "LiveRoom.LIVEROOM_SLOT",
+          "impl_address_setter": "DOGE18.tranzfer(address)",
+          "impl_address_getter": "LiveRoom._room()",
+          "impl_address_location": "LiveRoom (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol/a678401a821ac2b16b358f694c7e9b5dd857bace_DOGE.sol#389-416)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "DOGE18.tranzfer(address)": {
+                "check": "require(bool)(extcodesize(uint256)(account) > 0)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "tranzfer(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

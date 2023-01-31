@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#7-34)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#7-34) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#40-87)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#40-87) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#93-170)",
+        "elements": [],
+        "description": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#93-170) is an upgradeable proxy.\nimplementationPosition was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: keccak256()(you are the lucky man.proxy)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "966a56c487e60f19f4138abcfd82d044fda305efe2254ce75904694dda619a02",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.implementationPosition",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy.implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.24/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol/7150a3ac6550da88637aad5cf3cea4f9b0eaebb4_OwnedUpgradeabilityProxy.sol#40-87)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256()(you are the lucky man.proxy)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(currentImplementation != newImplementation,new address is the same)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(currentImplementation != newImplementation,new address is the same)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "implementation()",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

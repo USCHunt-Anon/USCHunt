@@ -1,0 +1,81 @@
+
+Begin StaticCallProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin StaticCallProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let _dst := calldataload(0) (Slither line:1576)
+    let _len := sub(calldatasize(), 32) (Slither line:1576)
+    calldatacopy(0, 32, _len) (Slither line:1576)
+    let ret := call(gas(), _dst, 0, 0, _len, 0, 0) (Slither line:1576)
+    let result_len := returndatasize() (Slither line:1576)
+    mstore8(0, ret) (Slither line:1576)
+    returndatacopy(1, 0, result_len) (Slither line:1576)
+    revert(0, add(result_len, 1)) (Slither line:1576)
+} (Slither line:1576)
+
+End StaticCallProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin StaticCallProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let _dst := calldataload(0) (Slither line:1576)
+    let _len := sub(calldatasize(), 32) (Slither line:1576)
+    calldatacopy(0, 32, _len) (Slither line:1576)
+    let ret := call(gas(), _dst, 0, 0, _len, 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin StaticCallProxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End StaticCallProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin StaticCallProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End StaticCallProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End StaticCallProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End StaticCallProxy.is_proxy (Slither line:1476)
+
+
+Begin StaticCallProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StaticCallProxy 
+
+End StaticCallProxy.is_upgradeable_proxy (Slither line:1407)
+

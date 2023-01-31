@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/70F47F25A3eB4cdB78f353d1d97a05Dede37844C_Owned.sol/70F47F25A3eB4cdB78f353d1d97a05Dede37844C_Owned.sol#1-28)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/70F47F25A3eB4cdB78f353d1d97a05Dede37844C_Owned.sol/70F47F25A3eB4cdB78f353d1d97a05Dede37844C_Owned.sol#1-28) is an upgradeable proxy.\n0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 (UUPS) with slot = keccak256('PROXIABLE')\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCode from Owned\n",
+        "id": "97fe89083eb14617d0ac405b94fa7a9ea3bde041c99802ef1572ea5d595552b5",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "impl_address_setter": "Owned.updateCode(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/70F47F25A3eB4cdB78f353d1d97a05Dede37844C_Owned.sol/70F47F25A3eB4cdB78f353d1d97a05Dede37844C_Owned.sol#1-28)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.constructor(bytes,address)": {
+                "check": "require(bool,string)(contractLogic.delegatecall(constructData),Construction failed)",
+                "is_correct": true
+              },
+              "Owned.updateCode(address)": {
+                "check": "require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCode from Owned"
+        }
+      }
+    ]
+  }
+}

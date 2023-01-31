@@ -1,0 +1,434 @@
+
+Begin IPositionStorage.is_proxy (Slither line:1425)
+
+
+End IPositionStorage.is_proxy (Slither line:1428)
+
+
+Begin IPositionStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPositionStorage 
+
+End IPositionStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStrategyCreator.is_proxy (Slither line:1425)
+
+
+End IStrategyCreator.is_proxy (Slither line:1428)
+
+
+Begin IStrategyCreator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStrategyCreator 
+
+End IStrategyCreator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC721.is_proxy (Slither line:1425)
+
+
+End IERC721.is_proxy (Slither line:1428)
+
+
+Begin IERC721.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC721 
+
+End IERC721.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFactory.is_proxy (Slither line:1425)
+
+
+End IFactory.is_proxy (Slither line:1428)
+
+
+Begin IFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactory 
+
+End IFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProductSlot.is_proxy (Slither line:1425)
+
+
+End ProductSlot.is_proxy (Slither line:1428)
+
+
+Begin ProductSlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProductSlot 
+
+End ProductSlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProductProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ProductProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'addr'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin ProductProxy.find_delegate_variable_from_name
+Searching for addr (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking NFT (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking strategyExecuted (Slither line:1689)
+Checking startedByOwner (Slither line:1689)
+Checking strategy (Slither line:1689)
+Checking strategyID (Slither line:1689)
+Checking productID (Slither line:1689)
+Checking depositAsset (Slither line:1689)
+Checking srcAsset (Slither line:1689)
+Checking srcPrice (Slither line:1689)
+Checking dstAsset (Slither line:1689)
+Checking dstPrice (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking addr (Slither line:1703)
+addr is a Local Variable in ProductProxy.fallback (Slither line:1707)
+Expression: factory.getStrategy(strategyID) (Slither line:1719)
+
+Begin ProductProxy.find_delegate_from_call_exp
+
+factory.getStrategy(strategyID) (Slither line:2003)
+called = factory.getStrategy (Slither line:2010)
+Called member of factory (Slither line:2017)
+
+Begin ProductProxy.find_delegate_from_member_access
+
+Expression: factory.getStrategy(strategyID) (Slither line:2358)
+factory (Slither line:2371)
+getStrategy is a member of the contract type: IFactory (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IFactory (Slither line:2441)
+
+End ProductProxy.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End ProductProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End ProductProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ProductProxy.is_proxy (Slither line:1476)
+
+
+Begin ProductProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProductProxy 
+Local Variable: addr (Slither line:1164)
+factory (Slither line:1171)
+Call destination factory.getStrategy(strategyID) is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: ProductProxy
+addr is dependent on factory
+addr is dependent on strategyID
+Expression for addr: factory.getStrategy(strategyID)
+Called: factory.getStrategy
+strategyID.expression is None
+impl_address_from_contract_call: factory.getStrategy(strategyID)
+called: factory.getStrategy
+found MemberAccess: factory.getStrategy
+Identifier: factory
+value is StateVariable: factory
+Type: IFactory
+find_registry_address_source: factory.getStrategy(strategyID)
+MemberAccess: factory.getStrategy
+Identifier: factory
+Checking external function setStrategyID
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == NFT.ownerOf(productID))
+Checking external function setStrategyID
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == NFT.ownerOf(productID))
+Checking external function getStrategyID
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: addr
+functions_writing_to_variable: checking function ProductProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ProductProxy.getStrategyID (proxy_features line:898)
+functions_writing_to_variable: checking function ProductProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function ProductProxy.setStrategyID (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_12', '_strategyID', 'strategyID', 'factory', 'TMP_10', '_strategyID', '', '_factory']
+functions_writing_to_variable: strategyID
+functions_writing_to_variable: factory
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: addr = factory.getStrategy(strategyID)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),addr,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found external function: setStrategyID
+
+Begin StrategyStructures.is_proxy (Slither line:1425)
+
+
+End StrategyStructures.is_proxy (Slither line:1428)
+
+
+Begin StrategyStructures.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StrategyStructures 
+
+End StrategyStructures.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StrategySlot.is_proxy (Slither line:1425)
+
+
+End StrategySlot.is_proxy (Slither line:1428)
+
+
+Begin StrategySlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StrategySlot 
+
+End StrategySlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMarketManager.is_proxy (Slither line:1425)
+
+
+End IMarketManager.is_proxy (Slither line:1428)
+
+
+Begin IMarketManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMarketManager 
+
+End IMarketManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFlashloanReceiver.is_proxy (Slither line:1425)
+
+
+End IFlashloanReceiver.is_proxy (Slither line:1428)
+
+
+Begin IFlashloanReceiver.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFlashloanReceiver 
+
+End IFlashloanReceiver.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IManagerFlashloan.is_proxy (Slither line:1425)
+
+
+End IManagerFlashloan.is_proxy (Slither line:1428)
+
+
+Begin IManagerFlashloan.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IManagerFlashloan 
+
+End IManagerFlashloan.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IProxy.is_proxy (Slither line:1425)
+
+
+End IProxy.is_proxy (Slither line:1428)
+
+
+Begin IProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IProxy 
+
+End IProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMarketHandler.is_proxy (Slither line:1425)
+
+
+End IMarketHandler.is_proxy (Slither line:1428)
+
+
+Begin IMarketHandler.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMarketHandler 
+
+End IMarketHandler.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStrategy.is_proxy (Slither line:1425)
+
+
+End IStrategy.is_proxy (Slither line:1428)
+
+
+Begin IStrategy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStrategy 
+
+End IStrategy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router02.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router02.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router02.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router02 
+
+End IUniswapV2Router02.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StrategyLogic.is_proxy (Slither line:1425)
+
+
+End StrategyLogic.is_proxy (Slither line:1428)
+
+
+Begin StrategyLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StrategyLogic 
+
+End StrategyLogic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XFactorySlot.is_proxy (Slither line:1425)
+
+
+End XFactorySlot.is_proxy (Slither line:1428)
+
+
+Begin XFactorySlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XFactorySlot 
+
+End XFactorySlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XFactoryInternal.is_proxy (Slither line:1425)
+
+
+End XFactoryInternal.is_proxy (Slither line:1428)
+
+
+Begin XFactoryInternal.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XFactoryInternal 
+
+End XFactoryInternal.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XFactoryExternal.is_proxy (Slither line:1425)
+
+
+End XFactoryExternal.is_proxy (Slither line:1428)
+
+
+Begin XFactoryExternal.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XFactoryExternal 
+
+End XFactoryExternal.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XFactoryLogic.is_proxy (Slither line:1425)
+
+
+End XFactoryLogic.is_proxy (Slither line:1428)
+
+
+Begin XFactoryLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XFactoryLogic 
+
+End XFactoryLogic.is_upgradeable_proxy (Slither line:1407)
+

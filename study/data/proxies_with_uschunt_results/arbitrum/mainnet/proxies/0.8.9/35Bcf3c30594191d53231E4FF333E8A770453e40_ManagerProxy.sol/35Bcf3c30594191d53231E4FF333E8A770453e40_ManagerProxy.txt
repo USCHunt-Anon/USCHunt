@@ -1,0 +1,497 @@
+
+Begin IManager.is_proxy (Slither line:1425)
+
+
+End IManager.is_proxy (Slither line:1428)
+
+
+Begin IManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IManager 
+
+End IManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Manager.is_proxy (Slither line:1425)
+
+
+End Manager.is_proxy (Slither line:1428)
+
+
+Begin Manager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Manager 
+
+End Manager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ManagerProxyTarget.is_proxy (Slither line:1425)
+
+
+End ManagerProxyTarget.is_proxy (Slither line:1428)
+
+
+Begin ManagerProxyTarget.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ManagerProxyTarget 
+
+End ManagerProxyTarget.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ManagerProxy.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(calldataMemoryOffset__fallback_asm_0,0x0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+calldataMemoryOffset__fallback_asm_0
+0x0
+calldatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: ret__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,calldataMemoryOffset__fallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+target
+calldataMemoryOffset__fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is target (Slither line:2828)
+dest.value: target (Slither line:2831)
+Expression: controller.getContract(targetContractId) (Slither line:2836)
+
+Begin ManagerProxy.find_delegate_from_call_exp
+
+controller.getContract(targetContractId) (Slither line:2003)
+called = controller.getContract (Slither line:2010)
+Called member of controller (Slither line:2017)
+
+Begin ManagerProxy.find_delegate_from_member_access
+
+Expression: controller.getContract(targetContractId) (Slither line:2358)
+controller (Slither line:2371)
+getContract is a member of the contract type: IController (Slither line:2416)
+Which is an interface (Slither line:2420)
+Looking for getContract in IController (Slither line:2523)
+Found the function called getContract (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+
+End ManagerProxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End ManagerProxy.find_delegate_from_call_exp (Slither line:2019)
+
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(returndataMemoryOffset__fallback_asm_0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+returndataMemoryOffset__fallback_asm_0
+returndatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(target != address(0),target contract must be registered) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+target != address(0)
+target contract must be registered
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(returndataMemoryOffset__fallback_asm_0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+returndataMemoryOffset__fallback_asm_0
+returndatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndataMemoryOffset__fallback_asm_0 = mload(uint256)(freeMemoryPtrPosition__fallback_asm_0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: mload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+freeMemoryPtrPosition__fallback_asm_0
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ManagerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'target'
+Looking for corresponding Variable
+Current function: _fallback
+
+Begin ManagerProxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking controller (Slither line:1689)
+Checking targetContractId (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking target (Slither line:1703)
+target is a Local Variable in ManagerProxy._fallback (Slither line:1707)
+Expression: controller.getContract(targetContractId) (Slither line:1719)
+
+Begin ManagerProxy.find_delegate_from_call_exp
+
+controller.getContract(targetContractId) (Slither line:2003)
+called = controller.getContract (Slither line:2010)
+Called member of controller (Slither line:2017)
+
+Begin ManagerProxy.find_delegate_from_member_access
+
+Expression: controller.getContract(targetContractId) (Slither line:2358)
+controller (Slither line:2371)
+getContract is a member of the contract type: IController (Slither line:2416)
+Which is an interface (Slither line:2420)
+Looking for getContract in IController (Slither line:2523)
+Found the function called getContract (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+
+End ManagerProxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End ManagerProxy.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End ManagerProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End ManagerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: freeMemoryPtrPosition__fallback_asm_0 = 0x40 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(freeMemoryPtrPosition__fallback_asm_0,returndataMemoryOffset__fallback_asm_0 + returndatasize()()) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+freeMemoryPtrPosition__fallback_asm_0
+returndataMemoryOffset__fallback_asm_0 + returndatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(returndataMemoryOffset__fallback_asm_0,0x0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+returndataMemoryOffset__fallback_asm_0
+0x0
+returndatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldataMemoryOffset__fallback_asm_0 = mload(uint256)(freeMemoryPtrPosition__fallback_asm_0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: mload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+freeMemoryPtrPosition__fallback_asm_0
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_6820_512_0__fallback_asm_0 = ret__fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(freeMemoryPtrPosition__fallback_asm_0,calldataMemoryOffset__fallback_asm_0 + calldatasize()()) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+freeMemoryPtrPosition__fallback_asm_0
+calldataMemoryOffset__fallback_asm_0 + calldatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End ManagerProxy.is_proxy (Slither line:1476)
+
+
+Begin ManagerProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ManagerProxy 
+
+End ManagerProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IController.is_proxy (Slither line:1425)
+
+
+End IController.is_proxy (Slither line:1428)
+
+
+Begin IController.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IController 
+
+End IController.is_upgradeable_proxy (Slither line:1407)
+

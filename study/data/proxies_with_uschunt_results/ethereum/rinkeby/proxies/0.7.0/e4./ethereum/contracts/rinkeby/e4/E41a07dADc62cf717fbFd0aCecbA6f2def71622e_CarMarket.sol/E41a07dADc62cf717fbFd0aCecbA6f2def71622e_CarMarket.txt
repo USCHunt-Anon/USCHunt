@@ -1,0 +1,138 @@
+
+Begin CarMarket.is_proxy (Slither line:1425)
+
+_ (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CarMarket.find_delegatecall_in_exp_node
+
+Found Expression Node: notHacked() (Slither line:2792)
+Expression called: notHacked
+Type of call: Modifier (Slither line:2807)
+Args:
+
+End CarMarket.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CarMarket.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(! isHacked,Contract is hacked) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+! isHacked
+Contract is hacked
+
+End CarMarket.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End CarMarket.is_proxy (Slither line:1476)
+
+
+Begin CarMarket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarMarket 
+CarMarket is delegating to carFactory
+Looking for setter (Slither line:1200)
+
+
+Begin CarMarket.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: purchaseCar(string,string,string) returns() (Slither line:3117)
+Visibility: external
+require(bool)(msg.value == CARCOST)
+notHacked()
+require(bool,string)(! isHacked,Contract is hacked)
+purchasedCars[msg.sender][_carCount] = Car(_color,_model,_plateNumber)
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+Checking function: withdrawFunds() returns() (Slither line:3117)
+Visibility: external
+require(bool,string)(sent,CarMarket: Error withdrawing funds)
+require(bool,string)(msg.sender == owner,CarMarket: !owner)
+(sent) = msg.sender.call{value: _balance}()
+is an Assignment Operation (Slither line:3206)
+onlyOwner()
+require(bool,string)(_balance > 0,CarMarket: Empty Vault)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+End CarMarket.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in CarMarket (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin CarMarket.find_getter_in_contract (Slither line:2964)
+
+carFactory is a Variable object
+Checking function: constructor (Slither line:2978)
+Checking function: purchaseCar (Slither line:2978)
+Checking function: withdrawFunds (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End CarMarket.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in CarMarket (Slither line:1305)
+Checking node of type _ (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+notHacked()
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+require(bool,string)(! isHacked,Contract is hacked)
+Checking node of type EXPRESSION (Slither line:1395)
+carFactory.delegatecall(msg.data)
+
+End CarMarket.is_upgradeable_proxy (Slither line:1407)
+

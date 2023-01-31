@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AletheoTrustMinimizedProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.7.6/017fe17065b6f973f1bad851ed8c9461c0169c31_AletheoTrustMinimizedProxy.sol/017fe17065b6f973f1bad851ed8c9461c0169c31_AletheoTrustMinimizedProxy.sol#9-71)",
+        "elements": [],
+        "description": "AletheoTrustMinimizedProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.7.6/017fe17065b6f973f1bad851ed8c9461c0169c31_AletheoTrustMinimizedProxy.sol/017fe17065b6f973f1bad851ed8c9461c0169c31_AletheoTrustMinimizedProxy.sol#9-71) is an upgradeable proxy.\nLOGIC_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nMissing compatibility check in AletheoTrustMinimizedProxy.proposeToAndCall(address,bytes)\nMissing compatibility check in AletheoTrustMinimizedProxy.upgrade()\nMissing compatibility check in AletheoTrustMinimizedProxy.cancelUpgrade()\nFound compatibility check in AletheoTrustMinimizedProxy.proposeToAndCall(address,bytes)\n",
+        "id": "cd3128f2eab2df99f639391892117bdc14cc07393bf6f8d90557083c10e7a02f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "AletheoTrustMinimizedProxy.LOGIC_SLOT",
+          "impl_address_setter": "AletheoTrustMinimizedProxy.upgrade()",
+          "impl_address_getter": "AletheoTrustMinimizedProxy._logic()",
+          "impl_address_location": "AletheoTrustMinimizedProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.7.6/017fe17065b6f973f1bad851ed8c9461c0169c31_AletheoTrustMinimizedProxy.sol/017fe17065b6f973f1bad851ed8c9461c0169c31_AletheoTrustMinimizedProxy.sol#9-71)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "AletheoTrustMinimizedProxy.proposeToAndCall(address,bytes)": "require(bool,string)(newLogic.delegatecall(data),failed to call)",
+              "AletheoTrustMinimizedProxy.upgrade()": "missing",
+              "AletheoTrustMinimizedProxy.cancelUpgrade()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "changeAdmin(address)",
+              "upgrade()",
+              "cancelUpgrade()",
+              "prolongLock(uint256)",
+              "removeTrust()",
+              "proposeToAndCall(address,bytes)",
+              "viewSlots()"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "block.number >= _nextLogicBlock()"
+          }
+        }
+      }
+    ]
+  }
+}

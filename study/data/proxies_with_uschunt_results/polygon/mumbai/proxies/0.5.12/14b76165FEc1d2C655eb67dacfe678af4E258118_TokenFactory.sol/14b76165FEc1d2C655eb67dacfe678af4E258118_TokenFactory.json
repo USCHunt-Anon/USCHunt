@@ -1,0 +1,221 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#346-403)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#346-403) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#452-499)",
+        "elements": [],
+        "description": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#452-499) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "c667fa13bf5e18ab61b823c0ad9b6e92fc3f1c87b349a854e6819be3f724d050",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#511-528)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#511-528) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3\n uses Inherited Storage\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from BaseAdminUpgradeabilityProxy\n",
+        "id": "93babf68689643eb58e3865ca5c65b3ffb21085ae74c57b35150198b4e8bc772",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#452-499)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": false,
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "UpgradeabilityProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from BaseAdminUpgradeabilityProxy"
+        }
+      },
+      {
+        "contract": "BaseAdminUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#543-649)",
+        "elements": [],
+        "description": "BaseAdminUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#543-649) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3\n uses Inherited Storage\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "b7816ebe2a08f859c6515b1730572c0d8f0233333d33674083be3cc100182505",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#452-499)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "inherited_storage": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#661-675)",
+        "elements": [],
+        "description": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#661-675) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "0bdbe38c04fd5f0579423f0b5e9f051533a5a1fa34d6f008175e10e9c8909b76",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#452-499)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "UpgradeabilityProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "AdminUpgradeabilityProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "SygnumTokenProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#687-695)",
+        "elements": [],
+        "description": "SygnumTokenProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#687-695) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "db32e234ced0494a03a0aec66536e51a7e3fe693c2f2dbff33674481da8abbad",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.12/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol/14b76165FEc1d2C655eb67dacfe678af4E258118_TokenFactory.sol#452-499)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "SygnumTokenProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "AdminUpgradeabilityProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "UpgradeabilityProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

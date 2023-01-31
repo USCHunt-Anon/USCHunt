@@ -1,0 +1,108 @@
+
+Begin FETH.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin FETH.find_delegatecall_in_exp_node
+
+Found Expression Node: _sendLogPayload(abi.encodeWithSignature(log(address,string,uint,string),p0,p1,p2,p3)) (Slither line:2800)
+Expression called: _sendLogPayload
+Type of call: tuple() (Slither line:2815)
+Args:
+abi.encodeWithSignature(log(address,string,uint,string),p0,p1,p2,p3)
+
+End FETH.find_delegatecall_in_exp_node (Slither line:2856)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin FETH.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let payloadStart := add(payload, 32) (Slither line:1576)
+    let r := staticcall(gas(), consoleAddress, payloadStart, payloadLength, 0, 0) (Slither line:1576)
+} (Slither line:1576)
+
+End FETH.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin FETH.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let payloadStart := add(payload, 32) (Slither line:1576)
+    let r := staticcall(gas(), consoleAddress, payloadStart, payloadLength, 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'consoleAddress'
+Looking for corresponding Variable
+Current function: _sendLogPayload
+
+Begin FETH.find_delegate_variable_from_name
+Searching for consoleAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking allowance (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking payloadLength (Slither line:1703)
+Checking consoleAddress (Slither line:1703)
+consoleAddress is a Local Variable in console._sendLogPayload (Slither line:1707)
+Expression: CONSOLE_ADDRESS (Slither line:1719)
+Identifier value: CONSOLE_ADDRESS (Slither line:1725)
+CONSOLE_ADDRESS is a State Variable in contract console (Slither line:1730)
+
+End FETH.find_delegate_variable_by_name
+
+
+End FETH.find_delegatecall_in_asm (Slither line:1637)
+
+
+End FETH.is_proxy (Slither line:1476)
+
+
+Begin FETH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FETH 
+Call destination CONSOLE_ADDRESS is constant (Slither line:1146)
+
+
+End FETH.is_upgradeable_proxy (Slither line:1153)
+
+
+Begin console.is_proxy (Slither line:1425)
+
+
+End console.is_proxy (Slither line:1428)
+
+
+Begin console.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: console 
+
+End console.is_upgradeable_proxy (Slither line:1407)
+

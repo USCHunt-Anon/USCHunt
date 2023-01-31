@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "SnowflakeTrustMinimizedProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.7.6/539cb40d3670fe03dbe67857c4d8da307a70b305_SnowflakeTrustMinimizedProxy.sol/539cb40d3670fe03dbe67857c4d8da307a70b305_SnowflakeTrustMinimizedProxy.sol#9-71)",
+        "elements": [],
+        "description": "SnowflakeTrustMinimizedProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.7.6/539cb40d3670fe03dbe67857c4d8da307a70b305_SnowflakeTrustMinimizedProxy.sol/539cb40d3670fe03dbe67857c4d8da307a70b305_SnowflakeTrustMinimizedProxy.sol#9-71) is an upgradeable proxy.\nLOGIC_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nMissing compatibility check in SnowflakeTrustMinimizedProxy.proposeToAndCall(address,bytes)\nMissing compatibility check in SnowflakeTrustMinimizedProxy.upgrade()\nMissing compatibility check in SnowflakeTrustMinimizedProxy.cancelUpgrade()\nFound compatibility check in SnowflakeTrustMinimizedProxy.proposeToAndCall(address,bytes)\n",
+        "id": "646a7fac3d14d886b6ca5079b8ce39a86c8936bd8602ebaabec666067f37aed6",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "SnowflakeTrustMinimizedProxy.LOGIC_SLOT",
+          "impl_address_setter": "SnowflakeTrustMinimizedProxy.upgrade()",
+          "impl_address_getter": "SnowflakeTrustMinimizedProxy._logic()",
+          "impl_address_location": "SnowflakeTrustMinimizedProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.7.6/539cb40d3670fe03dbe67857c4d8da307a70b305_SnowflakeTrustMinimizedProxy.sol/539cb40d3670fe03dbe67857c4d8da307a70b305_SnowflakeTrustMinimizedProxy.sol#9-71)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "SnowflakeTrustMinimizedProxy.proposeToAndCall(address,bytes)": "require(bool,string)(newLogic.delegatecall(data),failed to call)",
+              "SnowflakeTrustMinimizedProxy.upgrade()": "missing",
+              "SnowflakeTrustMinimizedProxy.cancelUpgrade()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "changeAdmin(address)",
+              "upgrade()",
+              "cancelUpgrade()",
+              "prolongLock(uint256)",
+              "removeTrust()",
+              "proposeToAndCall(address,bytes)",
+              "viewSlots()"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "block.number >= _nextLogicBlock()"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,478 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KUSDMinterDelegate.is_proxy (Slither line:1425)
+
+
+End KUSDMinterDelegate.is_proxy (Slither line:1428)
+
+
+Begin KUSDMinterDelegate.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KUSDMinterDelegate 
+
+End KUSDMinterDelegate.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KUSDMinterDelegator.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End KUSDMinterDelegator.is_proxy (Slither line:1476)
+
+
+Begin KUSDMinterDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KUSDMinterDelegator 
+KUSDMinterDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in KUSDMinterDelegate (Slither line:1204)
+
+
+Begin KUSDMinterDelegate.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: isOwner() returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+_msgSender() == _owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+OwnershipTransferred(_owner,address(0))
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+_msgSender() == _owner
+msg.sender
+require(bool,string)(isOwner(),Ownable: caller is not the owner)
+onlyOwner()
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+_transferOwnership(newOwner)
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+OwnershipTransferred(_owner,newOwner)
+onlyOwner()
+msg.sender
+_msgSender() == _owner
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(isOwner(),Ownable: caller is not the owner)
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End KUSDMinterDelegate.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in KUSDMinterDelegate 
+Looking in KUSDMinterDelegator (Slither line:1213)
+
+Begin KUSDMinterDelegator.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address,address,address,address,uint256,uint256,uint256,address) returns() (Slither line:3127)
+Checking function: delegateTo(address,bytes) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End KUSDMinterDelegator.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: KUSDMinterDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin KUSDMinterDelegate.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _msgSender() == _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End KUSDMinterDelegate.find_getter_in_contract (Slither line:3083)
+
+
+Begin KUSDMinterDelegator.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _msgSender() == _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End KUSDMinterDelegator.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in KUSDMinterDelegator (Slither line:1305)
+or in KUSDMinterDelegate (Slither line:1319)
+
+Begin IRewardDistributionRecipient.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _msgSender() == _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: setRewardDistribution (Slither line:2988)
+
+End IRewardDistributionRecipient.find_getter_in_contract (Slither line:3083)
+
+
+End KUSDMinterDelegator.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking public function owner
+Checking public function isOwner
+Checking public function renounceOwnership
+Checking public function transferOwnership
+Checking public function _setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function KUSDMinterDelegator.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.delegateTo (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.owner (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = delegateTo(implementation_,abi.encodeWithSignature(initialize(address,address,address,address,address,address,address,uint256,uint256,uint256),kine_,kUSD_,kMCD_,controller_,treasury_,vault_,rewardDistribution_,startTime_,rewardDuration_,rewardReleasePeriod_)) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function KUSDMinterDelegator._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function KUSDMinterDelegator._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(isOwner(),Ownable: caller is not the owner) (proxy_features line:909)
+functions_writing_to_variable: exp = _msgSender() == _owner (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:929)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(isOwner(),Ownable: caller is not the owner)
+has_compatibility_checks: condition isOwner()
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isOwner(),Ownable: caller is not the owner)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) RETURN
+(Expression) _msgSender() == _owner
+
+Begin KineOracleInterface.is_proxy (Slither line:1425)
+
+
+End KineOracleInterface.is_proxy (Slither line:1428)
+
+
+Begin KineOracleInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KineOracleInterface 
+
+End KineOracleInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KineControllerInterface.is_proxy (Slither line:1425)
+
+
+End KineControllerInterface.is_proxy (Slither line:1428)
+
+
+Begin KineControllerInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KineControllerInterface 
+
+End KineControllerInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Math.is_proxy (Slither line:1425)
+
+
+End Math.is_proxy (Slither line:1428)
+
+
+Begin Math.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Math 
+
+End Math.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KineSafeMath.is_proxy (Slither line:1425)
+
+
+End KineSafeMath.is_proxy (Slither line:1428)
+
+
+Begin KineSafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KineSafeMath 
+
+End KineSafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IKineUSD.is_proxy (Slither line:1425)
+
+
+End IKineUSD.is_proxy (Slither line:1428)
+
+
+Begin IKineUSD.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IKineUSD 
+
+End IKineUSD.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IKMCD.is_proxy (Slither line:1425)
+
+
+End IKMCD.is_proxy (Slither line:1428)
+
+
+Begin IKMCD.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IKMCD 
+
+End IKMCD.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRewardDistributionRecipient.is_proxy (Slither line:1425)
+
+
+End IRewardDistributionRecipient.is_proxy (Slither line:1428)
+
+
+Begin IRewardDistributionRecipient.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRewardDistributionRecipient 
+
+End IRewardDistributionRecipient.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KUSDMinter.is_proxy (Slither line:1425)
+
+
+End KUSDMinter.is_proxy (Slither line:1428)
+
+
+Begin KUSDMinter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KUSDMinter 
+
+End KUSDMinter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LiquidatorWhitelistInterface.is_proxy (Slither line:1425)
+
+
+End LiquidatorWhitelistInterface.is_proxy (Slither line:1428)
+
+
+Begin LiquidatorWhitelistInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LiquidatorWhitelistInterface 
+
+End LiquidatorWhitelistInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KUSDMinterV3.is_proxy (Slither line:1425)
+
+
+End KUSDMinterV3.is_proxy (Slither line:1428)
+
+
+Begin KUSDMinterV3.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KUSDMinterV3 
+
+End KUSDMinterV3.is_upgradeable_proxy (Slither line:1407)
+

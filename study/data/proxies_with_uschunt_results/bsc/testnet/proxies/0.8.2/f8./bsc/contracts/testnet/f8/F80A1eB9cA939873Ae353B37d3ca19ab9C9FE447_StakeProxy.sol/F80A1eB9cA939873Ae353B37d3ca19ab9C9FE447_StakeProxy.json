@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/f8./bsc/contracts/testnet/f8/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol#21-91)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/f8./bsc/contracts/testnet/f8/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol#21-91) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "StakeProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/f8./bsc/contracts/testnet/f8/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol#618-649)",
+        "elements": [],
+        "description": "StakeProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/f8./bsc/contracts/testnet/f8/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol#618-649) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "29c8596f57f91452081fa1e5f2c49f90466a74005603e9013fcb57ce258f7d16",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "StakeProxy.setImplementation(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "StakeProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/f8./bsc/contracts/testnet/f8/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol/F80A1eB9cA939873Ae353B37d3ca19ab9C9FE447_StakeProxy.sol#618-649)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "StakeProxy.setImplementation(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "StakeProxy.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "setImplementation(address)",
+              "setAdmin(address)",
+              "setMarketing(address)",
+              "setBlockSupply(uint128)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

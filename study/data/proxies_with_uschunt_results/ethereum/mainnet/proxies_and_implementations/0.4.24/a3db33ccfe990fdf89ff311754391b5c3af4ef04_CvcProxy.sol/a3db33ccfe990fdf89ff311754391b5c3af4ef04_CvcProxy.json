@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "CvcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.24/a3db33ccfe990fdf89ff311754391b5c3af4ef04_CvcProxy.sol/a3db33ccfe990fdf89ff311754391b5c3af4ef04_CvcProxy.sol#71-232)",
+        "elements": [],
+        "description": "CvcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.24/a3db33ccfe990fdf89ff311754391b5c3af4ef04_CvcProxy.sol/a3db33ccfe990fdf89ff311754391b5c3af4ef04_CvcProxy.sol#71-232) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb\n uses Inherited Storage\nFound compatibility checks in all upgrade functions.\n",
+        "id": "2021c04445e1a78fe5264ddc3fe7e610ca1855ca288473f7a74700829f2578f0",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ImplementationStorage.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "CvcProxy.upgradeTo(address)",
+          "impl_address_getter": "ImplementationStorage.implementation()",
+          "impl_address_location": "ImplementationStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.24/a3db33ccfe990fdf89ff311754391b5c3af4ef04_CvcProxy.sol/a3db33ccfe990fdf89ff311754391b5c3af4ef04_CvcProxy.sol#9-34)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "CvcProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(currentImplementation != _newImplementation,Upgrade error: proxy contract already uses specified implementation)",
+                "is_correct": true
+              },
+              "CvcProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(currentImplementation != _newImplementation,Upgrade error: proxy contract already uses specified implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "admin()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

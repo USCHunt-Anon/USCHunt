@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "GnosisSafeProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.6/7411fce6eb998bc8c905169a1a246191aefec4f2_GnosisSafeProxyFactory.sol/7411fce6eb998bc8c905169a1a246191aefec4f2_GnosisSafeProxyFactory.sol#202-239)",
+        "elements": [],
+        "description": "GnosisSafeProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.6/7411fce6eb998bc8c905169a1a246191aefec4f2_GnosisSafeProxyFactory.sol/7411fce6eb998bc8c905169a1a246191aefec4f2_GnosisSafeProxyFactory.sol#202-239) may be an upgradeable proxy.\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: calldataload(uint256)(0) == 0xa619486e00000000000000000000000000000000000000000000000000000000\n",
+        "id": "acbe58c449764a78b93c5f8e1a49a13ec02db92ede1c684b9b2e3e334864bc0d",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "GnosisSafeProxy.masterCopy",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "GnosisSafeProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.6/7411fce6eb998bc8c905169a1a246191aefec4f2_GnosisSafeProxyFactory.sol/7411fce6eb998bc8c905169a1a246191aefec4f2_GnosisSafeProxyFactory.sol#202-239)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "GnosisSafeProxy.constructor(address)": {
+                "check": "require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "calldataload(uint256)(0) != 0xa619486e00000000000000000000000000000000000000000000000000000000",
+          "toggle_alternative_logic": "return(uint256,uint256)(0,0x20)"
+        }
+      }
+    ]
+  }
+}

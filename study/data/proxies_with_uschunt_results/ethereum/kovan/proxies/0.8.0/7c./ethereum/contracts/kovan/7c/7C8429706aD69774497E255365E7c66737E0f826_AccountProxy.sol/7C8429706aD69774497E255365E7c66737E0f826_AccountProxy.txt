@@ -1,0 +1,211 @@
+
+Begin OpCenterInterface.is_proxy (Slither line:1425)
+
+
+End OpCenterInterface.is_proxy (Slither line:1428)
+
+
+Begin OpCenterInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OpCenterInterface 
+
+End OpCenterInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AccountProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin AccountProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End AccountProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin AccountProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End AccountProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin AccountProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_opCodeAddress,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_opCodeAddress
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _opCodeAddress (Slither line:2818)
+dest.value: _opCodeAddress (Slither line:2821)
+Expression: opCenter.getOpCodeAddress(_sig) (Slither line:2826)
+
+Begin AccountProxy.find_delegate_from_call_exp
+
+opCenter.getOpCodeAddress(_sig) (Slither line:1993)
+called = opCenter.getOpCodeAddress (Slither line:2000)
+Called member of opCenter (Slither line:2007)
+
+Begin AccountProxy.find_delegate_from_member_access
+
+Expression: opCenter.getOpCodeAddress(_sig) (Slither line:2348)
+opCenter (Slither line:2361)
+getOpCodeAddress is a member of the contract type: OpCenterInterface (Slither line:2406)
+Which is an interface (Slither line:2410)
+Could not find a contract that inherits OpCenterInterface (Slither line:2431)
+
+End AccountProxy.find_delegate_from_call_exp (Slither line:2009)
+
+
+End AccountProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End AccountProxy.is_proxy (Slither line:1476)
+
+
+Begin AccountProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AccountProxy 
+Local Variable: _opCodeAddress (Slither line:1164)
+opCenter (Slither line:1171)
+Call destination opCenter.getOpCodeAddress(_sig) is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: AccountProxy
+_opCodeAddress is dependent on opCenter
+Expression for _opCodeAddress: opCenter.getOpCodeAddress(_sig)
+Called: opCenter.getOpCodeAddress
+_sig.expression is None
+impl_address_from_contract_call: opCenter.getOpCodeAddress(_sig)
+called: opCenter.getOpCodeAddress
+found MemberAccess: opCenter.getOpCodeAddress
+Identifier: opCenter
+value is StateVariable: opCenter
+Type: OpCenterInterface
+find_registry_address_source: opCenter.getOpCodeAddress(_sig)
+MemberAccess: opCenter.getOpCodeAddress
+Identifier: opCenter
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: _opCodeAddress
+functions_writing_to_variable: checking function AccountProxy.receive (proxy_features line:893)
+get_value_assigned: _opCodeAddress = opCenter.getOpCodeAddress(_sig)
+functions_writing_to_variable: receive writes TMP_4 to _opCodeAddress (proxy_features line:1008)
+functions_writing_to_variable: checking function AccountProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function AccountProxy.fallback (proxy_features line:893)
+get_value_assigned: _opCodeAddress = opCenter.getOpCodeAddress(_sig)
+functions_writing_to_variable: fallback writes TMP_4 to _opCodeAddress (proxy_features line:1008)
+has_compatibility_checks: dependencies: ['opCenter', 'TMP_4', 'TMP_0', '_opCenterInterface', '', '_sig']
+functions_writing_to_variable: opCenter
+functions_writing_to_variable: checking function AccountProxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function AccountProxy.delegate (proxy_features line:893)
+functions_writing_to_variable: checking function AccountProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = opCenter = OpCenterInterface(_opCenterInterface) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: opCenter = OpCenterInterface(_opCenterInterface) (proxy_features line:907)
+functions_writing_to_variable: Identifier: opCenter (proxy_features line:919)
+get_value_assigned: opCenter = OpCenterInterface(_opCenterInterface)
+functions_writing_to_variable: checking function AccountProxy.fallback (proxy_features line:893)
+has_compatibility_checks: checking external function receive
+require(bool,string)(_opCodeAddress != address(0),CHFRY Account: Not able to find OpCode)
+has_compatibility_checks: condition _opCodeAddress != address(0)
+has_compatibility_checks: IF node exp = switch_expr_1101_124_0_delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_1101_124_0_delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sig != 0x00000000
+has_compatibility_checks: checking external function fallback
+require(bool,string)(_opCodeAddress != address(0),CHFRY Account: Not able to find OpCode)
+has_compatibility_checks: condition _opCodeAddress != address(0)
+has_compatibility_checks: IF node exp = switch_expr_1101_124_0_delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_1101_124_0_delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _opCodeAddress = opCenter.getOpCodeAddress(_sig)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_opCodeAddress,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_opCodeAddress != address(0),CHFRY Account: Not able to find OpCode)
+Found public function: constructor
+Found fallback
+Found external function: receive

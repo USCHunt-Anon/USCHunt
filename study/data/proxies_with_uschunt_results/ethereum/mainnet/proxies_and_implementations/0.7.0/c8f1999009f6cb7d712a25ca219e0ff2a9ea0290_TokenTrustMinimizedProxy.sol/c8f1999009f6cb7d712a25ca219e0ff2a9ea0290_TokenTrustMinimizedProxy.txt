@@ -1,0 +1,410 @@
+
+Begin TokenTrustMinimizedProxy.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TokenTrustMinimizedProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End TokenTrustMinimizedProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TokenTrustMinimizedProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End TokenTrustMinimizedProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TokenTrustMinimizedProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End TokenTrustMinimizedProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin TokenTrustMinimizedProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End TokenTrustMinimizedProxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TokenTrustMinimizedProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'logic_'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin TokenTrustMinimizedProxy.find_delegate_variable_from_name
+Searching for logic_ (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ADMIN_SLOT (Slither line:1689)
+Checking LOGIC_SLOT (Slither line:1689)
+Checking NEXT_LOGIC_SLOT (Slither line:1689)
+Checking NEXT_LOGIC_BLOCK_SLOT (Slither line:1689)
+Checking PROPOSE_BLOCK_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking logic_ (Slither line:1800)
+logic_ is a Parameter in TokenTrustMinimizedProxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: sload(uint256)(ADMIN_SLOT) (Slither line:1811)
+CallExpression: sload(uint256)(ADMIN_SLOT) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),logic_,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),logic_,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: require(bool)(msg.sender != _admin()) (Slither line:1819)
+CallExpression: _delegate(_logic()) (Slither line:1819)
+Found where _delegate is called: _delegate(_logic()) (Slither line:1832)
+The value passed to parameter #0 is _logic() (Slither line:1835)
+
+Begin TokenTrustMinimizedProxy.find_delegate_from_call_exp
+
+_logic() (Slither line:2003)
+called = _logic (Slither line:2010)
+AssignmentOperation: logic = sload(uint256)(LOGIC_SLOT) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: LOGIC_SLOT (Slither line:2133)
+_logic returns a variable of type address   called logic (Slither line:2193)
+_logic contains assembly - looking for sload (Slither line:2199)
+
+End TokenTrustMinimizedProxy.find_delegate_from_call_exp (Slither line:2328)
+
+AssignmentOperation: sload(uint256)(LOGIC_SLOT) (Slither line:1811)
+CallExpression: sload(uint256)(LOGIC_SLOT) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End TokenTrustMinimizedProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End TokenTrustMinimizedProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting TokenTrustMinimizedProxy._delegate_variable = TokenTrustMinimizedProxy._proxy_impl_slot: LOGIC_SLOT (Slither line:1473)
+
+
+End TokenTrustMinimizedProxy.is_proxy (Slither line:1476)
+
+
+Begin TokenTrustMinimizedProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenTrustMinimizedProxy 
+Call destination LOGIC_SLOT is constant (Slither line:1146)
+
+LOGIC_SLOT is the implementation storage slot (Slither line:1149)
+
+TokenTrustMinimizedProxy is delegating to LOGIC_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin TokenTrustMinimizedProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _logic() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _proposeBlock() returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: _nextLogicBlock() returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: _admin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _isContract(address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+adm = sload(uint256)(ADMIN_SLOT)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_setAdmin(newAdm)
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),logic_,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool)(msg.sender != _admin())
+ifAdmin()
+_delegate(_logic())
+logic = sload(uint256)(LOGIC_SLOT)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+_fallback()
+switch_expr_6398_98_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+AdminChanged(_admin(),newAdm)
+sstore(uint256,uint256)(ADMIN_SLOT,newAdm)
+sstore(uint256,uint256)
+Checking function: upgrade() returns() (Slither line:3127)
+Visibility: external
+upgrade contains assembly (Slither line:3153)
+require(bool)(block.number >= _nextLogicBlock())
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+adm = sload(uint256)(ADMIN_SLOT)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Upgraded(logic)
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+logic = sload(uint256)(NEXT_LOGIC_SLOT)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),logic_,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool)(msg.sender != _admin())
+sstore(uint256,uint256)(LOGIC_SLOT,logic)
+sstore(uint256,uint256)
+
+End TokenTrustMinimizedProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgrade in contract: TokenTrustMinimizedProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin TokenTrustMinimizedProxy.find_getter_in_contract (Slither line:2974)
+
+LOGIC_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: _logic (Slither line:2988)
+_logic returns address variable called logic (Slither line:3008)
+_logic contains assembly (Slither line:3051)
+_logic contains assembly (Slither line:3051)
+_logic contains assembly (Slither line:3051)
+
+End TokenTrustMinimizedProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _logic in contract: TokenTrustMinimizedProxy (Slither line:1285)
+
+End TokenTrustMinimizedProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: TokenTrustMinimizedProxy
+Setter found in contract TokenTrustMinimizedProxy
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function upgrade
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function fallback
+Found 'msg.sender !=' in expression: require(bool)(msg.sender != _admin())
+Checking external function receive
+Found 'msg.sender !=' in expression: require(bool)(msg.sender != _admin())
+Checking external function cancelUpgrade
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function prolongLock
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function proposeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+functions_writing_to_variable: LOGIC_SLOT
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.cancelUpgrade (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(NEXT_LOGIC_SLOT,logic)
+functions_writing_to_variable: cancelUpgrade writes logic to LOGIC_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._isContract (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.prolongLock (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._admin (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._nextLogicBlock (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.proposeToAndCall (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(NEXT_LOGIC_SLOT,nextLogic)
+functions_writing_to_variable: proposeToAndCall writes nextLogic to LOGIC_SLOT using sstore (proxy_features line:998)
+get_value_assigned: sstore(uint256,uint256)(LOGIC_SLOT,newLogic)
+functions_writing_to_variable: proposeToAndCall writes newLogic to LOGIC_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._proposeBlock (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._setNextLogic (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(NEXT_LOGIC_SLOT,nextLogic)
+functions_writing_to_variable: _setNextLogic writes nextLogic to LOGIC_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.upgrade (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(LOGIC_SLOT,logic)
+functions_writing_to_variable: upgrade writes logic to LOGIC_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._logic (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._updateBlockSlots (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: exp = LOGIC_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: LOGIC_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: LOGIC_SLOT (proxy_features line:924)
+get_value_assigned: LOGIC_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = NEXT_LOGIC_SLOT = 0xb182d207b11df9fb38eec1e3fe4966cf344774ba58fb0e9d88ea35ad46f3601e (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: NEXT_LOGIC_SLOT = 0xb182d207b11df9fb38eec1e3fe4966cf344774ba58fb0e9d88ea35ad46f3601e (proxy_features line:912)
+functions_writing_to_variable: exp = NEXT_LOGIC_BLOCK_SLOT = 0x96de003e85302815fe026bddb9630a50a1d4dc51c5c355def172204c3fd1c733 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: NEXT_LOGIC_BLOCK_SLOT = 0x96de003e85302815fe026bddb9630a50a1d4dc51c5c355def172204c3fd1c733 (proxy_features line:912)
+functions_writing_to_variable: exp = PROPOSE_BLOCK_SLOT = 0xbc9d35b69e82e85049be70f91154051f5e20e574471195334bde02d1a9974c90 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: PROPOSE_BLOCK_SLOT = 0xbc9d35b69e82e85049be70f91154051f5e20e574471195334bde02d1a9974c90 (proxy_features line:912)
+functions_writing_to_variable: checking function TokenTrustMinimizedProxy._setAdmin (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function cancelUpgrade
+has_compatibility_checks: IF node exp = switch_expr_6398_98_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_6398_98_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _admin()
+require(bool)(msg.sender != _admin())
+has_compatibility_checks: condition msg.sender != _admin()
+has_compatibility_checks: checking external function proposeToAndCall
+has_compatibility_checks: IF node exp = switch_expr_6398_98_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_6398_98_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = _logic() == address(0)
+has_compatibility_checks: IF node exp = msg.sender == _admin()
+require(bool)(msg.sender != _admin())
+has_compatibility_checks: condition msg.sender != _admin()
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool)(block.number >= _proposeBlock() && _isContract(nextLogic))
+has_compatibility_checks: condition block.number >= _proposeBlock() && _isContract(nextLogic)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition block.number >= _proposeBlock() && _isContract(nextLogic)
+has_compatibility_checks: checking external function proposeToAndCall
+has_compatibility_checks: IF node exp = switch_expr_6398_98_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_6398_98_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = _logic() == address(0)
+has_compatibility_checks: IF node exp = msg.sender == _admin()
+require(bool)(msg.sender != _admin())
+has_compatibility_checks: condition msg.sender != _admin()
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool)(block.number >= _proposeBlock() && _isContract(nextLogic))
+has_compatibility_checks: condition block.number >= _proposeBlock() && _isContract(nextLogic)
+has_compatibility_checks: skipping internal function _setNextLogic
+has_compatibility_checks: checking external function upgrade
+has_compatibility_checks: IF node exp = switch_expr_6398_98_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_6398_98_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+require(bool)(block.number >= _nextLogicBlock())
+has_compatibility_checks: condition block.number >= _nextLogicBlock()
+has_compatibility_checks: IF node exp = msg.sender == _admin()
+require(bool)(msg.sender != _admin())
+has_compatibility_checks: condition msg.sender != _admin()
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),logic_,0,calldatasize()(),0,0)
+Found public function: constructor
+Found external function: changeAdmin
+has_time_delay: (node.type) IF
+(Expression) switch_expr_6398_98_0__delegate_asm_0 == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(block.number >= _nextLogicBlock())
+has_time_delay: found condition using `now`: block.number >= _nextLogicBlock()
+
+Begin VSRERC20.is_proxy (Slither line:1425)
+
+
+End VSRERC20.is_proxy (Slither line:1428)
+
+
+Begin VSRERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VSRERC20 
+
+End VSRERC20.is_upgradeable_proxy (Slither line:1407)
+

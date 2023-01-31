@@ -1,0 +1,326 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GandalfExchangeAdminStorage.is_proxy (Slither line:1425)
+
+
+End GandalfExchangeAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin GandalfExchangeAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GandalfExchangeAdminStorage 
+
+End GandalfExchangeAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GandalfExchangeDelegator.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin GandalfExchangeDelegator.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_6006_202_0_fallback_asm_0 = success (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End GandalfExchangeDelegator.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GandalfExchangeDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End GandalfExchangeDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin GandalfExchangeDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End GandalfExchangeDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End GandalfExchangeDelegator.is_proxy (Slither line:1476)
+
+
+Begin GandalfExchangeDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GandalfExchangeDelegator 
+GandalfExchangeDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in GandalfExchangeAdminStorage (Slither line:1204)
+
+
+Begin GandalfExchangeAdminStorage.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: owner() returns(address) (Slither line:3117)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3206)
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+onlyOwner()
+msg.sender
+OwnershipTransferred(_owner,newOwner)
+_owner
+_owner = newOwner
+is an Assignment Operation (Slither line:3206)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: _msgSender() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3117)
+Visibility: internal
+
+End GandalfExchangeAdminStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in GandalfExchangeAdminStorage 
+Looking in GandalfExchangeDelegator (Slither line:1213)
+
+Begin GandalfExchangeDelegator.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address,uint256,uint256,uint256,uint256,address) returns() (Slither line:3117)
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+NewImplementation(oldImplementation,implementation)
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End GandalfExchangeDelegator.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _setImplementation in contract: GandalfExchangeDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin GandalfExchangeAdminStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+
+End GandalfExchangeAdminStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin GandalfExchangeDelegator.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+Checking function: constructor (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: _setAdmin (Slither line:2978)
+Checking function: delegateTo (Slither line:2978)
+delegateTo returns bytes variable  (Slither line:2998)
+RETURN node expression: returnData (Slither line:3018)
+Checking function: receive (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End GandalfExchangeDelegator.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in GandalfExchangeDelegator (Slither line:1305)
+or in GandalfExchangeAdminStorage (Slither line:1319)
+Checking for implementation at slot 2 in contract GandalfExchangeAdminStorage (Slither line:1355)
+Found implementation at slot 2 in contract GandalfExchangeAdminStorage (Slither line:1362)
+
+Begin GandalfExchangeAdminStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+
+End GandalfExchangeAdminStorage.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function owner
+Checking public function renounceOwnership
+Checking public function transferOwnership
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function GandalfExchangeDelegator.receive (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator._msgData (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator._msgSender (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.delegateTo (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.constructor (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator._setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator.owner (proxy_features line:893)
+functions_writing_to_variable: checking function GandalfExchangeDelegator._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,UNAUTHORIZED) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:907)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:904)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:924)
+has_compatibility_checks: dependencies: ['_implementation', 'implementation_']
+has_compatibility_checks: checking public function constructor
+require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: IF node exp = success == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if success == 0 then revert(uint256,uint256)(returnData + 0x20,returndatasize()()) else returnData
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_

@@ -1,0 +1,1146 @@
+
+Begin ProxyStorage.is_proxy (Slither line:1425)
+
+
+End ProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyStorage 
+
+End ProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(ptr_internalFallback_asm_0,size_internalFallback_asm_0) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_internalFallback_asm_0
+size_internalFallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_internalFallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractAddr,ptr_internalFallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+contractAddr
+ptr_internalFallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractAddr (Slither line:2828)
+dest.value: contractAddr (Slither line:2831)
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:2836)
+
+Begin Proxy.find_delegate_from_call_exp
+
+readAddress(IMPLEMENTATION_SLOT) (Slither line:2003)
+called = readAddress (Slither line:2010)
+Return node of function ProxyStorage.readAddress(bytes32): RETURN bytes32ToAddress(storageRead(_key)) (Slither line:2041)
+Encountered call expression at RETURN node: bytes32ToAddress(storageRead(_key)) (Slither line:2053)
+Recursively calling Proxy.find_delegate_from_call_exp (Slither line:2073)
+
+Begin Proxy.find_delegate_from_call_exp
+
+bytes32ToAddress(storageRead(_key)) (Slither line:2003)
+called = bytes32ToAddress (Slither line:2010)
+Return node of function ProxyStorage.bytes32ToAddress(bytes32): RETURN address(uint160(uint256(_value))) (Slither line:2041)
+bytes32ToAddress returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+Recursive Proxy.find_delegate_from_call_exp returned None (Slither line:2077)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2100)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2104)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Local Variable: contractAddr (Slither line:1164)
+Proxy is delegating to contractAddr
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: getProxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(OWNER_SLOT)
+value
+address(uint160(uint256(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+bytes32ToAddress(storageRead(_key))
+Checking function: setProxyOwner(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+bytes32ToAddress(storageRead(_key))
+storageSet(_key,addressToBytes32(_value))
+setAddress(OWNER_SLOT,_newOwner)
+onlyProxyOwner()
+bytes32(uint256(uint160(_value)))
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(IMPLEMENTATION_SLOT)
+value
+address(uint160(uint256(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+bytes32ToAddress(storageRead(_key))
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+setAddress(IMPLEMENTATION_SLOT,_newImplementation)
+onlyProxyOwner()
+storageSet(_key,addressToBytes32(_value))
+bytes32(uint256(uint160(_value)))
+bytes32ToAddress(storageRead(_key))
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: internalFallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: readBool(bytes32) returns(bool) (Slither line:3127)
+Visibility: public
+storageRead(_key) == bytes32(uint256(1))
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: setBool(bytes32,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: readAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+value
+address(uint160(uint256(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+bytes32ToAddress(storageRead(_key))
+Checking function: setAddress(bytes32,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: storageRead(bytes32) returns(bytes32) (Slither line:3127)
+Visibility: public
+storageRead contains assembly (Slither line:3153)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: storageSet(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: bytes32ToAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+Checking function: addressToBytes32(address) returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(uint256(uint160(_value)))
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+contractAddr is a Variable object
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: readBool (Slither line:2988)
+readBool returns bool variable  (Slither line:3008)
+RETURN node expression: storageRead(_key) == bytes32(uint256(1)) (Slither line:3028)
+Checking function: setBool (Slither line:2988)
+Checking function: readAddress (Slither line:2988)
+
+readAddress appears to be the implementation getter (Slither line:2993)
+
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: readAddress in contract: Proxy (Slither line:1285)
+
+Begin Proxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+INLINE ASM: None (Slither line:2888)
+RETURN: value (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+RETURN: address(uint160(uint256(_value))) (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+EXPRESSION: value = sload(uint256)(_key) (Slither line:2888)
+RETURN: bytes32ToAddress(storageRead(_key)) (Slither line:2888)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+contractAddr is dependent on IMPLEMENTATION_SLOT
+contractAddr is dependent on OWNER_SLOT
+impl_address_from_contract_call: readAddress(IMPLEMENTATION_SLOT)
+called: readAddress
+readAddress returns bytes32ToAddress(storageRead(_key))
+called: bytes32ToAddress
+bytes32ToAddress returns address(uint160(uint256(_value)))
+Checking public function readBool
+Checking public function readAddress
+Checking public function storageRead
+Checking public function bytes32ToAddress
+Checking public function addressToBytes32
+Checking public function getProxyOwner
+Checking public function setProxyOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+Checking public function getImplementation
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: contractAddr
+functions_writing_to_variable: checking function Proxy.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setBool (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+has_compatibility_checks: dependencies: ['IMPLEMENTATION_SLOT', '', '_key', 'OWNER_SLOT', 'TMP_38', '_key', '_value', 'TMP_33', '', 'TMP_53', 'TMP_39', 'value', 'TMP_36', '', 'TMP_32', 'TMP_40', '_key']
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function Proxy.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setBool (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT))
+functions_writing_to_variable: exp = OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.internalFallback (proxy_features line:898)
+functions_writing_to_variable: OWNER_SLOT
+functions_writing_to_variable: checking function Proxy.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setBool (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: exp = OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: Identifier: OWNER_SLOT (proxy_features line:924)
+get_value_assigned: OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT))
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.internalFallback (proxy_features line:898)
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_internalFallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractAddr,ptr_internalFallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_internalFallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_internalFallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: contractAddr = readAddress(IMPLEMENTATION_SLOT)
+Found public function: readBool
+
+Begin ProxyPausable.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ProxyPausable.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(ptr_internalFallback_asm_0,size_internalFallback_asm_0) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_internalFallback_asm_0
+size_internalFallback_asm_0
+
+End ProxyPausable.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ProxyPausable.find_delegatecall_in_exp_node
+
+Found Expression Node: result_internalFallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractAddr,ptr_internalFallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+contractAddr
+ptr_internalFallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractAddr (Slither line:2828)
+dest.value: contractAddr (Slither line:2831)
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:2836)
+
+Begin ProxyPausable.find_delegate_from_call_exp
+
+readAddress(IMPLEMENTATION_SLOT) (Slither line:2003)
+called = readAddress (Slither line:2010)
+Return node of function ProxyStorage.readAddress(bytes32): RETURN bytes32ToAddress(storageRead(_key)) (Slither line:2041)
+Encountered call expression at RETURN node: bytes32ToAddress(storageRead(_key)) (Slither line:2053)
+Encountered call to another contract: bytes32ToAddress(storageRead(_key)) (Slither line:2065)
+
+Begin Proxy.find_delegate_from_call_exp
+
+bytes32ToAddress(storageRead(_key)) (Slither line:2003)
+called = bytes32ToAddress (Slither line:2010)
+Return node of function ProxyStorage.bytes32ToAddress(bytes32): RETURN address(uint160(uint256(_value))) (Slither line:2041)
+bytes32ToAddress returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+Proxy.find_delegate_from_member_access returned None (Slither line:2069)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2100)
+
+End ProxyPausable.find_delegate_from_call_exp (Slither line:2104)
+
+
+End ProxyPausable.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End ProxyPausable.is_proxy (Slither line:1476)
+
+
+Begin ProxyPausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyPausable 
+Local Variable: contractAddr (Slither line:1164)
+ProxyPausable is delegating to contractAddr
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1238)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: getProxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(OWNER_SLOT)
+value
+address(uint160(uint256(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+bytes32ToAddress(storageRead(_key))
+Checking function: setProxyOwner(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+bytes32ToAddress(storageRead(_key))
+storageSet(_key,addressToBytes32(_value))
+setAddress(OWNER_SLOT,_newOwner)
+onlyProxyOwner()
+bytes32(uint256(uint160(_value)))
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(IMPLEMENTATION_SLOT)
+value
+address(uint160(uint256(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+bytes32ToAddress(storageRead(_key))
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+setAddress(IMPLEMENTATION_SLOT,_newImplementation)
+onlyProxyOwner()
+storageSet(_key,addressToBytes32(_value))
+bytes32(uint256(uint160(_value)))
+bytes32ToAddress(storageRead(_key))
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: internalFallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: readBool(bytes32) returns(bool) (Slither line:3127)
+Visibility: public
+storageRead(_key) == bytes32(uint256(1))
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: setBool(bytes32,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: readAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+value
+address(uint160(uint256(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+bytes32ToAddress(storageRead(_key))
+Checking function: setAddress(bytes32,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: storageRead(bytes32) returns(bytes32) (Slither line:3127)
+Visibility: public
+storageRead contains assembly (Slither line:3153)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: storageSet(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: bytes32ToAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+Checking function: addressToBytes32(address) returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(uint256(uint160(_value)))
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy (Slither line:1245)
+
+Begin ProxyPausable.find_setter_in_contract (Slither line:3119)
+
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: getPauzer() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(PAUZER_SLOT)
+address(uint160(uint256(_value)))
+value
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: setPauzer(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+bytes32(uint256(uint160(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+setAddress(PAUZER_SLOT,_newPauzer)
+onlyProxyOwner()
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+bytes32ToAddress(storageRead(_key))
+Checking function: renouncePauzer() returns() (Slither line:3127)
+Visibility: public
+onlyPauzer()
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+bytes32(uint256(uint160(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+require(bool,string)(msg.sender == readAddress(PAUZER_SLOT),ProxyPausable.onlyPauzer: msg sender not pauzer)
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+setAddress(PAUZER_SLOT,address(0))
+bytes32ToAddress(storageRead(_key))
+Checking function: getPaused() returns(bool) (Slither line:3127)
+Visibility: public
+readBool(PAUSED_SLOT)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+storageRead(_key) == bytes32(uint256(1))
+value
+Checking function: setPaused(bool) returns() (Slither line:3127)
+Visibility: public
+storageSet(_key,bytes32(uint256(1)))
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+storageSet(_key,bytes32(uint256(0)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+require(bool,string)(msg.sender == readAddress(PAUZER_SLOT),ProxyPausable.onlyPauzer: msg sender not pauzer)
+address(uint160(uint256(_value)))
+setBool(PAUSED_SLOT,_value)
+onlyPauzer()
+bytes32ToAddress(storageRead(_key))
+Checking function: internalFallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: getProxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(OWNER_SLOT)
+address(uint160(uint256(_value)))
+value
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: setProxyOwner(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+bytes32(uint256(uint160(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+setAddress(OWNER_SLOT,_newOwner)
+onlyProxyOwner()
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+bytes32ToAddress(storageRead(_key))
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+value
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+bytes32(uint256(uint160(_value)))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+setAddress(IMPLEMENTATION_SLOT,_newImplementation)
+onlyProxyOwner()
+storageSet(_key,addressToBytes32(_value))
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+bytes32ToAddress(storageRead(_key))
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: internalFallback() returns() (Slither line:3127)
+Checking function: readBool(bytes32) returns(bool) (Slither line:3127)
+Visibility: public
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+storageRead(_key) == bytes32(uint256(1))
+value
+Checking function: setBool(bytes32,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: readAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+value
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: setAddress(bytes32,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: storageRead(bytes32) returns(bytes32) (Slither line:3127)
+Visibility: public
+storageRead contains assembly (Slither line:3153)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: storageSet(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: bytes32ToAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+Checking function: addressToBytes32(address) returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(uint256(uint160(_value)))
+
+End ProxyPausable.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in ProxyPausable (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyPausable.find_getter_in_contract (Slither line:2974)
+
+contractAddr is a Variable object
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: constructor (Slither line:2988)
+Checking function: getProxyOwner (Slither line:2988)
+getProxyOwner returns address variable  (Slither line:3008)
+RETURN node expression: readAddress(OWNER_SLOT) (Slither line:3028)
+Checking function: setProxyOwner (Slither line:2988)
+Checking function: getImplementation (Slither line:2988)
+getImplementation returns address variable  (Slither line:3008)
+RETURN node expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:3028)
+Checking function: setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: internalFallback (Slither line:2988)
+Checking function: readBool (Slither line:2988)
+readBool returns bool variable  (Slither line:3008)
+RETURN node expression: storageRead(_key) == bytes32(uint256(1)) (Slither line:3028)
+Checking function: setBool (Slither line:2988)
+Checking function: readAddress (Slither line:2988)
+
+readAddress appears to be the implementation getter (Slither line:2993)
+
+
+End ProxyPausable.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: readAddress in contract: ProxyPausable (Slither line:1285)
+
+Begin ProxyPausable.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+NEW VARIABLE: None (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+INLINE ASM: None (Slither line:2888)
+RETURN: address(uint160(uint256(_value))) (Slither line:2888)
+RETURN: value (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+RETURN: bytes32ToAddress(storageRead(_key)) (Slither line:2888)
+
+End ProxyPausable.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: ProxyPausable
+impl_address_from_contract_call: readAddress(IMPLEMENTATION_SLOT)
+called: readAddress
+readAddress returns bytes32ToAddress(storageRead(_key))
+called: bytes32ToAddress
+bytes32ToAddress returns address(uint160(uint256(_value)))
+Checking public function getProxyOwner
+Checking public function setProxyOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+Checking public function getImplementation
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+Checking public function readBool
+Checking public function readAddress
+Checking public function storageRead
+Checking public function bytes32ToAddress
+Checking public function addressToBytes32
+Checking public function getPauzer
+Checking public function setPauzer
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),Proxy.onlyProxyOwner: msg sender not owner)
+Checking public function renouncePauzer
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(PAUZER_SLOT),ProxyPausable.onlyPauzer: msg sender not pauzer)
+Checking public function getPaused
+Checking public function setPaused
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(PAUZER_SLOT),ProxyPausable.onlyPauzer: msg sender not pauzer)
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: contractAddr
+functions_writing_to_variable: checking function ProxyPausable.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.internalFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.setPauzer (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.renouncePauzer (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.setBool (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.getPaused (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.setPaused (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.internalFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.receive (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.getPauzer (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyPausable.setProxyOwner (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_internalFallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractAddr,ptr_internalFallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_internalFallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_internalFallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: contractAddr = readAddress(IMPLEMENTATION_SLOT)
+Found public function: constructor
+Found public function: getProxyOwner
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAssetManager.is_proxy (Slither line:1425)
+
+
+End IAssetManager.is_proxy (Slither line:1428)
+
+
+Begin IAssetManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAssetManager 
+
+End IAssetManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20Metadata.is_proxy (Slither line:1425)
+
+
+End IERC20Metadata.is_proxy (Slither line:1428)
+
+
+Begin IERC20Metadata.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20Metadata 
+
+End IERC20Metadata.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IWETH.is_proxy (Slither line:1425)
+
+
+End IWETH.is_proxy (Slither line:1428)
+
+
+Begin IWETH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IWETH 
+
+End IWETH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMathExtends.is_proxy (Slither line:1425)
+
+
+End SafeMathExtends.is_proxy (Slither line:1428)
+
+
+Begin SafeMathExtends.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMathExtends 
+
+End SafeMathExtends.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV3SwapCallback.is_proxy (Slither line:1425)
+
+
+End IUniswapV3SwapCallback.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV3SwapCallback.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV3SwapCallback 
+
+End IUniswapV3SwapCallback.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISwapRouter.is_proxy (Slither line:1425)
+
+
+End ISwapRouter.is_proxy (Slither line:1428)
+
+
+Begin ISwapRouter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISwapRouter 
+
+End ISwapRouter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV3Pool.is_proxy (Slither line:1425)
+
+
+End IUniswapV3Pool.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV3Pool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV3Pool 
+
+End IUniswapV3Pool.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PoolAddress.is_proxy (Slither line:1425)
+
+
+End PoolAddress.is_proxy (Slither line:1428)
+
+
+Begin PoolAddress.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PoolAddress 
+
+End PoolAddress.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BytesLib.is_proxy (Slither line:1425)
+
+
+End BytesLib.is_proxy (Slither line:1428)
+
+
+Begin BytesLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BytesLib 
+
+End BytesLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Path.is_proxy (Slither line:1425)
+
+
+End Path.is_proxy (Slither line:1428)
+
+
+Begin Path.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Path 
+
+End Path.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UniV3SwapExtends.is_proxy (Slither line:1425)
+
+
+End UniV3SwapExtends.is_proxy (Slither line:1428)
+
+
+Begin UniV3SwapExtends.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UniV3SwapExtends 
+
+End UniV3SwapExtends.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GovIdentityStorage.is_proxy (Slither line:1425)
+
+
+End GovIdentityStorage.is_proxy (Slither line:1428)
+
+
+Begin GovIdentityStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GovIdentityStorage 
+
+End GovIdentityStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GovIdentity.is_proxy (Slither line:1425)
+
+
+End GovIdentity.is_proxy (Slither line:1428)
+
+
+Begin GovIdentity.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GovIdentity 
+
+End GovIdentity.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SmartPoolStorage.is_proxy (Slither line:1425)
+
+
+End SmartPoolStorage.is_proxy (Slither line:1428)
+
+
+Begin SmartPoolStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SmartPoolStorage 
+
+End SmartPoolStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StandardERC20.is_proxy (Slither line:1425)
+
+
+End StandardERC20.is_proxy (Slither line:1428)
+
+
+Begin StandardERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StandardERC20 
+
+End StandardERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicVault.is_proxy (Slither line:1425)
+
+
+End BasicVault.is_proxy (Slither line:1428)
+
+
+Begin BasicVault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicVault 
+
+End BasicVault.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RouteStorage.is_proxy (Slither line:1425)
+
+
+End RouteStorage.is_proxy (Slither line:1428)
+
+
+Begin RouteStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RouteStorage 
+
+End RouteStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Vault.is_proxy (Slither line:1425)
+
+
+End Vault.is_proxy (Slither line:1428)
+
+
+Begin Vault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Vault 
+
+End Vault.is_upgradeable_proxy (Slither line:1407)
+

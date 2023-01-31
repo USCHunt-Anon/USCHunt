@@ -1,0 +1,243 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Lib_AddressManager.is_proxy (Slither line:1425)
+
+
+End Lib_AddressManager.is_proxy (Slither line:1428)
+
+
+Begin Lib_AddressManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Lib_AddressManager 
+
+End Lib_AddressManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Lib_ResolvedDelegateProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(returndata + 0x20,mload(uint256)(returndata)) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+returndata + 0x20
+mload(uint256)(returndata)
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(returndata + 0x20,mload(uint256)(returndata)) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+returndata + 0x20
+mload(uint256)(returndata)
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(target != address(0),Target address must be initialized.) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+target != address(0)
+Target address must be initialized.
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+addressManager[address(this)].getAddress((implementationName[address(this)])) (Slither line:2739)
+
+Begin Lib_ResolvedDelegateProxy.find_delegate_from_call_exp
+
+addressManager[address(this)].getAddress((implementationName[address(this)])) (Slither line:1993)
+called = addressManager[address(this)].getAddress (Slither line:2000)
+Called member of addressManager[address(this)] (Slither line:2007)
+
+Begin Lib_ResolvedDelegateProxy.find_delegate_from_member_access
+
+Expression: addressManager[address(this)].getAddress((implementationName[address(this)])) (Slither line:2348)
+addressManager[address(this)] (Slither line:2361)
+
+End Lib_ResolvedDelegateProxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End Lib_ResolvedDelegateProxy.find_delegate_from_call_exp (Slither line:2009)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: (success,returndata) = target.delegatecall(msg.data) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: target.delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2807)
+Args:
+msg.data
+
+Found delegatecall in expression:
+target.delegatecall (Slither line:2814)
+
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Lib_ResolvedDelegateProxy.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Lib_ResolvedDelegateProxy.is_proxy (Slither line:1476)
+
+
+Begin Lib_ResolvedDelegateProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Lib_ResolvedDelegateProxy 
+
+End Lib_ResolvedDelegateProxy.is_upgradeable_proxy (Slither line:1407)
+

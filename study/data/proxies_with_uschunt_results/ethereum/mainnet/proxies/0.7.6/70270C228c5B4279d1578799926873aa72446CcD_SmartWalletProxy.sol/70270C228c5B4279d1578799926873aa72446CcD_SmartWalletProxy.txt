@@ -1,0 +1,651 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PermissionAdmin.is_proxy (Slither line:1425)
+
+
+End PermissionAdmin.is_proxy (Slither line:1428)
+
+
+Begin PermissionAdmin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PermissionAdmin 
+
+End PermissionAdmin.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Withdrawable.is_proxy (Slither line:1425)
+
+
+End Withdrawable.is_proxy (Slither line:1428)
+
+
+Begin Withdrawable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Withdrawable 
+
+End Withdrawable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Utils.is_proxy (Slither line:1425)
+
+
+End Utils.is_proxy (Slither line:1428)
+
+
+Begin Utils.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Utils 
+
+End Utils.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20Ext.is_proxy (Slither line:1425)
+
+
+End IERC20Ext.is_proxy (Slither line:1428)
+
+
+Begin IERC20Ext.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20Ext 
+
+End IERC20Ext.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EnumerableSet.is_proxy (Slither line:1425)
+
+
+End EnumerableSet.is_proxy (Slither line:1428)
+
+
+Begin EnumerableSet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EnumerableSet 
+
+End EnumerableSet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SmartWalletStorage.is_proxy (Slither line:1425)
+
+
+End SmartWalletStorage.is_proxy (Slither line:1428)
+
+
+Begin SmartWalletStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SmartWalletStorage 
+
+End SmartWalletStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SmartWalletProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+TemporaryVariable TMP_540 expression: implementation() (Slither line:2760)
+
+Begin SmartWalletProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+AssignmentOperation: impl = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: IMPLEMENTATION (Slither line:2140)
+implementation returns a variable of type address   called impl (Slither line:2193)
+implementation contains assembly - looking for sload (Slither line:2199)
+
+End SmartWalletProxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin SmartWalletProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: (success) = implementation().delegatecall(msg.data) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: implementation().delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+msg.data
+
+Found delegatecall in expression:
+implementation().delegatecall (Slither line:2824)
+
+
+End SmartWalletProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting SmartWalletProxy._delegate_variable = SmartWalletProxy._proxy_impl_slot: IMPLEMENTATION (Slither line:1473)
+
+
+End SmartWalletProxy.is_proxy (Slither line:1476)
+
+
+Begin SmartWalletProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SmartWalletProxy 
+Call destination IMPLEMENTATION is constant (Slither line:1146)
+
+IMPLEMENTATION is the implementation storage slot (Slither line:1149)
+
+SmartWalletProxy is delegating to IMPLEMENTATION
+Looking for setter (Slither line:1200)
+
+Looking for setter in SmartWalletStorage (Slither line:1204)
+
+
+Begin SmartWalletStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99 (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: withdrawToken(IERC20Ext,uint256,address) returns() (Slither line:3127)
+Visibility: external
+onlyAdmin()
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+_callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+require(bool,string)(address(this).balance >= value,Address: insufficient balance for call)
+functionCallWithValue(target,data,0,errorMessage)
+require(bool,string)(isContract(target),Address: call to non-contract)
+revert(string)(errorMessage)
+require(bool,string)(msg.sender == admin,only admin)
+_verifyCallResult(success,returndata,errorMessage)
+returndata
+(success,returndata) = target.call{value: value}(data)
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+size > 0
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+token.safeTransfer(sendTo,amount)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+TokenWithdraw(token,amount,sendTo)
+Checking function: withdrawEther(uint256,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(success,withdraw failed)
+EtherWithdraw(amount,sendTo)
+(success) = sendTo.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+require(bool,string)(msg.sender == admin,only admin)
+onlyAdmin()
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: transferAdmin(address) returns() (Slither line:3127)
+Visibility: public
+onlyAdmin()
+require(bool,string)(newAdmin != address(0),new admin 0)
+require(bool,string)(msg.sender == admin,only admin)
+TransferAdminPending(newAdmin)
+pendingAdmin = newAdmin
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+Checking function: transferAdminQuickly(address) returns() (Slither line:3127)
+Visibility: public
+admin = newAdmin
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+require(bool,string)(newAdmin != address(0),admin 0)
+require(bool,string)(msg.sender == admin,only admin)
+TransferAdminPending(newAdmin)
+onlyAdmin()
+AdminClaimed(newAdmin,admin)
+Checking function: claimAdmin() returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(pendingAdmin == msg.sender,not pending)
+AdminClaimed(pendingAdmin,admin)
+admin = pendingAdmin
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+pendingAdmin = address(0)
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+Checking function: getSetDecimals(IERC20Ext) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: getBalance(IERC20Ext,address) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: getDecimals(IERC20Ext) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: calcDestAmount(IERC20Ext,IERC20Ext,uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: calcSrcAmount(IERC20Ext,IERC20Ext,uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: calcDstQty(uint256,uint256,uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: calcSrcQty(uint256,uint256,uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: calcRateFromQty(uint256,uint256,uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: getDecimalsConstant(IERC20Ext) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: minOf(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+
+End SmartWalletStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in SmartWalletStorage 
+Looking in SmartWalletProxy (Slither line:1213)
+
+Begin SmartWalletProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99 (Slither line:3122)
+Checking function: constructor(address,address,address[],address[],address[]) returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+implementation contains assembly (Slither line:3153)
+impl = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: updateNewImplementation(address) returns() (Slither line:3127)
+Visibility: external
+onlyAdmin()
+size > 0
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+_setImplementation(_implementation)
+require(bool,string)(_implementation.isContract(),non-contract address)
+require(bool,string)(msg.sender == admin,only admin)
+ImplementationUpdated(_implementation)
+sstore(uint256,uint256)(slot,_implementation)
+sstore(uint256,uint256)
+
+End SmartWalletProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: updateNewImplementation in contract: SmartWalletProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin SmartWalletStorage.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION is a Variable object
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+Checking function: constructor (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: withdrawToken (Slither line:2988)
+Checking function: withdrawEther (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: transferAdmin (Slither line:2988)
+Checking function: transferAdminQuickly (Slither line:2988)
+Checking function: claimAdmin (Slither line:2988)
+Checking function: getSetDecimals (Slither line:2988)
+getSetDecimals returns uint256 variable called tokenDecimals (Slither line:3008)
+RETURN node expression: tokenDecimals (Slither line:3028)
+Checking function: getBalance (Slither line:2988)
+getBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: token.balanceOf(user) (Slither line:3028)
+RETURN node expression: user.balance (Slither line:3028)
+Checking function: getDecimals (Slither line:2988)
+getDecimals returns uint256 variable called tokenDecimals (Slither line:3008)
+RETURN node expression: tokenDecimals (Slither line:3028)
+RETURN node expression: tokenDecimals (Slither line:3028)
+RETURN node expression: token.decimals() (Slither line:3028)
+Checking function: calcDestAmount (Slither line:2988)
+calcDestAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: calcDstQty(srcAmount,getDecimals(src),getDecimals(dest),rate) (Slither line:3028)
+Checking function: calcSrcAmount (Slither line:2988)
+calcSrcAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: calcSrcQty(destAmount,getDecimals(src),getDecimals(dest),rate) (Slither line:3028)
+Checking function: calcDstQty (Slither line:2988)
+calcDstQty returns uint256 variable  (Slither line:3008)
+RETURN node expression: (srcQty * rate) / (PRECISION * (10 ** (srcDecimals - dstDecimals))) (Slither line:3028)
+RETURN node expression: (srcQty * rate * (10 ** (dstDecimals - srcDecimals))) / PRECISION (Slither line:3028)
+Checking function: calcSrcQty (Slither line:2988)
+calcSrcQty returns uint256 variable  (Slither line:3008)
+RETURN node expression: (numerator + denominator - 1) / denominator (Slither line:3028)
+Checking function: calcRateFromQty (Slither line:2988)
+calcRateFromQty returns uint256 variable  (Slither line:3008)
+RETURN node expression: ((destAmount * PRECISION * (10 ** (srcDecimals - dstDecimals))) / srcAmount) (Slither line:3028)
+RETURN node expression: ((destAmount * PRECISION) / ((10 ** (dstDecimals - srcDecimals)) * srcAmount)) (Slither line:3028)
+Checking function: getDecimalsConstant (Slither line:2988)
+getDecimalsConstant returns uint256 variable  (Slither line:3008)
+RETURN node expression: 18 (Slither line:3028)
+RETURN node expression: 6 (Slither line:3028)
+RETURN node expression: ETH_DECIMALS (Slither line:3028)
+RETURN node expression: 6 (Slither line:3028)
+RETURN node expression: 18 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 8 (Slither line:3028)
+Checking function: minOf (Slither line:2988)
+minOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: y (Slither line:3028)
+RETURN node expression: x (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End SmartWalletStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin SmartWalletProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION is a Variable object
+0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+Checking function: constructor (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: withdrawToken (Slither line:2988)
+Checking function: withdrawEther (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: transferAdmin (Slither line:2988)
+Checking function: transferAdminQuickly (Slither line:2988)
+Checking function: claimAdmin (Slither line:2988)
+Checking function: getSetDecimals (Slither line:2988)
+getSetDecimals returns uint256 variable called tokenDecimals (Slither line:3008)
+RETURN node expression: tokenDecimals (Slither line:3028)
+Checking function: getBalance (Slither line:2988)
+getBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: user.balance (Slither line:3028)
+RETURN node expression: token.balanceOf(user) (Slither line:3028)
+Checking function: getDecimals (Slither line:2988)
+getDecimals returns uint256 variable called tokenDecimals (Slither line:3008)
+RETURN node expression: tokenDecimals (Slither line:3028)
+RETURN node expression: token.decimals() (Slither line:3028)
+RETURN node expression: tokenDecimals (Slither line:3028)
+Checking function: calcDestAmount (Slither line:2988)
+calcDestAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: calcDstQty(srcAmount,getDecimals(src),getDecimals(dest),rate) (Slither line:3028)
+Checking function: calcSrcAmount (Slither line:2988)
+calcSrcAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: calcSrcQty(destAmount,getDecimals(src),getDecimals(dest),rate) (Slither line:3028)
+Checking function: calcDstQty (Slither line:2988)
+calcDstQty returns uint256 variable  (Slither line:3008)
+RETURN node expression: (srcQty * rate) / (PRECISION * (10 ** (srcDecimals - dstDecimals))) (Slither line:3028)
+RETURN node expression: (srcQty * rate * (10 ** (dstDecimals - srcDecimals))) / PRECISION (Slither line:3028)
+Checking function: calcSrcQty (Slither line:2988)
+calcSrcQty returns uint256 variable  (Slither line:3008)
+RETURN node expression: (numerator + denominator - 1) / denominator (Slither line:3028)
+Checking function: calcRateFromQty (Slither line:2988)
+calcRateFromQty returns uint256 variable  (Slither line:3008)
+RETURN node expression: ((destAmount * PRECISION * (10 ** (srcDecimals - dstDecimals))) / srcAmount) (Slither line:3028)
+RETURN node expression: ((destAmount * PRECISION) / ((10 ** (dstDecimals - srcDecimals)) * srcAmount)) (Slither line:3028)
+Checking function: getDecimalsConstant (Slither line:2988)
+getDecimalsConstant returns uint256 variable  (Slither line:3008)
+RETURN node expression: 18 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 6 (Slither line:3028)
+RETURN node expression: 8 (Slither line:3028)
+RETURN node expression: 18 (Slither line:3028)
+RETURN node expression: ETH_DECIMALS (Slither line:3028)
+RETURN node expression: 6 (Slither line:3028)
+Checking function: minOf (Slither line:2988)
+minOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: x (Slither line:3028)
+RETURN node expression: y (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable called impl (Slither line:3008)
+implementation contains assembly (Slither line:3051)
+implementation contains assembly (Slither line:3051)
+implementation contains assembly (Slither line:3051)
+
+End SmartWalletProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: SmartWalletProxy (Slither line:1285)
+
+End SmartWalletProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: SmartWalletProxy
+Setter found in contract SmartWalletProxy
+impl_address_from_contract_call: 0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+impl_address_from_contract_call: StateVariable IMPLEMENTATION
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: EnumerableSet.add
+library call: SafeERC20.safeTransfer
+library call: Address.isContract
+library call: EnumerableSet.length
+library call: Address.functionCall
+library call: EnumerableSet.remove
+library call: EnumerableSet.at
+impl_address_from_contract_call: CallExpression implementation().delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression sload(uint256)(slot)
+impl_address_from_contract_call: arg is slot
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking external function withdrawToken
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking external function withdrawEther
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking public function transferAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking public function transferAdminQuickly
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking public function claimAdmin
+Checking external function withdrawToken
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking external function withdrawEther
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking public function transferAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking public function transferAdminQuickly
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking public function claimAdmin
+Checking public function implementation
+Checking external function updateNewImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking external function updateSupportedSwaps
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking external function getAllSupportedSwaps
+Checking external function updateSupportedLendings
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking external function getAllSupportedLendings
+Checking external function updateSupportedPlatformWallets
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only admin)
+Checking external function getAllSupportedPlatformWallets
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION
+functions_writing_to_variable: checking function SmartWalletProxy.getDecimals (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy._setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_implementation)
+functions_writing_to_variable: _setImplementation writes _implementation to IMPLEMENTATION using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function SmartWalletProxy.getAllSupportedPlatformWallets (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.withdrawEther (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.minOf (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.transferAdminQuickly (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.updateNewImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_implementation)
+functions_writing_to_variable: updateNewImplementation writes _implementation to IMPLEMENTATION using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function SmartWalletProxy.calcSrcQty (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.updateSupportedSwaps (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.claimAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_implementation)
+functions_writing_to_variable: constructor writes _implementation to IMPLEMENTATION using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function SmartWalletProxy.getDecimalsConstant (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.getAllSupportedSwaps (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.calcDstQty (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.calcDestAmount (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.updateSupportedLendings (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.getSetDecimals (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.calcSrcAmount (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.getAllSupportedLendings (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.getBalance (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.withdrawToken (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.calcRateFromQty (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.transferAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.updateSupportedPlatformWallets (proxy_features line:898)
+functions_writing_to_variable: checking function SmartWalletProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = ETH_TOKEN_ADDRESS = IERC20Ext(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ETH_TOKEN_ADDRESS = IERC20Ext(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE) (proxy_features line:912)
+functions_writing_to_variable: exp = USDT_TOKEN_ADDRESS = IERC20Ext(0xdAC17F958D2ee523a2206206994597C13D831ec7) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: USDT_TOKEN_ADDRESS = IERC20Ext(0xdAC17F958D2ee523a2206206994597C13D831ec7) (proxy_features line:912)
+functions_writing_to_variable: exp = DAI_TOKEN_ADDRESS = IERC20Ext(0x6B175474E89094C44Da98b954EedeAC495271d0F) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: DAI_TOKEN_ADDRESS = IERC20Ext(0x6B175474E89094C44Da98b954EedeAC495271d0F) (proxy_features line:912)
+functions_writing_to_variable: exp = USDC_TOKEN_ADDRESS = IERC20Ext(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: USDC_TOKEN_ADDRESS = IERC20Ext(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) (proxy_features line:912)
+functions_writing_to_variable: exp = WBTC_TOKEN_ADDRESS = IERC20Ext(0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: WBTC_TOKEN_ADDRESS = IERC20Ext(0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) (proxy_features line:912)
+functions_writing_to_variable: exp = KNC_TOKEN_ADDRESS = IERC20Ext(0xdd974D5C2e2928deA5F71b9825b8b646686BD200) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: KNC_TOKEN_ADDRESS = IERC20Ext(0xdd974D5C2e2928deA5F71b9825b8b646686BD200) (proxy_features line:912)
+functions_writing_to_variable: exp = BPS = 10000 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: BPS = 10000 (proxy_features line:912)
+functions_writing_to_variable: exp = PRECISION = (10 ** 18) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: PRECISION = (10 ** 18) (proxy_features line:912)
+functions_writing_to_variable: exp = MAX_QTY = (10 ** 28) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAX_QTY = (10 ** 28) (proxy_features line:912)
+functions_writing_to_variable: exp = MAX_RATE = (PRECISION * 10 ** 7) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAX_RATE = (PRECISION * 10 ** 7) (proxy_features line:912)
+functions_writing_to_variable: exp = MAX_DECIMALS = 18 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAX_DECIMALS = 18 (proxy_features line:912)
+functions_writing_to_variable: exp = ETH_DECIMALS = 18 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ETH_DECIMALS = 18 (proxy_features line:912)
+functions_writing_to_variable: exp = MAX_ALLOWANCE = uint256(- 1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAX_ALLOWANCE = uint256(- 1) (proxy_features line:912)
+functions_writing_to_variable: exp = _NOT_ENTERED = 1 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _NOT_ENTERED = 1 (proxy_features line:912)
+functions_writing_to_variable: exp = _ENTERED = 2 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _ENTERED = 2 (proxy_features line:912)
+functions_writing_to_variable: exp = MAX_AMOUNT = type()(uint256).max (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAX_AMOUNT = type()(uint256).max (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION = 0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION = 0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99 (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION = 0x7cf58d76330f82325c2a503c72b55abca3eb533fadde43d95e3c0cceb1583e99
+functions_writing_to_variable: checking function SmartWalletProxy.constructor (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking external function updateNewImplementation
+require(bool,string)(_implementation.isContract(),non-contract address)
+has_compatibility_checks: condition _implementation.isContract()
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+require(bool,string)(msg.sender == admin,only admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation().delegatecall(msg.data)
+Found public function: constructor
+Found external function: withdrawToken
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_implementation.isContract(),non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,only admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ImplementationUpdated(_implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,_implementation)

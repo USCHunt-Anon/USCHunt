@@ -1,0 +1,348 @@
+
+Begin EtherDeltaI.is_proxy (Slither line:1425)
+
+
+End EtherDeltaI.is_proxy (Slither line:1428)
+
+
+Begin EtherDeltaI.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EtherDeltaI 
+
+End EtherDeltaI.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KeyValueStorage.is_proxy (Slither line:1425)
+
+
+End KeyValueStorage.is_proxy (Slither line:1428)
+
+
+Begin KeyValueStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KeyValueStorage 
+
+End KeyValueStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageStateful.is_proxy (Slither line:1425)
+
+
+End StorageStateful.is_proxy (Slither line:1428)
+
+
+Begin StorageStateful.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageStateful 
+
+End StorageStateful.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageConsumer.is_proxy (Slither line:1425)
+
+
+End StorageConsumer.is_proxy (Slither line:1428)
+
+
+Begin StorageConsumer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageConsumer 
+
+End StorageConsumer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Exchange.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Exchange.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Exchange.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking keyValueStorage (Slither line:1689)
+Checking admin (Slither line:1689)
+Checking feeAccount (Slither line:1689)
+Checking etherDeltaInfo (Slither line:1689)
+Checking feeTake (Slither line:1689)
+Checking etherDelta (Slither line:1689)
+Checking typeHash (Slither line:1689)
+Checking nonceCheck (Slither line:1689)
+Checking currentNonce (Slither line:1689)
+Checking tokens (Slither line:1689)
+Checking orders (Slither line:1689)
+Checking orderFills (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking proposedImplementation (Slither line:1689)
+Checking proposedTimestamp (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in Exchange.fallback (Slither line:1707)
+Expression: getImplementation() (Slither line:1719)
+
+Begin Exchange.find_delegate_from_call_exp
+
+getImplementation() (Slither line:1993)
+called = getImplementation (Slither line:2000)
+Return node of function Exchange.getImplementation(): RETURN implementation (Slither line:2031)
+implementation (Slither line:2038)
+getImplementation returns a variable of type address   called implementation (Slither line:2183)
+
+End Exchange.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Exchange.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Exchange.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Exchange.is_proxy (Slither line:1476)
+
+
+Begin Exchange.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Exchange 
+Exchange is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Exchange.find_setter_in_contract (Slither line:3109)
+
+Checking function: Exchange(address,address,address,address,bytes32,uint256,address) returns() (Slither line:3117)
+Checking function: getImplementation() returns(address) (Slither line:3117)
+Visibility: public
+implementation
+Checking function: proposeUpgrade(address) returns() (Slither line:3117)
+Visibility: public
+proposedTimestamp = now + 1209600
+is an Assignment Operation (Slither line:3206)
+require(bool)(implementation != _proposedImplementation)
+UpgradedProposed(proposedImplementation,now)
+require(bool)(_proposedImplementation != address(0))
+require(bool)(msg.sender == admin)
+proposedImplementation = _proposedImplementation
+is an Assignment Operation (Slither line:3206)
+onlyAdmin()
+Checking function: upgrade() returns() (Slither line:3117)
+Visibility: public
+require(bool)(proposedImplementation != address(0))
+require(bool)(proposedTimestamp < now)
+onlyAdmin()
+require(bool)(msg.sender == admin)
+implementation = proposedImplementation
+is an Assignment Operation (Slither line:3206)
+
+End Exchange.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgrade in contract: Exchange (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Exchange.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+proposedImplementation
+Checking function: mul (Slither line:2978)
+mul returns uint256 variable  (Slither line:2998)
+RETURN node expression: c (Slither line:3018)
+Checking function: sub (Slither line:2978)
+sub returns uint256 variable  (Slither line:2998)
+RETURN node expression: a - b (Slither line:3018)
+Checking function: add (Slither line:2978)
+add returns uint256 variable  (Slither line:2998)
+RETURN node expression: c (Slither line:3018)
+Checking function: StorageConsumer (Slither line:2978)
+Checking function: Exchange (Slither line:2978)
+Checking function: getImplementation (Slither line:2978)
+getImplementation returns address variable  (Slither line:2998)
+RETURN node expression: implementation (Slither line:3018)
+
+End Exchange.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: getImplementation in contract: Exchange (Slither line:1285)
+
+End Exchange.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function getImplementation
+Checking public function proposeUpgrade
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function upgrade
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Exchange.upgrade (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool)(proposedImplementation != address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(proposedTimestamp < now) (proxy_features line:904)
+functions_writing_to_variable: exp = implementation = proposedImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = proposedImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = proposedImplementation
+functions_writing_to_variable: exp = Upgraded(implementation) (proxy_features line:904)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:904)
+functions_writing_to_variable: upgrade writes proposedImplementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function Exchange.mul (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.StorageConsumer (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.Exchange (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool)(_implementation != address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = admin = _admin (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: admin = _admin (proxy_features line:907)
+functions_writing_to_variable: exp = feeAccount = _feeAccount (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: feeAccount = _feeAccount (proxy_features line:907)
+functions_writing_to_variable: exp = feeTake = _feeTake (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: feeTake = _feeTake (proxy_features line:907)
+functions_writing_to_variable: exp = typeHash = _typeHash (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: typeHash = _typeHash (proxy_features line:907)
+functions_writing_to_variable: exp = etherDelta = _etherDelta (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: etherDelta = _etherDelta (proxy_features line:907)
+functions_writing_to_variable: exp = etherDeltaInfo.feeMake = EtherDeltaI(etherDelta).feeMake() (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: etherDeltaInfo.feeMake = EtherDeltaI(etherDelta).feeMake() (proxy_features line:907)
+functions_writing_to_variable: exp = etherDeltaInfo.feeTake = EtherDeltaI(etherDelta).feeTake() (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: etherDeltaInfo.feeTake = EtherDeltaI(etherDelta).feeTake() (proxy_features line:907)
+functions_writing_to_variable: exp = StorageConsumer(_storageAddress) (proxy_features line:904)
+functions_writing_to_variable: Exchange writes _implementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function Exchange.add (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.proposeUpgrade (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.sub (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.getImplementation (proxy_features line:893)
+has_compatibility_checks: dependencies: ['proposedImplementation', '_implementation']
+functions_writing_to_variable: proposedImplementation
+functions_writing_to_variable: checking function Exchange.upgrade (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.mul (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.StorageConsumer (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.Exchange (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.add (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.proposeUpgrade (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool)(implementation != _proposedImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(_proposedImplementation != address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = proposedImplementation = _proposedImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proposedImplementation = _proposedImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: proposedImplementation (proxy_features line:919)
+get_value_assigned: proposedImplementation = _proposedImplementation
+functions_writing_to_variable: exp = proposedTimestamp = now + 1209600 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proposedTimestamp = now + 1209600 (proxy_features line:907)
+functions_writing_to_variable: exp = UpgradedProposed(proposedImplementation,now) (proxy_features line:904)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:904)
+functions_writing_to_variable: proposeUpgrade writes _proposedImplementation to proposedImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function Exchange.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.sub (proxy_features line:893)
+functions_writing_to_variable: checking function Exchange.getImplementation (proxy_features line:893)
+has_compatibility_checks: checking public function upgrade
+require(bool)(proposedImplementation != address(0))
+has_compatibility_checks: condition proposedImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition proposedImplementation != address(0)
+require(bool)(proposedTimestamp < now)
+has_compatibility_checks: condition proposedTimestamp < now
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: checking public function Exchange
+require(bool)(_implementation != address(0))
+has_compatibility_checks: condition _implementation != address(0)
+check_condition_from_expression: condition _implementation != address(0)
+require(bool)(_storageAddress != address(0))
+has_compatibility_checks: condition _storageAddress != address(0)
+has_compatibility_checks: checking public function proposeUpgrade
+require(bool)(implementation != _proposedImplementation)
+has_compatibility_checks: condition implementation != _proposedImplementation
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition proposedImplementation != _proposedImplementation
+require(bool)(_proposedImplementation != address(0))
+has_compatibility_checks: condition _proposedImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _proposedImplementation != address(0)
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = getImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: StorageConsumer
+Found public function: Exchange
+Found public function: getImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(proposedImplementation != address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(proposedTimestamp < now)
+has_time_delay: found condition using `now`: proposedTimestamp < now
+has_time_delay: comparing (Identifier) proposedTimestamp to now
+has_time_delay: function proposeUpgrade assigns now + 1209600 to proposedTimestamp
+has_time_delay: assigned (BinaryOperation) now + 1209600
+delay_duration_from_binary_operation: (BinaryOperation) now + 1209600
+delay_duration_from_binary_operation: right side (Literal) 2
+has_time_delay: time delay = 2 weeks

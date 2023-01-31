@@ -1,0 +1,140 @@
+
+Begin MSMProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+implementation (Slither line:2739)
+Identifier (Slither line:2742)
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End MSMProxy.is_proxy (Slither line:1476)
+
+
+Begin MSMProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MSMProxy 
+Local Variable: _implementation (Slither line:1164)
+MSMProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin MSMProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: implementation (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: deploy(address) returns() (Slither line:3117)
+Visibility: public
+onlyAdmin(msg.sender)
+implementation = _delegateAddress
+is an Assignment Operation (Slither line:3206)
+implementation
+
+End MSMProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: deploy in contract: MSMProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin MSMProxy.find_getter_in_contract (Slither line:2964)
+
+_implementation is a Variable object
+_delegateAddress
+Checking function: constructor (Slither line:2978)
+Checking function: deploy (Slither line:2978)
+Checking function: getFunctionByte (Slither line:2978)
+getFunctionByte returns bytes variable called data (Slither line:2998)
+RETURN node expression: _data (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+Checking function: getBalance (Slither line:2978)
+getBalance returns uint256 variable called balance (Slither line:2998)
+RETURN node expression: address(this).balance (Slither line:3018)
+
+End MSMProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in MSMProxy (Slither line:1305)
+
+End MSMProxy.is_upgradeable_proxy (Slither line:1407)
+
+detect_storage_slot: MSMProxy
+_implementation is dependent on implementation
+Expression for _implementation: _delegateAddress
+_delegateAddress.expression is None
+impl_address_from_contract_call: _delegateAddress
+Checking public function deploy
+Checking public function deploy
+Checking public function getFunctionByte
+Checking public function getBalance
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function MSMProxy.getFunctionByte (proxy_features line:893)
+functions_writing_to_variable: checking function MSMProxy.deploy (proxy_features line:893)
+functions_writing_to_variable: checking function MSMProxy.getBalance (proxy_features line:893)
+functions_writing_to_variable: checking function MSMProxy.constructor (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_delegateAddress', '_delegateAddress', 'implementation']
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function MSMProxy.getFunctionByte (proxy_features line:893)
+functions_writing_to_variable: checking function MSMProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function MSMProxy.deploy (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = _delegateAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = _delegateAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = _delegateAddress
+functions_writing_to_variable: exp = onlyAdmin(msg.sender) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(admin == _admin,Not Admin) (proxy_features line:904)
+functions_writing_to_variable: deploy writes _delegateAddress to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function MSMProxy.getBalance (proxy_features line:893)
+functions_writing_to_variable: checking function MSMProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = admin = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: admin = msg.sender (proxy_features line:907)
+functions_writing_to_variable: exp = implementation = _delegateAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = _delegateAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = _delegateAddress
+functions_writing_to_variable: constructor writes _delegateAddress to implementation (proxy_features line:924)
+has_compatibility_checks: checking public function deploy
+require(bool,string)(admin == _admin,Not Admin)
+has_compatibility_checks: condition admin == _admin
+has_compatibility_checks: checking public function constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: _implementation.delegatecall(msg.data)
+Found public function: constructor
+Found public function: deploy
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin(msg.sender)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _delegateAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(admin == _admin,Not Admin)

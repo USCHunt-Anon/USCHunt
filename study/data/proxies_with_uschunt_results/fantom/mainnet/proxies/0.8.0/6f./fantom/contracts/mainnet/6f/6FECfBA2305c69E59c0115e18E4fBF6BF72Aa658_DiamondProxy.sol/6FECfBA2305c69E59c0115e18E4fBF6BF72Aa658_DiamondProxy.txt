@@ -1,0 +1,202 @@
+
+Begin DiamondProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DiamondProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'facet'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin DiamondProxy.find_delegate_variable_from_name
+Searching for facet (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking facet (Slither line:1703)
+facet is a Local Variable in DiamondProxy.fallback (Slither line:1707)
+facet appears to be a Diamond facet address (Slither line:1713)
+
+End DiamondProxy.find_delegate_variable_by_name
+
+
+End DiamondProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End DiamondProxy.is_proxy (Slither line:1476)
+
+
+Begin DiamondProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DiamondProxy 
+Local Variable: facet (Slither line:1164)
+DiamondProxy is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin DiamondProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: ds.facets[msg.sig].facetAddress (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+require(bool,string)
+enforceHasContractCode
+OwnershipTransferred
+require(bool,string)
+DiamondCut
+require(bool,string)
+addFunctions
+require(bool,string)
+require(bool,string)
+require(bool,string)
+enforceHasContractCode
+require(bool,string)
+replaceFunctions
+require(bool,string)
+removeFunctions
+revert(string)
+require(bool,string)
+require(bool,string)
+ds.selectors.push
+LibDiamond.setContractOwner
+require(bool,string)
+require(bool,string)
+Assignment to bytes4[]: functionSelectors[0] = IDiamondCutter.diamondCut.selector
+Assigning function selector for IDiamondCutter.diamondCut
+member of (Identifier): IDiamondCutter
+Diamond corner case: found setter diamondCut
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End DiamondProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: diamondCut in contract: IDiamondCutter (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DiamondProxy.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+ds.facets[msg.sig].facetAddress
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+
+End DiamondProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in DiamondProxy (Slither line:1305)
+
+Begin LibDiamond.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+ds.facets[msg.sig].facetAddress
+Checking function: diamondStorage (Slither line:2988)
+diamondStorage returns LibDiamond.DiamondStorage variable called ds (Slither line:3008)
+Checking function: setContractOwner (Slither line:2988)
+Checking function: contractOwner (Slither line:2988)
+contractOwner returns address variable called contractOwner_ (Slither line:3008)
+Checking function: enforceIsContractOwner (Slither line:2988)
+Checking function: diamondCut (Slither line:2988)
+Checking function: addFunctions (Slither line:2988)
+Checking function: replaceFunctions (Slither line:2988)
+Checking function: removeFunctions (Slither line:2988)
+Checking function: enforceHasContractCode (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End LibDiamond.find_getter_in_contract (Slither line:3083)
+
+Looking for Loupe functions in LibDiamond
+diamondStorage() returns(LibDiamond.DiamondStorage)
+setContractOwner(address) returns()
+contractOwner() returns(address)
+enforceIsContractOwner() returns()
+diamondCut(IDiamondCutter.FacetCut[]) returns()
+addFunctions(address,bytes4[]) returns()
+replaceFunctions(address,bytes4[]) returns()
+removeFunctions(address,bytes4[]) returns()
+enforceHasContractCode(address,string) returns()
+slitherConstructorConstantVariables() returns()
+impl_address_from_contract_call: ds.facets[msg.sig].facetAddress
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: facet
+functions_writing_to_variable: checking function DiamondProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function IDiamondCutter.diamondCut (proxy_features line:898)
+functions_writing_to_variable: checking function DiamondProxy.constructor (proxy_features line:898)
+get_value_assigned: ds.facets[selector].facetAddress = _facetAddress
+functions_writing_to_variable: constructor writes _facetAddress to ds.facets[selector].facetAddress (proxy_features line:1038)
+has_compatibility_checks: dependencies: ['REF_12', 'REF_10', 'ds', 'ds', 'REF_11']
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(facet != address(0),Signature can't be Zero)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: facet = ds.facets[msg.sig].facetAddress
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: ds = LibDiamond.diamondStorage()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found fallback
+Found external function: receive
+
+Begin LibDiamond.is_proxy (Slither line:1425)
+
+
+End LibDiamond.is_proxy (Slither line:1428)
+
+
+Begin LibDiamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibDiamond 
+
+End LibDiamond.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDiamondCutter.is_proxy (Slither line:1425)
+
+
+End IDiamondCutter.is_proxy (Slither line:1428)
+
+
+Begin IDiamondCutter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondCutter 
+
+End IDiamondCutter.is_upgradeable_proxy (Slither line:1407)
+

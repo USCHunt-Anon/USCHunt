@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TokenBattleProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/proxies_to_reanalyze/0.8.0/1f./bsc/contracts/testnet/1f/1F98866adA6298388A20ee3AFC5f45268a2cbd60_TokenBattleProxy.sol/1F98866adA6298388A20ee3AFC5f45268a2cbd60_TokenBattleProxy.sol#7-37)",
+        "elements": [],
+        "description": "TokenBattleProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/proxies_to_reanalyze/0.8.0/1f./bsc/contracts/testnet/1f/1F98866adA6298388A20ee3AFC5f45268a2cbd60_TokenBattleProxy.sol/1F98866adA6298388A20ee3AFC5f45268a2cbd60_TokenBattleProxy.sol#7-37) is an upgradeable proxy.\n0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 (UUPS) with slot = keccak256('PROXIABLE')\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCode from TokenBattle\n",
+        "id": "114e1e721acf06b9f9cdaabe34749a7e1b91b9b7685cca4a6d3de98bb45186e1",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TokenBattleProxy.0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "impl_address_setter": "TokenBattle.updateCode(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "TokenBattleProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/proxies_to_reanalyze/0.8.0/1f./bsc/contracts/testnet/1f/1F98866adA6298388A20ee3AFC5f45268a2cbd60_TokenBattleProxy.sol/1F98866adA6298388A20ee3AFC5f45268a2cbd60_TokenBattleProxy.sol#7-37)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TokenBattle.updateCode(address)": {
+                "check": "require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              },
+              "TokenBattleProxy.constructor(bytes,address)": {
+                "check": "require(bool,string)(contractLogic.delegatecall(constructData),Construction failed)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCode from TokenBattle"
+        }
+      }
+    ]
+  }
+}

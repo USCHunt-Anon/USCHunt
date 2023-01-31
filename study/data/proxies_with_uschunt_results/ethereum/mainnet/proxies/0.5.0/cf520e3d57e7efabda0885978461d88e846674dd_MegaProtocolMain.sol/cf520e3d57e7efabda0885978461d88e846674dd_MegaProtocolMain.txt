@@ -1,0 +1,162 @@
+
+Begin MegaProtocolMain.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MegaProtocolMain.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), contractAddr, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'contractAddr'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin MegaProtocolMain.find_delegate_variable_from_name
+Searching for contractAddr (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking targetAddress (Slither line:1689)
+Checking admin (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking contractAddr (Slither line:1703)
+contractAddr is a Local Variable in MegaProtocolMain.fallback (Slither line:1707)
+Expression: targetAddress (Slither line:1719)
+Identifier value: targetAddress (Slither line:1725)
+targetAddress is a State Variable in contract MegaProtocolMain (Slither line:1730)
+
+End MegaProtocolMain.find_delegate_variable_by_name
+
+
+End MegaProtocolMain.find_delegatecall_in_asm (Slither line:1637)
+
+
+End MegaProtocolMain.is_proxy (Slither line:1476)
+
+
+Begin MegaProtocolMain.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MegaProtocolMain 
+MegaProtocolMain is delegating to targetAddress
+Looking for setter (Slither line:1200)
+
+
+Begin MegaProtocolMain.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setTargetAddress(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == admin,Admin only function)
+require(bool)(_address != address(0))
+targetAddress = _address
+is an Assignment Operation (Slither line:3216)
+
+End MegaProtocolMain.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setTargetAddress in contract: MegaProtocolMain (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin MegaProtocolMain.find_getter_in_contract (Slither line:2974)
+
+targetAddress is a Variable object
+_address
+Checking function: constructor (Slither line:2988)
+Checking function: setTargetAddress (Slither line:2988)
+Checking function: getContAdr (Slither line:2988)
+getContAdr returns address variable  (Slither line:3008)
+RETURN node expression: targetAddress (Slither line:3028)
+
+End MegaProtocolMain.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getContAdr in contract: MegaProtocolMain (Slither line:1285)
+
+End MegaProtocolMain.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function setTargetAddress
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Admin only function)
+Checking public function getContAdr
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Admin only function)
+Checking public function setTargetAddress
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Admin only function)
+Checking public function getContAdr
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Admin only function)
+Checking external function fallback
+functions_writing_to_variable: targetAddress
+functions_writing_to_variable: checking function MegaProtocolMain.getContAdr (proxy_features line:898)
+functions_writing_to_variable: checking function MegaProtocolMain.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function MegaProtocolMain.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = targetAddress = 0xF512577913e931926e1332afa2e5F22A7b441ED0 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: targetAddress = 0xF512577913e931926e1332afa2e5F22A7b441ED0 (proxy_features line:912)
+functions_writing_to_variable: Identifier: targetAddress (proxy_features line:924)
+get_value_assigned: targetAddress = 0xF512577913e931926e1332afa2e5F22A7b441ED0
+functions_writing_to_variable: exp = admin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: checking function MegaProtocolMain.setTargetAddress (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,Admin only function) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(_address != address(0)) (proxy_features line:909)
+functions_writing_to_variable: exp = targetAddress = _address (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: targetAddress = _address (proxy_features line:912)
+functions_writing_to_variable: Identifier: targetAddress (proxy_features line:924)
+get_value_assigned: targetAddress = _address
+functions_writing_to_variable: setTargetAddress writes _address to targetAddress (proxy_features line:929)
+has_compatibility_checks: dependencies: ['_address']
+has_compatibility_checks: checking public function setTargetAddress
+require(bool,string)(msg.sender == admin,Admin only function)
+has_compatibility_checks: condition msg.sender == admin
+require(bool)(_address != address(0))
+has_compatibility_checks: condition _address != address(0)
+check_condition_from_expression: condition _address != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), contractAddr, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: contractAddr = targetAddress
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: setTargetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,Admin only function)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_address != address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) targetAddress = _address

@@ -1,0 +1,390 @@
+
+Begin Comitium.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Comitium.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'facet'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Comitium.find_delegate_variable_from_name
+Searching for facet (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking facet (Slither line:1703)
+facet is a Local Variable in Comitium.fallback (Slither line:1707)
+facet appears to be a Diamond facet address (Slither line:1713)
+
+End Comitium.find_delegate_variable_by_name
+
+
+End Comitium.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Comitium.is_proxy (Slither line:1476)
+
+
+Begin Comitium.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Comitium 
+Local Variable: facet (Slither line:1164)
+Comitium is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin Comitium.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig].facetAddress)) (Slither line:3122)
+Checking function: constructor(IDiamondCut.FacetCut[],address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+require(bool,string)
+enforceHasContractCode
+revert(string)
+require(bool,string)
+require(bool,string)
+require(bool,string)
+OwnershipTransferred
+require(bool,string)
+require(bool,string)
+require(bool,string)
+require(bool,string)
+require(bool,string)
+ds.selectors.pop
+require(bool,string)
+require(bool,string)
+enforceHasContractCode
+require(bool,string)
+LibDiamond.diamondCut
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End Comitium.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: diamondCut in contract: LibDiamond (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Comitium.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig].facetAddress))
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+
+End Comitium.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Comitium (Slither line:1305)
+
+Begin IDiamondCut.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig].facetAddress))
+
+End IDiamondCut.find_getter_in_contract (Slither line:3083)
+
+Looking for Loupe functions in LibDiamond
+diamondCut(IDiamondCut.FacetCut[],address,bytes) returns()
+executeDiamondCut(uint256,IDiamondCut.FacetCut) returns(uint256)
+_handleAddCut(uint256,IDiamondCut.FacetCut) returns(uint256)
+_handleReplaceCut(uint256,IDiamondCut.FacetCut) returns(uint256)
+_handleRemoveCut(uint256,IDiamondCut.FacetCut) returns(uint256)
+initializeDiamondCut(address,bytes) returns()
+enforceHasContractCode(address,string) returns()
+Looking for Loupe functions in LibOwnership
+setContractOwner(address) returns()
+contractOwner() returns(address)
+enforceIsContractOwner() returns()
+Looking for Loupe functions in LibDiamondStorage
+diamondStorage() returns(LibDiamondStorage.DiamondStorage)
+slitherConstructorConstantVariables() returns()
+impl_address_from_contract_call: address(bytes20(ds.facets[msg.sig].facetAddress))
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: facet
+functions_writing_to_variable: checking function LibDiamond._handleAddCut (proxy_features line:898)
+functions_writing_to_variable: checking function LibDiamond._handleRemoveCut (proxy_features line:898)
+functions_writing_to_variable: checking function LibDiamond.enforceHasContractCode (proxy_features line:898)
+functions_writing_to_variable: checking function LibDiamond.executeDiamondCut (proxy_features line:898)
+functions_writing_to_variable: checking function LibDiamond._handleReplaceCut (proxy_features line:898)
+functions_writing_to_variable: checking function Comitium.receive (proxy_features line:898)
+functions_writing_to_variable: checking function LibDiamond.initializeDiamondCut (proxy_features line:898)
+functions_writing_to_variable: checking function Comitium.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function LibDiamond.diamondCut (proxy_features line:898)
+has_compatibility_checks: dependencies: ['REF_17', 'REF_16', 'REF_18', 'ds', 'TMP_14', 'ds', 'TMP_15']
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(facet != address(0),Diamond: Function does not exist)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: facet = address(bytes20(ds.facets[msg.sig].facetAddress))
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: ds = LibDiamondStorage.diamondStorage()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found fallback
+Found external function: receive
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(cut.facetAddress != address(0),LibDiamond: remove facet address can't be address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) enforceHasContractCode(cut.facetAddress,LibDiamond: remove facet must have code)
+has_time_delay: (node.type) RETURN
+(Expression) _handleReplaceCut(selectorCount,cut)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ds = LibDiamondStorage.diamondStorage()
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(LibDiamondCut: Incorrect FacetCutAction)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(cut.facetAddress == address(0),LibDiamond: remove facet address must be address(0))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ds = LibDiamondStorage.diamondStorage()
+has_time_delay: (node.type) RETURN
+(Expression) _handleRemoveCut(selectorCount,cut)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(contractSize > 0,_errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) contractSize = extcodesize(uint256)(_contract)
+has_time_delay: (node.type) IF_LOOP
+(Expression) selectorIndex < cut.functionSelectors.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex ++
+has_time_delay: (node.type) IF_LOOP
+(Expression) selectorIndex < cut.functionSelectors.length
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = cut.functionSelectors[selectorIndex]
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex ++
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldFacetAddress = ds.facets[selector].facetAddress
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = cut.functionSelectors[selectorIndex]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacetAddress != address(this),LibDiamondCut: Can't replace immutable function)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = DIAMOND_STORAGE_POSITION
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacetAddress != cut.facetAddress,LibDiamondCut: Can't replace function with same function)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldFacet = ds.facets[selector]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacetAddress != address(0),LibDiamondCut: Can't replace function that doesn't exist)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacet.facetAddress != address(0),LibDiamondCut: Can't remove function that doesn't exist)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facets[selector].facetAddress = cut.facetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacet.facetAddress != address(this),LibDiamondCut: Can't remove immutable function.)
+has_time_delay: (node.type) IF
+(Expression) oldFacet.selectorPosition != selectorCount - 1
+has_time_delay: (node.type) RETURN
+(Expression) selectorCount
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.selectors.pop()
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds = position
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastSelector = ds.selectors[selectorCount - 1]
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.selectors[oldFacet.selectorPosition] = lastSelector
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facets[lastSelector].selectorPosition = oldFacet.selectorPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) delete ds.facets[selector]
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorCount --
+has_time_delay: (node.type) IF
+(Expression) _init == address(0)
+has_time_delay: (node.type) RETURN
+(Expression) selectorCount
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_calldata.length > 0,LibDiamondCut: _calldata is empty but _init is not address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_calldata.length == 0,LibDiamondCut: _init is address(0) but _calldata is not empty)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ds = LibDiamondStorage.diamondStorage()
+has_time_delay: (node.type) IF
+(Expression) _init != address(this)
+has_time_delay: (node.type) IF
+(Expression) ! success
+has_time_delay: (node.type) EXPRESSION
+(Expression) enforceHasContractCode(_init,LibDiamondCut: _init address has no code)
+has_time_delay: (node.type) IF_LOOP
+(Expression) selectorIndex < cut.functionSelectors.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,error) = _init.delegatecall(_calldata)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selectorCount = LibDiamondStorage.diamondStorage().selectors.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex ++
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = cut.functionSelectors[selectorIndex]
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldFacetAddress = ds.facets[selector].facetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldFacetAddress == address(0),LibDiamondCut: Can't add function that already exists)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(cut.functionSelectors.length > 0,LibDiamond: No selectors in facet to cut)
+has_time_delay: (node.type) IF
+(Expression) error.length > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.facets[selector] = LibDiamondStorage.Facet(cut.facetAddress,uint16(selectorCount))
+has_time_delay: (node.type) IF
+(Expression) cut.action == IDiamondCut.FacetCutAction.Add
+has_time_delay: (node.type) EXPRESSION
+(Expression) ds.selectors.push(selector)
+has_time_delay: (node.type) IF_LOOP
+(Expression) facetIndex < _diamondCut.length
+has_time_delay: (node.type) IF
+(Expression) cut.action == IDiamondCut.FacetCutAction.Replace
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorCount ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(string(error))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(cut.facetAddress != address(0),LibDiamond: add facet address can't be address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(LibDiamondCut: _init function reverted)
+has_time_delay: (node.type) EXPRESSION
+(Expression) facetIndex ++
+has_time_delay: (node.type) RETURN
+(Expression) selectorCount
+has_time_delay: (node.type) EXPRESSION
+(Expression) enforceHasContractCode(cut.facetAddress,LibDiamond: add facet must have code)
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorCount = executeDiamondCut(selectorCount,_diamondCut[facetIndex])
+has_time_delay: (node.type) RETURN
+(Expression) _handleAddCut(selectorCount,cut)
+has_time_delay: (node.type) EXPRESSION
+(Expression) DiamondCut(_diamondCut,_init,_calldata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) initializeDiamondCut(_init,_calldata)
+has_time_delay: (node.type) IF
+(Expression) cut.action == IDiamondCut.FacetCutAction.Remove
+
+Begin IDiamondCut.is_proxy (Slither line:1425)
+
+
+End IDiamondCut.is_proxy (Slither line:1428)
+
+
+Begin IDiamondCut.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondCut 
+
+End IDiamondCut.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDiamondLoupe.is_proxy (Slither line:1425)
+
+
+End IDiamondLoupe.is_proxy (Slither line:1428)
+
+
+Begin IDiamondLoupe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondLoupe 
+
+End IDiamondLoupe.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibDiamond.is_proxy (Slither line:1425)
+
+
+End LibDiamond.is_proxy (Slither line:1428)
+
+
+Begin LibDiamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibDiamond 
+
+End LibDiamond.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibOwnership.is_proxy (Slither line:1425)
+
+
+End LibOwnership.is_proxy (Slither line:1428)
+
+
+Begin LibOwnership.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibOwnership 
+
+End LibOwnership.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibDiamondStorage.is_proxy (Slither line:1425)
+
+
+End LibDiamondStorage.is_proxy (Slither line:1428)
+
+
+Begin LibDiamondStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibDiamondStorage 
+
+End LibDiamondStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC165.is_proxy (Slither line:1425)
+
+
+End IERC165.is_proxy (Slither line:1428)
+
+
+Begin IERC165.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC165 
+
+End IERC165.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC173.is_proxy (Slither line:1425)
+
+
+End IERC173.is_proxy (Slither line:1428)
+
+
+Begin IERC173.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC173 
+
+End IERC173.is_upgradeable_proxy (Slither line:1407)
+

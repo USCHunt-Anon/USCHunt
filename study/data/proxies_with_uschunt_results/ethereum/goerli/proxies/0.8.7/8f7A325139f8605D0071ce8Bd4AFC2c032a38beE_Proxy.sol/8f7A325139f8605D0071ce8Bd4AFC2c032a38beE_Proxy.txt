@@ -1,0 +1,216 @@
+
+Begin Storage.is_proxy (Slither line:1425)
+
+
+End Storage.is_proxy (Slither line:1428)
+
+
+Begin Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Storage 
+
+End Storage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking store (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking impl (Slither line:1800)
+impl is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(0,0) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()()) (Slither line:1819)
+CallExpression: CallMade(Storage(store).delegate(),msg.data,msg.value) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0x0,calldatasize()(),0x0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0x0,calldatasize()(),0x0,0) (Slither line:1819)
+CallExpression: _delegate(Storage(store).delegate()) (Slither line:1819)
+Found where _delegate is called: _delegate(Storage(store).delegate()) (Slither line:1832)
+The value passed to parameter #0 is Storage(store).delegate() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+Storage(store).delegate() (Slither line:1993)
+called = Storage(store).delegate (Slither line:2000)
+Called member of Storage(store) (Slither line:2007)
+
+Begin Proxy.find_delegate_from_member_access
+
+Expression: Storage(store).delegate() (Slither line:2348)
+Storage(store) (Slither line:2361)
+delegate is a member of the contract type: Storage (Slither line:2406)
+Looking for delegate in Storage (Slither line:2513)
+
+End Proxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End Proxy.find_delegate_from_call_exp (Slither line:2009)
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to delegate
+Looking for setter (Slither line:1200)
+
+Looking for setter in Storage (Slither line:1204)
+
+
+Begin Storage.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: setDelegate(address) returns() (Slither line:3117)
+Visibility: public
+delegate = _impl
+is an Assignment Operation (Slither line:3206)
+
+End Storage.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setDelegate in contract: Storage (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Storage.find_getter_in_contract (Slither line:2964)
+
+delegate is a Variable object
+_impl
+Checking function: constructor (Slither line:2978)
+Checking function: setDelegate (Slither line:2978)
+
+End Storage.find_getter_in_contract (Slither line:3073)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+delegate is a Variable object
+_impl
+Checking function: constructor (Slither line:2978)
+Checking function: upgradeDelegate (Slither line:2978)
+Checking function: _delegate (Slither line:2978)
+Checking function: _beforeFallback (Slither line:2978)
+Checking function: _fallback (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: receive (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+or in Storage (Slither line:1319)
+
+Begin Storage.find_getter_in_contract (Slither line:2964)
+
+delegate is a Variable object
+_impl
+Checking function: constructor (Slither line:2978)
+Checking function: setDelegate (Slither line:2978)
+
+End Storage.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: _impl
+impl_address_from_contract_call: StateVariable delegate
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,0)
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression CallMade(Storage(store).delegate(),msg.data,msg.value)
+impl_address_from_contract_call: arg is Storage(store).delegate()
+impl_address_from_contract_call: CallExpression Storage(store).delegate()
+found MemberAccess calling getter in another contract: Storage(store).delegate()
+called: Storage(store).delegate
+found MemberAccess: Storage(store).delegate
+TypeConversion: Storage(store)
+find_registry_address_source: Storage(store).delegate()
+MemberAccess: Storage(store).delegate
+TypeConversion: Storage(store)
+Identifier: store
+Checking public function upgradeDelegate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == Storage(store).owner())
+Checking public function upgradeDelegate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == Storage(store).owner())
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: delegate
+functions_writing_to_variable: checking function Proxy.upgradeDelegate (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Storage.setDelegate (proxy_features line:893)
+functions_writing_to_variable: exp = delegate = _impl (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: delegate = _impl (proxy_features line:907)
+functions_writing_to_variable: Identifier: delegate (proxy_features line:919)
+get_value_assigned: delegate = _impl
+functions_writing_to_variable: setDelegate writes _impl to delegate (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Storage.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy._beforeFallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy._delegate (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_impl']
+has_compatibility_checks: checking public function setDelegate
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0x0,calldatasize()(),0x0,0)
+Found public function: constructor
+Found public function: upgradeDelegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegate = _impl

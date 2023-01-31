@@ -1,0 +1,227 @@
+
+Begin Upgradeable.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Upgradeable.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Upgradeable.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Upgradeable.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_implementation'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Upgradeable.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_STORAGE_SLOT (Slither line:1689)
+Checking AUTHENTICATION_STORAGE_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _implementation (Slither line:1703)
+_implementation is a Local Variable in Upgradeable.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Upgradeable.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+AssignmentOperation: _implementation = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: IMPLEMENTATION_STORAGE_SLOT (Slither line:2140)
+implementation returns a variable of type address   called _implementation (Slither line:2193)
+implementation contains assembly - looking for sload (Slither line:2199)
+
+End Upgradeable.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End Upgradeable.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Upgradeable.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Upgradeable._delegate_variable = Upgradeable._proxy_impl_slot: IMPLEMENTATION_STORAGE_SLOT (Slither line:1473)
+
+
+End Upgradeable.is_proxy (Slither line:1476)
+
+
+Begin Upgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Upgradeable 
+Call destination IMPLEMENTATION_STORAGE_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_STORAGE_SLOT is the implementation storage slot (Slither line:1149)
+
+Upgradeable is delegating to IMPLEMENTATION_STORAGE_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin Upgradeable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: authentication() returns(address) (Slither line:3127)
+Visibility: public
+authentication contains assembly (Slither line:3153)
+_authentication = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+implementation contains assembly (Slither line:3153)
+_implementation = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: upgrade(address) returns(address) (Slither line:3127)
+Visibility: public
+from
+sstore(uint256,uint256)(slot,_implementation)
+sstore(uint256,uint256)
+
+End Upgradeable.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgrade in contract: Upgradeable (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Upgradeable.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_STORAGE_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: authentication (Slither line:2988)
+authentication returns address variable called _authentication (Slither line:3008)
+authentication contains assembly (Slither line:3051)
+authentication contains assembly (Slither line:3051)
+authentication contains assembly (Slither line:3051)
+authentication contains assembly (Slither line:3051)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable called _implementation (Slither line:3008)
+implementation contains assembly (Slither line:3051)
+implementation contains assembly (Slither line:3051)
+
+End Upgradeable.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Upgradeable (Slither line:1285)
+
+End Upgradeable.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Upgradeable
+Setter found in contract Upgradeable
+Checking public function authentication
+Checking public function implementation
+Checking public function upgrade
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == authentication(),Upgradeable.auth.EID00001)
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_STORAGE_SLOT
+functions_writing_to_variable: checking function Upgradeable.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_implementation)
+functions_writing_to_variable: constructor writes _implementation to IMPLEMENTATION_STORAGE_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Upgradeable._setimplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_implementation)
+functions_writing_to_variable: _setimplementation writes _implementation to IMPLEMENTATION_STORAGE_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Upgradeable.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.upgrade (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_implementation)
+functions_writing_to_variable: upgrade writes _implementation to IMPLEMENTATION_STORAGE_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Upgradeable._setauthentication (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.authentication (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_STORAGE_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_STORAGE_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_STORAGE_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_STORAGE_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = AUTHENTICATION_STORAGE_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: AUTHENTICATION_STORAGE_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _setimplementation
+has_compatibility_checks: checking public function upgrade
+require(bool,string)(msg.sender == authentication(),Upgradeable.auth.EID00001)
+has_compatibility_checks: condition msg.sender == authentication()
+require(bool,string)(_implementation != address(0),Upgradeable.upgrade.EID00090)
+has_compatibility_checks: condition _implementation != address(0)
+check_condition_from_expression: modifier calls: ['auth()']
+check_condition_from_expression: condition _implementation != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+Found public function: constructor
+Found public function: authentication
+has_time_delay: (node.type) RETURN
+(Expression) from
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) from = _setimplementation(_implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_STORAGE_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,_implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgrade(msg.sender,from,_implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = AUTHENTICATION_STORAGE_SLOT
+has_time_delay: (node.type) RETURN
+(Expression) from
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = sload(uint256)(slot)
+has_time_delay: (node.type) EXPRESSION
+(Expression) auth()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _authentication = sload(uint256)(slot)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) from = implementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == authentication(),Upgradeable.auth.EID00001)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_STORAGE_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_implementation != address(0),Upgradeable.upgrade.EID00090)

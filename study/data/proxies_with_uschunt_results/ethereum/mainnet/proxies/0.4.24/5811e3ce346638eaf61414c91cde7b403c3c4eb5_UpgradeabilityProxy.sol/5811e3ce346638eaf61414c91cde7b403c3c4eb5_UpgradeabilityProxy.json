@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol#48-80)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol#48-80) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol#107-129)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol#107-129) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "a4e31676ebc6a278fcd2416bec24c586a0edd55af60bf1ef2e498cc3039cf1a6",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityStorage._implementation",
+          "impl_address_setter": "UpgradeabilityProxy.upgradeTo(string,string,address)",
+          "impl_address_getter": "UpgradeabilityStorage.implementation()",
+          "impl_address_location": "UpgradeabilityStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol/5811e3ce346638eaf61414c91cde7b403c3c4eb5_UpgradeabilityProxy.sol#87-101)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradeabilityProxy.upgradeTo(string,string,address)": {
+                "check": "require(bool)(_impl != address(0))",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "implementation()",
+              "upgradeTo(string,string,address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

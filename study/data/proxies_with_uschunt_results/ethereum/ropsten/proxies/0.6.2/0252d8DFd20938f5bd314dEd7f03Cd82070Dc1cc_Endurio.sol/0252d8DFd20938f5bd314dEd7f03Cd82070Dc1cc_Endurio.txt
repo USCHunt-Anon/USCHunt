@@ -1,0 +1,574 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DataStructure.is_proxy (Slither line:1425)
+
+
+End DataStructure.is_proxy (Slither line:1428)
+
+
+Begin DataStructure.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DataStructure 
+
+End DataStructure.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Endurio.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Endurio.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_36213_143_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Endurio.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Endurio.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(impl != address(0x0),function not exist) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+impl != address(0x0)
+function not exist
+
+End Endurio.find_delegatecall_in_exp_node (Slither line:2848)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Endurio.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Endurio.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking impls (Slither line:1689)
+Checking config (Slither line:1689)
+Checking brands (Slither line:1689)
+Checking ENDURIO_MEMO_HASH (Slither line:1689)
+Checking ENDURIO_PAYRATE (Slither line:1689)
+Checking nodes (Slither line:1689)
+Checking rewards (Slither line:1689)
+Checking COM_RATE_UNIT (Slither line:1689)
+Checking CUTBACK_RATE_UNIT (Slither line:1689)
+Checking CUTBACK_RATE_CUSTOM (Slither line:1689)
+Checking CUTBACK_RATE_MASK (Slither line:1689)
+Checking _balances (Slither line:1689)
+Checking _allowances (Slither line:1689)
+Checking _totalSupply (Slither line:1689)
+Checking FULL_ALLOWANCE (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Endurio._delegate (Slither line:1805)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: impls[msg.sig] (Slither line:1811)
+CallExpression: require(bool,string)(impl != address(0x0),function not exist) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,size__delegate_asm_0) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,size__delegate_asm_0) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Endurio.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Return node of function Endurio._implementation(): RETURN impl (Slither line:2031)
+impl (Slither line:2038)
+_implementation returns a variable of type address   called impl (Slither line:2183)
+Return value is LocalVariable: impl (Slither line:2256)
+Return expression: impls[msg.sig] (Slither line:2260)
+
+End Endurio.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Endurio.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Endurio.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Endurio.is_proxy (Slither line:1476)
+
+
+Begin Endurio.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Endurio 
+Endurio is delegating to impls
+Looking for setter (Slither line:1200)
+
+Looking for setter in DataStructure (Slither line:1204)
+
+
+Begin DataStructure.find_setter_in_contract (Slither line:3109)
+
+Checking function: receive() returns() (Slither line:3117)
+Checking function: slitherConstructorVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+End DataStructure.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in DataStructure 
+Looking in Endurio (Slither line:1213)
+
+Begin Endurio.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address,address) returns() (Slither line:3117)
+Checking function: mustDelegateCall(address,bytes) returns() (Slither line:3117)
+Visibility: internal
+Checking function: transfer(address,uint256,bytes) returns(bool) (Slither line:3117)
+Visibility: external
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+true
+require(bool,string)(b <= a,errorMessage)
+c
+msg.sender
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_transfer(_msgSender(),recipient,amount)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+Checking function: setImplementation(bytes32,address) returns() (Slither line:3117)
+Visibility: external
+Implementation(sign,impl)
+require(bool,string)(msg.sender == config.owner,!owner)
+impls[bytes4(sign)] = impl
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+
+End Endurio.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: Endurio (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DataStructure.find_getter_in_contract (Slither line:2964)
+
+impls is a Variable object
+impl
+Checking function: receive (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End DataStructure.find_getter_in_contract (Slither line:3073)
+
+
+Begin Endurio.find_getter_in_contract (Slither line:2964)
+
+impls is a Variable object
+impl
+Checking function: name (Slither line:2978)
+name returns string variable  (Slither line:2998)
+RETURN node expression: Endurio (Slither line:3018)
+Checking function: symbol (Slither line:2978)
+symbol returns string variable  (Slither line:2998)
+RETURN node expression: END (Slither line:3018)
+Checking function: decimals (Slither line:2978)
+decimals returns uint8 variable  (Slither line:2998)
+RETURN node expression: 18 (Slither line:3018)
+Checking function: totalSupply (Slither line:2978)
+totalSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: _totalSupply (Slither line:3018)
+Checking function: balanceOf (Slither line:2978)
+balanceOf returns uint256 variable  (Slither line:2998)
+RETURN node expression: _balances[account] (Slither line:3018)
+Checking function: transfer (Slither line:2978)
+transfer returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: allowance (Slither line:2978)
+allowance returns uint256 variable  (Slither line:2998)
+RETURN node expression: _allowances[owner][spender] (Slither line:3018)
+Checking function: approve (Slither line:2978)
+approve returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: transferFrom (Slither line:2978)
+transferFrom returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: increaseAllowance (Slither line:2978)
+increaseAllowance returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: decreaseAllowance (Slither line:2978)
+decreaseAllowance returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: _transfer (Slither line:2978)
+Checking function: _mint (Slither line:2978)
+Checking function: _burn (Slither line:2978)
+Checking function: _approve (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+Checking function: receive (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: mustDelegateCall (Slither line:2978)
+Checking function: transfer (Slither line:2978)
+transfer returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: setImplementation (Slither line:2978)
+Checking function: setImplementations (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: setOwner (Slither line:2978)
+Checking function: setRoot (Slither line:2978)
+Checking function: setComRate (Slither line:2978)
+Checking function: setRentScale (Slither line:2978)
+Checking function: getGlobalConfig (Slither line:2978)
+getGlobalConfig returns address variable called owner (Slither line:2998)
+getGlobalConfig returns address variable called root (Slither line:2998)
+getGlobalConfig returns uint256 variable called comRate (Slither line:2998)
+getGlobalConfig returns uint256 variable called rentScale (Slither line:2998)
+RETURN node expression: (config.owner,config.root,config.comRate,config.rentScale) (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+Checking function: _implementation (Slither line:2978)
+_implementation returns address variable  (Slither line:2998)
+RETURN node expression: impl (Slither line:3018)
+Checking function: _delegate (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End Endurio.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Endurio (Slither line:1305)
+or in DataStructure (Slither line:1319)
+Checking for impls at slot 0 in contract Token (Slither line:1355)
+Found _balances at slot 0 in contract Token (Slither line:1362)
+Checking for _balances at slot 0 in contract DataStructure (Slither line:1355)
+Found impls at slot 0 in contract DataStructure (Slither line:1362)
+
+Begin DataStructure.find_getter_in_contract (Slither line:2964)
+
+impls is a Variable object
+impl
+Checking function: receive (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End DataStructure.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable impls
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool,string)(impl != address(0x0),function not exist)
+impl_address_from_contract_call: arg is impl != address(0x0)
+impl_address_from_contract_call: arg is function not exist
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,size__delegate_asm_0)
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is size__delegate_asm_0
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,size__delegate_asm_0)
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is size__delegate_asm_0
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,size__delegate_asm_0)
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is size__delegate_asm_0
+Checking public function name
+Checking public function symbol
+Checking public function decimals
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function allowance
+Checking public function approve
+Checking public function transferFrom
+Checking public function increaseAllowance
+Checking public function decreaseAllowance
+Checking external function totalSupply
+Checking external function balanceOf
+Checking external function transfer
+Checking external function allowance
+Checking external function approve
+Checking external function transferFrom
+Checking external function transfer
+Checking external function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == config.owner,!owner)
+Checking external function setImplementations
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == config.owner,!owner)
+Checking external function setOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == config.owner,!owner)
+Checking external function setRoot
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == config.root || msg.sender == config.owner,!root)
+Checking external function setComRate
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == config.root || msg.sender == config.owner,!root)
+Checking external function setRentScale
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == config.root || msg.sender == config.owner,!root)
+Checking external function getGlobalConfig
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: impls
+functions_writing_to_variable: checking function Endurio.setRentScale (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.setImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.slitherConstructorVariables (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._msgData (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.getGlobalConfig (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._mint (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.setImplementations (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.symbol (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.totalSupply (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.allowance (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.decreaseAllowance (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = impls[bytes4(sign)] = impl (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[bytes4(sign)] = impl (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[bytes4(sign)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[bytes4(sign)] = impl
+functions_writing_to_variable: exp = Implementation(sign,impl) (proxy_features line:904)
+functions_writing_to_variable: _setImplementation writes impl to impls (proxy_features line:924)
+functions_writing_to_variable: checking function Endurio.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.decimals (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.allowance (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._msgSender (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = config.owner = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: config.owner = msg.sender (proxy_features line:907)
+functions_writing_to_variable: exp = config.root = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: config.root = msg.sender (proxy_features line:907)
+functions_writing_to_variable: exp = mustDelegateCall(implBrandMarket,0x8129fc1c) (proxy_features line:904)
+functions_writing_to_variable: exp = impls[0x0af77eb1] = implBrandMarket (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0x0af77eb1] = implBrandMarket (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0x0af77eb1] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0x0af77eb1] = implBrandMarket
+functions_writing_to_variable: exp = impls[0x22eee84c] = implBrandMarket (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0x22eee84c] = implBrandMarket (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0x22eee84c] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0x22eee84c] = implBrandMarket
+functions_writing_to_variable: exp = impls[0x56cb121d] = implBrandMarket (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0x56cb121d] = implBrandMarket (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0x56cb121d] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0x56cb121d] = implBrandMarket
+functions_writing_to_variable: exp = impls[0xf9fcd029] = implPoR (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0xf9fcd029] = implPoR (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0xf9fcd029] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0xf9fcd029] = implPoR
+functions_writing_to_variable: exp = impls[0xf4b0bafa] = implPoR (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0xf4b0bafa] = implPoR (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0xf4b0bafa] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0xf4b0bafa] = implPoR
+functions_writing_to_variable: exp = impls[0x7a0ca1e2] = implRefNetwork (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0x7a0ca1e2] = implRefNetwork (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0x7a0ca1e2] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0x7a0ca1e2] = implRefNetwork
+functions_writing_to_variable: exp = impls[0xe5d9c0ad] = implRefNetwork (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0xe5d9c0ad] = implRefNetwork (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0xe5d9c0ad] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0xe5d9c0ad] = implRefNetwork
+functions_writing_to_variable: exp = impls[0xd4fc9fc6] = implRefNetwork (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0xd4fc9fc6] = implRefNetwork (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0xd4fc9fc6] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0xd4fc9fc6] = implRefNetwork
+functions_writing_to_variable: exp = impls[0xdffb35bb] = implRefNetwork (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0xdffb35bb] = implRefNetwork (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0xdffb35bb] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0xdffb35bb] = implRefNetwork
+functions_writing_to_variable: exp = impls[0x09812fe2] = implRefNetwork (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: impls[0x09812fe2] = implRefNetwork (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: impls[0x09812fe2] (proxy_features line:915)
+functions_writing_to_variable: Identifier: impls (proxy_features line:919)
+get_value_assigned: impls[0x09812fe2] = implRefNetwork
+functions_writing_to_variable: constructor writes implRefNetwork to impls (proxy_features line:924)
+functions_writing_to_variable: checking function Endurio._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._burn (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.setRoot (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.totalSupply (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.mustDelegateCall (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.approve (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._transfer (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.increaseAllowance (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.setComRate (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.name (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio.approve (proxy_features line:893)
+functions_writing_to_variable: checking function Endurio._approve (proxy_features line:893)
+has_compatibility_checks: dependencies: ['implRefNetwork', 'impl', 'impl', 'implPoR', 'impl', 'implBrandMarket']
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = ! ok
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: name
+has_time_delay: (node.type) EXPRESSION
+(Expression) Implementation(sign,impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == config.owner,!owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) impls[bytes4(sign)] = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(sign,impl)

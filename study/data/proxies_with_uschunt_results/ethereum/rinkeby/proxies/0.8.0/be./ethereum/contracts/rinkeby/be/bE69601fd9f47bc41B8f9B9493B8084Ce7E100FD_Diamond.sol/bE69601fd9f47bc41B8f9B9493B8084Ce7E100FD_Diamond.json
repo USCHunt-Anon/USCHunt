@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Diamond (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/be./ethereum/contracts/rinkeby/be/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol#14-72)",
+        "elements": [],
+        "description": "Diamond (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/be./ethereum/contracts/rinkeby/be/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol#14-72) is an upgradeable proxy.\nfacet is declared in the proxy.\nselectorToFacetAndPosition maps function signatures to addresses, suggesting multiple implementations.\nselectorToFacetAndPosition is stored in the structure specified by EIP-2535: LibDiamond.DiamondStorage\nLoupe functions located in missing\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete the LibDiamond facet\n",
+        "id": "7e01590b19b5598b2c1ddeea31b209aacd91f6093a29055c5fa3d827570a3cd4",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Diamond.fallback().facet",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Diamond (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/be./ethereum/contracts/rinkeby/be/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol#14-72)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => LibDiamond.FacetAddressAndPosition)",
+          "impl_mapping_from_msg_sig": true,
+          "diamond_storage": true,
+          "diamond_storage_location": "LibDiamond (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/be./ethereum/contracts/rinkeby/be/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol/bE69601fd9f47bc41B8f9B9493B8084Ce7E100FD_Diamond.sol#129-142)",
+          "eip_2535": true,
+          "diamond_loupe_facets": {
+            "facets() returns(IDiamondLoupe.Facet[])": "missing",
+            "facetAddresses() returns(address[])": "missing",
+            "facetAddress(bytes4) returns(address)": "missing",
+            "facetFunctionSelectors(address) returns(bytes4[])": "missing"
+          },
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)": {
+                "check": "require(bool,string)(_facetAddress != address(this),LibDiamondCut: Can't remove immutable function)",
+                "is_correct": true
+              },
+              "Diamond.constructor(address,IDiamondCut.FacetCut[],Diamond.Initialization[])": {
+                "check": "require(bool,string)(_facetAddress != address(this),LibDiamondCut: Can't remove immutable function)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove LibDiamond facet"
+        }
+      }
+    ]
+  }
+}

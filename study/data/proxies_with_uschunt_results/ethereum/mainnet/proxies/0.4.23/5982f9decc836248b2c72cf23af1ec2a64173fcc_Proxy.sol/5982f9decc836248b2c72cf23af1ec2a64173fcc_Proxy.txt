@@ -1,0 +1,245 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxied.is_proxy (Slither line:1425)
+
+
+End Proxied.is_proxy (Slither line:1428)
+
+
+Begin Proxied.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxied 
+
+End Proxied.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking target (Slither line:1689)
+Checking initialized (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: target (Slither line:1719)
+Identifier value: target (Slither line:1725)
+target is a State Variable in contract Proxied (Slither line:1730)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to target
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxied (Slither line:1204)
+
+
+Begin Proxied.find_setter_in_contract (Slither line:3119)
+
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+Checking function: Ownable() returns() (Slither line:3127)
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+
+End Proxied.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxied 
+Looking in Proxy (Slither line:1213)
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool)(msg.sender == owner)
+target = _target
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxied.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+_target
+Checking function: Ownable (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End Proxied.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+_target
+Checking function: Ownable (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: upgradeTo (Slither line:2988)
+Checking function: upgradeTo (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+or in Proxied (Slither line:1319)
+Checking for target at slot 1 in contract Proxied (Slither line:1355)
+Found target at slot 1 in contract Proxied (Slither line:1362)
+
+Begin Proxied.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+_target
+Checking function: Ownable (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End Proxied.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _target
+impl_address_from_contract_call: StateVariable target
+impl_address_from_contract_call: getter is None
+Checking public function upgradeTo
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: target
+functions_writing_to_variable: checking function Proxy.Ownable (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:898)
+get_value_assigned: target = _target
+functions_writing_to_variable: upgradeTo writes _target to target (proxy_features line:1013)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+get_value_assigned: target = _target
+functions_writing_to_variable: constructor writes _target to target (proxy_features line:1013)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = assert(bool)(target != _target) (proxy_features line:909)
+functions_writing_to_variable: exp = oldTarget = target (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldTarget = target (proxy_features line:912)
+functions_writing_to_variable: exp = target = _target (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:912)
+functions_writing_to_variable: Identifier: target (proxy_features line:924)
+get_value_assigned: target = _target
+functions_writing_to_variable: exp = EventUpgrade(_target,oldTarget,msg.sender) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes _target to target (proxy_features line:929)
+has_compatibility_checks: dependencies: ['_target', '_target', '_target']
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+assert(bool)(target != _target)
+has_compatibility_checks: condition target != _target
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition _target != _target
+assert(bool)(target.delegatecall(_data))
+has_compatibility_checks: condition target.delegatecall(_data)
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+assert(bool)(target != _target)
+has_compatibility_checks: condition target != _target
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition _target != _target
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = target
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+Found public function: upgradeTo
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldTarget = target
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) target = _target
+has_time_delay: (node.type) EXPRESSION
+(Expression) assert(bool)(target != _target)
+has_time_delay: (node.type) EXPRESSION
+(Expression) EventUpgrade(_target,oldTarget,msg.sender)

@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/c767ab76EA7400C0fCEd77aBe125F695969411f3_OwnedUpgradeabilityProxy.sol/c767ab76EA7400C0fCEd77aBe125F695969411f3_OwnedUpgradeabilityProxy.sol#8-180)",
+        "elements": [],
+        "description": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/c767ab76EA7400C0fCEd77aBe125F695969411f3_OwnedUpgradeabilityProxy.sol/c767ab76EA7400C0fCEd77aBe125F695969411f3_OwnedUpgradeabilityProxy.sol#8-180) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(com.ibg.proxy.implementation)\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: maintenance()\n",
+        "id": "504448d848d180ef535ca5ea8a0e9c9ccf659b3f55e6c29ae8f2e28c4b6c40a8",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OwnedUpgradeabilityProxy.implementationPosition",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "OwnedUpgradeabilityProxy.implementation()",
+          "impl_address_location": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/c767ab76EA7400C0fCEd77aBe125F695969411f3_OwnedUpgradeabilityProxy.sol/c767ab76EA7400C0fCEd77aBe125F695969411f3_OwnedUpgradeabilityProxy.sol#8-180)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(com.ibg.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(currentImplementation != newImplementation,OwnedUpgradeabilityProxy: INVALID)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(currentImplementation != newImplementation,OwnedUpgradeabilityProxy: INVALID)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!maintenance()",
+          "toggle_alternative_logic": "require(bool,string)(msg.sender == proxyOwner(),OwnedUpgradeabilityProxy: FORBIDDEN)",
+          "immutable_functions": {
+            "other": [
+              "maintenance()",
+              "setMaintenance(bool)",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "BlindboxProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/913d90bf7e4A2B1Ae54Bd5179cDE2e7cE712214A_BlindboxProxy.sol/913d90bf7e4A2B1Ae54Bd5179cDE2e7cE712214A_BlindboxProxy.sol#826-956)",
+        "elements": [],
+        "description": "BlindboxProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/913d90bf7e4A2B1Ae54Bd5179cDE2e7cE712214A_BlindboxProxy.sol/913d90bf7e4A2B1Ae54Bd5179cDE2e7cE712214A_BlindboxProxy.sol#826-956) is an upgradeable proxy.\ndelegates was found in a different contract.\ndelegates is a mapping of type mapping(bytes4 => address)\ndelegates maps function signatures to addresses, suggesting multiple implementations.\nMissing compatibility check in BlindboxProxy.updateContract(address,string,string)\nCan toggle delegatecall on/off: condition: msg.sig == bytes4(0) && msg.value != uint256(0)\n",
+        "id": "be582dc121573b917650bba436f0e1f5c80061fe060d79afb4964b62643e2868",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ProxyBaseStorage.delegates",
+          "impl_address_setter": "BlindboxProxy.updateContract(address,string,string)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ProxyBaseStorage (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/913d90bf7e4A2B1Ae54Bd5179cDE2e7cE712214A_BlindboxProxy.sol/913d90bf7e4A2B1Ae54Bd5179cDE2e7cE712214A_BlindboxProxy.sol#597-617)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes4 => address)",
+          "impl_mapping_from_msg_sig": true,
+          "eip_2535": false,
+          "eip_1538": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "BlindboxProxy.updateContract(address,string,string)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "msg.sig != bytes4(0) && msg.value != uint256(0)",
+          "toggle_alternative_logic": "None",
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "updateContract(address,string,string)",
+              "updateContract(address,string,string)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

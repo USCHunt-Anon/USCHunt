@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#148-183)",
+        "elements": [],
+        "description": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#148-183) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "440593137f60d78a987507b62660a98bfae7c1b472301c2b1e475d7063be7232",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#185-216)",
+        "elements": [],
+        "description": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#185-216) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "30490bdc895a1bad2a925d1ede3644a9b8f55ae1e217cc7d434704cf915f9985",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "Hara (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#218-257)",
+        "elements": [],
+        "description": "Hara (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#218-257) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "65bd797b5a6f1babc182f17cdb74693ff8e447becc093a450b816173a6938a8c",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ApprovedEngine.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "Hara.approveTo(address)",
+          "impl_address_getter": "ApprovedEngine._implementation()",
+          "impl_address_location": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol/6961aea135e2c822c3fbb401eab821738179e13f_Hara.sol#185-216)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Hara.approveTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "Hara.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ApprovedEngine.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "approveTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

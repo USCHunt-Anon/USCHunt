@@ -1,0 +1,444 @@
+
+Begin IDefaultImplementationBeacon.is_proxy (Slither line:1425)
+
+
+End IDefaultImplementationBeacon.is_proxy (Slither line:1428)
+
+
+Begin IDefaultImplementationBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDefaultImplementationBeacon 
+
+End IDefaultImplementationBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMapleProxyFactory.is_proxy (Slither line:1425)
+
+
+End IMapleProxyFactory.is_proxy (Slither line:1428)
+
+
+Begin IMapleProxyFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMapleProxyFactory 
+
+End IMapleProxyFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDebtLockerFactory.is_proxy (Slither line:1425)
+
+
+End IDebtLockerFactory.is_proxy (Slither line:1428)
+
+
+Begin IDebtLockerFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDebtLockerFactory 
+
+End IDebtLockerFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IProxied.is_proxy (Slither line:1425)
+
+
+End IProxied.is_proxy (Slither line:1428)
+
+
+Begin IProxied.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IProxied 
+
+End IProxied.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMapleProxied.is_proxy (Slither line:1425)
+
+
+End IMapleProxied.is_proxy (Slither line:1428)
+
+
+Begin IMapleProxied.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMapleProxied 
+
+End IMapleProxied.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMapleGlobalsLike_3.is_proxy (Slither line:1425)
+
+
+End IMapleGlobalsLike_3.is_proxy (Slither line:1428)
+
+
+Begin IMapleGlobalsLike_3.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMapleGlobalsLike_3 
+
+End IMapleGlobalsLike_3.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SlotManipulatable.is_proxy (Slither line:1425)
+
+
+End SlotManipulatable.is_proxy (Slither line:1428)
+
+
+Begin SlotManipulatable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SlotManipulatable 
+
+End SlotManipulatable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(address(uint160(uint256(implementation))).code.length != uint256(0)) (Slither line:2792)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2807)
+Args:
+address(uint160(uint256(implementation))).code.length != uint256(0)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is implementation (Slither line:2818)
+dest.value: implementation (Slither line:2821)
+Expression: _getSlotValue(IMPLEMENTATION_SLOT) (Slither line:2826)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_getSlotValue(IMPLEMENTATION_SLOT) (Slither line:1993)
+called = _getSlotValue (Slither line:2000)
+AssignmentOperation: value_ = sload(uint256)(slot_) (Slither line:2107)
+CallExpression: sload(uint256) (Slither line:2113)
+_getSlotValue returns a variable of type bytes32   called value_ (Slither line:2183)
+_getSlotValue contains assembly - looking for sload (Slither line:2189)
+Looking in EXPRESSION node (Slither line:2228)
+Assignment operation: value_ = sload(uint256)(slot_) (Slither line:2232)
+Found value_ on left side of assignment (Slither line:2237)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking FACTORY_SLOT (Slither line:1689)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking implementation (Slither line:1703)
+implementation is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: _getSlotValue(IMPLEMENTATION_SLOT) (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_getSlotValue(IMPLEMENTATION_SLOT) (Slither line:1993)
+called = _getSlotValue (Slither line:2000)
+AssignmentOperation: value_ = sload(uint256)(slot_) (Slither line:2107)
+CallExpression: sload(uint256) (Slither line:2113)
+_getSlotValue returns a variable of type bytes32   called value_ (Slither line:2183)
+_getSlotValue contains assembly - looking for sload (Slither line:2189)
+Looking in EXPRESSION node (Slither line:2228)
+Assignment operation: value_ = sload(uint256)(slot_) (Slither line:2232)
+Found value_ on left side of assignment (Slither line:2237)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_15306_172_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: value_ = sload(uint256)(slot_) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+slot_
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyFactory.is_proxy (Slither line:1425)
+
+
+End ProxyFactory.is_proxy (Slither line:1428)
+
+
+Begin ProxyFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyFactory 
+
+End ProxyFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MapleProxyFactory.is_proxy (Slither line:1425)
+
+
+End MapleProxyFactory.is_proxy (Slither line:1428)
+
+
+Begin MapleProxyFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MapleProxyFactory 
+
+End MapleProxyFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DebtLockerFactory.is_proxy (Slither line:1425)
+
+
+End DebtLockerFactory.is_proxy (Slither line:1428)
+
+
+Begin DebtLockerFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DebtLockerFactory 
+
+End DebtLockerFactory.is_upgradeable_proxy (Slither line:1407)
+

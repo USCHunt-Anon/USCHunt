@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "VeloxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/8334cb816624897ea69219B857bdDAAB81DE0709_VeloxProxy.sol/8334cb816624897ea69219B857bdDAAB81DE0709_VeloxProxy.sol#96-150)",
+        "elements": [],
+        "description": "VeloxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/8334cb816624897ea69219B857bdDAAB81DE0709_VeloxProxy.sol/8334cb816624897ea69219B857bdDAAB81DE0709_VeloxProxy.sol#96-150) is an upgradeable proxy.\nMAIN_CONTRACT was found in a different contract.\nMAIN_CONTRACT is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "04495ac898059c3ae9b1198cf97fd295580f5e279e8e98de174ef1d2767848ee",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BackingStore.MAIN_CONTRACT",
+          "impl_address_setter": "VeloxProxy.setMainContract(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "BackingStore (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/8334cb816624897ea69219B857bdDAAB81DE0709_VeloxProxy.sol/8334cb816624897ea69219B857bdDAAB81DE0709_VeloxProxy.sol#79-84)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "VeloxProxy.setMainContract(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(addr) > 0,VELOXPROXY_NOT_CONTRACT)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "setAdminAddress(address)",
+              "setMainContract(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

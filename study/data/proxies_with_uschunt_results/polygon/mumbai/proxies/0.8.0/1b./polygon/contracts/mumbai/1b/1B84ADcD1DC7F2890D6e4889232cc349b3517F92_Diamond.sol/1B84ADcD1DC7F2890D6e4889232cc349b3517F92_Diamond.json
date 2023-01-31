@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Diamond (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/1b./polygon/contracts/mumbai/1b/1B84ADcD1DC7F2890D6e4889232cc349b3517F92_Diamond.sol/1B84ADcD1DC7F2890D6e4889232cc349b3517F92_Diamond.sol#14-56)",
+        "elements": [],
+        "description": "Diamond (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/1b./polygon/contracts/mumbai/1b/1B84ADcD1DC7F2890D6e4889232cc349b3517F92_Diamond.sol/1B84ADcD1DC7F2890D6e4889232cc349b3517F92_Diamond.sol#14-56) is an upgradeable proxy.\nfacet is declared in the proxy.\nfacets probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete diamondCut from LibDiamond\n",
+        "id": "3d01670939610fdb4d88ace6bec3c8f2f34e42be416793f9c584a4f301898148",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Diamond.fallback().facet",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Diamond (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/1b./polygon/contracts/mumbai/1b/1B84ADcD1DC7F2890D6e4889232cc349b3517F92_Diamond.sol/1B84ADcD1DC7F2890D6e4889232cc349b3517F92_Diamond.sol#14-56)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => bytes32)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove diamondCut from LibDiamond"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+
+Begin VotingMESH.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VotingMESH.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End VotingMESH.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin VotingMESH.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin VotingMESH.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking governance (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking lockedMESH (Slither line:1689)
+Checking unlockTime (Slither line:1689)
+Checking lockPeriod (Slither line:1689)
+Checking snapShotCount (Slither line:1689)
+Checking snapShotBlock (Slither line:1689)
+Checking snapShotBalance (Slither line:1689)
+Checking mining (Slither line:1689)
+Checking lastMined (Slither line:1689)
+Checking miningIndex (Slither line:1689)
+Checking userLastIndex (Slither line:1689)
+Checking userRewardSum (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking policyAdmin (Slither line:1689)
+Checking paused (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in VotingMESH.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract VotingMESH (Slither line:1730)
+
+End VotingMESH.find_delegate_variable_by_name
+
+
+End VotingMESH.find_delegatecall_in_asm (Slither line:1637)
+
+
+End VotingMESH.is_proxy (Slither line:1476)
+
+
+Begin VotingMESH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VotingMESH 
+VotingMESH is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin VotingMESH.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(string,string,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == governance)
+require(bool)(implementation != _newImp)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End VotingMESH.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: VotingMESH (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin VotingMESH.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VotingMESH.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in VotingMESH (Slither line:1305)
+Checking for implementation at slot 6 in contract VotingMESHImpl (Slither line:1355)
+Found implementation at slot 6 in contract VotingMESHImpl (Slither line:1362)
+
+Begin VotingMESHImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: VotingMESHImpl20220331 (Slither line:3028)
+Checking function: setPolicyAdmin (Slither line:2988)
+Checking function: changePaused (Slither line:2988)
+Checking function: getUserUnlockTime (Slither line:2988)
+getUserUnlockTime returns uint256 variable  (Slither line:3008)
+RETURN node expression: unlockTime[user].add(now.sub(unlockTime[user]).div(lockPeriod[user]).add(1).mul(lockPeriod[user])) (Slither line:3028)
+RETURN node expression: unlockTime[user].add(now.sub(unlockTime[user]).div(lockPeriod[user]).mul(lockPeriod[user])) (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: unlockTime[user] (Slither line:3028)
+Checking function: getCurrentBalance (Slither line:2988)
+getCurrentBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: snapShotBalance[user][index - 1] (Slither line:3028)
+Checking function: getPriorBalance (Slither line:2988)
+getPriorBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: snapShotBalance[user][index - 1] (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: centerBalance (Slither line:3028)
+RETURN node expression: snapShotBalance[user][lower] (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: getPriorSupply (Slither line:2988)
+getPriorSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: snapShotBalance[address(0)][index - 1] (Slither line:3028)
+RETURN node expression: centerBalance (Slither line:3028)
+RETURN node expression: snapShotBalance[address(0)][lower] (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: vMESHAmountByPeriod (Slither line:2988)
+vMESHAmountByPeriod returns uint256 variable  (Slither line:3008)
+RETURN node expression: amount.mul(8) (Slither line:3028)
+RETURN node expression: amount (Slither line:3028)
+RETURN node expression: amount.mul(2) (Slither line:3028)
+RETURN node expression: amount.mul(4) (Slither line:3028)
+Checking function: lockMESH (Slither line:2988)
+Checking function: refixBoosting (Slither line:2988)
+Checking function: unlockMESH (Slither line:2988)
+Checking function: unlockMESHUnlimited (Slither line:2988)
+Checking function: addSnapShot (Slither line:2988)
+Checking function: addSupplySnapShot (Slither line:2988)
+Checking function: setEpochMining (Slither line:2988)
+Checking function: updateMiningIndex (Slither line:2988)
+updateMiningIndex returns uint256 variable  (Slither line:3008)
+RETURN node expression: miningIndex (Slither line:3028)
+Checking function: giveReward (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: compoundReward (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VotingMESHImpl.find_getter_in_contract (Slither line:3083)
+
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function VotingMESH.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESH.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESH._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == governance) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function VotingMESH.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESH.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = name = _name (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: name = _name (proxy_features line:912)
+functions_writing_to_variable: exp = symbol = _symbol (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: symbol = _symbol (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: exp = policyAdmin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: policyAdmin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+has_compatibility_checks: dependencies: ['_newImp', '_implementation', 'TMP_44']
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == governance)
+has_compatibility_checks: condition msg.sender == governance
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == governance)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMESH.is_proxy (Slither line:1425)
+
+
+End IMESH.is_proxy (Slither line:1428)
+
+
+Begin IMESH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMESH 
+
+End IMESH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernance.is_proxy (Slither line:1425)
+
+
+End IGovernance.is_proxy (Slither line:1428)
+
+
+Begin IGovernance.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernance 
+
+End IGovernance.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IPoolVoting.is_proxy (Slither line:1425)
+
+
+End IPoolVoting.is_proxy (Slither line:1428)
+
+
+Begin IPoolVoting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPoolVoting 
+
+End IPoolVoting.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IEcoPotVoting.is_proxy (Slither line:1425)
+
+
+End IEcoPotVoting.is_proxy (Slither line:1428)
+
+
+Begin IEcoPotVoting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IEcoPotVoting 
+
+End IEcoPotVoting.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin VotingMESHImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin VotingMESHImpl.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin VotingMESHImpl.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking governance (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking lockedMESH (Slither line:1689)
+Checking unlockTime (Slither line:1689)
+Checking lockPeriod (Slither line:1689)
+Checking snapShotCount (Slither line:1689)
+Checking snapShotBlock (Slither line:1689)
+Checking snapShotBalance (Slither line:1689)
+Checking mining (Slither line:1689)
+Checking lastMined (Slither line:1689)
+Checking miningIndex (Slither line:1689)
+Checking userLastIndex (Slither line:1689)
+Checking userRewardSum (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking policyAdmin (Slither line:1689)
+Checking paused (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in VotingMESHImpl.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract VotingMESH (Slither line:1730)
+
+End VotingMESHImpl.find_delegate_variable_by_name
+
+
+End VotingMESHImpl.find_delegatecall_in_asm (Slither line:1637)
+
+
+End VotingMESHImpl.is_proxy (Slither line:1476)
+
+
+Begin VotingMESHImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VotingMESHImpl 
+VotingMESHImpl is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in VotingMESH (Slither line:1204)
+
+
+Begin VotingMESH.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImp (Slither line:3122)
+Checking function: constructor(string,string,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == governance)
+require(bool)(implementation != _newImp)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+_newImp
+
+End VotingMESH.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: VotingMESH (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin VotingMESH.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VotingMESH.find_getter_in_contract (Slither line:3083)
+
+
+Begin VotingMESHImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: VotingMESHImpl20220331 (Slither line:3028)
+Checking function: setPolicyAdmin (Slither line:2988)
+Checking function: changePaused (Slither line:2988)
+Checking function: getUserUnlockTime (Slither line:2988)
+getUserUnlockTime returns uint256 variable  (Slither line:3008)
+RETURN node expression: unlockTime[user].add(now.sub(unlockTime[user]).div(lockPeriod[user]).add(1).mul(lockPeriod[user])) (Slither line:3028)
+RETURN node expression: unlockTime[user].add(now.sub(unlockTime[user]).div(lockPeriod[user]).mul(lockPeriod[user])) (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: unlockTime[user] (Slither line:3028)
+Checking function: getCurrentBalance (Slither line:2988)
+getCurrentBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: snapShotBalance[user][index - 1] (Slither line:3028)
+Checking function: getPriorBalance (Slither line:2988)
+getPriorBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: snapShotBalance[user][index - 1] (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: centerBalance (Slither line:3028)
+RETURN node expression: snapShotBalance[user][lower] (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: getPriorSupply (Slither line:2988)
+getPriorSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: snapShotBalance[address(0)][index - 1] (Slither line:3028)
+RETURN node expression: centerBalance (Slither line:3028)
+RETURN node expression: snapShotBalance[address(0)][lower] (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: vMESHAmountByPeriod (Slither line:2988)
+vMESHAmountByPeriod returns uint256 variable  (Slither line:3008)
+RETURN node expression: amount.mul(8) (Slither line:3028)
+RETURN node expression: amount (Slither line:3028)
+RETURN node expression: amount.mul(2) (Slither line:3028)
+RETURN node expression: amount.mul(4) (Slither line:3028)
+Checking function: lockMESH (Slither line:2988)
+Checking function: refixBoosting (Slither line:2988)
+Checking function: unlockMESH (Slither line:2988)
+Checking function: unlockMESHUnlimited (Slither line:2988)
+Checking function: addSnapShot (Slither line:2988)
+Checking function: addSupplySnapShot (Slither line:2988)
+Checking function: setEpochMining (Slither line:2988)
+Checking function: updateMiningIndex (Slither line:2988)
+updateMiningIndex returns uint256 variable  (Slither line:3008)
+RETURN node expression: miningIndex (Slither line:3028)
+Checking function: giveReward (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: compoundReward (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VotingMESHImpl.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in VotingMESHImpl (Slither line:1305)
+or in VotingMESH (Slither line:1319)
+Checking for implementation at slot 6 in contract VotingMESH (Slither line:1355)
+Found implementation at slot 6 in contract VotingMESH (Slither line:1362)
+
+Begin VotingMESH.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VotingMESH.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _newImp
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool)(impl != address(0))
+impl_address_from_contract_call: arg is impl != address(0)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking public function version
+Checking public function setPolicyAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == policyAdmin)
+Checking public function changePaused
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == policyAdmin)
+Checking public function getUserUnlockTime
+Checking public function getCurrentBalance
+Checking public function getPriorBalance
+Checking public function getPriorSupply
+Checking public function lockMESH
+Checking public function refixBoosting
+Checking public function unlockMESH
+Checking public function unlockMESHUnlimited
+Checking public function updateMiningIndex
+Checking public function claimReward
+Checking public function compoundReward
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function VotingMESHImpl.setEpochMining (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.vMESHAmountByPeriod (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.setPolicyAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.updateMiningIndex (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.lockMESH (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESH.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = name = _name (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: name = _name (proxy_features line:912)
+functions_writing_to_variable: exp = symbol = _symbol (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: symbol = _symbol (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: exp = policyAdmin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: policyAdmin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function VotingMESH.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.changePaused (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.giveReward (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.refixBoosting (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESH._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == governance) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function VotingMESH.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.getUserUnlockTime (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.unlockMESH (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == governance) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function VotingMESH.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.getCurrentBalance (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.compoundReward (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.unlockMESHUnlimited (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.getPriorBalance (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.addSnapShot (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.constructor (proxy_features line:898)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function VotingMESHImpl.getPriorSupply (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.addSupplySnapShot (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = name = _name (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: name = _name (proxy_features line:912)
+functions_writing_to_variable: exp = symbol = _symbol (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: symbol = _symbol (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: exp = policyAdmin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: policyAdmin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function VotingMESHImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function VotingMESHImpl.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation', '_newImp', '_implementation', '_newImp', 'TMP_44']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == governance)
+has_compatibility_checks: condition msg.sender == governance
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == governance)
+has_compatibility_checks: condition msg.sender == governance
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == governance)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp

@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Exchange (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.23/66815cf912795774b1cf707d63f2dc866644af93_Exchange.sol/66815cf912795774b1cf707d63f2dc866644af93_Exchange.sol#136-219)",
+        "elements": [],
+        "description": "Exchange (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.23/66815cf912795774b1cf707d63f2dc866644af93_Exchange.sol/66815cf912795774b1cf707d63f2dc866644af93_Exchange.sol#136-219) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "22ff2f3f6f6e62af09db7ae51ee970447881e8ec988bee2cc6560f8ef1415dc7",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Exchange.implementation",
+          "impl_address_setter": "Exchange.upgrade()",
+          "impl_address_getter": "Exchange.getImplementation()",
+          "impl_address_location": "Exchange (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.23/66815cf912795774b1cf707d63f2dc866644af93_Exchange.sol/66815cf912795774b1cf707d63f2dc866644af93_Exchange.sol#136-219)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Exchange.Exchange(address,address,address,address,bytes32,uint256,address)": {
+                "check": "require(bool)(_implementation != address(0))",
+                "is_correct": true
+              },
+              "Exchange.upgrade()": {
+                "check": "require(bool)(proposedImplementation != address(0))",
+                "is_correct": true
+              },
+              "Exchange.proposeUpgrade(address)": {
+                "check": "require(bool)(_proposedImplementation != address(0))",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getImplementation()",
+              "proposeUpgrade(address)",
+              "upgrade()"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "proposedTimestamp < now",
+            "timestamp_variable": "proposedTimestamp",
+            "timestamp_setters": [
+              "Exchange.proposeUpgrade(address)"
+            ],
+            "delay_duration": "2 weeks"
+          }
+        }
+      }
+    ]
+  }
+}

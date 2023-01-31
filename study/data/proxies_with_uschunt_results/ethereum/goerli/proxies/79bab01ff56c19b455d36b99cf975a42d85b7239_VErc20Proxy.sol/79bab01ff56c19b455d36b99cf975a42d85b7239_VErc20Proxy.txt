@@ -1,0 +1,1697 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVBase.is_proxy (Slither line:1425)
+
+
+End IVBase.is_proxy (Slither line:1428)
+
+
+Begin IVBase.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVBase 
+
+End IVBase.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IErc20.is_proxy (Slither line:1425)
+
+
+End IErc20.is_proxy (Slither line:1428)
+
+
+Begin IErc20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IErc20 
+
+End IErc20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVStore.is_proxy (Slither line:1425)
+
+
+End IVStore.is_proxy (Slither line:1428)
+
+
+Begin IVStore.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVStore 
+
+End IVStore.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVErc20.is_proxy (Slither line:1425)
+
+
+End IVErc20.is_proxy (Slither line:1428)
+
+
+Begin IVErc20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVErc20 
+
+End IVErc20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVProxy.is_proxy (Slither line:1425)
+
+
+End IVProxy.is_proxy (Slither line:1428)
+
+
+Begin IVProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVProxy 
+
+End IVProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AVBase.is_proxy (Slither line:1425)
+
+
+End AVBase.is_proxy (Slither line:1428)
+
+
+Begin AVBase.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AVBase 
+
+End AVBase.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AVProxy.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin AVProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_implementationAddress'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin AVProxy.find_delegate_variable_from_name
+Searching for _implementationAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ETHEREUM_MAINNET (Slither line:1689)
+Checking ETHEREUM_GOERLI (Slither line:1689)
+Checking ETHEREUM_KOVAN (Slither line:1689)
+Checking MATIC_MAINNET (Slither line:1689)
+Checking MATIC_MUMBAI (Slither line:1689)
+Checking uint256Storage (Slither line:1689)
+Checking stringStorage (Slither line:1689)
+Checking addressStorage (Slither line:1689)
+Checking bytes32Storage (Slither line:1689)
+Checking boolStorage (Slither line:1689)
+Checking intStorage (Slither line:1689)
+Checking withdrawalArrayStorage (Slither line:1689)
+Checking addressToUnitStorage (Slither line:1689)
+Checking bytes32ToExchangeStorage (Slither line:1689)
+Checking addressToBoolStorage (Slither line:1689)
+Checking addressToAddressStorage (Slither line:1689)
+Checking bytes32ToBoolStorage (Slither line:1689)
+Checking bytes32ToAddressStorage (Slither line:1689)
+Checking addressToAddressToUnitStorage (Slither line:1689)
+Checking addressToAddressToBoolStorage (Slither line:1689)
+Checking bytes32ToAddressToBoolStorage (Slither line:1689)
+Checking addressToBytes32ToBoolStorage (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _implementationAddress (Slither line:1703)
+_implementationAddress is a Local Variable in AVProxy.fallback (Slither line:1707)
+Expression: implementationAddress() (Slither line:1719)
+
+Begin AVProxy.find_delegate_from_call_exp
+
+implementationAddress() (Slither line:1993)
+called = implementationAddress (Slither line:2000)
+Return node of function AVProxy.implementationAddress(): RETURN vStore().getAddress(implementationAddressKey()) (Slither line:2031)
+Encountered call expression at RETURN node: vStore().getAddress(implementationAddressKey()) (Slither line:2043)
+Encountered member access expression: vStore().getAddress (Slither line:2047)
+
+Begin AVProxy.find_delegate_from_member_access
+
+Expression: vStore().getAddress (Slither line:2348)
+vStore() (Slither line:2361)
+Member of call expression result: vStore (Slither line:2364)
+Call to function vStore returns IVStore(addressStorage[key(vStoreProxyAddress)]) (Slither line:2375)
+getAddress is a member of the contract type: IVStore (Slither line:2406)
+Which is an interface (Slither line:2410)
+Could not find a contract that inherits IVStore (Slither line:2431)
+
+End AVProxy.find_delegate_from_call_exp (Slither line:2094)
+
+Call Expression
+End AVProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End AVProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End AVProxy.is_proxy (Slither line:1476)
+
+
+Begin AVProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AVProxy 
+Local Variable: _implementationAddress (Slither line:1164)
+AVProxy is delegating to _implementationAddress
+Looking for setter (Slither line:1200)
+
+
+Begin AVProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: implementationAddress() (Slither line:3112)
+Checking function: constructor(address,address,address,string,address) returns() (Slither line:3117)
+Checking function: implementationAddressKey() returns(string) (Slither line:3117)
+Visibility: internal
+Checking function: implementationAddress() returns(address) (Slither line:3117)
+Visibility: public
+vStore().getAddress(implementationAddressKey())
+stringStorage[key(implementationAddressKey)]
+keccak256(bytes)(abi.encodePacked(_key))
+IVStore(addressStorage[key(vStoreProxyAddress)])
+Checking function: receive() returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: isEthereum() returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: isMatic() returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: key(string) returns(bytes32) (Slither line:3117)
+Visibility: internal
+Checking function: version() returns(string) (Slither line:3117)
+Visibility: public
+1.0
+Checking function: institutionId() returns(string) (Slither line:3117)
+Visibility: public
+keccak256(bytes)(abi.encodePacked(_key))
+stringStorage[key(institutionId)]
+Checking function: vStore() returns(IVStore) (Slither line:3117)
+Visibility: internal
+Checking function: vAddress() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: userAddress() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: recoveryAddress() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: setVAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: public
+i ++
+(begin,end) = spliceTimestamps(signatures.nonce)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+_address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+keccak256(bytes)(abi.encodePacked(_key))
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+addressStorage[key(vAddress)] = _address
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+csv += 27
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+begin = result / 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))
+addressStorage[key(userAddress)]
+result = result * 10 + (b - 48)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i])
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+bytes32ToBoolStorage[key(nonces)][key(nonce)]
+end = result % 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndRecovery - must include user's and recovery's signatures)
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+flagThisNonce(signatures.nonce)
+addresses
+addressStorage[key(recoveryAddress)]
+bytes32ToBoolStorage[key(nonces)][key(nonce)] = true
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(vAddress)]
+i ++
+Checking function: setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: public
+i ++
+(begin,end) = spliceTimestamps(signatures.nonce)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+_address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+keccak256(bytes)(abi.encodePacked(_key))
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+require(bool,string)((signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress()),VBase::onlyRecoveryAndVesto - must include recovery's and Vesto's signatures)
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+csv += 27
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+begin = result / 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(userAddress)]
+result = result * 10 + (b - 48)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i])
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+bytes32ToBoolStorage[key(nonces)][key(nonce)]
+end = result % 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+flagThisNonce(signatures.nonce)
+addresses
+addressStorage[key(recoveryAddress)]
+bytes32ToBoolStorage[key(nonces)][key(nonce)] = true
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(userAddress)] = _address
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))
+addressStorage[key(vAddress)]
+i ++
+Checking function: setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: public
+i ++
+(begin,end) = spliceTimestamps(signatures.nonce)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+_address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+keccak256(bytes)(abi.encodePacked(_key))
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+csv += 27
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+begin = result / 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+addressStorage[key(userAddress)]
+result = result * 10 + (b - 48)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i])
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(recoveryAddress)] = _address
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+bytes32ToBoolStorage[key(nonces)][key(nonce)]
+onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))
+end = result % 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+flagThisNonce(signatures.nonce)
+addresses
+addressStorage[key(recoveryAddress)]
+bytes32ToBoolStorage[key(nonces)][key(nonce)] = true
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndVesto - must include user's and Vesto's signatures)
+addressStorage[key(vAddress)]
+i ++
+Checking function: isOwnerAddress(address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: validateSignatures(AVBase.Signatures) returns(address[2]) (Slither line:3117)
+Visibility: internal
+Checking function: spliceTimestamps(string) returns(uint256,uint256) (Slither line:3117)
+Visibility: private
+Checking function: flagThisNonce(string) returns() (Slither line:3117)
+Visibility: private
+Checking function: isThisNonceUsed(string) returns(bool) (Slither line:3117)
+Visibility: private
+Checking function: convert(IErc20,IErc20,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: setOwnerAddresses(address,address,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: name() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: version() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: institutionId() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: setVAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: external
+Checking function: setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: external
+Checking function: setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: external
+Checking function: implementationAddress() returns(address) (Slither line:3117)
+Visibility: external
+
+End AVProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in AVProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin AVProxy.find_getter_in_contract (Slither line:2964)
+
+_implementationAddress is a Variable object
+implementationAddress()
+Checking function: isEthereum (Slither line:2978)
+isEthereum returns bool variable  (Slither line:2998)
+RETURN node expression: (vStore().chainId() == ETHEREUM_MAINNET || vStore().chainId() == ETHEREUM_KOVAN || vStore().chainId() == ETHEREUM_GOERLI) (Slither line:3018)
+Checking function: isMatic (Slither line:2978)
+isMatic returns bool variable  (Slither line:2998)
+RETURN node expression: (vStore().chainId() == MATIC_MUMBAI || vStore().chainId() == MATIC_MAINNET) (Slither line:3018)
+Checking function: key (Slither line:2978)
+key returns bytes32 variable  (Slither line:2998)
+RETURN node expression: keccak256(bytes)(abi.encodePacked(_key)) (Slither line:3018)
+Checking function: version (Slither line:2978)
+version returns string variable  (Slither line:2998)
+RETURN node expression: 1.0 (Slither line:3018)
+Checking function: institutionId (Slither line:2978)
+institutionId returns string variable  (Slither line:2998)
+RETURN node expression: stringStorage[key(institutionId)] (Slither line:3018)
+Checking function: vStore (Slither line:2978)
+vStore returns IVStore variable  (Slither line:2998)
+Checking function: vAddress (Slither line:2978)
+vAddress returns address variable  (Slither line:2998)
+RETURN node expression: addressStorage[key(vAddress)] (Slither line:3018)
+Checking function: userAddress (Slither line:2978)
+userAddress returns address variable  (Slither line:2998)
+RETURN node expression: addressStorage[key(userAddress)] (Slither line:3018)
+Checking function: recoveryAddress (Slither line:2978)
+recoveryAddress returns address variable  (Slither line:2998)
+RETURN node expression: addressStorage[key(recoveryAddress)] (Slither line:3018)
+Checking function: setVAddress (Slither line:2978)
+Checking function: setUserAddress (Slither line:2978)
+Checking function: setRecoveryAddress (Slither line:2978)
+Checking function: isOwnerAddress (Slither line:2978)
+isOwnerAddress returns bool variable  (Slither line:2998)
+RETURN node expression: _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (Slither line:3018)
+Checking function: validateSignatures (Slither line:2978)
+validateSignatures returns address[2] variable called signedBy (Slither line:2998)
+RETURN node expression: addresses (Slither line:3018)
+Checking function: spliceTimestamps (Slither line:2978)
+spliceTimestamps returns uint256 variable called begin (Slither line:2998)
+spliceTimestamps returns uint256 variable called end (Slither line:2998)
+Checking function: flagThisNonce (Slither line:2978)
+Checking function: isThisNonceUsed (Slither line:2978)
+isThisNonceUsed returns bool variable  (Slither line:2998)
+RETURN node expression: bytes32ToBoolStorage[key(nonces)][key(nonce)] (Slither line:3018)
+Checking function: convert (Slither line:2978)
+convert returns uint256 variable  (Slither line:2998)
+RETURN node expression: convertedTokens (Slither line:3018)
+Checking function: setOwnerAddresses (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: implementationAddressKey (Slither line:2978)
+implementationAddressKey returns string variable  (Slither line:2998)
+RETURN node expression: stringStorage[key(implementationAddressKey)] (Slither line:3018)
+Checking function: implementationAddress (Slither line:2978)
+
+implementationAddress appears to be the implementation getter (Slither line:2983)
+
+
+End AVProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementationAddress in contract: AVProxy (Slither line:1285)
+
+Begin AVProxy.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: vStore().getAddress(implementationAddressKey()) (Slither line:2878)
+
+End AVProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: AVProxy
+_implementationAddress is dependent on stringStorage
+_implementationAddress is dependent on addressStorage
+Expression for _implementationAddress: implementationAddress()
+Called: implementationAddress
+impl_address_from_contract_call: implementationAddress()
+called: implementationAddress
+implementationAddress returns vStore().getAddress(implementationAddressKey())
+called: vStore().getAddress
+found MemberAccess: vStore().getAddress
+TypeConversion: IVStore(addressStorage[key(vStoreProxyAddress)])
+find_registry_address_source: vStore().getAddress(implementationAddressKey())
+MemberAccess: vStore().getAddress
+CallExpression: vStore()
+Identifier: vStore
+Checking public function version
+Checking public function institutionId
+Checking public function setVAddress
+Checking public function setUserAddress
+Checking public function setRecoveryAddress
+Checking external function name
+Checking external function version
+Checking external function institutionId
+Checking external function setVAddress
+Checking external function setUserAddress
+Checking external function setRecoveryAddress
+Checking external function implementationAddress
+Checking public function implementationAddress
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: _implementationAddress
+functions_writing_to_variable: checking function AVProxy.isMatic (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.flagThisNonce (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setOwnerAddresses (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.vStore (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.validateSignatures (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.key (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.isOwnerAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.vAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.isThisNonceUsed (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.spliceTimestamps (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.userAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.isEthereum (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.name (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.implementationAddressKey (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.convert (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.recoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.implementationAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.implementationAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function AVProxy.receive (proxy_features line:893)
+has_compatibility_checks: dependencies: ['REF_70', 'TMP_294', 'TMP_198', 'stringStorage', '', '', 'TMP_290', 'addressStorage', 'TMP_292', 'REF_115', 'TMP_291', '']
+functions_writing_to_variable: stringStorage
+functions_writing_to_variable: checking function AVBase.key (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isThisNonceUsed (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.convert (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.name (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setOwnerAddresses (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isOwnerAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vStore (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.validateSignatures (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isEthereum (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.userAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.spliceTimestamps (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isMatic (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.recoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.flagThisNonce (proxy_features line:893)
+functions_writing_to_variable: addressStorage
+functions_writing_to_variable: checking function AVBase.key (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] = _address (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(vAddress)] = _address (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(vAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(vAddress)] = _address
+functions_writing_to_variable: exp = onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S)) (proxy_features line:904)
+functions_writing_to_variable: exp = signedBy = validateSignatures(signatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signedBy = validateSignatures(signatures) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndRecovery - must include user's and recovery's signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack) (proxy_features line:904)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < 2 (proxy_features line:904)
+functions_writing_to_variable: exp = csv = signatures.V[i] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv = signatures.V[i] (proxy_features line:907)
+functions_writing_to_variable: exp = csv < 27 (proxy_features line:904)
+functions_writing_to_variable: exp = csv += 27 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv += 27 (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addresses[i] (proxy_features line:915)
+functions_writing_to_variable: exp = require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature) (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts) (proxy_features line:904)
+functions_writing_to_variable: exp = flagThisNonce(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = _bytes = bytes(nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _bytes = bytes(nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length) (proxy_features line:904)
+functions_writing_to_variable: exp = result = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i = 36 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 36 (proxy_features line:907)
+functions_writing_to_variable: exp = i < _bytes.length (proxy_features line:904)
+functions_writing_to_variable: exp = b = uint256(uint8(_bytes[i])) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: b = uint256(uint8(_bytes[i])) (proxy_features line:907)
+functions_writing_to_variable: exp = b >= 48 && b <= 57 (proxy_features line:904)
+functions_writing_to_variable: exp = result = result * 10 + (b - 48) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = result * 10 + (b - 48) (proxy_features line:907)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = begin = result / 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: begin = result / 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = end = result % 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: end = result % 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:904)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:915)
+functions_writing_to_variable: exp = _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] (proxy_features line:904)
+functions_writing_to_variable: setVAddress writes _address to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isThisNonceUsed (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] = _address (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(userAddress)] = _address (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(userAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(userAddress)] = _address
+functions_writing_to_variable: exp = onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S)) (proxy_features line:904)
+functions_writing_to_variable: exp = signedBy = validateSignatures(signatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signedBy = validateSignatures(signatures) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress()),VBase::onlyRecoveryAndVesto - must include recovery's and Vesto's signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack) (proxy_features line:904)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < 2 (proxy_features line:904)
+functions_writing_to_variable: exp = csv = signatures.V[i] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv = signatures.V[i] (proxy_features line:907)
+functions_writing_to_variable: exp = csv < 27 (proxy_features line:904)
+functions_writing_to_variable: exp = csv += 27 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv += 27 (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addresses[i] (proxy_features line:915)
+functions_writing_to_variable: exp = require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature) (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts) (proxy_features line:904)
+functions_writing_to_variable: exp = flagThisNonce(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = _bytes = bytes(nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _bytes = bytes(nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length) (proxy_features line:904)
+functions_writing_to_variable: exp = result = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i = 36 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 36 (proxy_features line:907)
+functions_writing_to_variable: exp = i < _bytes.length (proxy_features line:904)
+functions_writing_to_variable: exp = b = uint256(uint8(_bytes[i])) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: b = uint256(uint8(_bytes[i])) (proxy_features line:907)
+functions_writing_to_variable: exp = b >= 48 && b <= 57 (proxy_features line:904)
+functions_writing_to_variable: exp = result = result * 10 + (b - 48) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = result * 10 + (b - 48) (proxy_features line:907)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = begin = result / 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: begin = result / 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = end = result % 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: end = result % 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:915)
+functions_writing_to_variable: exp = _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] (proxy_features line:904)
+functions_writing_to_variable: setUserAddress writes _address to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.convert (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] = _address (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(recoveryAddress)] = _address (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(recoveryAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(recoveryAddress)] = _address
+functions_writing_to_variable: exp = onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S)) (proxy_features line:904)
+functions_writing_to_variable: exp = signedBy = validateSignatures(signatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signedBy = validateSignatures(signatures) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndVesto - must include user's and Vesto's signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack) (proxy_features line:904)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < 2 (proxy_features line:904)
+functions_writing_to_variable: exp = csv = signatures.V[i] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv = signatures.V[i] (proxy_features line:907)
+functions_writing_to_variable: exp = csv < 27 (proxy_features line:904)
+functions_writing_to_variable: exp = csv += 27 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv += 27 (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addresses[i] (proxy_features line:915)
+functions_writing_to_variable: exp = require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature) (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts) (proxy_features line:904)
+functions_writing_to_variable: exp = flagThisNonce(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = _bytes = bytes(nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _bytes = bytes(nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length) (proxy_features line:904)
+functions_writing_to_variable: exp = result = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i = 36 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 36 (proxy_features line:907)
+functions_writing_to_variable: exp = i < _bytes.length (proxy_features line:904)
+functions_writing_to_variable: exp = b = uint256(uint8(_bytes[i])) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: b = uint256(uint8(_bytes[i])) (proxy_features line:907)
+functions_writing_to_variable: exp = b >= 48 && b <= 57 (proxy_features line:904)
+functions_writing_to_variable: exp = result = result * 10 + (b - 48) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = result * 10 + (b - 48) (proxy_features line:907)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = begin = result / 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: begin = result / 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = end = result % 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: end = result % 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:915)
+functions_writing_to_variable: exp = _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] (proxy_features line:904)
+functions_writing_to_variable: setRecoveryAddress writes _address to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.name (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setOwnerAddresses (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] = _vAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(vAddress)] = _vAddress (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(vAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(vAddress)] = _vAddress
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] = _userAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(userAddress)] = _userAddress (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(userAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(userAddress)] = _userAddress
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] = _recoveryAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(recoveryAddress)] = _recoveryAddress (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(recoveryAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(recoveryAddress)] = _recoveryAddress
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: setOwnerAddresses writes _recoveryAddress to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.isOwnerAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vStore (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.validateSignatures (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isEthereum (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.userAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.spliceTimestamps (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isMatic (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.recoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.flagThisNonce (proxy_features line:893)
+has_compatibility_checks: checking public function setVAddress
+has_compatibility_checks: IF node exp = csv < 27
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+has_compatibility_checks: condition (end >= block.timestamp) && (begin < block.timestamp)
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (end >= block.timestamp) && (begin < block.timestamp)
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+has_compatibility_checks: condition csv == 27 || csv == 28
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition csv == 27 || csv == 28
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+has_compatibility_checks: condition ! isThisNonceUsed(signatures.nonce)
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+has_compatibility_checks: IF node exp = b >= 48 && b <= 57
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+has_compatibility_checks: condition _bytes.length == 56
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _bytes.length == 56
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+has_compatibility_checks: condition isOwnerAddress(addresses[i])
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndRecovery - must include user's and recovery's signatures)
+has_compatibility_checks: condition (signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress())
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress())
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+has_compatibility_checks: condition addresses[0] != addresses[1]
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition addresses[0] != addresses[1]
+has_compatibility_checks: checking public function setUserAddress
+has_compatibility_checks: IF node exp = csv < 27
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+has_compatibility_checks: condition (end >= block.timestamp) && (begin < block.timestamp)
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (end >= block.timestamp) && (begin < block.timestamp)
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+has_compatibility_checks: condition csv == 27 || csv == 28
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition csv == 27 || csv == 28
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+has_compatibility_checks: condition ! isThisNonceUsed(signatures.nonce)
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+has_compatibility_checks: IF node exp = b >= 48 && b <= 57
+require(bool,string)((signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress()),VBase::onlyRecoveryAndVesto - must include recovery's and Vesto's signatures)
+has_compatibility_checks: condition (signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress())
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress())
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+has_compatibility_checks: condition _bytes.length == 56
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _bytes.length == 56
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+has_compatibility_checks: condition isOwnerAddress(addresses[i])
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+has_compatibility_checks: condition addresses[0] != addresses[1]
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition addresses[0] != addresses[1]
+has_compatibility_checks: checking public function setRecoveryAddress
+has_compatibility_checks: IF node exp = csv < 27
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+has_compatibility_checks: condition (end >= block.timestamp) && (begin < block.timestamp)
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (end >= block.timestamp) && (begin < block.timestamp)
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+has_compatibility_checks: condition csv == 27 || csv == 28
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition csv == 27 || csv == 28
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+has_compatibility_checks: condition ! isThisNonceUsed(signatures.nonce)
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+has_compatibility_checks: IF node exp = b >= 48 && b <= 57
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+has_compatibility_checks: condition _bytes.length == 56
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _bytes.length == 56
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+has_compatibility_checks: condition isOwnerAddress(addresses[i])
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+has_compatibility_checks: condition addresses[0] != addresses[1]
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition addresses[0] != addresses[1]
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndVesto - must include user's and Vesto's signatures)
+has_compatibility_checks: condition (signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress())
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress())
+has_compatibility_checks: skipping internal function setOwnerAddresses
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementationAddress,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementationAddress = implementationAddress()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_implementationAddress != address(0),VProxy::fallback - invalid implementation address)
+Found public function: version
+
+Begin VErc20Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VErc20Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+returndatasize()()
+
+End VErc20Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VErc20Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+0
+calldatasize()()
+
+End VErc20Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VErc20Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementationAddress,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_implementationAddress
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _implementationAddress (Slither line:2818)
+dest.value: _implementationAddress (Slither line:2821)
+Expression: implementationAddress() (Slither line:2826)
+
+Begin VErc20Proxy.find_delegate_from_call_exp
+
+implementationAddress() (Slither line:1993)
+called = implementationAddress (Slither line:2000)
+Return node of function AVProxy.implementationAddress(): RETURN vStore().getAddress(implementationAddressKey()) (Slither line:2031)
+Encountered call expression at RETURN node: vStore().getAddress(implementationAddressKey()) (Slither line:2043)
+Encountered member access expression: vStore().getAddress (Slither line:2047)
+
+Begin VErc20Proxy.find_delegate_from_member_access
+
+Expression: vStore().getAddress (Slither line:2348)
+vStore() (Slither line:2361)
+Member of call expression result: vStore (Slither line:2364)
+Call to function vStore returns IVStore(addressStorage[key(vStoreProxyAddress)]) (Slither line:2375)
+getAddress is a member of the contract type: IVStore (Slither line:2406)
+Which is an interface (Slither line:2410)
+Could not find a contract that inherits IVStore (Slither line:2431)
+
+End VErc20Proxy.find_delegate_from_call_exp (Slither line:2094)
+
+
+End VErc20Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End VErc20Proxy.is_proxy (Slither line:1476)
+
+
+Begin VErc20Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VErc20Proxy 
+Local Variable: _implementationAddress (Slither line:1164)
+VErc20Proxy is delegating to _implementationAddress
+Looking for setter (Slither line:1200)
+
+
+Begin VErc20Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: implementationAddress() (Slither line:3112)
+Checking function: constructor(address,address,address,address,address,string,string,address,string) returns() (Slither line:3117)
+Checking function: name() returns(string) (Slither line:3117)
+Visibility: public
+keccak256(bytes)(abi.encodePacked(_key))
+stringStorage[key(name)]
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: constructor(address,address,address,string,address) returns() (Slither line:3117)
+Checking function: implementationAddressKey() returns(string) (Slither line:3117)
+Visibility: internal
+Checking function: implementationAddress() returns(address) (Slither line:3117)
+Visibility: public
+IVStore(addressStorage[key(vStoreProxyAddress)])
+keccak256(bytes)(abi.encodePacked(_key))
+vStore().getAddress(implementationAddressKey())
+stringStorage[key(implementationAddressKey)]
+Checking function: receive() returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: isEthereum() returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: isMatic() returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: key(string) returns(bytes32) (Slither line:3117)
+Visibility: internal
+Checking function: version() returns(string) (Slither line:3117)
+Visibility: public
+1.0
+Checking function: institutionId() returns(string) (Slither line:3117)
+Visibility: public
+stringStorage[key(institutionId)]
+keccak256(bytes)(abi.encodePacked(_key))
+Checking function: vStore() returns(IVStore) (Slither line:3117)
+Visibility: internal
+Checking function: vAddress() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: userAddress() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: recoveryAddress() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: setVAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: public
+addressStorage[key(userAddress)]
+result = result * 10 + (b - 48)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i])
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+bytes32ToBoolStorage[key(nonces)][key(nonce)]
+end = result % 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+begin = result / 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndRecovery - must include user's and recovery's signatures)
+flagThisNonce(signatures.nonce)
+addresses
+addressStorage[key(recoveryAddress)]
+bytes32ToBoolStorage[key(nonces)][key(nonce)] = true
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(vAddress)]
+i ++
+i ++
+(begin,end) = spliceTimestamps(signatures.nonce)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+_address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+keccak256(bytes)(abi.encodePacked(_key))
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+addressStorage[key(vAddress)] = _address
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+csv += 27
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+Checking function: setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: public
+addressStorage[key(userAddress)]
+result = result * 10 + (b - 48)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i])
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+bytes32ToBoolStorage[key(nonces)][key(nonce)]
+end = result % 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+flagThisNonce(signatures.nonce)
+addresses
+addressStorage[key(recoveryAddress)]
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+bytes32ToBoolStorage[key(nonces)][key(nonce)] = true
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(userAddress)] = _address
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))
+addressStorage[key(vAddress)]
+i ++
+i ++
+(begin,end) = spliceTimestamps(signatures.nonce)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+_address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+keccak256(bytes)(abi.encodePacked(_key))
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+begin = result / 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+csv += 27
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)((signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress()),VBase::onlyRecoveryAndVesto - must include recovery's and Vesto's signatures)
+Checking function: setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: public
+addressStorage[key(userAddress)]
+result = result * 10 + (b - 48)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i])
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(recoveryAddress)] = _address
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+bytes32ToBoolStorage[key(nonces)][key(nonce)]
+onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))
+end = result % 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+begin = result / 1e10
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+flagThisNonce(signatures.nonce)
+csv += 27
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addresses
+addressStorage[key(recoveryAddress)]
+bytes32ToBoolStorage[key(nonces)][key(nonce)] = true
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+addressStorage[key(vAddress)]
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndVesto - must include user's and Vesto's signatures)
+i ++
+i ++
+(begin,end) = spliceTimestamps(signatures.nonce)
+is an Assignment Operation (Slither line:3206)
+implementationAddress()
+_address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+keccak256(bytes)(abi.encodePacked(_key))
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+Checking function: isOwnerAddress(address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: validateSignatures(AVBase.Signatures) returns(address[2]) (Slither line:3117)
+Visibility: internal
+Checking function: spliceTimestamps(string) returns(uint256,uint256) (Slither line:3117)
+Visibility: private
+Checking function: flagThisNonce(string) returns() (Slither line:3117)
+Visibility: private
+Checking function: isThisNonceUsed(string) returns(bool) (Slither line:3117)
+Visibility: private
+Checking function: convert(IErc20,IErc20,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: setOwnerAddresses(address,address,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: name() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: version() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: institutionId() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: setVAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: external
+Checking function: setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: external
+Checking function: setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2]) returns() (Slither line:3117)
+Visibility: external
+Checking function: implementationAddress() returns(address) (Slither line:3117)
+Visibility: external
+
+End VErc20Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in VErc20Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin VErc20Proxy.find_getter_in_contract (Slither line:2964)
+
+_implementationAddress is a Variable object
+implementationAddress()
+Checking function: constructor (Slither line:2978)
+Checking function: implementationAddressKey (Slither line:2978)
+implementationAddressKey returns string variable  (Slither line:2998)
+RETURN node expression: stringStorage[key(implementationAddressKey)] (Slither line:3018)
+Checking function: implementationAddress (Slither line:2978)
+
+implementationAddress appears to be the implementation getter (Slither line:2983)
+
+
+End VErc20Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementationAddress in contract: VErc20Proxy (Slither line:1285)
+
+Begin VErc20Proxy.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2878)
+ENTRY_POINT: None (Slither line:2878)
+RETURN: IVStore(addressStorage[key(vStoreProxyAddress)]) (Slither line:2878)
+RETURN: keccak256(bytes)(abi.encodePacked(_key)) (Slither line:2878)
+
+End VErc20Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: VErc20Proxy
+_implementationAddress is dependent on stringStorage
+_implementationAddress is dependent on addressStorage
+Expression for _implementationAddress: implementationAddress()
+Called: implementationAddress
+impl_address_from_contract_call: implementationAddress()
+called: implementationAddress
+implementationAddress returns vStore().getAddress(implementationAddressKey())
+called: vStore().getAddress
+found MemberAccess: vStore().getAddress
+TypeConversion: IVStore(addressStorage[key(vStoreProxyAddress)])
+find_registry_address_source: vStore().getAddress(implementationAddressKey())
+MemberAccess: vStore().getAddress
+CallExpression: vStore()
+Identifier: vStore
+Checking public function implementationAddress
+Checking public function version
+Checking public function institutionId
+Checking public function setVAddress
+Checking public function setUserAddress
+Checking public function setRecoveryAddress
+Checking external function name
+Checking external function version
+Checking external function institutionId
+Checking external function setVAddress
+Checking external function setUserAddress
+Checking external function setRecoveryAddress
+Checking external function implementationAddress
+Checking public function name
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: _implementationAddress
+functions_writing_to_variable: checking function VErc20Proxy.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.implementationAddressKey (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.name (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.convert (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.recoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.implementationAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.isEthereum (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.name (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.isMatic (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.flagThisNonce (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.setOwnerAddresses (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.vStore (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.version (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.validateSignatures (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.implementationAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.isOwnerAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.key (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.vAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.isThisNonceUsed (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.userAddress (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.version (proxy_features line:893)
+functions_writing_to_variable: checking function VErc20Proxy.spliceTimestamps (proxy_features line:893)
+has_compatibility_checks: dependencies: ['REF_141', 'TMP_364', '', 'TMP_410', 'stringStorage', 'TMP_368', 'addressStorage', 'TMP_366', 'REF_132', 'TMP_365', '', '']
+functions_writing_to_variable: stringStorage
+functions_writing_to_variable: checking function AVBase.key (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isThisNonceUsed (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.convert (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.name (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setOwnerAddresses (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isOwnerAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vStore (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.validateSignatures (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isEthereum (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.userAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.spliceTimestamps (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isMatic (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.recoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.flagThisNonce (proxy_features line:893)
+functions_writing_to_variable: addressStorage
+functions_writing_to_variable: checking function AVBase.key (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] = _address (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(vAddress)] = _address (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(vAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(vAddress)] = _address
+functions_writing_to_variable: exp = onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S)) (proxy_features line:904)
+functions_writing_to_variable: exp = signedBy = validateSignatures(signatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signedBy = validateSignatures(signatures) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndRecovery - must include user's and recovery's signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack) (proxy_features line:904)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < 2 (proxy_features line:904)
+functions_writing_to_variable: exp = csv = signatures.V[i] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv = signatures.V[i] (proxy_features line:907)
+functions_writing_to_variable: exp = csv < 27 (proxy_features line:904)
+functions_writing_to_variable: exp = csv += 27 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv += 27 (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addresses[i] (proxy_features line:915)
+functions_writing_to_variable: exp = require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature) (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts) (proxy_features line:904)
+functions_writing_to_variable: exp = flagThisNonce(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = _bytes = bytes(nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _bytes = bytes(nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length) (proxy_features line:904)
+functions_writing_to_variable: exp = result = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i = 36 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 36 (proxy_features line:907)
+functions_writing_to_variable: exp = i < _bytes.length (proxy_features line:904)
+functions_writing_to_variable: exp = b = uint256(uint8(_bytes[i])) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: b = uint256(uint8(_bytes[i])) (proxy_features line:907)
+functions_writing_to_variable: exp = b >= 48 && b <= 57 (proxy_features line:904)
+functions_writing_to_variable: exp = result = result * 10 + (b - 48) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = result * 10 + (b - 48) (proxy_features line:907)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = begin = result / 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: begin = result / 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = end = result % 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: end = result % 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:904)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:915)
+functions_writing_to_variable: exp = _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] (proxy_features line:904)
+functions_writing_to_variable: setVAddress writes _address to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isThisNonceUsed (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] = _address (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(userAddress)] = _address (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(userAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(userAddress)] = _address
+functions_writing_to_variable: exp = onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S)) (proxy_features line:904)
+functions_writing_to_variable: exp = signedBy = validateSignatures(signatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signedBy = validateSignatures(signatures) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress()),VBase::onlyRecoveryAndVesto - must include recovery's and Vesto's signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack) (proxy_features line:904)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < 2 (proxy_features line:904)
+functions_writing_to_variable: exp = csv = signatures.V[i] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv = signatures.V[i] (proxy_features line:907)
+functions_writing_to_variable: exp = csv < 27 (proxy_features line:904)
+functions_writing_to_variable: exp = csv += 27 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv += 27 (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addresses[i] (proxy_features line:915)
+functions_writing_to_variable: exp = require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature) (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts) (proxy_features line:904)
+functions_writing_to_variable: exp = flagThisNonce(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = _bytes = bytes(nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _bytes = bytes(nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length) (proxy_features line:904)
+functions_writing_to_variable: exp = result = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i = 36 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 36 (proxy_features line:907)
+functions_writing_to_variable: exp = i < _bytes.length (proxy_features line:904)
+functions_writing_to_variable: exp = b = uint256(uint8(_bytes[i])) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: b = uint256(uint8(_bytes[i])) (proxy_features line:907)
+functions_writing_to_variable: exp = b >= 48 && b <= 57 (proxy_features line:904)
+functions_writing_to_variable: exp = result = result * 10 + (b - 48) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = result * 10 + (b - 48) (proxy_features line:907)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = begin = result / 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: begin = result / 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = end = result % 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: end = result % 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:915)
+functions_writing_to_variable: exp = _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] (proxy_features line:904)
+functions_writing_to_variable: setUserAddress writes _address to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.convert (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setVAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] = _address (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(recoveryAddress)] = _address (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(recoveryAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(recoveryAddress)] = _address
+functions_writing_to_variable: exp = onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S)) (proxy_features line:904)
+functions_writing_to_variable: exp = signedBy = validateSignatures(signatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signedBy = validateSignatures(signatures) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndVesto - must include user's and Vesto's signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (begin,end) = spliceTimestamps(signatures.nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack) (proxy_features line:904)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < 2 (proxy_features line:904)
+functions_writing_to_variable: exp = csv = signatures.V[i] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv = signatures.V[i] (proxy_features line:907)
+functions_writing_to_variable: exp = csv < 27 (proxy_features line:904)
+functions_writing_to_variable: exp = csv += 27 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: csv += 27 (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addresses[i] = ecrecover(bytes32,uint8,bytes32,bytes32)(signatures.hash,csv,signatures.R[i],signatures.S[i]) (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addresses[i] (proxy_features line:915)
+functions_writing_to_variable: exp = require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature) (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts) (proxy_features line:904)
+functions_writing_to_variable: exp = flagThisNonce(signatures.nonce) (proxy_features line:904)
+functions_writing_to_variable: exp = addresses (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] (proxy_features line:904)
+functions_writing_to_variable: exp = _bytes = bytes(nonce) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _bytes = bytes(nonce) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length) (proxy_features line:904)
+functions_writing_to_variable: exp = result = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i = 36 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 36 (proxy_features line:907)
+functions_writing_to_variable: exp = i < _bytes.length (proxy_features line:904)
+functions_writing_to_variable: exp = b = uint256(uint8(_bytes[i])) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: b = uint256(uint8(_bytes[i])) (proxy_features line:907)
+functions_writing_to_variable: exp = b >= 48 && b <= 57 (proxy_features line:904)
+functions_writing_to_variable: exp = result = result * 10 + (b - 48) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: result = result * 10 + (b - 48) (proxy_features line:907)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = begin = result / 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: begin = result / 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = end = result % 1e10 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: end = result % 1e10 (proxy_features line:907)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:904)
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: exp = bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: bytes32ToBoolStorage[key(nonces)][key(nonce)] = true (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: bytes32ToBoolStorage[key(nonces)][key(nonce)] (proxy_features line:915)
+functions_writing_to_variable: exp = _address == vAddress() || _address == userAddress() || _address == recoveryAddress() (proxy_features line:904)
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] (proxy_features line:904)
+functions_writing_to_variable: setRecoveryAddress writes _address to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.institutionId (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.version (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.name (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setOwnerAddresses (proxy_features line:893)
+functions_writing_to_variable: exp = addressStorage[key(vAddress)] = _vAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(vAddress)] = _vAddress (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(vAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(vAddress)] = _vAddress
+functions_writing_to_variable: exp = addressStorage[key(userAddress)] = _userAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(userAddress)] = _userAddress (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(userAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(userAddress)] = _userAddress
+functions_writing_to_variable: exp = addressStorage[key(recoveryAddress)] = _recoveryAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: addressStorage[key(recoveryAddress)] = _recoveryAddress (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: addressStorage[key(recoveryAddress)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: addressStorage (proxy_features line:919)
+get_value_assigned: addressStorage[key(recoveryAddress)] = _recoveryAddress
+functions_writing_to_variable: exp = keccak256(bytes)(abi.encodePacked(_key)) (proxy_features line:904)
+functions_writing_to_variable: setOwnerAddresses writes _recoveryAddress to addressStorage (proxy_features line:924)
+functions_writing_to_variable: checking function AVBase.isOwnerAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vStore (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setRecoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.setUserAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.vAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.validateSignatures (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isEthereum (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.userAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.spliceTimestamps (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.isMatic (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.recoveryAddress (proxy_features line:893)
+functions_writing_to_variable: checking function AVBase.flagThisNonce (proxy_features line:893)
+has_compatibility_checks: checking public function setVAddress
+has_compatibility_checks: IF node exp = csv < 27
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+has_compatibility_checks: condition (end >= block.timestamp) && (begin < block.timestamp)
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (end >= block.timestamp) && (begin < block.timestamp)
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+has_compatibility_checks: condition csv == 27 || csv == 28
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition csv == 27 || csv == 28
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+has_compatibility_checks: condition ! isThisNonceUsed(signatures.nonce)
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+has_compatibility_checks: IF node exp = b >= 48 && b <= 57
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+has_compatibility_checks: condition _bytes.length == 56
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _bytes.length == 56
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+has_compatibility_checks: condition isOwnerAddress(addresses[i])
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndRecovery - must include user's and recovery's signatures)
+has_compatibility_checks: condition (signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress())
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (signedBy[0] == userAddress() && signedBy[1] == recoveryAddress()) || (signedBy[0] == recoveryAddress() && signedBy[1] == userAddress())
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+has_compatibility_checks: condition addresses[0] != addresses[1]
+check_condition_from_expression: modifier calls: ['onlyUserAndRecovery(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setVAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition addresses[0] != addresses[1]
+has_compatibility_checks: checking public function setUserAddress
+has_compatibility_checks: IF node exp = csv < 27
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+has_compatibility_checks: condition (end >= block.timestamp) && (begin < block.timestamp)
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (end >= block.timestamp) && (begin < block.timestamp)
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+has_compatibility_checks: condition csv == 27 || csv == 28
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition csv == 27 || csv == 28
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+has_compatibility_checks: condition ! isThisNonceUsed(signatures.nonce)
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+has_compatibility_checks: IF node exp = b >= 48 && b <= 57
+require(bool,string)((signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress()),VBase::onlyRecoveryAndVesto - must include recovery's and Vesto's signatures)
+has_compatibility_checks: condition (signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress())
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (signedBy[0] == recoveryAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == recoveryAddress())
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+has_compatibility_checks: condition _bytes.length == 56
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _bytes.length == 56
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+has_compatibility_checks: condition isOwnerAddress(addresses[i])
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+has_compatibility_checks: condition addresses[0] != addresses[1]
+check_condition_from_expression: modifier calls: ['onlyRecoveryAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setUserAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition addresses[0] != addresses[1]
+has_compatibility_checks: checking public function setRecoveryAddress
+has_compatibility_checks: IF node exp = csv < 27
+require(bool,string)((end >= block.timestamp) && (begin < block.timestamp),VBase::validateSignatures - invalid timestamps)
+has_compatibility_checks: condition (end >= block.timestamp) && (begin < block.timestamp)
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (end >= block.timestamp) && (begin < block.timestamp)
+require(bool,string)(csv == 27 || csv == 28,VBase::validateSignatures - invalid signature version)
+has_compatibility_checks: condition csv == 27 || csv == 28
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition csv == 27 || csv == 28
+require(bool,string)(! isThisNonceUsed(signatures.nonce),VBase::validateSignatures - possible replay attack)
+has_compatibility_checks: condition ! isThisNonceUsed(signatures.nonce)
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+has_compatibility_checks: IF node exp = b >= 48 && b <= 57
+require(bool,string)(_bytes.length == 56,VBase::spliceTimestamps - invalid nonce length)
+has_compatibility_checks: condition _bytes.length == 56
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _bytes.length == 56
+require(bool,string)(isOwnerAddress(addresses[i]),VBase::validateSignatures - invalid signature)
+has_compatibility_checks: condition isOwnerAddress(addresses[i])
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition _address == vAddress() || _address == userAddress() || _address == recoveryAddress()
+require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)
+has_compatibility_checks: condition addresses[0] != addresses[1]
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition addresses[0] != addresses[1]
+require(bool,string)((signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress()),VBase::onlyUserAndVesto - must include user's and Vesto's signatures)
+has_compatibility_checks: condition (signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress())
+check_condition_from_expression: modifier calls: ['onlyUserAndVesto(Signatures(nonce,keccak256(bytes)(abi.encodePacked(address(this),setRecoveryAddress,_address,nonce)),V,R,S))']
+check_condition_from_expression: condition (signedBy[0] == userAddress() && signedBy[1] == vAddress()) || (signedBy[0] == vAddress() && signedBy[1] == userAddress())
+has_compatibility_checks: skipping internal function setOwnerAddresses
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementationAddress = implementationAddress()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_implementationAddress != address(0),VProxy::fallback - invalid implementation address)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementationAddress,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: implementationAddress

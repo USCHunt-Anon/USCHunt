@@ -1,0 +1,2243 @@
+
+Begin ERC721ReceiverDraft.is_proxy (Slither line:1425)
+
+
+End ERC721ReceiverDraft.is_proxy (Slither line:1428)
+
+
+Begin ERC721ReceiverDraft.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC721ReceiverDraft 
+
+End ERC721ReceiverDraft.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC721ReceiverFinal.is_proxy (Slither line:1425)
+
+
+End ERC721ReceiverFinal.is_proxy (Slither line:1428)
+
+
+Begin ERC721ReceiverFinal.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC721ReceiverFinal 
+
+End ERC721ReceiverFinal.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC721Receivable.is_proxy (Slither line:1425)
+
+
+End ERC721Receivable.is_proxy (Slither line:1428)
+
+
+Begin ERC721Receivable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC721Receivable 
+
+End ERC721Receivable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC223Receiver.is_proxy (Slither line:1425)
+
+
+End ERC223Receiver.is_proxy (Slither line:1428)
+
+
+Begin ERC223Receiver.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC223Receiver 
+
+End ERC223Receiver.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1155TokenReceiver.is_proxy (Slither line:1425)
+
+
+End ERC1155TokenReceiver.is_proxy (Slither line:1428)
+
+
+Begin ERC1155TokenReceiver.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1155TokenReceiver 
+
+End ERC1155TokenReceiver.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1271.is_proxy (Slither line:1425)
+
+
+End ERC1271.is_proxy (Slither line:1428)
+
+
+Begin ERC1271.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1271 
+
+End ERC1271.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ECDSA.is_proxy (Slither line:1425)
+
+
+End ECDSA.is_proxy (Slither line:1428)
+
+
+Begin ECDSA.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ECDSA 
+
+End ECDSA.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CoreWallet.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CoreWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(delegate > COMPOSITE_PLACEHOLDER,Invalid transaction) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+delegate > COMPOSITE_PLACEHOLDER
+Invalid transaction
+
+End CoreWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CoreWallet.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := staticcall(gas(), delegate, 0, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(0, 0, returndatasize()) (Slither line:1576)
+    switch result (Slither line:1576)
+    case 0 { revert(0, returndatasize()) } (Slither line:1576)
+    default { return(0, returndatasize()) } (Slither line:1576)
+} (Slither line:1576)
+
+End CoreWallet.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin CoreWallet.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := staticcall(gas(), delegate, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'delegate'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CoreWallet.find_delegate_variable_from_name
+Searching for delegate (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ERC721_RECEIVED_DRAFT (Slither line:1689)
+Checking ERC721_RECEIVED_FINAL (Slither line:1689)
+Checking ERC223_ID (Slither line:1689)
+Checking ERC1271_VALIDSIGNATURE (Slither line:1689)
+Checking ERC1155_TOKEN_RECIEVER (Slither line:1689)
+Checking EIP191_VERSION_DATA (Slither line:1689)
+Checking EIP191_PREFIX (Slither line:1689)
+Checking VERSION (Slither line:1689)
+Checking COMPOSITE_PLACEHOLDER (Slither line:1689)
+Checking AUTH_VERSION_INCREMENTOR (Slither line:1689)
+Checking authVersion (Slither line:1689)
+Checking authorizations (Slither line:1689)
+Checking nonces (Slither line:1689)
+Checking delegates (Slither line:1689)
+Checking recoveryAddress (Slither line:1689)
+Checking initialized (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking delegate (Slither line:1703)
+delegate is a Local Variable in CoreWallet.fallback (Slither line:1707)
+Expression: delegates[msg.sig] (Slither line:1719)
+delegates is a State Variable in contract CoreWallet (Slither line:1749)
+
+End CoreWallet.find_delegate_variable_by_name
+
+
+End CoreWallet.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CoreWallet.is_proxy (Slither line:1476)
+
+
+Begin CoreWallet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CoreWallet 
+CoreWallet is delegating to delegates
+Looking for setter (Slither line:1200)
+
+
+Begin CoreWallet.find_setter_in_contract (Slither line:3119)
+
+Checking function: init(address,uint256,address) returns() (Slither line:3127)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: init2(bytes,uint256,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setDelegate(bytes4,address) returns() (Slither line:3127)
+Visibility: external
+onlyInvoked()
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+delegates[_interfaceId] = _delegate
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+
+End CoreWallet.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setDelegate in contract: CoreWallet (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CoreWallet.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: tokenFallback (Slither line:2988)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: init (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: init2 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setDelegate (Slither line:2988)
+Checking function: setAuthorized (Slither line:2988)
+Checking function: emergencyRecovery (Slither line:2988)
+Checking function: emergencyRecovery2 (Slither line:2988)
+Checking function: setRecoveryAddress (Slither line:2988)
+Checking function: recoverGas (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC1271_VALIDSIGNATURE (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: supportsInterface (Slither line:2988)
+supportsInterface returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: uint256(delegates[interfaceID]) > 0 (Slither line:3028)
+Checking function: invoke0 (Slither line:2988)
+Checking function: invoke1CosignerSends (Slither line:2988)
+Checking function: invoke1SignerSends (Slither line:2988)
+Checking function: invoke2 (Slither line:2988)
+Checking function: internalInvoke (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CoreWallet.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in CoreWallet (Slither line:1305)
+Checking for delegates at slot 13 in contract CloneableWallet (Slither line:1355)
+Found delegates at slot 13 in contract CloneableWallet (Slither line:1362)
+
+Begin CloneableWallet.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: init (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: init2 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setDelegate (Slither line:2988)
+Checking function: setAuthorized (Slither line:2988)
+Checking function: emergencyRecovery (Slither line:2988)
+Checking function: emergencyRecovery2 (Slither line:2988)
+Checking function: setRecoveryAddress (Slither line:2988)
+Checking function: recoverGas (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC1271_VALIDSIGNATURE (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: supportsInterface (Slither line:2988)
+supportsInterface returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: uint256(delegates[interfaceID]) > 0 (Slither line:3028)
+Checking function: invoke0 (Slither line:2988)
+Checking function: invoke1CosignerSends (Slither line:2988)
+Checking function: invoke1SignerSends (Slither line:2988)
+Checking function: invoke2 (Slither line:2988)
+Checking function: internalInvoke (Slither line:2988)
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: tokenFallback (Slither line:2988)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CloneableWallet.find_getter_in_contract (Slither line:3083)
+
+Checking external function onERC1155Received
+Checking external function onERC1155BatchReceived
+Checking external function isValidSignature
+Checking public function tokenFallback
+Checking external function onERC721Received
+Checking public function onERC721Received
+Checking public function onERC721Received
+Checking external function onERC721Received
+Checking public function init
+Checking public function init2
+Checking external function setDelegate
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+Checking external function setAuthorized
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+Checking external function emergencyRecovery
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+Checking external function emergencyRecovery2
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+Checking external function setRecoveryAddress
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+Checking external function recoverGas
+Checking external function isValidSignature
+Checking external function supportsInterface
+Checking external function invoke0
+Checking external function invoke1CosignerSends
+Checking external function invoke1SignerSends
+Checking external function invoke2
+Checking external function fallback
+functions_writing_to_variable: delegates
+functions_writing_to_variable: checking function CoreWallet.setRecoveryAddress (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.bytesToAddresses (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.invoke2 (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.recoverGas (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.init2 (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.internalInvoke (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.isValidSignature (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.onERC721Received (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.supportsInterface (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.setDelegate (proxy_features line:898)
+functions_writing_to_variable: exp = delegates[_interfaceId] = _delegate (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: delegates[_interfaceId] = _delegate (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: delegates[_interfaceId] (proxy_features line:920)
+functions_writing_to_variable: Identifier: delegates (proxy_features line:924)
+get_value_assigned: delegates[_interfaceId] = _delegate
+functions_writing_to_variable: exp = DelegateUpdated(_interfaceId,_delegate) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyInvoked() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == address(this),must be called from `invoke()`) (proxy_features line:909)
+functions_writing_to_variable: setDelegate writes _delegate to delegates (proxy_features line:929)
+functions_writing_to_variable: checking function CoreWallet.tokenFallback (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.onERC721Received (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.invoke0 (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.setAuthorized (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.isValidSignature (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.invoke1CosignerSends (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.emergencyRecovery (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.onERC1155Received (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.onERC721Received (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.init (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.invoke1SignerSends (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.emergencyRecovery2 (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.onERC721Received (proxy_features line:898)
+functions_writing_to_variable: checking function CoreWallet.onERC1155BatchReceived (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_delegate']
+has_compatibility_checks: checking external function setDelegate
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+has_compatibility_checks: condition msg.sender == address(this)
+Found external function: onERC1155Received
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyInvoked()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegates[_interfaceId] = _delegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) DelegateUpdated(_interfaceId,_delegate)
+
+Begin CloneableWallet.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CloneableWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(delegate > COMPOSITE_PLACEHOLDER,Invalid transaction) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+delegate > COMPOSITE_PLACEHOLDER
+Invalid transaction
+
+End CloneableWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CloneableWallet.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := staticcall(gas(), delegate, 0, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(0, 0, returndatasize()) (Slither line:1576)
+    switch result (Slither line:1576)
+    case 0 { revert(0, returndatasize()) } (Slither line:1576)
+    default { return(0, returndatasize()) } (Slither line:1576)
+} (Slither line:1576)
+
+End CloneableWallet.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin CloneableWallet.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := staticcall(gas(), delegate, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'delegate'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CloneableWallet.find_delegate_variable_from_name
+Searching for delegate (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ERC721_RECEIVED_DRAFT (Slither line:1689)
+Checking ERC721_RECEIVED_FINAL (Slither line:1689)
+Checking ERC223_ID (Slither line:1689)
+Checking ERC1271_VALIDSIGNATURE (Slither line:1689)
+Checking ERC1155_TOKEN_RECIEVER (Slither line:1689)
+Checking EIP191_VERSION_DATA (Slither line:1689)
+Checking EIP191_PREFIX (Slither line:1689)
+Checking VERSION (Slither line:1689)
+Checking COMPOSITE_PLACEHOLDER (Slither line:1689)
+Checking AUTH_VERSION_INCREMENTOR (Slither line:1689)
+Checking authVersion (Slither line:1689)
+Checking authorizations (Slither line:1689)
+Checking nonces (Slither line:1689)
+Checking delegates (Slither line:1689)
+Checking recoveryAddress (Slither line:1689)
+Checking initialized (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking delegate (Slither line:1703)
+delegate is a Local Variable in CloneableWallet.fallback (Slither line:1707)
+Expression: delegates[msg.sig] (Slither line:1719)
+delegates is a State Variable in contract CoreWallet (Slither line:1749)
+
+End CloneableWallet.find_delegate_variable_by_name
+
+
+End CloneableWallet.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CloneableWallet.is_proxy (Slither line:1476)
+
+
+Begin CloneableWallet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CloneableWallet 
+CloneableWallet is delegating to delegates
+Looking for setter (Slither line:1200)
+
+Looking for setter in CoreWallet (Slither line:1204)
+
+
+Begin CoreWallet.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: init(address,uint256,address) returns() (Slither line:3127)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: init2(bytes,uint256,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setDelegate(bytes4,address) returns() (Slither line:3127)
+Visibility: external
+onlyInvoked()
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+delegates[_interfaceId] = _delegate
+is an Assignment Operation (Slither line:3216)
+_delegate
+DelegateUpdated(_interfaceId,_delegate)
+Checking function: setAuthorized(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(address(_cosigner) == address(0) || address(_cosigner) != recoveryAddress,Do not use the recovery address as a cosigner.)
+onlyInvoked()
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+Authorized(_authorizedAddress,_cosigner)
+Checking function: emergencyRecovery(address,uint256) returns() (Slither line:3127)
+Visibility: external
+onlyRecoveryAddress()
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+Checking function: emergencyRecovery2(address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyRecoveryAddress()
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != _recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+Checking function: setRecoveryAddress(address) returns() (Slither line:3127)
+Visibility: external
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(address(authorizations[authVersion + uint256(_recoveryAddress)]) == address(0),Do not use an authorized address as the recovery address.)
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+onlyInvoked()
+Checking function: recoverGas(uint256,address[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_version > 0 && _version < 0xffffffff,Invalid version number.)
+++ i
+delete (authorizations[shiftedVersion + uint256(_keys[i])])
+require(bool,string)(shiftedVersion < authVersion,You can only recover gas from expired authVersions.)
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+ERC1271_VALIDSIGNATURE
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+(r[1],s[1],v[1]) = _signature.extractSignature(65)
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[1],r[1],s[1])
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+(r,s,v)
+0
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = signer
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+true
+uint256(delegates[interfaceID]) > 0
+Checking function: invoke0(bytes) returns() (Slither line:3127)
+Visibility: external
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(0,data)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(address(authorizations[authVersion + uint256(msg.sender)]) == msg.sender,Invalid authorization.)
+Checking function: invoke1CosignerSends(uint8,bytes32,bytes32,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature.)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke1SignerSends(uint8,bytes32,bytes32,bytes) returns() (Slither line:3127)
+Visibility: external
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(requiredCosigner == cosigner || requiredCosigner == msg.sender,Invalid authorization.)
+internalInvoke(operationHash,data)
+require(bool,string)(cosigner != address(0),Invalid signature.)
+nonces[msg.sender] = nonce + 1
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke2(uint8[2],bytes32[2],bytes32[2],uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature for signer.)
+require(bool,string)(cosigner != address(0),Invalid signature for cosigner.)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == cosigner,Invalid authorization.)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v[0] == 27 || v[0] == 28,invalid signature version v[0])
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(operationHash,data)
+require(bool,string)(v[1] == 27 || v[1] == 28,invalid signature version v[1])
+Checking function: internalInvoke(bytes32,bytes) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: onERC1155Received(address,address,uint256,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_operator
+_data
+_from
+0xf23a6e61
+_id
+_value
+Checking function: onERC1155BatchReceived(address,address,uint256[],uint256[],bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_ids
+_values
+_operator
+_data
+_from
+0xbc197c81
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: tokenFallback(address,uint256,bytes) returns() (Slither line:3127)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_tokenId
+data
+ERC721_RECEIVED_DRAFT
+_from
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+_data
+_operator
+ERC721_RECEIVED_FINAL
+_from
+_tokenId
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+
+End CoreWallet.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CoreWallet 
+Looking in CloneableWallet (Slither line:1213)
+
+Begin CloneableWallet.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: init(address,uint256,address) returns() (Slither line:3127)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: init2(bytes,uint256,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setDelegate(bytes4,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+onlyInvoked()
+delegates[_interfaceId] = _delegate
+is an Assignment Operation (Slither line:3216)
+_delegate
+DelegateUpdated(_interfaceId,_delegate)
+Checking function: setAuthorized(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Authorized(_authorizedAddress,_cosigner)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+require(bool,string)(address(_cosigner) == address(0) || address(_cosigner) != recoveryAddress,Do not use the recovery address as a cosigner.)
+onlyInvoked()
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+Checking function: emergencyRecovery(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+onlyRecoveryAddress()
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+Checking function: emergencyRecovery2(address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyRecoveryAddress()
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(_authorizedAddress != _recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+Checking function: setRecoveryAddress(address) returns() (Slither line:3127)
+Visibility: external
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(address(authorizations[authVersion + uint256(_recoveryAddress)]) == address(0),Do not use an authorized address as the recovery address.)
+RecoveryAddressChanged(previous,recoveryAddress)
+onlyInvoked()
+Checking function: recoverGas(uint256,address[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_version > 0 && _version < 0xffffffff,Invalid version number.)
+++ i
+delete (authorizations[shiftedVersion + uint256(_keys[i])])
+require(bool,string)(shiftedVersion < authVersion,You can only recover gas from expired authVersions.)
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+ERC1271_VALIDSIGNATURE
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+(r[1],s[1],v[1]) = _signature.extractSignature(65)
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[1],r[1],s[1])
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+0
+(r,s,v)
+0
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = signer
+is an Assignment Operation (Slither line:3216)
+_delegate
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+true
+uint256(delegates[interfaceID]) > 0
+Checking function: invoke0(bytes) returns() (Slither line:3127)
+Visibility: external
+internalInvoke(0,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(address(authorizations[authVersion + uint256(msg.sender)]) == msg.sender,Invalid authorization.)
+Checking function: invoke1CosignerSends(uint8,bytes32,bytes32,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature.)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke1SignerSends(uint8,bytes32,bytes32,bytes) returns() (Slither line:3127)
+Visibility: external
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(requiredCosigner == cosigner || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(cosigner != address(0),Invalid signature.)
+nonces[msg.sender] = nonce + 1
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke2(uint8[2],bytes32[2],bytes32[2],uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature for signer.)
+require(bool,string)(cosigner != address(0),Invalid signature for cosigner.)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == cosigner,Invalid authorization.)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v[0] == 27 || v[0] == 28,invalid signature version v[0])
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(operationHash,data)
+require(bool,string)(v[1] == 27 || v[1] == 28,invalid signature version v[1])
+Checking function: internalInvoke(bytes32,bytes) returns() (Slither line:3127)
+Visibility: internal
+Checking function: onERC1155Received(address,address,uint256,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_operator
+_data
+_from
+0xf23a6e61
+_id
+_value
+Checking function: onERC1155BatchReceived(address,address,uint256[],uint256[],bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_ids
+_values
+_operator
+_data
+_from
+0xbc197c81
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: tokenFallback(address,uint256,bytes) returns() (Slither line:3127)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_tokenId
+data
+ERC721_RECEIVED_DRAFT
+_from
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+_data
+_operator
+ERC721_RECEIVED_FINAL
+_from
+_tokenId
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+
+End CloneableWallet.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CloneableWallet (Slither line:1220)
+
+Begin CloneableWallet.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: init(address,uint256,address) returns() (Slither line:3127)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: init2(bytes,uint256,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setDelegate(bytes4,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+onlyInvoked()
+delegates[_interfaceId] = _delegate
+is an Assignment Operation (Slither line:3216)
+_delegate
+DelegateUpdated(_interfaceId,_delegate)
+Checking function: setAuthorized(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Authorized(_authorizedAddress,_cosigner)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+require(bool,string)(address(_cosigner) == address(0) || address(_cosigner) != recoveryAddress,Do not use the recovery address as a cosigner.)
+onlyInvoked()
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+Checking function: emergencyRecovery(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+onlyRecoveryAddress()
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+Checking function: emergencyRecovery2(address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyRecoveryAddress()
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(_authorizedAddress != _recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+Checking function: setRecoveryAddress(address) returns() (Slither line:3127)
+Visibility: external
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(address(authorizations[authVersion + uint256(_recoveryAddress)]) == address(0),Do not use an authorized address as the recovery address.)
+RecoveryAddressChanged(previous,recoveryAddress)
+onlyInvoked()
+Checking function: recoverGas(uint256,address[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_version > 0 && _version < 0xffffffff,Invalid version number.)
+++ i
+delete (authorizations[shiftedVersion + uint256(_keys[i])])
+require(bool,string)(shiftedVersion < authVersion,You can only recover gas from expired authVersions.)
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+ERC1271_VALIDSIGNATURE
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+(r[1],s[1],v[1]) = _signature.extractSignature(65)
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[1],r[1],s[1])
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+0
+(r,s,v)
+0
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = signer
+is an Assignment Operation (Slither line:3216)
+_delegate
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+true
+uint256(delegates[interfaceID]) > 0
+Checking function: invoke0(bytes) returns() (Slither line:3127)
+Visibility: external
+internalInvoke(0,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(address(authorizations[authVersion + uint256(msg.sender)]) == msg.sender,Invalid authorization.)
+Checking function: invoke1CosignerSends(uint8,bytes32,bytes32,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature.)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke1SignerSends(uint8,bytes32,bytes32,bytes) returns() (Slither line:3127)
+Visibility: external
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(requiredCosigner == cosigner || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(cosigner != address(0),Invalid signature.)
+nonces[msg.sender] = nonce + 1
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke2(uint8[2],bytes32[2],bytes32[2],uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature for signer.)
+require(bool,string)(cosigner != address(0),Invalid signature for cosigner.)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == cosigner,Invalid authorization.)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v[0] == 27 || v[0] == 28,invalid signature version v[0])
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(operationHash,data)
+require(bool,string)(v[1] == 27 || v[1] == 28,invalid signature version v[1])
+Checking function: internalInvoke(bytes32,bytes) returns() (Slither line:3127)
+Visibility: internal
+Checking function: onERC1155Received(address,address,uint256,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_operator
+_data
+_from
+0xf23a6e61
+_id
+_value
+Checking function: onERC1155BatchReceived(address,address,uint256[],uint256[],bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_ids
+_values
+_operator
+_data
+_from
+0xbc197c81
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: tokenFallback(address,uint256,bytes) returns() (Slither line:3127)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_tokenId
+data
+ERC721_RECEIVED_DRAFT
+_from
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+_data
+_operator
+ERC721_RECEIVED_FINAL
+_from
+_tokenId
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+
+End CloneableWallet.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in CloneableWallet (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin CoreWallet.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: tokenFallback (Slither line:2988)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: init (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: init2 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setDelegate (Slither line:2988)
+Checking function: setAuthorized (Slither line:2988)
+Checking function: emergencyRecovery (Slither line:2988)
+Checking function: emergencyRecovery2 (Slither line:2988)
+Checking function: setRecoveryAddress (Slither line:2988)
+Checking function: recoverGas (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC1271_VALIDSIGNATURE (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: supportsInterface (Slither line:2988)
+supportsInterface returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: uint256(delegates[interfaceID]) > 0 (Slither line:3028)
+Checking function: invoke0 (Slither line:2988)
+Checking function: invoke1CosignerSends (Slither line:2988)
+Checking function: invoke1SignerSends (Slither line:2988)
+Checking function: invoke2 (Slither line:2988)
+Checking function: internalInvoke (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CoreWallet.find_getter_in_contract (Slither line:3083)
+
+
+Begin CloneableWallet.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: init (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: init2 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setDelegate (Slither line:2988)
+Checking function: setAuthorized (Slither line:2988)
+Checking function: emergencyRecovery (Slither line:2988)
+Checking function: emergencyRecovery2 (Slither line:2988)
+Checking function: setRecoveryAddress (Slither line:2988)
+Checking function: recoverGas (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC1271_VALIDSIGNATURE (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: supportsInterface (Slither line:2988)
+supportsInterface returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: uint256(delegates[interfaceID]) > 0 (Slither line:3028)
+Checking function: invoke0 (Slither line:2988)
+Checking function: invoke1CosignerSends (Slither line:2988)
+Checking function: invoke1SignerSends (Slither line:2988)
+Checking function: invoke2 (Slither line:2988)
+Checking function: internalInvoke (Slither line:2988)
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: tokenFallback (Slither line:2988)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CloneableWallet.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in CloneableWallet (Slither line:1305)
+or in CoreWallet (Slither line:1319)
+Checking for delegates at slot 13 in contract CoreWallet (Slither line:1355)
+Found delegates at slot 13 in contract CoreWallet (Slither line:1362)
+
+Begin CoreWallet.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: tokenFallback (Slither line:2988)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: init (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: init2 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setDelegate (Slither line:2988)
+Checking function: setAuthorized (Slither line:2988)
+Checking function: emergencyRecovery (Slither line:2988)
+Checking function: emergencyRecovery2 (Slither line:2988)
+Checking function: setRecoveryAddress (Slither line:2988)
+Checking function: recoverGas (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC1271_VALIDSIGNATURE (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: supportsInterface (Slither line:2988)
+supportsInterface returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: uint256(delegates[interfaceID]) > 0 (Slither line:3028)
+Checking function: invoke0 (Slither line:2988)
+Checking function: invoke1CosignerSends (Slither line:2988)
+Checking function: invoke1SignerSends (Slither line:2988)
+Checking function: invoke2 (Slither line:2988)
+Checking function: internalInvoke (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CoreWallet.find_getter_in_contract (Slither line:3083)
+
+
+Begin CoreWallet.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: init(address,uint256,address) returns() (Slither line:3127)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: init2(bytes,uint256,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setDelegate(bytes4,address) returns() (Slither line:3127)
+Visibility: external
+onlyInvoked()
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+delegates[_interfaceId] = _delegate
+is an Assignment Operation (Slither line:3216)
+_delegate
+DelegateUpdated(_interfaceId,_delegate)
+Checking function: setAuthorized(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(address(_cosigner) == address(0) || address(_cosigner) != recoveryAddress,Do not use the recovery address as a cosigner.)
+onlyInvoked()
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+Authorized(_authorizedAddress,_cosigner)
+Checking function: emergencyRecovery(address,uint256) returns() (Slither line:3127)
+Visibility: external
+onlyRecoveryAddress()
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+Checking function: emergencyRecovery2(address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyRecoveryAddress()
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != _recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+Checking function: setRecoveryAddress(address) returns() (Slither line:3127)
+Visibility: external
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(address(authorizations[authVersion + uint256(_recoveryAddress)]) == address(0),Do not use an authorized address as the recovery address.)
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+onlyInvoked()
+Checking function: recoverGas(uint256,address[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_version > 0 && _version < 0xffffffff,Invalid version number.)
+++ i
+delete (authorizations[shiftedVersion + uint256(_keys[i])])
+require(bool,string)(shiftedVersion < authVersion,You can only recover gas from expired authVersions.)
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+ERC1271_VALIDSIGNATURE
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+(r[1],s[1],v[1]) = _signature.extractSignature(65)
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[1],r[1],s[1])
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+(r,s,v)
+0
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = signer
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+true
+uint256(delegates[interfaceID]) > 0
+Checking function: invoke0(bytes) returns() (Slither line:3127)
+Visibility: external
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(0,data)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(address(authorizations[authVersion + uint256(msg.sender)]) == msg.sender,Invalid authorization.)
+Checking function: invoke1CosignerSends(uint8,bytes32,bytes32,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature.)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke1SignerSends(uint8,bytes32,bytes32,bytes) returns() (Slither line:3127)
+Visibility: external
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(requiredCosigner == cosigner || requiredCosigner == msg.sender,Invalid authorization.)
+internalInvoke(operationHash,data)
+require(bool,string)(cosigner != address(0),Invalid signature.)
+nonces[msg.sender] = nonce + 1
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke2(uint8[2],bytes32[2],bytes32[2],uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature for signer.)
+require(bool,string)(cosigner != address(0),Invalid signature for cosigner.)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == cosigner,Invalid authorization.)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v[0] == 27 || v[0] == 28,invalid signature version v[0])
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(operationHash,data)
+require(bool,string)(v[1] == 27 || v[1] == 28,invalid signature version v[1])
+Checking function: internalInvoke(bytes32,bytes) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: onERC1155Received(address,address,uint256,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_operator
+_data
+_from
+0xf23a6e61
+_id
+_value
+Checking function: onERC1155BatchReceived(address,address,uint256[],uint256[],bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_ids
+_values
+_operator
+_data
+_from
+0xbc197c81
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: tokenFallback(address,uint256,bytes) returns() (Slither line:3127)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_tokenId
+data
+ERC721_RECEIVED_DRAFT
+_from
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+_data
+_operator
+ERC721_RECEIVED_FINAL
+_from
+_tokenId
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+
+End CoreWallet.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC721ReceiverDraft.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ERC721ReceiverDraft.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC721ReceiverDraft.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC721ReceiverDraft.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC721ReceiverFinal.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ERC721ReceiverFinal.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC721ReceiverFinal.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC721ReceiverFinal.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC721Receivable.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ERC721Receivable.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC721Receivable.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+data
+ERC721_RECEIVED_DRAFT
+_from
+_tokenId
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+ERC721_RECEIVED_FINAL
+_operator
+_tokenId
+_from
+_data
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+
+End ERC721Receivable.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC223Receiver.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: tokenFallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ERC223Receiver.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC223Receiver.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: tokenFallback(address,uint256,bytes) returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC223Receiver.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC1155TokenReceiver.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ERC1155TokenReceiver.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC1155TokenReceiver.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: onERC1155Received(address,address,uint256,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_from
+0xf23a6e61
+_id
+_value
+_operator
+_data
+Checking function: onERC1155BatchReceived(address,address,uint256[],uint256[],bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_values
+_operator
+_data
+_from
+0xbc197c81
+_ids
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC1155TokenReceiver.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC1271.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ERC1271.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC1271.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC1271.find_setter_in_contract (Slither line:3345)
+
+
+Begin ECDSA.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: extractSignature (Slither line:2988)
+extractSignature returns bytes32 variable called r (Slither line:3008)
+extractSignature returns bytes32 variable called s (Slither line:3008)
+extractSignature returns uint8 variable called v (Slither line:3008)
+RETURN node expression: (r,s,v) (Slither line:3028)
+
+End ECDSA.find_getter_in_contract (Slither line:3083)
+
+
+Begin ECDSA.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: extractSignature(bytes,uint256) returns(bytes32,bytes32,uint8) (Slither line:3127)
+Visibility: internal
+
+End ECDSA.find_setter_in_contract (Slither line:3345)
+
+
+Begin CoreWallet.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: onERC1155Received (Slither line:2988)
+onERC1155Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xf23a6e61 (Slither line:3028)
+Checking function: onERC1155BatchReceived (Slither line:2988)
+onERC1155BatchReceived returns bytes4 variable  (Slither line:3008)
+RETURN node expression: 0xbc197c81 (Slither line:3028)
+Checking function: tokenFallback (Slither line:2988)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_DRAFT (Slither line:3028)
+Checking function: onERC721Received (Slither line:2988)
+onERC721Received returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC721_RECEIVED_FINAL (Slither line:3028)
+Checking function: init (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: init2 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setDelegate (Slither line:2988)
+Checking function: setAuthorized (Slither line:2988)
+Checking function: emergencyRecovery (Slither line:2988)
+Checking function: emergencyRecovery2 (Slither line:2988)
+Checking function: setRecoveryAddress (Slither line:2988)
+Checking function: recoverGas (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: ERC1271_VALIDSIGNATURE (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: supportsInterface (Slither line:2988)
+supportsInterface returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: uint256(delegates[interfaceID]) > 0 (Slither line:3028)
+Checking function: invoke0 (Slither line:2988)
+Checking function: invoke1CosignerSends (Slither line:2988)
+Checking function: invoke1SignerSends (Slither line:2988)
+Checking function: invoke2 (Slither line:2988)
+Checking function: internalInvoke (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CoreWallet.find_getter_in_contract (Slither line:3083)
+
+
+Begin CoreWallet.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: init(address,uint256,address) returns() (Slither line:3127)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: init2(bytes,uint256,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setDelegate(bytes4,address) returns() (Slither line:3127)
+Visibility: external
+onlyInvoked()
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+delegates[_interfaceId] = _delegate
+is an Assignment Operation (Slither line:3216)
+_delegate
+DelegateUpdated(_interfaceId,_delegate)
+Checking function: setAuthorized(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+require(bool,string)(address(_cosigner) == address(0) || address(_cosigner) != recoveryAddress,Do not use the recovery address as a cosigner.)
+onlyInvoked()
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+Authorized(_authorizedAddress,_cosigner)
+Checking function: emergencyRecovery(address,uint256) returns() (Slither line:3127)
+Visibility: external
+onlyRecoveryAddress()
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+Checking function: emergencyRecovery2(address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+authVersion += AUTH_VERSION_INCREMENTOR
+is an Assignment Operation (Slither line:3216)
+_delegate
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyRecoveryAddress()
+require(bool,string)(_authorizedAddress != address(0),Authorized addresses must not be zero.)
+authorizations[authVersion + uint256(_authorizedAddress)] = _cosigner
+is an Assignment Operation (Slither line:3216)
+_delegate
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(msg.sender == recoveryAddress,sender must be recovery address)
+require(bool,string)(_authorizedAddress != _recoveryAddress,Do not use the recovery address as an authorized address.)
+EmergencyRecovery(_authorizedAddress,_cosigner)
+require(bool,string)(address(_cosigner) != address(0),The cosigner must not be zero.)
+Checking function: setRecoveryAddress(address) returns() (Slither line:3127)
+Visibility: external
+recoveryAddress = _recoveryAddress
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(address(authorizations[authVersion + uint256(_recoveryAddress)]) == address(0),Do not use an authorized address as the recovery address.)
+RecoveryAddressChanged(previous,recoveryAddress)
+require(bool,string)(msg.sender == address(this),must be called from `invoke()`)
+onlyInvoked()
+Checking function: recoverGas(uint256,address[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_version > 0 && _version < 0xffffffff,Invalid version number.)
+++ i
+delete (authorizations[shiftedVersion + uint256(_keys[i])])
+require(bool,string)(shiftedVersion < authVersion,You can only recover gas from expired authVersions.)
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+ERC1271_VALIDSIGNATURE
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+(r[1],s[1],v[1]) = _signature.extractSignature(65)
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[1],r[1],s[1])
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+(r,s,v)
+0
+(r[0],s[0],v[0]) = _signature.extractSignature(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+signer = ecrecover(bytes32,uint8,bytes32,bytes32)(operationHash,v[0],r[0],s[0])
+is an Assignment Operation (Slither line:3216)
+_delegate
+cosigner = signer
+is an Assignment Operation (Slither line:3216)
+_delegate
+0
+Checking function: supportsInterface(bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+true
+uint256(delegates[interfaceID]) > 0
+Checking function: invoke0(bytes) returns() (Slither line:3127)
+Visibility: external
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(0,data)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(address(authorizations[authVersion + uint256(msg.sender)]) == msg.sender,Invalid authorization.)
+Checking function: invoke1CosignerSends(uint8,bytes32,bytes32,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature.)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == msg.sender,Invalid authorization.)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+internalInvoke(operationHash,data)
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke1SignerSends(uint8,bytes32,bytes32,bytes) returns() (Slither line:3127)
+Visibility: external
+InvocationSuccess(operationHash,result,numOps)
+require(bool,string)(requiredCosigner == cosigner || requiredCosigner == msg.sender,Invalid authorization.)
+internalInvoke(operationHash,data)
+require(bool,string)(cosigner != address(0),Invalid signature.)
+nonces[msg.sender] = nonce + 1
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(v == 27 || v == 28,Invalid signature version.)
+Checking function: invoke2(uint8[2],bytes32[2],bytes32[2],uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(signer != address(0),Invalid signature for signer.)
+require(bool,string)(cosigner != address(0),Invalid signature for cosigner.)
+require(bool,string)(signer == authorizedAddress,authorized addresses must be equal)
+require(bool,string)(nonce > nonces[signer],must use valid nonce for signer)
+require(bool,string)(data.length >= 85,invalidLengthMessage)
+require(bool,string)(requiredCosigner == signer || requiredCosigner == cosigner,Invalid authorization.)
+nonces[signer] = nonce
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(v[0] == 27 || v[0] == 28,invalid signature version v[0])
+InvocationSuccess(operationHash,result,numOps)
+internalInvoke(operationHash,data)
+require(bool,string)(v[1] == 27 || v[1] == 28,invalid signature version v[1])
+Checking function: internalInvoke(bytes32,bytes) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: onERC1155Received(address,address,uint256,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_operator
+_data
+_from
+0xf23a6e61
+_id
+_value
+Checking function: onERC1155BatchReceived(address,address,uint256[],uint256[],bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_ids
+_values
+_operator
+_data
+_from
+0xbc197c81
+Checking function: isValidSignature(bytes32,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+Checking function: tokenFallback(address,uint256,bytes) returns() (Slither line:3127)
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+_tokenId
+data
+ERC721_RECEIVED_DRAFT
+_from
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+_data
+_operator
+ERC721_RECEIVED_FINAL
+_from
+_tokenId
+Checking function: onERC721Received(address,address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: public
+Checking function: onERC721Received(address,uint256,bytes) returns(bytes4) (Slither line:3127)
+Visibility: external
+
+End CoreWallet.find_setter_in_contract (Slither line:3345)
+
+
+Begin Ownable.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: constructor (Slither line:2988)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+
+End Ownable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Ownable.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == owner,must be owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyOwner()
+OwnershipRenounced(owner)
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == owner,must be owner)
+_transferOwnership(_newOwner)
+require(bool,string)(_newOwner != address(0),cannot renounce ownership)
+OwnershipTransferred(owner,_newOwner)
+onlyOwner()
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+_delegate
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: internal
+
+End Ownable.find_setter_in_contract (Slither line:3345)
+
+
+Begin HasNoEther.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: constructor (Slither line:2988)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: reclaimEther (Slither line:2988)
+
+End HasNoEther.find_getter_in_contract (Slither line:3083)
+
+
+Begin HasNoEther.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: reclaimEther() returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == owner,must be owner)
+msg.sender.transfer(address(this).balance)
+onlyOwner()
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: external
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == owner,must be owner)
+onlyOwner()
+OwnershipRenounced(owner)
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+_transferOwnership(_newOwner)
+require(bool,string)(_newOwner != address(0),cannot renounce ownership)
+require(bool,string)(msg.sender == owner,must be owner)
+OwnershipTransferred(owner,_newOwner)
+onlyOwner()
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+_delegate
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: internal
+
+End HasNoEther.find_setter_in_contract (Slither line:3345)
+
+
+Begin CloneFactory.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: createClone (Slither line:2988)
+createClone returns address variable called result (Slither line:3008)
+Checking function: createClone2 (Slither line:2988)
+createClone2 returns address variable called result (Slither line:3008)
+
+End CloneFactory.find_getter_in_contract (Slither line:3083)
+
+
+Begin CloneFactory.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: createClone(address) returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: createClone2(address,bytes32) returns(address) (Slither line:3127)
+Visibility: internal
+
+End CloneFactory.find_setter_in_contract (Slither line:3345)
+
+
+Begin FullWalletByteCode.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End FullWalletByteCode.find_getter_in_contract (Slither line:3083)
+
+
+Begin FullWalletByteCode.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End FullWalletByteCode.find_setter_in_contract (Slither line:3345)
+
+
+Begin WalletFactory.find_getter_in_contract (Slither line:2974)
+
+delegates is a Variable object
+_delegate
+Checking function: createClone (Slither line:2988)
+createClone returns address variable called result (Slither line:3008)
+Checking function: createClone2 (Slither line:2988)
+createClone2 returns address variable called result (Slither line:3008)
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: reclaimEther (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: deployCloneWallet (Slither line:2988)
+Checking function: deployCloneWallet2 (Slither line:2988)
+Checking function: deployCloneWallet2WithMultiAuthorizedAddress (Slither line:2988)
+Checking function: bytesToAddresses (Slither line:2988)
+bytesToAddresses returns address[] variable called addresses (Slither line:3008)
+Checking function: deployFullWallet (Slither line:2988)
+Checking function: deployFullWallet2 (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End WalletFactory.find_getter_in_contract (Slither line:3083)
+
+
+Begin WalletFactory.find_setter_in_contract (Slither line:3119)
+
+Expression: _delegate (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: deployCloneWallet(address,address,uint256) returns() (Slither line:3127)
+Visibility: public
+CloneableWallet(clone).init(_authorizedAddress,_cosigner,_recoveryAddress)
+WalletCreated(clone,_authorizedAddress,false)
+Checking function: deployCloneWallet2(address,address,uint256,bytes32) returns() (Slither line:3127)
+Visibility: public
+deployCloneWallet2 contains assembly (Slither line:3153)
+CloneableWallet(clone).init(_authorizedAddress,_cosigner,_recoveryAddress)
+WalletCreated(clone,_authorizedAddress,false)
+require(bool,string)(clone != address(0),wallet must have address)
+require(bool,string)(size > 0,wallet must have code)
+Checking function: deployCloneWallet2WithMultiAuthorizedAddress(address,bytes,uint256,bytes32) returns() (Slither line:3127)
+Visibility: public
+deployCloneWallet2WithMultiAuthorizedAddress contains assembly (Slither line:3153)
+i += 20
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(clone != address(0),wallet must have address)
+require(bool,string)(size > 0,wallet must have code)
+addresses[i / 20] = addr
+is an Assignment Operation (Slither line:3216)
+_delegate
+CloneableWallet(clone).init2(_authorizedAddresses,_cosigner,_recoveryAddress)
+addresses = new address[](bys.length / 20)
+is an Assignment Operation (Slither line:3216)
+_delegate
+WalletCreated(clone,addresses[0],false)
+require(bool,string)(_authorizedAddresses.length / 20 > 0 && _authorizedAddresses.length % 20 == 0,invalid address byte array)
+Checking function: bytesToAddresses(bytes) returns(address[]) (Slither line:3127)
+Visibility: private
+Checking function: deployFullWallet(address,address,uint256) returns() (Slither line:3127)
+Visibility: public
+deployFullWallet contains assembly (Slither line:3153)
+WalletCreated(full,_authorizedAddress,true)
+require(bool,string)(full != address(0),wallet must have address)
+require(bool,string)(size > 0,wallet must have code)
+Checking function: deployFullWallet2(address,address,uint256,bytes32) returns() (Slither line:3127)
+Visibility: public
+deployFullWallet2 contains assembly (Slither line:3153)
+require(bool,string)(full != address(0),wallet must have address)
+require(bool,string)(size > 0,wallet must have code)
+WalletCreated(full,_authorizedAddress,true)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: createClone(address) returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: createClone2(address,bytes32) returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: reclaimEther() returns() (Slither line:3127)
+Visibility: external
+msg.sender.transfer(address(this).balance)
+onlyOwner()
+require(bool,string)(msg.sender == owner,must be owner)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: external
+OwnershipRenounced(owner)
+require(bool,string)(msg.sender == owner,must be owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+_delegate
+onlyOwner()
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+_delegate
+require(bool,string)(msg.sender == owner,must be owner)
+_transferOwnership(_newOwner)
+require(bool,string)(_newOwner != address(0),cannot renounce ownership)
+OwnershipTransferred(owner,_newOwner)
+Checking function: _transferOwnership(address) returns() (Slither line:3127)
+Visibility: internal
+
+End WalletFactory.find_setter_in_contract (Slither line:3345)
+
+
+End CloneableWallet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin HasNoEther.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End HasNoEther.is_proxy (Slither line:1476)
+
+
+Begin HasNoEther.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HasNoEther 
+
+End HasNoEther.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CloneFactory.is_proxy (Slither line:1425)
+
+
+End CloneFactory.is_proxy (Slither line:1428)
+
+
+Begin CloneFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CloneFactory 
+
+End CloneFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FullWalletByteCode.is_proxy (Slither line:1425)
+
+
+End FullWalletByteCode.is_proxy (Slither line:1428)
+
+
+Begin FullWalletByteCode.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FullWalletByteCode 
+
+End FullWalletByteCode.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WalletFactory.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End WalletFactory.is_proxy (Slither line:1476)
+
+
+Begin WalletFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WalletFactory 
+
+End WalletFactory.is_upgradeable_proxy (Slither line:1407)
+

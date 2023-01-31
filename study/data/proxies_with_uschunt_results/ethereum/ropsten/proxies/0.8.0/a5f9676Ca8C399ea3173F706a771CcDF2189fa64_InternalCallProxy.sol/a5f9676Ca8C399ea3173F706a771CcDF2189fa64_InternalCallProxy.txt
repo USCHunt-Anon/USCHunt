@@ -1,0 +1,207 @@
+
+Begin InternalCallProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin InternalCallProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,dataSize) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+dataSize
+
+End InternalCallProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin InternalCallProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: dataSize = returndatasize()() (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: returndatasize()
+Type of call: uint256 (Slither line:2807)
+Args:
+
+End InternalCallProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin InternalCallProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: ret = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End InternalCallProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin InternalCallProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation_,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+implementation_
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is implementation_ (Slither line:2818)
+dest.value: implementation_ (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin InternalCallProxy.find_delegate_variable_from_name
+Searching for implementation_ (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementation (Slither line:1689)
+Checking lastReturnValue (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking ret (Slither line:1703)
+Checking dataSize (Slither line:1703)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation_ (Slither line:1800)
+implementation_ is a Parameter in InternalCallProxy._delegate (Slither line:1805)
+CallExpression: return(uint256,uint256)(0,dataSize) (Slither line:1819)
+AssignmentOperation: returndatasize()() (Slither line:1811)
+CallExpression: returndatasize()() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation_,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation_,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: ret (Slither line:1811)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+CallExpression: _delegate(implementation) (Slither line:1819)
+Found where _delegate is called: _delegate(implementation) (Slither line:1832)
+The value passed to parameter #0 is implementation (Slither line:1835)
+which is an Identifier with value implementation (Slither line:1839)
+implementation is a State Variable (Slither line:1842)
+
+End InternalCallProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End InternalCallProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End InternalCallProxy.is_proxy (Slither line:1476)
+
+
+Begin InternalCallProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: InternalCallProxy 
+InternalCallProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin InternalCallProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End InternalCallProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: InternalCallProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin InternalCallProxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: setImplementation (Slither line:2978)
+Checking function: _delegate (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End InternalCallProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in InternalCallProxy (Slither line:1305)
+
+End InternalCallProxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking public function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function InternalCallProxy.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function InternalCallProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function InternalCallProxy._delegate (proxy_features line:893)
+has_compatibility_checks: dependencies: ['implementation_']
+has_compatibility_checks: checking public function setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation_,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_

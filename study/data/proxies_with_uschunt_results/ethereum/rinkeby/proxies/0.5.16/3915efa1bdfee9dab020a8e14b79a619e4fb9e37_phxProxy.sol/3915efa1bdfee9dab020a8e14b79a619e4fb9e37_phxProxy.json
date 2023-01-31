@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "phxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.5.16/3915efa1bdfee9dab020a8e14b79a619e4fb9e37_phxProxy.sol/3915efa1bdfee9dab020a8e14b79a619e4fb9e37_phxProxy.sol#203-267)",
+        "elements": [],
+        "description": "phxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.5.16/3915efa1bdfee9dab020a8e14b79a619e4fb9e37_phxProxy.sol/3915efa1bdfee9dab020a8e14b79a619e4fb9e37_phxProxy.sol#203-267) is an upgradeable proxy.\nimplementPositon is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(org.Phoenix.implementation.storage)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "d7466f89024e7c5abea2e5e1c70017a1bd52f7f1d6e4c708e70214a7e28a03b7",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "phxProxy.implementPositon",
+          "impl_address_setter": "phxProxy.upgradeTo(address)",
+          "impl_address_getter": "phxProxy.implementation()",
+          "impl_address_location": "phxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.5.16/3915efa1bdfee9dab020a8e14b79a619e4fb9e37_phxProxy.sol/3915efa1bdfee9dab020a8e14b79a619e4fb9e37_phxProxy.sol#203-267)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(org.Phoenix.implementation.storage)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "phxProxy.upgradeTo(address)": {
+                "check": "require(bool)(_newImplementation.delegatecall(abi.encodeWithSignature(implementationVersion())))",
+                "is_correct": true
+              },
+              "phxProxy.constructor(address,address)": {
+                "check": "require(bool)(_newImplementation.delegatecall(abi.encodeWithSignature(implementationVersion())))",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "transferOwnership(address)",
+              "owner()",
+              "transferOrigin(address)",
+              "txOrigin()",
+              "ownerExpiredTime()",
+              "isOwner()",
+              "version()",
+              "getMultiSignatureAddress()",
+              "proxyType()",
+              "implementation()",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

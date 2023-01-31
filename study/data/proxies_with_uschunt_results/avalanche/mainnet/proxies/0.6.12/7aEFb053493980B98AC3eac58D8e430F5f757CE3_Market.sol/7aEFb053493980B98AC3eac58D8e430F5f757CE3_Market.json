@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.6.12/7aEFb053493980B98AC3eac58D8e430F5f757CE3_Market.sol/7aEFb053493980B98AC3eac58D8e430F5f757CE3_Market.sol#423-463)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.6.12/7aEFb053493980B98AC3eac58D8e430F5f757CE3_Market.sol/7aEFb053493980B98AC3eac58D8e430F5f757CE3_Market.sol#423-463) is an upgradeable proxy.\nPROXY_MEM_SLOT is declared in the proxy.\nPROXY_MEM_SLOT is a state variable of type uint256\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateImplementation from Market\n",
+        "id": "0cbe6643f5d889058d5c003f5eaef68c571670ae64df41a390bffcc8363fdbd6",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.PROXY_MEM_SLOT",
+          "impl_address_setter": "Market.updateImplementation(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.6.12/7aEFb053493980B98AC3eac58D8e430F5f757CE3_Market.sol/7aEFb053493980B98AC3eac58D8e430F5f757CE3_Market.sol#423-463)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "uint256",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Market.updateImplementation(address)": {
+                "check": "require(bool,string)(bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateImplementation from Market"
+        }
+      }
+    ]
+  }
+}

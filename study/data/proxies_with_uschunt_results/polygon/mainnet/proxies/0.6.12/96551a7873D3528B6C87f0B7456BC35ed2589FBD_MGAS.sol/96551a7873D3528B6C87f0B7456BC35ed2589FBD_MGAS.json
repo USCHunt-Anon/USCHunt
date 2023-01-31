@@ -1,0 +1,62 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Market (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#429-464)",
+        "elements": [],
+        "description": "Market (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#429-464) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "d3a9b2424623730e67a607e2b826b2091089ad973c6f3c2baaed3dbb23d07749",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "NFTMarket (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#466-493)",
+        "elements": [],
+        "description": "NFTMarket (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#466-493) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "1923b982184864e29c84c83174e6396dfa5e6189167cb46619cdbab394dfa3d4",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "MGAS (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#495-533)",
+        "elements": [],
+        "description": "MGAS (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#495-533) is an upgradeable proxy.\nNFTMARKET was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "d3cd7a77faed38353ded2962bdb3a8ec3ce33cfad918366729bd7df251ff9ef3",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "NFTMarket.NFTMARKET",
+          "impl_address_setter": "MGAS.Approve(address)",
+          "impl_address_getter": "NFTMarket._nft()",
+          "impl_address_location": "NFTMarket (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.12/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol/96551a7873D3528B6C87f0B7456BC35ed2589FBD_MGAS.sol#466-493)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MGAS.Approve(address)": {
+                "check": "require(bool)(extcodesize(uint256)(account) > 0)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "Approve(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

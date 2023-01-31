@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#137-172)",
+        "elements": [],
+        "description": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#137-172) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "440593137f60d78a987507b62660a98bfae7c1b472301c2b1e475d7063be7232",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#174-205)",
+        "elements": [],
+        "description": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#174-205) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "30490bdc895a1bad2a925d1ede3644a9b8f55ae1e217cc7d434704cf915f9985",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "FDAY (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#207-246)",
+        "elements": [],
+        "description": "FDAY (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#207-246) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "34e848006ac0110823b00713a12b690b20e9ba59d7a4218dd813ef6e9cf4351f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ApprovedEngine.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "FDAY.approveTo(address)",
+          "impl_address_getter": "ApprovedEngine._implementation()",
+          "impl_address_location": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ad./bsc/contracts/testnet/ad/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol/Ad84759e7a3958935d7a700f3C0bB45e61000480_FDAY.sol#174-205)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ApprovedEngine.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "FDAY.approveTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "FDAY.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "approveTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

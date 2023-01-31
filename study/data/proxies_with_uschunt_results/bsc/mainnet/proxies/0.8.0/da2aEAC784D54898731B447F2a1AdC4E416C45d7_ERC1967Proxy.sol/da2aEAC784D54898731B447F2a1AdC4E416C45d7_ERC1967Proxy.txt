@@ -1,0 +1,2595 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyAdmin.is_proxy (Slither line:1425)
+
+
+End ProxyAdmin.is_proxy (Slither line:1428)
+
+
+Begin ProxyAdmin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyAdmin 
+
+End ProxyAdmin.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is implementation (Slither line:2828)
+dest.value: implementation (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2802)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageSlot.is_proxy (Slither line:1425)
+
+
+End StorageSlot.is_proxy (Slither line:1428)
+
+
+Begin StorageSlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageSlot 
+
+End StorageSlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Upgrade.is_proxy (Slither line:1425)
+
+
+End ERC1967Upgrade.is_proxy (Slither line:1428)
+
+
+Begin ERC1967Upgrade.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Upgrade 
+
+End ERC1967Upgrade.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UUPSUpgradeable.is_proxy (Slither line:1425)
+
+
+End UUPSUpgradeable.is_proxy (Slither line:1428)
+
+
+Begin UUPSUpgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UUPSUpgradeable 
+
+End UUPSUpgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxiable.is_proxy (Slither line:1425)
+
+
+End Proxiable.is_proxy (Slither line:1428)
+
+
+Begin Proxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxiable 
+
+End Proxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ChildOfProxiable.is_proxy (Slither line:1425)
+
+
+End ChildOfProxiable.is_proxy (Slither line:1428)
+
+
+Begin ChildOfProxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ChildOfProxiable 
+
+End ChildOfProxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Proxy.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End ERC1967Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ERC1967Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin ERC1967Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ROLLBACK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in ERC1967Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: slot (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin ERC1967Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function ERC1967Proxy._implementation(): RETURN ERC1967Upgrade._getImplementation() (Slither line:2041)
+Encountered call expression at RETURN node: ERC1967Upgrade._getImplementation() (Slither line:2053)
+Encountered member access expression: ERC1967Upgrade._getImplementation (Slither line:2057)
+
+Begin ERC1967Proxy.find_delegate_from_member_access
+
+Expression: ERC1967Upgrade._getImplementation (Slither line:2358)
+ERC1967Upgrade (Slither line:2371)
+_getImplementation is a member of the contract type: ERC1967Upgrade (Slither line:2416)
+Looking for _getImplementation in ERC1967Upgrade (Slither line:2523)
+Found the function called _getImplementation (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:2544)
+Found another MemberAccess (Slither line:2552)
+Member name: value
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT)
+MemberAccess after CallExpression: StorageSlot.getAddressSlot (Slither line:2556)
+Too many MemberAccesses: returning (Slither line:2560)
+find_delegate_from_member_access returned None (Slither line:2565)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2578)
+
+End ERC1967Proxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End ERC1967Proxy.find_delegate_from_call_exp (Slither line:2104)
+
+
+End ERC1967Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End ERC1967Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ERC1967Proxy.is_proxy (Slither line:1476)
+
+
+Begin ERC1967Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Proxy 
+Local Variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:1164)
+ERC1967Proxy is delegating to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Looking for setter (Slither line:1200)
+
+Looking for setter in ERC1967Upgrade (Slither line:1238)
+
+
+Begin ERC1967Upgrade.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC1967Upgrade.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ERC1967Upgrade (Slither line:1245)
+Looking for setter in UUPSUpgradeable (Slither line:1252)
+
+
+Begin UUPSUpgradeable.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Address.functionDelegateCall(newImplementation,data)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End UUPSUpgradeable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in Proxiable (Slither line:1252)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+_authorizeUpgrade(newImplementation)
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_upgradeToAndCallSecure(newImplementation,bytes(),false)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_verifyCallResult(success,returndata,errorMessage)
+_setImplementation(newImplementation)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Upgraded(newImplementation)
+_setImplementation(newImplementation)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+Address.functionDelegateCall(newImplementation,data)
+_beforeUpgrade(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(string)(errorMessage)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in ChildOfProxiable (Slither line:1252)
+
+
+Begin ChildOfProxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+_authorizeUpgrade(newImplementation)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+_upgradeToAndCallSecure(newImplementation,bytes(),false)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+_verifyCallResult(success,returndata,errorMessage)
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_setImplementation(newImplementation)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Upgraded(newImplementation)
+_setImplementation(newImplementation)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+Address.functionDelegateCall(newImplementation,data)
+_beforeUpgrade(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(string)(errorMessage)
+functionDelegateCall(target,data,Address: low-level delegate call failed)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End ChildOfProxiable.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: ChildOfProxiable (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: _getImplementation in contract: ERC1967Upgrade (Slither line:1285)
+
+End ERC1967Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: ERC1967Proxy
+Setter found in contract ChildOfProxiable
+Found fallback
+Found external function: receive
+Found public function: constructor
+impl_address_from_contract_call: newImplementation
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+functions_writing_to_variable: checking function ChildOfProxiable._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ChildOfProxiable._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._authorizeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._beforeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ChildOfProxiable._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable.upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ChildOfProxiable._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._beforeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ERC1967Proxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function ChildOfProxiable._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function ChildOfProxiable._authorizeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ERC1967Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking external function upgradeTo
+has_compatibility_checks: IF node exp = ! rollbackTesting.value
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_compatibility_checks: condition oldImplementation == _getImplementation()
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+has_compatibility_checks: IF node exp = success
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking external function upgradeToAndCall
+has_compatibility_checks: IF node exp = ! rollbackTesting.value
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_compatibility_checks: condition oldImplementation == _getImplementation()
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+has_compatibility_checks: IF node exp = success
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping internal function _upgradeTo
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+has_time_delay: (node.type) IF
+(Expression) ! rollbackTesting.value
+has_time_delay: (node.type) RETURN
+(Expression) returndata
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _authorizeUpgrade(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) rollbackTesting.value = true
+has_time_delay: (node.type) IF
+(Expression) returndata.length > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeToAndCallSecure(newImplementation,bytes(),false)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+has_time_delay: (node.type) EXPRESSION
+(Expression) rollbackTesting.value = false
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) r = slot
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+has_time_delay: (node.type) RETURN
+(Expression) _verifyCallResult(success,returndata,errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,returndata) = target.delegatecall(data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = _getImplementation()
+has_time_delay: (node.type) RETURN
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) IF
+(Expression) data.length > 0 || forceCall
+has_time_delay: (node.type) EXPRESSION
+(Expression) r = slot
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Address.functionDelegateCall(newImplementation,data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _beforeUpgrade(newImplementation)
+has_time_delay: (node.type) IF
+(Expression) success
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(errorMessage)
+has_time_delay: (node.type) RETURN
+(Expression) functionDelegateCall(target,data,Address: low-level delegate call failed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) rollbackTesting = StorageSlot.getBooleanSlot(_ROLLBACK_SLOT)
+
+Begin TransparentUpgradeableProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TransparentUpgradeableProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End TransparentUpgradeableProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TransparentUpgradeableProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End TransparentUpgradeableProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin TransparentUpgradeableProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End TransparentUpgradeableProxy.find_delegatecall_in_asm (Slither line:1637)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TransparentUpgradeableProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender != _getAdmin()
+TransparentUpgradeableProxy: admin cannot fallback to proxy target
+
+End TransparentUpgradeableProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TransparentUpgradeableProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End TransparentUpgradeableProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TransparentUpgradeableProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin TransparentUpgradeableProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ROLLBACK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in TransparentUpgradeableProxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin TransparentUpgradeableProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function ERC1967Proxy._implementation(): RETURN ERC1967Upgrade._getImplementation() (Slither line:2041)
+Encountered call expression at RETURN node: ERC1967Upgrade._getImplementation() (Slither line:2053)
+Encountered member access expression: ERC1967Upgrade._getImplementation (Slither line:2057)
+
+Begin TransparentUpgradeableProxy.find_delegate_from_member_access
+
+Expression: ERC1967Upgrade._getImplementation (Slither line:2358)
+ERC1967Upgrade (Slither line:2371)
+_getImplementation is a member of the contract type: ERC1967Upgrade (Slither line:2416)
+Looking for _getImplementation in ERC1967Upgrade (Slither line:2523)
+Found the function called _getImplementation (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:2544)
+Found another MemberAccess (Slither line:2552)
+Member name: value
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT)
+MemberAccess after CallExpression: StorageSlot.getAddressSlot (Slither line:2556)
+Too many MemberAccesses: returning (Slither line:2560)
+find_delegate_from_member_access returned None (Slither line:2565)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2578)
+
+End TransparentUpgradeableProxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End TransparentUpgradeableProxy.find_delegate_from_call_exp (Slither line:2104)
+
+
+End TransparentUpgradeableProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End TransparentUpgradeableProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End TransparentUpgradeableProxy.is_proxy (Slither line:1476)
+
+
+Begin TransparentUpgradeableProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TransparentUpgradeableProxy 
+Local Variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:1164)
+TransparentUpgradeableProxy is delegating to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Looking for setter (Slither line:1200)
+
+Looking for setter in ERC1967Upgrade (Slither line:1238)
+
+
+Begin ERC1967Upgrade.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC1967Upgrade.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ERC1967Upgrade (Slither line:1245)
+Looking for setter in UUPSUpgradeable (Slither line:1252)
+
+
+Begin UUPSUpgradeable.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Address.functionDelegateCall(newImplementation,data)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End UUPSUpgradeable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in Proxiable (Slither line:1252)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+_authorizeUpgrade(newImplementation)
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_upgradeToAndCallSecure(newImplementation,bytes(),false)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_verifyCallResult(success,returndata,errorMessage)
+_setImplementation(newImplementation)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Upgraded(newImplementation)
+_setImplementation(newImplementation)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+Address.functionDelegateCall(newImplementation,data)
+_beforeUpgrade(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(string)(errorMessage)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in ChildOfProxiable (Slither line:1252)
+
+
+Begin ChildOfProxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+_authorizeUpgrade(newImplementation)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+_upgradeToAndCallSecure(newImplementation,bytes(),false)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+_verifyCallResult(success,returndata,errorMessage)
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_setImplementation(newImplementation)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Upgraded(newImplementation)
+_setImplementation(newImplementation)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+Address.functionDelegateCall(newImplementation,data)
+_beforeUpgrade(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(string)(errorMessage)
+functionDelegateCall(target,data,Address: low-level delegate call failed)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End ChildOfProxiable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in ERC1967Proxy (Slither line:1252)
+
+
+Begin ERC1967Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: constructor(address,bytes) returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _beforeFallback() returns() (Slither line:3127)
+
+End ERC1967Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Begin TransparentUpgradeableProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: constructor(address,address,bytes) returns() (Slither line:3127)
+Checking function: admin() returns(address) (Slither line:3127)
+Visibility: external
+_delegate(_implementation())
+ifAdmin()
+ERC1967Upgrade._getImplementation()
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+admin_ = _getAdmin()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: external
+_delegate(_implementation())
+ERC1967Upgrade._getImplementation()
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+implementation_ = _implementation()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+ifAdmin()
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+_changeAdmin(newAdmin)
+_delegate(_implementation())
+ifAdmin()
+ERC1967Upgrade._getImplementation()
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+AdminChanged(_getAdmin(),newAdmin)
+require(bool,string)(newAdmin != address(0),ERC1967: new admin is the zero address)
+_setAdmin(newAdmin)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value = newAdmin
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+_delegate(_implementation())
+returndata
+_setImplementation(newImplementation)
+size > 0
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+ERC1967Upgrade._getImplementation()
+Upgraded(newImplementation)
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Address.functionDelegateCall(newImplementation,data)
+_verifyCallResult(success,returndata,errorMessage)
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_upgradeToAndCall(newImplementation,bytes(),false)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+ifAdmin()
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End TransparentUpgradeableProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: TransparentUpgradeableProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: _getImplementation in contract: ERC1967Upgrade (Slither line:1285)
+
+End TransparentUpgradeableProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: TransparentUpgradeableProxy
+Setter found in contract TransparentUpgradeableProxy
+impl_address_from_contract_call: newImplementation
+Checking external function fallback
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+Checking external function receive
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+Checking external function admin
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function implementation
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+functions_writing_to_variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._admin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.admin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking external function upgradeTo
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_compatibility_checks: condition msg.sender != _getAdmin()
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = switch_expr_7445_167_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_7445_167_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _getAdmin()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_compatibility_checks: condition msg.sender != _getAdmin()
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = switch_expr_7445_167_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_7445_167_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _getAdmin()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = success
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+Found public function: constructor
+Found fallback
+Found external function: receive
+Found public function: constructor
+Found external function: admin
+has_time_delay: (node.type) EXPRESSION
+(Expression) _delegate(_implementation())
+has_time_delay: (node.type) RETURN
+(Expression) returndata
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _fallback()
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) RETURN
+(Expression) ERC1967Upgrade._getImplementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) return(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) super._beforeFallback()
+has_time_delay: (node.type) IF
+(Expression) returndata.length > 0
+has_time_delay: (node.type) IF
+(Expression) data.length > 0 || forceCall
+has_time_delay: (node.type) EXPRESSION
+(Expression) calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) _beforeFallback()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+has_time_delay: (node.type) RETURN
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+has_time_delay: (node.type) EXPRESSION
+(Expression) Address.functionDelegateCall(newImplementation,data)
+has_time_delay: (node.type) RETURN
+(Expression) _verifyCallResult(success,returndata,errorMessage)
+has_time_delay: (node.type) RETURN
+(Expression) StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,returndata) = target.delegatecall(data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeToAndCall(newImplementation,bytes(),false)
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ifAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+has_time_delay: (node.type) IF
+(Expression) switch_expr_7445_167_0__delegate_asm_0 == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+has_time_delay: (node.type) IF
+(Expression) msg.sender == _getAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+has_time_delay: (node.type) IF
+(Expression) success
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) r = slot
+has_time_delay: (node.type) RETURN
+(Expression) functionDelegateCall(target,data,Address: low-level delegate call failed)
+
+Begin AdminUpgradeabilityProxy.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin AdminUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End AdminUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin AdminUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End AdminUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin AdminUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End AdminUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin AdminUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender != _getAdmin()
+TransparentUpgradeableProxy: admin cannot fallback to proxy target
+
+End AdminUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin AdminUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End AdminUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin AdminUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin AdminUpgradeabilityProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ROLLBACK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in AdminUpgradeabilityProxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin AdminUpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function ERC1967Proxy._implementation(): RETURN ERC1967Upgrade._getImplementation() (Slither line:2041)
+Encountered call expression at RETURN node: ERC1967Upgrade._getImplementation() (Slither line:2053)
+Encountered member access expression: ERC1967Upgrade._getImplementation (Slither line:2057)
+
+Begin AdminUpgradeabilityProxy.find_delegate_from_member_access
+
+Expression: ERC1967Upgrade._getImplementation (Slither line:2358)
+ERC1967Upgrade (Slither line:2371)
+_getImplementation is a member of the contract type: ERC1967Upgrade (Slither line:2416)
+Looking for _getImplementation in ERC1967Upgrade (Slither line:2523)
+Found the function called _getImplementation (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:2544)
+Found another MemberAccess (Slither line:2552)
+Member name: value
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT)
+MemberAccess after CallExpression: StorageSlot.getAddressSlot (Slither line:2556)
+Too many MemberAccesses: returning (Slither line:2560)
+find_delegate_from_member_access returned None (Slither line:2565)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2578)
+
+End AdminUpgradeabilityProxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End AdminUpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2104)
+
+
+End AdminUpgradeabilityProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End AdminUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End AdminUpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin AdminUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AdminUpgradeabilityProxy 
+Local Variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:1164)
+AdminUpgradeabilityProxy is delegating to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Looking for setter (Slither line:1200)
+
+Looking for setter in ERC1967Upgrade (Slither line:1238)
+
+
+Begin ERC1967Upgrade.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ERC1967Upgrade.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ERC1967Upgrade (Slither line:1245)
+Looking for setter in UUPSUpgradeable (Slither line:1252)
+
+
+Begin UUPSUpgradeable.find_setter_in_contract (Slither line:3119)
+
+Expression: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Address.functionDelegateCall(newImplementation,data)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End UUPSUpgradeable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in Proxiable (Slither line:1252)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+_authorizeUpgrade(newImplementation)
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_upgradeToAndCallSecure(newImplementation,bytes(),false)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_verifyCallResult(success,returndata,errorMessage)
+_setImplementation(newImplementation)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Upgraded(newImplementation)
+_setImplementation(newImplementation)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+Address.functionDelegateCall(newImplementation,data)
+_beforeUpgrade(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(string)(errorMessage)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in ChildOfProxiable (Slither line:1252)
+
+
+Begin ChildOfProxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _authorizeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeUpgrade(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+returndata
+size > 0
+_authorizeUpgrade(newImplementation)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+rollbackTesting.value = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+_upgradeToAndCallSecure(newImplementation,bytes(),false)
+Address.functionDelegateCall(newImplementation,abi.encodeWithSignature(upgradeTo(address),oldImplementation))
+rollbackTesting.value = false
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(oldImplementation == _getImplementation(),ERC1967Upgrade: upgrade breaks further upgrades)
+_verifyCallResult(success,returndata,errorMessage)
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_setImplementation(newImplementation)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Upgraded(newImplementation)
+_setImplementation(newImplementation)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+Address.functionDelegateCall(newImplementation,data)
+_beforeUpgrade(newImplementation)
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(string)(errorMessage)
+functionDelegateCall(target,data,Address: low-level delegate call failed)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End ChildOfProxiable.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in ERC1967Proxy (Slither line:1252)
+
+
+Begin ERC1967Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: constructor(address,bytes) returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getImplementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeToAndCallSecure(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeBeaconToAndCall(address,bytes,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getAdmin() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setAdmin(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _changeAdmin(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _beforeFallback() returns() (Slither line:3127)
+
+End ERC1967Proxy.find_setter_in_contract (Slither line:3345)
+
+Looking for setter in TransparentUpgradeableProxy (Slither line:1252)
+
+
+Begin TransparentUpgradeableProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: newImplementation (Slither line:3122)
+Checking function: constructor(address,address,bytes) returns() (Slither line:3127)
+Checking function: admin() returns(address) (Slither line:3127)
+Visibility: external
+_delegate(_implementation())
+ifAdmin()
+ERC1967Upgrade._getImplementation()
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+admin_ = _getAdmin()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: external
+_delegate(_implementation())
+ERC1967Upgrade._getImplementation()
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+implementation_ = _implementation()
+is an Assignment Operation (Slither line:3216)
+newImplementation
+ifAdmin()
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+_changeAdmin(newAdmin)
+_delegate(_implementation())
+ifAdmin()
+ERC1967Upgrade._getImplementation()
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+AdminChanged(_getAdmin(),newAdmin)
+require(bool,string)(newAdmin != address(0),ERC1967: new admin is the zero address)
+_setAdmin(newAdmin)
+r = slot
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value = newAdmin
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+_delegate(_implementation())
+returndata
+_setImplementation(newImplementation)
+size > 0
+_fallback()
+revert(uint256,uint256)(0,returndatasize()())
+ERC1967Upgrade._getImplementation()
+Upgraded(newImplementation)
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+return(uint256,uint256)(0,returndatasize()())
+super._beforeFallback()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_beforeFallback()
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+Address.functionDelegateCall(newImplementation,data)
+_verifyCallResult(success,returndata,errorMessage)
+StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+(success,returndata) = target.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+_upgradeToAndCall(newImplementation,bytes(),false)
+returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+is an Assignment Operation (Slither line:3216)
+newImplementation
+ifAdmin()
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3216)
+newImplementation
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+
+End TransparentUpgradeableProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: TransparentUpgradeableProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: _getImplementation in contract: ERC1967Upgrade (Slither line:1285)
+
+End AdminUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: AdminUpgradeabilityProxy
+Setter found in contract TransparentUpgradeableProxy
+impl_address_from_contract_call: newImplementation
+Checking external function admin
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function implementation
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == _getAdmin()
+Checking external function fallback
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+Checking external function receive
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+functions_writing_to_variable: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._admin (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.admin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.admin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.constructor (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._getAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._admin (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._upgradeToAndCallSecure (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeToAndCallSecure writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._setBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeBeaconToAndCall (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._upgradeTo (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy._changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy.changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._setImplementation (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function TransparentUpgradeableProxy.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value (proxy_features line:992)
+functions_writing_to_variable: checking function AdminUpgradeabilityProxy._beforeFallback (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking external function upgradeTo
+has_compatibility_checks: IF node exp = switch_expr_7445_167_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_7445_167_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_compatibility_checks: condition msg.sender != _getAdmin()
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = msg.sender == _getAdmin()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking external function upgradeToAndCall
+has_compatibility_checks: IF node exp = switch_expr_7445_167_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_7445_167_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_compatibility_checks: condition msg.sender != _getAdmin()
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = msg.sender == _getAdmin()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: skipping internal function _upgradeToAndCall
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: skipping internal function _upgradeToAndCallSecure
+has_compatibility_checks: checking external function upgradeTo
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_compatibility_checks: condition msg.sender != _getAdmin()
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = switch_expr_7445_167_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_7445_167_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _getAdmin()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = success
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_compatibility_checks: condition msg.sender != _getAdmin()
+has_compatibility_checks: IF node exp = returndata.length > 0
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: IF node can lead to revert ['revert(string)(errorMessage)']
+has_compatibility_checks: ConditionalExpression if returndata.length > 0 then returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata) else revert(string)(errorMessage)
+has_compatibility_checks: IF node exp = data.length > 0 || forceCall
+require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_compatibility_checks: condition isContract(target)
+has_compatibility_checks: IF node exp = switch_expr_7445_167_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_7445_167_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _getAdmin()
+require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: IF node exp = success
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found external function: admin
+has_time_delay: (node.type) EXPRESSION
+(Expression) _delegate(_implementation())
+has_time_delay: (node.type) RETURN
+(Expression) returndata
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _fallback()
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) RETURN
+(Expression) ERC1967Upgrade._getImplementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender != _getAdmin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) return(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) super._beforeFallback()
+has_time_delay: (node.type) IF
+(Expression) returndata.length > 0
+has_time_delay: (node.type) IF
+(Expression) data.length > 0 || forceCall
+has_time_delay: (node.type) EXPRESSION
+(Expression) calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) _beforeFallback()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(target),Address: delegate call to non-contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+has_time_delay: (node.type) RETURN
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value
+has_time_delay: (node.type) EXPRESSION
+(Expression) Address.functionDelegateCall(newImplementation,data)
+has_time_delay: (node.type) RETURN
+(Expression) _verifyCallResult(success,returndata,errorMessage)
+has_time_delay: (node.type) RETURN
+(Expression) StorageSlot.getAddressSlot(_ADMIN_SLOT).value
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,returndata) = target.delegatecall(data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeToAndCall(newImplementation,bytes(),false)
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndata_size__verifyCallResult_asm_0 = mload(uint256)(returndata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ifAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+has_time_delay: (node.type) IF
+(Expression) switch_expr_7445_167_0__delegate_asm_0 == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) switch_expr_7445_167_0__delegate_asm_0 = result__delegate_asm_0
+has_time_delay: (node.type) IF
+(Expression) msg.sender == _getAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(newImplementation),ERC1967: new implementation is not a contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(32 + returndata,returndata_size__verifyCallResult_asm_0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation
+has_time_delay: (node.type) IF
+(Expression) success
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(string)(errorMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) r = slot
+has_time_delay: (node.type) RETURN
+(Expression) functionDelegateCall(target,data,Address: low-level delegate call failed)

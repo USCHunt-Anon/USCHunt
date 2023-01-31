@@ -1,0 +1,104 @@
+
+Begin DeFiDAO.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin DeFiDAO.find_delegatecall_in_exp_node
+
+Found Expression Node: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(~ 0,addr,freememstart_fallback_asm_0,calldatasize()(),freememstart_fallback_asm_0,32) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+~ 0
+addr
+freememstart_fallback_asm_0
+calldatasize()()
+freememstart_fallback_asm_0
+32
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is addr (Slither line:2818)
+dest.value: addr (Slither line:2821)
+Expression: implementation (Slither line:2826)
+
+End DeFiDAO.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End DeFiDAO.is_proxy (Slither line:1476)
+
+
+Begin DeFiDAO.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DeFiDAO 
+DeFiDAO is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin DeFiDAO.find_setter_in_contract (Slither line:3109)
+
+Checking function: setLogicContractAddress(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: getLogicContractAddress() returns(address) (Slither line:3117)
+Visibility: external
+implementation
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+Checking function: transferEther(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+_recipient.transfer(_amount)
+require(bool,string)(address(this).balance >= _amount,Not enough Ether in contract!)
+true
+Checking function: contractBalance() returns(uint256) (Slither line:3117)
+Visibility: external
+address(this).balance
+Checking function: fallback() returns() (Slither line:3117)
+
+End DeFiDAO.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in DeFiDAO (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin DeFiDAO.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+Checking function: setLogicContractAddress (Slither line:2978)
+Checking function: getLogicContractAddress (Slither line:2978)
+getLogicContractAddress returns address variable  (Slither line:2998)
+RETURN node expression: implementation (Slither line:3018)
+
+End DeFiDAO.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: getLogicContractAddress in contract: DeFiDAO (Slither line:1285)
+
+Begin DeFiDAO.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2878)
+RETURN: implementation (Slither line:2878)
+
+End DeFiDAO.getter_return_is_non_constant (Slither line:2932)
+
+
+End DeFiDAO.is_upgradeable_proxy (Slither line:1293)
+

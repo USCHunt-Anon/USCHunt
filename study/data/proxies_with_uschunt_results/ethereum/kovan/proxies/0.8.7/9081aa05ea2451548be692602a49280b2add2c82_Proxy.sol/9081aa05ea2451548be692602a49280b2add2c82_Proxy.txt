@@ -1,0 +1,152 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_466_118_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _implementation (Slither line:2818)
+dest.value: _implementation (Slither line:2821)
+Expression: implementation (Slither line:2826)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+implementation = newImplementation
+is an Assignment Operation (Slither line:3206)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+newImplementation
+Checking function: fallback (Slither line:2978)
+Checking function: setImplementation (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking public function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = newImplementation
+functions_writing_to_variable: setImplementation writes newImplementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newImplementation']
+has_compatibility_checks: checking public function setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found fallback
+Found public function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = newImplementation

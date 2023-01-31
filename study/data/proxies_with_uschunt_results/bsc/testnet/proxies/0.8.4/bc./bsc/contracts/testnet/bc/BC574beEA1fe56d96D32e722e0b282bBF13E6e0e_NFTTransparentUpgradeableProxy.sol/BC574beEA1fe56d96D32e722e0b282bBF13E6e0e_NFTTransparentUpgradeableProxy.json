@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#20-88)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#20-88) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#586-604)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#586-604) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "211e994b39210eb9069681dcc1b67b974889fdbc5a5da463a2722040444f5164",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "NFTTransparentUpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#634-727)",
+        "elements": [],
+        "description": "NFTTransparentUpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#634-727) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "c68932f8c54a3a0b6b158324f70afa3f70ee8098a2cfc7ca196de0a08801827d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "NFTTransparentUpgradeableProxy.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "NFTTransparentUpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.4/bc./bsc/contracts/testnet/bc/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol/BC574beEA1fe56d96D32e722e0b282bBF13E6e0e_NFTTransparentUpgradeableProxy.sol#634-727)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "NFTTransparentUpgradeableProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "NFTTransparentUpgradeableProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "NFTTransparentUpgradeableProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

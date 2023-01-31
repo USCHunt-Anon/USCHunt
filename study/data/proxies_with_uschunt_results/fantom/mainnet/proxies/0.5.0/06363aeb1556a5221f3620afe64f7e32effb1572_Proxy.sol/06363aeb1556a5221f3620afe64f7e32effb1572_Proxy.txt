@@ -1,0 +1,140 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking a (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in Proxy.delegatedFwd (Slither line:1805)
+CallExpression: delegatedFwd(implementation(),msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(implementation(),msg.data) (Slither line:1832)
+The value passed to parameter #0 is implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function Proxy.implementation(): RETURN a (Slither line:2041)
+a (Slither line:2048)
+implementation returns a variable of type address   called a (Slither line:2193)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to a
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: updateImplementation(address) returns() (Slither line:3127)
+Visibility: public
+a = implementation
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: updateImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+a is a Variable object
+implementation
+Checking function: updateImplementation (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: a (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function updateImplementation
+Checking public function implementation
+Checking external function fallback
+functions_writing_to_variable: a
+functions_writing_to_variable: checking function Proxy.updateImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = a = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: a = implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: a (proxy_features line:924)
+get_value_assigned: a = implementation
+functions_writing_to_variable: updateImplementation writes implementation to a (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.delegatedFwd (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation']
+has_compatibility_checks: checking public function updateImplementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: updateImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) a = implementation

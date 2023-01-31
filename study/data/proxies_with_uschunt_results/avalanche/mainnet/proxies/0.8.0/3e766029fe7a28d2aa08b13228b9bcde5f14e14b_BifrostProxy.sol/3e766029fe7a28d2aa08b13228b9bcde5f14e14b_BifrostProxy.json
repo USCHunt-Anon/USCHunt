@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "BifrostProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.8.0/3e766029fe7a28d2aa08b13228b9bcde5f14e14b_BifrostProxy.sol/3e766029fe7a28d2aa08b13228b9bcde5f14e14b_BifrostProxy.sol#7-121)",
+        "elements": [],
+        "description": "BifrostProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.8.0/3e766029fe7a28d2aa08b13228b9bcde5f14e14b_BifrostProxy.sol/3e766029fe7a28d2aa08b13228b9bcde5f14e14b_BifrostProxy.sol#7-121) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(org.thor.implementation.address)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "ef2f90c4a0bd61ba3fdf8ca64d426703bdf74046377b048b990f6a804db58dd3",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BifrostProxy.implementationPosition",
+          "impl_address_setter": "BifrostProxy.upgradeTo(address)",
+          "impl_address_getter": "BifrostProxy.implementation()",
+          "impl_address_location": "BifrostProxy (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.8.0/3e766029fe7a28d2aa08b13228b9bcde5f14e14b_BifrostProxy.sol/3e766029fe7a28d2aa08b13228b9bcde5f14e14b_BifrostProxy.sol#7-121)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(org.thor.implementation.address)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BifrostProxy.upgradeTo(address)": {
+                "check": "require(bool)(currentImplementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "implementation()",
+              "proxyOwner()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

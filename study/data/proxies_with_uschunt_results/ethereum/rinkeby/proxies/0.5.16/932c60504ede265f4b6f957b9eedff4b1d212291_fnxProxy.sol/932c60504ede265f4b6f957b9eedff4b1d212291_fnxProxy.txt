@@ -1,0 +1,293 @@
+
+Begin fnxProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin fnxProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin fnxProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementPositon (Slither line:1689)
+Checking versionPositon (Slither line:1689)
+Checking proxyOwnerPosition (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in fnxProxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin fnxProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+implementation returns a variable of type address   called impl (Slither line:2183)
+implementation contains assembly - looking for sload (Slither line:2189)
+Looking in ASSEMBLY node (Slither line:2196)
+{ impl := sload(position) }  (Slither line:2200)
+Return value set by sload in asm (Slither line:2202)
+Found storage slot: implementPositon (Slither line:2222)
+
+End fnxProxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End fnxProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+Begin fnxProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End fnxProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End fnxProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting fnxProxy._delegate_variable = fnxProxy._proxy_impl_slot: implementPositon (Slither line:1473)
+
+
+End fnxProxy.is_proxy (Slither line:1476)
+
+
+Begin fnxProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: fnxProxy 
+Call destination implementPositon is constant (Slither line:1146)
+
+implementPositon is the implementation storage slot (Slither line:1149)
+
+fnxProxy is delegating to implementPositon
+Looking for setter (Slither line:1200)
+
+
+Begin fnxProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: keccak256(bytes)(org.Finnexus.implementation.storage) (Slither line:3112)
+Checking function: constructor(address,uint256) returns() (Slither line:3117)
+Checking function: transferProxyOwnership(address) returns() (Slither line:3117)
+Visibility: public
+onlyProxyOwner()
+require(bool)(_newOwner != address(0))
+_setProxyOwner(_newOwner)
+{ sstore(position, _newOwner) } (Slither line:3153)
+transferProxyOwnership reads and/or writes to variable position (Slither line:3160)
+transferProxyOwnership reads and/or writes to variable proxyOwnerPosition (Slither line:3160)
+require(bool,string)(msg.sender == proxyOwner(),proxyOwner: caller is not the proxy owner)
+Checking function: _setProxyOwner(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setVersion(uint256) returns() (Slither line:3117)
+Visibility: internal
+Checking function: version() returns(uint256) (Slither line:3117)
+Visibility: public
+version contains assembly (Slither line:3143)
+Checking function: proxyOwner() returns(address) (Slither line:3117)
+Visibility: public
+proxyOwner contains assembly (Slither line:3143)
+Checking function: proxyType() returns(uint256) (Slither line:3117)
+Visibility: public
+2
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: public
+implementation contains assembly (Slither line:3143)
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: upgradeTo(address,uint256) returns() (Slither line:3117)
+Visibility: public
+require(bool)(currentImplementation != _newImplementation)
+_setImplementation(_newImplementation)
+_setVersion(version_)
+require(bool,string)(version_ > version(),upgrade version number must greater than current version)
+Upgraded(_newImplementation,version_)
+{ sstore(position, version_) } (Slither line:3153)
+upgradeTo reads and/or writes to variable position (Slither line:3160)
+upgradeTo reads and/or writes to variable versionPositon (Slither line:3160)
+require(bool)(success)
+(success) = _newImplementation.delegatecall(abi.encodeWithSignature(update()))
+is an Assignment Operation (Slither line:3206)
+keccak256(bytes)(org.Finnexus.implementation.storage)
+    sstore(position, _newImplementation) (Slither line:3153)
+upgradeTo reads and/or writes to variable position (Slither line:3160)
+upgradeTo reads and/or writes to variable implementPositon (Slither line:3160)
+
+End fnxProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: fnxProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin fnxProxy.find_getter_in_contract (Slither line:2964)
+
+implementPositon is a Variable object
+keccak256(bytes)(org.Finnexus.implementation.storage)
+Checking function: constructor (Slither line:2978)
+Checking function: transferProxyOwnership (Slither line:2978)
+Checking function: _setProxyOwner (Slither line:2978)
+Checking function: _setVersion (Slither line:2978)
+Checking function: version (Slither line:2978)
+version returns uint256 variable called version_ (Slither line:2998)
+version contains assembly (Slither line:3041)
+version contains assembly (Slither line:3041)
+version contains assembly (Slither line:3041)
+Checking function: proxyOwner (Slither line:2978)
+proxyOwner returns address variable called owner (Slither line:2998)
+proxyOwner contains assembly (Slither line:3041)
+proxyOwner contains assembly (Slither line:3041)
+proxyOwner contains assembly (Slither line:3041)
+Checking function: proxyType (Slither line:2978)
+proxyType returns uint256 variable  (Slither line:2998)
+RETURN node expression: 2 (Slither line:3018)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable called impl (Slither line:2998)
+implementation contains assembly (Slither line:3041)
+implementation contains assembly (Slither line:3041)
+
+End fnxProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: fnxProxy (Slither line:1285)
+
+End fnxProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: fnxProxy
+Setter found in contract fnxProxy
+Checking public function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyOwner(),proxyOwner: caller is not the proxy owner)
+Checking public function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyOwner(),proxyOwner: caller is not the proxy owner)
+Checking public function version
+Checking public function proxyOwner
+Checking public function proxyType
+Checking public function implementation
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyOwner(),proxyOwner: caller is not the proxy owner)
+Checking external function fallback
+functions_writing_to_variable: implementPositon
+functions_writing_to_variable: checking function fnxProxy.upgradeTo (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: upgradeTo writes _newImplementation to implementPositon w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function fnxProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: constructor writes _newImplementation to implementPositon w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function fnxProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy.version (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = implementPositon = keccak256(bytes)(org.Finnexus.implementation.storage) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementPositon = keccak256(bytes)(org.Finnexus.implementation.storage) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementPositon (proxy_features line:919)
+get_value_assigned: implementPositon = keccak256(bytes)(org.Finnexus.implementation.storage)
+functions_writing_to_variable: exp = versionPositon = keccak256(bytes)(org.Finnexus.version.storage) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: versionPositon = keccak256(bytes)(org.Finnexus.version.storage) (proxy_features line:907)
+functions_writing_to_variable: exp = proxyOwnerPosition = keccak256(bytes)(org.Finnexus.Owner.storage) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxyOwnerPosition = keccak256(bytes)(org.Finnexus.Owner.storage) (proxy_features line:907)
+functions_writing_to_variable: checking function fnxProxy.proxyOwner (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy._setVersion (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy._setImplementation (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: _setImplementation writes _newImplementation to implementPositon w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function fnxProxy.proxyType (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy.transferProxyOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function fnxProxy._setProxyOwner (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(currentImplementation != _newImplementation)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: modifier calls: ['onlyProxyOwner()', 'upgradeVersion(version_)']
+check_condition_from_expression: condition implementation() != _newImplementation
+require(bool,string)(version_ > version(),upgrade version number must greater than current version)
+has_compatibility_checks: condition version_ > version()
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(msg.sender == proxyOwner(),proxyOwner: caller is not the proxy owner)
+has_compatibility_checks: condition msg.sender == proxyOwner()
+has_compatibility_checks: checking public function constructor
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+has_compatibility_checks: skipping internal function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 { revert(ptr, size) }
+    default { return(ptr, size) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: transferProxyOwnership
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentImplementation = implementation()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementPositon
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(currentImplementation != _newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setVersion(version_)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(version_ > version(),upgrade version number must greater than current version)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = versionPositon
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = proxyOwnerPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(_newImplementation,version_)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(success)
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success) = _newImplementation.delegatecall(abi.encodeWithSignature(update()))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementPositon
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == proxyOwner(),proxyOwner: caller is not the proxy owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyProxyOwner()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = versionPositon
+has_time_delay: (node.type) EXPRESSION
+(Expression) upgradeVersion(version_)

@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Vault (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.8.0/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol#5-33)",
+        "elements": [],
+        "description": "Vault (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.8.0/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol#5-33) may be an upgradeable proxy.\nimp is declared in the proxy.\nVault._delegate().imp (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.8.0/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol#22) gets value from a cross-contract call: IPool(pool).vaultImplementation()\nIPool appears to be a Beacon contract for the proxy\nThe address of IPool is stored as a state variable: Vault.pool\nCould not find setter for pool\nMissing compatibility check in Vault.fallback()\n",
+        "id": "777ace70cb7573252e6e484cde7038c91e540e2b22f06f75b69d5e025e0b7738",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Vault._delegate().imp",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Vault (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.8.0/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol/34fccD8DB927F227D68E46D528b58D964582a714_Vault.sol#5-33)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IPool(pool).vaultImplementation()",
+          "beacon": "IPool",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "Vault.pool",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Vault.fallback()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

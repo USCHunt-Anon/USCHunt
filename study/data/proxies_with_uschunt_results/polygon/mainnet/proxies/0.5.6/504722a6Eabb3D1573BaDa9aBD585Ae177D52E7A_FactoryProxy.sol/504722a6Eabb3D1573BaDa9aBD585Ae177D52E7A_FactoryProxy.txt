@@ -1,0 +1,311 @@
+
+Begin IConstructor.is_proxy (Slither line:1425)
+
+
+End IConstructor.is_proxy (Slither line:1428)
+
+
+Begin IConstructor.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IConstructor 
+
+End IConstructor.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FactoryProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin FactoryProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End FactoryProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin FactoryProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin FactoryProxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in FactoryProxy.fallback (Slither line:1707)
+Expression: _implementation() (Slither line:1719)
+
+Begin FactoryProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{  (Slither line:2210)
+    impl := sload(slot)  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2232)
+
+End FactoryProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End FactoryProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+Begin FactoryProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End FactoryProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End FactoryProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting FactoryProxy._delegate_variable = FactoryProxy._proxy_impl_slot: _IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End FactoryProxy.is_proxy (Slither line:1476)
+
+
+Begin FactoryProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FactoryProxy 
+Call destination _IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+_IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+FactoryProxy is delegating to _IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin FactoryProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address,bytes) returns() (Slither line:3127)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: external
+_implementation()
+onlyOwner()
+require(bool)(msg.sender == _owner())
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address,string) returns() (Slither line:3127)
+Visibility: private
+Checking function: Owner() returns(address) (Slither line:3127)
+Visibility: external
+_owner()
+onlyOwner()
+require(bool)(msg.sender == _owner())
+Checking function: _owner() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setOwner(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+require(bool,string)(newOwner != address(0),TransparentUpgradeableProxy: new Owner is the zero address)
+OwnerChanged(_owner(),newOwner)
+    sstore(slot, newOwner) (Slither line:3163)
+changeOwner reads and/or writes to variable slot (Slither line:3170)
+changeOwner reads and/or writes to variable _ADMIN_SLOT (Slither line:3170)
+_setOwner(newOwner)
+require(bool)(msg.sender == _owner())
+Checking function: upgradeTo(address,string) returns() (Slither line:3127)
+Visibility: external
+_upgradeTo(newImplementation,version)
+require(bool)(keccak256(bytes)(abi.encodePacked(IConstructor(newImplementation).version())) == keccak256(bytes)(abi.encodePacked(version)))
+_setImplementation(newImplementation,version)
+onlyOwner()
+    sstore(slot, newImplementation) (Slither line:3163)
+upgradeTo reads and/or writes to variable slot (Slither line:3170)
+upgradeTo reads and/or writes to variable _IMPLEMENTATION_SLOT (Slither line:3170)
+upgradeTo reads and/or writes to variable newImplementation (Slither line:3170)
+upgradeTo reads and/or writes to variable version (Slither line:3170)
+
+End FactoryProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: FactoryProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin FactoryProxy.find_getter_in_contract (Slither line:2974)
+
+_IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation() (Slither line:3028)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable called impl (Slither line:3008)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+
+End FactoryProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: FactoryProxy (Slither line:1285)
+
+End FactoryProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: FactoryProxy
+Setter found in contract FactoryProxy
+Checking external function implementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function Owner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function implementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function Owner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function fallback
+functions_writing_to_variable: _IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function FactoryProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to _IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function FactoryProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: _IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = _ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: checking function FactoryProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function FactoryProxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to _IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function FactoryProxy._setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function FactoryProxy.Owner (proxy_features line:898)
+functions_writing_to_variable: checking function FactoryProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to _IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function FactoryProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function FactoryProxy.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function FactoryProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, _impl)
+(proxy_features line:953)
+_impl
+functions_writing_to_variable: constructor writes _impl to _IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function FactoryProxy._owner (proxy_features line:898)
+functions_writing_to_variable: checking function FactoryProxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function upgradeTo
+require(bool)(keccak256(bytes)(abi.encodePacked(IConstructor(newImplementation).version())) == keccak256(bytes)(abi.encodePacked(version)))
+has_compatibility_checks: condition keccak256(bytes)(abi.encodePacked(IConstructor(newImplementation).version())) == keccak256(bytes)(abi.encodePacked(version))
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition keccak256(bytes)(abi.encodePacked(IConstructor(newImplementation).version())) == keccak256(bytes)(abi.encodePacked(version))
+require(bool)(msg.sender == _owner())
+has_compatibility_checks: condition msg.sender == _owner()
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = _implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found external function: implementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = _IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(newImplementation,version)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(keccak256(bytes)(abi.encodePacked(IConstructor(newImplementation).version())) == keccak256(bytes)(abi.encodePacked(version)))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = _ADMIN_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation,version)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == _owner())

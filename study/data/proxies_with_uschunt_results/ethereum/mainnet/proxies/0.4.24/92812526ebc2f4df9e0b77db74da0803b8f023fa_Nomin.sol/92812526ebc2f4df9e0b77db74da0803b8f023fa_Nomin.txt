@@ -1,0 +1,455 @@
+
+Begin SafeDecimalMath.is_proxy (Slither line:1425)
+
+
+End SafeDecimalMath.is_proxy (Slither line:1428)
+
+
+Begin SafeDecimalMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeDecimalMath 
+
+End SafeDecimalMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SelfDestructible.is_proxy (Slither line:1425)
+
+
+End SelfDestructible.is_proxy (Slither line:1428)
+
+
+Begin SelfDestructible.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SelfDestructible 
+
+End SelfDestructible.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin State.is_proxy (Slither line:1425)
+
+
+End State.is_proxy (Slither line:1428)
+
+
+Begin State.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: State 
+
+End State.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenState.is_proxy (Slither line:1425)
+
+
+End TokenState.is_proxy (Slither line:1428)
+
+
+Begin TokenState.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenState 
+
+End TokenState.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(free_ptr, 0, calldatasize()) (Slither line:1576)
+    let result := call(gas(), sload(target_slot), callvalue(), free_ptr, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(free_ptr, 0, returndatasize()) (Slither line:1576)
+    if iszero(result) (Slither line:1576)
+    { (Slither line:1576)
+        revert(free_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    return(free_ptr, returndatasize()) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(free_ptr, 0, calldatasize()) (Slither line:1576)
+    let result := call(gas(), sload(target_slot), callvalue(), free_ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'target_slot'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for target_slot (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nominatedOwner (Slither line:1689)
+Checking target (Slither line:1689)
+Checking useDELEGATECALL (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nominatedOwner (Slither line:1689)
+Checking target (Slither line:1689)
+target is a State Variable in contract Proxy (Slither line:1693)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to target
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: setTarget(Proxyable) returns() (Slither line:3127)
+Visibility: external
+TargetUpdated(_target)
+require(bool)(msg.sender == owner)
+onlyOwner()
+target = _target
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setTarget in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+_target
+Checking function: constructor (Slither line:2988)
+Checking function: nominateNewOwner (Slither line:2988)
+Checking function: acceptOwnership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setTarget (Slither line:2988)
+Checking function: setUseDELEGATECALL (Slither line:2988)
+Checking function: _emit (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for target at slot 2 in contract SelfDestructible (Slither line:1355)
+Found initiationTime at slot 2 in contract SelfDestructible (Slither line:1362)
+Checking for initiationTime at slot 2 in contract State (Slither line:1355)
+Found associatedContract at slot 2 in contract State (Slither line:1362)
+Checking for associatedContract at slot 2 in contract TokenState (Slither line:1355)
+Found associatedContract at slot 2 in contract TokenState (Slither line:1362)
+Checking for associatedContract at slot 2 in contract Proxyable (Slither line:1355)
+Found proxy at slot 2 in contract Proxyable (Slither line:1362)
+Checking for proxy at slot 2 in contract ExternStateToken (Slither line:1355)
+Found owner at slot 2 in contract ExternStateToken (Slither line:1362)
+Checking for owner at slot 2 in contract FeeToken (Slither line:1355)
+Found owner at slot 2 in contract FeeToken (Slither line:1362)
+Checking for owner at slot 2 in contract HavvenEscrow (Slither line:1355)
+Found owner at slot 2 in contract HavvenEscrow (Slither line:1362)
+Checking for owner at slot 2 in contract Havven (Slither line:1355)
+Found owner at slot 2 in contract Havven (Slither line:1362)
+Checking for owner at slot 2 in contract Court (Slither line:1355)
+Found owner at slot 2 in contract Court (Slither line:1362)
+Checking for owner at slot 2 in contract Nomin (Slither line:1355)
+Found owner at slot 2 in contract Nomin (Slither line:1362)
+
+Begin SafeDecimalMath.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+_target
+Checking function: addIsSafe (Slither line:2988)
+addIsSafe returns bool variable  (Slither line:3008)
+RETURN node expression: x + y >= y (Slither line:3028)
+Checking function: safeAdd (Slither line:2988)
+safeAdd returns uint256 variable  (Slither line:3008)
+RETURN node expression: x + y (Slither line:3028)
+Checking function: subIsSafe (Slither line:2988)
+subIsSafe returns bool variable  (Slither line:3008)
+RETURN node expression: y <= x (Slither line:3028)
+Checking function: safeSub (Slither line:2988)
+safeSub returns uint256 variable  (Slither line:3008)
+RETURN node expression: x - y (Slither line:3028)
+Checking function: mulIsSafe (Slither line:2988)
+mulIsSafe returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: (x * y) / x == y (Slither line:3028)
+Checking function: safeMul (Slither line:2988)
+safeMul returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: p (Slither line:3028)
+Checking function: safeMul_dec (Slither line:2988)
+safeMul_dec returns uint256 variable  (Slither line:3008)
+RETURN node expression: safeMul(x,y) / UNIT (Slither line:3028)
+Checking function: divIsSafe (Slither line:2988)
+divIsSafe returns bool variable  (Slither line:3008)
+RETURN node expression: y != 0 (Slither line:3028)
+Checking function: safeDiv (Slither line:2988)
+safeDiv returns uint256 variable  (Slither line:3008)
+RETURN node expression: x / y (Slither line:3028)
+Checking function: safeDiv_dec (Slither line:2988)
+safeDiv_dec returns uint256 variable  (Slither line:3008)
+RETURN node expression: safeDiv(safeMul(x,UNIT),y) (Slither line:3028)
+Checking function: intToDec (Slither line:2988)
+intToDec returns uint256 variable  (Slither line:3008)
+RETURN node expression: safeMul(i,UNIT) (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End SafeDecimalMath.find_getter_in_contract (Slither line:3083)
+
+Checking external function nominateNewOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nominatedOwner)
+Checking external function setTarget
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function setUseDELEGATECALL
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function nominateNewOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nominatedOwner)
+Checking external function setTarget
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function setUseDELEGATECALL
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function _emit
+Checking external function fallback
+functions_writing_to_variable: target
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setUseDELEGATECALL (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._emit (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.nominateNewOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setTarget (proxy_features line:898)
+functions_writing_to_variable: exp = target = _target (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:912)
+functions_writing_to_variable: Identifier: target (proxy_features line:924)
+get_value_assigned: target = _target
+functions_writing_to_variable: exp = TargetUpdated(_target) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: setTarget writes _target to target (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_target']
+has_compatibility_checks: checking external function setTarget
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: _target is UserDefinedType: Proxyable
+has_compatibility_checks: _target is Contract type: Proxyable
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let free_ptr := mload(0x40)
+    calldatacopy(free_ptr, 0, calldatasize())
+    let result := delegatecall(gas(), sload(target_slot), free_ptr, calldatasize(), 0, 0)
+    returndatacopy(free_ptr, 0, returndatasize())
+    if iszero(result)
+    {
+        revert(free_ptr, returndatasize())
+    }
+    return(free_ptr, returndatasize())
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: useDELEGATECALL
+can_toggle_delegatecall_on_off: successors:
+ NodeType: INLINE ASM  expression: {
+    let free_ptr := mload(0x40)
+    calldatacopy(free_ptr, 0, calldatasize())
+    let result := call(gas(), sload(target_slot), callvalue(), free_ptr, calldatasize(), 0, 0)
+    returndatacopy(free_ptr, 0, returndatasize())
+    if iszero(result)
+    {
+        revert(free_ptr, returndatasize())
+    }
+    return(free_ptr, returndatasize())
+}
+ NodeType: INLINE ASM  expression: {
+    let free_ptr := mload(0x40)
+    calldatacopy(free_ptr, 0, calldatasize())
+    let result := delegatecall(gas(), sload(target_slot), free_ptr, calldatasize(), 0, 0)
+    returndatacopy(free_ptr, 0, returndatasize())
+    if iszero(result)
+    {
+        revert(free_ptr, returndatasize())
+    }
+    return(free_ptr, returndatasize())
+}
+can_toggle_delegatecall_on_off: delegatecall_condition = True
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: target.setMessageSender(msg.sender)
+Found public function: constructor
+Found external function: nominateNewOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) TargetUpdated(_target)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) target = _target
+
+Begin Proxyable.is_proxy (Slither line:1425)
+
+
+End Proxyable.is_proxy (Slither line:1428)
+
+
+Begin Proxyable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxyable 
+
+End Proxyable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ExternStateToken.is_proxy (Slither line:1425)
+
+
+End ExternStateToken.is_proxy (Slither line:1428)
+
+
+Begin ExternStateToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ExternStateToken 
+
+End ExternStateToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FeeToken.is_proxy (Slither line:1425)
+
+
+End FeeToken.is_proxy (Slither line:1428)
+
+
+Begin FeeToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FeeToken 
+
+End FeeToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LimitedSetup.is_proxy (Slither line:1425)
+
+
+End LimitedSetup.is_proxy (Slither line:1428)
+
+
+Begin LimitedSetup.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LimitedSetup 
+
+End LimitedSetup.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin HavvenEscrow.is_proxy (Slither line:1425)
+
+
+End HavvenEscrow.is_proxy (Slither line:1428)
+
+
+Begin HavvenEscrow.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HavvenEscrow 
+
+End HavvenEscrow.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Havven.is_proxy (Slither line:1425)
+
+
+End Havven.is_proxy (Slither line:1428)
+
+
+Begin Havven.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Havven 
+
+End Havven.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Court.is_proxy (Slither line:1425)
+
+
+End Court.is_proxy (Slither line:1428)
+
+
+Begin Court.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Court 
+
+End Court.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Nomin.is_proxy (Slither line:1425)
+
+
+End Nomin.is_proxy (Slither line:1428)
+
+
+Begin Nomin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Nomin 
+
+End Nomin.is_upgradeable_proxy (Slither line:1407)
+

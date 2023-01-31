@@ -1,0 +1,514 @@
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Math.is_proxy (Slither line:1425)
+
+
+End Math.is_proxy (Slither line:1428)
+
+
+Begin Math.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Math 
+
+End Math.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EpochTokenLocker.is_proxy (Slither line:1425)
+
+
+End EpochTokenLocker.is_proxy (Slither line:1428)
+
+
+Begin EpochTokenLocker.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EpochTokenLocker 
+
+End EpochTokenLocker.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IdToAddressBiMap.is_proxy (Slither line:1425)
+
+
+End IdToAddressBiMap.is_proxy (Slither line:1428)
+
+
+Begin IdToAddressBiMap.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IdToAddressBiMap 
+
+End IdToAddressBiMap.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IterableAppendOnlySet.is_proxy (Slither line:1425)
+
+
+End IterableAppendOnlySet.is_proxy (Slither line:1428)
+
+
+Begin IterableAppendOnlySet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IterableAppendOnlySet 
+
+End IterableAppendOnlySet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GnosisMath.is_proxy (Slither line:1425)
+
+
+End GnosisMath.is_proxy (Slither line:1428)
+
+
+Begin GnosisMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GnosisMath 
+
+End GnosisMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxied.is_proxy (Slither line:1425)
+
+
+End Proxied.is_proxy (Slither line:1428)
+
+
+Begin Proxied.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxied 
+
+End Proxied.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(not(0), _masterCopy, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_masterCopy'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _masterCopy (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking masterCopy (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _masterCopy (Slither line:1703)
+_masterCopy is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: masterCopy (Slither line:1719)
+Identifier value: masterCopy (Slither line:1725)
+masterCopy is a State Variable in contract Proxied (Slither line:1730)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to masterCopy
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxied (Slither line:1204)
+
+
+Begin Proxied.find_setter_in_contract (Slither line:3119)
+
+
+End Proxied.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxied 
+Looking in Proxy (Slither line:1213)
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy (Slither line:1220)
+Looking for setter in TokenOWL (Slither line:1228)
+
+
+Begin TokenOWL.find_setter_in_contract (Slither line:3119)
+
+Checking function: startMasterCopyCountdown(address) returns() (Slither line:3127)
+Visibility: public
+onlyCreator()
+require(bool,string)(address(_masterCopy) != address(0),The master copy must be a valid address)
+masterCopyCountdown.masterCopy = _masterCopy
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(msg.sender == creator,Only the creator can perform the transaction)
+masterCopyCountdown.timeWhenAvailable = now + 2592000
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: updateMasterCopy() returns() (Slither line:3127)
+Visibility: public
+onlyCreator()
+require(bool,string)(address(masterCopyCountdown.masterCopy) != address(0),The master copy must be a valid address)
+require(bool,string)(block.timestamp >= masterCopyCountdown.timeWhenAvailable,It's not possible to update the master copy during the waiting period)
+require(bool,string)(msg.sender == creator,Only the creator can perform the transaction)
+masterCopy = masterCopyCountdown.masterCopy
+is an Assignment Operation (Slither line:3216)
+
+End TokenOWL.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: updateMasterCopy in contract: TokenOWL (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxied.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+masterCopyCountdown.masterCopy
+
+End Proxied.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+masterCopyCountdown.masterCopy
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+or in Proxied (Slither line:1319)
+
+Begin TokenOWL.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+masterCopyCountdown.masterCopy
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: false (Slither line:3028)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: allowances[owner][spender] (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: balances[owner] (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalTokens (Slither line:3028)
+Checking function: startMasterCopyCountdown (Slither line:2988)
+Checking function: updateMasterCopy (Slither line:2988)
+Checking function: getMasterCopy (Slither line:2988)
+getMasterCopy returns address variable  (Slither line:3008)
+RETURN node expression: masterCopy (Slither line:3028)
+
+End TokenOWL.find_getter_in_contract (Slither line:3083)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: masterCopyCountdown.masterCopy
+impl_address_from_contract_call: StateVariable masterCopy
+impl_address_from_contract_call: getter is getMasterCopy
+getter.full_name = getMasterCopy()
+Identifier: masterCopyCountdown
+value is StateVariable: masterCopyCountdown
+Type: TokenOWL.masterCopyCountdownType
+Checking external function fallback
+functions_writing_to_variable: masterCopy
+functions_writing_to_variable: checking function TokenOWL.updateMasterCopy (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(address(masterCopyCountdown.masterCopy) != address(0),The master copy must be a valid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(block.timestamp >= masterCopyCountdown.timeWhenAvailable,It's not possible to update the master copy during the waiting period) (proxy_features line:909)
+functions_writing_to_variable: exp = masterCopy = masterCopyCountdown.masterCopy (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopy = masterCopyCountdown.masterCopy (proxy_features line:912)
+functions_writing_to_variable: Identifier: masterCopy (proxy_features line:924)
+get_value_assigned: masterCopy = masterCopyCountdown.masterCopy
+functions_writing_to_variable: exp = onlyCreator() (proxy_features line:909)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.getMasterCopy (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.setMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.setNewOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.mintOWL (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.burnOWL (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.getMasterCopyCountdown (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.startMasterCopyCountdown (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_masterCopy != address(0),The master copy is required) (proxy_features line:909)
+functions_writing_to_variable: exp = masterCopy = _masterCopy (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopy = _masterCopy (proxy_features line:912)
+functions_writing_to_variable: Identifier: masterCopy (proxy_features line:924)
+get_value_assigned: masterCopy = _masterCopy
+functions_writing_to_variable: constructor writes _masterCopy to masterCopy (proxy_features line:929)
+has_compatibility_checks: dependencies: ['_masterCopy', 'REF_223', 'masterCopyCountdown']
+functions_writing_to_variable: masterCopyCountdown
+functions_writing_to_variable: checking function TokenOWL.updateMasterCopy (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.getMasterCopy (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.setMinter (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.setNewOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.mintOWL (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.burnOWL (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.getMasterCopyCountdown (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TokenOWL.startMasterCopyCountdown (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(address(_masterCopy) != address(0),The master copy must be a valid address) (proxy_features line:909)
+functions_writing_to_variable: exp = masterCopyCountdown.masterCopy = _masterCopy (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopyCountdown.masterCopy = _masterCopy (proxy_features line:912)
+functions_writing_to_variable: exp = masterCopyCountdown.timeWhenAvailable = now + 2592000 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopyCountdown.timeWhenAvailable = now + 2592000 (proxy_features line:912)
+functions_writing_to_variable: exp = onlyCreator() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == creator,Only the creator can perform the transaction) (proxy_features line:909)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let success := delegatecall(not(0), _masterCopy, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch success
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _masterCopy = masterCopy
+Found public function: constructor
+Found fallback
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyCreator()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(address(masterCopyCountdown.masterCopy) != address(0),The master copy must be a valid address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(block.timestamp >= masterCopyCountdown.timeWhenAvailable,It's not possible to update the master copy during the waiting period)
+has_time_delay: found condition using `now`: block.timestamp >= masterCopyCountdown.timeWhenAvailable
+
+Begin StandardTokenData.is_proxy (Slither line:1425)
+
+
+End StandardTokenData.is_proxy (Slither line:1428)
+
+
+Begin StandardTokenData.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StandardTokenData 
+
+End StandardTokenData.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GnosisStandardToken.is_proxy (Slither line:1425)
+
+
+End GnosisStandardToken.is_proxy (Slither line:1428)
+
+
+Begin GnosisStandardToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GnosisStandardToken 
+
+End GnosisStandardToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenOWL.is_proxy (Slither line:1425)
+
+
+End TokenOWL.is_proxy (Slither line:1428)
+
+
+Begin TokenOWL.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenOWL 
+
+End TokenOWL.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeCast.is_proxy (Slither line:1425)
+
+
+End SafeCast.is_proxy (Slither line:1428)
+
+
+Begin SafeCast.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeCast 
+
+End SafeCast.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BytesLib.is_proxy (Slither line:1425)
+
+
+End BytesLib.is_proxy (Slither line:1428)
+
+
+Begin BytesLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BytesLib 
+
+End BytesLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SignedSafeMath.is_proxy (Slither line:1425)
+
+
+End SignedSafeMath.is_proxy (Slither line:1428)
+
+
+Begin SignedSafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SignedSafeMath 
+
+End SignedSafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenConservation.is_proxy (Slither line:1425)
+
+
+End TokenConservation.is_proxy (Slither line:1428)
+
+
+Begin TokenConservation.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenConservation 
+
+End TokenConservation.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BatchExchange.is_proxy (Slither line:1425)
+
+
+End BatchExchange.is_proxy (Slither line:1428)
+
+
+Begin BatchExchange.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BatchExchange 
+
+End BatchExchange.is_upgradeable_proxy (Slither line:1407)
+

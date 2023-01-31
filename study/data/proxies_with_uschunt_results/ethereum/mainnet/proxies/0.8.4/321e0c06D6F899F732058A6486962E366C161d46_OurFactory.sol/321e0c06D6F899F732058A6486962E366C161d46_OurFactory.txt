@@ -1,0 +1,241 @@
+
+Begin IOurFactory.is_proxy (Slither line:1425)
+
+
+End IOurFactory.is_proxy (Slither line:1428)
+
+
+Begin IOurFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IOurFactory 
+
+End IOurFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OurFactory.is_proxy (Slither line:1425)
+
+
+End OurFactory.is_proxy (Slither line:1428)
+
+
+Begin OurFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OurFactory 
+
+End OurFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OurStorage.is_proxy (Slither line:1425)
+
+
+End OurStorage.is_proxy (Slither line:1428)
+
+
+Begin OurStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OurStorage 
+
+End OurStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OurProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin OurProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,size_fallback_asm_0) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+0
+size_fallback_asm_0
+
+End OurProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin OurProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_5737_152_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End OurProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin OurProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin OurProxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking merkleRoot (Slither line:1689)
+Checking currentWindow (Slither line:1689)
+Checking _pylon (Slither line:1689)
+Checking WETH (Slither line:1689)
+Checking balanceForWindow (Slither line:1689)
+Checking _claimed (Slither line:1689)
+Checking _depositedInWindow (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in OurProxy.fallback (Slither line:1707)
+Expression: pylon() (Slither line:1719)
+
+Begin OurProxy.find_delegate_from_call_exp
+
+pylon() (Slither line:2003)
+called = pylon (Slither line:2010)
+Return node of function OurProxy.pylon(): RETURN _pylon (Slither line:2041)
+_pylon (Slither line:2048)
+pylon returns a variable of type address   called _pylon (Slither line:2193)
+
+End OurProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End OurProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End OurProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End OurProxy.is_proxy (Slither line:1476)
+
+
+Begin OurProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OurProxy 
+OurProxy is delegating to _pylon
+Looking for setter (Slither line:1200)
+
+Looking for setter in OurStorage (Slither line:1204)
+
+
+Begin OurStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End OurStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in OurStorage 
+Looking in OurProxy (Slither line:1213)
+
+Begin OurProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: pylon() returns(address) (Slither line:3127)
+Visibility: public
+_pylon
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End OurProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in OurProxy (Slither line:1220)
+
+Begin OurProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: pylon() returns(address) (Slither line:3127)
+Visibility: public
+_pylon
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End OurProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in OurProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin OurStorage.find_getter_in_contract (Slither line:2974)
+
+_pylon is a Variable object
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End OurStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin OurProxy.find_getter_in_contract (Slither line:2974)
+
+_pylon is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: pylon (Slither line:2988)
+pylon returns address variable  (Slither line:3008)
+RETURN node expression: _pylon (Slither line:3028)
+
+End OurProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: pylon in contract: OurProxy (Slither line:1285)
+
+Begin OurProxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: _pylon (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+
+End OurProxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End OurProxy.is_upgradeable_proxy (Slither line:1293)
+

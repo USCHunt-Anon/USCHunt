@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ProxyToken (../../smart-contract-sanctuary/ethereum/contracts/goerli/proxies_to_reanalyze/0.8.9/83621e1fdf328a43c807a7b3809fee83172d3e1c_ProxyToken.sol/83621e1fdf328a43c807a7b3809fee83172d3e1c_ProxyToken.sol#9-47)",
+        "elements": [],
+        "description": "ProxyToken (../../smart-contract-sanctuary/ethereum/contracts/goerli/proxies_to_reanalyze/0.8.9/83621e1fdf328a43c807a7b3809fee83172d3e1c_ProxyToken.sol/83621e1fdf328a43c807a7b3809fee83172d3e1c_ProxyToken.sol#9-47) may be an upgradeable proxy.\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nMissing compatibility check in ProxyToken.constructor(address)\nCan toggle delegatecall on/off: condition: calldataload(uint256)(0) == 0xa619486e00000000000000000000000000000000000000000000000000000000\n",
+        "id": "9ef4b38147b16054dce79dd57827cbbab6decd25bc67dd96ab918917ba55ff99",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "ProxyToken.masterCopy",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ProxyToken (../../smart-contract-sanctuary/ethereum/contracts/goerli/proxies_to_reanalyze/0.8.9/83621e1fdf328a43c807a7b3809fee83172d3e1c_ProxyToken.sol/83621e1fdf328a43c807a7b3809fee83172d3e1c_ProxyToken.sol#9-47)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ProxyToken.constructor(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "calldataload(uint256)(0) != 0xa619486e00000000000000000000000000000000000000000000000000000000",
+          "toggle_alternative_logic": "return(uint256,uint256)(0,0x20)"
+        }
+      }
+    ]
+  }
+}

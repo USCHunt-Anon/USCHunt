@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "GraSwapPairProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol#1658-1728)",
+        "elements": [],
+        "description": "GraSwapPairProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol#1658-1728) is an upgradeable proxy.\npairLogic was found in a different contract.\npairLogic is an address state variable.\nGraSwapFactory.pairLogic (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol#1744) gets value from a cross-contract call: IGraSwapFactory(address(_immuFactory)).pairLogic()\nGraSwapFactory appears to be a Beacon contract for the proxy\nMissing compatibility check in GraSwapFactory.setPairLogic(address)\nTo remove upgradeability, delete setPairLogic from GraSwapFactory\n",
+        "id": "d2d81e440b2f1c0ca7b27ff731e1a9db9304d42b7a9522ffb60d081adeab570f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "GraSwapFactory.pairLogic",
+          "impl_address_setter": "GraSwapFactory.setPairLogic(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "GraSwapFactory (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol/6b74e5c4137AfD6a7Dbd9d43c9d7af2A258e57A7_GraSwapFactory.sol#1731-1847)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IGraSwapFactory(address(_immuFactory)).pairLogic()",
+          "beacon": "GraSwapFactory",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "GraSwapFactory.setPairLogic(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setPairLogic from GraSwapFactory"
+        }
+      }
+    ]
+  }
+}

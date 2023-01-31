@@ -1,0 +1,247 @@
+
+Begin CoreFactory.is_proxy (Slither line:1425)
+
+
+End CoreFactory.is_proxy (Slither line:1428)
+
+
+Begin CoreFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CoreFactory 
+
+End CoreFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CoreMembershipProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CoreMembershipProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+0
+calldatasize()()
+
+End CoreMembershipProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CoreMembershipProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_impl
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _impl (Slither line:2818)
+dest.value: _impl (Slither line:2821)
+Expression: membership() (Slither line:2826)
+
+Begin CoreMembershipProxy.find_delegate_from_call_exp
+
+membership() (Slither line:1993)
+called = membership (Slither line:2000)
+Return node of function CoreMembershipProxy.membership(): RETURN _membership (Slither line:2031)
+_membership (Slither line:2038)
+membership returns a variable of type address   called _membership (Slither line:2183)
+
+End CoreMembershipProxy.find_delegate_from_call_exp (Slither line:2318)
+
+
+End CoreMembershipProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End CoreMembershipProxy.is_proxy (Slither line:1476)
+
+
+Begin CoreMembershipProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CoreMembershipProxy 
+Call destination _membership is constant (Slither line:1146)
+
+
+End CoreMembershipProxy.is_upgradeable_proxy (Slither line:1153)
+
+
+Begin CoreCollectionProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CoreCollectionProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,size_fallback_asm_0) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+0
+size_fallback_asm_0
+
+End CoreCollectionProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CoreCollectionProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_6411_158_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End CoreCollectionProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CoreCollectionProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CoreCollectionProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _collection (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CoreCollectionProxy.fallback (Slither line:1707)
+Expression: collection() (Slither line:1719)
+
+Begin CoreCollectionProxy.find_delegate_from_call_exp
+
+collection() (Slither line:1993)
+called = collection (Slither line:2000)
+Return node of function CoreCollectionProxy.collection(): RETURN _collection (Slither line:2031)
+_collection (Slither line:2038)
+collection returns a variable of type address   called _collection (Slither line:2183)
+
+End CoreCollectionProxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End CoreCollectionProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End CoreCollectionProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CoreCollectionProxy.is_proxy (Slither line:1476)
+
+
+Begin CoreCollectionProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CoreCollectionProxy 
+Call destination _collection is constant (Slither line:1146)
+
+
+End CoreCollectionProxy.is_upgradeable_proxy (Slither line:1153)
+
+
+Begin CoreTierStorage.is_proxy (Slither line:1425)
+
+
+End CoreTierStorage.is_proxy (Slither line:1428)
+
+
+Begin CoreTierStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CoreTierStorage 
+
+End CoreTierStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICoreMembership.is_proxy (Slither line:1425)
+
+
+End ICoreMembership.is_proxy (Slither line:1428)
+
+
+Begin ICoreMembership.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICoreMembership 
+
+End ICoreMembership.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICoreCollection.is_proxy (Slither line:1425)
+
+
+End ICoreCollection.is_proxy (Slither line:1428)
+
+
+Begin ICoreCollection.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICoreCollection 
+
+End ICoreCollection.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICoreFactory.is_proxy (Slither line:1425)
+
+
+End ICoreFactory.is_proxy (Slither line:1428)
+
+
+Begin ICoreFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICoreFactory 
+
+End ICoreFactory.is_upgradeable_proxy (Slither line:1407)
+

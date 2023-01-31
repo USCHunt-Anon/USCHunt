@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "FCTProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.0/c3E3025e0A5a8e31c4BD1dC302154d0E0C724812_FCTProxy.sol/c3E3025e0A5a8e31c4BD1dC302154d0E0C724812_FCTProxy.sol#5-97)",
+        "elements": [],
+        "description": "FCTProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.0/c3E3025e0A5a8e31c4BD1dC302154d0E0C724812_FCTProxy.sol/c3E3025e0A5a8e31c4BD1dC302154d0E0C724812_FCTProxy.sol#5-97) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.FCT:2022)\nMissing compatibility check in FCTProxy.constructor(address)\nFound compatibility check in FCTProxy.upgradeTo(address)\n",
+        "id": "8e5173784daf4dccb6f63305ad501b5f79b576a8734fe121b3234d680a341711",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "FCTProxy.implementationPosition",
+          "impl_address_setter": "FCTProxy.upgradeTo(address)",
+          "impl_address_getter": "FCTProxy.implementation()",
+          "impl_address_location": "FCTProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.0/c3E3025e0A5a8e31c4BD1dC302154d0E0C724812_FCTProxy.sol/c3E3025e0A5a8e31c4BD1dC302154d0E0C724812_FCTProxy.sol#5-97)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.FCT:2022)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "FCTProxy.constructor(address)": "missing",
+              "FCTProxy.upgradeTo(address)": "require(bool)(currentImplementation != _newImplementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "setAdmin(address,bool)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let contractLogic := sload(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) (Slither line:1576)
+    calldatacopy(0x0, 0x0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(sub(gas(), 10000), contractLogic, 0x0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+slot: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:2679)
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is constant (Slither line:1146)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: constructor(bytes,address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+

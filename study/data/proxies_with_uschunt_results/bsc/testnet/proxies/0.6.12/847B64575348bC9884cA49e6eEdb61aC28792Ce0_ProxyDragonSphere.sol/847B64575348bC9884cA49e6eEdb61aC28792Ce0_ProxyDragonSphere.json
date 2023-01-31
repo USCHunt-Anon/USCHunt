@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#12-80)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#12-80) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#246-310)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#246-310) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ProxyDragonSphere (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#320-446)",
+        "elements": [],
+        "description": "ProxyDragonSphere (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#320-446) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "72cb1ec61405ec941023f583c304c32c31aa1828dfd938f5e69c1d43fe49bedb",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "ProxyDragonSphere.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy._implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol/847B64575348bC9884cA49e6eEdb61aC28792Ce0_ProxyDragonSphere.sol#246-310)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradeabilityProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ProxyDragonSphere.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ProxyDragonSphere.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ProxyDragonSphere.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

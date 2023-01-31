@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Fallback (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#678-746)",
+        "elements": [],
+        "description": "Fallback (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#678-746) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "19dda16beab5cd7f691edca4032c54a90f6e978a039966d5a3620c79101da937",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BaseFallback (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#912-976)",
+        "elements": [],
+        "description": "BaseFallback (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#912-976) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "bb2a08281bc9f80e5a4435007d896fe21378d05e23ecc50d594b06e25be89e5e",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "MasterChefV1 (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#986-1111)",
+        "elements": [],
+        "description": "MasterChefV1 (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#986-1111) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "fd2199eac1baf12789cc286bd30cebcce2b80ab9f4885f5e46e8b3c0f5483947",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseFallback.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "MasterChefV1.upgradeTo(address)",
+          "impl_address_getter": "BaseFallback._implementation()",
+          "impl_address_location": "BaseFallback (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol/5070169d9A2258D24ac43D43FC41f3D87cE2C471_MasterChefV1.sol#912-976)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MasterChefV1.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "MasterChefV1.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

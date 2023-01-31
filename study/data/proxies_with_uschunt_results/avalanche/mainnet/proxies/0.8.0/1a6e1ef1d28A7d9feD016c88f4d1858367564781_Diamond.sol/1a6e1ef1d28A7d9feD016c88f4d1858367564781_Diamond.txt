@@ -1,0 +1,288 @@
+
+Begin Diamond.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Diamond.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Diamond.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Diamond.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Diamond.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(facet != address(0),Signature not found) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+facet != address(0)
+Signature not found
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+facet
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is facet (Slither line:2828)
+dest.value: facet (Slither line:2831)
+Expression: ds.facets[msg.sig].facetAddress (Slither line:2836)
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Diamond.is_proxy (Slither line:1476)
+
+
+Begin Diamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Diamond 
+Local Variable: facet (Slither line:1164)
+Diamond is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin Diamond.find_setter_in_contract (Slither line:3119)
+
+Expression: ds.facets[msg.sig].facetAddress (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+ds.selectors.push
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End Diamond.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Diamond (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Diamond.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+ds.facets[msg.sig].facetAddress
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+
+End Diamond.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Diamond (Slither line:1305)
+
+Begin LibStorage.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+ds.facets[msg.sig].facetAddress
+Checking function: diamond (Slither line:2988)
+diamond returns LibStorage.DiamondStorage variable called ds (Slither line:3008)
+Checking function: providers (Slither line:2988)
+providers returns LibStorage.ProviderStorage variable called ps (Slither line:3008)
+Checking function: enforceIsContractOwner (Slither line:2988)
+Checking function: enforceIsRelayer (Slither line:2988)
+Checking function: enforceHasContractCode (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End LibStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin LibStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: ds.facets[msg.sig].facetAddress (Slither line:3122)
+Checking function: diamond() returns(LibStorage.DiamondStorage) (Slither line:3127)
+Visibility: internal
+Checking function: providers() returns(LibStorage.ProviderStorage) (Slither line:3127)
+Visibility: internal
+Checking function: enforceIsContractOwner() returns() (Slither line:3127)
+Visibility: internal
+Checking function: enforceIsRelayer() returns() (Slither line:3127)
+Visibility: internal
+Checking function: enforceHasContractCode(address,string) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End LibStorage.find_setter_in_contract (Slither line:3345)
+
+
+Begin IDiamondCutter.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+ds.facets[msg.sig].facetAddress
+
+End IDiamondCutter.find_getter_in_contract (Slither line:3083)
+
+
+Begin IDiamondCutter.find_setter_in_contract (Slither line:3119)
+
+Expression: ds.facets[msg.sig].facetAddress (Slither line:3122)
+Checking function: diamondCut(IDiamondCutter.FacetCut[]) returns() (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End IDiamondCutter.find_setter_in_contract (Slither line:3345)
+
+
+End Diamond.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibStorage.is_proxy (Slither line:1425)
+
+
+End LibStorage.is_proxy (Slither line:1428)
+
+
+Begin LibStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibStorage 
+
+End LibStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDiamondCutter.is_proxy (Slither line:1425)
+
+
+End IDiamondCutter.is_proxy (Slither line:1428)
+
+
+Begin IDiamondCutter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondCutter 
+
+End IDiamondCutter.is_upgradeable_proxy (Slither line:1407)
+

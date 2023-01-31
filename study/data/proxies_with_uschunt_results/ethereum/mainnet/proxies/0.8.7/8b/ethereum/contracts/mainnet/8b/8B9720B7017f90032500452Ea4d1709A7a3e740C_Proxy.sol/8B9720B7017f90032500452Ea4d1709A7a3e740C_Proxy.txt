@@ -1,0 +1,156 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementation_ (Slither line:1689)
+Checking admin (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function Proxy._implementation(): RETURN implementation_ (Slither line:2041)
+implementation_ (Slither line:2048)
+_implementation returns a variable of type address   called implementation_ (Slither line:2193)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to implementation_
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == admin)
+implementation_ = newImpl
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+implementation_ is a Variable object
+newImpl
+Checking function: constructor (Slither line:2988)
+Checking function: setImplementation (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable called impl (Slither line:3008)
+Checking function: _delegate (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable  (Slither line:3008)
+RETURN node expression: implementation_ (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function implementation
+Checking external function fallback
+functions_writing_to_variable: implementation_
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation_ = newImpl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation_ = newImpl (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation_ (proxy_features line:924)
+get_value_assigned: implementation_ = newImpl
+functions_writing_to_variable: setImplementation writes newImpl to implementation_ (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation_ = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation_ = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation_ (proxy_features line:924)
+get_value_assigned: implementation_ = impl
+functions_writing_to_variable: exp = admin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: constructor writes impl to implementation_ (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl', 'newImpl']
+has_compatibility_checks: checking public function setImplementation
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found public function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation_ = newImpl

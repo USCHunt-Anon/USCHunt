@@ -1,0 +1,99 @@
+
+Begin NonUpgradableProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NonUpgradableProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,contractLogic,0x0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()() - 10000
+contractLogic
+0x0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractLogic (Slither line:2828)
+dest.value: contractLogic (Slither line:2831)
+Expression: CONTRACT_LOGIC (Slither line:2836)
+
+End NonUpgradableProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End NonUpgradableProxy.is_proxy (Slither line:1476)
+
+
+Begin NonUpgradableProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: NonUpgradableProxy 
+Call destination CONTRACT_LOGIC is constant (Slither line:1146)
+
+
+End NonUpgradableProxy.is_upgradeable_proxy (Slither line:1153)
+
+
+Begin ComptrollerProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin ComptrollerProxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking CONTRACT_LOGIC (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking contractLogic (Slither line:1703)
+contractLogic is a Local Variable in ComptrollerProxy.fallback (Slither line:1707)
+Expression: CONTRACT_LOGIC (Slither line:1719)
+Identifier value: CONTRACT_LOGIC (Slither line:1725)
+CONTRACT_LOGIC is a State Variable in contract NonUpgradableProxy (Slither line:1730)
+
+End ComptrollerProxy.find_delegate_variable_by_name
+
+
+End ComptrollerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ComptrollerProxy.is_proxy (Slither line:1476)
+
+
+Begin ComptrollerProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ComptrollerProxy 
+Call destination CONTRACT_LOGIC is constant (Slither line:1146)
+
+
+End ComptrollerProxy.is_upgradeable_proxy (Slither line:1153)
+

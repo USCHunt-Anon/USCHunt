@@ -1,0 +1,354 @@
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBEP20.is_proxy (Slither line:1425)
+
+
+End IBEP20.is_proxy (Slither line:1428)
+
+
+Begin IBEP20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBEP20 
+
+End IBEP20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeBEP20.is_proxy (Slither line:1425)
+
+
+End SafeBEP20.is_proxy (Slither line:1428)
+
+
+Begin SafeBEP20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeBEP20 
+
+End SafeBEP20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XVSVaultErrorReporter.is_proxy (Slither line:1425)
+
+
+End XVSVaultErrorReporter.is_proxy (Slither line:1428)
+
+
+Begin XVSVaultErrorReporter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XVSVaultErrorReporter 
+
+End XVSVaultErrorReporter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XVSVaultAdminStorage.is_proxy (Slither line:1425)
+
+
+End XVSVaultAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin XVSVaultAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XVSVaultAdminStorage 
+
+End XVSVaultAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XVSVaultStorage.is_proxy (Slither line:1425)
+
+
+End XVSVaultStorage.is_proxy (Slither line:1428)
+
+
+Begin XVSVaultStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XVSVaultStorage 
+
+End XVSVaultStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XVSVaultProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End XVSVaultProxy.is_proxy (Slither line:1476)
+
+
+Begin XVSVaultProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XVSVaultProxy 
+XVSVaultProxy is delegating to xvsVaultImplementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in XVSVaultAdminStorage (Slither line:1204)
+
+
+Begin XVSVaultAdminStorage.find_setter_in_contract (Slither line:3109)
+
+
+End XVSVaultAdminStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in XVSVaultAdminStorage 
+Looking in XVSVaultProxy (Slither line:1213)
+
+Begin XVSVaultProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3117)
+Visibility: public
+uint256(err)
+fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK)
+NewPendingImplementation(oldPendingImplementation,pendingXVSVaultImplementation)
+Failure(uint256(err),uint256(info),0)
+uint256(Error.NO_ERROR)
+pendingXVSVaultImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3206)
+Checking function: _acceptImplementation() returns(uint256) (Slither line:3117)
+Visibility: public
+NewImplementation(oldImplementation,xvsVaultImplementation)
+fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK)
+uint256(err)
+NewPendingImplementation(oldPendingImplementation,pendingXVSVaultImplementation)
+Failure(uint256(err),uint256(info),0)
+xvsVaultImplementation = pendingXVSVaultImplementation
+is an Assignment Operation (Slither line:3206)
+
+End XVSVaultProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _acceptImplementation in contract: XVSVaultProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin XVSVaultAdminStorage.find_getter_in_contract (Slither line:2964)
+
+xvsVaultImplementation is a Variable object
+pendingXVSVaultImplementation
+
+End XVSVaultAdminStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin XVSVaultProxy.find_getter_in_contract (Slither line:2964)
+
+xvsVaultImplementation is a Variable object
+pendingXVSVaultImplementation
+Checking function: fail (Slither line:2978)
+fail returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(err) (Slither line:3018)
+Checking function: failOpaque (Slither line:2978)
+failOpaque returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(err) (Slither line:3018)
+Checking function: constructor (Slither line:2978)
+Checking function: _setPendingImplementation (Slither line:2978)
+_setPendingImplementation returns uint256 variable  (Slither line:2998)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (Slither line:3018)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: _acceptImplementation (Slither line:2978)
+_acceptImplementation returns uint256 variable  (Slither line:2998)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (Slither line:3018)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: _setPendingAdmin (Slither line:2978)
+_setPendingAdmin returns uint256 variable  (Slither line:2998)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_ADMIN_OWNER_CHECK) (Slither line:3018)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: _acceptAdmin (Slither line:2978)
+_acceptAdmin returns uint256 variable  (Slither line:2998)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_ADMIN_PENDING_ADMIN_CHECK) (Slither line:3018)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+
+End XVSVaultProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in XVSVaultProxy (Slither line:1305)
+or in XVSVaultAdminStorage (Slither line:1319)
+
+Begin XVSVaultStorage.find_getter_in_contract (Slither line:2964)
+
+xvsVaultImplementation is a Variable object
+pendingXVSVaultImplementation
+
+End XVSVaultStorage.find_getter_in_contract (Slither line:3073)
+
+
+End XVSVaultProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingXVSVaultImplementation
+impl_address_from_contract_call: StateVariable xvsVaultImplementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression xvsVaultImplementation.delegatecall(msg.data)
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Checking external function fallback
+functions_writing_to_variable: xvsVaultImplementation
+functions_writing_to_variable: checking function XVSVaultProxy._setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy._setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.fail (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy._acceptImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = xvsVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = xvsVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingXVSVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = xvsVaultImplementation = pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: xvsVaultImplementation = pendingXVSVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: xvsVaultImplementation (proxy_features line:919)
+get_value_assigned: xvsVaultImplementation = pendingXVSVaultImplementation
+functions_writing_to_variable: exp = pendingXVSVaultImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingXVSVaultImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,xvsVaultImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingXVSVaultImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:904)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:904)
+functions_writing_to_variable: _acceptImplementation writes pendingXVSVaultImplementation to xvsVaultImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function XVSVaultProxy._acceptAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.failOpaque (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newPendingImplementation', 'pendingXVSVaultImplementation', 'TMP_82']
+functions_writing_to_variable: pendingXVSVaultImplementation
+functions_writing_to_variable: checking function XVSVaultProxy._setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != admin (proxy_features line:904)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (proxy_features line:904)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingXVSVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingXVSVaultImplementation = newPendingImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingXVSVaultImplementation = newPendingImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingXVSVaultImplementation (proxy_features line:919)
+get_value_assigned: pendingXVSVaultImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingXVSVaultImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:904)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:904)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingXVSVaultImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function XVSVaultProxy._setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.fail (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy._acceptImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = xvsVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = xvsVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingXVSVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = xvsVaultImplementation = pendingXVSVaultImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: xvsVaultImplementation = pendingXVSVaultImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingXVSVaultImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingXVSVaultImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingXVSVaultImplementation (proxy_features line:919)
+get_value_assigned: pendingXVSVaultImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,xvsVaultImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingXVSVaultImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:904)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:904)
+functions_writing_to_variable: checking function XVSVaultProxy._acceptAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function XVSVaultProxy.failOpaque (proxy_features line:893)
+has_compatibility_checks: checking public function _acceptImplementation
+has_compatibility_checks: IF node exp = msg.sender != pendingXVSVaultImplementation
+has_compatibility_checks: checking public function _setPendingImplementation
+has_compatibility_checks: IF node exp = msg.sender != admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = xvsVaultImplementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingXVSVaultImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,xvsVaultImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(err)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingXVSVaultImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Failure(uint256(err),uint256(info),0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) xvsVaultImplementation = pendingXVSVaultImplementation
+has_time_delay: (node.type) RETURN
+(Expression) uint256(Error.NO_ERROR)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = xvsVaultImplementation
+has_time_delay: (node.type) IF
+(Expression) msg.sender != pendingXVSVaultImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingXVSVaultImplementation = address(0)
+
+Begin IXVSStore.is_proxy (Slither line:1425)
+
+
+End IXVSStore.is_proxy (Slither line:1428)
+
+
+Begin IXVSStore.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IXVSStore 
+
+End IXVSStore.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin XVSVault.is_proxy (Slither line:1425)
+
+
+End XVSVault.is_proxy (Slither line:1428)
+
+
+Begin XVSVault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: XVSVault 
+
+End XVSVault.is_upgradeable_proxy (Slither line:1407)
+

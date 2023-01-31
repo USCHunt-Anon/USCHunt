@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AVProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#671-721)",
+        "elements": [],
+        "description": "AVProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#671-721) may be an upgradeable proxy.\n_implementationAddress is declared in the proxy.\nAVProxy.fallback()._implementationAddress (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#708) gets value from a cross-contract call: vStore().getAddress(_key)\nIVStore appears to be a Registry contract for the proxy\nThe address of IVStore comes from the value of AVBase.vStore(). (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#506)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "b3c284fd327d210fb02783958c25cd40514141e31bb1bf6dd3a00a35e6cc8b78",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "AVProxy.fallback()._implementationAddress",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "AVProxy.implementationAddress()",
+          "impl_address_location": "AVProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#671-721)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "vStore().getAddress(_key)",
+          "registry": "IVStore",
+          "registry_source_type": "IVStore",
+          "registry_source_variable": "",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "AVBase.setVAddress(address,string,uint8[2],bytes32[2],bytes32[2])": {
+                "check": "require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)",
+                "is_correct": true
+              },
+              "AVBase.setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2])": {
+                "check": "require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)",
+                "is_correct": true
+              },
+              "AVBase.setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2])": {
+                "check": "require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "name()"
+            ],
+            "other": [
+              "version()",
+              "institutionId()",
+              "vAddress()",
+              "userAddress()",
+              "recoveryAddress()",
+              "setVAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "version()",
+              "institutionId()",
+              "setVAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "vAddress()",
+              "userAddress()",
+              "recoveryAddress()",
+              "implementationAddressKey()",
+              "implementationAddress()",
+              "implementationAddressKey()",
+              "implementationAddress()"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "VErc20Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#724-748)",
+        "elements": [],
+        "description": "VErc20Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#724-748) may be an upgradeable proxy.\n_implementationAddress is declared in the proxy.\nAVProxy.fallback()._implementationAddress (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#708) gets value from a cross-contract call: vStore().getAddress(_key)\nIVStore appears to be a Registry contract for the proxy\nThe address of IVStore comes from the value of AVBase.vStore(). (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#506)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "32e690eb72a6554c7ff41bea46a03f2d641e0bddad150758f6c53f7b71693ca7",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "AVProxy.fallback()._implementationAddress",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "AVProxy.implementationAddress()",
+          "impl_address_location": "VErc20Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol/f5e1fb35c5f00503926362e57da3c4badc19943f_VErc20Proxy.sol#724-748)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "vStore().getAddress(_key)",
+          "registry": "IVStore",
+          "registry_source_type": "IVStore",
+          "registry_source_variable": "",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "AVBase.setVAddress(address,string,uint8[2],bytes32[2],bytes32[2])": {
+                "check": "require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)",
+                "is_correct": true
+              },
+              "AVBase.setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2])": {
+                "check": "require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)",
+                "is_correct": true
+              },
+              "AVBase.setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2])": {
+                "check": "require(bool,string)(addresses[0] != addresses[1],VBase::validateSignatures - signatures must be from different accounts)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "name()"
+            ],
+            "other": [
+              "implementationAddressKey()",
+              "implementationAddress()",
+              "version()",
+              "institutionId()",
+              "vAddress()",
+              "userAddress()",
+              "recoveryAddress()",
+              "setVAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "version()",
+              "institutionId()",
+              "setVAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setUserAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "setRecoveryAddress(address,string,uint8[2],bytes32[2],bytes32[2])",
+              "vAddress()",
+              "userAddress()",
+              "recoveryAddress()",
+              "implementationAddressKey()",
+              "implementationAddress()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

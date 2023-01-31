@@ -1,0 +1,232 @@
+
+Begin ProxyWithRegistryStorage.is_proxy (Slither line:1425)
+
+
+End ProxyWithRegistryStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyWithRegistryStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyWithRegistryStorage 
+
+End ProxyWithRegistryStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyWithRegistryInterface.is_proxy (Slither line:1425)
+
+
+End ProxyWithRegistryInterface.is_proxy (Slither line:1428)
+
+
+Begin ProxyWithRegistryInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyWithRegistryInterface 
+
+End ProxyWithRegistryInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyWithRegistry.is_proxy (Slither line:1425)
+
+
+End ProxyWithRegistry.is_proxy (Slither line:1428)
+
+
+Begin ProxyWithRegistry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyWithRegistry 
+
+End ProxyWithRegistry.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ImplementationStorage.is_proxy (Slither line:1425)
+
+
+End ImplementationStorage.is_proxy (Slither line:1428)
+
+
+Begin ImplementationStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ImplementationStorage 
+
+End ImplementationStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RegistryInterface.is_proxy (Slither line:1425)
+
+
+End RegistryInterface.is_proxy (Slither line:1428)
+
+
+Begin RegistryInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RegistryInterface 
+
+End RegistryInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EvilXProxyToken.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End EvilXProxyToken.is_proxy (Slither line:1476)
+
+
+Begin EvilXProxyToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EvilXProxyToken 
+EvilXProxyToken is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in ImplementationStorage (Slither line:1204)
+
+
+Begin ImplementationStorage.find_setter_in_contract (Slither line:3109)
+
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: internal
+
+End ImplementationStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in ImplementationStorage 
+Looking in EvilXProxyToken (Slither line:1213)
+
+Begin EvilXProxyToken.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,uint256,string,string,uint8) returns() (Slither line:3117)
+Checking function: setImplementation(address) returns(uint256) (Slither line:3117)
+Visibility: external
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End EvilXProxyToken.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: EvilXProxyToken (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ImplementationStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: _setImplementation (Slither line:2978)
+
+End ImplementationStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin EvilXProxyToken.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: _setImplementation (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: setImplementation (Slither line:2978)
+setImplementation returns uint256 variable  (Slither line:2998)
+RETURN node expression: 0 (Slither line:3018)
+Checking function: delegateTo (Slither line:2978)
+delegateTo returns bytes variable  (Slither line:2998)
+RETURN node expression: returnData (Slither line:3018)
+Checking function: delegateAndReturn (Slither line:2978)
+delegateAndReturn returns bytes variable  (Slither line:2998)
+Checking function: fallback (Slither line:2978)
+
+End EvilXProxyToken.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in EvilXProxyToken (Slither line:1305)
+or in ImplementationStorage (Slither line:1319)
+Checking for implementation at slot 0 in contract ProxyWithRegistryStorage (Slither line:1355)
+Found registry at slot 0 in contract ProxyWithRegistryStorage (Slither line:1362)
+Checking for registry at slot 0 in contract ProxyWithRegistryInterface (Slither line:1355)
+Found registry at slot 0 in contract ProxyWithRegistryInterface (Slither line:1362)
+Checking for registry at slot 0 in contract ProxyWithRegistry (Slither line:1355)
+Found registry at slot 0 in contract ProxyWithRegistry (Slither line:1362)
+Checking for registry at slot 0 in contract ImplementationStorage (Slither line:1355)
+Found implementation at slot 0 in contract ImplementationStorage (Slither line:1362)
+
+Begin ImplementationStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: _setImplementation (Slither line:2978)
+
+End ImplementationStorage.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_delegateAndReturn_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_delegateAndReturn_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression delegateAndReturn()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_delegateAndReturn_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_delegateAndReturn_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_delegateAndReturn_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_delegateAndReturn_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking external function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function EvilXProxyToken._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function EvilXProxyToken.delegateTo (proxy_features line:893)
+functions_writing_to_variable: checking function EvilXProxyToken.setImplementation (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function EvilXProxyToken.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function EvilXProxyToken.constructor (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function EvilXProxyToken.delegateAndReturn (proxy_features line:893)
+has_compatibility_checks: dependencies: ['implementation_', 'newImplementation', 'implementation_']
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking external function setImplementation
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = success == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if success == 0 then revert(uint256,uint256)(returnData + 0x20,returndatasize()()) else returnData
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found external function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) 0

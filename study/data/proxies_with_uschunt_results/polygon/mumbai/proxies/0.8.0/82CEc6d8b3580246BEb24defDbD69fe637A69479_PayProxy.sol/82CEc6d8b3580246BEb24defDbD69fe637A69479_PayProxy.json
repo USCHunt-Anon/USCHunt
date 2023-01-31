@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#127-162)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#127-162) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#164-173)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#164-173) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "211e994b39210eb9069681dcc1b67b974889fdbc5a5da463a2722040444f5164",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "PayProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#175-238)",
+        "elements": [],
+        "description": "PayProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#175-238) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "c8967b4a639ac7f2dd3a797e7e80212f4b432b53d2dfb2b9136da92b51a12ee0",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "PayProxy.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "PayProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.0/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol/82CEc6d8b3580246BEb24defDbD69fe637A69479_PayProxy.sol#175-238)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "PayProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "PayProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "PayProxy.constructor(address,address,address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(account.code.length > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getEstimated(address,address,uint256)",
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

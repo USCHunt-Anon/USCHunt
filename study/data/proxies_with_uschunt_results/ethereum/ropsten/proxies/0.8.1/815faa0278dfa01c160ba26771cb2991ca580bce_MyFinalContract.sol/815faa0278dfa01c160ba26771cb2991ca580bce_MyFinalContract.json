@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.1/815faa0278dfa01c160ba26771cb2991ca580bce_MyFinalContract.sol/815faa0278dfa01c160ba26771cb2991ca580bce_MyFinalContract.sol#9-36)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.1/815faa0278dfa01c160ba26771cb2991ca580bce_MyFinalContract.sol/815faa0278dfa01c160ba26771cb2991ca580bce_MyFinalContract.sol#9-36) is an upgradeable proxy.\n0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 (UUPS) with slot = keccak256('PROXIABLE')\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCode from MyFinalContract\n",
+        "id": "3f5d9d18ec5a06cacb687e9c8730af19a4c43ff4fa6fd2bf05476302da784645",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "impl_address_setter": "MyFinalContract.updateCode(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.1/815faa0278dfa01c160ba26771cb2991ca580bce_MyFinalContract.sol/815faa0278dfa01c160ba26771cb2991ca580bce_MyFinalContract.sol#9-36)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MyFinalContract.updateCode(address)": {
+                "check": "require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              },
+              "Proxy.constructor(bytes,address)": {
+                "check": "require(bool,string)(contractLogic.delegatecall(constructData),Construction failed)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCode from MyFinalContract"
+        }
+      }
+    ]
+  }
+}

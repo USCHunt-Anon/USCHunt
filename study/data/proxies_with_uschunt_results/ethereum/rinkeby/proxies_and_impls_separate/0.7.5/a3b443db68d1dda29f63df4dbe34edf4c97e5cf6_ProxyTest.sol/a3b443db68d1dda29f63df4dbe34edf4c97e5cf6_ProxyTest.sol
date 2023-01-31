@@ -1,0 +1,86 @@
+/**
+ *Submitted for verification at Etherscan.io on 2022-05-26
+*/
+
+// ////-License-Identifier: GPL-3.0
+pragma solidity 0.7.5;
+
+/**
+ * @title Proxy
+ * @dev Gives the possibility to delegate any call to a foreign implementation.
+ */
+contract ProxyTest {
+     uint256 number;
+    /**
+     * @dev Tells the address of the implementation where every call will be delegated.
+     * @return address of the implementation to which it will be delegated
+     */
+
+    function implementation() public pure returns (address) {
+        return address(0x3D8a9ae6261f91144354fF99123C44dfa7999101);
+        // xxx set/get
+    }
+
+    /**
+     * @dev Tells the type of proxy (EIP 897)
+     * @return proxyTypeId Type of proxy, 2 for upgradeable proxy
+     */
+    function proxyType() public pure returns (uint256 proxyTypeId) {
+        return 2;
+    }
+
+     function store(uint256 num) public {
+        number = num;
+    }
+
+    /**
+     * @dev Fallback function allowing to perform a delegatecall to the given implementation.
+     * This function will return whatever the implementation call returns
+     */
+    fallback () external payable {
+        address _impl = implementation();
+        require(_impl != address(0), "Proxy implementation required");
+
+        assembly {
+            let ptr := mload(0x40)
+            calldatacopy(ptr, 0, calldatasize())
+            let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+            let size := returndatasize()
+            returndatacopy(ptr, 0, size)
+
+            switch result
+            case 0 { revert(ptr, size) }
+            default { return(ptr, size) }
+        }
+    }
+}
+
+// : GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+/**
+ * @title Storage
+ * @dev Store & retrieve value in a variable
+ * @custom:dev-run-script ./scripts/deploy_with_ethers.ts
+ */
+contract Storage {
+
+    uint256 number;
+
+    /**
+     * @dev Store value in variable
+     * @param num value to store
+     */
+    function store(uint256 num) public {
+        number = num;
+    }
+
+    /**
+     * @dev Return value 
+     * @return value of 'number'
+     */
+    function retrieve() public view returns (uint256){
+        return number;
+    }
+}

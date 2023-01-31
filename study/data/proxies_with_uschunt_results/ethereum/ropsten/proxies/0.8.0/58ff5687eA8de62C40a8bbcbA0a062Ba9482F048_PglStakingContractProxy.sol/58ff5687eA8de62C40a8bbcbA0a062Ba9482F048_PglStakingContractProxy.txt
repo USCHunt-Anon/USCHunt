@@ -1,0 +1,96 @@
+
+Begin PglStakingContractProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End PglStakingContractProxy.is_proxy (Slither line:1476)
+
+
+Begin PglStakingContractProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PglStakingContractProxy 
+PglStakingContractProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin PglStakingContractProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+adminOnly()
+require(bool,string)(msg.sender == admin,admin only)
+implementation = newImplementation
+is an Assignment Operation (Slither line:3206)
+
+End PglStakingContractProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: PglStakingContractProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin PglStakingContractProxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+newImplementation
+Checking function: constructor (Slither line:2978)
+Checking function: setImplementation (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End PglStakingContractProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in PglStakingContractProxy (Slither line:1305)
+
+End PglStakingContractProxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin only)
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin only)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function PglStakingContractProxy.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = newImplementation
+functions_writing_to_variable: exp = adminOnly() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,admin only) (proxy_features line:904)
+functions_writing_to_variable: setImplementation writes newImplementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function PglStakingContractProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function PglStakingContractProxy.fallback (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newImplementation']
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(msg.sender == admin,admin only)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found public function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) adminOnly()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,admin only)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = newImplementation

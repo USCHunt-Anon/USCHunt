@@ -1,0 +1,319 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#17-81)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#17-81) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137)",
+        "elements": [],
+        "description": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "c667fa13bf5e18ab61b823c0ad9b6e92fc3f1c87b349a854e6819be3f724d050",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BaseAdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#148-255)",
+        "elements": [],
+        "description": "BaseAdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#148-255) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Inherited Storage\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "9f9b68fd3c04c35944fc87bcf1eb86ee431e2c324447ef194fd08bad9883ad01",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "inherited_storage": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#268-289)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#268-289) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1822 using slot from ERC-1967 (i.e. OpenZeppelin UUPS)\n uses Inherited Storage\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from BaseAdminUpgradeabilityProxy\n",
+        "id": "0229f10b9c730d48139931b683b79ce6029ff6c5c28f006d0a771c01edeb92ae",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "eip_1822": true,
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from BaseAdminUpgradeabilityProxy"
+        }
+      },
+      {
+        "contract": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#297-315)",
+        "elements": [],
+        "description": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#297-315) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Inherited Storage\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "303acb988d8296ab435d858d13acd72dd750914dbd7e7aed271b2eecb4a14df7",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "inherited_storage": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "InitializableUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#323-341)",
+        "elements": [],
+        "description": "InitializableUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#323-341) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses Inherited Storage\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from BaseAdminUpgradeabilityProxy\n",
+        "id": "21730d8e7cac4d9a0d364df4cca8862a67289d1701aec5321fa2a577931e97d2",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "InitializableUpgradeabilityProxy.initialize(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from BaseAdminUpgradeabilityProxy",
+          "immutable_functions": {
+            "other": [
+              "initialize(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "InitializableAdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#349-370)",
+        "elements": [],
+        "description": "InitializableAdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#349-370) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Inherited Storage\nFound compatibility checks in all upgrade functions.\n",
+        "id": "c371783c87ec6b43b370f9bdf85498ec028dcfc376e734e37f7fb3028c46c4e3",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "BaseAdminUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#90-137)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "BaseAdminUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "InitializableAdminUpgradeabilityProxy.initialize(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "InitializableUpgradeabilityProxy.initialize(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "BaseAdminUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "initialize(address,bytes)",
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "initialize(address,address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "ProductProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#385-435)",
+        "elements": [],
+        "description": "ProductProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#385-435) may be an upgradeable proxy.\nimplementation is declared in the proxy.\nProxy._delegate(address).implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#41) gets value from a cross-contract call: IProxyFactory(factory).productImplementations(productName())\nIProxyFactory appears to be a Registry contract for the proxy\nThe address of IProxyFactory is loaded from storage slot FACTORY_SLOT = 0x7a45a402e4cb6e08ebc196f20f66d5d30e67285a2a8aa80503fa409e727a4af1\nNo setter functions found to search for compatibility checks.\n",
+        "id": "6dbb76bee0e4274aec981a53f533ba757b2a485aa77cb7b7eb01b1f37b0fdc70",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Proxy._delegate(address).implementation",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ProductProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#385-435)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IProxyFactory(factory).productImplementations(productName())",
+          "registry": "IProxyFactory",
+          "registry_source_type": "bytes32 constant storage slot",
+          "registry_source_slot": "0x7a45a402e4cb6e08ebc196f20f66d5d30e67285a2a8aa80503fa409e727a4af1",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "productName()"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "InitializableProductProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#443-461)",
+        "elements": [],
+        "description": "InitializableProductProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#443-461) may be an upgradeable proxy.\nimplementation is declared in the proxy.\nProxy._delegate(address).implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#41) gets value from a cross-contract call: IProxyFactory(factory).productImplementations(productName())\nIProxyFactory appears to be a Registry contract for the proxy\nThe address of IProxyFactory is loaded from storage slot FACTORY_SLOT = 0x7a45a402e4cb6e08ebc196f20f66d5d30e67285a2a8aa80503fa409e727a4af1\nNo setter functions found to search for compatibility checks.\n",
+        "id": "1dc0185e4cdc7f1a16deac382ab0661f3134dfc8358a8c5f3ce0b80f5745b789",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Proxy._delegate(address).implementation",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "InitializableProductProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol/e24bef4101317acb870c3ef3d4a1e739fdcf6232_AdminUpgradeabilityProxy.sol#443-461)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IProxyFactory(factory).productImplementations(productName())",
+          "registry": "IProxyFactory",
+          "registry_source_type": "bytes32 constant storage slot",
+          "registry_source_slot": "0x7a45a402e4cb6e08ebc196f20f66d5d30e67285a2a8aa80503fa409e727a4af1",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "productName()",
+              "initialize(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

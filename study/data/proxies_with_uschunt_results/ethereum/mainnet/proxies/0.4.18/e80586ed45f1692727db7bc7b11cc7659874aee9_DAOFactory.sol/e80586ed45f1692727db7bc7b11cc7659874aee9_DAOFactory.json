@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AppProxyBase (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#242-277)",
+        "elements": [],
+        "description": "AppProxyBase (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#242-277) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "91f3c24451b6da4613de6dd61c27e81ad08d4899642645aec346d76edf09f87f",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "AppProxyUpgradeable (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#284-306)",
+        "elements": [],
+        "description": "AppProxyUpgradeable (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#284-306) is an upgradeable proxy.\napps was found in a different contract.\napps is a mapping of type mapping(bytes32 => address)\napps is a mapping of type mapping(bytes32 => address)\nKernelStorage.apps (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#42) gets value from a cross-contract call: kernel.getApp(keccak256()(APP_BASES_NAMESPACE,_appId))\nKernel appears to be a Registry contract for the proxy\nThe address of Kernel is stored as a state variable: AppStorage.kernel\nCould not find setter for kernel\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete newAppInstance from Kernel\n",
+        "id": "02276274495a103da999f92f5d1305ce3545013c6b1ea5ef1bde45601187763a",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "KernelStorage.apps",
+          "impl_address_setter": "Kernel.newAppInstance(bytes32,address)",
+          "impl_address_getter": "Kernel.getApp(bytes32)",
+          "impl_address_location": "KernelStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#41-43)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes32 => address)",
+          "impl_mapping_from_msg_sig": false,
+          "impl_address_from_contract_call": "kernel.getApp(keccak256()(APP_BASES_NAMESPACE,_appId))",
+          "registry": "Kernel",
+          "registry_source_type": "IKernel",
+          "registry_source_variable": "AppStorage.kernel",
+          "registry_source_constant": false,
+          "registry_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove newAppInstance from Kernel",
+          "immutable_functions": {
+            "other": [
+              "isUpgradeable()",
+              "getCode()",
+              "getCode()",
+              "isUpgradeable()"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "AppProxyPinned (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#314-339)",
+        "elements": [],
+        "description": "AppProxyPinned (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#314-339) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "df433b2155dc9c6cbdcf16c4914559ed3878d32291e3598921a27d5ff9ce7d62",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "KernelProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#514-531)",
+        "elements": [],
+        "description": "KernelProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#514-531) is an upgradeable proxy.\napps was found in a different contract.\napps is a mapping of type mapping(bytes32 => address)\napps is a mapping of type mapping(bytes32 => address)\n uses Inherited Storage\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete newAppInstance from Kernel\n",
+        "id": "606e48e623fac4b1924af1615e73b9e9694908a85b348ebe55dd6c884ef6ee51",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "KernelStorage.apps",
+          "impl_address_setter": "Kernel.newAppInstance(bytes32,address)",
+          "impl_address_getter": "Kernel.getApp(bytes32)",
+          "impl_address_location": "KernelStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.18/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol/e80586ed45f1692727db7bc7b11cc7659874aee9_DAOFactory.sol#41-43)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes32 => address)",
+          "impl_mapping_from_msg_sig": false,
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove newAppInstance from Kernel"
+        }
+      }
+    ]
+  }
+}

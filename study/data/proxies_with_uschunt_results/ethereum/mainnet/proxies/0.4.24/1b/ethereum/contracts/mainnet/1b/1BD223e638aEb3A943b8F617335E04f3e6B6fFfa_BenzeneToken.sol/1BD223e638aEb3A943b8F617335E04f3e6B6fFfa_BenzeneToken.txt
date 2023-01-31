@@ -1,0 +1,386 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Basic.is_proxy (Slither line:1425)
+
+
+End ERC20Basic.is_proxy (Slither line:1428)
+
+
+Begin ERC20Basic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Basic 
+
+End ERC20Basic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicToken.is_proxy (Slither line:1425)
+
+
+End BasicToken.is_proxy (Slither line:1428)
+
+
+Begin BasicToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicToken 
+
+End BasicToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DetailedERC20.is_proxy (Slither line:1425)
+
+
+End DetailedERC20.is_proxy (Slither line:1428)
+
+
+Begin DetailedERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DetailedERC20 
+
+End DetailedERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BurnableToken.is_proxy (Slither line:1425)
+
+
+End BurnableToken.is_proxy (Slither line:1428)
+
+
+Begin BurnableToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BurnableToken 
+
+End BurnableToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StandardToken.is_proxy (Slither line:1425)
+
+
+End StandardToken.is_proxy (Slither line:1428)
+
+
+Begin StandardToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StandardToken 
+
+End StandardToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StandardBurnableToken.is_proxy (Slither line:1425)
+
+
+End StandardBurnableToken.is_proxy (Slither line:1428)
+
+
+Begin StandardBurnableToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StandardBurnableToken 
+
+End StandardBurnableToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenPool.is_proxy (Slither line:1425)
+
+
+End TokenPool.is_proxy (Slither line:1428)
+
+
+Begin TokenPool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenPool 
+
+End TokenPool.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StandbyGamePool.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin StandbyGamePool.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(ready) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+ready
+
+End StandbyGamePool.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End StandbyGamePool.is_proxy (Slither line:1476)
+
+
+Begin StandbyGamePool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StandbyGamePool 
+StandbyGamePool is delegating to currentVersion
+Looking for setter (Slither line:1200)
+
+
+Begin StandbyGamePool.find_setter_in_contract (Slither line:3119)
+
+Checking function: update(address) returns() (Slither line:3127)
+Visibility: public
+token.transfer(dst,amount)
+ready = true
+is an Assignment Operation (Slither line:3216)
+require(bool)(msg.sender == owner)
+require(bool)(! ready)
+onlyOwner()
+currentVersion = newAddress
+is an Assignment Operation (Slither line:3216)
+
+End StandbyGamePool.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: update in contract: StandbyGamePool (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin StandbyGamePool.find_getter_in_contract (Slither line:2974)
+
+currentVersion is a Variable object
+newAddress
+Checking function: constructor (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: setToken (Slither line:2988)
+Checking function: balance (Slither line:2988)
+balance returns uint256 variable  (Slither line:3008)
+RETURN node expression: token.balanceOf(this) (Slither line:3028)
+Checking function: transferTo (Slither line:2988)
+transferTo returns bool variable  (Slither line:3008)
+RETURN node expression: token.transfer(dst,amount) (Slither line:3028)
+Checking function: getFrom (Slither line:2988)
+getFrom returns address variable  (Slither line:3008)
+RETURN node expression: this (Slither line:3028)
+Checking function: update (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End StandbyGamePool.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in StandbyGamePool (Slither line:1305)
+Checking for currentVersion at slot 2 in contract DetailedERC20 (Slither line:1355)
+Found decimals at slot 2 in contract DetailedERC20 (Slither line:1362)
+Checking for decimals at slot 2 in contract StandardToken (Slither line:1355)
+Found allowed at slot 2 in contract StandardToken (Slither line:1362)
+Checking for allowed at slot 2 in contract StandardBurnableToken (Slither line:1355)
+Found allowed at slot 2 in contract StandardBurnableToken (Slither line:1362)
+Checking for allowed at slot 2 in contract TokenVesting (Slither line:1355)
+Found cliff at slot 2 in contract TokenVesting (Slither line:1362)
+Checking for cliff at slot 2 in contract TeamPool (Slither line:1355)
+Found INIT_COIN at slot 2 in contract TeamPool (Slither line:1362)
+Checking for INIT_COIN at slot 2 in contract BenzeneToken (Slither line:1355)
+Found allowed at slot 2 in contract BenzeneToken (Slither line:1362)
+
+Begin SafeMath.find_getter_in_contract (Slither line:2974)
+
+currentVersion is a Variable object
+newAddress
+Checking function: mul (Slither line:2988)
+mul returns uint256 variable called c (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: a / b (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: a - b (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns uint256 variable called c (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+
+End SafeMath.find_getter_in_contract (Slither line:3083)
+
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setToken
+Checking public function balance
+Checking public function getFrom
+Checking public function update
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: currentVersion
+functions_writing_to_variable: checking function StandbyGamePool.update (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(! ready) (proxy_features line:909)
+functions_writing_to_variable: exp = ready = true (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ready = true (proxy_features line:912)
+functions_writing_to_variable: exp = currentVersion = newAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: currentVersion = newAddress (proxy_features line:912)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:924)
+get_value_assigned: currentVersion = newAddress
+functions_writing_to_variable: exp = transferTo(newAddress,balance()) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = token.transfer(dst,amount) (proxy_features line:909)
+functions_writing_to_variable: exp = token.balanceOf(this) (proxy_features line:909)
+functions_writing_to_variable: update writes newAddress to currentVersion (proxy_features line:929)
+functions_writing_to_variable: checking function StandbyGamePool.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.transferTo (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.getFrom (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.balance (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.setToken (proxy_features line:898)
+functions_writing_to_variable: checking function StandbyGamePool.renounceOwnership (proxy_features line:898)
+has_compatibility_checks: dependencies: ['newAddress']
+has_compatibility_checks: checking public function update
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(! ready)
+has_compatibility_checks: condition ! ready
+Found public function: constructor
+Found public function: transferOwnership
+has_time_delay: (node.type) RETURN
+(Expression) token.transfer(dst,amount)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ready = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(! ready)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) currentVersion = newAddress
+has_time_delay: (node.type) RETURN
+(Expression) token.balanceOf(this)
+has_time_delay: (node.type) EXPRESSION
+(Expression) transferTo(newAddress,balance())
+
+Begin AdvisorPool.is_proxy (Slither line:1425)
+
+
+End AdvisorPool.is_proxy (Slither line:1428)
+
+
+Begin AdvisorPool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AdvisorPool 
+
+End AdvisorPool.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenVesting.is_proxy (Slither line:1425)
+
+
+End TokenVesting.is_proxy (Slither line:1428)
+
+
+Begin TokenVesting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenVesting 
+
+End TokenVesting.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TeamPool.is_proxy (Slither line:1425)
+
+
+End TeamPool.is_proxy (Slither line:1428)
+
+
+Begin TeamPool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TeamPool 
+
+End TeamPool.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BenzeneToken.is_proxy (Slither line:1425)
+
+
+End BenzeneToken.is_proxy (Slither line:1428)
+
+
+Begin BenzeneToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BenzeneToken 
+
+End BenzeneToken.is_upgradeable_proxy (Slither line:1407)
+

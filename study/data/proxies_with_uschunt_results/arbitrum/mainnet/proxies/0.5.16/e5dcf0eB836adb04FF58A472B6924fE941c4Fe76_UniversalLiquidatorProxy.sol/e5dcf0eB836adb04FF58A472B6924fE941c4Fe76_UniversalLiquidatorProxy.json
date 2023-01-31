@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#60-117)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#60-117) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#133-180)",
+        "elements": [],
+        "description": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#133-180) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "c667fa13bf5e18ab61b823c0ad9b6e92fc3f1c87b349a854e6819be3f724d050",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UniversalLiquidatorProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#189-212)",
+        "elements": [],
+        "description": "UniversalLiquidatorProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#189-212) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "ec10bba01a3a310b30009f4c96c7607024be276d594c87911fbbab5128c8559a",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "UniversalLiquidatorProxy.upgrade()",
+          "impl_address_getter": "BaseUpgradeabilityProxy._implementation()",
+          "impl_address_location": "BaseUpgradeabilityProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol/e5dcf0eB836adb04FF58A472B6924fE941c4Fe76_UniversalLiquidatorProxy.sol#133-180)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UniversalLiquidatorProxy.upgrade()": {
+                "check": "require(bool,string)(size > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "upgrade()",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

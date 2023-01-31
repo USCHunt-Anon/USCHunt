@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OneSwapPairProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol#1651-1721)",
+        "elements": [],
+        "description": "OneSwapPairProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol#1651-1721) is an upgradeable proxy.\npairLogic was found in a different contract.\npairLogic is an address state variable.\nOneSwapFactory.pairLogic (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol#1740) gets value from a cross-contract call: IOneSwapFactory(address(_immuFactory)).pairLogic()\nOneSwapFactory appears to be a Beacon contract for the proxy\nMissing compatibility check in OneSwapFactory.setPairLogic(address)\nTo remove upgradeability, delete setPairLogic from OneSwapFactory\n",
+        "id": "cf04c86322328dac4c807ef4cf2d5124e4a11d359ac6433e870ecc9a3857f11b",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OneSwapFactory.pairLogic",
+          "impl_address_setter": "OneSwapFactory.setPairLogic(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "OneSwapFactory (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol/5eD3C9089Ed0355bc77CF439Dc2eD28c4054C8c4_OneSwapFactory.sol#1729-1833)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IOneSwapFactory(address(_immuFactory)).pairLogic()",
+          "beacon": "OneSwapFactory",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "OneSwapFactory.setPairLogic(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setPairLogic from OneSwapFactory"
+        }
+      }
+    ]
+  }
+}

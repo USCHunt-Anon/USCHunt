@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "WalletProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.7.0/7d1e240742ccd4edb2f9355e42485de3173016b7_LoopringWalletAgent.sol/7d1e240742ccd4edb2f9355e42485de3173016b7_LoopringWalletAgent.sol#119-153)",
+        "elements": [],
+        "description": "WalletProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.7.0/7d1e240742ccd4edb2f9355e42485de3173016b7_LoopringWalletAgent.sol/7d1e240742ccd4edb2f9355e42485de3173016b7_LoopringWalletAgent.sol#119-153) may be an upgradeable proxy.\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: calldataload(uint256)(0) == 0xa619486e00000000000000000000000000000000000000000000000000000000\n",
+        "id": "84b381e8cc5e012ff71e1392676426c91ba58dad84946ff72fa59a6cc9ac22e2",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "WalletProxy.masterCopy",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "WalletProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.7.0/7d1e240742ccd4edb2f9355e42485de3173016b7_LoopringWalletAgent.sol/7d1e240742ccd4edb2f9355e42485de3173016b7_LoopringWalletAgent.sol#119-153)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "WalletProxy.constructor(address)": {
+                "check": "require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "calldataload(uint256)(0) != 0xa619486e00000000000000000000000000000000000000000000000000000000",
+          "toggle_alternative_logic": "return(uint256,uint256)(0,0x20)"
+        }
+      }
+    ]
+  }
+}

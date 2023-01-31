@@ -1,0 +1,290 @@
+
+Begin Parent.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Parent.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Parent.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Parent.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Parent.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Parent.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Parent.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Parent.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Parent.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Parent.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),adrs,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+adrs
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is adrs (Slither line:2828)
+dest.value: adrs (Slither line:2831)
+Expression: getImplementation() (Slither line:2836)
+
+Begin Parent.find_delegate_from_call_exp
+
+getImplementation() (Slither line:2003)
+called = getImplementation (Slither line:2010)
+AssignmentOperation: impl = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2140)
+getImplementation returns a variable of type address   called impl (Slither line:2193)
+getImplementation contains assembly - looking for sload (Slither line:2199)
+
+End Parent.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Parent.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting Parent._delegate_variable = Parent._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End Parent.is_proxy (Slither line:1476)
+
+
+Begin Parent.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Parent 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+Parent is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin Parent.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setProxyAdmin(address) returns() (Slither line:3127)
+Visibility: public
+proxyAdmin = newProxyAdmin
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(msg.sender == proxyAdmin,Must be a proxy admin)
+onlyProxyAdmin()
+ProxyAdminChanged(newProxyAdmin)
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+getImplementation contains assembly (Slither line:3153)
+impl = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: isContract(address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+setImplementation contains assembly (Slither line:3153)
+codehash = extcodehash(uint256)(_addr)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+(codehash != 0x0 && codehash != accountHash)
+require(bool)(msg.sender == proxyAdmin)
+require(bool,string)(msg.sender == proxyAdmin,Must be a proxy admin)
+Upgraded(newImplementation)
+sstore(uint256,uint256)(slot,newImplementation)
+sstore(uint256,uint256)
+
+End Parent.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: Parent (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Parent.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: setProxyAdmin (Slither line:2988)
+Checking function: getImplementation (Slither line:2988)
+getImplementation returns address variable called impl (Slither line:3008)
+getImplementation contains assembly (Slither line:3051)
+
+End Parent.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getImplementation in contract: Parent (Slither line:1285)
+
+End Parent.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Parent
+Setter found in contract Parent
+Checking public function setProxyAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyAdmin,Must be a proxy admin)
+Checking public function setProxyAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == proxyAdmin,Must be a proxy admin)
+Checking public function getImplementation
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyAdmin)
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function Parent.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Parent.setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,newImplementation)
+functions_writing_to_variable: setImplementation writes newImplementation to IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Parent.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Parent.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Parent.setProxyAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Parent.isContract (proxy_features line:898)
+functions_writing_to_variable: checking function Parent.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyProxyAdmin()']
+require(bool)(msg.sender == proxyAdmin)
+has_compatibility_checks: condition msg.sender == proxyAdmin
+require(bool,string)(msg.sender == proxyAdmin,Must be a proxy admin)
+has_compatibility_checks: condition msg.sender == proxyAdmin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: adrs = getImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),adrs,0,calldatasize()(),0,0)
+Found public function: constructor
+Found public function: setProxyAdmin
+has_time_delay: (node.type) EXPRESSION
+(Expression) codehash = extcodehash(uint256)(_addr)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) RETURN
+(Expression) (codehash != 0x0 && codehash != accountHash)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == proxyAdmin)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == proxyAdmin,Must be a proxy admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyProxyAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,data) = newImplementation.delegatecall(abi.encodeWithSignature(initialize()))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470

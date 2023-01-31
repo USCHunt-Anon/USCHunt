@@ -1,0 +1,170 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'name': '_IMPLEMENTATION_SLOT', 'nodeType': 'YulIdentifier', 'src': '1094:20:0'} (Slither line:1899)
+Found storage slot in fallback: _IMPLEMENTATION_SLOT (Slither line:1933)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: _IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination _IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+_IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to _IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3112)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: admin() returns(address) (Slither line:3117)
+Visibility: public
+admin contains assembly (Slither line:3143)
+adm = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: public
+implementation contains assembly (Slither line:3143)
+impl = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3206)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: upgrade(address) returns() (Slither line:3117)
+Visibility: external
+upgrade contains assembly (Slither line:3143)
+sstore(uint256,uint256)(slot,newImplementation)
+sstore(uint256,uint256)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgrade in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+_IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2978)
+Checking function: admin (Slither line:2978)
+admin returns address variable called adm (Slither line:2998)
+admin contains assembly (Slither line:3041)
+admin contains assembly (Slither line:3041)
+admin contains assembly (Slither line:3041)
+admin contains assembly (Slither line:3041)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable called impl (Slither line:2998)
+implementation contains assembly (Slither line:3041)
+implementation contains assembly (Slither line:3041)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+Setter found in contract Proxy
+Checking public function admin
+Checking public function implementation
+Checking external function upgrade
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin(),admin only)
+Checking external function fallback
+functions_writing_to_variable: _IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function Proxy.admin (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.upgrade (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(slot,newImplementation)
+functions_writing_to_variable: upgrade writes newImplementation to _IMPLEMENTATION_SLOT using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = _ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:907)
+functions_writing_to_variable: exp = _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:907)
+functions_writing_to_variable: Identifier: _IMPLEMENTATION_SLOT (proxy_features line:919)
+get_value_assigned: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function upgrade
+require(bool,string)(msg.sender == admin(),admin only)
+has_compatibility_checks: condition msg.sender == admin()
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_target_fallback_asm_0,0x0,calldatasize()(),0x0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: _target_fallback_asm_0 = sload(uint256)(_IMPLEMENTATION_SLOT)
+Found public function: constructor
+Found public function: admin
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = _IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin(),admin only)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = _ADMIN_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) adm = sload(uint256)(slot)

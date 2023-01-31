@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#319-387)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#319-387) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#411-473)",
+        "elements": [],
+        "description": "UpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#411-473) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "6498cef87413584e0151e2db149e748f6a8bbf5f5e1bfa6a9d5cf68d98a5879e",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "Root (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#486-498)",
+        "elements": [],
+        "description": "Root (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#486-498) is an upgradeable proxy.\n_IMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "c7fc06c69435d5898a98469e1c3047d4698c4426a04bbf7e58907a29a7c8a77a",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableProxy._IMPLEMENTATION_SLOT",
+          "impl_address_setter": "Root.upgradeTo(address)",
+          "impl_address_getter": "UpgradeableProxy._implementation()",
+          "impl_address_location": "UpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.3/f8/bsc/contracts/mainnet/f8/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol/F8d5C25a47D28866B4C1cE285F42997c690F941c_Root.sol#411-473)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Root.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableProxy: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

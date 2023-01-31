@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Gelato (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7c./bsc/contracts/mainnet/7c/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol#10-60)",
+        "elements": [],
+        "description": "Gelato (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7c./bsc/contracts/mainnet/7c/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol#10-60) is an upgradeable proxy.\nfacet is declared in the proxy.\nselectorToFacetAndPosition maps function signatures to addresses, suggesting multiple implementations.\nselectorToFacetAndPosition is stored in the structure specified by EIP-2535: LibDiamond.DiamondStorage\nLoupe functions located in missing\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete the LibDiamond facet\n",
+        "id": "d8ce6d5de46617e24cde622acd13f674dfb2407aa0d8b2dd220c459b6e6f592b",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "LibDiamond.DiamondStorage.selectorToFacetAndPosition",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Gelato (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7c./bsc/contracts/mainnet/7c/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol#10-60)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => LibDiamond.FacetAddressAndPosition)",
+          "impl_mapping_from_msg_sig": true,
+          "diamond_storage": true,
+          "diamond_storage_location": "LibDiamond (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7c./bsc/contracts/mainnet/7c/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol/7C5c4Af1618220C090A6863175de47afb20fa9Df_Gelato.sol#208-221)",
+          "eip_2535": true,
+          "diamond_loupe_facets": {
+            "facets() returns(IDiamondLoupe.Facet[])": "missing",
+            "facetAddresses() returns(address[])": "missing",
+            "facetAddress(bytes4) returns(address)": "missing",
+            "facetFunctionSelectors(address) returns(bytes4[])": "missing"
+          },
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)": {
+                "check": "require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove LibDiamond facet"
+        }
+      }
+    ]
+  }
+}

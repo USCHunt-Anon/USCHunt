@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.16/837634D61f50F25B16c1139985825F3D3CA093d0_SupplySchedule.sol/837634D61f50F25B16c1139985825F3D3CA093d0_SupplySchedule.sol#531-603)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.16/837634D61f50F25B16c1139985825F3D3CA093d0_SupplySchedule.sol/837634D61f50F25B16c1139985825F3D3CA093d0_SupplySchedule.sol#531-603) is an upgradeable proxy.\nProxy uses `call` instead of `delegatecall`\ntarget is declared in the proxy.\ntarget is a state variable of type Proxyable\nFound compatibility checks in all upgrade functions.\nIncorrect compatibility check in setTarget: target = _target\n",
+        "id": "6e1b54e3f46568e13ad856529d7d1ec869564937d27e62cfd5748206ceb3c7f4",
+        "features": {
+          "upgradeable": true,
+          "uses_call_instead_of_delegatecall": true,
+          "impl_address_variable": "Proxy.target",
+          "impl_address_setter": "Proxy.setTarget(Proxyable)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.16/837634D61f50F25B16c1139985825F3D3CA093d0_SupplySchedule.sol/837634D61f50F25B16c1139985825F3D3CA093d0_SupplySchedule.sol#531-603)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "Proxyable",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.setTarget(Proxyable)": {
+                "check": "target = _target",
+                "is_correct": false
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "nominateNewOwner(address)",
+              "acceptOwnership()",
+              "setTarget(Proxyable)",
+              "_emit(bytes,uint256,bytes32,bytes32,bytes32,bytes32)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

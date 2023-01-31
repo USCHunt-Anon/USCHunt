@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#50-120)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#50-120) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#715-733)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#715-733) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "211e994b39210eb9069681dcc1b67b974889fdbc5a5da463a2722040444f5164",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "VestingProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#763-820)",
+        "elements": [],
+        "description": "VestingProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#763-820) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "2a21841636960b1a43439d38d747c51000baa6c98d0878395b64da30e4d5e138",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "VestingProxy.upgradeVesting(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "VestingProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.2/7a/ethereum/contracts/mainnet/7a/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol/7Aa9615cB59F6211Ec9ADB13e8367572eC1Ae32C_VestingProxy.sol#763-820)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "VestingProxy.upgradeVesting(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "vesting()",
+              "vestingFactory()",
+              "upgradeVesting(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

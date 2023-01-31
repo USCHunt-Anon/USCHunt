@@ -1,0 +1,1398 @@
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Halt.is_proxy (Slither line:1425)
+
+
+End Halt.is_proxy (Slither line:1428)
+
+
+Begin Halt.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Halt 
+
+End Halt.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicStorageLib.is_proxy (Slither line:1425)
+
+
+End BasicStorageLib.is_proxy (Slither line:1428)
+
+
+Begin BasicStorageLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicStorageLib 
+
+End BasicStorageLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicStorage.is_proxy (Slither line:1425)
+
+
+End BasicStorage.is_proxy (Slither line:1428)
+
+
+Begin BasicStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicStorage 
+
+End BasicStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin QuotaStorage.is_proxy (Slither line:1425)
+
+
+End QuotaStorage.is_proxy (Slither line:1428)
+
+
+Begin QuotaStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: QuotaStorage 
+
+End QuotaStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+Begin Proxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+RETURN: _implementation (Slither line:2888)
+
+End Proxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin QuotaProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin QuotaProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End QuotaProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin QuotaProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin QuotaProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking DENOMINATOR (Slither line:1689)
+Checking quotaMap (Slither line:1689)
+Checking storemanTokensMap (Slither line:1689)
+Checking storemanTokenCountMap (Slither line:1689)
+Checking htlcGroupMap (Slither line:1689)
+Checking depositOracleAddress (Slither line:1689)
+Checking priceOracleAddress (Slither line:1689)
+Checking depositRate (Slither line:1689)
+Checking depositTokenSymbol (Slither line:1689)
+Checking tokenManagerAddress (Slither line:1689)
+Checking debtOracleAddress (Slither line:1689)
+Checking fastCrossMinValue (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in QuotaProxy.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End QuotaProxy.find_delegate_variable_by_name
+
+
+End QuotaProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End QuotaProxy.is_proxy (Slither line:1476)
+
+
+Begin QuotaProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: QuotaProxy 
+QuotaProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in QuotaProxy (Slither line:1213)
+
+Begin QuotaProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+onlyOwner()
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+
+End QuotaProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: QuotaProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End QuotaProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression require(bool,string)(_impl != address(0),implementation contract not set)
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: arg is implementation contract not set
+Checking public function implementation
+Checking public function setHalt
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function transferOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: msg.sender == newOwner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function QuotaProxy.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.transferOwner (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(impl != address(0),Cannot upgrade to invalid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,Not owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function QuotaProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaProxy.setHalt (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_compatibility_checks: condition impl != _implementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != _implementation
+require(bool,string)(msg.sender == owner,Not owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_compatibility_checks: condition impl != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = _implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_impl != address(0),implementation contract not set)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Not owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+
+Begin QuotaStorageV2.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin QuotaStorageV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End QuotaStorageV2.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin QuotaStorageV2.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin QuotaStorageV2.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking DENOMINATOR (Slither line:1689)
+Checking quotaMap (Slither line:1689)
+Checking storemanTokensMap (Slither line:1689)
+Checking storemanTokenCountMap (Slither line:1689)
+Checking htlcGroupMap (Slither line:1689)
+Checking depositOracleAddress (Slither line:1689)
+Checking priceOracleAddress (Slither line:1689)
+Checking depositRate (Slither line:1689)
+Checking depositTokenSymbol (Slither line:1689)
+Checking tokenManagerAddress (Slither line:1689)
+Checking debtOracleAddress (Slither line:1689)
+Checking fastCrossMinValue (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking v2QuotaMap (Slither line:1689)
+Checking v2TokensMap (Slither line:1689)
+Checking v2TokenCountMap (Slither line:1689)
+Checking version (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in QuotaStorageV2.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End QuotaStorageV2.find_delegate_variable_by_name
+
+
+End QuotaStorageV2.find_delegatecall_in_asm (Slither line:1637)
+
+
+End QuotaStorageV2.is_proxy (Slither line:1476)
+
+
+Begin QuotaStorageV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: QuotaStorageV2 
+QuotaStorageV2 is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in QuotaStorageV2 (Slither line:1213)
+
+Begin QuotaStorageV2.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+impl
+
+End QuotaStorageV2.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: QuotaStorageV2 (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End QuotaStorageV2.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression require(bool,string)(_impl != address(0),implementation contract not set)
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: arg is implementation contract not set
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function implementation
+Checking public function setHalt
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function transferOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: msg.sender == newOwner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function QuotaStorageV2.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(impl != address(0),Cannot upgrade to invalid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,Not owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function QuotaStorageV2.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaStorageV2.transferOwner (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(msg.sender == owner,Not owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_compatibility_checks: condition impl != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != address(0)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_compatibility_checks: condition impl != _implementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != _implementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = _implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_impl != address(0),implementation contract not set)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: upgradeTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Not owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+
+Begin IOracle.is_proxy (Slither line:1425)
+
+
+End IOracle.is_proxy (Slither line:1428)
+
+
+Begin IOracle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IOracle 
+
+End IOracle.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin _ITokenManager.is_proxy (Slither line:1425)
+
+
+End _ITokenManager.is_proxy (Slither line:1428)
+
+
+Begin _ITokenManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: _ITokenManager 
+
+End _ITokenManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin _IStoremanGroup.is_proxy (Slither line:1425)
+
+
+End _IStoremanGroup.is_proxy (Slither line:1428)
+
+
+Begin _IStoremanGroup.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: _IStoremanGroup 
+
+End _IStoremanGroup.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDebtOracle.is_proxy (Slither line:1425)
+
+
+End IDebtOracle.is_proxy (Slither line:1428)
+
+
+Begin IDebtOracle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDebtOracle 
+
+End IDebtOracle.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin QuotaDelegate.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin QuotaDelegate.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End QuotaDelegate.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin QuotaDelegate.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin QuotaDelegate.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking DENOMINATOR (Slither line:1689)
+Checking quotaMap (Slither line:1689)
+Checking storemanTokensMap (Slither line:1689)
+Checking storemanTokenCountMap (Slither line:1689)
+Checking htlcGroupMap (Slither line:1689)
+Checking depositOracleAddress (Slither line:1689)
+Checking priceOracleAddress (Slither line:1689)
+Checking depositRate (Slither line:1689)
+Checking depositTokenSymbol (Slither line:1689)
+Checking tokenManagerAddress (Slither line:1689)
+Checking debtOracleAddress (Slither line:1689)
+Checking fastCrossMinValue (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking v2QuotaMap (Slither line:1689)
+Checking v2TokensMap (Slither line:1689)
+Checking v2TokenCountMap (Slither line:1689)
+Checking version (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in QuotaDelegate.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End QuotaDelegate.find_delegate_variable_by_name
+
+
+End QuotaDelegate.find_delegatecall_in_asm (Slither line:1637)
+
+
+End QuotaDelegate.is_proxy (Slither line:1476)
+
+
+Begin QuotaDelegate.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: QuotaDelegate 
+QuotaDelegate is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in QuotaDelegate (Slither line:1213)
+
+Begin QuotaDelegate.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: config(address,address,address,address,address,uint256,string) returns() (Slither line:3127)
+Visibility: external
+depositTokenSymbol = _depositTokenSymbol
+is an Assignment Operation (Slither line:3216)
+impl
+htlcGroupMap[_fastHtlcAddr] = true
+is an Assignment Operation (Slither line:3216)
+impl
+tokenManagerAddress = _tokenManagerAddress
+is an Assignment Operation (Slither line:3216)
+impl
+depositOracleAddress = _depositOracleAddr
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(msg.sender == owner,Not owner)
+priceOracleAddress = _priceOracleAddr
+is an Assignment Operation (Slither line:3216)
+impl
+onlyOwner()
+depositRate = _depositRate
+is an Assignment Operation (Slither line:3216)
+impl
+htlcGroupMap[_htlcAddr] = true
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: setDebtOracle(address) returns() (Slither line:3127)
+Visibility: external
+debtOracleAddress = oracle
+is an Assignment Operation (Slither line:3216)
+impl
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+Checking function: setFastCrossMinValue(uint256) returns() (Slither line:3127)
+Visibility: external
+fastCrossMinValue = value
+is an Assignment Operation (Slither line:3216)
+impl
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+Checking function: getAsset(uint256,bytes32) returns(uint256,uint256,uint256) (Slither line:3127)
+Visibility: public
+(quota._asset,quota.asset_receivable,quota.asset_payable)
+tokenKey
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: getDebt(uint256,bytes32) returns(uint256,uint256,uint256) (Slither line:3127)
+Visibility: public
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+(quota._debt,quota.debt_receivable,quota.debt_payable)
+tokenKey
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: isDebtClean(bytes32) returns(bool) (Slither line:3127)
+Visibility: external
+false
+debtOracle.isDebtClean(storemanGroupId)
+true
+false
+i ++
+true
+Checking function: getFastMinCount(uint256) returns(uint256,string,uint256,uint256,uint256) (Slither line:3127)
+Visibility: public
+c
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(b > 0,SafeMath div 0)
+price = oracle.getValue(stringToBytes32(symbol))
+is an Assignment Operation (Slither line:3216)
+impl
+c
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+(fastCrossMinValue,symbol,decimals,price,count)
+0x0
+count = fastCrossMinValue.mul(10 ** decimals).div(price)
+is an Assignment Operation (Slither line:3216)
+impl
+(0,,0,0,0)
+0
+require(bool,string)(c / a == b,SafeMath mul overflow)
+Checking function: userLock(uint256,bytes32,uint256) returns() (Slither line:3127)
+Visibility: public
+c
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(b > 0,SafeMath div 0)
+require(bool,string)(htlcGroupMap[msg.sender],Not in HTLC group)
+price = oracle.getValue(stringToBytes32(symbol))
+is an Assignment Operation (Slither line:3216)
+impl
+c
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+quota._asset = quota._asset.add(value)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(c >= a,SafeMath add overflow)
+0x0
+c
+quota._active = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(value >= count,value too small)
+v2TokensMap[storemanGroupId][v2TokenCountMap[storemanGroupId]] = tokenKey
+is an Assignment Operation (Slither line:3216)
+impl
+v2TokenCountMap[storemanGroupId] = v2TokenCountMap[storemanGroupId].add(1)
+is an Assignment Operation (Slither line:3216)
+impl
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+0
+onlyHtlc()
+tokenKey
+require(bool,string)(c / a == b,SafeMath mul overflow)
+checkMinValue(tokenId,value)
+Checking function: userBurn(uint256,bytes32,uint256) returns() (Slither line:3127)
+Visibility: external
+c
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(b > 0,SafeMath div 0)
+require(bool,string)(b <= a,SafeMath sub b > a)
+require(bool,string)(htlcGroupMap[msg.sender],Not in HTLC group)
+price = oracle.getValue(stringToBytes32(symbol))
+is an Assignment Operation (Slither line:3216)
+impl
+c
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+0x0
+c
+require(bool,string)(value >= count,value too small)
+quota._debt = quota._debt.sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+0
+onlyHtlc()
+tokenKey
+checkMinValue(tokenId,value)
+require(bool,string)(c / a == b,SafeMath mul overflow)
+Checking function: smgRelease(uint256,bytes32,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(b <= a,SafeMath sub b > a)
+require(bool,string)(htlcGroupMap[msg.sender],Not in HTLC group)
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+c
+quota._asset = quota._asset.sub(value)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyHtlc()
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+tokenKey
+Checking function: smgMint(uint256,bytes32,uint256) returns() (Slither line:3127)
+Visibility: public
+quota._debt = quota._debt.add(value)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+quota._active = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+v2TokensMap[storemanGroupId][v2TokenCountMap[storemanGroupId]] = tokenKey
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(htlcGroupMap[msg.sender],Not in HTLC group)
+v2TokenCountMap[storemanGroupId] = v2TokenCountMap[storemanGroupId].add(1)
+is an Assignment Operation (Slither line:3216)
+impl
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(c >= a,SafeMath add overflow)
+c
+onlyHtlc()
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+tokenKey
+Checking function: adjustSmgQuota(bytes32,uint256,uint256,uint256) returns() (Slither line:3127)
+Visibility: external
+quota._debt = debt
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+quota._asset = asset
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: upgrade(bytes32[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(version < 2,Can upgrade again.)
+version = 2
+is an Assignment Operation (Slither line:3216)
+impl
+onlyOwner()
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(c >= a,SafeMath add overflow)
+quota2._asset = quota2._asset.add(asset)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+c
+quota._debt = quota._debt.add(debt)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+quota2._active = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+i ++
+v2TokensMap[storemanGroupId][v2TokenCountMap[storemanGroupId]] = tokenKey
+is an Assignment Operation (Slither line:3216)
+impl
+quota._active = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(msg.sender == owner,Not owner)
+v2TokenCountMap[storemanGroupId] = v2TokenCountMap[storemanGroupId].add(1)
+is an Assignment Operation (Slither line:3216)
+impl
+v2TokensMap[storemanGroupId][v2TokenCountMap[storemanGroupId]] = tokenKey
+is an Assignment Operation (Slither line:3216)
+impl
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+v2TokenCountMap[storemanGroupId] = v2TokenCountMap[storemanGroupId].add(1)
+is an Assignment Operation (Slither line:3216)
+impl
+m ++
+tokenKey
+Checking function: transferAsset(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: external
+v2TokensMap[dstStoremanGroupId][v2TokenCountMap[dstStoremanGroupId]] = id
+is an Assignment Operation (Slither line:3216)
+impl
+v2TokenCountMap[dstStoremanGroupId] = v2TokenCountMap[dstStoremanGroupId].add(1)
+is an Assignment Operation (Slither line:3216)
+impl
+i ++
+AssetTransfered(srcStoremanGroupId,dstStoremanGroupId,id,src._asset)
+require(bool,string)(htlcGroupMap[msg.sender],Not in HTLC group)
+src.asset_payable = 0
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyHtlc()
+src._asset = 0
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(c >= a,SafeMath add overflow)
+c
+dst._asset = dst._asset.add(src._asset)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+dst._active = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: receiveDebt(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: external
+dst._debt = dst._debt.add(src._debt)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(htlcGroupMap[msg.sender],Not in HTLC group)
+dst._active = true
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+v2TokensMap[dstStoremanGroupId][v2TokenCountMap[dstStoremanGroupId]] = id
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(c >= a,SafeMath add overflow)
+v2TokenCountMap[dstStoremanGroupId] = v2TokenCountMap[dstStoremanGroupId].add(1)
+is an Assignment Operation (Slither line:3216)
+impl
+c
+i ++
+DebtReceived(srcStoremanGroupId,dstStoremanGroupId,id,src._debt)
+src.debt_payable = 0
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyHtlc()
+src._debt = 0
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: getQuotaMap(uint256,bytes32) returns(uint256,uint256,uint256,uint256,uint256,uint256,bool) (Slither line:3127)
+Visibility: public
+(quota.debt_receivable,quota.debt_payable,quota._debt,quota.asset_receivable,quota.asset_payable,quota._asset,quota._active)
+Checking function: getTokenKey(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+tokenKey
+(ancestorSymbol,decimals) = tokenManager.getAncestorSymbol(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+(symbol,decimals) = getTokenAncestorInfo(tokenId)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: getTokenCount(bytes32) returns(uint256) (Slither line:3127)
+Visibility: public
+v2TokenCountMap[storemanGroupId]
+Checking function: getTokenId(bytes32,uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+v2TokensMap[storemanGroupId][index]
+Checking function: getTokenQuota(string,uint256,bytes32) returns(uint256,uint256,uint256,uint256,uint256,uint256,bool) (Slither line:3127)
+Visibility: public
+getQuotaMap(tokenKey,storemanGroupId)
+(quota.debt_receivable,quota.debt_payable,quota._debt,quota.asset_receivable,quota.asset_payable,quota._asset,quota._active)
+Checking function: getOldQuotaMap(uint256,bytes32) returns(uint256,uint256,uint256,uint256,uint256,uint256,bool) (Slither line:3127)
+Visibility: public
+(quota.debt_receivable,quota.debt_payable,quota._debt,quota.asset_receivable,quota.asset_payable,quota._asset,quota._active)
+Checking function: getTokenAncestorInfo(uint256) returns(string,uint256) (Slither line:3127)
+Visibility: private
+Checking function: stringToBytes32(string) returns(bytes32) (Slither line:3127)
+Visibility: public
+stringToBytes32 contains assembly (Slither line:3153)
+0x0
+Checking function: getPrice(string) returns(uint256) (Slither line:3127)
+Visibility: private
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+impl
+
+End QuotaDelegate.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: QuotaDelegate (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End QuotaDelegate.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: SafeMath.sub
+library call: SafeMath.mul
+library call: SafeMath.add
+library call: SafeMath.div
+impl_address_from_contract_call: CallExpression require(bool,string)(_impl != address(0),implementation contract not set)
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: arg is implementation contract not set
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function implementation
+Checking public function setHalt
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function transferOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: msg.sender == newOwner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function config
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function setDebtOracle
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function setFastCrossMinValue
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function getAsset
+Checking public function getDebt
+Checking external function isDebtClean
+Checking public function getFastMinCount
+Checking public function userLock
+Checking external function userBurn
+Checking external function smgRelease
+Checking public function smgMint
+Checking external function adjustSmgQuota
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function upgrade
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function transferAsset
+Checking external function receiveDebt
+Checking public function getQuotaMap
+Checking public function getTokenKey
+Checking public function getTokenCount
+Checking public function getTokenId
+Checking public function getTokenQuota
+Checking public function getOldQuotaMap
+Checking public function stringToBytes32
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function QuotaDelegate.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.transferOwner (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.isDebtClean (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.upgrade (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getTokenQuota (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getFastMinCount (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.transferAsset (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getOldQuotaMap (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.config (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.userLock (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.receiveDebt (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getTokenAncestorInfo (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.setDebtOracle (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.userBurn (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getQuotaMap (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.stringToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.setFastCrossMinValue (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.smgRelease (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getTokenKey (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getPrice (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getAsset (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.smgMint (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getTokenCount (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(impl != address(0),Cannot upgrade to invalid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,Not owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function QuotaDelegate.getDebt (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.adjustSmgQuota (proxy_features line:898)
+functions_writing_to_variable: checking function QuotaDelegate.getTokenId (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_compatibility_checks: condition impl != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != address(0)
+require(bool,string)(msg.sender == owner,Not owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_compatibility_checks: condition impl != _implementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != _implementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = _implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_impl != address(0),implementation contract not set)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: upgradeTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Not owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()

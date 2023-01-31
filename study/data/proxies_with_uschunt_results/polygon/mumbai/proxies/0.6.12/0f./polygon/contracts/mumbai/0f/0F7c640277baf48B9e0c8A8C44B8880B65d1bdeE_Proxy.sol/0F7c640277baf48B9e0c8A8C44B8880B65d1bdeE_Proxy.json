@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/proxies_to_reanalyze/0.6.12/0f./polygon/contracts/mumbai/0f/0F7c640277baf48B9e0c8A8C44B8880B65d1bdeE_Proxy.sol/0F7c640277baf48B9e0c8A8C44B8880B65d1bdeE_Proxy.sol#11-53)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/proxies_to_reanalyze/0.6.12/0f./polygon/contracts/mumbai/0f/0F7c640277baf48B9e0c8A8C44B8880B65d1bdeE_Proxy.sol/0F7c640277baf48B9e0c8A8C44B8880B65d1bdeE_Proxy.sol#11-53) is an upgradeable proxy.\nPROXIABLE_MEM_SLOT is declared in the proxy.\nPROXIABLE_MEM_SLOT is a state variable of type uint256\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCodeAddress from WrappedTokenV1\n",
+        "id": "3c6928d8cc943ad046dda6f2e8cd6547122368582b1062ede1aef0a07b5e381d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.PROXIABLE_MEM_SLOT",
+          "impl_address_setter": "WrappedTokenV1.updateCodeAddress(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/proxies_to_reanalyze/0.6.12/0f./polygon/contracts/mumbai/0f/0F7c640277baf48B9e0c8A8C44B8880B65d1bdeE_Proxy.sol/0F7c640277baf48B9e0c8A8C44B8880B65d1bdeE_Proxy.sol#11-53)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "uint256",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.constructor(address)": {
+                "check": "require(bool,string)(contractLogic != address(0),Contract Logic cannot be 0x0)",
+                "is_correct": true
+              },
+              "WrappedTokenV1.updateCodeAddress(address)": {
+                "check": "require(bool,string)(bytes32(PROXIABLE_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCodeAddress from WrappedTokenV1"
+        }
+      }
+    ]
+  }
+}

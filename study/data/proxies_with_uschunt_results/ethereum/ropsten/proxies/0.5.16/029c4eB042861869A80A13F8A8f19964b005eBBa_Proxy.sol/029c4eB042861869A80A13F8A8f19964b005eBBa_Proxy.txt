@@ -1,0 +1,379 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Upgradeable.is_proxy (Slither line:1425)
+
+
+End Upgradeable.is_proxy (Slither line:1428)
+
+
+Begin Upgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Upgradeable 
+
+End Upgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    implementation := sload(position) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    implementation := sload(position) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0x0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0x0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ownerPosition (Slither line:1689)
+Checking implementationPosition (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: getImplementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+getImplementation() (Slither line:1993)
+called = getImplementation (Slither line:2000)
+getImplementation returns a variable of type address   called implementation (Slither line:2183)
+getImplementation contains assembly - looking for sload (Slither line:2189)
+Looking in ASSEMBLY node (Slither line:2196)
+{  (Slither line:2200)
+    implementation := sload(position)  (Slither line:2200)
+Return value set by sload in asm (Slither line:2202)
+Found storage slot: implementationPosition (Slither line:2222)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: implementationPosition (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination implementationPosition is constant (Slither line:1146)
+
+implementationPosition is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to implementationPosition
+Looking for setter (Slither line:1200)
+
+Looking for setter in Upgradeable (Slither line:1204)
+
+
+Begin Upgradeable.find_setter_in_contract (Slither line:3109)
+
+Expression: keccak256(bytes)(implementation) (Slither line:3112)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: getImplementation() returns(address) (Slither line:3117)
+Visibility: public
+getImplementation contains assembly (Slither line:3143)
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+setImplementation contains assembly (Slither line:3143)
+    sstore(position, _newImplementation) (Slither line:3153)
+setImplementation reads and/or writes to variable currentImplementation (Slither line:3160)
+setImplementation reads and/or writes to variable position (Slither line:3160)
+setImplementation reads and/or writes to variable _newImplementation (Slither line:3160)
+setImplementation reads and/or writes to variable currentImplementation (Slither line:3160)
+setImplementation reads and/or writes to variable implementationPosition (Slither line:3160)
+
+End Upgradeable.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: Upgradeable (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Upgradeable.find_getter_in_contract (Slither line:2964)
+
+implementationPosition is a Variable object
+keccak256(bytes)(implementation)
+Checking function: constructor (Slither line:2978)
+Checking function: requireOwner (Slither line:2978)
+Checking function: getOwner (Slither line:2978)
+getOwner returns address variable called owner (Slither line:2998)
+Checking function: setOwner (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: getImplementation (Slither line:2978)
+getImplementation returns address variable called implementation (Slither line:2998)
+Checking function: setImplementation (Slither line:2978)
+Checking function: setImplementationAndCall (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End Upgradeable.find_getter_in_contract (Slither line:3073)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+implementationPosition is a Variable object
+keccak256(bytes)(implementation)
+Checking function: constructor (Slither line:2978)
+Checking function: getImplementation (Slither line:2978)
+getImplementation returns address variable called implementation (Slither line:2998)
+getImplementation contains assembly (Slither line:3041)
+getImplementation contains assembly (Slither line:3041)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: getImplementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+Setter found in contract Upgradeable
+impl_address_from_contract_call: keccak256(bytes)(implementation)
+impl_address_from_contract_call: StateVariable implementationPosition
+impl_address_from_contract_call: getter is getImplementation
+getter.full_name = getImplementation()
+impl_address_from_contract_call: CallExpression getImplementation()
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.data.length > 0,9d96e2df01)
+impl_address_from_contract_call: arg is msg.data.length > 0
+impl_address_from_contract_call: arg is 9d96e2df01
+called: keccak256(bytes)
+Checking public function getImplementation
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == getOwner(),55f1136901)
+Checking external function setImplementationAndCall
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == getOwner(),55f1136901)
+Checking public function getOwner
+Checking external function transferOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == getOwner(),55f1136901)
+Checking external function fallback
+functions_writing_to_variable: implementationPosition
+functions_writing_to_variable: checking function Proxy.setImplementationAndCall (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: setImplementationAndCall writes _newImplementation to implementationPosition w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function Upgradeable.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = ownerPosition = keccak256(bytes)(owner) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: ownerPosition = keccak256(bytes)(owner) (proxy_features line:907)
+functions_writing_to_variable: exp = implementationPosition = keccak256(bytes)(implementation) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = keccak256(bytes)(implementation) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:919)
+get_value_assigned: implementationPosition = keccak256(bytes)(implementation)
+functions_writing_to_variable: checking function Upgradeable.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = ownerPosition = keccak256(bytes)(owner) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: ownerPosition = keccak256(bytes)(owner) (proxy_features line:907)
+functions_writing_to_variable: exp = implementationPosition = keccak256(bytes)(implementation) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = keccak256(bytes)(implementation) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:919)
+get_value_assigned: implementationPosition = keccak256(bytes)(implementation)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.requireOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.getImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.setImplementationAndCall (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: setImplementationAndCall writes _newImplementation to implementationPosition w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function Upgradeable.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.setImplementation (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: setImplementation writes _newImplementation to implementationPosition w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function Proxy.getOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.requireOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(position, _newImplementation)
+(proxy_features line:948)
+_newImplementation
+functions_writing_to_variable: setImplementation writes _newImplementation to implementationPosition w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function Upgradeable.getImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.getOwner (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function setImplementationAndCall
+require(bool,string)(msg.sender == getOwner(),55f1136901)
+has_compatibility_checks: condition msg.sender == getOwner()
+has_compatibility_checks: IF node exp = _newImplementaionCallData.length > 0
+require(bool,string)(_newImplementation != address(0),d784d42601)
+has_compatibility_checks: condition _newImplementation != address(0)
+check_condition_from_expression: condition _newImplementation != address(0)
+require(bool,string)(success,e9c8588d01)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(currentImplementation != _newImplementation,d784d42602)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: condition getImplementation() != _newImplementation
+has_compatibility_checks: checking external function setImplementationAndCall
+require(bool,string)(_newImplementation != address(0),d784d42601)
+has_compatibility_checks: condition _newImplementation != address(0)
+check_condition_from_expression: condition _newImplementation != address(0)
+require(bool,string)(success,e9c8588d01)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(currentImplementation != _newImplementation,d784d42602)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: condition getImplementation() != _newImplementation
+require(bool,string)(msg.sender == getOwner(),55f1136901)
+has_compatibility_checks: condition msg.sender == getOwner()
+has_compatibility_checks: IF node exp = _newImplementaionCallData.length > 0
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(currentImplementation != _newImplementation,d784d42602)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: condition getImplementation() != _newImplementation
+require(bool,string)(_newImplementation != address(0),d784d42601)
+has_compatibility_checks: condition _newImplementation != address(0)
+check_condition_from_expression: condition _newImplementation != address(0)
+require(bool,string)(msg.sender == getOwner(),55f1136901)
+has_compatibility_checks: condition msg.sender == getOwner()
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(_newImplementation != address(0),d784d42601)
+has_compatibility_checks: condition _newImplementation != address(0)
+check_condition_from_expression: condition _newImplementation != address(0)
+require(bool,string)(msg.sender == getOwner(),55f1136901)
+has_compatibility_checks: condition msg.sender == getOwner()
+require(bool,string)(currentImplementation != _newImplementation,d784d42602)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: condition getImplementation() != _newImplementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0x0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0x0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0x0, size)
+    switch result
+    case 0 { revert(ptr, size) }
+    default { return(ptr, size) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = getImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(msg.data.length > 0,9d96e2df01)
+Found public function: constructor
+Found public function: getImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) requireOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(currentImplementation != _newImplementation,d784d42602)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_newImplementation != address(0),d784d42601)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == getOwner(),55f1136901)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = ownerPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentImplementation = getImplementation()

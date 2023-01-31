@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AugustusSwapper (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.7.5/680bAedaf5ac0A90fe279d0fc26eFA591735F9d0_AugustusSwapper.sol/680bAedaf5ac0A90fe279d0fc26eFA591735F9d0_AugustusSwapper.sol#1467-1649)",
+        "elements": [],
+        "description": "AugustusSwapper (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.7.5/680bAedaf5ac0A90fe279d0fc26eFA591735F9d0_AugustusSwapper.sol/680bAedaf5ac0A90fe279d0fc26eFA591735F9d0_AugustusSwapper.sol#1467-1649) is an upgradeable proxy.\nselectorVsRouter was found in a different contract.\nselectorVsRouter is a mapping of type mapping(bytes4 => address)\nselectorVsRouter probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nMissing compatibility check in AugustusSwapper.setImplementation(bytes4,address)\nCan toggle delegatecall on/off: condition: implementation == address(0)\n",
+        "id": "b4777ebe47fb57cc1d452fc5ae954b59775755c097d48dadd5d39886738ec512",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "AugustusStorage.selectorVsRouter",
+          "impl_address_setter": "AugustusSwapper.setImplementation(bytes4,address)",
+          "impl_address_getter": "AugustusSwapper.getImplementation(bytes4)",
+          "impl_address_location": "AugustusStorage (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.7.5/680bAedaf5ac0A90fe279d0fc26eFA591735F9d0_AugustusSwapper.sol/680bAedaf5ac0A90fe279d0fc26eFA591735F9d0_AugustusSwapper.sol#1424-1452)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes4 => address)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "AugustusSwapper.setImplementation(bytes4,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "implementation != address(0)",
+          "toggle_alternative_logic": "_revertWithData(abi.encodeWithSelector(bytes4(keccak256(bytes)(NotImplementedError(bytes4))),selector))",
+          "immutable_functions": {
+            "other": [
+              "hasRole(bytes32,address)",
+              "getRoleMemberCount(bytes32)",
+              "getRoleMember(bytes32,uint256)",
+              "getRoleAdmin(bytes32)",
+              "grantRole(bytes32,address)",
+              "revokeRole(bytes32,address)",
+              "renounceRole(bytes32,address)",
+              "initializeAdapter(address,bytes)",
+              "initializeRouter(address,bytes)",
+              "getImplementation(bytes4)",
+              "getVersion()",
+              "getPartnerFeeStructure(address)",
+              "getFeeWallet()",
+              "setFeeWallet(address)",
+              "registerPartner(address,uint256,bool,bool,uint16,string,bytes)",
+              "setImplementation(bytes4,address)",
+              "transferTokens(address,address,uint256)",
+              "isAdapterInitialized(bytes32)",
+              "getAdapterData(bytes32)",
+              "isRouterInitialized(bytes32)",
+              "getRouterData(bytes32)",
+              "getTokenTransferProxy()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

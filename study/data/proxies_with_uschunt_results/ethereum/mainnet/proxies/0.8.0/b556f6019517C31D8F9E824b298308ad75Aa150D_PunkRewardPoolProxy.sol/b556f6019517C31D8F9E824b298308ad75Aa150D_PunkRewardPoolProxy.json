@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol#208-276)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol#208-276) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "PunkRewardPoolProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol#286-373)",
+        "elements": [],
+        "description": "PunkRewardPoolProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol#286-373) is an upgradeable proxy.\n_IMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "8f13f7ccbc3763beeb5f0e85e9b4199eafd39396c5a8f85251545730c75c73c2",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "PunkRewardPoolProxy._IMPLEMENTATION_SLOT",
+          "impl_address_setter": "PunkRewardPoolProxy.upgradeTo(address)",
+          "impl_address_getter": "PunkRewardPoolProxy._implementation()",
+          "impl_address_location": "PunkRewardPoolProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol/b556f6019517C31D8F9E824b298308ad75Aa150D_PunkRewardPoolProxy.sol#286-373)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "PunkRewardPoolProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967Proxy: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "PunkRewardPoolProxy.initialize(address,bytes,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967Proxy: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "initialize(address,bytes,address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

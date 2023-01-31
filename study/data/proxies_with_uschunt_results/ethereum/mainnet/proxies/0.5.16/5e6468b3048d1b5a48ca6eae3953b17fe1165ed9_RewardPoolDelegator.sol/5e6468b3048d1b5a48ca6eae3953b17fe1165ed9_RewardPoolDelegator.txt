@@ -1,0 +1,315 @@
+
+Begin RewardPoolDelegationStorage.is_proxy (Slither line:1425)
+
+
+End RewardPoolDelegationStorage.is_proxy (Slither line:1428)
+
+
+Begin RewardPoolDelegationStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RewardPoolDelegationStorage 
+
+End RewardPoolDelegationStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRewardCalculator.is_proxy (Slither line:1425)
+
+
+End IRewardCalculator.is_proxy (Slither line:1428)
+
+
+Begin IRewardCalculator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRewardCalculator 
+
+End IRewardCalculator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRewardStrategy.is_proxy (Slither line:1425)
+
+
+End IRewardStrategy.is_proxy (Slither line:1428)
+
+
+Begin IRewardStrategy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRewardStrategy 
+
+End IRewardStrategy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFilstManagement.is_proxy (Slither line:1425)
+
+
+End IFilstManagement.is_proxy (Slither line:1428)
+
+
+Begin IFilstManagement.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFilstManagement 
+
+End IFilstManagement.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RewardPoolStorage.is_proxy (Slither line:1425)
+
+
+End RewardPoolStorage.is_proxy (Slither line:1428)
+
+
+Begin RewardPoolStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RewardPoolStorage 
+
+End RewardPoolStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RewardPoolDelegator.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin RewardPoolDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End RewardPoolDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin RewardPoolDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End RewardPoolDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End RewardPoolDelegator.is_proxy (Slither line:1476)
+
+
+Begin RewardPoolDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RewardPoolDelegator 
+RewardPoolDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in RewardPoolDelegationStorage (Slither line:1204)
+
+
+Begin RewardPoolDelegationStorage.find_setter_in_contract (Slither line:3119)
+
+
+End RewardPoolDelegationStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in RewardPoolDelegationStorage 
+Looking in RewardPoolDelegator (Slither line:1213)
+
+Begin RewardPoolDelegator.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: _setPendingImplementation(address) returns() (Slither line:3127)
+Visibility: external
+pendingImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == admin,admin check)
+NewPendingImplementation(oldPendingImplementation,pendingImplementation)
+Checking function: _acceptImplementation() returns() (Slither line:3127)
+Visibility: external
+NewPendingImplementation(oldPendingImplementation,pendingImplementation)
+implementation = pendingImplementation
+is an Assignment Operation (Slither line:3216)
+
+End RewardPoolDelegator.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _acceptImplementation in contract: RewardPoolDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin RewardPoolDelegationStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingImplementation
+
+End RewardPoolDelegationStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin RewardPoolDelegator.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingImplementation
+Checking function: constructor (Slither line:2988)
+Checking function: _setPendingImplementation (Slither line:2988)
+Checking function: _acceptImplementation (Slither line:2988)
+Checking function: _setPendingAdmin (Slither line:2988)
+Checking function: _acceptAdmin (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End RewardPoolDelegator.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in RewardPoolDelegator (Slither line:1305)
+or in RewardPoolDelegationStorage (Slither line:1319)
+
+Begin RewardPoolStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingImplementation
+
+End RewardPoolStorage.find_getter_in_contract (Slither line:3083)
+
+
+End RewardPoolDelegator.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingImplementation
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking external function _setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin check)
+Checking external function _acceptImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),pendingImplementation check)
+Checking external function _setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin check)
+Checking external function _acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),pendingAdmin check)
+Checking external function _setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin check)
+Checking external function _acceptImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),pendingImplementation check)
+Checking external function _setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin check)
+Checking external function _acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),pendingAdmin check)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function RewardPoolDelegator._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),pendingImplementation check) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = pendingImplementation
+functions_writing_to_variable: exp = pendingImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingImplementation) (proxy_features line:909)
+functions_writing_to_variable: _acceptImplementation writes pendingImplementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function RewardPoolDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator._acceptAdmin (proxy_features line:898)
+has_compatibility_checks: dependencies: ['newPendingImplementation', 'pendingImplementation', 'TMP_8']
+functions_writing_to_variable: pendingImplementation
+functions_writing_to_variable: checking function RewardPoolDelegator._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),pendingImplementation check) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingImplementation (proxy_features line:924)
+get_value_assigned: pendingImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingImplementation) (proxy_features line:909)
+functions_writing_to_variable: checking function RewardPoolDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,admin check) (proxy_features line:909)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingImplementation = newPendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = newPendingImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingImplementation (proxy_features line:924)
+get_value_assigned: pendingImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingImplementation) (proxy_features line:909)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingImplementation (proxy_features line:929)
+functions_writing_to_variable: checking function RewardPoolDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function RewardPoolDelegator._acceptAdmin (proxy_features line:898)
+has_compatibility_checks: checking external function _acceptImplementation
+require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),pendingImplementation check)
+has_compatibility_checks: condition msg.sender == pendingImplementation && pendingImplementation != address(0)
+check_condition_from_expression: condition msg.sender == pendingImplementation && pendingImplementation != address(0)
+has_compatibility_checks: checking external function _setPendingImplementation
+require(bool,string)(msg.sender == admin,admin check)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found external function: _setPendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = pendingImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingImplementation = address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),pendingImplementation check)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingImplementation

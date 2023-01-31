@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ProductProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol#179-209)",
+        "elements": [],
+        "description": "ProductProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol#179-209) may be an upgradeable proxy.\naddr is declared in the proxy.\nProductProxy.fallback().addr (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol#197) gets value from a cross-contract call: factory.getStrategy(strategyID)\nIFactory appears to be a Registry contract for the proxy\nThe address of IFactory is stored as a state variable: ProductSlot.factory\nCould not find setter for factory\nNo setter functions found to search for compatibility checks.\n",
+        "id": "6dd151e8e3171f5dfbf446f42e18dbd3b1779ca3e4c2346fb5c8cbf9ab86a3fa",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "ProductProxy.fallback().addr",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ProductProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol/81f2C2B38C2c347e353F6e6Ee50F9814C3dfc28e_XFactoryLogic.sol#179-209)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "factory.getStrategy(strategyID)",
+          "registry": "IFactory",
+          "registry_source_type": "IFactory",
+          "registry_source_variable": "ProductSlot.factory",
+          "registry_source_constant": false,
+          "registry_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "setStrategyID(uint256)",
+              "getStrategyID()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

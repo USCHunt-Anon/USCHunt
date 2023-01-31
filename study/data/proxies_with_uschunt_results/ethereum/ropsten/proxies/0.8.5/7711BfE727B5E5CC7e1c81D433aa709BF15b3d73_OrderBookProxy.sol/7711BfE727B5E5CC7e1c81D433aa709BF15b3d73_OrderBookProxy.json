@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OrderBookProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.5/7711BfE727B5E5CC7e1c81D433aa709BF15b3d73_OrderBookProxy.sol/7711BfE727B5E5CC7e1c81D433aa709BF15b3d73_OrderBookProxy.sol#11-148)",
+        "elements": [],
+        "description": "OrderBookProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.5/7711BfE727B5E5CC7e1c81D433aa709BF15b3d73_OrderBookProxy.sol/7711BfE727B5E5CC7e1c81D433aa709BF15b3d73_OrderBookProxy.sol#11-148) is an upgradeable proxy.\nfacet is declared in the proxy.\nfacets probably maps function signatures to addresses, but detector could not find `msg.sig` use.\nNo setter functions found to search for compatibility checks.\nTo remove upgradeability, delete diamondCut from LibDiamond\n",
+        "id": "1d067e152074183d1eae21934e27a06c26bbccfe0bfb238b77b97a44d39d91f2",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OrderBookProxy.fallback().facet",
+          "impl_address_setter": "LibDiamond.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "OrderBookProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.5/7711BfE727B5E5CC7e1c81D433aa709BF15b3d73_OrderBookProxy.sol/7711BfE727B5E5CC7e1c81D433aa709BF15b3d73_OrderBookProxy.sol#11-148)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => bytes32)",
+          "impl_mapping_from_msg_sig": "maybe",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove diamondCut from LibDiamond",
+          "immutable_functions": {
+            "other": [
+              "transferOwnership(address)",
+              "owner()",
+              "depositERC20(uint256,address)",
+              "withdrawERC20(uint256,address)",
+              "depositETH()",
+              "withdrawETH(uint256)",
+              "getTokenBalance(address,address)",
+              "getETHBalance(address)",
+              "updateWETH(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ProxyV2 (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/052d21533f38B7250CA51d45DbdE7c2d04FeDA27_ProxyV2.sol/052d21533f38B7250CA51d45DbdE7c2d04FeDA27_ProxyV2.sol#72-99)",
+        "elements": [],
+        "description": "ProxyV2 (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/052d21533f38B7250CA51d45DbdE7c2d04FeDA27_ProxyV2.sol/052d21533f38B7250CA51d45DbdE7c2d04FeDA27_ProxyV2.sol#72-99) is an upgradeable proxy.\nimplementationPosition was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "0ccddc112aa2719d8d3dcd9b1423622c63aaa4dfc1ebfae19ad03360a345e2a8",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Upgradeable.implementationPosition",
+          "impl_address_setter": "Upgradeable.setImplementation(address)",
+          "impl_address_getter": "Upgradeable.getImplementation()",
+          "impl_address_location": "Upgradeable (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/052d21533f38B7250CA51d45DbdE7c2d04FeDA27_ProxyV2.sol/052d21533f38B7250CA51d45DbdE7c2d04FeDA27_ProxyV2.sol#31-70)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Upgradeable.setImplementation(address)": {
+                "check": "require(bool,string)(currentImplementation != _newImplementation,Upgradeable: Old and New implementation addresses are same)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getImplementation()",
+              "setImplementation(address)",
+              "tranfserAdminRights(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

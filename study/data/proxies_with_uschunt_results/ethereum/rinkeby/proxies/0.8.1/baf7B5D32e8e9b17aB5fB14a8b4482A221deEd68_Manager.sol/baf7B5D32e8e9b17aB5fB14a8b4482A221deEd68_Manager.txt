@@ -1,0 +1,378 @@
+
+Begin ITaskOnNFT721.is_proxy (Slither line:1425)
+
+
+End ITaskOnNFT721.is_proxy (Slither line:1428)
+
+
+Begin ITaskOnNFT721.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ITaskOnNFT721 
+
+End ITaskOnNFT721.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ManagerStorage.is_proxy (Slither line:1425)
+
+
+End ManagerStorage.is_proxy (Slither line:1428)
+
+
+Begin ManagerStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ManagerStorage 
+
+End ManagerStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Strings.is_proxy (Slither line:1425)
+
+
+End Strings.is_proxy (Slither line:1428)
+
+
+Begin Strings.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Strings 
+
+End Strings.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ManagerStorageV1.is_proxy (Slither line:1425)
+
+
+End ManagerStorageV1.is_proxy (Slither line:1428)
+
+
+Begin ManagerStorageV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ManagerStorageV1 
+
+End ManagerStorageV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ECDSA.is_proxy (Slither line:1425)
+
+
+End ECDSA.is_proxy (Slither line:1428)
+
+
+Begin ECDSA.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ECDSA 
+
+End ECDSA.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ManagerProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_16842_136_0_fallback_asm_0 = success (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin ManagerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+free_mem_ptr_fallback_asm_0
+returndatasize()()
+
+End ManagerProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ManagerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ManagerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ManagerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ManagerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End ManagerProxy.is_proxy (Slither line:1476)
+
+
+Begin ManagerProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ManagerProxy 
+ManagerProxy is delegating to managerImplementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in ManagerStorage (Slither line:1204)
+
+
+Begin ManagerStorage.find_setter_in_contract (Slither line:3109)
+
+
+End ManagerStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in ManagerStorage 
+Looking in ManagerProxy (Slither line:1213)
+
+Begin ManagerProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: _setPendingImplementation(address) returns() (Slither line:3117)
+Visibility: public
+pendingManagerImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3206)
+require(bool,string)(msg.sender == admin,only owner)
+NewPendingImplementation(oldPendingImplementation,pendingManagerImplementation)
+Checking function: _acceptImplementation() returns() (Slither line:3117)
+Visibility: public
+pendingManagerImplementation = address(0)
+is an Assignment Operation (Slither line:3206)
+NewImplementation(oldImplementation,managerImplementation)
+require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation)
+NewPendingImplementation(oldPendingImplementation,pendingManagerImplementation)
+managerImplementation = pendingManagerImplementation
+is an Assignment Operation (Slither line:3206)
+
+End ManagerProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _acceptImplementation in contract: ManagerProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ManagerStorage.find_getter_in_contract (Slither line:2964)
+
+managerImplementation is a Variable object
+pendingManagerImplementation
+
+End ManagerStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin ManagerProxy.find_getter_in_contract (Slither line:2964)
+
+managerImplementation is a Variable object
+pendingManagerImplementation
+Checking function: constructor (Slither line:2978)
+Checking function: _setPendingImplementation (Slither line:2978)
+Checking function: _acceptImplementation (Slither line:2978)
+Checking function: _setPendingAdmin (Slither line:2978)
+Checking function: _acceptAdmin (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End ManagerProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in ManagerProxy (Slither line:1305)
+or in ManagerStorage (Slither line:1319)
+
+Begin ManagerStorageV1.find_getter_in_contract (Slither line:2964)
+
+managerImplementation is a Variable object
+pendingManagerImplementation
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End ManagerStorageV1.find_getter_in_contract (Slither line:3073)
+
+
+End ManagerProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingManagerImplementation
+impl_address_from_contract_call: StateVariable managerImplementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression managerImplementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function _setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only owner)
+Checking public function _acceptImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation)
+Checking public function _setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only owner)
+Checking public function _acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && msg.sender != address(0),illegal pendingAdmin)
+Checking public function _setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only owner)
+Checking public function _acceptImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation)
+Checking public function _setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,only owner)
+Checking public function _acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && msg.sender != address(0),illegal pendingAdmin)
+Checking external function fallback
+functions_writing_to_variable: managerImplementation
+functions_writing_to_variable: checking function ManagerProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy._acceptImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = managerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = managerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingManagerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingManagerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = managerImplementation = pendingManagerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: managerImplementation = pendingManagerImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: managerImplementation (proxy_features line:919)
+get_value_assigned: managerImplementation = pendingManagerImplementation
+functions_writing_to_variable: exp = pendingManagerImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingManagerImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,managerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingManagerImplementation) (proxy_features line:904)
+functions_writing_to_variable: _acceptImplementation writes pendingManagerImplementation to managerImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function ManagerProxy._acceptAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy._setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy._setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy.fallback (proxy_features line:893)
+has_compatibility_checks: dependencies: ['TMP_85', 'pendingManagerImplementation', 'newPendingImplementation']
+functions_writing_to_variable: pendingManagerImplementation
+functions_writing_to_variable: checking function ManagerProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy._acceptImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = managerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = managerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingManagerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingManagerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = managerImplementation = pendingManagerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: managerImplementation = pendingManagerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingManagerImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingManagerImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingManagerImplementation (proxy_features line:919)
+get_value_assigned: pendingManagerImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,managerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingManagerImplementation) (proxy_features line:904)
+functions_writing_to_variable: checking function ManagerProxy._acceptAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy._setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,only owner) (proxy_features line:904)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingManagerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingManagerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingManagerImplementation = newPendingImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingManagerImplementation = newPendingImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingManagerImplementation (proxy_features line:919)
+get_value_assigned: pendingManagerImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingManagerImplementation) (proxy_features line:904)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingManagerImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function ManagerProxy._setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function ManagerProxy.fallback (proxy_features line:893)
+has_compatibility_checks: checking public function _acceptImplementation
+require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation)
+has_compatibility_checks: condition msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0)
+check_condition_from_expression: condition msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0)
+has_compatibility_checks: checking public function _setPendingImplementation
+require(bool,string)(msg.sender == admin,only owner)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = managerImplementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = managerImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingManagerImplementation = address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,managerImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingManagerImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingManagerImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) managerImplementation = pendingManagerImplementation
+
+Begin Manager.is_proxy (Slither line:1425)
+
+
+End Manager.is_proxy (Slither line:1428)
+
+
+Begin Manager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Manager 
+
+End Manager.is_upgradeable_proxy (Slither line:1407)
+

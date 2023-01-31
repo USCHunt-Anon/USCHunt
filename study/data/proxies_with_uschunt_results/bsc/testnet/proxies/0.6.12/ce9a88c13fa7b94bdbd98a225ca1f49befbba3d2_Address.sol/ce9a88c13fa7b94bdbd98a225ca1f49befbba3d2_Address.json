@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Market (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#434-469)",
+        "elements": [],
+        "description": "Market (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#434-469) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "d3a9b2424623730e67a607e2b826b2091089ad973c6f3c2baaed3dbb23d07749",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "NFTMarket (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#471-498)",
+        "elements": [],
+        "description": "NFTMarket (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#471-498) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "1923b982184864e29c84c83174e6396dfa5e6189167cb46619cdbab394dfa3d4",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "SILLYGOOSE (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#500-538)",
+        "elements": [],
+        "description": "SILLYGOOSE (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#500-538) is an upgradeable proxy.\nNFTMARKET was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "a5068621019737d0575e0508112276763abe463077f9b0a6c8a00695dd7654b5",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "NFTMarket.NFTMARKET",
+          "impl_address_setter": "SILLYGOOSE.Approve(address)",
+          "impl_address_getter": "NFTMarket._nft()",
+          "impl_address_location": "NFTMarket (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol/ce9a88c13fa7b94bdbd98a225ca1f49befbba3d2_Address.sol#471-498)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "SILLYGOOSE.Approve(address)": {
+                "check": "require(bool)(extcodesize(uint256)(account) > 0)",
+                "is_correct": true
+              },
+              "NFTMarket.constructor(address)": {
+                "check": "require(bool)(extcodesize(uint256)(account) > 0)",
+                "is_correct": true
+              },
+              "SILLYGOOSE.constructor(address,address)": {
+                "check": "require(bool)(extcodesize(uint256)(account) > 0)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "Approve(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

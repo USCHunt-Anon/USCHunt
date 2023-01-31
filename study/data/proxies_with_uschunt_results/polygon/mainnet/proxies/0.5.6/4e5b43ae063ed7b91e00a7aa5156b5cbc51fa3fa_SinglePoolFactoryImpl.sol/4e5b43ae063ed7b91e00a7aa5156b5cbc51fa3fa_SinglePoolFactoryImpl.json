@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "SinglePool (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.6/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol#46-114)",
+        "elements": [],
+        "description": "SinglePool (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.6/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol#46-114) is an upgradeable proxy.\nsinglePoolImpl was found in a different contract.\nsinglePoolImpl is an address state variable.\nSinglePoolFactoryStorage.singlePoolImpl (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.6/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol#16) gets value from a cross-contract call: ISinglePoolFactory(_owner()).singlePoolImpl()\nISinglePoolFactory appears to be a Beacon contract for the proxy\nThe address of ISinglePoolFactory is loaded from storage slot _ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103\nMissing compatibility check in SinglePoolFactoryImpl.__SinglePoolFactory_init(address,address,address,address)\nFound compatibility check in SinglePoolFactoryImpl.setSinglePoolImpl(address)\nTo remove upgradeability, delete setSinglePoolImpl from SinglePoolFactoryImpl\n",
+        "id": "716ca4844749d937870498ff0e5fc3ab76c6fc9b04d94973a533edec80f0c78f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "SinglePoolFactoryStorage.singlePoolImpl",
+          "impl_address_setter": "SinglePoolFactoryImpl.setSinglePoolImpl(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "SinglePoolFactoryStorage (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.6/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol/4e5b43ae063ed7b91e00a7aa5156b5cbc51fa3fa_SinglePoolFactoryImpl.sol#8-37)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "ISinglePoolFactory(_owner()).singlePoolImpl()",
+          "beacon": "ISinglePoolFactory",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "SinglePoolFactoryImpl.__SinglePoolFactory_init(address,address,address,address)": "missing",
+              "SinglePoolFactoryImpl.setSinglePoolImpl(address)": "require(bool)(singlePoolImpl != newSinglePoolImpl)"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setSinglePoolImpl from SinglePoolFactoryImpl",
+          "immutable_functions": {
+            "other": [
+              "Owner()",
+              "changeOwner(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

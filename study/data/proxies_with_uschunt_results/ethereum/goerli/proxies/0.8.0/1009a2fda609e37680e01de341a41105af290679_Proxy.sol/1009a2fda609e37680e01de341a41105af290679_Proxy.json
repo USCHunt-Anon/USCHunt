@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.0/1009a2fda609e37680e01de341a41105af290679_Proxy.sol/1009a2fda609e37680e01de341a41105af290679_Proxy.sol#33-93)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.0/1009a2fda609e37680e01de341a41105af290679_Proxy.sol/1009a2fda609e37680e01de341a41105af290679_Proxy.sol#33-93) is an upgradeable proxy.\nrootToken was found in a different contract.\nrootToken is an address state variable.\nMissing compatibility check in Proxy.setImplementation(string,address)\n",
+        "id": "d3f8f13032059339d0ba15bcef898b92f22e085566c25d246309a07b834d84ed",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ProxyStorage.rootToken",
+          "impl_address_setter": "Proxy.setImplementation(string,address)",
+          "impl_address_getter": "Proxy.implementation()",
+          "impl_address_location": "ProxyStorage (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.8.0/1009a2fda609e37680e01de341a41105af290679_Proxy.sol/1009a2fda609e37680e01de341a41105af290679_Proxy.sol#21-29)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Proxy.setImplementation(string,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "balanceOf(address)",
+              "transferFrom(address,address,uint256)"
+            ],
+            "other": [
+              "setImplementation(string,address)",
+              "implementation()",
+              "initialize(bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

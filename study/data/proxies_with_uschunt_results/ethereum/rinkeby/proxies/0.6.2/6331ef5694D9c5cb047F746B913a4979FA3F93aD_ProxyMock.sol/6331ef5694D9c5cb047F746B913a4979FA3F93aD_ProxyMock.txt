@@ -1,0 +1,459 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPLEMENTATION (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Return node of function Proxy._implementation(): RETURN _IMPLEMENTATION (Slither line:2031)
+_IMPLEMENTATION (Slither line:2038)
+_implementation returns a variable of type address   called _IMPLEMENTATION (Slither line:2183)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _IMPLEMENTATION
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+Checking function: _upgradeTo(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: isContract(address) returns(bool) (Slither line:3117)
+Visibility: internal
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+_IMPLEMENTATION is a Variable object
+Checking function: _delegate (Slither line:2978)
+Checking function: _implementation (Slither line:2978)
+_implementation returns address variable called impl (Slither line:2998)
+RETURN node expression: _IMPLEMENTATION (Slither line:3018)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: Proxy (Slither line:1285)
+
+Begin Proxy.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2878)
+RETURN: _IMPLEMENTATION (Slither line:2878)
+
+End Proxy.getter_return_is_non_constant (Slither line:2932)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin ProxyMock.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ProxyMock.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin ProxyMock.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPLEMENTATION (Slither line:1689)
+Checking _ADMIN (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in ProxyMock._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin ProxyMock.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Return node of function Proxy._implementation(): RETURN _IMPLEMENTATION (Slither line:2031)
+_IMPLEMENTATION (Slither line:2038)
+_implementation returns a variable of type address   called _IMPLEMENTATION (Slither line:2183)
+
+End ProxyMock.find_delegate_from_call_exp (Slither line:2318)
+
+
+End ProxyMock.find_delegate_variable_from_name (Slither line:1939)
+
+
+End ProxyMock.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ProxyMock.is_proxy (Slither line:1476)
+
+
+Begin ProxyMock.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyMock 
+ProxyMock is delegating to _IMPLEMENTATION
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+Checking function: _upgradeTo(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: isContract(address) returns(bool) (Slither line:3117)
+Visibility: internal
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in Proxy 
+Looking in ProxyMock (Slither line:1213)
+
+Begin ProxyMock.find_setter_in_contract (Slither line:3109)
+
+Checking function: admin() returns(address) (Slither line:3117)
+Visibility: external
+_admin()
+_ADMIN
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: external
+_implementation()
+_IMPLEMENTATION
+Checking function: changeAdmin(address) returns() (Slither line:3117)
+Visibility: external
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_1206_255_0__delegate_asm_0 = result__delegate_asm_0
+is an Assignment Operation (Slither line:3206)
+_IMPLEMENTATION
+_ADMIN
+revert(uint256,uint256)(0,returndatasize()())
+return(uint256,uint256)(0,returndatasize()())
+_delegate(_implementation())
+require(bool,string)(newAdmin != address(0),TransparentUpgradeableProxy: new admin is the zero address)
+_ADMIN = newAdmin
+is an Assignment Operation (Slither line:3206)
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+_setAdmin(newAdmin)
+_fallback()
+result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3206)
+ifAdmin()
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: external
+_IMPLEMENTATION = newImplementation
+is an Assignment Operation (Slither line:3206)
+
+End ProxyMock.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: ProxyMock (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+_IMPLEMENTATION is a Variable object
+newImplementation
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: Proxy (Slither line:1285)
+
+End ProxyMock.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: newImplementation
+impl_address_from_contract_call: StateVariable _IMPLEMENTATION
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking external function admin
+Checking external function implementation
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == _admin()
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: _IMPLEMENTATION
+functions_writing_to_variable: checking function ProxyMock.changeAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.upgradeTo (proxy_features line:893)
+get_value_assigned: _IMPLEMENTATION = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to _IMPLEMENTATION (proxy_features line:1008)
+functions_writing_to_variable: checking function ProxyMock._setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.admin (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.receive (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.upgradeToAndCall (proxy_features line:893)
+get_value_assigned: _IMPLEMENTATION = newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to _IMPLEMENTATION (proxy_features line:1008)
+functions_writing_to_variable: checking function ProxyMock._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(isContract(newImplementation),UpgradeableProxy: new implementation is not a contract) (proxy_features line:904)
+functions_writing_to_variable: exp = _IMPLEMENTATION = newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _IMPLEMENTATION = newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: _IMPLEMENTATION (proxy_features line:919)
+get_value_assigned: _IMPLEMENTATION = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to _IMPLEMENTATION (proxy_features line:924)
+functions_writing_to_variable: checking function ProxyMock.isContract (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock._admin (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock.constructor (proxy_features line:893)
+get_value_assigned: _IMPLEMENTATION = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to _IMPLEMENTATION (proxy_features line:1008)
+functions_writing_to_variable: checking function ProxyMock._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function ProxyMock._upgradeTo (proxy_features line:893)
+get_value_assigned: _IMPLEMENTATION = newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to _IMPLEMENTATION (proxy_features line:1008)
+has_compatibility_checks: dependencies: ['_implementation', 'newImplementation', 'newImplementation', 'newImplementation', 'newImplementation', 'newImplementation', 'newImplementation']
+has_compatibility_checks: checking external function upgradeTo
+has_compatibility_checks: IF node exp = switch_expr_1206_255_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_1206_255_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _admin()
+require(bool,string)(isContract(newImplementation),UpgradeableProxy: new implementation is not a contract)
+has_compatibility_checks: condition isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(c) > 0
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+has_compatibility_checks: IF node exp = switch_expr_1206_255_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_1206_255_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _admin()
+require(bool,string)(isContract(newImplementation),UpgradeableProxy: new implementation is not a contract)
+has_compatibility_checks: condition isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition extcodesize(uint256)(c) > 0
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking public function constructor
+require(bool,string)(isContract(newImplementation),UpgradeableProxy: new implementation is not a contract)
+has_compatibility_checks: condition isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(c) > 0
+has_compatibility_checks: skipping internal function _upgradeTo
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found fallback
+Found external function: receive
+Found external function: admin
+has_time_delay: (node.type) EXPRESSION
+(Expression) _IMPLEMENTATION = newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) switch_expr_1206_255_0__delegate_asm_0 = result__delegate_asm_0
+has_time_delay: (node.type) RETURN
+(Expression) _IMPLEMENTATION
+has_time_delay: (node.type) EXPRESSION
+(Expression) ifAdmin()
+has_time_delay: (node.type) IF
+(Expression) switch_expr_1206_255_0__delegate_asm_0 == 0
+has_time_delay: (node.type) IF
+(Expression) msg.sender == _admin()
+has_time_delay: (node.type) RETURN
+(Expression) _ADMIN
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) return(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) _delegate(_implementation())
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) super._upgradeTo(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(c)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _fallback()
+has_time_delay: (node.type) EXPRESSION
+(Expression) result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(newImplementation),UpgradeableProxy: new implementation is not a contract)

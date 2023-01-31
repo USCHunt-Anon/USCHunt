@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AccountProxy (../../smart-contract-sanctuary/avalanche/contracts/testnet/sorted/0.8.0/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol#6-40)",
+        "elements": [],
+        "description": "AccountProxy (../../smart-contract-sanctuary/avalanche/contracts/testnet/sorted/0.8.0/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol#6-40) may be an upgradeable proxy.\n_opCodeAddress is declared in the proxy.\nAccountProxy.delegate(bytes4)._opCodeAddress (../../smart-contract-sanctuary/avalanche/contracts/testnet/sorted/0.8.0/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol#28-29) gets value from a cross-contract call: OperationCenterInterface(opCenterAddress).getOpCodeAddress(_sig)\nOperationCenterInterface appears to be a Registry contract for the proxy\nThe address of OperationCenterInterface is stored as a state variable: AccountProxy.opCenterAddress\nCould not find setter for opCenterAddress\nMissing compatibility check in AccountProxy.fallback()\nMissing compatibility check in AccountProxy.receive()\nMissing compatibility check in AccountProxy.constructor(address)\n",
+        "id": "8b73bd1ba9ed8ae7bc1cd4f8bd31ec55900da16e6eb3c260124f8ed0f291b7ef",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "AccountProxy.delegate(bytes4)._opCodeAddress",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "AccountProxy (../../smart-contract-sanctuary/avalanche/contracts/testnet/sorted/0.8.0/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol/91f0D88714b7D40A16419C1783C558Fbb9fcc612_AccountProxy.sol#6-40)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "OperationCenterInterface(opCenterAddress).getOpCodeAddress(_sig)",
+          "registry": "OperationCenterInterface",
+          "registry_source_type": "address",
+          "registry_source_variable": "AccountProxy.opCenterAddress",
+          "registry_source_constant": false,
+          "registry_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "AccountProxy.fallback()": "missing",
+              "AccountProxy.receive()": "missing",
+              "AccountProxy.constructor(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

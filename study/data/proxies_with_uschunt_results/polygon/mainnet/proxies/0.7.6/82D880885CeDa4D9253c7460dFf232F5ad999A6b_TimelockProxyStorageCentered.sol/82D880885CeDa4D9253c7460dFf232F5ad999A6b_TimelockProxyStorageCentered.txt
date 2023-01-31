@@ -1,0 +1,604 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is implementation (Slither line:2828)
+dest.value: implementation (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1603_164_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2802)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UnstructuredStorageWithTimelock.is_proxy (Slither line:1425)
+
+
+End UnstructuredStorageWithTimelock.is_proxy (Slither line:1428)
+
+
+Begin UnstructuredStorageWithTimelock.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UnstructuredStorageWithTimelock 
+
+End UnstructuredStorageWithTimelock.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStorageV1.is_proxy (Slither line:1425)
+
+
+End IStorageV1.is_proxy (Slither line:1428)
+
+
+Begin IStorageV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStorageV1 
+
+End IStorageV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TimelockProxyStorageCentered.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TimelockProxyStorageCentered.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin TimelockProxyStorageCentered.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _SYSTEM_STORAGE_SLOT (Slither line:1689)
+Checking _TIMELOCK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in TimelockProxyStorageCentered._delegate (Slither line:1805)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+AssignmentOperation: _IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin TimelockProxyStorageCentered.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+AssignmentOperation: impl = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2140)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+
+End TimelockProxyStorageCentered.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End TimelockProxyStorageCentered.find_delegate_variable_from_name (Slither line:1949)
+
+
+End TimelockProxyStorageCentered.find_delegatecall_in_asm (Slither line:1637)
+
+Setting TimelockProxyStorageCentered._delegate_variable = TimelockProxyStorageCentered._proxy_impl_slot: _IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End TimelockProxyStorageCentered.is_proxy (Slither line:1476)
+
+
+Begin TimelockProxyStorageCentered.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TimelockProxyStorageCentered 
+Call destination _IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+_IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+TimelockProxyStorageCentered is delegating to _IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin TimelockProxyStorageCentered.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address,uint256,bytes) returns() (Slither line:3127)
+Checking function: proxyScheduleImplementationUpdate(address) returns() (Slither line:3127)
+Visibility: public
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,SCHEDULED_SIGNATURE))))
+(_slot.scheduledContentSlot()).setAddress(targetAddress)
+(_slot.scheduledTimeSlot()).setUint256(activeTime)
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,TIMESLOT_SIGNATURE))))
+UpgradeScheduled(targetAddress,activeTime)
+adminPriviledged()
+systemStorage = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(msg.sender == IStorageV1(_systemStorage()).governance() || IStorageV1(_systemStorage()).isAdmin(msg.sender),msg.sender is not adminPriviledged)
+result = sload(uint256)(_slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+sstore(uint256,uint256)(_slot,_target)
+sstore(uint256,uint256)
+sstore(uint256,uint256)(_slot,_target)
+sstore(uint256,uint256)
+Checking function: proxyScheduleTimelockUpdate(uint256) returns() (Slither line:3127)
+Visibility: public
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,SCHEDULED_SIGNATURE))))
+TimelockUpdateScheduled(newTimelock,activeTime)
+adminPriviledged()
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,TIMESLOT_SIGNATURE))))
+systemStorage = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(msg.sender == IStorageV1(_systemStorage()).governance() || IStorageV1(_systemStorage()).isAdmin(msg.sender),msg.sender is not adminPriviledged)
+result = sload(uint256)(_slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+(_TIMELOCK_SLOT.scheduledTimeSlot()).setUint256(activeTime)
+(_TIMELOCK_SLOT.scheduledContentSlot()).setUint256(newTimelock)
+sstore(uint256,uint256)(_slot,_target)
+sstore(uint256,uint256)
+Checking function: proxyUpgradeTimelock() returns() (Slither line:3127)
+Visibility: public
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,SCHEDULED_SIGNATURE))))
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,TIMESLOT_SIGNATURE))))
+systemStorage = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(msg.sender == IStorageV1(_systemStorage()).governance() || IStorageV1(_systemStorage()).isAdmin(msg.sender),msg.sender is not adminPriviledged)
+result = sload(uint256)(_slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_TIMELOCK_SLOT.setUint256(newTimelock)
+TimelockUpdated(newTimelock)
+adminPriviledged()
+require(bool,string)(block.timestamp >= _slot.scheduledTime(),Timelock has not passed yet)
+fetchUint256(scheduledTimeSlot(_slot))
+requireTimelockPassed(_TIMELOCK_SLOT)
+sstore(uint256,uint256)(_slot,_target)
+sstore(uint256,uint256)
+Checking function: proxyUpgradeImplementation() returns() (Slither line:3127)
+Visibility: public
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,SCHEDULED_SIGNATURE))))
+Upgraded(newImplementation)
+adminPriviledged()
+bytes32(uint256(keccak256(bytes)(abi.encodePacked(_slot,TIMESLOT_SIGNATURE))))
+requireTimelockPassed(_IMPLEMENTATION_SLOT)
+systemStorage = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+result = sload(uint256)(_slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(msg.sender == IStorageV1(_systemStorage()).governance() || IStorageV1(_systemStorage()).isAdmin(msg.sender),msg.sender is not adminPriviledged)
+result = sload(uint256)(_slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(block.timestamp >= _slot.scheduledTime(),Timelock has not passed yet)
+fetchUint256(scheduledTimeSlot(_slot))
+sstore(uint256,uint256)(_slot,_target)
+sstore(uint256,uint256)
+_IMPLEMENTATION_SLOT.setAddress(newImplementation)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _systemStorage() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _beforeFallback() returns() (Slither line:3127)
+
+End TimelockProxyStorageCentered.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in TimelockProxyStorageCentered (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin TimelockProxyStorageCentered.find_getter_in_contract (Slither line:2974)
+
+_IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: _delegate (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _beforeFallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: proxyScheduleImplementationUpdate (Slither line:2988)
+Checking function: proxyScheduleTimelockUpdate (Slither line:2988)
+Checking function: proxyUpgradeTimelock (Slither line:2988)
+Checking function: proxyUpgradeImplementation (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable called impl (Slither line:3008)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+
+End TimelockProxyStorageCentered.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: TimelockProxyStorageCentered (Slither line:1285)
+
+Begin TimelockProxyStorageCentered.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+INLINE ASM: None (Slither line:2888)
+NEW VARIABLE: slot = _IMPLEMENTATION_SLOT (Slither line:2888)
+EXPRESSION: impl = sload(uint256)(slot) (Slither line:2888)
+
+End TimelockProxyStorageCentered.getter_return_is_non_constant (Slither line:2942)
+
+
+End TimelockProxyStorageCentered.is_upgradeable_proxy (Slither line:1293)
+

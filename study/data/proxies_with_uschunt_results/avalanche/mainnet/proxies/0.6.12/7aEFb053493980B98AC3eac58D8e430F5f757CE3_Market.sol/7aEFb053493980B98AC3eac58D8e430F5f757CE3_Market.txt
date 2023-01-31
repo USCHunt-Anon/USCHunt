@@ -1,0 +1,1317 @@
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMarket.is_proxy (Slither line:1425)
+
+
+End IMarket.is_proxy (Slither line:1428)
+
+
+Begin IMarket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMarket 
+
+End IMarket.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking PROXY_MEM_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'name': 'PROXY_MEM_SLOT', 'nodeType': 'YulIdentifier', 'src': '15531:14:0'} (Slither line:1909)
+Found storage slot in fallback: PROXY_MEM_SLOT (Slither line:1943)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: PROXY_MEM_SLOT (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination PROXY_MEM_SLOT is constant (Slither line:1146)
+
+PROXY_MEM_SLOT is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to PROXY_MEM_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for PROXY_MEM_SLOT at slot 0 in contract Proxiable (Slither line:1355)
+Found PROXY_MEM_SLOT at slot 0 in contract Proxiable (Slither line:1362)
+
+Begin Proxiable.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _updateCodeAddress (Slither line:2988)
+Checking function: getLogicAddress (Slither line:2988)
+getLogicAddress returns address variable called logicAddress (Slither line:3008)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: bytes32(PROXY_MEM_SLOT) (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Proxiable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _updateCodeAddress(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: getLogicAddress() returns(address) (Slither line:3127)
+Visibility: public
+getLogicAddress contains assembly (Slither line:3153)
+logicAddress = sload(uint256)(PROXY_MEM_SLOT)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: proxiableUUID() returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(PROXY_MEM_SLOT)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+Checking for PROXY_MEM_SLOT at slot 0 in contract Initializable (Slither line:1355)
+Found initialized at slot 0 in contract Initializable (Slither line:1362)
+Checking for initialized at slot 0 in contract ContextUpgradeSafe (Slither line:1355)
+Found initialized at slot 0 in contract ContextUpgradeSafe (Slither line:1362)
+Checking for initialized at slot 0 in contract OwnableUpgradeSafe (Slither line:1355)
+Found initialized at slot 0 in contract OwnableUpgradeSafe (Slither line:1362)
+Checking for initialized at slot 0 in contract ERC20UpgradeSafe (Slither line:1355)
+Found initialized at slot 0 in contract ERC20UpgradeSafe (Slither line:1362)
+Checking for initialized at slot 0 in contract Market (Slither line:1355)
+Found initialized at slot 0 in contract Market (Slither line:1362)
+
+Begin Address.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isContract (Slither line:2988)
+isContract returns bool variable  (Slither line:3008)
+RETURN node expression: (codehash != accountHash && codehash != 0x0) (Slither line:3028)
+Checking function: sendValue (Slither line:2988)
+
+End Address.find_getter_in_contract (Slither line:3083)
+
+
+Begin Address.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isContract(address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: sendValue(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+
+End Address.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeERC20.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: safeTransfer (Slither line:2988)
+Checking function: safeTransferFrom (Slither line:2988)
+Checking function: safeApprove (Slither line:2988)
+Checking function: safeIncreaseAllowance (Slither line:2988)
+Checking function: safeDecreaseAllowance (Slither line:2988)
+Checking function: _callOptionalReturn (Slither line:2988)
+
+End SafeERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: safeTransfer(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeTransferFrom(IERC20,address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeApprove(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeIncreaseAllowance(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeDecreaseAllowance(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _callOptionalReturn(IERC20,bytes) returns() (Slither line:3127)
+Visibility: private
+
+End SafeERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeMath.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: add (Slither line:2988)
+add returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: sub(a,b,SafeMath: subtraction overflow) (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mul (Slither line:2988)
+mul returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: c (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: div(a,b,SafeMath: division by zero) (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: mod(a,b,SafeMath: modulo by zero) (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: a % b (Slither line:3028)
+
+End SafeMath.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeMath.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: add(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+
+End SafeMath.find_setter_in_contract (Slither line:3345)
+
+
+Begin IMarket.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IMarket.find_getter_in_contract (Slither line:3083)
+
+
+Begin IMarket.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: state() returns(IMarket.MarketState) (Slither line:3127)
+Visibility: external
+Checking function: mintOptions(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: calculatePaymentAmount(uint256) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: calculateFee(uint256,uint16) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: exerciseOption(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: claimCollateral(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: closePosition(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: recoverTokens(IERC20) returns() (Slither line:3127)
+Visibility: external
+Checking function: selfDestructMarket(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: updateRestrictedMinter(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: marketName() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: priceRatio() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: expirationDate() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: collateralToken() returns(IERC20) (Slither line:3127)
+Visibility: external
+Checking function: paymentToken() returns(IERC20) (Slither line:3127)
+Visibility: external
+Checking function: wToken() returns(ISimpleToken) (Slither line:3127)
+Visibility: external
+Checking function: bToken() returns(ISimpleToken) (Slither line:3127)
+Visibility: external
+Checking function: updateImplementation(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: initialize(string,address,address,IMarket.MarketStyle,uint256,uint256,uint16,uint16,uint16,address) returns() (Slither line:3127)
+
+End IMarket.find_setter_in_contract (Slither line:3345)
+
+
+Begin Proxiable.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _updateCodeAddress (Slither line:2988)
+Checking function: getLogicAddress (Slither line:2988)
+getLogicAddress returns address variable called logicAddress (Slither line:3008)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: bytes32(PROXY_MEM_SLOT) (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Proxiable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _updateCodeAddress(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: getLogicAddress() returns(address) (Slither line:3127)
+Visibility: public
+getLogicAddress contains assembly (Slither line:3153)
+logicAddress = sload(uint256)(PROXY_MEM_SLOT)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: proxiableUUID() returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(PROXY_MEM_SLOT)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin ISimpleToken.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End ISimpleToken.find_getter_in_contract (Slither line:3083)
+
+
+Begin ISimpleToken.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: initialize(string,string,uint8) returns() (Slither line:3127)
+Checking function: mint(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: burn(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: selfDestructToken(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End ISimpleToken.find_setter_in_contract (Slither line:3345)
+
+
+Begin Initializable.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+
+End Initializable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Initializable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End Initializable.find_setter_in_contract (Slither line:3345)
+
+
+Begin ContextUpgradeSafe.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: __Context_init (Slither line:2988)
+Checking function: __Context_init_unchained (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End ContextUpgradeSafe.find_getter_in_contract (Slither line:3083)
+
+
+Begin ContextUpgradeSafe.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: __Context_init() returns() (Slither line:3127)
+Checking function: __Context_init_unchained() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End ContextUpgradeSafe.find_setter_in_contract (Slither line:3345)
+
+
+Begin OwnableUpgradeSafe.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: __Context_init (Slither line:2988)
+Checking function: __Context_init_unchained (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: __Ownable_init (Slither line:2988)
+Checking function: __Ownable_init_unchained (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End OwnableUpgradeSafe.find_getter_in_contract (Slither line:3083)
+
+
+Begin OwnableUpgradeSafe.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: __Ownable_init() returns() (Slither line:3127)
+Checking function: __Ownable_init_unchained() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+OwnershipTransferred(_owner,address(0))
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+OwnershipTransferred(_owner,newOwner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+msg.sender
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+Checking function: __Context_init() returns() (Slither line:3127)
+Checking function: __Context_init_unchained() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End OwnableUpgradeSafe.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC20UpgradeSafe.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: __Context_init (Slither line:2988)
+Checking function: __Context_init_unchained (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: __ERC20_init (Slither line:2988)
+Checking function: __ERC20_init_unchained (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: _decimals (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _setupDecimals (Slither line:2988)
+Checking function: _beforeTokenTransfer (Slither line:2988)
+
+End ERC20UpgradeSafe.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC20UpgradeSafe.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: __ERC20_init(string,string) returns() (Slither line:3127)
+Checking function: __ERC20_init_unchained(string,string) returns() (Slither line:3127)
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: public
+_name
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: public
+_symbol
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: public
+_decimals
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+_transfer(_msgSender(),recipient,amount)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+require(bool,string)(b <= a,errorMessage)
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+c
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_beforeTokenTransfer(sender,recipient,amount)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+_approve(_msgSender(),spender,amount)
+Approval(owner,spender,amount)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+Transfer(sender,recipient,amount)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Approval(owner,spender,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+_transfer(sender,recipient,amount)
+require(bool,string)(b <= a,errorMessage)
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+true
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+c
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_beforeTokenTransfer(sender,recipient,amount)
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+Approval(owner,spender,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+c
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+msg.sender
+Approval(owner,spender,amount)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+c
+require(bool,string)(b <= a,errorMessage)
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setupDecimals(uint8) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeTokenTransfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: __Context_init() returns() (Slither line:3127)
+Checking function: __Context_init_unchained() returns() (Slither line:3127)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: isConstructor() returns(bool) (Slither line:3127)
+Visibility: private
+
+End ERC20UpgradeSafe.find_setter_in_contract (Slither line:3345)
+
+
+Begin Market.find_getter_in_contract (Slither line:2974)
+
+PROXY_MEM_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _updateCodeAddress (Slither line:2988)
+Checking function: getLogicAddress (Slither line:2988)
+getLogicAddress returns address variable called logicAddress (Slither line:3008)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: bytes32(PROXY_MEM_SLOT) (Slither line:3028)
+Checking function: __Ownable_init (Slither line:2988)
+Checking function: __Ownable_init_unchained (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: __Context_init (Slither line:2988)
+Checking function: __Context_init_unchained (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: initialize (Slither line:2988)
+Checking function: __Market_init (Slither line:2988)
+Checking function: state (Slither line:2988)
+state returns IMarket.MarketState variable  (Slither line:3008)
+RETURN node expression: MarketState.CLOSED (Slither line:3028)
+RETURN node expression: MarketState.OPEN (Slither line:3028)
+RETURN node expression: MarketState.EXPIRED (Slither line:3028)
+Checking function: mintOptions (Slither line:2988)
+Checking function: calculatePaymentAmount (Slither line:2988)
+calculatePaymentAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: collateralAmount.mul(priceRatio).div(10 ** 18) (Slither line:3028)
+Checking function: calculateFee (Slither line:2988)
+calculateFee returns uint256 variable  (Slither line:3008)
+RETURN node expression: amount.mul(basisPoints).div(10000) (Slither line:3028)
+Checking function: exerciseOption (Slither line:2988)
+Checking function: claimCollateral (Slither line:2988)
+Checking function: closePosition (Slither line:2988)
+Checking function: recoverTokens (Slither line:2988)
+Checking function: selfDestructMarket (Slither line:2988)
+Checking function: updateImplementation (Slither line:2988)
+Checking function: updateRestrictedMinter (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Market.find_getter_in_contract (Slither line:3083)
+
+
+Begin Market.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: initialize(string,address,address,IMarket.MarketStyle,uint256,uint256,uint16,uint16,uint16,address) returns() (Slither line:3127)
+Checking function: __Market_init(string,address,address,IMarket.MarketStyle,uint256,uint256,uint16,uint16,uint16,address) returns() (Slither line:3127)
+Checking function: state() returns(IMarket.MarketState) (Slither line:3127)
+Visibility: public
+require(bool,string)(c >= a,SafeMath: addition overflow)
+MarketState.CLOSED
+c
+MarketState.OPEN
+MarketState.EXPIRED
+Checking function: mintOptions(uint256) returns() (Slither line:3127)
+Visibility: public
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+collateralToken.safeTransferFrom(minter,address(this),collateralAmount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+require(bool,string)(restrictedMinter == minter,mintOptions: only restrictedMinter can mint)
+c
+wToken.mint(minter,collateralAmount)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+(codehash != accountHash && codehash != 0x0)
+bToken.mint(minter,collateralAmount)
+codehash = extcodehash(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+OptionMinted(minter,collateralAmount)
+MarketState.OPEN
+_callOptionalReturn(token,abi.encodeWithSelector(token.transferFrom.selector,from,to,value))
+msg.sender
+MarketState.CLOSED
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(state() == MarketState.OPEN,Option contract must be in Open State to mint)
+MarketState.EXPIRED
+require(bool,string)(success,SafeERC20: low-level call failed)
+Checking function: calculatePaymentAmount(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+div(a,b,SafeMath: division by zero)
+0
+c
+c
+require(bool,string)(b > 0,errorMessage)
+collateralAmount.mul(priceRatio).div(10 ** 18)
+Checking function: calculateFee(uint256,uint16) returns(uint256) (Slither line:3127)
+Visibility: public
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+div(a,b,SafeMath: division by zero)
+amount.mul(basisPoints).div(10000)
+0
+c
+c
+require(bool,string)(b > 0,errorMessage)
+Checking function: exerciseOption(uint256) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(state() == MarketState.OPEN,Option contract must be in Open State to exercise)
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+collateralAmount = collateralAmount.sub(feeAmount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+collateralToken.safeTransfer(owner(),feeAmount)
+FeePaid(FeeType.EXERCISE_FEE,address(collateralToken),feeAmount)
+sub(a,b,SafeMath: subtraction overflow)
+require(bool,string)(now >= expirationDate - 86400,Option contract cannot yet be exercised)
+div(a,b,SafeMath: division by zero)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+OptionExercised(redeemer,collateralAmount)
+collateralAmount.mul(priceRatio).div(10 ** 18)
+c
+bToken.burn(redeemer,collateralAmount)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+amount.mul(basisPoints).div(10000)
+_owner
+(codehash != accountHash && codehash != 0x0)
+paymentToken.safeTransferFrom(redeemer,address(this),paymentAmount)
+require(bool,string)(b <= a,errorMessage)
+codehash = extcodehash(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+MarketState.OPEN
+require(bool,string)(b > 0,errorMessage)
+_callOptionalReturn(token,abi.encodeWithSelector(token.transferFrom.selector,from,to,value))
+msg.sender
+c
+0
+MarketState.CLOSED
+_callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+collateralToken.safeTransfer(redeemer,collateralAmount)
+c
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+MarketState.EXPIRED
+require(bool,string)(success,SafeERC20: low-level call failed)
+Checking function: claimCollateral(uint256) returns() (Slither line:3127)
+Visibility: public
+div(a,b,SafeMath: division by zero)
+require(bool,string)(b > 0,errorMessage)
+_callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+c
+require(bool,string)(state() == MarketState.EXPIRED,Option contract must be in EXPIRED State to claim collateral)
+CollateralClaimed(redeemer,collateralAmount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+wToken.burn(redeemer,collateralAmount)
+amount.mul(basisPoints).div(10000)
+_owner
+(codehash != accountHash && codehash != 0x0)
+codehash = extcodehash(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+owedPaymentAmount = owedPaymentAmount.sub(feeAmount_scope_0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+paymentToken.safeTransfer(owner(),feeAmount_scope_0)
+0
+FeePaid(FeeType.CLAIM_FEE,address(paymentToken),feeAmount_scope_0)
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+paymentToken.safeTransfer(redeemer,owedPaymentAmount)
+sub(a,b,SafeMath: subtraction overflow)
+owedPaymentAmount = currentBalance_scope_1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+owedCollateralAmount = owedCollateralAmount.sub(feeAmount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+collateralToken.safeTransfer(owner(),feeAmount)
+FeePaid(FeeType.CLAIM_FEE,address(collateralToken),feeAmount)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+require(bool,string)(b <= a,errorMessage)
+MarketState.OPEN
+collateralToken.safeTransfer(redeemer,owedCollateralAmount)
+msg.sender
+c
+MarketState.CLOSED
+owedCollateralAmount = currentBalance
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+MarketState.EXPIRED
+Checking function: closePosition(uint256) returns() (Slither line:3127)
+Visibility: public
+bToken.burn(redeemer,collateralAmount)
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+wToken.burn(redeemer,collateralAmount)
+c
+sub(a,b,SafeMath: subtraction overflow)
+div(a,b,SafeMath: division by zero)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+collateralToken.safeTransfer(redeemer,collateralAmount)
+c
+collateralAmount = collateralAmount.sub(feeAmount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+collateralToken.safeTransfer(owner(),feeAmount)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+amount.mul(basisPoints).div(10000)
+_owner
+(codehash != accountHash && codehash != 0x0)
+FeePaid(FeeType.CLOSE_FEE,address(collateralToken),feeAmount)
+require(bool,string)(b <= a,errorMessage)
+codehash = extcodehash(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(b > 0,errorMessage)
+MarketState.OPEN
+OptionClosed(redeemer,collateralAmount)
+msg.sender
+c
+require(bool,string)(state() == MarketState.OPEN,Option contract must be in Open State to close a position)
+MarketState.CLOSED
+0
+_callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+c
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+MarketState.EXPIRED
+require(bool,string)(success,SafeERC20: low-level call failed)
+Checking function: recoverTokens(IERC20) returns() (Slither line:3127)
+Visibility: public
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+require(bool,string)(state() == MarketState.CLOSED,ERC20s can't be recovered until the market is closed)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+_owner
+(codehash != accountHash && codehash != 0x0)
+codehash = extcodehash(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+MarketState.OPEN
+token.safeTransfer(owner(),balance)
+TokensRecovered(address(token),owner(),balance)
+MarketState.CLOSED
+_callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+MarketState.EXPIRED
+require(bool,string)(success,SafeERC20: low-level call failed)
+Checking function: selfDestructMarket(address) returns() (Slither line:3127)
+Visibility: public
+wToken.selfDestructToken(refundAddress)
+require(bool,string)(refundAddress != address(0x0),Invalid refundAddress)
+paymentToken.transfer(owner(),paymentTokenBalance)
+bToken.selfDestructToken(refundAddress)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+MarketDestroyed()
+c
+require(bool,string)(state() == MarketState.CLOSED,Markets can't be destroyed until it is closed)
+selfdestruct(address)(refundAddress)
+onlyOwner()
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+_owner
+MarketState.OPEN
+collateralToken.transfer(owner(),collateralBalance)
+msg.sender
+MarketState.CLOSED
+MarketState.EXPIRED
+Checking function: updateImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+require(bool,string)(newImplementation != address(0x0),Invalid newImplementation)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+_updateCodeAddress(newImplementation)
+CodeAddressUpdated(newAddress)
+onlyOwner()
+sstore(uint256,uint256)(PROXY_MEM_SLOT,newAddress)
+sstore(uint256,uint256)
+
+End Market.find_setter_in_contract (Slither line:3345)
+
+Checking external function fallback
+functions_writing_to_variable: PROXY_MEM_SLOT
+functions_writing_to_variable: checking function Market.__Ownable_init (proxy_features line:898)
+functions_writing_to_variable: checking function Market.expirationDate (proxy_features line:898)
+functions_writing_to_variable: checking function Market.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function Market.mintOptions (proxy_features line:898)
+functions_writing_to_variable: checking function Market.selfDestructMarket (proxy_features line:898)
+functions_writing_to_variable: checking function Market.selfDestructMarket (proxy_features line:898)
+functions_writing_to_variable: checking function Market.__Context_init_unchained (proxy_features line:898)
+functions_writing_to_variable: checking function Market.mintOptions (proxy_features line:898)
+functions_writing_to_variable: checking function Market.state (proxy_features line:898)
+functions_writing_to_variable: checking function Market.updateImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(PROXY_MEM_SLOT,newAddress)
+functions_writing_to_variable: updateImplementation writes newAddress to PROXY_MEM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Market.calculatePaymentAmount (proxy_features line:898)
+functions_writing_to_variable: checking function Market.__Ownable_init_unchained (proxy_features line:898)
+functions_writing_to_variable: checking function Market.updateImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Market.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Market._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function Market.collateralToken (proxy_features line:898)
+functions_writing_to_variable: checking function Market.updateRestrictedMinter (proxy_features line:898)
+functions_writing_to_variable: checking function Market.calculateFee (proxy_features line:898)
+functions_writing_to_variable: checking function Market._updateCodeAddress (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(PROXY_MEM_SLOT,newAddress)
+functions_writing_to_variable: _updateCodeAddress writes newAddress to PROXY_MEM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Market.updateRestrictedMinter (proxy_features line:898)
+functions_writing_to_variable: checking function Market.owner (proxy_features line:898)
+functions_writing_to_variable: checking function Market.calculatePaymentAmount (proxy_features line:898)
+functions_writing_to_variable: checking function Market.claimCollateral (proxy_features line:898)
+functions_writing_to_variable: checking function Market._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function Market.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function Market.getLogicAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Market.recoverTokens (proxy_features line:898)
+functions_writing_to_variable: checking function Market.exerciseOption (proxy_features line:898)
+functions_writing_to_variable: checking function Market.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Market.paymentToken (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(PROXY_MEM_SLOT,contractLogic)
+functions_writing_to_variable: constructor writes contractLogic to PROXY_MEM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = PROXY_MEM_SLOT = 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: PROXY_MEM_SLOT = 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (proxy_features line:912)
+functions_writing_to_variable: Identifier: PROXY_MEM_SLOT (proxy_features line:924)
+get_value_assigned: PROXY_MEM_SLOT = 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+functions_writing_to_variable: checking function Market.marketName (proxy_features line:898)
+functions_writing_to_variable: checking function Market.closePosition (proxy_features line:898)
+functions_writing_to_variable: checking function Market.calculateFee (proxy_features line:898)
+functions_writing_to_variable: checking function Market.bToken (proxy_features line:898)
+functions_writing_to_variable: checking function Market.claimCollateral (proxy_features line:898)
+functions_writing_to_variable: checking function Market.isConstructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Market.proxiableUUID (proxy_features line:898)
+functions_writing_to_variable: checking function Market.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Market.wToken (proxy_features line:898)
+functions_writing_to_variable: checking function Market.__Market_init (proxy_features line:898)
+functions_writing_to_variable: checking function Market.closePosition (proxy_features line:898)
+functions_writing_to_variable: checking function Market.priceRatio (proxy_features line:898)
+functions_writing_to_variable: checking function Market.recoverTokens (proxy_features line:898)
+functions_writing_to_variable: checking function Market.state (proxy_features line:898)
+functions_writing_to_variable: checking function Market.__Context_init (proxy_features line:898)
+functions_writing_to_variable: checking function Market.exerciseOption (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function updateImplementation
+require(bool,string)(bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_compatibility_checks: condition bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID()
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID()
+require(bool,string)(newImplementation != address(0x0),Invalid newImplementation)
+has_compatibility_checks: condition newImplementation != address(0x0)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition _owner == _msgSender()
+has_compatibility_checks: skipping internal function _updateCodeAddress
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: contractLogic_fallback_asm_0 = sload(uint256)(PROXY_MEM_SLOT)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractLogic_fallback_asm_0,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found fallback
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(newImplementation != address(0x0),Invalid newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) EXPRESSION
+(Expression) _updateCodeAddress(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) CodeAddressUpdated(newAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(PROXY_MEM_SLOT,newAddress)
+
+Begin Proxiable.is_proxy (Slither line:1425)
+
+
+End Proxiable.is_proxy (Slither line:1428)
+
+
+Begin Proxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxiable 
+
+End Proxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISimpleToken.is_proxy (Slither line:1425)
+
+
+End ISimpleToken.is_proxy (Slither line:1428)
+
+
+Begin ISimpleToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISimpleToken 
+
+End ISimpleToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ContextUpgradeSafe.is_proxy (Slither line:1425)
+
+
+End ContextUpgradeSafe.is_proxy (Slither line:1428)
+
+
+Begin ContextUpgradeSafe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ContextUpgradeSafe 
+
+End ContextUpgradeSafe.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnableUpgradeSafe.is_proxy (Slither line:1425)
+
+
+End OwnableUpgradeSafe.is_proxy (Slither line:1428)
+
+
+Begin OwnableUpgradeSafe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnableUpgradeSafe 
+
+End OwnableUpgradeSafe.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20UpgradeSafe.is_proxy (Slither line:1425)
+
+
+End ERC20UpgradeSafe.is_proxy (Slither line:1428)
+
+
+Begin ERC20UpgradeSafe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20UpgradeSafe 
+
+End ERC20UpgradeSafe.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Market.is_proxy (Slither line:1425)
+
+
+End Market.is_proxy (Slither line:1428)
+
+
+Begin Market.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Market 
+
+End Market.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,388 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PassThroughStorage.is_proxy (Slither line:1425)
+
+
+End PassThroughStorage.is_proxy (Slither line:1428)
+
+
+Begin PassThroughStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PassThroughStorage 
+
+End PassThroughStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PassThrough.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PassThrough.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := call(sub(gas(), 10000), _dst, 0, add(_calldata, 0x20), _calldataSize, 0, 0) (Slither line:1576)
+    let size := returndatasize() (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(ptr, 0, size) (Slither line:1576)
+    if iszero(result) (Slither line:1576)
+    { (Slither line:1576)
+        revert(ptr, size) (Slither line:1576)
+    } (Slither line:1576)
+    return(ptr, size) (Slither line:1576)
+} (Slither line:1576)
+
+End PassThrough.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin PassThrough.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := call(sub(gas(), 10000), _dst, 0, add(_calldata, 0x20), _calldataSize, 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin PassThrough.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _owner (Slither line:1689)
+Checking ERC721_Received (Slither line:1689)
+Checking MAX_EXPIRATION_TIME (Slither line:1689)
+Checking disableMethods (Slither line:1689)
+Checking estateRegistry (Slither line:1689)
+Checking operator (Slither line:1689)
+Checking target (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _dst (Slither line:1703)
+_dst is a Local Variable in PassThrough.fallback (Slither line:1707)
+Expression: target (Slither line:1719)
+Identifier value: target (Slither line:1725)
+target is a State Variable in contract PassThroughStorage (Slither line:1730)
+
+End PassThrough.find_delegate_variable_by_name
+
+
+End PassThrough.find_delegatecall_in_asm (Slither line:1637)
+
+
+End PassThrough.is_proxy (Slither line:1476)
+
+
+Begin PassThrough.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PassThrough 
+PassThrough is delegating to target
+Looking for setter (Slither line:1200)
+
+Looking for setter in PassThroughStorage (Slither line:1204)
+
+
+Begin PassThroughStorage.find_setter_in_contract (Slither line:3109)
+
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+End PassThroughStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in PassThroughStorage 
+Looking in PassThrough (Slither line:1213)
+
+Begin PassThrough.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: isOperator() returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: isMethodAllowed(bytes4) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: setTarget(address) returns() (Slither line:3117)
+Visibility: public
+msg.sender == _owner
+require(bool,string)(isOperator() || isOwner(),Permission denied)
+TargetChanged(msg.sender,target,_target)
+msg.sender == operator
+target = _target
+is an Assignment Operation (Slither line:3206)
+
+End PassThrough.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setTarget in contract: PassThrough (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin PassThroughStorage.find_getter_in_contract (Slither line:2964)
+
+target is a Variable object
+_target
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End PassThroughStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin PassThrough.find_getter_in_contract (Slither line:2964)
+
+target is a Variable object
+_target
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: isOwner (Slither line:2978)
+isOwner returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: isOperator (Slither line:2978)
+isOperator returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == operator (Slither line:3018)
+Checking function: isMethodAllowed (Slither line:2978)
+isMethodAllowed returns bool variable  (Slither line:2998)
+RETURN node expression: disableMethods[_signature] < block.timestamp (Slither line:3018)
+Checking function: setTarget (Slither line:2978)
+Checking function: disableMethod (Slither line:2978)
+Checking function: allowMethod (Slither line:2978)
+Checking function: convertToBytes4 (Slither line:2978)
+convertToBytes4 returns bytes4 variable  (Slither line:2998)
+RETURN node expression: signatureBytes4 (Slither line:3018)
+Checking function: onERC721Received (Slither line:2978)
+onERC721Received returns bytes4 variable  (Slither line:2998)
+RETURN node expression: ERC721_Received (Slither line:3018)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End PassThrough.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in PassThrough (Slither line:1305)
+or in PassThroughStorage (Slither line:1319)
+
+Begin Ownable.find_getter_in_contract (Slither line:2964)
+
+target is a Variable object
+_target
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: isOwner (Slither line:2978)
+isOwner returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+
+End Ownable.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: _target
+impl_address_from_contract_call: StateVariable target
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool,string)(isOperator() && isMethodAllowed(msg.sig) || isOwner(),Permission denied)
+impl_address_from_contract_call: arg is isOperator() && isMethodAllowed(msg.sig) || isOwner()
+impl_address_from_contract_call: arg is Permission denied
+Checking public function owner
+Checking public function isOwner
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function setTarget
+Found 'msg.sender ==' in expression: msg.sender == operator
+Checking public function disableMethod
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function allowMethod
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function onERC721Received
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == estateRegistry,Token not accepted)
+Checking external function fallback
+functions_writing_to_variable: target
+functions_writing_to_variable: checking function PassThrough.isMethodAllowed (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.convertToBytes4 (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.isOwner (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.allowMethod (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.constructor (proxy_features line:893)
+get_value_assigned: target = _target
+functions_writing_to_variable: constructor writes _target to target (proxy_features line:1008)
+functions_writing_to_variable: checking function PassThrough.isOperator (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.onERC721Received (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.owner (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.disableMethod (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.setTarget (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(isOperator() || isOwner(),Permission denied) (proxy_features line:904)
+functions_writing_to_variable: exp = TargetChanged(msg.sender,target,_target) (proxy_features line:904)
+functions_writing_to_variable: exp = target = _target (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:907)
+functions_writing_to_variable: Identifier: target (proxy_features line:919)
+get_value_assigned: target = _target
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == operator (proxy_features line:904)
+functions_writing_to_variable: setTarget writes _target to target (proxy_features line:924)
+has_compatibility_checks: dependencies: ['_estateRegistry', '_target', 'estateRegistry']
+functions_writing_to_variable: estateRegistry
+functions_writing_to_variable: checking function PassThrough.isMethodAllowed (proxy_features line:893)
+functions_writing_to_variable: checking function PassThroughStorage.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.convertToBytes4 (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.isOwner (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.allowMethod (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = estateRegistry = _estateRegistry (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: estateRegistry = _estateRegistry (proxy_features line:907)
+functions_writing_to_variable: Identifier: estateRegistry (proxy_features line:919)
+get_value_assigned: estateRegistry = _estateRegistry
+functions_writing_to_variable: exp = operator = _operator (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: operator = _operator (proxy_features line:907)
+functions_writing_to_variable: exp = setTarget(estateRegistry) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(approve(address,uint256),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(setApprovalForAll(address,bool),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(transferFrom(address,address,uint256),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(safeTransferFrom(address,address,uint256),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(safeTransferFrom(address,address,uint256,bytes),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(transferLand(uint256,uint256,address),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(transferManyLands(uint256,uint256[],address),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(safeTransferManyFrom(address,address,uint256[]),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = disableMethod(safeTransferManyFrom(address,address,uint256[],bytes),MAX_EXPIRATION_TIME) (proxy_features line:904)
+functions_writing_to_variable: exp = Ownable() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(_time > 0,Time should be greater than 0) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(_time <= MAX_EXPIRATION_TIME,Time should be lower than 2 years) (proxy_features line:904)
+functions_writing_to_variable: exp = signatureBytes4 = convertToBytes4(abi.encodeWithSignature(_signature)) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signatureBytes4 = convertToBytes4(abi.encodeWithSignature(_signature)) (proxy_features line:907)
+functions_writing_to_variable: exp = disableMethods[signatureBytes4] = block.timestamp + _time (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: disableMethods[signatureBytes4] = block.timestamp + _time (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: disableMethods[signatureBytes4] (proxy_features line:915)
+functions_writing_to_variable: exp = MethodDisabled(msg.sender,signatureBytes4,_signature) (proxy_features line:904)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(_signature.length == 4,Invalid method signature) (proxy_features line:904)
+functions_writing_to_variable: exp = signatureBytes4 (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: exp = _owner = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _owner = msg.sender (proxy_features line:907)
+functions_writing_to_variable: exp = OwnershipTransferred(address(0),_owner) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(isOperator() || isOwner(),Permission denied) (proxy_features line:904)
+functions_writing_to_variable: exp = TargetChanged(msg.sender,target,_target) (proxy_features line:904)
+functions_writing_to_variable: exp = target = _target (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:907)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == operator (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(_signature.length == 4,Invalid method signature) (proxy_features line:904)
+functions_writing_to_variable: exp = signatureBytes4 (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == operator (proxy_features line:904)
+functions_writing_to_variable: constructor writes _estateRegistry to estateRegistry (proxy_features line:924)
+functions_writing_to_variable: checking function PassThrough.isOperator (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.onERC721Received (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.owner (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.disableMethod (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PassThrough.setTarget (proxy_features line:893)
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_time <= MAX_EXPIRATION_TIME,Time should be lower than 2 years)
+has_compatibility_checks: condition _time <= MAX_EXPIRATION_TIME
+require(bool,string)(_signature.length == 4,Invalid method signature)
+has_compatibility_checks: condition _signature.length == 4
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+require(bool,string)(isOperator() || isOwner(),Permission denied)
+has_compatibility_checks: condition isOperator() || isOwner()
+require(bool,string)(_time > 0,Time should be greater than 0)
+has_compatibility_checks: condition _time > 0
+has_compatibility_checks: checking public function setTarget
+require(bool,string)(isOperator() || isOwner(),Permission denied)
+has_compatibility_checks: condition isOperator() || isOwner()
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_time <= MAX_EXPIRATION_TIME,Time should be lower than 2 years)
+has_compatibility_checks: condition _time <= MAX_EXPIRATION_TIME
+require(bool,string)(_signature.length == 4,Invalid method signature)
+has_compatibility_checks: condition _signature.length == 4
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+require(bool,string)(isOperator() || isOwner(),Permission denied)
+has_compatibility_checks: condition isOperator() || isOwner()
+require(bool,string)(_time > 0,Time should be greater than 0)
+has_compatibility_checks: condition _time > 0
+Found public function: owner
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isOperator() || isOwner(),Permission denied)
+has_time_delay: (node.type) EXPRESSION
+(Expression) TargetChanged(msg.sender,target,_target)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == operator
+has_time_delay: (node.type) EXPRESSION
+(Expression) target = _target

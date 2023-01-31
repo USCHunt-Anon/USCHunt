@@ -1,0 +1,103 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "FallbackManager (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.0/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol#476-526)",
+        "elements": [],
+        "description": "FallbackManager (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.0/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol#476-526) is an upgradeable proxy.\nFallbackManager uses `call` instead of `delegatecall`\nFALLBACK_HANDLER_STORAGE_SLOT is declared in the proxy.\n uses Unstructured Storage\nMissing compatibility check in FallbackManager.setFallbackHandler(address)\nMissing compatibility check in GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)\nMissing compatibility check in FallbackManager.setFallbackHandler(address)\nTo remove upgradeability, delete setup from GnosisSafe\n",
+        "id": "dfed423868d8bd1295d337435ec99afffc7a2b69bec7229993795bfc0d1ee631",
+        "features": {
+          "upgradeable": true,
+          "uses_call_instead_of_delegatecall": true,
+          "impl_address_variable": "FallbackManager.FALLBACK_HANDLER_STORAGE_SLOT",
+          "impl_address_setter": "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "FallbackManager (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.0/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol#476-526)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5",
+          "unstructured_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "FallbackManager.setFallbackHandler(address)": "missing",
+              "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setup from GnosisSafe",
+          "immutable_functions": {
+            "other": [
+              "setFallbackHandler(address)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "GnosisSafe (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.0/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol#683-1085)",
+        "elements": [],
+        "description": "GnosisSafe (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.0/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol#683-1085) is an upgradeable proxy.\nGnosisSafe uses `call` instead of `delegatecall`\nFALLBACK_HANDLER_STORAGE_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5\nMissing compatibility check in GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)\nMissing compatibility check in FallbackManager.setFallbackHandler(address)\n",
+        "id": "f94fd924a9506447be464e702b61203919004e119ab3cb385c8c7d23c705d37a",
+        "features": {
+          "upgradeable": true,
+          "uses_call_instead_of_delegatecall": true,
+          "impl_address_variable": "FallbackManager.FALLBACK_HANDLER_STORAGE_SLOT",
+          "impl_address_setter": "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "FallbackManager (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.5.0/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol/34CfAC646f301356fAa8B21e94227e3583Fe3F5F_GnosisSafe.sol#476-526)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)": "missing",
+              "FallbackManager.setFallbackHandler(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "containing_delegatecall": [
+              "execTransactionFromModuleReturnData(address,uint256,bytes,Enum.Operation)"
+            ],
+            "other": [
+              "setFallbackHandler(address)",
+              "addOwnerWithThreshold(address,uint256)",
+              "removeOwner(address,address,uint256)",
+              "swapOwner(address,address,address)",
+              "changeThreshold(uint256)",
+              "getThreshold()",
+              "isOwner(address)",
+              "getOwners()",
+              "enableModule(Module)",
+              "disableModule(Module,Module)",
+              "execTransactionFromModule(address,uint256,bytes,Enum.Operation)",
+              "getModules()",
+              "getModulesPaginated(address,uint256)",
+              "changeMasterCopy(address)",
+              "setup(address[],uint256,address,bytes,address,address,uint256,address)",
+              "execTransaction(address,uint256,bytes,Enum.Operation,uint256,uint256,uint256,address,address,bytes)",
+              "requiredTxGas(address,uint256,bytes,Enum.Operation)",
+              "approveHash(bytes32)",
+              "signMessage(bytes)",
+              "isValidSignature(bytes,bytes)",
+              "getMessageHash(bytes)",
+              "encodeTransactionData(address,uint256,bytes,Enum.Operation,uint256,uint256,uint256,address,address,uint256)",
+              "getTransactionHash(address,uint256,bytes,Enum.Operation,uint256,uint256,uint256,address,address,uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

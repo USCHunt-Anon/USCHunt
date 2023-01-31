@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.6.6/de./ethereum/contracts/ropsten/de/DE76Cb573C4ca7D467685d473CEb2928E0a3E0AE_UpgradableProxy.sol/DE76Cb573C4ca7D467685d473CEb2928E0a3E0AE_UpgradableProxy.sol#62-161)",
+        "elements": [],
+        "description": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.6.6/de./ethereum/contracts/ropsten/de/DE76Cb573C4ca7D467685d473CEb2928E0a3E0AE_UpgradableProxy.sol/DE76Cb573C4ca7D467685d473CEb2928E0a3E0AE_UpgradableProxy.sol#62-161) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(matic.network.proxy.implementation)\nMissing compatibility check in UpgradableProxy.constructor()\nFound compatibility check in UpgradableProxy.updateAndCall(address,bytes)\nFound compatibility check in UpgradableProxy.updateImplementation(address)\n",
+        "id": "75faed543c7aae54c8d9015a05bee4e535cfdf1e7f138b9dbdc43c07caf0ee76",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradableProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "UpgradableProxy.updateImplementation(address)",
+          "impl_address_getter": "UpgradableProxy.loadImplementation()",
+          "impl_address_location": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.6.6/de./ethereum/contracts/ropsten/de/DE76Cb573C4ca7D467685d473CEb2928E0a3E0AE_UpgradableProxy.sol/DE76Cb573C4ca7D467685d473CEb2928E0a3E0AE_UpgradableProxy.sol#62-161)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(matic.network.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "UpgradableProxy.constructor()": "missing",
+              "UpgradableProxy.updateAndCall(address,bytes)": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+              "UpgradableProxy.updateImplementation(address)": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

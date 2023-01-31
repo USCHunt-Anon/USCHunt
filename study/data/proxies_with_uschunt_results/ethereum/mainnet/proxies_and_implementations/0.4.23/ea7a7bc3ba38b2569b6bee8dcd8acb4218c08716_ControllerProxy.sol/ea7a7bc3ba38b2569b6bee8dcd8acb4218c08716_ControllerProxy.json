@@ -1,0 +1,79 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ControllerProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#115-135)",
+        "elements": [],
+        "description": "ControllerProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#115-135) is an upgradeable proxy.\ncontrollerDelegate was found in a different contract.\ncontrollerDelegate is an address state variable.\n uses Inherited Storage\nMissing compatibility check in ControllerProxy.setControllerDelegate(address)\n",
+        "id": "387b6a22b2763d066c6d0b786137daf26932e6a2034a34dc403b893df643357b",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ControllerStorage.controllerDelegate",
+          "impl_address_setter": "ControllerProxy.setControllerDelegate(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ControllerStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#81-87)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ControllerProxy.setControllerDelegate(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getDelegate()",
+              "isWorker(address)",
+              "allWorkers()",
+              "addWorker(address)",
+              "removeWorker(address)",
+              "setOwner(address)",
+              "getDelegate()",
+              "setWalletsDelegate(address)",
+              "setControllerDelegate(address)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "WalletProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#155-170)",
+        "elements": [],
+        "description": "WalletProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#155-170) is an upgradeable proxy.\nwalletsDelegate was found in a different contract.\nwalletsDelegate is an address state variable.\nControllerStorage.walletsDelegate (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#82) gets value from a cross-contract call: DelegateProvider(owner).getDelegate()\nControllerProxy appears to be a Beacon contract for the proxy\nThe address of ControllerProxy is stored as a state variable: WalletStorage.owner\nCould not find setter for owner\nMissing compatibility check in ControllerProxy.setWalletsDelegate(address)\nTo remove upgradeability, delete setWalletsDelegate from ControllerProxy\n",
+        "id": "94af1ad1ef8f7dcca295532c55bdbf8d468f19632ec2ab9684136c6b8da21124",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ControllerStorage.walletsDelegate",
+          "impl_address_setter": "ControllerProxy.setWalletsDelegate(address)",
+          "impl_address_getter": "ControllerProxy.getDelegate()",
+          "impl_address_location": "ControllerStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.4.23/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol/ea7a7bc3ba38b2569b6bee8dcd8acb4218c08716_ControllerProxy.sol#81-87)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "DelegateProvider(owner).getDelegate()",
+          "beacon": "ControllerProxy",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "WalletStorage.owner",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ControllerProxy.setWalletsDelegate(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setWalletsDelegate from ControllerProxy"
+        }
+      }
+    ]
+  }
+}

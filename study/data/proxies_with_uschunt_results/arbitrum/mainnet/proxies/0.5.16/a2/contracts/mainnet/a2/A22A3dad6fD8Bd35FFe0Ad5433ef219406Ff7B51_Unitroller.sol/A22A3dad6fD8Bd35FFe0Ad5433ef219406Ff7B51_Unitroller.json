@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Unitroller (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/a2/contracts/mainnet/a2/A22A3dad6fD8Bd35FFe0Ad5433ef219406Ff7B51_Unitroller.sol/A22A3dad6fD8Bd35FFe0Ad5433ef219406Ff7B51_Unitroller.sol#617-830)",
+        "elements": [],
+        "description": "Unitroller (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/a2/contracts/mainnet/a2/A22A3dad6fD8Bd35FFe0Ad5433ef219406Ff7B51_Unitroller.sol/A22A3dad6fD8Bd35FFe0Ad5433ef219406Ff7B51_Unitroller.sol#617-830) is an upgradeable proxy.\ncomptrollerImplementation was found in a different contract.\ncomptrollerImplementation is an address state variable.\n uses Inherited Storage\nMissing compatibility check in Unitroller.fallback()\nMissing compatibility check in Unitroller._acceptImplementation()\nMissing compatibility check in Unitroller._setPendingImplementation(address)\nCan toggle delegatecall on/off: condition: msg.sender != address(this)\n",
+        "id": "e8822a78c69f12c785dd4b80d7e992656da96c5817e7e2320c9663be02ac5c75",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UnitrollerAdminStorage.comptrollerImplementation",
+          "impl_address_setter": "Unitroller._acceptImplementation()",
+          "impl_address_getter": "not found",
+          "impl_address_location": "UnitrollerAdminStorage (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.5.16/a2/contracts/mainnet/a2/A22A3dad6fD8Bd35FFe0Ad5433ef219406Ff7B51_Unitroller.sol/A22A3dad6fD8Bd35FFe0Ad5433ef219406Ff7B51_Unitroller.sol#257-299)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Unitroller.fallback()": "missing",
+              "Unitroller._acceptImplementation()": "missing",
+              "Unitroller._setPendingImplementation(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!msg.sender != address(this)",
+          "toggle_alternative_logic": "latestComptrollerImplementation = fuseAdmin.latestComptrollerImplementation(comptrollerImplementation)",
+          "immutable_functions": {
+            "other": [
+              "_setPendingImplementation(address)",
+              "_acceptImplementation()",
+              "_toggleFuseAdminRights(bool)",
+              "_toggleAdminRights(bool)",
+              "_setPendingAdmin(address)",
+              "_acceptAdmin()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

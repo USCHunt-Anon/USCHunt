@@ -1,0 +1,475 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC721.is_proxy (Slither line:1425)
+
+
+End IERC721.is_proxy (Slither line:1428)
+
+
+Begin IERC721.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC721 
+
+End IERC721.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC1155.is_proxy (Slither line:1425)
+
+
+End IERC1155.is_proxy (Slither line:1428)
+
+
+Begin IERC1155.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC1155 
+
+End IERC1155.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BigOwnable.is_proxy (Slither line:1425)
+
+
+End BigOwnable.is_proxy (Slither line:1428)
+
+
+Begin BigOwnable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BigOwnable 
+
+End BigOwnable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GXPStorage.is_proxy (Slither line:1425)
+
+
+End GXPStorage.is_proxy (Slither line:1428)
+
+
+Begin GXPStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GXPStorage 
+
+End GXPStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GXPProxy.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GXPProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+0
+calldatasize()()
+
+End GXPProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GXPProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+size_fallback_asm_0
+
+End GXPProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GXPProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+target
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is target (Slither line:2828)
+dest.value: target (Slither line:2831)
+Expression: logic_contract (Slither line:2836)
+
+End GXPProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End GXPProxy.is_proxy (Slither line:1476)
+
+
+Begin GXPProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GXPProxy 
+GXPProxy is delegating to logic_contract
+Looking for setter (Slither line:1200)
+
+Looking for setter in GXPStorage (Slither line:1204)
+
+
+Begin GXPStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: commander() returns(address) (Slither line:3127)
+Visibility: public
+_commander
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: external
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+onlyCommander()
+address(msg.sender)
+require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+OwnershipTransferred(_owner,address(0))
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+OwnershipTransferred(_owner,newOwner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+address(msg.sender)
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+onlyCommander()
+Checking function: transferCommand(address) returns() (Slither line:3127)
+Visibility: external
+CommandTransferred(_commander,newCommander)
+_commander = newCommander
+is an Assignment Operation (Slither line:3216)
+address(msg.sender)
+require(bool,string)(newCommander != address(0),Ownable: new owner is the zero address)
+onlyCommander()
+require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+Checking function: renounceCommand() returns() (Slither line:3127)
+Visibility: external
+_commander = address(0)
+is an Assignment Operation (Slither line:3216)
+onlyCommander()
+address(msg.sender)
+CommandTransferred(_commander,address(0))
+require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End GXPStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in GXPStorage 
+Looking in GXPProxy (Slither line:1213)
+
+Begin GXPProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: setLogicContract(address) returns(bool) (Slither line:3127)
+Visibility: external
+true
+require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+onlyCommander()
+address(msg.sender)
+logic_contract = _c
+is an Assignment Operation (Slither line:3216)
+
+End GXPProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setLogicContract in contract: GXPProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin GXPStorage.find_getter_in_contract (Slither line:2974)
+
+logic_contract is a Variable object
+_c
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: commander (Slither line:2988)
+commander returns address variable  (Slither line:3008)
+RETURN node expression: _commander (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: transferCommand (Slither line:2988)
+Checking function: renounceCommand (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: address(msg.sender) (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End GXPStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin GXPProxy.find_getter_in_contract (Slither line:2974)
+
+logic_contract is a Variable object
+_c
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: commander (Slither line:2988)
+commander returns address variable  (Slither line:3008)
+RETURN node expression: _commander (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: transferCommand (Slither line:2988)
+Checking function: renounceCommand (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: address(msg.sender) (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: setLogicContract (Slither line:2988)
+setLogicContract returns bool variable called success (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: rescueFunds20 (Slither line:2988)
+Checking function: rescueFunds721 (Slither line:2988)
+Checking function: rescueFunds1155 (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End GXPProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in GXPProxy (Slither line:1305)
+or in GXPStorage (Slither line:1319)
+Checking for logic_contract at slot 2 in contract GXPStorage (Slither line:1355)
+Found logic_contract at slot 2 in contract GXPStorage (Slither line:1362)
+
+Begin GXPStorage.find_getter_in_contract (Slither line:2974)
+
+logic_contract is a Variable object
+_c
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: commander (Slither line:2988)
+commander returns address variable  (Slither line:3008)
+RETURN node expression: _commander (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: transferCommand (Slither line:2988)
+Checking function: renounceCommand (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: address(msg.sender) (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End GXPStorage.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _c
+impl_address_from_contract_call: StateVariable logic_contract
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0)
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is size_fallback_asm_0
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr_fallback_asm_0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0)
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is size_fallback_asm_0
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,size_fallback_asm_0)
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is size_fallback_asm_0
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+Checking public function owner
+Checking public function commander
+Checking external function renounceOwnership
+Checking external function transferOwnership
+Checking external function transferCommand
+Checking external function renounceCommand
+Checking external function setLogicContract
+Checking external function rescueFunds20
+Checking external function rescueFunds721
+Checking external function rescueFunds1155
+Checking external function fallback
+functions_writing_to_variable: logic_contract
+functions_writing_to_variable: checking function GXPProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = logic_contract = _logic_contract (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: logic_contract = _logic_contract (proxy_features line:912)
+functions_writing_to_variable: Identifier: logic_contract (proxy_features line:924)
+get_value_assigned: logic_contract = _logic_contract
+functions_writing_to_variable: exp = _name = Game X Change Potion (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _name = Game X Change Potion (proxy_features line:912)
+functions_writing_to_variable: exp = _symbol = GXP (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _symbol = GXP (proxy_features line:912)
+functions_writing_to_variable: exp = _totalSupply = 1500000000 * 10 ** 18 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _totalSupply = 1500000000 * 10 ** 18 (proxy_features line:912)
+functions_writing_to_variable: exp = _balances[owner()] = _totalSupply (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _balances[owner()] = _totalSupply (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: _balances[owner()] (proxy_features line:920)
+functions_writing_to_variable: constructor writes _logic_contract to logic_contract (proxy_features line:929)
+functions_writing_to_variable: checking function GXPProxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.setLogicContract (proxy_features line:898)
+functions_writing_to_variable: exp = logic_contract = _c (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: logic_contract = _c (proxy_features line:912)
+functions_writing_to_variable: Identifier: logic_contract (proxy_features line:924)
+get_value_assigned: logic_contract = _c
+functions_writing_to_variable: exp = true (proxy_features line:909)
+functions_writing_to_variable: exp = onlyCommander() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander) (proxy_features line:909)
+functions_writing_to_variable: exp = address(msg.sender) (proxy_features line:909)
+functions_writing_to_variable: setLogicContract writes _c to logic_contract (proxy_features line:929)
+functions_writing_to_variable: checking function GXPProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.commander (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.rescueFunds721 (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.rescueFunds1155 (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.owner (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.rescueFunds20 (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.transferCommand (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.renounceCommand (proxy_features line:898)
+functions_writing_to_variable: checking function GXPProxy.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_logic_contract', '_c']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking external function setLogicContract
+require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+has_compatibility_checks: condition _commander == _msgSender()
+check_condition_from_expression: modifier calls: ['onlyCommander()']
+check_condition_from_expression: condition _commander == _msgSender()
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = logic_contract
+Found public function: constructor
+Found public function: owner
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyCommander()
+has_time_delay: (node.type) RETURN
+(Expression) address(msg.sender)
+has_time_delay: (node.type) EXPRESSION
+(Expression) logic_contract = _c

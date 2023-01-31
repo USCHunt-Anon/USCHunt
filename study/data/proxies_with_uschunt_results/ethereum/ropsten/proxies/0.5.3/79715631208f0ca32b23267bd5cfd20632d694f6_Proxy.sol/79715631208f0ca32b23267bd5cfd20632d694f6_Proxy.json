@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.3/79715631208f0ca32b23267bd5cfd20632d694f6_Proxy.sol/79715631208f0ca32b23267bd5cfd20632d694f6_Proxy.sol#10-46)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.3/79715631208f0ca32b23267bd5cfd20632d694f6_Proxy.sol/79715631208f0ca32b23267bd5cfd20632d694f6_Proxy.sol#10-46) may be an upgradeable proxy.\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "4f797d017be633b6b8d0e8f00a21486b187739b5c98dc558445ec0cddd1ee6a9",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Proxy.masterCopy",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.3/79715631208f0ca32b23267bd5cfd20632d694f6_Proxy.sol/79715631208f0ca32b23267bd5cfd20632d694f6_Proxy.sol#10-46)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Proxy.constructor(address)": {
+                "check": "require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

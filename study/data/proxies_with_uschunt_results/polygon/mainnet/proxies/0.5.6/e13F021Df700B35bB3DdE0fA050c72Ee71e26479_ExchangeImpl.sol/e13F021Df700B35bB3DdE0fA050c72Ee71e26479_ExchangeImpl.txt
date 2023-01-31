@@ -1,0 +1,628 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFactoryImpl.is_proxy (Slither line:1425)
+
+
+End IFactoryImpl.is_proxy (Slither line:1428)
+
+
+Begin IFactoryImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactoryImpl 
+
+End IFactoryImpl.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Exchange.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Exchange.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End Exchange.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Exchange.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Exchange.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking allowance (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking mesh (Slither line:1689)
+Checking router (Slither line:1689)
+Checking WETH (Slither line:1689)
+Checking token0 (Slither line:1689)
+Checking token1 (Slither line:1689)
+Checking reserve0 (Slither line:1689)
+Checking reserve1 (Slither line:1689)
+Checking blockTimestampLast (Slither line:1689)
+Checking price0CumulativeLast (Slither line:1689)
+Checking price1CumulativeLast (Slither line:1689)
+Checking kLast (Slither line:1689)
+Checking balance0 (Slither line:1689)
+Checking balance1 (Slither line:1689)
+Checking fee (Slither line:1689)
+Checking mining (Slither line:1689)
+Checking lastMined (Slither line:1689)
+Checking miningIndex (Slither line:1689)
+Checking userLastIndex (Slither line:1689)
+Checking userRewardSum (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking DOMAIN_SEPARATOR (Slither line:1689)
+Checking PERMIT_TYPEHASH (Slither line:1689)
+Checking nonces (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in Exchange.fallback (Slither line:1707)
+Expression: IFactoryImpl(factory).getExchangeImplementation() (Slither line:1719)
+
+Begin Exchange.find_delegate_from_call_exp
+
+IFactoryImpl(factory).getExchangeImplementation() (Slither line:2003)
+called = IFactoryImpl(factory).getExchangeImplementation (Slither line:2010)
+Called member of IFactoryImpl(factory) (Slither line:2017)
+
+Begin Exchange.find_delegate_from_member_access
+
+Expression: IFactoryImpl(factory).getExchangeImplementation() (Slither line:2358)
+IFactoryImpl(factory) (Slither line:2371)
+getExchangeImplementation is a member of the contract type: IFactoryImpl (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IFactoryImpl (Slither line:2441)
+
+End Exchange.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End Exchange.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Exchange.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Exchange.is_proxy (Slither line:1476)
+
+
+Begin Exchange.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Exchange 
+Local Variable: impl (Slither line:1164)
+IFactoryImpl(factory) (Slither line:1171)
+Call destination IFactoryImpl(factory).getExchangeImplementation() is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: Exchange
+impl is dependent on factory
+Expression for impl: IFactoryImpl(factory).getExchangeImplementation()
+Called: IFactoryImpl(factory).getExchangeImplementation
+impl_address_from_contract_call: IFactoryImpl(factory).getExchangeImplementation()
+called: IFactoryImpl(factory).getExchangeImplementation
+found MemberAccess: IFactoryImpl(factory).getExchangeImplementation
+TypeConversion: IFactoryImpl(factory)
+find_registry_address_source: IFactoryImpl(factory).getExchangeImplementation()
+MemberAccess: IFactoryImpl(factory).getExchangeImplementation
+TypeConversion: IFactoryImpl(factory)
+Identifier: factory
+Checking external function fallback
+functions_writing_to_variable: impl
+functions_writing_to_variable: checking function Exchange.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Exchange.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Exchange.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_36', 'factory', 'TMP_37']
+functions_writing_to_variable: factory
+functions_writing_to_variable: checking function Exchange.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = factory = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: factory = msg.sender (proxy_features line:912)
+functions_writing_to_variable: Identifier: factory (proxy_features line:924)
+get_value_assigned: factory = msg.sender
+functions_writing_to_variable: exp = _token0 != address(0) (proxy_features line:909)
+functions_writing_to_variable: exp = mesh = IFactoryImpl(msg.sender).mesh() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: mesh = IFactoryImpl(msg.sender).mesh() (proxy_features line:912)
+functions_writing_to_variable: exp = router = IFactoryImpl(msg.sender).router() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: router = IFactoryImpl(msg.sender).router() (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool)(_token0 != _token1) (proxy_features line:909)
+functions_writing_to_variable: exp = token0 = _token0 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: token0 = _token0 (proxy_features line:912)
+functions_writing_to_variable: exp = token1 = _token1 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: token1 = _token1 (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool)(_fee <= 100) (proxy_features line:909)
+functions_writing_to_variable: exp = fee = _fee (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: fee = _fee (proxy_features line:912)
+functions_writing_to_variable: constructor writes msg.sender to factory (proxy_features line:929)
+functions_writing_to_variable: checking function Exchange.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Exchange.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Exchange.fallback (proxy_features line:898)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = IFactoryImpl(factory).getExchangeImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found fallback
+
+Begin IFactory.is_proxy (Slither line:1425)
+
+
+End IFactory.is_proxy (Slither line:1428)
+
+
+Begin IFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactory 
+
+End IFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernance.is_proxy (Slither line:1425)
+
+
+End IGovernance.is_proxy (Slither line:1428)
+
+
+Begin IGovernance.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernance 
+
+End IGovernance.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IPoolVoting.is_proxy (Slither line:1425)
+
+
+End IPoolVoting.is_proxy (Slither line:1428)
+
+
+Begin IPoolVoting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPoolVoting 
+
+End IPoolVoting.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ITreasury.is_proxy (Slither line:1425)
+
+
+End ITreasury.is_proxy (Slither line:1428)
+
+
+Begin ITreasury.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ITreasury 
+
+End ITreasury.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBuybackFund.is_proxy (Slither line:1425)
+
+
+End IBuybackFund.is_proxy (Slither line:1428)
+
+
+Begin IBuybackFund.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBuybackFund 
+
+End IBuybackFund.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IWETH.is_proxy (Slither line:1425)
+
+
+End IWETH.is_proxy (Slither line:1428)
+
+
+Begin IWETH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IWETH 
+
+End IWETH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMESH.is_proxy (Slither line:1425)
+
+
+End IMESH.is_proxy (Slither line:1428)
+
+
+Begin IMESH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMESH 
+
+End IMESH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRouter.is_proxy (Slither line:1425)
+
+
+End IRouter.is_proxy (Slither line:1428)
+
+
+Begin IRouter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRouter 
+
+End IRouter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUserCondition.is_proxy (Slither line:1425)
+
+
+End IUserCondition.is_proxy (Slither line:1428)
+
+
+Begin IUserCondition.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUserCondition 
+
+End IUserCondition.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UQ112x112.is_proxy (Slither line:1425)
+
+
+End UQ112x112.is_proxy (Slither line:1428)
+
+
+Begin UQ112x112.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UQ112x112 
+
+End UQ112x112.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ExchangeImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ExchangeImpl.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End ExchangeImpl.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ExchangeImpl.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin ExchangeImpl.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking allowance (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking mesh (Slither line:1689)
+Checking router (Slither line:1689)
+Checking WETH (Slither line:1689)
+Checking token0 (Slither line:1689)
+Checking token1 (Slither line:1689)
+Checking reserve0 (Slither line:1689)
+Checking reserve1 (Slither line:1689)
+Checking blockTimestampLast (Slither line:1689)
+Checking price0CumulativeLast (Slither line:1689)
+Checking price1CumulativeLast (Slither line:1689)
+Checking kLast (Slither line:1689)
+Checking balance0 (Slither line:1689)
+Checking balance1 (Slither line:1689)
+Checking fee (Slither line:1689)
+Checking mining (Slither line:1689)
+Checking lastMined (Slither line:1689)
+Checking miningIndex (Slither line:1689)
+Checking userLastIndex (Slither line:1689)
+Checking userRewardSum (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking DOMAIN_SEPARATOR (Slither line:1689)
+Checking PERMIT_TYPEHASH (Slither line:1689)
+Checking nonces (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in ExchangeImpl.fallback (Slither line:1707)
+Expression: IFactoryImpl(factory).getExchangeImplementation() (Slither line:1719)
+
+Begin ExchangeImpl.find_delegate_from_call_exp
+
+IFactoryImpl(factory).getExchangeImplementation() (Slither line:2003)
+called = IFactoryImpl(factory).getExchangeImplementation (Slither line:2010)
+Called member of IFactoryImpl(factory) (Slither line:2017)
+
+Begin ExchangeImpl.find_delegate_from_member_access
+
+Expression: IFactoryImpl(factory).getExchangeImplementation() (Slither line:2358)
+IFactoryImpl(factory) (Slither line:2371)
+getExchangeImplementation is a member of the contract type: IFactoryImpl (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IFactoryImpl (Slither line:2441)
+
+End ExchangeImpl.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End ExchangeImpl.find_delegate_variable_by_name (Slither line:1739)
+
+
+End ExchangeImpl.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ExchangeImpl.is_proxy (Slither line:1476)
+
+
+Begin ExchangeImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ExchangeImpl 
+Local Variable: impl (Slither line:1164)
+IFactoryImpl(factory) (Slither line:1171)
+Call destination IFactoryImpl(factory).getExchangeImplementation() is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: ExchangeImpl
+impl is dependent on factory
+Expression for impl: IFactoryImpl(factory).getExchangeImplementation()
+Called: IFactoryImpl(factory).getExchangeImplementation
+impl_address_from_contract_call: IFactoryImpl(factory).getExchangeImplementation()
+called: IFactoryImpl(factory).getExchangeImplementation
+found MemberAccess: IFactoryImpl(factory).getExchangeImplementation
+TypeConversion: IFactoryImpl(factory)
+find_registry_address_source: IFactoryImpl(factory).getExchangeImplementation()
+MemberAccess: IFactoryImpl(factory).getExchangeImplementation
+TypeConversion: IFactoryImpl(factory)
+Identifier: factory
+Checking external function version
+Checking public function transfer
+Checking public function transferFrom
+Checking public function approve
+Checking public function getReserves
+Checking public function getTreasury
+Checking public function initPool
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == factory)
+Checking public function changeFee
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == factory)
+Checking public function updateMiningIndex
+Checking public function claimReward
+Checking public function claimReward
+Checking public function getCurrentPool
+Checking public function estimatePos
+Checking public function estimateNeg
+Checking public function exchangePos
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == router)
+Checking public function exchangeNeg
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == router)
+Checking public function addTokenLiquidityWithLimit
+Checking public function removeLiquidityWithLimit
+Checking external function permit
+Checking external function skim
+Checking external function sync
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: impl
+functions_writing_to_variable: checking function ExchangeImpl.increaseBalance (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.updateMiningIndex (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.estimatePos (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.addTokenLiquidityWithLimit (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl._approve (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.decreaseBalance (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.giveReward (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.estimateNeg (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.approve (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.removeLiquidityWithLimit (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.getTreasury (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.grabToken (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.permit (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl._update (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.getTokenSymbol (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.sendToken (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.skim (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.getReserves (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.initPool (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.calcPos (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.exchangePos (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.sync (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.increaseTotalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.setEpochMining (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.calcNeg (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.exchangeNeg (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.decreaseTotalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.changeFee (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.getCurrentPool (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.addLiquidity (proxy_features line:898)
+functions_writing_to_variable: checking function ExchangeImpl.transferFrom (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_56', 'TMP_57', 'factory']
+functions_writing_to_variable: factory
+functions_writing_to_variable: checking function Exchange.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = factory = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: factory = msg.sender (proxy_features line:912)
+functions_writing_to_variable: Identifier: factory (proxy_features line:924)
+get_value_assigned: factory = msg.sender
+functions_writing_to_variable: exp = _token0 != address(0) (proxy_features line:909)
+functions_writing_to_variable: exp = mesh = IFactoryImpl(msg.sender).mesh() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: mesh = IFactoryImpl(msg.sender).mesh() (proxy_features line:912)
+functions_writing_to_variable: exp = router = IFactoryImpl(msg.sender).router() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: router = IFactoryImpl(msg.sender).router() (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool)(_token0 != _token1) (proxy_features line:909)
+functions_writing_to_variable: exp = token0 = _token0 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: token0 = _token0 (proxy_features line:912)
+functions_writing_to_variable: exp = token1 = _token1 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: token1 = _token1 (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool)(_fee <= 100) (proxy_features line:909)
+functions_writing_to_variable: exp = fee = _fee (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: fee = _fee (proxy_features line:912)
+functions_writing_to_variable: constructor writes msg.sender to factory (proxy_features line:929)
+functions_writing_to_variable: checking function Exchange.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Exchange.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Exchange.fallback (proxy_features line:898)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = IFactoryImpl(factory).getExchangeImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: version

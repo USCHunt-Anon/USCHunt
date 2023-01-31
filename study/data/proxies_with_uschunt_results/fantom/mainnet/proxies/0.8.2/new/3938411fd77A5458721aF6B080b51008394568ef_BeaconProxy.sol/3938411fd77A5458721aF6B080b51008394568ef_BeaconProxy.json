@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#42-119)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#42-119) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BeaconProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#707-761)",
+        "elements": [],
+        "description": "BeaconProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#707-761) may be an upgradeable proxy.\nimplementation is declared in the proxy.\nProxy._delegate(address).implementation (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#48) gets value from a cross-contract call: IBeacon(_getBeacon()).implementation()\nIBeacon appears to be a Beacon contract for the proxy\nThe address of IBeacon comes from the value of ERC1967Upgrade._getBeacon(). (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#652)\nNo setter functions found to search for compatibility checks.\n",
+        "id": "80e4fc248e74d3b052f7f0bdb0a7b7397bf523a6c4dd364b0dd26708481fa112",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Proxy._delegate(address).implementation",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "BeaconProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.2/new/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol/3938411fd77A5458721aF6B080b51008394568ef_BeaconProxy.sol#707-761)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(_getBeacon()).implementation()",
+          "beacon": "IBeacon",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

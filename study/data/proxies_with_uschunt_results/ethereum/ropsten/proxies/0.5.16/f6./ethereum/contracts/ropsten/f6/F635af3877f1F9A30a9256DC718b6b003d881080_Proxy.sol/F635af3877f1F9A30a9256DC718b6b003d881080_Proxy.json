@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.16/f6./ethereum/contracts/ropsten/f6/F635af3877f1F9A30a9256DC718b6b003d881080_Proxy.sol/F635af3877f1F9A30a9256DC718b6b003d881080_Proxy.sol#81-112)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.16/f6./ethereum/contracts/ropsten/f6/F635af3877f1F9A30a9256DC718b6b003d881080_Proxy.sol/F635af3877f1F9A30a9256DC718b6b003d881080_Proxy.sol#81-112) is an upgradeable proxy.\nimplementationPosition was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "eb504293d2573d86bccb3ccfdd8e1c1845d5dac32416ccf524b0f57e99a11dfe",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Upgradeable.implementationPosition",
+          "impl_address_setter": "Upgradeable.setImplementation(address)",
+          "impl_address_getter": "Upgradeable.getImplementation()",
+          "impl_address_location": "Upgradeable (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.16/f6./ethereum/contracts/ropsten/f6/F635af3877f1F9A30a9256DC718b6b003d881080_Proxy.sol/F635af3877f1F9A30a9256DC718b6b003d881080_Proxy.sol#40-79)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Upgradeable.setImplementationAndCall(address,bytes)": {
+                "check": "require(bool,string)(currentImplementation != _newImplementation,d784d42602)",
+                "is_correct": true
+              },
+              "Upgradeable.setImplementation(address)": {
+                "check": "require(bool,string)(currentImplementation != _newImplementation,d784d42602)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getImplementation()",
+              "setImplementation(address)",
+              "setImplementationAndCall(address,bytes)",
+              "getOwner()",
+              "transferOwnership(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

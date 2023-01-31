@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "BaseUpgradeabililtyProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.7.6/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol#22-82)",
+        "elements": [],
+        "description": "BaseUpgradeabililtyProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.7.6/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol#22-82) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ab2adb1454859b1d3ddb7fa368255f07959f2cef9009ecc1a1ffba57d8085960",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "RootChainlink (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.7.6/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol#90-117)",
+        "elements": [],
+        "description": "RootChainlink (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.7.6/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol#90-117) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "70c2095b70dd412479f557797c2d3e8e55d9fbdd6c486ffb03d6608a3f8de400",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BaseUpgradeabililtyProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "RootChainlink.implement(address)",
+          "impl_address_getter": "BaseUpgradeabililtyProxy.implementation()",
+          "impl_address_location": "BaseUpgradeabililtyProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.7.6/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol/aaD2341724e4dC544c70D25bC635500B80C9D07d_RootChainlink.sol#22-82)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "RootChainlink.implement(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "initialize()",
+              "implementation()",
+              "implement(address)",
+              "setAdmin(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

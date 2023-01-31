@@ -1,0 +1,698 @@
+
+Begin CrowdfundStorage.is_proxy (Slither line:1425)
+
+
+End CrowdfundStorage.is_proxy (Slither line:1428)
+
+
+Begin CrowdfundStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrowdfundStorage 
+
+End CrowdfundStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICrowdfundFactory.is_proxy (Slither line:1425)
+
+
+End ICrowdfundFactory.is_proxy (Slither line:1428)
+
+
+Begin ICrowdfundFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICrowdfundFactory 
+
+End ICrowdfundFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrowdfundProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CrowdfundProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+_impl
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is _impl (Slither line:2828)
+dest.value: _impl (Slither line:2831)
+Expression: logic (Slither line:2836)
+
+End CrowdfundProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End CrowdfundProxy.is_proxy (Slither line:1476)
+
+
+Begin CrowdfundProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrowdfundProxy 
+CrowdfundProxy is delegating to logic
+Looking for setter (Slither line:1200)
+
+Looking for setter in CrowdfundStorage (Slither line:1204)
+
+
+Begin CrowdfundStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CrowdfundStorage 
+Looking in CrowdfundProxy (Slither line:1213)
+
+Begin CrowdfundProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CrowdfundProxy (Slither line:1220)
+Looking for setter in CrowdfundLogic (Slither line:1228)
+
+
+Begin CrowdfundLogic.find_setter_in_contract (Slither line:3119)
+
+Checking function: contribute(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+require(bool,string)(startAmount < fundingCap,Crowdfund: Funding cap already reached)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+_mint(backer,valueToTokens(eligibleAmount))
+require(bool,string)(status == Status.FUNDING,Crowdfund: Funding must be open)
+tokens = value * (TOKEN_SCALE)
+is an Assignment Operation (Slither line:3216)
+Contribution(backer,eligibleAmount)
+sendValue(backer,amount - eligibleAmount)
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+require(bool,string)(amount == msg.value,Crowdfund: Amount is not value sent)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+totalSupply = totalSupply + value
+is an Assignment Operation (Slither line:3216)
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_mint(backer,valueToTokens(amount))
+Transfer(address(0),to,value)
+Contribution(backer,amount)
+nonReentrant()
+Checking function: redeem(uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance > 0,Crowdfund: No ETH available to redeem)
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(balanceOf[msg.sender] >= tokenAmount,Crowdfund: Insufficient balance)
+totalSupply = totalSupply - value
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+Transfer(from,address(0),value)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+_burn(msg.sender,tokenAmount)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+sendValue(address(msg.sender),redeemable)
+Redeemed(msg.sender,redeemable)
+nonReentrant()
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+(tokenAmount * address(this).balance) / totalSupply
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+Checking function: redeemableFromTokens(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+(tokenAmount * address(this).balance) / totalSupply
+Checking function: valueToTokens(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+tokens = value * (TOKEN_SCALE)
+is an Assignment Operation (Slither line:3216)
+Checking function: tokensToValue(uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: closeFunding() returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+require(bool,string)(status == Status.FUNDING,Crowdfund: Funding must be open)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+status = Status.TRADING
+is an Assignment Operation (Slither line:3216)
+_mint(operator,operatorTokens)
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+FundingClosed(address(this).balance,operatorTokens)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+sendValue(fundingRecipient,address(this).balance)
+totalSupply = totalSupply + value
+is an Assignment Operation (Slither line:3216)
+onlyOperator()
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+nonReentrant()
+Transfer(address(0),to,value)
+require(bool)(msg.sender == operator)
+Checking function: sendValue(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: private
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: private
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_approve(msg.sender,spender,value)
+true
+Approval(owner,spender,value)
+allowance[owner][spender] = value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Transfer(from,to,value)
+_transfer(msg.sender,to,value)
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+true
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_transfer(from,to,value)
+Transfer(from,to,value)
+true
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+allowance[from][msg.sender] = allowance[from][msg.sender] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundLogic.find_setter_in_contract (Slither line:3345)
+
+
+Begin CrowdfundProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in CrowdfundProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin CrowdfundStorage.find_getter_in_contract (Slither line:2974)
+
+logic is a Variable object
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CrowdfundStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin CrowdfundProxy.find_getter_in_contract (Slither line:2974)
+
+logic is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CrowdfundProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in CrowdfundProxy (Slither line:1305)
+or in CrowdfundStorage (Slither line:1319)
+
+Begin CrowdfundLogic.find_getter_in_contract (Slither line:2974)
+
+logic is a Variable object
+Checking function: contribute (Slither line:2988)
+Checking function: redeem (Slither line:2988)
+Checking function: redeemableFromTokens (Slither line:2988)
+redeemableFromTokens returns uint256 variable  (Slither line:3008)
+RETURN node expression: (tokenAmount * address(this).balance) / totalSupply (Slither line:3028)
+Checking function: valueToTokens (Slither line:2988)
+valueToTokens returns uint256 variable called tokens (Slither line:3008)
+Checking function: tokensToValue (Slither line:2988)
+tokensToValue returns uint256 variable called value (Slither line:3008)
+Checking function: closeFunding (Slither line:2988)
+Checking function: sendValue (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _transfer (Slither line:2988)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CrowdfundLogic.find_getter_in_contract (Slither line:3083)
+
+
+Begin CrowdfundLogic.find_setter_in_contract (Slither line:3119)
+
+Checking function: contribute(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+require(bool,string)(startAmount < fundingCap,Crowdfund: Funding cap already reached)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+_mint(backer,valueToTokens(eligibleAmount))
+require(bool,string)(status == Status.FUNDING,Crowdfund: Funding must be open)
+tokens = value * (TOKEN_SCALE)
+is an Assignment Operation (Slither line:3216)
+Contribution(backer,eligibleAmount)
+sendValue(backer,amount - eligibleAmount)
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+require(bool,string)(amount == msg.value,Crowdfund: Amount is not value sent)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+totalSupply = totalSupply + value
+is an Assignment Operation (Slither line:3216)
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_mint(backer,valueToTokens(amount))
+Transfer(address(0),to,value)
+Contribution(backer,amount)
+nonReentrant()
+Checking function: redeem(uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance > 0,Crowdfund: No ETH available to redeem)
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(balanceOf[msg.sender] >= tokenAmount,Crowdfund: Insufficient balance)
+totalSupply = totalSupply - value
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+Transfer(from,address(0),value)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+_burn(msg.sender,tokenAmount)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+sendValue(address(msg.sender),redeemable)
+Redeemed(msg.sender,redeemable)
+nonReentrant()
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+(tokenAmount * address(this).balance) / totalSupply
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+Checking function: redeemableFromTokens(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+(tokenAmount * address(this).balance) / totalSupply
+Checking function: valueToTokens(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+tokens = value * (TOKEN_SCALE)
+is an Assignment Operation (Slither line:3216)
+Checking function: tokensToValue(uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: closeFunding() returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+require(bool,string)(status == Status.FUNDING,Crowdfund: Funding must be open)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+status = Status.TRADING
+is an Assignment Operation (Slither line:3216)
+_mint(operator,operatorTokens)
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+FundingClosed(address(this).balance,operatorTokens)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+sendValue(fundingRecipient,address(this).balance)
+totalSupply = totalSupply + value
+is an Assignment Operation (Slither line:3216)
+onlyOperator()
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+nonReentrant()
+Transfer(address(0),to,value)
+require(bool)(msg.sender == operator)
+Checking function: sendValue(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: private
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: private
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_approve(msg.sender,spender,value)
+true
+Approval(owner,spender,value)
+allowance[owner][spender] = value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Transfer(from,to,value)
+_transfer(msg.sender,to,value)
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+true
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_transfer(from,to,value)
+Transfer(from,to,value)
+true
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+allowance[from][msg.sender] = allowance[from][msg.sender] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundLogic.find_setter_in_contract (Slither line:3345)
+
+Checking for logic at slot 16 in contract CrowdfundStorage (Slither line:1355)
+Found logic at slot 16 in contract CrowdfundStorage (Slither line:1362)
+
+Begin CrowdfundStorage.find_getter_in_contract (Slither line:2974)
+
+logic is a Variable object
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CrowdfundStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin CrowdfundStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundStorage.find_setter_in_contract (Slither line:3345)
+
+Checking for logic at slot 16 in contract CrowdfundLogic (Slither line:1355)
+Found logic at slot 16 in contract CrowdfundLogic (Slither line:1362)
+
+Begin CrowdfundLogic.find_getter_in_contract (Slither line:2974)
+
+logic is a Variable object
+Checking function: contribute (Slither line:2988)
+Checking function: redeem (Slither line:2988)
+Checking function: redeemableFromTokens (Slither line:2988)
+redeemableFromTokens returns uint256 variable  (Slither line:3008)
+RETURN node expression: (tokenAmount * address(this).balance) / totalSupply (Slither line:3028)
+Checking function: valueToTokens (Slither line:2988)
+valueToTokens returns uint256 variable called tokens (Slither line:3008)
+Checking function: tokensToValue (Slither line:2988)
+tokensToValue returns uint256 variable called value (Slither line:3008)
+Checking function: closeFunding (Slither line:2988)
+Checking function: sendValue (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _transfer (Slither line:2988)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CrowdfundLogic.find_getter_in_contract (Slither line:3083)
+
+
+Begin CrowdfundLogic.find_setter_in_contract (Slither line:3119)
+
+Checking function: contribute(address,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+require(bool,string)(startAmount < fundingCap,Crowdfund: Funding cap already reached)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+_mint(backer,valueToTokens(eligibleAmount))
+require(bool,string)(status == Status.FUNDING,Crowdfund: Funding must be open)
+tokens = value * (TOKEN_SCALE)
+is an Assignment Operation (Slither line:3216)
+Contribution(backer,eligibleAmount)
+sendValue(backer,amount - eligibleAmount)
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+require(bool,string)(amount == msg.value,Crowdfund: Amount is not value sent)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+totalSupply = totalSupply + value
+is an Assignment Operation (Slither line:3216)
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_mint(backer,valueToTokens(amount))
+Transfer(address(0),to,value)
+Contribution(backer,amount)
+nonReentrant()
+Checking function: redeem(uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance > 0,Crowdfund: No ETH available to redeem)
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(balanceOf[msg.sender] >= tokenAmount,Crowdfund: Insufficient balance)
+totalSupply = totalSupply - value
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+Transfer(from,address(0),value)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+_burn(msg.sender,tokenAmount)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+sendValue(address(msg.sender),redeemable)
+Redeemed(msg.sender,redeemable)
+nonReentrant()
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+(tokenAmount * address(this).balance) / totalSupply
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+Checking function: redeemableFromTokens(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+(tokenAmount * address(this).balance) / totalSupply
+Checking function: valueToTokens(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+tokens = value * (TOKEN_SCALE)
+is an Assignment Operation (Slither line:3216)
+Checking function: tokensToValue(uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: closeFunding() returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(this).balance >= amount,Address: insufficient balance)
+require(bool,string)(success,Address: unable to send value, recipient may have reverted)
+require(bool,string)(status == Status.FUNDING,Crowdfund: Funding must be open)
+(success) = recipient.call{value: amount}()
+is an Assignment Operation (Slither line:3216)
+status = Status.TRADING
+is an Assignment Operation (Slither line:3216)
+_mint(operator,operatorTokens)
+require(bool,string)(reentrancy_status != REENTRANCY_ENTERED,Reentrant call)
+FundingClosed(address(this).balance,operatorTokens)
+reentrancy_status = REENTRANCY_ENTERED
+is an Assignment Operation (Slither line:3216)
+sendValue(fundingRecipient,address(this).balance)
+totalSupply = totalSupply + value
+is an Assignment Operation (Slither line:3216)
+onlyOperator()
+reentrancy_status = REENTRANCY_NOT_ENTERED
+is an Assignment Operation (Slither line:3216)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+nonReentrant()
+Transfer(address(0),to,value)
+require(bool)(msg.sender == operator)
+Checking function: sendValue(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: private
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: private
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_approve(msg.sender,spender,value)
+true
+Approval(owner,spender,value)
+allowance[owner][spender] = value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Transfer(from,to,value)
+_transfer(msg.sender,to,value)
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+true
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+_transfer(from,to,value)
+Transfer(from,to,value)
+true
+balanceOf[from] = balanceOf[from] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+allowance[from][msg.sender] = allowance[from][msg.sender] - value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+balanceOf[to] = balanceOf[to] + value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End CrowdfundLogic.find_setter_in_contract (Slither line:3345)
+
+Checking node of type NEW VARIABLE (Slither line:1395)
+_impl
+_impl = logic
+Checking node of type NEW VARIABLE (Slither line:1395)
+switch_expr_3047_176_0_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0)
+Checking node of type EXPRESSION (Slither line:1395)
+returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,size_fallback_asm_0)
+Checking node of type EXPRESSION (Slither line:1395)
+size_fallback_asm_0 = returndatasize()()
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+revert(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0)
+Checking node of type NEW VARIABLE (Slither line:1395)
+ptr_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+result_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+switch_expr_3047_176_0_fallback_asm_0 = result_fallback_asm_0
+Checking node of type NEW VARIABLE (Slither line:1395)
+size_fallback_asm_0
+None
+Checking node of type END_IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+Checking node of type EXPRESSION (Slither line:1395)
+ptr_fallback_asm_0 = mload(uint256)(0x40)
+
+End CrowdfundProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrowdfundLogic.is_proxy (Slither line:1425)
+
+
+End CrowdfundLogic.is_proxy (Slither line:1428)
+
+
+Begin CrowdfundLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrowdfundLogic 
+
+End CrowdfundLogic.is_upgradeable_proxy (Slither line:1407)
+

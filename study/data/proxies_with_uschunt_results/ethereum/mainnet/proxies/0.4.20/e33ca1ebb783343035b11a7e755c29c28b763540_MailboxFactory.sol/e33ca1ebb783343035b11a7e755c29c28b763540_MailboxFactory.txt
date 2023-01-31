@@ -1,0 +1,430 @@
+
+Begin IAugur.is_proxy (Slither line:1425)
+
+
+End IAugur.is_proxy (Slither line:1428)
+
+
+Begin IAugur.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAugur 
+
+End IAugur.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IControlled.is_proxy (Slither line:1425)
+
+
+End IControlled.is_proxy (Slither line:1428)
+
+
+Begin IControlled.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IControlled 
+
+End IControlled.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Controlled.is_proxy (Slither line:1425)
+
+
+End Controlled.is_proxy (Slither line:1428)
+
+
+Begin Controlled.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Controlled 
+
+End Controlled.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IController.is_proxy (Slither line:1425)
+
+
+End IController.is_proxy (Slither line:1428)
+
+
+Begin IController.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IController 
+
+End IController.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MailboxFactory.is_proxy (Slither line:1425)
+
+
+End MailboxFactory.is_proxy (Slither line:1428)
+
+
+Begin MailboxFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MailboxFactory 
+
+End MailboxFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegationTarget.is_proxy (Slither line:1425)
+
+
+End DelegationTarget.is_proxy (Slither line:1428)
+
+
+Begin DelegationTarget.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegationTarget 
+
+End DelegationTarget.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Delegator.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Delegator.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let _calldataMemoryOffset := mload(0x40) (Slither line:1576)
+    let _size := and(add(calldatasize(), 0x1f), not(0x1f)) (Slither line:1576)
+    mstore(0x40, add(_calldataMemoryOffset, _size)) (Slither line:1576)
+    calldatacopy(_calldataMemoryOffset, 0x0, calldatasize()) (Slither line:1576)
+    let _retval := delegatecall(gas(), _target, _calldataMemoryOffset, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Delegator.find_delegate_variable_from_name
+Searching for _target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking controller (Slither line:1689)
+Checking controllerLookupName (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _target (Slither line:1703)
+_target is a Local Variable in Delegator.fallback (Slither line:1707)
+Expression: controller.lookup(controllerLookupName) (Slither line:1719)
+
+Begin Delegator.find_delegate_from_call_exp
+
+controller.lookup(controllerLookupName) (Slither line:2003)
+called = controller.lookup (Slither line:2010)
+Called member of controller (Slither line:2017)
+
+Begin Delegator.find_delegate_from_member_access
+
+Expression: controller.lookup(controllerLookupName) (Slither line:2358)
+controller (Slither line:2371)
+lookup is a member of the contract type: IController (Slither line:2416)
+Which is an interface (Slither line:2420)
+Looking for lookup in IController (Slither line:2523)
+Found the function called lookup (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+
+End Delegator.find_delegate_from_member_access (Slither line:2645)
+
+
+End Delegator.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End Delegator.find_delegate_variable_by_name (Slither line:1739)
+
+
+Begin Delegator.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End Delegator.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Delegator.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Delegator.is_proxy (Slither line:1476)
+
+
+Begin Delegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Delegator 
+
+End Delegator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IOwnable.is_proxy (Slither line:1425)
+
+
+End IOwnable.is_proxy (Slither line:1428)
+
+
+Begin IOwnable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IOwnable 
+
+End IOwnable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ITyped.is_proxy (Slither line:1425)
+
+
+End ITyped.is_proxy (Slither line:1428)
+
+
+Begin ITyped.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ITyped 
+
+End ITyped.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMathUint256.is_proxy (Slither line:1425)
+
+
+End SafeMathUint256.is_proxy (Slither line:1428)
+
+
+Begin SafeMathUint256.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMathUint256 
+
+End SafeMathUint256.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Basic.is_proxy (Slither line:1425)
+
+
+End ERC20Basic.is_proxy (Slither line:1428)
+
+
+Begin ERC20Basic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Basic 
+
+End ERC20Basic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFeeToken.is_proxy (Slither line:1425)
+
+
+End IFeeToken.is_proxy (Slither line:1428)
+
+
+Begin IFeeToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFeeToken 
+
+End IFeeToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFeeWindow.is_proxy (Slither line:1425)
+
+
+End IFeeWindow.is_proxy (Slither line:1428)
+
+
+Begin IFeeWindow.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFeeWindow 
+
+End IFeeWindow.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMailbox.is_proxy (Slither line:1425)
+
+
+End IMailbox.is_proxy (Slither line:1428)
+
+
+Begin IMailbox.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMailbox 
+
+End IMailbox.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMarket.is_proxy (Slither line:1425)
+
+
+End IMarket.is_proxy (Slither line:1428)
+
+
+Begin IMarket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMarket 
+
+End IMarket.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IReportingParticipant.is_proxy (Slither line:1425)
+
+
+End IReportingParticipant.is_proxy (Slither line:1428)
+
+
+Begin IReportingParticipant.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IReportingParticipant 
+
+End IReportingParticipant.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDisputeCrowdsourcer.is_proxy (Slither line:1425)
+
+
+End IDisputeCrowdsourcer.is_proxy (Slither line:1428)
+
+
+Begin IDisputeCrowdsourcer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDisputeCrowdsourcer 
+
+End IDisputeCrowdsourcer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IReputationToken.is_proxy (Slither line:1425)
+
+
+End IReputationToken.is_proxy (Slither line:1428)
+
+
+Begin IReputationToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IReputationToken 
+
+End IReputationToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniverse.is_proxy (Slither line:1425)
+
+
+End IUniverse.is_proxy (Slither line:1428)
+
+
+Begin IUniverse.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniverse 
+
+End IUniverse.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICash.is_proxy (Slither line:1425)
+
+
+End ICash.is_proxy (Slither line:1428)
+
+
+Begin ICash.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICash 
+
+End ICash.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IOrders.is_proxy (Slither line:1425)
+
+
+End IOrders.is_proxy (Slither line:1428)
+
+
+Begin IOrders.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IOrders 
+
+End IOrders.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IShareToken.is_proxy (Slither line:1425)
+
+
+End IShareToken.is_proxy (Slither line:1428)
+
+
+Begin IShareToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IShareToken 
+
+End IShareToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Order.is_proxy (Slither line:1425)
+
+
+End Order.is_proxy (Slither line:1428)
+
+
+Begin Order.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Order 
+
+End Order.is_upgradeable_proxy (Slither line:1407)
+

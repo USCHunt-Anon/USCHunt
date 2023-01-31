@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "UpgradableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.6/b7./bsc/contracts/testnet/b7/B73a6eE25eC03084a5BeBA004fa67e72C2Dc76B9_UpgradableProxy.sol/B73a6eE25eC03084a5BeBA004fa67e72C2Dc76B9_UpgradableProxy.sol#53-151)",
+        "elements": [],
+        "description": "UpgradableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.6/b7./bsc/contracts/testnet/b7/B73a6eE25eC03084a5BeBA004fa67e72C2Dc76B9_UpgradableProxy.sol/B73a6eE25eC03084a5BeBA004fa67e72C2Dc76B9_UpgradableProxy.sol#53-151) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(defipanzer.network.proxy.implementation)\nMissing compatibility check in UpgradableProxy.constructor(address)\nFound compatibility check in UpgradableProxy.updateAndCall(address,bytes)\nFound compatibility check in UpgradableProxy.updateImplementation(address)\n",
+        "id": "27a868e135a204b3b84526f91b7bf3e645ecb4bbe3ff4b3990d79127c2fa785f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradableProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "UpgradableProxy.updateImplementation(address)",
+          "impl_address_getter": "UpgradableProxy.loadImplementation()",
+          "impl_address_location": "UpgradableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.6/b7./bsc/contracts/testnet/b7/B73a6eE25eC03084a5BeBA004fa67e72C2Dc76B9_UpgradableProxy.sol/B73a6eE25eC03084a5BeBA004fa67e72C2Dc76B9_UpgradableProxy.sol#53-151)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(defipanzer.network.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "UpgradableProxy.constructor(address)": "missing",
+              "UpgradableProxy.updateAndCall(address,bytes)": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+              "UpgradableProxy.updateImplementation(address)": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

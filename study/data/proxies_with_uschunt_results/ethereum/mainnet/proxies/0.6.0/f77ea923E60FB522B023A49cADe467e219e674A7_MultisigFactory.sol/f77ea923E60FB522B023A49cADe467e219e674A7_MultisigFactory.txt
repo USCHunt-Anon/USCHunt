@@ -1,0 +1,272 @@
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ContextUpgradeable.is_proxy (Slither line:1425)
+
+
+End ContextUpgradeable.is_proxy (Slither line:1428)
+
+
+Begin ContextUpgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ContextUpgradeable 
+
+End ContextUpgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnableUpgradeable.is_proxy (Slither line:1425)
+
+
+End OwnableUpgradeable.is_proxy (Slither line:1428)
+
+
+Begin OwnableUpgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnableUpgradeable 
+
+End OwnableUpgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GnosisSafeProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GnosisSafeProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End GnosisSafeProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GnosisSafeProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0,mc_fallback_asm_0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+mc_fallback_asm_0
+
+End GnosisSafeProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GnosisSafeProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'mc'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin GnosisSafeProxy.find_delegate_variable_from_name
+Searching for mc (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking masterCopy (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '7654:1:0', 'type': '', 'value': '0'} (Slither line:1909)
+Found sload(0), getting first state variable
+
+End GnosisSafeProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End GnosisSafeProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End GnosisSafeProxy.is_proxy (Slither line:1476)
+
+
+Begin GnosisSafeProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GnosisSafeProxy 
+GnosisSafeProxy is delegating to masterCopy
+Looking for setter (Slither line:1200)
+
+
+Begin GnosisSafeProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End GnosisSafeProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in GnosisSafeProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin GnosisSafeProxy.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End GnosisSafeProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in GnosisSafeProxy (Slither line:1305)
+Checking for masterCopy at slot 0 in contract Initializable (Slither line:1355)
+Found _initialized at slot 0 in contract Initializable (Slither line:1362)
+Checking for _initialized at slot 0 in contract ContextUpgradeable (Slither line:1355)
+Found _initialized at slot 0 in contract ContextUpgradeable (Slither line:1362)
+Checking for _initialized at slot 0 in contract OwnableUpgradeable (Slither line:1355)
+Found _initialized at slot 0 in contract OwnableUpgradeable (Slither line:1362)
+Checking for _initialized at slot 0 in contract MultisigFactory (Slither line:1355)
+Found _initialized at slot 0 in contract MultisigFactory (Slither line:1362)
+Checking node of type NEW VARIABLE (Slither line:1395)
+mc_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Checking node of type IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+mstore(uint256,uint256)(0,mc_fallback_asm_0)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(0,returndatasize()())
+Checking node of type NEW VARIABLE (Slither line:1395)
+success_fallback_asm_0
+None
+Checking node of type END_IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(0,0x20)
+Checking node of type IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+mc_fallback_asm_0 = sload(uint256)(0) & 0xffffffffffffffffffffffffffffffffffffffff
+Checking node of type EXPRESSION (Slither line:1395)
+revert(uint256,uint256)(0,returndatasize()())
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type END_IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+Checking node of type EXPRESSION (Slither line:1395)
+success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),mc_fallback_asm_0,0,calldatasize()(),0,0)
+
+End GnosisSafeProxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking external function fallback
+functions_writing_to_variable: masterCopy
+functions_writing_to_variable: checking function GnosisSafeProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafeProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_masterCopy != address(0),Invalid master copy address provided) (proxy_features line:909)
+functions_writing_to_variable: exp = masterCopy = _masterCopy (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopy = _masterCopy (proxy_features line:912)
+functions_writing_to_variable: Identifier: masterCopy (proxy_features line:924)
+get_value_assigned: masterCopy = _masterCopy
+functions_writing_to_variable: constructor writes _masterCopy to masterCopy (proxy_features line:929)
+has_compatibility_checks: dependencies: ['_masterCopy']
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: calldataload(uint256)(0) == 0xa619486e00000000000000000000000000000000000000000000000000000000
+can_toggle_delegatecall_on_off: successors:
+ NodeType: EXPRESSION  expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+ NodeType: IF  expression: success_fallback_asm_0 == 0
+ NodeType: EXPRESSION  expression: mstore(uint256,uint256)(0,mc_fallback_asm_0)
+ NodeType: EXPRESSION  expression: return(uint256,uint256)(0,returndatasize()())
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: return(uint256,uint256)(0,0x20)
+ NodeType: EXPRESSION  expression: revert(uint256,uint256)(0,returndatasize()())
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+ NodeType: EXPRESSION  expression: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),mc_fallback_asm_0,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off: delegatecall_condition = False
+Found public function: constructor
+Found fallback
+
+Begin IMasterRegistry.is_proxy (Slither line:1425)
+
+
+End IMasterRegistry.is_proxy (Slither line:1428)
+
+
+Begin IMasterRegistry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMasterRegistry 
+
+End IMasterRegistry.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MultisigFactory.is_proxy (Slither line:1425)
+
+
+End MultisigFactory.is_proxy (Slither line:1428)
+
+
+Begin MultisigFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MultisigFactory 
+
+End MultisigFactory.is_upgradeable_proxy (Slither line:1407)
+

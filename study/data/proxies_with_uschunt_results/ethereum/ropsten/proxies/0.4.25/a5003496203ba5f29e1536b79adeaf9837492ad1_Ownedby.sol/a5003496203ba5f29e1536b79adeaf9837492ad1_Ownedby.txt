@@ -1,0 +1,503 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20Interface.is_proxy (Slither line:1425)
+
+
+End ERC20Interface.is_proxy (Slither line:1428)
+
+
+Begin ERC20Interface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Interface 
+
+End ERC20Interface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ApproveAndCallFallBack.is_proxy (Slither line:1425)
+
+
+End ApproveAndCallFallBack.is_proxy (Slither line:1428)
+
+
+Begin ApproveAndCallFallBack.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ApproveAndCallFallBack 
+
+End ApproveAndCallFallBack.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownedby.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Ownedby.is_proxy (Slither line:1476)
+
+
+Begin Ownedby.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownedby 
+Ownedby is delegating to currentVersion
+Looking for setter (Slither line:1200)
+
+
+Begin Ownedby.find_setter_in_contract (Slither line:3109)
+
+Checking function: Owned() returns() (Slither line:3117)
+Visibility: public
+owner = msg.sender
+is an Assignment Operation (Slither line:3206)
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(msg.sender == owner)
+onlyOwner()
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3206)
+Checking function: acceptOwnership() returns() (Slither line:3117)
+Visibility: public
+require(bool)(msg.sender == newOwner)
+OwnershipTransferred(owner,newOwner)
+owner = newOwner
+is an Assignment Operation (Slither line:3206)
+newOwner = address(0)
+is an Assignment Operation (Slither line:3206)
+Checking function: Relay(address) returns() (Slither line:3117)
+Visibility: public
+currentVersion = initAddr
+is an Assignment Operation (Slither line:3206)
+
+End Ownedby.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: Relay in contract: Ownedby (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Ownedby.find_getter_in_contract (Slither line:2964)
+
+currentVersion is a Variable object
+initAddr
+Checking function: Owned (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: acceptOwnership (Slither line:2978)
+Checking function: Relay (Slither line:2978)
+Checking function: update (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Ownedby.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Ownedby (Slither line:1305)
+Checking for currentVersion at slot 2 in contract GEOPAY (Slither line:1355)
+Found currentVersion at slot 2 in contract GEOPAY (Slither line:1362)
+
+Begin GEOPAY.find_getter_in_contract (Slither line:2964)
+
+currentVersion is a Variable object
+initAddr
+Checking function: safeAdd (Slither line:2978)
+safeAdd returns uint256 variable called c (Slither line:2998)
+Checking function: safeSub (Slither line:2978)
+safeSub returns uint256 variable called c (Slither line:2998)
+Checking function: safeMul (Slither line:2978)
+safeMul returns uint256 variable called c (Slither line:2998)
+Checking function: safeDiv (Slither line:2978)
+safeDiv returns uint256 variable called c (Slither line:2998)
+Checking function: Owned (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: acceptOwnership (Slither line:2978)
+Checking function: Relay (Slither line:2978)
+Checking function: update (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: totalSupply (Slither line:2978)
+totalSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: _totalSupply - balances[address(0)] (Slither line:3018)
+Checking function: balanceOf (Slither line:2978)
+balanceOf returns uint256 variable called balance (Slither line:2998)
+RETURN node expression: balances[tokenOwner] (Slither line:3018)
+Checking function: transfer (Slither line:2978)
+transfer returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: approve (Slither line:2978)
+approve returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: transferFrom (Slither line:2978)
+transferFrom returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: allowance (Slither line:2978)
+allowance returns uint256 variable called remaining (Slither line:2998)
+RETURN node expression: allowed[tokenOwner][spender] (Slither line:3018)
+Checking function: approveAndCall (Slither line:2978)
+approveAndCall returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+Checking function: transferAnyERC20Token (Slither line:2978)
+transferAnyERC20Token returns bool variable called success (Slither line:2998)
+RETURN node expression: ERC20Interface(tokenAddress).transfer(owner,tokens) (Slither line:3018)
+Checking function: transferEther (Slither line:2978)
+
+End GEOPAY.find_getter_in_contract (Slither line:3073)
+
+Checking public function Owned
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == newOwner)
+Checking public function Relay
+Checking public function update
+Checking public function fallback
+functions_writing_to_variable: currentVersion
+functions_writing_to_variable: checking function Ownedby.update (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != owner (proxy_features line:904)
+functions_writing_to_variable: exp = revert()() (proxy_features line:904)
+functions_writing_to_variable: exp = currentVersion = newAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: currentVersion = newAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:919)
+get_value_assigned: currentVersion = newAddress
+functions_writing_to_variable: update writes newAddress to currentVersion (proxy_features line:924)
+functions_writing_to_variable: checking function Ownedby.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.Owned (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.Relay (proxy_features line:893)
+functions_writing_to_variable: exp = currentVersion = initAddr (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: currentVersion = initAddr (proxy_features line:907)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:919)
+get_value_assigned: currentVersion = initAddr
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:907)
+functions_writing_to_variable: Relay writes initAddr to currentVersion (proxy_features line:924)
+functions_writing_to_variable: checking function Ownedby.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.acceptOwnership (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newAddress', 'initAddr']
+has_compatibility_checks: checking public function update
+has_compatibility_checks: IF node exp = msg.sender != owner
+has_compatibility_checks: IF node can lead to revert ['revert()()']
+has_compatibility_checks: IF node can lead to revert ['revert()()']
+has_compatibility_checks: ConditionalExpression if msg.sender != owner then revert()() else currentVersion = newAddress
+has_compatibility_checks: checking public function Relay
+Found public function: Owned
+has_time_delay: (node.type) EXPRESSION
+(Expression) currentVersion = initAddr
+has_time_delay: (node.type) EXPRESSION
+(Expression) owner = msg.sender
+
+Begin GEOPAY.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin GEOPAY.find_delegatecall_in_exp_node
+
+Found Expression Node: revert()() (Slither line:2792)
+Expression called: revert()
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End GEOPAY.find_delegatecall_in_exp_node (Slither line:2848)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End GEOPAY.is_proxy (Slither line:1476)
+
+
+Begin GEOPAY.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GEOPAY 
+GEOPAY is delegating to currentVersion
+Looking for setter (Slither line:1200)
+
+Looking for setter in Ownedby (Slither line:1204)
+
+
+Begin Ownedby.find_setter_in_contract (Slither line:3109)
+
+Expression: initAddr (Slither line:3112)
+Checking function: Owned() returns() (Slither line:3117)
+Visibility: public
+owner = msg.sender
+is an Assignment Operation (Slither line:3206)
+initAddr
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(msg.sender == owner)
+onlyOwner()
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3206)
+initAddr
+Checking function: acceptOwnership() returns() (Slither line:3117)
+Visibility: public
+require(bool)(msg.sender == newOwner)
+OwnershipTransferred(owner,newOwner)
+owner = newOwner
+is an Assignment Operation (Slither line:3206)
+initAddr
+newOwner = address(0)
+is an Assignment Operation (Slither line:3206)
+initAddr
+Checking function: Relay(address) returns() (Slither line:3117)
+Visibility: public
+currentVersion = initAddr
+is an Assignment Operation (Slither line:3206)
+initAddr
+
+End Ownedby.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: Relay in contract: Ownedby (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Ownedby.find_getter_in_contract (Slither line:2964)
+
+currentVersion is a Variable object
+initAddr
+Checking function: Owned (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: acceptOwnership (Slither line:2978)
+Checking function: Relay (Slither line:2978)
+Checking function: update (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Ownedby.find_getter_in_contract (Slither line:3073)
+
+
+Begin GEOPAY.find_getter_in_contract (Slither line:2964)
+
+currentVersion is a Variable object
+initAddr
+Checking function: safeAdd (Slither line:2978)
+safeAdd returns uint256 variable called c (Slither line:2998)
+Checking function: safeSub (Slither line:2978)
+safeSub returns uint256 variable called c (Slither line:2998)
+Checking function: safeMul (Slither line:2978)
+safeMul returns uint256 variable called c (Slither line:2998)
+Checking function: safeDiv (Slither line:2978)
+safeDiv returns uint256 variable called c (Slither line:2998)
+Checking function: Owned (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: acceptOwnership (Slither line:2978)
+Checking function: Relay (Slither line:2978)
+Checking function: update (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: totalSupply (Slither line:2978)
+totalSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: _totalSupply - balances[address(0)] (Slither line:3018)
+Checking function: balanceOf (Slither line:2978)
+balanceOf returns uint256 variable called balance (Slither line:2998)
+RETURN node expression: balances[tokenOwner] (Slither line:3018)
+Checking function: transfer (Slither line:2978)
+transfer returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: approve (Slither line:2978)
+approve returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: transferFrom (Slither line:2978)
+transferFrom returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: allowance (Slither line:2978)
+allowance returns uint256 variable called remaining (Slither line:2998)
+RETURN node expression: allowed[tokenOwner][spender] (Slither line:3018)
+Checking function: approveAndCall (Slither line:2978)
+approveAndCall returns bool variable called success (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+Checking function: transferAnyERC20Token (Slither line:2978)
+transferAnyERC20Token returns bool variable called success (Slither line:2998)
+RETURN node expression: ERC20Interface(tokenAddress).transfer(owner,tokens) (Slither line:3018)
+Checking function: transferEther (Slither line:2978)
+
+End GEOPAY.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in GEOPAY (Slither line:1305)
+or in Ownedby (Slither line:1319)
+Checking for currentVersion at slot 2 in contract Ownedby (Slither line:1355)
+Found currentVersion at slot 2 in contract Ownedby (Slither line:1362)
+
+Begin Ownedby.find_getter_in_contract (Slither line:2964)
+
+currentVersion is a Variable object
+initAddr
+Checking function: Owned (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: acceptOwnership (Slither line:2978)
+Checking function: Relay (Slither line:2978)
+Checking function: update (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Ownedby.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: initAddr
+impl_address_from_contract_call: StateVariable currentVersion
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression revert()()
+Checking public function safeAdd
+Checking public function safeSub
+Checking public function safeMul
+Checking public function safeDiv
+Checking public function Owned
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == newOwner)
+Checking public function Relay
+Checking public function update
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function allowance
+Checking public function transfer
+Checking public function approve
+Checking public function transferFrom
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function approve
+Checking public function transferFrom
+Checking public function allowance
+Checking public function approveAndCall
+Checking public function transferAnyERC20Token
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transferEther
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+Checking public function fallback
+functions_writing_to_variable: currentVersion
+functions_writing_to_variable: checking function GEOPAY.update (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != owner (proxy_features line:904)
+functions_writing_to_variable: exp = revert()() (proxy_features line:904)
+functions_writing_to_variable: exp = currentVersion = newAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: currentVersion = newAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:919)
+get_value_assigned: currentVersion = newAddress
+functions_writing_to_variable: update writes newAddress to currentVersion (proxy_features line:924)
+functions_writing_to_variable: checking function GEOPAY.Owned (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.safeMul (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.allowance (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.approveAndCall (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.acceptOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.totalSupply (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.totalSupply (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.safeDiv (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.safeAdd (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.acceptOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.approve (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.Relay (proxy_features line:893)
+functions_writing_to_variable: exp = currentVersion = initAddr (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: currentVersion = initAddr (proxy_features line:907)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:919)
+get_value_assigned: currentVersion = initAddr
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:907)
+functions_writing_to_variable: Relay writes initAddr to currentVersion (proxy_features line:924)
+functions_writing_to_variable: checking function GEOPAY.transferAnyERC20Token (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.safeSub (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.update (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != owner (proxy_features line:904)
+functions_writing_to_variable: exp = revert()() (proxy_features line:904)
+functions_writing_to_variable: exp = currentVersion = newAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: currentVersion = newAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:919)
+get_value_assigned: currentVersion = newAddress
+functions_writing_to_variable: update writes newAddress to currentVersion (proxy_features line:924)
+functions_writing_to_variable: checking function GEOPAY.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.transferEther (proxy_features line:893)
+functions_writing_to_variable: checking function Ownedby.Owned (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.allowance (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.Relay (proxy_features line:893)
+functions_writing_to_variable: exp = currentVersion = initAddr (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: currentVersion = initAddr (proxy_features line:907)
+functions_writing_to_variable: Identifier: currentVersion (proxy_features line:919)
+get_value_assigned: currentVersion = initAddr
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:907)
+functions_writing_to_variable: Relay writes initAddr to currentVersion (proxy_features line:924)
+functions_writing_to_variable: checking function Ownedby.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function GEOPAY.approve (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newAddress', 'newAddress', 'initAddr', 'initAddr']
+has_compatibility_checks: checking public function update
+has_compatibility_checks: IF node exp = msg.sender != owner
+has_compatibility_checks: IF node can lead to revert ['revert()()']
+has_compatibility_checks: IF node can lead to revert ['revert()()']
+has_compatibility_checks: ConditionalExpression if msg.sender != owner then revert()() else currentVersion = newAddress
+has_compatibility_checks: checking public function Relay
+has_compatibility_checks: checking public function update
+has_compatibility_checks: IF node exp = msg.sender != owner
+has_compatibility_checks: IF node can lead to revert ['revert()()']
+has_compatibility_checks: IF node can lead to revert ['revert()()']
+has_compatibility_checks: ConditionalExpression if msg.sender != owner then revert()() else currentVersion = newAddress
+has_compatibility_checks: checking public function Relay
+Found public function: safeAdd
+has_time_delay: (node.type) EXPRESSION
+(Expression) currentVersion = initAddr
+has_time_delay: (node.type) EXPRESSION
+(Expression) owner = msg.sender

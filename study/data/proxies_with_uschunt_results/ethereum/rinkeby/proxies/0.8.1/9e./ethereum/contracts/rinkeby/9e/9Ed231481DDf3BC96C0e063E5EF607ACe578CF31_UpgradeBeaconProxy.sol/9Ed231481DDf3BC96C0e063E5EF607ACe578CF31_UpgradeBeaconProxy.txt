@@ -1,0 +1,414 @@
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeBeaconProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_13375_174_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End UpgradeBeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _implementation = abi.decode(_returnData,(address)) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: abi.decode
+Type of call: address payable (Slither line:2807)
+Args:
+_returnData
+(address)
+
+End UpgradeBeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End UpgradeBeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_getImplementation()) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+_getImplementation()
+
+End UpgradeBeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeBeaconProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin UpgradeBeaconProxy.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking upgradeBeacon (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _implementation (Slither line:1800)
+_implementation is a Parameter in UpgradeBeaconProxy._delegate (Slither line:1805)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: abi.decode(_returnData,(address)) (Slither line:1811)
+CallExpression: abi.decode(_returnData,(address)) (Slither line:1819)
+called is a MemberAccess: abi.decode
+called.expression = abi (Slither line:1822)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _delegate(_getImplementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_getImplementation()) (Slither line:1832)
+The value passed to parameter #0 is _getImplementation() (Slither line:1835)
+
+Begin UpgradeBeaconProxy.find_delegate_from_call_exp
+
+_getImplementation() (Slither line:1993)
+called = _getImplementation (Slither line:2000)
+AssignmentOperation: (_ok,_returnData) = _upgradeBeacon.staticcall() (Slither line:2107)
+AssignmentOperation: _implementation = abi.decode(_returnData,(address)) (Slither line:2107)
+AssignmentOperation: _implementation = _getImplementation(upgradeBeacon) (Slither line:2107)
+CallExpression: _getImplementation (Slither line:2113)
+
+Begin UpgradeBeaconProxy.find_delegate_from_call_exp
+
+_getImplementation(upgradeBeacon) (Slither line:1993)
+called = _getImplementation (Slither line:2000)
+AssignmentOperation: (_ok,_returnData) = _upgradeBeacon.staticcall() (Slither line:2107)
+AssignmentOperation: _implementation = abi.decode(_returnData,(address)) (Slither line:2107)
+CallExpression: abi.decode (Slither line:2113)
+Value of _implementation comes from decoding the value of _returnData (Slither line:2148)
+_returnData has no expression (Slither line:2158)
+_getImplementation returns a variable of type address   called _implementation (Slither line:2183)
+Return value is LocalVariable: _implementation (Slither line:2256)
+Return expression: _upgradeBeacon.staticcall() (Slither line:2260)
+CallExpression: _upgradeBeacon.staticcall (Slither line:2264)
+MemberAccess: _upgradeBeacon.staticcall (Slither line:2276)
+
+Begin UpgradeBeaconProxy.find_delegate_from_member_access
+
+Expression: _upgradeBeacon.staticcall() (Slither line:2348)
+_upgradeBeacon (Slither line:2361)
+_upgradeBeacon is an address variable (Slither line:2458)
+Call to _upgradeBeacon is staticcall with argument  (Slither line:2467)
+Looking for fallback in contract Address (Slither line:2474)
+
+End UpgradeBeaconProxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End UpgradeBeaconProxy.find_delegate_from_call_exp (Slither line:2318)
+
+_getImplementation returns a variable of type address   called _implementation (Slither line:2183)
+Return value is LocalVariable: _implementation (Slither line:2256)
+Return expression: _getImplementation(upgradeBeacon) (Slither line:2260)
+CallExpression: _getImplementation (Slither line:2264)
+Identifier: _getImplementation (Slither line:2268)
+UpgradeBeaconProxy._getImplementation(address) (Slither line:2271)
+
+End UpgradeBeaconProxy.find_delegate_from_call_exp (Slither line:2318)
+
+
+End UpgradeBeaconProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End UpgradeBeaconProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End UpgradeBeaconProxy.is_proxy (Slither line:1476)
+
+
+Begin UpgradeBeaconProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeBeaconProxy 
+Local Variable: _implementation (Slither line:1164)
+_upgradeBeacon (Slither line:1171)
+UpgradeBeaconProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin UpgradeBeaconProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: _upgradeBeacon.staticcall() (Slither line:3112)
+Checking function: constructor(address,bytes) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+Checking function: _initialize(address,bytes) returns() (Slither line:3117)
+Checking function: _fallback() returns() (Slither line:3117)
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: _getImplementation() returns(address) (Slither line:3117)
+Visibility: private
+Checking function: _getImplementation(address) returns(address) (Slither line:3117)
+Visibility: private
+
+End UpgradeBeaconProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in UpgradeBeaconProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeBeaconProxy.find_getter_in_contract (Slither line:2964)
+
+_implementation is a Variable object
+_upgradeBeacon.staticcall()
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: receive (Slither line:2978)
+Checking function: _initialize (Slither line:2978)
+Checking function: _fallback (Slither line:2978)
+Checking function: _delegate (Slither line:2978)
+Checking function: _getImplementation (Slither line:2978)
+_getImplementation returns address variable called _implementation (Slither line:2998)
+Checking function: _getImplementation (Slither line:2978)
+_getImplementation returns address variable called _implementation (Slither line:2998)
+
+_getImplementation appears to be the implementation getter (Slither line:3002)
+
+
+End UpgradeBeaconProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _getImplementation in contract: UpgradeBeaconProxy (Slither line:1285)
+
+Begin UpgradeBeaconProxy.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+EXPRESSION: (_ok,_returnData) = _upgradeBeacon.staticcall() (Slither line:2878)
+ENTRY_POINT: None (Slither line:2878)
+NEW VARIABLE: None (Slither line:2878)
+EXPRESSION: _implementation = abi.decode(_returnData,(address)) (Slither line:2878)
+abi.decode(_returnData,(address)) (Slither line:2883)
+Call Expression (Slither line:2888)
+
+End UpgradeBeaconProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: UpgradeBeaconProxy
+_implementation is dependent on upgradeBeacon
+Expression for _implementation: _upgradeBeacon.staticcall()
+Called: _upgradeBeacon.staticcall
+CallExpression argument  is not an Identifier
+impl_address_from_contract_call: _upgradeBeacon.staticcall()
+called: _upgradeBeacon.staticcall
+found MemberAccess: _upgradeBeacon.staticcall
+Identifier: _upgradeBeacon
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function UpgradeBeaconProxy.constructor (proxy_features line:893)
+get_value_assigned: _implementation = abi.decode(_returnData,(address))
+functions_writing_to_variable: constructor writes TMP_58 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._fallback (proxy_features line:893)
+get_value_assigned: _implementation = abi.decode(_returnData,(address))
+functions_writing_to_variable: _fallback writes TMP_58 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._getImplementation (proxy_features line:893)
+get_value_assigned: _implementation = abi.decode(_returnData,(address))
+functions_writing_to_variable: _getImplementation writes TMP_58 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeBeaconProxy.fallback (proxy_features line:893)
+get_value_assigned: _implementation = abi.decode(_returnData,(address))
+functions_writing_to_variable: fallback writes TMP_58 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeBeaconProxy.receive (proxy_features line:893)
+get_value_assigned: _implementation = abi.decode(_returnData,(address))
+functions_writing_to_variable: receive writes TMP_58 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._initialize (proxy_features line:893)
+has_compatibility_checks: dependencies: ['TUPLE_5', '_upgradeBeacon', '_upgradeBeacon', 'upgradeBeacon', '_returnData', 'TMP_58', 'address']
+functions_writing_to_variable: upgradeBeacon
+functions_writing_to_variable: checking function UpgradeBeaconProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(_upgradeBeacon),beacon !contract) (proxy_features line:904)
+functions_writing_to_variable: exp = upgradeBeacon = _upgradeBeacon (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: upgradeBeacon = _upgradeBeacon (proxy_features line:907)
+functions_writing_to_variable: Identifier: upgradeBeacon (proxy_features line:919)
+get_value_assigned: upgradeBeacon = _upgradeBeacon
+functions_writing_to_variable: exp = _implementation = _getImplementation(_upgradeBeacon) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _implementation = _getImplementation(_upgradeBeacon) (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(_implementation),beacon implementation !contract) (proxy_features line:904)
+functions_writing_to_variable: exp = _initializationCalldata.length > 0 (proxy_features line:904)
+functions_writing_to_variable: exp = _initialize(_implementation,_initializationCalldata) (proxy_features line:904)
+functions_writing_to_variable: exp = (_ok,_returnData) = _upgradeBeacon.staticcall() (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (_ok,_returnData) = _upgradeBeacon.staticcall() (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(_ok,string(_returnData)) (proxy_features line:904)
+functions_writing_to_variable: exp = _implementation = abi.decode(_returnData,(address)) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _implementation = abi.decode(_returnData,(address)) (proxy_features line:907)
+functions_writing_to_variable: exp = (_ok) = _implementation.delegatecall(_initializationCalldata) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: (_ok) = _implementation.delegatecall(_initializationCalldata) (proxy_features line:907)
+functions_writing_to_variable: exp = ! _ok (proxy_features line:904)
+functions_writing_to_variable: exp = returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (proxy_features line:904)
+functions_writing_to_variable: exp = revert(uint256,uint256)(0,returndatasize()()) (proxy_features line:904)
+functions_writing_to_variable: exp = account.code.length > 0 (proxy_features line:904)
+functions_writing_to_variable: constructor writes _upgradeBeacon to upgradeBeacon (proxy_features line:924)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._getImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._getImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxy._initialize (proxy_features line:893)
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = ! _ok
+require(bool,string)(Address.isContract(_upgradeBeacon),beacon !contract)
+has_compatibility_checks: condition Address.isContract(_upgradeBeacon)
+require(bool,string)(_ok,string(_returnData))
+has_compatibility_checks: condition _ok
+check_condition_from_expression: Identifier _ok
+require(bool,string)(Address.isContract(_implementation),beacon implementation !contract)
+has_compatibility_checks: condition Address.isContract(_implementation)
+has_compatibility_checks: IF node exp = _initializationCalldata.length > 0
+has_compatibility_checks: skipping private function _fallback
+has_compatibility_checks: skipping private function _getImplementation
+has_compatibility_checks: checking external function fallback
+has_compatibility_checks: IF node exp = switch_expr_13375_174_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_13375_174_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+require(bool,string)(_ok,string(_returnData))
+has_compatibility_checks: condition _ok
+check_condition_from_expression: Identifier _ok
+has_compatibility_checks: checking external function receive
+has_compatibility_checks: IF node exp = switch_expr_13375_174_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_13375_174_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+require(bool,string)(_ok,string(_returnData))
+has_compatibility_checks: condition _ok
+check_condition_from_expression: Identifier _ok
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = ! _ok
+require(bool,string)(Address.isContract(_upgradeBeacon),beacon !contract)
+has_compatibility_checks: condition Address.isContract(_upgradeBeacon)
+check_condition_from_expression: condition account.code.length > 0
+require(bool,string)(_ok,string(_returnData))
+has_compatibility_checks: condition _ok
+check_condition_from_expression: Identifier _ok
+require(bool,string)(Address.isContract(_implementation),beacon implementation !contract)
+has_compatibility_checks: condition Address.isContract(_implementation)
+has_compatibility_checks: IF node exp = _initializationCalldata.length > 0
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+Found public function: constructor
+Found fallback
+Found external function: receive

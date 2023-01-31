@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#41-72)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#41-72) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#159-201)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#159-201) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#451-529)",
+        "elements": [],
+        "description": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#451-529) is an upgradeable proxy.\nimplementationPosition was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(org.zeppelinos.proxy.implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "971ea4652eff38c55ba94d886dd2721175eefeeb6d020931891f48827d773750",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.implementationPosition",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy.implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/polygon/contracts/mainnet/proxies/0.6.10/ea./polygon/contracts/mainnet/ea/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol/eA5aF76b1F72958e635E60C4E36D3BF31066734B_AddressBook.sol#159-201)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(org.zeppelinos.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool)(currentImplementation != _newImplementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool)(currentImplementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "implementation()",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1226 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CarbonDollarStorage.is_proxy (Slither line:1425)
+
+
+End CarbonDollarStorage.is_proxy (Slither line:1428)
+
+
+Begin CarbonDollarStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarbonDollarStorage 
+
+End CarbonDollarStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AddressUtils.is_proxy (Slither line:1425)
+
+
+End AddressUtils.is_proxy (Slither line:1428)
+
+
+Begin AddressUtils.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AddressUtils 
+
+End AddressUtils.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PermissionedTokenStorage.is_proxy (Slither line:1425)
+
+
+End PermissionedTokenStorage.is_proxy (Slither line:1428)
+
+
+Begin PermissionedTokenStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PermissionedTokenStorage 
+
+End PermissionedTokenStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2792)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Got abstract function, looking for overriding function (Slither line:2015)
+Failure (Slither line:2023)
+_implementation returns a variable of type address   (Slither line:2183)
+Return value is LocalVariable:  (Slither line:2256)
+has no expression (Slither line:2316)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _willFallback() (Slither line:2792)
+Expression called: _willFallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeabilityProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2792)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End UpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    impl := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    impl := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _willFallback() (Slither line:2792)
+Expression called: _willFallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End UpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin UpgradeabilityProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in UpgradeabilityProxy._delegate (Slither line:1805)
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin UpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+_implementation returns a variable of type address   called impl (Slither line:2183)
+_implementation contains assembly - looking for sload (Slither line:2189)
+Looking in ASSEMBLY node (Slither line:2196)
+{  (Slither line:2200)
+    impl := sload(slot)  (Slither line:2200)
+Return value set by sload in asm (Slither line:2202)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2222)
+
+End UpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2318)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End UpgradeabilityProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin UpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End UpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting UpgradeabilityProxy._delegate_variable = UpgradeabilityProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End UpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+UpgradeabilityProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3117)
+Checking function: _fallback() returns() (Slither line:3117)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in UpgradeabilityProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2964)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+Checking function: fallback (Slither line:2978)
+Checking function: _delegate (Slither line:2978)
+Checking function: _willFallback (Slither line:2978)
+Checking function: _fallback (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: _implementation (Slither line:2978)
+_implementation returns address variable called impl (Slither line:2998)
+_implementation contains assembly (Slither line:3041)
+_implementation contains assembly (Slither line:3041)
+_implementation contains assembly (Slither line:3041)
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: UpgradeabilityProxy (Slither line:1285)
+
+Begin UpgradeabilityProxy.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2878)
+NEW VARIABLE: slot = IMPLEMENTATION_SLOT (Slither line:2878)
+INLINE ASM: None (Slither line:2878)
+
+End UpgradeabilityProxy.getter_return_is_non_constant (Slither line:2932)
+
+
+End UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin RegulatorStorage.is_proxy (Slither line:1425)
+
+
+End RegulatorStorage.is_proxy (Slither line:1428)
+
+
+Begin RegulatorStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RegulatorStorage 
+
+End RegulatorStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Regulator.is_proxy (Slither line:1425)
+
+
+End Regulator.is_proxy (Slither line:1428)
+
+
+Begin Regulator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Regulator 
+
+End Regulator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PermissionedTokenProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation()
+
+End PermissionedTokenProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin PermissionedTokenProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking pendingOwner (Slither line:1689)
+Checking tokenStorage (Slither line:1689)
+Checking regulator (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in PermissionedTokenProxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin PermissionedTokenProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+_implementation returns a variable of type address   called impl (Slither line:2183)
+_implementation contains assembly - looking for sload (Slither line:2189)
+Looking in ASSEMBLY node (Slither line:2196)
+{  (Slither line:2200)
+    impl := sload(slot)  (Slither line:2200)
+Return value set by sload in asm (Slither line:2202)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2222)
+
+End PermissionedTokenProxy.find_delegate_from_call_exp (Slither line:2318)
+
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End PermissionedTokenProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin PermissionedTokenProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End PermissionedTokenProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting PermissionedTokenProxy._delegate_variable = PermissionedTokenProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End PermissionedTokenProxy.is_proxy (Slither line:1476)
+
+
+Begin PermissionedTokenProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PermissionedTokenProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+PermissionedTokenProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityProxy (Slither line:1204)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3117)
+Checking function: _fallback() returns() (Slither line:3117)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in UpgradeabilityProxy 
+Looking in PermissionedTokenProxy (Slither line:1213)
+
+Begin PermissionedTokenProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (Slither line:3112)
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+_setImplementation(newImplementation)
+size > 0
+onlyOwner()
+Upgraded(newImplementation)
+require(bool)(msg.sender == owner)
+_upgradeTo(newImplementation)
+    sstore(slot, newImplementation) (Slither line:3153)
+upgradeTo reads and/or writes to variable slot (Slither line:3160)
+upgradeTo reads and/or writes to variable AddressUtils (Slither line:3160)
+upgradeTo reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3160)
+upgradeTo reads and/or writes to variable newImplementation (Slither line:3160)
+
+End PermissionedTokenProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: PermissionedTokenProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2964)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: UpgradeabilityProxy (Slither line:1285)
+
+End PermissionedTokenProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: PermissionedTokenProxy
+Setter found in contract PermissionedTokenProxy
+impl_address_from_contract_call: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: AddressUtils.isContract
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression _willFallback()
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function claimOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == pendingOwner)
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function claimOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == pendingOwner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function implementation
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function PermissionedTokenProxy.claimOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function PermissionedTokenProxy._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy._willFallback (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function PermissionedTokenProxy._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (proxy_features line:907)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:919)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+functions_writing_to_variable: checking function PermissionedTokenProxy.upgradeTo (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function PermissionedTokenProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy._upgradeTo (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function PermissionedTokenProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function PermissionedTokenProxy._setImplementation (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function PermissionedTokenProxy.constructor (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function constructor
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+assert(bool)(IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation)
+has_compatibility_checks: checking public function constructor
+assert(bool)(IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation)
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition size > 0
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping private function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: transferOwnership
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(newImplementation)
+
+Begin CarbonDollarRegulator.is_proxy (Slither line:1425)
+
+
+End CarbonDollarRegulator.is_proxy (Slither line:1428)
+
+
+Begin CarbonDollarRegulator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarbonDollarRegulator 
+
+End CarbonDollarRegulator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CarbonDollarProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin CarbonDollarProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2792)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End CarbonDollarProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CarbonDollarProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin CarbonDollarProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking pendingOwner (Slither line:1689)
+Checking tokenStorage (Slither line:1689)
+Checking regulator (Slither line:1689)
+Checking tokenStorage_CD (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in CarbonDollarProxy._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin CarbonDollarProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+_implementation returns a variable of type address   called impl (Slither line:2183)
+_implementation contains assembly - looking for sload (Slither line:2189)
+Looking in ASSEMBLY node (Slither line:2196)
+{  (Slither line:2200)
+    impl := sload(slot)  (Slither line:2200)
+Return value set by sload in asm (Slither line:2202)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2222)
+
+End CarbonDollarProxy.find_delegate_from_call_exp (Slither line:2318)
+
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End CarbonDollarProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin CarbonDollarProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End CarbonDollarProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End CarbonDollarProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting CarbonDollarProxy._delegate_variable = CarbonDollarProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End CarbonDollarProxy.is_proxy (Slither line:1476)
+
+
+Begin CarbonDollarProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarbonDollarProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+CarbonDollarProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityProxy (Slither line:1204)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (Slither line:3112)
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3117)
+Checking function: _fallback() returns() (Slither line:3117)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in UpgradeabilityProxy 
+Looking in CarbonDollarProxy (Slither line:1213)
+
+Begin CarbonDollarProxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (Slither line:3112)
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: public
+    sstore(slot, newImplementation) (Slither line:3153)
+upgradeTo reads and/or writes to variable slot (Slither line:3160)
+upgradeTo reads and/or writes to variable AddressUtils (Slither line:3160)
+upgradeTo reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3160)
+upgradeTo reads and/or writes to variable newImplementation (Slither line:3160)
+
+End CarbonDollarProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: CarbonDollarProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2964)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: UpgradeabilityProxy (Slither line:1285)
+
+End CarbonDollarProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: CarbonDollarProxy
+Setter found in contract CarbonDollarProxy
+impl_address_from_contract_call: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: AddressUtils.isContract
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression _willFallback()
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function implementation
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function claimOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == pendingOwner)
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function CarbonDollarProxy._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function CarbonDollarProxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function CarbonDollarProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy._upgradeTo (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function CarbonDollarProxy._setImplementation (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function CarbonDollarProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (proxy_features line:907)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:919)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+functions_writing_to_variable: checking function CarbonDollarProxy.claimOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function CarbonDollarProxy._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function CarbonDollarProxy.upgradeTo (proxy_features line:893)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:948)
+newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:954)
+functions_writing_to_variable: checking function CarbonDollarProxy._willFallback (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function constructor
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+assert(bool)(IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation)
+has_compatibility_checks: checking public function constructor
+assert(bool)(IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation)
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking public function constructor
+assert(bool)(IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == keccak256()(org.zeppelinos.proxy.implementation)
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition AddressUtils.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition size > 0
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: upgradeTo
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(AddressUtils.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+
+Begin ERC20Basic.is_proxy (Slither line:1425)
+
+
+End ERC20Basic.is_proxy (Slither line:1428)
+
+
+Begin ERC20Basic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Basic 
+
+End ERC20Basic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Lockable.is_proxy (Slither line:1425)
+
+
+End Lockable.is_proxy (Slither line:1428)
+
+
+Begin Lockable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Lockable 
+
+End Lockable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PermissionedToken.is_proxy (Slither line:1425)
+
+
+End PermissionedToken.is_proxy (Slither line:1428)
+
+
+Begin PermissionedToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PermissionedToken 
+
+End PermissionedToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WhitelistedTokenRegulator.is_proxy (Slither line:1425)
+
+
+End WhitelistedTokenRegulator.is_proxy (Slither line:1428)
+
+
+Begin WhitelistedTokenRegulator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WhitelistedTokenRegulator 
+
+End WhitelistedTokenRegulator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WhitelistedToken.is_proxy (Slither line:1425)
+
+
+End WhitelistedToken.is_proxy (Slither line:1428)
+
+
+Begin WhitelistedToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WhitelistedToken 
+
+End WhitelistedToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CarbonDollar.is_proxy (Slither line:1425)
+
+
+End CarbonDollar.is_proxy (Slither line:1428)
+
+
+Begin CarbonDollar.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarbonDollar 
+
+End CarbonDollar.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CarbonDollarProxyFactory.is_proxy (Slither line:1425)
+
+
+End CarbonDollarProxyFactory.is_proxy (Slither line:1428)
+
+
+Begin CarbonDollarProxyFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarbonDollarProxyFactory 
+
+End CarbonDollarProxyFactory.is_upgradeable_proxy (Slither line:1407)
+

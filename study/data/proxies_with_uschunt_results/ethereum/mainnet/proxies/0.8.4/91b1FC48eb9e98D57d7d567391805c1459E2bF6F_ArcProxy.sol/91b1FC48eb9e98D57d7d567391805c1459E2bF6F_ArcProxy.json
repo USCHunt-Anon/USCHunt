@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ArcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.4/91b1FC48eb9e98D57d7d567391805c1459E2bF6F_ArcProxy.sol/91b1FC48eb9e98D57d7d567391805c1459E2bF6F_ArcProxy.sol#4-289)",
+        "elements": [],
+        "description": "ArcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.4/91b1FC48eb9e98D57d7d567391805c1459E2bF6F_ArcProxy.sol/91b1FC48eb9e98D57d7d567391805c1459E2bF6F_ArcProxy.sol#4-289) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "05e0bcd41507be86e0ede200d5f95c44d97dc3e05c70bb631b5daff4fdeae064",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ArcProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "ArcProxy.upgradeTo(address)",
+          "impl_address_getter": "ArcProxy._implementation()",
+          "impl_address_location": "ArcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.4/91b1FC48eb9e98D57d7d567391805c1459E2bF6F_ArcProxy.sol/91b1FC48eb9e98D57d7d567391805c1459E2bF6F_ArcProxy.sol#4-289)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ArcProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ArcProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1212 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBEP20.is_proxy (Slither line:1425)
+
+
+End IBEP20.is_proxy (Slither line:1428)
+
+
+Begin IBEP20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBEP20 
+
+End IBEP20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Room.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+room
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is room (Slither line:2828)
+dest.value: room (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Room.find_delegate_variable_from_name
+Searching for room (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking room (Slither line:1800)
+room is a Parameter in Room._act (Slither line:1805)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _act(_room()) (Slither line:1819)
+Found where _act is called: _act(_room()) (Slither line:1832)
+The value passed to parameter #0 is _room() (Slither line:1835)
+
+Begin Room.find_delegate_from_call_exp
+
+_room() (Slither line:2003)
+called = _room (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_room returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Room.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: _show() (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _willShow() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+_act contains assembly, searching for sload (Slither line:1875)
+
+End Room.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: _act(_room()) (Slither line:2802)
+Expression called: _act
+Type of call: tuple() (Slither line:2817)
+Args:
+_room()
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: _show() (Slither line:2802)
+Expression called: _show
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Room.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'room'
+Looking for corresponding Variable
+Current function: _act
+
+Begin Room.find_delegate_variable_from_name
+Searching for room (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking room (Slither line:1800)
+room is a Parameter in Room._act (Slither line:1805)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _act(_room()) (Slither line:1819)
+Found where _act is called: _act(_room()) (Slither line:1832)
+The value passed to parameter #0 is _room() (Slither line:1835)
+
+Begin Room.find_delegate_from_call_exp
+
+_room() (Slither line:2003)
+called = _room (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_room returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Room.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: _show() (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _willShow() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+_act contains assembly, searching for sload (Slither line:1875)
+
+End Room.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Room.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_12515_202_0__act_asm_0 = result__act_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: _willShow() (Slither line:2802)
+Expression called: _willShow
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Room.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Room.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Room.is_proxy (Slither line:1476)
+
+
+Begin Room.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Room 
+
+End Room.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LiveRoom.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin LiveRoom.find_delegatecall_in_exp_node
+
+Found Expression Node: _willShow() (Slither line:2802)
+Expression called: _willShow
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End LiveRoom.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin LiveRoom.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End LiveRoom.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin LiveRoom.find_delegatecall_in_exp_node
+
+Found Expression Node: _act(_room()) (Slither line:2802)
+Expression called: _act
+Type of call: tuple() (Slither line:2817)
+Args:
+_room()
+
+End LiveRoom.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin LiveRoom.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End LiveRoom.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin LiveRoom.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'room'
+Looking for corresponding Variable
+Current function: _act
+
+Begin LiveRoom.find_delegate_variable_from_name
+Searching for room (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking LIVEROOM_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking room (Slither line:1800)
+room is a Parameter in LiveRoom._act (Slither line:1805)
+CallExpression: _willShow() (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _act(_room()) (Slither line:1819)
+Found where _act is called: _act(_room()) (Slither line:1832)
+The value passed to parameter #0 is _room() (Slither line:1835)
+
+Begin LiveRoom.find_delegate_from_call_exp
+
+_room() (Slither line:2003)
+called = _room (Slither line:2010)
+AssignmentOperation: room = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: LIVEROOM_SLOT (Slither line:2140)
+_room returns a variable of type address   called room (Slither line:2193)
+_room contains assembly - looking for sload (Slither line:2199)
+
+End LiveRoom.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: LIVEROOM_SLOT (Slither line:1811)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _show() (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+_act contains assembly, searching for sload (Slither line:1875)
+
+End LiveRoom.find_delegate_variable_from_name (Slither line:1949)
+
+
+End LiveRoom.find_delegatecall_in_asm (Slither line:1637)
+
+Setting LiveRoom._delegate_variable = LiveRoom._proxy_impl_slot: LIVEROOM_SLOT (Slither line:1473)
+
+
+End LiveRoom.is_proxy (Slither line:1476)
+
+
+Begin LiveRoom.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LiveRoom 
+Call destination LIVEROOM_SLOT is constant (Slither line:1146)
+
+LIVEROOM_SLOT is the implementation storage slot (Slither line:1149)
+
+LiveRoom is delegating to LIVEROOM_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin LiveRoom.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: _room() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _tranzfer(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setLiveRoom(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _room() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _act(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willShow() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _show() returns() (Slither line:3127)
+Visibility: internal
+
+End LiveRoom.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in LiveRoom (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin LiveRoom.find_getter_in_contract (Slither line:2974)
+
+LIVEROOM_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _act (Slither line:2988)
+Checking function: _willShow (Slither line:2988)
+Checking function: _show (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _room (Slither line:2988)
+_room returns address variable called room (Slither line:3008)
+_room contains assembly (Slither line:3051)
+
+End LiveRoom.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _room in contract: LiveRoom (Slither line:1285)
+
+Begin LiveRoom.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+EXPRESSION: room = sload(uint256)(slot) (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+INLINE ASM: None (Slither line:2888)
+NEW VARIABLE: slot = LIVEROOM_SLOT (Slither line:2888)
+
+End LiveRoom.getter_return_is_non_constant (Slither line:2942)
+
+
+End LiveRoom.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin DOGE18.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DOGE18.find_delegatecall_in_exp_node
+
+Found Expression Node: _willShow() (Slither line:2802)
+Expression called: _willShow
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End DOGE18.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DOGE18.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.sender != _actress(),Cannot call from the actress) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender != _actress()
+Cannot call from the actress
+
+End DOGE18.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DOGE18.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End DOGE18.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DOGE18.find_delegatecall_in_exp_node
+
+Found Expression Node: _act(_room()) (Slither line:2802)
+Expression called: _act
+Type of call: tuple() (Slither line:2817)
+Args:
+_room()
+
+End DOGE18.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DOGE18.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End DOGE18.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DOGE18.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'room'
+Looking for corresponding Variable
+Current function: _act
+
+Begin DOGE18.find_delegate_variable_from_name
+Searching for room (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking LIVEROOM_SLOT (Slither line:1689)
+Checking ACTRESS_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking room (Slither line:1800)
+room is a Parameter in DOGE18._act (Slither line:1805)
+CallExpression: _willShow() (Slither line:1819)
+CallExpression: require(bool,string)(msg.sender != _actress(),Cannot call from the actress) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _act(_room()) (Slither line:1819)
+Found where _act is called: _act(_room()) (Slither line:1832)
+The value passed to parameter #0 is _room() (Slither line:1835)
+
+Begin DOGE18.find_delegate_from_call_exp
+
+_room() (Slither line:2003)
+called = _room (Slither line:2010)
+AssignmentOperation: room = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: LIVEROOM_SLOT (Slither line:2140)
+_room returns a variable of type address   called room (Slither line:2193)
+_room contains assembly - looking for sload (Slither line:2199)
+
+End DOGE18.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: super._willShow() (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: LIVEROOM_SLOT (Slither line:1811)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _show() (Slither line:1819)
+AssignmentOperation: ACTRESS_SLOT (Slither line:1811)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__act_asm_0 (Slither line:1811)
+_act contains assembly, searching for sload (Slither line:1875)
+
+End DOGE18.find_delegate_variable_from_name (Slither line:1949)
+
+
+End DOGE18.find_delegatecall_in_asm (Slither line:1637)
+
+Setting DOGE18._delegate_variable = DOGE18._proxy_impl_slot: LIVEROOM_SLOT (Slither line:1473)
+
+
+End DOGE18.is_proxy (Slither line:1476)
+
+
+Begin DOGE18.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DOGE18 
+Call destination LIVEROOM_SLOT is constant (Slither line:1146)
+
+LIVEROOM_SLOT is the implementation storage slot (Slither line:1149)
+
+DOGE18 is delegating to LIVEROOM_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in LiveRoom (Slither line:1204)
+
+
+Begin LiveRoom.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: _room() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _tranzfer(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setLiveRoom(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _room() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _act(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willShow() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _show() returns() (Slither line:3127)
+Visibility: internal
+
+End LiveRoom.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in LiveRoom 
+Looking in DOGE18 (Slither line:1213)
+
+Begin DOGE18.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: tranzfer(address) returns() (Slither line:3127)
+Visibility: external
+_setLiveRoom(account)
+_willShow()
+require(bool,string)(msg.sender != _actress(),Cannot call from the actress)
+revert(uint256,uint256)(0,returndatasize()())
+_act(_room())
+return(uint256,uint256)(0,returndatasize()())
+super._willShow()
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_show()
+size > 0
+require(bool)(Address.isContract(account))
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+room = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+_tranzfer(account)
+actress = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+switch_expr_12515_202_0__act_asm_0 = result__act_asm_0
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+sstore(uint256,uint256)(slot,account)
+sstore(uint256,uint256)
+
+End DOGE18.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: tranzfer in contract: DOGE18 (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin LiveRoom.find_getter_in_contract (Slither line:2974)
+
+LIVEROOM_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End LiveRoom.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _room in contract: LiveRoom (Slither line:1285)
+
+End DOGE18.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: DOGE18
+Setter found in contract DOGE18
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable LIVEROOM_SLOT
+impl_address_from_contract_call: getter is _room
+getter.full_name = _room()
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression _willShow()
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.sender != _actress(),Cannot call from the actress)
+impl_address_from_contract_call: arg is msg.sender != _actress()
+impl_address_from_contract_call: arg is Cannot call from the actress
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression _act(_room())
+impl_address_from_contract_call: arg is _room()
+impl_address_from_contract_call: CallExpression _room()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression super._willShow()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression _show()
+impl_address_from_contract_call: CallExpression sload(uint256)(slot)
+impl_address_from_contract_call: arg is slot
+impl_address_from_contract_call: CallExpression sload(uint256)(slot)
+impl_address_from_contract_call: arg is slot
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking external function fallback
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _actress(),Cannot call from the actress)
+Checking external function receive
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != _actress(),Cannot call from the actress)
+Checking external function tranzfer
+Found 'msg.sender ==' in expression: msg.sender == _actress()
+functions_writing_to_variable: LIVEROOM_SLOT
+functions_writing_to_variable: checking function DOGE18.tranzfer (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,account)
+functions_writing_to_variable: tranzfer writes account to LIVEROOM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DOGE18.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = LIVEROOM_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: LIVEROOM_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: LIVEROOM_SLOT (proxy_features line:924)
+get_value_assigned: LIVEROOM_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = ACTRESS_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ACTRESS_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: checking function DOGE18._room (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18._willShow (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18._act (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18._show (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,account)
+functions_writing_to_variable: constructor writes account to LIVEROOM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DOGE18._actress (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,account)
+functions_writing_to_variable: constructor writes account to LIVEROOM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DOGE18.receive (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18._willShow (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18._setLiveRoom (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,account)
+functions_writing_to_variable: _setLiveRoom writes account to LIVEROOM_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DOGE18._room (proxy_features line:898)
+functions_writing_to_variable: checking function DOGE18._tranzfer (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,account)
+functions_writing_to_variable: _tranzfer writes account to LIVEROOM_SLOT using sstore (proxy_features line:998)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function tranzfer
+has_compatibility_checks: IF node exp = switch_expr_12515_202_0__act_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_12515_202_0__act_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _actress()
+require(bool,string)(msg.sender != _actress(),Cannot call from the actress)
+has_compatibility_checks: condition msg.sender != _actress()
+require(bool)(Address.isContract(account))
+has_compatibility_checks: condition Address.isContract(account)
+check_condition_from_expression: modifier calls: ['ifActress()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _setLiveRoom
+has_compatibility_checks: skipping internal function _tranzfer
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0)
+Found public function: constructor
+Found fallback
+Found external function: receive
+Found public function: constructor
+Found external function: tranzfer
+has_time_delay: (node.type) IF
+(Expression) switch_expr_12515_202_0__act_asm_0 == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setLiveRoom(account)
+has_time_delay: (node.type) IF
+(Expression) msg.sender == _actress()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _willShow()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender != _actress(),Cannot call from the actress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) _act(_room())
+has_time_delay: (node.type) EXPRESSION
+(Expression) return(uint256,uint256)(0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) super._willShow()
+has_time_delay: (node.type) EXPRESSION
+(Expression) calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = LIVEROOM_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) result__act_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),room,0,calldatasize()(),0,0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _show()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = ACTRESS_SLOT
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(Address.isContract(account))
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) room = sload(uint256)(slot)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _tranzfer(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) actress = sload(uint256)(slot)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = LIVEROOM_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) switch_expr_12515_202_0__act_asm_0 = result__act_asm_0
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ifActress()
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BEP20.is_proxy (Slither line:1425)
+
+
+End BEP20.is_proxy (Slither line:1428)
+
+
+Begin BEP20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BEP20 
+
+End BEP20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router01.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router01.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router01.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router01 
+
+End IUniswapV2Router01.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router02.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router02.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router02.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router02 
+
+End IUniswapV2Router02.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Factory.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Factory.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Factory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Factory 
+
+End IUniswapV2Factory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Pair.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Pair.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Pair.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Pair 
+
+End IUniswapV2Pair.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DOGE.is_proxy (Slither line:1425)
+
+
+End DOGE.is_proxy (Slither line:1428)
+
+
+Begin DOGE.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DOGE 
+
+End DOGE.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,101 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#636-706)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#636-706) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#721-739)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#721-739) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 using slot from ERC-1967 (i.e. OpenZeppelin UUPS)\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from DaiDripsHub\n",
+        "id": "f0bb6705ecac26f7797d8aa123d91a9a09f54f5a7289239de25fa571c629cf28",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "UUPSUpgradeable.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#721-739)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from DaiDripsHub"
+        }
+      },
+      {
+        "contract": "ManagedDripsHubProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#2714-2720)",
+        "elements": [],
+        "description": "ManagedDripsHubProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#2714-2720) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 using slot from ERC-1967 (i.e. OpenZeppelin UUPS)\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from DaiDripsHub\n",
+        "id": "b2bf31b555f403f34bcd01641aef9a84d76c3b99e78fa66d96210e01bbc661f3",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "UUPSUpgradeable.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "ManagedDripsHubProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol/1d953Da768D442c367584c45210012Afc1206eFa_DripsToken.sol#2714-2720)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ManagedDripsHubProxy.constructor(ManagedDripsHub,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from DaiDripsHub"
+        }
+      }
+    ]
+  }
+}

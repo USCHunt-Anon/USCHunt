@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AccountProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.7.0/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol#18-80)",
+        "elements": [],
+        "description": "AccountProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.7.0/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol#18-80) may be an upgradeable proxy.\n_implementation is declared in the proxy.\nAccountProxy._fallback(bytes4)._implementation (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.7.0/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol#59) gets value from a cross-contract call: accountImplManager.getImplementation(_sig)\nAccountImplManager appears to be a Registry contract for the proxy\nThe address of AccountImplManager is stored as a state variable: AccountProxy.accountImplManager\nCould not find setter for accountImplManager\nMissing compatibility check in AccountProxy.fallback()\nMissing compatibility check in AccountProxy.receive()\n",
+        "id": "fdd944519f91e4ed3fd73a9b2fc02fa5b6f120e082af2d3541736aa29022cda7",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "AccountProxy._fallback(bytes4)._implementation",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "AccountProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.7.0/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol/37ed895c0475ed20dbff069c2d34725022114803_AccountProxy.sol#18-80)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "accountImplManager.getImplementation(_sig)",
+          "registry": "AccountImplManager",
+          "registry_source_type": "AccountImplManager",
+          "registry_source_variable": "AccountProxy.accountImplManager",
+          "registry_source_constant": false,
+          "registry_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "AccountProxy.fallback()": "missing",
+              "AccountProxy.receive()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

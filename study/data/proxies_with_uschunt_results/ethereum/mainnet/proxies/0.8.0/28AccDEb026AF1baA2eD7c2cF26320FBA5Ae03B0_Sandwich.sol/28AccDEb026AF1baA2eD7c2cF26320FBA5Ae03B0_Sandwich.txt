@@ -1,0 +1,618 @@
+
+Begin SafeTransfer.is_proxy (Slither line:1425)
+
+
+End SafeTransfer.is_proxy (Slither line:1428)
+
+
+Begin SafeTransfer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeTransfer 
+
+End SafeTransfer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Sandwich.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0x80,0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0x80
+0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Sandwich.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Sandwich.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Sandwich.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found call in YulFunctionCall (Slither line:1563)
+Destination param is called 'token'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Sandwich.find_delegate_variable_from_name
+Searching for token (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking user (Slither line:1689)
+Checking ERC20_TRANSFER_ID (Slither line:1689)
+Checking PAIR_SWAP_ID (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking memUser (Slither line:1703)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End Sandwich.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Sandwich.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: amountOut_fallback_asm_0 = calldataload(uint256)(0x38) >> 128 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0xa0,amountOut_fallback_asm_0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0xa0
+amountOut_fallback_asm_0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0x7c,PAIR_SWAP_ID) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0x7c
+PAIR_SWAP_ID
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(3,3) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+3
+3
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0xe0,0x80) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0xe0
+0x80
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: s2_fallback_asm_0 = call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 5000,pair_fallback_asm_0,0,0x7c,0xa4,0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()() - 5000
+pair_fallback_asm_0
+0
+0x7c
+0xa4
+0
+0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: token_fallback_asm_0 = calldataload(uint256)(0x00) >> 96 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(3,3) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+3
+3
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0xc0,address()()) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0xc0
+address()()
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: tokenOutNo_fallback_asm_0 = calldataload(uint256)(0x48) >> 248 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_7373_239_0_fallback_asm_0 = tokenOutNo_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0x7c,ERC20_TRANSFER_ID) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0x7c
+ERC20_TRANSFER_ID
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: pair_fallback_asm_0 = calldataload(uint256)(0x14) >> 96 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0x80,pair_fallback_asm_0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0x80
+pair_fallback_asm_0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(3,3) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+3
+3
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0xa0,amountIn_fallback_asm_0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0xa0
+amountIn_fallback_asm_0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0x80,amountOut_fallback_asm_0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0x80
+amountOut_fallback_asm_0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: s1_fallback_asm_0 = call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 5000,token_fallback_asm_0,0,0x7c,0x44,0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()() - 5000
+token_fallback_asm_0
+0
+0x7c
+0x44
+0
+0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: mstore(uint256,uint256)(0xa0,0) (Slither line:2802)
+Expression called: mstore(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0xa0
+0
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Sandwich.find_delegatecall_in_exp_node
+
+Found Expression Node: amountIn_fallback_asm_0 = calldataload(uint256)(0x28) >> 128 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Sandwich.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Sandwich.is_proxy (Slither line:1476)
+
+
+Begin Sandwich.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Sandwich 
+
+End Sandwich.is_upgradeable_proxy (Slither line:1407)
+

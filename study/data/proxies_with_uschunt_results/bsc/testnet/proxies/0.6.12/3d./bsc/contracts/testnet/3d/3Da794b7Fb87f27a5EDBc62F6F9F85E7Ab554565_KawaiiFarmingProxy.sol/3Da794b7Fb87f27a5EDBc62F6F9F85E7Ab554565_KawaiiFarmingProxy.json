@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#62-137)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#62-137) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#140-196)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#140-196) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "KawaiiFarmingProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#199-332)",
+        "elements": [],
+        "description": "KawaiiFarmingProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#199-332) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "9d11a956160d0e3230c448de2c57accb4296de618ebe8354f4097c8b71a76bf3",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "KawaiiFarmingProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy._implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/3d./bsc/contracts/testnet/3d/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol/3Da794b7Fb87f27a5EDBc62F6F9F85E7Ab554565_KawaiiFarmingProxy.sol#140-196)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "KawaiiFarmingProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "KawaiiFarmingProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "KawaiiFarmingProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "UpgradeabilityProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "_admin()",
+              "_logic()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

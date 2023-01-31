@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TreatsStakingProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/proxies_to_reanalyze/0.8.0/ca./ethereum/contracts/ropsten/ca/cA49c59315e3bD28d785d9Da5c1240E417AF81fC_TreatsStakingProxy.sol/cA49c59315e3bD28d785d9Da5c1240E417AF81fC_TreatsStakingProxy.sol#11-41)",
+        "elements": [],
+        "description": "TreatsStakingProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/proxies_to_reanalyze/0.8.0/ca./ethereum/contracts/ropsten/ca/cA49c59315e3bD28d785d9Da5c1240E417AF81fC_TreatsStakingProxy.sol/cA49c59315e3bD28d785d9Da5c1240E417AF81fC_TreatsStakingProxy.sol#11-41) is an upgradeable proxy.\n0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 (UUPS) with slot = keccak256('PROXIABLE')\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCode from Staking\n",
+        "id": "5d2935494b01d9b4c8a239c3fc0cc5495f9ccb9bb47f3c7abc6668ebcfc4fbdd",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TreatsStakingProxy.0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "impl_address_setter": "Staking.updateCode(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "TreatsStakingProxy (../../smart-contract-sanctuary/ethereum/contracts/ropsten/proxies_to_reanalyze/0.8.0/ca./ethereum/contracts/ropsten/ca/cA49c59315e3bD28d785d9Da5c1240E417AF81fC_TreatsStakingProxy.sol/cA49c59315e3bD28d785d9Da5c1240E417AF81fC_TreatsStakingProxy.sol#11-41)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Staking.updateCode(address)": {
+                "check": "require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              },
+              "TreatsStakingProxy.constructor(bytes,address)": {
+                "check": "require(bool,string)(contractLogic.delegatecall(constructData),Construction failed)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCode from Staking"
+        }
+      }
+    ]
+  }
+}

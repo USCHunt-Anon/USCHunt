@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Diamond (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/b8./ethereum/contracts/mainnet/b8/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol#491-536)",
+        "elements": [],
+        "description": "Diamond (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/b8./ethereum/contracts/mainnet/b8/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol#491-536) is an upgradeable proxy.\nfacet is declared in the proxy.\nselectorToFacetAndPosition maps function signatures to addresses, suggesting multiple implementations.\nselectorToFacetAndPosition is stored in the structure specified by EIP-2535: LibDiamond.DiamondStorage\nLoupe functions located in DiamondLoupeFacet\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete the DiamondCutFacet facet\n",
+        "id": "c3befea826a5d39259bc3a14499f935ea2bfc3c721259e3a567959172069e309",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "LibDiamond.DiamondStorage.selectorToFacetAndPosition",
+          "impl_address_setter": "IDiamondCut.diamondCut(IDiamondCut.FacetCut[],address,bytes)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Diamond (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/b8./ethereum/contracts/mainnet/b8/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol#491-536)",
+          "impl_address_scope": "StructureVariable",
+          "impl_address_type": "mapping(bytes4 => LibDiamond.FacetAddressAndPosition)",
+          "impl_mapping_from_msg_sig": true,
+          "diamond_storage": true,
+          "diamond_storage_location": "LibDiamond (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/b8./ethereum/contracts/mainnet/b8/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol/B812f503607Ee2259E9607Cb5E5836B550ac6492_Diamantaire.sol#147-160)",
+          "eip_2535": true,
+          "diamond_loupe_facets": {
+            "facets() returns(IDiamondLoupe.Facet[])": "DiamondLoupeFacet",
+            "facetFunctionSelectors(address) returns(bytes4[])": "DiamondLoupeFacet",
+            "facetAddresses() returns(address[])": "DiamondLoupeFacet",
+            "facetAddress(bytes4) returns(address)": "DiamondLoupeFacet"
+          },
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "DiamondCutFacet.diamondCut(IDiamondCut.FacetCut[],address,bytes)": {
+                "check": "require(bool,string)(_facetAddress != address(0),LibDiamondCut: Add facet can't be address(0))",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove DiamondCutFacet facet"
+        }
+      }
+    ]
+  }
+}

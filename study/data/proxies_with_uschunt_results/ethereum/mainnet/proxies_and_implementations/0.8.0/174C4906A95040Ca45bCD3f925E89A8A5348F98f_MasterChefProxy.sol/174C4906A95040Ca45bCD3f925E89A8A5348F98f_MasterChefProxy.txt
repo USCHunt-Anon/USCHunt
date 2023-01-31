@@ -1,0 +1,2313 @@
+
+Begin MasterChefProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MasterChefProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin MasterChefProxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '915:66:0', 'type': '', 'value': '0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7'} (Slither line:1909)
+Found hardcoded storage slot in fallback: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1927)
+
+End MasterChefProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End MasterChefProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting MasterChefProxy._delegate_variable = MasterChefProxy._proxy_impl_slot: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1473)
+
+
+End MasterChefProxy.is_proxy (Slither line:1476)
+
+
+Begin MasterChefProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MasterChefProxy 
+Call destination 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is constant (Slither line:1146)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is the implementation storage slot (Slither line:1149)
+
+MasterChefProxy is delegating to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Looking for setter (Slither line:1200)
+
+
+Begin MasterChefProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(bytes,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End MasterChefProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in MasterChefProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin MasterChefProxy.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End MasterChefProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in MasterChefProxy (Slither line:1305)
+
+Begin Address.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isContract (Slither line:2988)
+isContract returns bool variable  (Slither line:3008)
+RETURN node expression: size > 0 (Slither line:3028)
+Checking function: sendValue (Slither line:2988)
+Checking function: functionCall (Slither line:2988)
+functionCall returns bytes variable  (Slither line:3008)
+RETURN node expression: functionCall(target,data,Address: low-level call failed) (Slither line:3028)
+Checking function: functionCall (Slither line:2988)
+functionCall returns bytes variable  (Slither line:3008)
+RETURN node expression: functionCallWithValue(target,data,0,errorMessage) (Slither line:3028)
+Checking function: functionCallWithValue (Slither line:2988)
+functionCallWithValue returns bytes variable  (Slither line:3008)
+RETURN node expression: functionCallWithValue(target,data,value,Address: low-level call with value failed) (Slither line:3028)
+Checking function: functionCallWithValue (Slither line:2988)
+functionCallWithValue returns bytes variable  (Slither line:3008)
+RETURN node expression: verifyCallResult(success,returndata,errorMessage) (Slither line:3028)
+Checking function: functionStaticCall (Slither line:2988)
+functionStaticCall returns bytes variable  (Slither line:3008)
+RETURN node expression: functionStaticCall(target,data,Address: low-level static call failed) (Slither line:3028)
+Checking function: functionStaticCall (Slither line:2988)
+functionStaticCall returns bytes variable  (Slither line:3008)
+RETURN node expression: verifyCallResult(success,returndata,errorMessage) (Slither line:3028)
+Checking function: functionDelegateCall (Slither line:2988)
+functionDelegateCall returns bytes variable  (Slither line:3008)
+RETURN node expression: functionDelegateCall(target,data,Address: low-level delegate call failed) (Slither line:3028)
+Checking function: functionDelegateCall (Slither line:2988)
+functionDelegateCall returns bytes variable  (Slither line:3008)
+RETURN node expression: verifyCallResult(success,returndata,errorMessage) (Slither line:3028)
+Checking function: verifyCallResult (Slither line:2988)
+verifyCallResult returns bytes variable  (Slither line:3008)
+RETURN node expression: returndata (Slither line:3028)
+
+End Address.find_getter_in_contract (Slither line:3083)
+
+
+Begin Address.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isContract(address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: sendValue(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: functionCall(address,bytes) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionCall(address,bytes,string) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionCallWithValue(address,bytes,uint256) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionCallWithValue(address,bytes,uint256,string) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionStaticCall(address,bytes) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionStaticCall(address,bytes,string) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionDelegateCall(address,bytes) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: functionDelegateCall(address,bytes,string) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: verifyCallResult(bool,bytes,string) returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Address.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeERC20.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: safeTransfer (Slither line:2988)
+Checking function: safeTransferFrom (Slither line:2988)
+Checking function: safeApprove (Slither line:2988)
+Checking function: safeIncreaseAllowance (Slither line:2988)
+Checking function: safeDecreaseAllowance (Slither line:2988)
+Checking function: _callOptionalReturn (Slither line:2988)
+
+End SafeERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: safeTransfer(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeTransferFrom(IERC20,address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeApprove(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeIncreaseAllowance(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safeDecreaseAllowance(IERC20,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _callOptionalReturn(IERC20,bytes) returns() (Slither line:3127)
+Visibility: private
+
+End SafeERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin EnumerableSet.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _add (Slither line:2988)
+_add returns bool variable  (Slither line:3008)
+RETURN node expression: false (Slither line:3028)
+RETURN node expression: true (Slither line:3028)
+Checking function: _remove (Slither line:2988)
+_remove returns bool variable  (Slither line:3008)
+RETURN node expression: false (Slither line:3028)
+RETURN node expression: true (Slither line:3028)
+Checking function: _contains (Slither line:2988)
+_contains returns bool variable  (Slither line:3008)
+RETURN node expression: set._indexes[value] != 0 (Slither line:3028)
+Checking function: _length (Slither line:2988)
+_length returns uint256 variable  (Slither line:3008)
+RETURN node expression: set._values.length (Slither line:3028)
+Checking function: _at (Slither line:2988)
+_at returns bytes32 variable  (Slither line:3008)
+RETURN node expression: set._values[index] (Slither line:3028)
+Checking function: _values (Slither line:2988)
+_values returns bytes32[] variable  (Slither line:3008)
+RETURN node expression: set._values (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns bool variable  (Slither line:3008)
+RETURN node expression: _add(set._inner,value) (Slither line:3028)
+Checking function: remove (Slither line:2988)
+remove returns bool variable  (Slither line:3008)
+RETURN node expression: _remove(set._inner,value) (Slither line:3028)
+Checking function: contains (Slither line:2988)
+contains returns bool variable  (Slither line:3008)
+RETURN node expression: _contains(set._inner,value) (Slither line:3028)
+Checking function: length (Slither line:2988)
+length returns uint256 variable  (Slither line:3008)
+RETURN node expression: _length(set._inner) (Slither line:3028)
+Checking function: at (Slither line:2988)
+at returns bytes32 variable  (Slither line:3008)
+RETURN node expression: _at(set._inner,index) (Slither line:3028)
+Checking function: values (Slither line:2988)
+values returns bytes32[] variable  (Slither line:3008)
+RETURN node expression: _values(set._inner) (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns bool variable  (Slither line:3008)
+RETURN node expression: _add(set._inner,bytes32(uint256(uint160(value)))) (Slither line:3028)
+Checking function: remove (Slither line:2988)
+remove returns bool variable  (Slither line:3008)
+RETURN node expression: _remove(set._inner,bytes32(uint256(uint160(value)))) (Slither line:3028)
+Checking function: contains (Slither line:2988)
+contains returns bool variable  (Slither line:3008)
+RETURN node expression: _contains(set._inner,bytes32(uint256(uint160(value)))) (Slither line:3028)
+Checking function: length (Slither line:2988)
+length returns uint256 variable  (Slither line:3008)
+RETURN node expression: _length(set._inner) (Slither line:3028)
+Checking function: at (Slither line:2988)
+at returns address variable  (Slither line:3008)
+RETURN node expression: address(uint160(uint256(_at(set._inner,index)))) (Slither line:3028)
+Checking function: values (Slither line:2988)
+values returns address[] variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns bool variable  (Slither line:3008)
+RETURN node expression: _add(set._inner,bytes32(value)) (Slither line:3028)
+Checking function: remove (Slither line:2988)
+remove returns bool variable  (Slither line:3008)
+RETURN node expression: _remove(set._inner,bytes32(value)) (Slither line:3028)
+Checking function: contains (Slither line:2988)
+contains returns bool variable  (Slither line:3008)
+RETURN node expression: _contains(set._inner,bytes32(value)) (Slither line:3028)
+Checking function: length (Slither line:2988)
+length returns uint256 variable  (Slither line:3008)
+RETURN node expression: _length(set._inner) (Slither line:3028)
+Checking function: at (Slither line:2988)
+at returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(_at(set._inner,index)) (Slither line:3028)
+Checking function: values (Slither line:2988)
+values returns uint256[] variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+
+End EnumerableSet.find_getter_in_contract (Slither line:3083)
+
+
+Begin EnumerableSet.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _add(EnumerableSet.Set,bytes32) returns(bool) (Slither line:3127)
+Visibility: private
+Checking function: _remove(EnumerableSet.Set,bytes32) returns(bool) (Slither line:3127)
+Visibility: private
+Checking function: _contains(EnumerableSet.Set,bytes32) returns(bool) (Slither line:3127)
+Visibility: private
+Checking function: _length(EnumerableSet.Set) returns(uint256) (Slither line:3127)
+Visibility: private
+Checking function: _at(EnumerableSet.Set,uint256) returns(bytes32) (Slither line:3127)
+Visibility: private
+Checking function: _values(EnumerableSet.Set) returns(bytes32[]) (Slither line:3127)
+Visibility: private
+Checking function: add(EnumerableSet.Bytes32Set,bytes32) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: remove(EnumerableSet.Bytes32Set,bytes32) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: contains(EnumerableSet.Bytes32Set,bytes32) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: length(EnumerableSet.Bytes32Set) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: at(EnumerableSet.Bytes32Set,uint256) returns(bytes32) (Slither line:3127)
+Visibility: internal
+Checking function: values(EnumerableSet.Bytes32Set) returns(bytes32[]) (Slither line:3127)
+Visibility: internal
+Checking function: add(EnumerableSet.AddressSet,address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: remove(EnumerableSet.AddressSet,address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: contains(EnumerableSet.AddressSet,address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: length(EnumerableSet.AddressSet) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: at(EnumerableSet.AddressSet,uint256) returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: values(EnumerableSet.AddressSet) returns(address[]) (Slither line:3127)
+Visibility: internal
+Checking function: add(EnumerableSet.UintSet,uint256) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: remove(EnumerableSet.UintSet,uint256) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: contains(EnumerableSet.UintSet,uint256) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: length(EnumerableSet.UintSet) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: at(EnumerableSet.UintSet,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: values(EnumerableSet.UintSet) returns(uint256[]) (Slither line:3127)
+Visibility: internal
+
+End EnumerableSet.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeMathInt.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: mul (Slither line:2988)
+mul returns int256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns int256 variable  (Slither line:3008)
+RETURN node expression: a / b (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns int256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns int256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: abs (Slither line:2988)
+abs returns int256 variable  (Slither line:3008)
+RETURN node expression: - a (Slither line:3028)
+RETURN node expression: a (Slither line:3028)
+Checking function: toUint256Safe (Slither line:2988)
+toUint256Safe returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(a) (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End SafeMathInt.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeMathInt.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: mul(int256,int256) returns(int256) (Slither line:3127)
+Visibility: internal
+Checking function: div(int256,int256) returns(int256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(int256,int256) returns(int256) (Slither line:3127)
+Visibility: internal
+Checking function: add(int256,int256) returns(int256) (Slither line:3127)
+Visibility: internal
+Checking function: abs(int256) returns(int256) (Slither line:3127)
+Visibility: internal
+Checking function: toUint256Safe(int256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End SafeMathInt.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeMathUint.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: toInt256Safe (Slither line:2988)
+toInt256Safe returns int256 variable  (Slither line:3008)
+RETURN node expression: b (Slither line:3028)
+
+End SafeMathUint.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeMathUint.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: toInt256Safe(uint256) returns(int256) (Slither line:3127)
+Visibility: internal
+
+End SafeMathUint.find_setter_in_contract (Slither line:3345)
+
+
+Begin SafeMath.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: add (Slither line:2988)
+add returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: sub(a,b,SafeMath: subtraction overflow) (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mul (Slither line:2988)
+mul returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: c (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: div(a,b,SafeMath: division by zero) (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: mod(a,b,SafeMath: modulo by zero) (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: a % b (Slither line:3028)
+
+End SafeMath.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeMath.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: add(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+
+End SafeMath.find_setter_in_contract (Slither line:3345)
+
+
+Begin ReentrancyGuard.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ReentrancyGuard.find_getter_in_contract (Slither line:3083)
+
+
+Begin ReentrancyGuard.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ReentrancyGuard.find_setter_in_contract (Slither line:3345)
+
+
+Begin IStaking.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IStaking.find_getter_in_contract (Slither line:3083)
+
+
+Begin IStaking.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: deposit(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: withdraw(address,uint256,bool) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: claimRewards(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: receive() returns() (Slither line:3127)
+
+End IStaking.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20Metadata.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IERC20Metadata.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20Metadata.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IERC20Metadata.find_setter_in_contract (Slither line:3345)
+
+
+Begin Context.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End Context.find_getter_in_contract (Slither line:3083)
+
+
+Begin Context.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Context.find_setter_in_contract (Slither line:3345)
+
+
+Begin Ownable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: setOwnableConstructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End Ownable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Ownable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setOwnableConstructor() returns() (Slither line:3127)
+Visibility: internal
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+msg.sender
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+onlyOwner()
+msg.sender
+OwnershipTransferred(_owner,newOwner)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Ownable.find_setter_in_contract (Slither line:3345)
+
+
+Begin ERC20.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: ERCProxyConstructor (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: 18 (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _beforeTokenTransfer (Slither line:2988)
+
+End ERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin ERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(string,string) returns() (Slither line:3127)
+Checking function: ERCProxyConstructor(string,string) returns() (Slither line:3127)
+Visibility: internal
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: public
+_name
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: public
+_symbol
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: public
+18
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_beforeTokenTransfer(sender,recipient,amount)
+_transfer(_msgSender(),recipient,amount)
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+require(bool,string)(b <= a,errorMessage)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+_approve(_msgSender(),spender,amount)
+Approval(owner,spender,amount)
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+true
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_beforeTokenTransfer(sender,recipient,amount)
+msg.sender
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+c
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Approval(owner,spender,amount)
+require(bool,string)(b <= a,errorMessage)
+_transfer(sender,recipient,amount)
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+c
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+Approval(owner,spender,amount)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+require(bool,string)(c >= a,SafeMath: addition overflow)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+require(bool,string)(b <= a,errorMessage)
+Approval(owner,spender,amount)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeTokenTransfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End ERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin Authorizable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: setOwnableConstructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: setAuthorizedOwner (Slither line:2988)
+Checking function: addAuthorized (Slither line:2988)
+Checking function: removeAuthorized (Slither line:2988)
+
+End Authorizable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Authorizable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: setAuthorizedOwner() returns() (Slither line:3127)
+Visibility: internal
+Checking function: addAuthorized(address) returns() (Slither line:3127)
+Visibility: external
+msg.sender
+authorized[_toAdd] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+Checking function: removeAuthorized(address) returns() (Slither line:3127)
+Visibility: external
+authorized[_toRemove] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+onlyOwner()
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+require(bool)(_toRemove != msg.sender)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setOwnableConstructor() returns() (Slither line:3127)
+Visibility: internal
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+msg.sender
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+msg.sender
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+OwnershipTransferred(_owner,newOwner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Authorizable.find_setter_in_contract (Slither line:3345)
+
+
+Begin Treats.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: setAuthorizedOwner (Slither line:2988)
+Checking function: addAuthorized (Slither line:2988)
+Checking function: removeAuthorized (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setOwnableConstructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: ERCProxyConstructor (Slither line:2988)
+Checking function: name (Slither line:2988)
+name returns string variable  (Slither line:3008)
+RETURN node expression: _name (Slither line:3028)
+Checking function: symbol (Slither line:2988)
+symbol returns string variable  (Slither line:3008)
+RETURN node expression: _symbol (Slither line:3028)
+Checking function: decimals (Slither line:2988)
+decimals returns uint8 variable  (Slither line:3008)
+RETURN node expression: 18 (Slither line:3028)
+Checking function: totalSupply (Slither line:2988)
+totalSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalSupply (Slither line:3028)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _balances[account] (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _allowances[owner][spender] (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: _transfer (Slither line:2988)
+Checking function: _mint (Slither line:2988)
+Checking function: _burn (Slither line:2988)
+Checking function: _approve (Slither line:2988)
+Checking function: _beforeTokenTransfer (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: cap (Slither line:2988)
+cap returns uint256 variable  (Slither line:3008)
+RETURN node expression: _cap (Slither line:3028)
+Checking function: capUpdate (Slither line:2988)
+Checking function: lockFromUpdate (Slither line:2988)
+Checking function: lockToUpdate (Slither line:2988)
+Checking function: unlockedSupply (Slither line:2988)
+unlockedSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalSupply().sub(_totalLock) (Slither line:3028)
+Checking function: lockedSupply (Slither line:2988)
+lockedSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalLock() (Slither line:3028)
+Checking function: circulatingSupply (Slither line:2988)
+circulatingSupply returns uint256 variable  (Slither line:3008)
+RETURN node expression: totalSupply() (Slither line:3028)
+Checking function: totalLock (Slither line:2988)
+totalLock returns uint256 variable  (Slither line:3008)
+RETURN node expression: _totalLock (Slither line:3028)
+Checking function: _beforeTokenTransfer (Slither line:2988)
+Checking function: _transfer (Slither line:2988)
+Checking function: mint (Slither line:2988)
+Checking function: manualMint (Slither line:2988)
+Checking function: totalBalanceOf (Slither line:2988)
+totalBalanceOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _locks[_holder].add(balanceOf(_holder)) (Slither line:3028)
+Checking function: lockOf (Slither line:2988)
+lockOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: _locks[_holder] (Slither line:3028)
+Checking function: lastUnlockBlock (Slither line:2988)
+lastUnlockBlock returns uint256 variable  (Slither line:3008)
+RETURN node expression: _lastUnlockBlock[_holder] (Slither line:3028)
+Checking function: lock (Slither line:2988)
+Checking function: canUnlockAmount (Slither line:2988)
+canUnlockAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: _locks[_holder].mul(releaseBlock).div(numberLockBlock) (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: _locks[_holder] (Slither line:3028)
+Checking function: unlock (Slither line:2988)
+Checking function: transferAll (Slither line:2988)
+Checking function: delegates (Slither line:2988)
+delegates returns address variable  (Slither line:3008)
+RETURN node expression: _delegates[delegator] (Slither line:3028)
+Checking function: delegate (Slither line:2988)
+Checking function: delegateBySig (Slither line:2988)
+Checking function: getCurrentVotes (Slither line:2988)
+getCurrentVotes returns uint256 variable  (Slither line:3008)
+RETURN node expression: checkpoints[account][nCheckpoints - 1].votes (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: getPriorVotes (Slither line:2988)
+getPriorVotes returns uint256 variable  (Slither line:3008)
+RETURN node expression: checkpoints[account][lower].votes (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: checkpoints[account][nCheckpoints - 1].votes (Slither line:3028)
+RETURN node expression: cp.votes (Slither line:3028)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: _delegate (Slither line:2988)
+Checking function: _moveDelegates (Slither line:2988)
+Checking function: _writeCheckpoint (Slither line:2988)
+Checking function: safe32 (Slither line:2988)
+safe32 returns uint32 variable  (Slither line:3008)
+RETURN node expression: uint32(n) (Slither line:3028)
+Checking function: getChainId (Slither line:2988)
+getChainId returns uint256 variable  (Slither line:3008)
+RETURN node expression: chainId (Slither line:3028)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Treats.find_getter_in_contract (Slither line:3083)
+
+
+Begin Treats.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(string,string,uint256,uint256,uint256,uint256) returns() (Slither line:3127)
+Checking function: cap() returns(uint256) (Slither line:3127)
+Visibility: external
+_cap
+Checking function: capUpdate(uint256) returns() (Slither line:3127)
+Visibility: external
+_cap = _newCap
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_owner
+CapUpdate(_cap)
+require(bool)(authorized[msg.sender] || owner() == msg.sender)
+onlyAuthorized()
+Checking function: lockFromUpdate(uint256) returns() (Slither line:3127)
+Visibility: external
+lockFromBlock = _newLockFrom
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+LockFromBlockUpdate(lockFromBlock)
+_owner
+onlyAuthorized()
+require(bool)(authorized[msg.sender] || owner() == msg.sender)
+Checking function: lockToUpdate(uint256) returns() (Slither line:3127)
+Visibility: external
+LockToBlockUpdate(lockToBlock)
+onlyAuthorized()
+_owner
+lockToBlock = _newLockTo
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool)(authorized[msg.sender] || owner() == msg.sender)
+Checking function: unlockedSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+c
+require(bool,string)(b <= a,errorMessage)
+totalSupply().sub(_totalLock)
+sub(a,b,SafeMath: subtraction overflow)
+_totalSupply
+Checking function: lockedSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+_totalLock
+totalLock()
+Checking function: circulatingSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+_totalSupply
+totalSupply()
+Checking function: totalLock() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalLock
+Checking function: _beforeTokenTransfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: mint(address,uint256) returns() (Slither line:3127)
+Visibility: external
+_mint(_to,_amount)
+c
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(address(0xdf4fBD76a71A34C88bF428783c8849E193D4bD7A),_msgSender(),amount)
+_moveDelegates(address(0),_delegates[_to],_amount)
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+onlyOwner()
+require(bool,string)(n < 2 ** 32,errorMessage)
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+sub(a,b,SafeMath: subtraction overflow)
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+msg.sender
+uint32(n)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[account] = _balances[account].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),ERC20: mint to the zero address)
+require(bool,string)(b <= a,errorMessage)
+_beforeTokenTransfer(address(0),account,amount)
+_totalSupply = _totalSupply.add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: manualMint(address,uint256) returns() (Slither line:3127)
+Visibility: external
+c
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(address(0xdf4fBD76a71A34C88bF428783c8849E193D4bD7A),_msgSender(),amount)
+require(bool,string)(manualMinted < manualMintLimit,ERC20: manualMinted greater than manualMintLimit)
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_mint(_to,_amount)
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+_moveDelegates(address(0),_delegates[_to],_amount)
+manualMinted = manualMinted.add(_amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(n < 2 ** 32,errorMessage)
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+sub(a,b,SafeMath: subtraction overflow)
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+msg.sender
+uint32(n)
+onlyAuthorized()
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+c
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[account] = _balances[account].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool)(authorized[msg.sender] || owner() == msg.sender)
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(account != address(0),ERC20: mint to the zero address)
+require(bool,string)(b <= a,errorMessage)
+_beforeTokenTransfer(address(0),account,amount)
+_owner
+_totalSupply = _totalSupply.add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: totalBalanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+c
+_locks[_holder].add(balanceOf(_holder))
+_balances[account]
+require(bool,string)(c >= a,SafeMath: addition overflow)
+Checking function: lockOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+_locks[_holder]
+Checking function: lastUnlockBlock(address) returns(uint256) (Slither line:3127)
+Visibility: external
+_lastUnlockBlock[_holder]
+Checking function: lock(address,uint256) returns() (Slither line:3127)
+Visibility: external
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_amount <= balanceOf(_holder),ERC20: lock amount over balance)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_transfer(_holder,address(this),_amount)
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+super._transfer(sender,recipient,amount)
+_beforeTokenTransfer(sender,recipient,amount)
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+_locks[_holder] = _locks[_holder].add(_amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_moveDelegates(_delegates[sender],_delegates[recipient],amount)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_totalLock = _totalLock.add(_amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+require(bool,string)(n < 2 ** 32,errorMessage)
+Transfer(sender,recipient,amount)
+msg.sender
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Lock(_holder,_amount)
+sub(a,b,SafeMath: subtraction overflow)
+uint32(n)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_lastUnlockBlock[_holder] = lockFromBlock
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+c
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(b <= a,errorMessage)
+_balances[account]
+require(bool,string)(_holder != address(0),ERC20: lock to the zero address)
+Checking function: canUnlockAmount(address) returns(uint256) (Slither line:3127)
+Visibility: public
+c
+0
+c
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+c
+_locks[_holder].mul(releaseBlock).div(numberLockBlock)
+sub(a,b,SafeMath: subtraction overflow)
+div(a,b,SafeMath: division by zero)
+0
+require(bool,string)(b <= a,errorMessage)
+require(bool,string)(b > 0,errorMessage)
+_locks[_holder]
+Checking function: unlock() returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_beforeTokenTransfer(sender,recipient,amount)
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+sub(a,b,SafeMath: subtraction overflow)
+Transfer(sender,recipient,amount)
+0
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(b <= a,errorMessage)
+_balances[account]
+_locks[_holder]
+require(bool,string)(_locks[msg.sender] > 0,ERC20: cannot unlock)
+c
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_transfer(address(this),msg.sender,amount)
+_locks[_holder].mul(releaseBlock).div(numberLockBlock)
+amount = balanceOf(address(this))
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_locks[msg.sender] = _locks[msg.sender].sub(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+_lastUnlockBlock[msg.sender] = block.number
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_totalLock = _totalLock.sub(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+0
+c
+super._transfer(sender,recipient,amount)
+_moveDelegates(_delegates[sender],_delegates[recipient],amount)
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+c
+require(bool,string)(n < 2 ** 32,errorMessage)
+uint32(n)
+div(a,b,SafeMath: division by zero)
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+require(bool,string)(b > 0,errorMessage)
+Checking function: transferAll(address) returns() (Slither line:3127)
+Visibility: external
+_lastUnlockBlock[_to] = lockFromBlock
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+super._transfer(sender,recipient,amount)
+_locks[msg.sender] = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_beforeTokenTransfer(sender,recipient,amount)
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+_moveDelegates(_delegates[sender],_delegates[recipient],amount)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_lastUnlockBlock[_to] = _lastUnlockBlock[msg.sender]
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(n < 2 ** 32,errorMessage)
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+Transfer(sender,recipient,amount)
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+sub(a,b,SafeMath: subtraction overflow)
+_lastUnlockBlock[msg.sender] = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+uint32(n)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_transfer(msg.sender,_to,balanceOf(msg.sender))
+c
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_locks[_to] = _locks[_to].add(_locks[msg.sender])
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(b <= a,errorMessage)
+_balances[account]
+Checking function: delegates(address) returns(address) (Slither line:3127)
+Visibility: external
+_delegates[delegator]
+Checking function: delegate(address) returns() (Slither line:3127)
+Visibility: external
+c
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+_delegates[delegator] = delegatee
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(n < 2 ** 32,errorMessage)
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+sub(a,b,SafeMath: subtraction overflow)
+DelegateChanged(delegator,currentDelegate,delegatee)
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+uint32(n)
+_moveDelegates(currentDelegate,delegatee,delegatorBalance)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+c
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_delegate(msg.sender,delegatee)
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(b <= a,errorMessage)
+_balances[account]
+Checking function: delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32) returns() (Slither line:3127)
+Visibility: external
+c
+dstRepOld = checkpoints[dstRep][dstRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+dstRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_writeCheckpoint(dstRep,dstRepNum,dstRepOld,dstRepNew)
+_delegates[delegator] = delegatee
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(n < 2 ** 32,errorMessage)
+chainId
+DelegateVotesChanged(delegatee,oldVotes,newVotes)
+sub(a,b,SafeMath: subtraction overflow)
+DelegateChanged(delegator,currentDelegate,delegatee)
+checkpoints[delegatee][nCheckpoints - 1].votes = newVotes
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+uint32(n)
+chainId = chainid()()
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_moveDelegates(currentDelegate,delegatee,delegatorBalance)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+_writeCheckpoint(srcRep,srcRepNum,srcRepOld,srcRepNew)
+c
+checkpoints[delegatee][nCheckpoints] = Checkpoint(blockNumber,newVotes)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(signatory != address(0),Treats::delegateBySig: invalid signature)
+numCheckpoints[delegatee] = nCheckpoints + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+srcRepOld = checkpoints[srcRep][srcRepNum - 1].votes
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(nonce == nonces[signatory] ++,Treats::delegateBySig: invalid nonce)
+srcRepOld = 0
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(block.timestamp <= expiry,Treats::delegateBySig: signature expired)
+_delegate(signatory,delegatee)
+require(bool,string)(b <= a,errorMessage)
+_name
+_balances[account]
+Checking function: getCurrentVotes(address) returns(uint256) (Slither line:3127)
+Visibility: external
+checkpoints[account][nCheckpoints - 1].votes
+0
+Checking function: getPriorVotes(address,uint256) returns(uint256) (Slither line:3127)
+Visibility: external
+require(bool,string)(blockNumber < block.number,Treats::getPriorVotes: not yet determined)
+checkpoints[account][lower].votes
+upper = center - 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+0
+checkpoints[account][nCheckpoints - 1].votes
+cp.votes
+0
+lower = center
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _delegate(address,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _moveDelegates(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _writeCheckpoint(address,uint32,uint256,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: safe32(uint256,string) returns(uint32) (Slither line:3127)
+Visibility: internal
+Checking function: getChainId() returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: setAuthorizedOwner() returns() (Slither line:3127)
+Visibility: internal
+Checking function: addAuthorized(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+authorized[_toAdd] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+Checking function: removeAuthorized(address) returns() (Slither line:3127)
+Visibility: external
+require(bool)(_toRemove != msg.sender)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+authorized[_toRemove] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+onlyOwner()
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setOwnableConstructor() returns() (Slither line:3127)
+Visibility: internal
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+msg.sender
+OwnershipTransferred(_owner,newOwner)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: constructor(string,string) returns() (Slither line:3127)
+Checking function: ERCProxyConstructor(string,string) returns() (Slither line:3127)
+Visibility: internal
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: public
+_name
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: public
+_symbol
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: public
+18
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: public
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+_balances[account]
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_transfer(_msgSender(),recipient,amount)
+_beforeTokenTransfer(sender,recipient,amount)
+true
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+c
+require(bool,string)(b <= a,errorMessage)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+Approval(owner,spender,amount)
+_approve(_msgSender(),spender,amount)
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+msg.sender
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+c
+require(bool,string)(sender != address(0),ERC20: transfer from the zero address)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(recipient != address(0),ERC20: transfer to the zero address)
+_beforeTokenTransfer(sender,recipient,amount)
+_balances[sender] = _balances[sender].sub(amount,ERC20: transfer amount exceeds balance)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+msg.sender
+_balances[recipient] = _balances[recipient].add(amount)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Transfer(sender,recipient,amount)
+require(bool,string)(c >= a,SafeMath: addition overflow)
+Approval(owner,spender,amount)
+c
+require(bool,string)(b <= a,errorMessage)
+_transfer(sender,recipient,amount)
+_approve(sender,_msgSender(),_allowances[sender][_msgSender()].sub(amount,ERC20: transfer amount exceeds allowance))
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+Approval(owner,spender,amount)
+c
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+msg.sender
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].add(addedValue))
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(c >= a,SafeMath: addition overflow)
+true
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+Approval(owner,spender,amount)
+c
+_approve(_msgSender(),spender,_allowances[_msgSender()][spender].sub(subtractedValue,ERC20: decreased allowance below zero))
+require(bool,string)(b <= a,errorMessage)
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+msg.sender
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _mint(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _burn(address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _beforeTokenTransfer(address,address,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End Treats.find_setter_in_contract (Slither line:3345)
+
+
+Begin Proxiable.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: updateCodeAddress (Slither line:2988)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3028)
+
+End Proxiable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: updateCodeAddress(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: proxiableUUID() returns(bytes32) (Slither line:3127)
+Visibility: public
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+
+Begin LibraryLockDataLayout.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End LibraryLockDataLayout.find_getter_in_contract (Slither line:3083)
+
+
+Begin LibraryLockDataLayout.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End LibraryLockDataLayout.find_setter_in_contract (Slither line:3345)
+
+
+Begin LibraryLock.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: initialize (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End LibraryLock.find_getter_in_contract (Slither line:3083)
+
+
+Begin LibraryLock.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: initialize() returns() (Slither line:3127)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End LibraryLock.find_setter_in_contract (Slither line:3345)
+
+
+Begin DataLayout.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: initialize (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End DataLayout.find_getter_in_contract (Slither line:3083)
+
+
+Begin DataLayout.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: initialize() returns() (Slither line:3127)
+
+End DataLayout.find_setter_in_contract (Slither line:3345)
+
+
+Begin MasterChef.find_getter_in_contract (Slither line:2974)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: initialize (Slither line:2988)
+Checking function: updateCodeAddress (Slither line:2988)
+Checking function: proxiableUUID (Slither line:2988)
+proxiableUUID returns bytes32 variable  (Slither line:3008)
+RETURN node expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: setAuthorizedOwner (Slither line:2988)
+Checking function: addAuthorized (Slither line:2988)
+Checking function: removeAuthorized (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setOwnableConstructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: initializeProxy (Slither line:2988)
+Checking function: updateCode (Slither line:2988)
+Checking function: resetAuthorizedOwner (Slither line:2988)
+Checking function: setStakingContract (Slither line:2988)
+Checking function: poolLength (Slither line:2988)
+poolLength returns uint256 variable  (Slither line:3008)
+RETURN node expression: poolInfo.length (Slither line:3028)
+Checking function: add (Slither line:2988)
+Checking function: set (Slither line:2988)
+Checking function: massUpdatePools (Slither line:2988)
+Checking function: updatePool (Slither line:2988)
+Checking function: getMultiplier (Slither line:2988)
+getMultiplier returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: result.add(m) (Slither line:3028)
+RETURN node expression: result (Slither line:3028)
+Checking function: getPoolReward (Slither line:2988)
+getPoolReward returns uint256 variable called forDev (Slither line:3008)
+getPoolReward returns uint256 variable called forFarmer (Slither line:3008)
+getPoolReward returns uint256 variable called forLP (Slither line:3008)
+getPoolReward returns uint256 variable called forCom (Slither line:3008)
+getPoolReward returns uint256 variable called forFounders (Slither line:3008)
+Checking function: pendingReward (Slither line:2988)
+pendingReward returns uint256 variable  (Slither line:3008)
+RETURN node expression: user.amount.mul(accGovTokenPerShare).div(1e12).sub(user.rewardDebt) (Slither line:3028)
+Checking function: claimRewards (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: _harvest (Slither line:2988)
+Checking function: getGlobalAmount (Slither line:2988)
+getGlobalAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: current.globalAmount (Slither line:3028)
+Checking function: getGlobalRefAmount (Slither line:2988)
+getGlobalRefAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: current.globalRefAmount (Slither line:3028)
+Checking function: getTotalRefs (Slither line:2988)
+getTotalRefs returns uint256 variable  (Slither line:3008)
+RETURN node expression: current.totalReferals (Slither line:3028)
+Checking function: getRefValueOf (Slither line:2988)
+getRefValueOf returns uint256 variable  (Slither line:3008)
+RETURN node expression: a (Slither line:3028)
+Checking function: deposit (Slither line:2988)
+Checking function: withdraw (Slither line:2988)
+Checking function: emergencyWithdraw (Slither line:2988)
+Checking function: safeGovTokenTransfer (Slither line:2988)
+Checking function: dev (Slither line:2988)
+Checking function: bonusFinishUpdate (Slither line:2988)
+Checking function: halvingUpdate (Slither line:2988)
+Checking function: lpUpdate (Slither line:2988)
+Checking function: comUpdate (Slither line:2988)
+Checking function: founderUpdate (Slither line:2988)
+Checking function: rewardUpdate (Slither line:2988)
+Checking function: rewardMulUpdate (Slither line:2988)
+Checking function: lockUpdate (Slither line:2988)
+Checking function: lockdevUpdate (Slither line:2988)
+Checking function: locklpUpdate (Slither line:2988)
+Checking function: lockcomUpdate (Slither line:2988)
+Checking function: lockfounderUpdate (Slither line:2988)
+Checking function: starblockUpdate (Slither line:2988)
+Checking function: getNewRewardPerBlock (Slither line:2988)
+getNewRewardPerBlock returns uint256 variable  (Slither line:3008)
+RETURN node expression: multiplier.mul(REWARD_PER_BLOCK).mul(poolInfo[pid1].allocPoint).div(totalAllocPoint) (Slither line:3028)
+Checking function: userDelta (Slither line:2988)
+userDelta returns uint256 variable  (Slither line:3008)
+RETURN node expression: estDelta_scope_0 (Slither line:3028)
+RETURN node expression: estDelta (Slither line:3028)
+Checking function: reviseWithdraw (Slither line:2988)
+Checking function: reviseDeposit (Slither line:2988)
+Checking function: setStageStarts (Slither line:2988)
+Checking function: setStageEnds (Slither line:2988)
+Checking function: setUserFeeStage (Slither line:2988)
+Checking function: setDevFeeStage (Slither line:2988)
+Checking function: setDevDepFee (Slither line:2988)
+Checking function: setUserDepFee (Slither line:2988)
+Checking function: reclaimTokenOwnership (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End MasterChef.find_getter_in_contract (Slither line:3083)
+
+
+Begin MasterChef.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: initializeProxy(Treats,uint256,uint256,uint256,uint256,uint256,uint256[],uint256[],uint256[],uint256[],uint256[]) returns() (Slither line:3127)
+Checking function: updateCode(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(initialized == true,The library is locked. No direct 'call' is allowed)
+onlyOwner()
+msg.sender
+sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+sstore(uint256,uint256)
+
+End MasterChef.find_setter_in_contract (Slither line:3345)
+
+detect_storage_slot: MasterChefProxy
+Setter found in contract MasterChef
+Found public function: constructor
+Found fallback
+Checking external function fallback
+functions_writing_to_variable: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+functions_writing_to_variable: checking function MasterChef.withdraw (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.comUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.lockcomUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setStageStarts (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.removeAuthorized (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.massUpdatePools (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.initializeProxy (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.emergencyWithdraw (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef._harvest (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.founderUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.lockfounderUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setStageEnds (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.updateCode (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+functions_writing_to_variable: updateCode writes newAddress to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MasterChef.updatePool (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.safeGovTokenTransfer (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.updateCodeAddress (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+functions_writing_to_variable: updateCodeAddress writes newAddress to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MasterChef.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getGlobalAmount (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.proxiableUUID (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.rewardUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.starblockUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setUserFeeStage (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.resetAuthorizedOwner (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getMultiplier (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.dev (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getGlobalRefAmount (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.rewardMulUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getNewRewardPerBlock (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.reclaimTokenOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChefProxy.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,contractLogic)
+functions_writing_to_variable: constructor writes contractLogic to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function MasterChef._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setDevFeeStage (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setStakingContract (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getPoolReward (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setOwnableConstructor (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.bonusFinishUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getTotalRefs (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.userDelta (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.lockUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setDevDepFee (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.poolLength (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.pendingReward (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChefProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.owner (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.halvingUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.getRefValueOf (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.reviseWithdraw (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.lockdevUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setAuthorizedOwner (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.setUserDepFee (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.add (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.claimRewards (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.lpUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.deposit (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.reviseDeposit (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.locklpUpdate (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.addAuthorized (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function MasterChef.set (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function updateCode
+require(bool,string)(initialized == true,The library is locked. No direct 'call' is allowed)
+has_compatibility_checks: condition initialized == true
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition _owner == _msgSender()
+require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_compatibility_checks: condition bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID()
+check_condition_from_expression: modifier calls: ['onlyOwner()', 'delegatedOnly()']
+check_condition_from_expression: condition bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID()
+has_compatibility_checks: skipping internal function updateCodeAddress
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: contractLogic_fallback_asm_0 = sload(uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractLogic_fallback_asm_0,0x0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(initialized == true,The library is locked. No direct 'call' is allowed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegatedOnly()
+has_time_delay: (node.type) EXPRESSION
+(Expression) updateCodeAddress(newCode)
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EnumerableSet.is_proxy (Slither line:1425)
+
+
+End EnumerableSet.is_proxy (Slither line:1428)
+
+
+Begin EnumerableSet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EnumerableSet 
+
+End EnumerableSet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMathInt.is_proxy (Slither line:1425)
+
+
+End SafeMathInt.is_proxy (Slither line:1428)
+
+
+Begin SafeMathInt.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMathInt 
+
+End SafeMathInt.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMathUint.is_proxy (Slither line:1425)
+
+
+End SafeMathUint.is_proxy (Slither line:1428)
+
+
+Begin SafeMathUint.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMathUint 
+
+End SafeMathUint.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStaking.is_proxy (Slither line:1425)
+
+
+End IStaking.is_proxy (Slither line:1428)
+
+
+Begin IStaking.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStaking 
+
+End IStaking.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20Metadata.is_proxy (Slither line:1425)
+
+
+End IERC20Metadata.is_proxy (Slither line:1428)
+
+
+Begin IERC20Metadata.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20Metadata 
+
+End IERC20Metadata.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Authorizable.is_proxy (Slither line:1425)
+
+
+End Authorizable.is_proxy (Slither line:1428)
+
+
+Begin Authorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Authorizable 
+
+End Authorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Treats.is_proxy (Slither line:1425)
+
+
+End Treats.is_proxy (Slither line:1428)
+
+
+Begin Treats.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Treats 
+
+End Treats.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxiable.is_proxy (Slither line:1425)
+
+
+End Proxiable.is_proxy (Slither line:1428)
+
+
+Begin Proxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxiable 
+
+End Proxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibraryLockDataLayout.is_proxy (Slither line:1425)
+
+
+End LibraryLockDataLayout.is_proxy (Slither line:1428)
+
+
+Begin LibraryLockDataLayout.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibraryLockDataLayout 
+
+End LibraryLockDataLayout.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibraryLock.is_proxy (Slither line:1425)
+
+
+End LibraryLock.is_proxy (Slither line:1428)
+
+
+Begin LibraryLock.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibraryLock 
+
+End LibraryLock.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DataLayout.is_proxy (Slither line:1425)
+
+
+End DataLayout.is_proxy (Slither line:1428)
+
+
+Begin DataLayout.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DataLayout 
+
+End DataLayout.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MasterChef.is_proxy (Slither line:1425)
+
+
+End MasterChef.is_proxy (Slither line:1428)
+
+
+Begin MasterChef.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MasterChef 
+
+End MasterChef.is_upgradeable_proxy (Slither line:1407)
+

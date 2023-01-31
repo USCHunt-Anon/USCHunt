@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/f7/contracts/mainnet/f7/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol#40-66)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/f7/contracts/mainnet/f7/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol#40-66) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "CrossProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/f7/contracts/mainnet/f7/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol#1301-1312)",
+        "elements": [],
+        "description": "CrossProxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/f7/contracts/mainnet/f7/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol#1301-1312) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "c87c9e20ca5fdf3e02452a108ea13c26eb64afcea57dd22f1a69d48646954d89",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy._implementation",
+          "impl_address_setter": "CrossProxy.upgradeTo(address)",
+          "impl_address_getter": "Proxy.implementation()",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/arbitrum/contracts/mainnet/proxies/0.4.26/f7/contracts/mainnet/f7/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol/F7Ba155556E2CD4Dfe3Fe26e506A14d2f4b97613_CrossProxy.sol#40-66)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "CrossProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(impl != address(0),Cannot upgrade to invalid address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "setHalt(bool)",
+              "transferOwner(address)",
+              "changeOwner(address)",
+              "acceptOwnership()",
+              "renounceOwnership()",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

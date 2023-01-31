@@ -1,0 +1,1893 @@
+
+Begin IProxy.is_proxy (Slither line:1425)
+
+
+End IProxy.is_proxy (Slither line:1428)
+
+
+Begin IProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IProxy 
+
+End IProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff) (Slither line:1576)
+    if eq(calldataload(0), 0xa619486e00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        mstore(0, masterCopy) (Slither line:1576)
+        return(0, 0x20) (Slither line:1576)
+    } (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'masterCopy'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for masterCopy (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking masterCopy (Slither line:1689)
+masterCopy is a State Variable in contract Proxy (Slither line:1693)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to masterCopy
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for masterCopy at slot 0 in contract Exponential (Slither line:1355)
+Found expScale at slot 0 in contract Exponential (Slither line:1362)
+Checking for expScale at slot 0 in contract AbsAvatarBase (Slither line:1355)
+Found expScale at slot 0 in contract AbsAvatarBase (Slither line:1362)
+Checking for expScale at slot 0 in contract AbsComptroller (Slither line:1355)
+Found expScale at slot 0 in contract AbsComptroller (Slither line:1362)
+Checking for expScale at slot 0 in contract AbsCToken (Slither line:1355)
+Found expScale at slot 0 in contract AbsCToken (Slither line:1362)
+Checking for expScale at slot 0 in contract ProxyStorage (Slither line:1355)
+Found masterCopy at slot 0 in contract ProxyStorage (Slither line:1362)
+
+Begin ProxyStorage.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+
+End ProxyStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin ProxyStorage.find_setter_in_contract (Slither line:3119)
+
+
+End ProxyStorage.find_setter_in_contract (Slither line:3345)
+
+Checking for masterCopy at slot 0 in contract Avatar (Slither line:1355)
+Found masterCopy at slot 0 in contract Avatar (Slither line:1362)
+
+Begin Avatar.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+Checking function: _allowOnlyBToken (Slither line:2988)
+Checking function: isValidBToken (Slither line:2988)
+isValidBToken returns bool variable  (Slither line:3008)
+RETURN node expression: bComptroller.isBToken(bToken) (Slither line:3028)
+Checking function: borrowBalanceCurrent (Slither line:2988)
+borrowBalanceCurrent returns uint256 variable  (Slither line:3008)
+RETURN node expression: add_(borrowBalanceCurr,toppedUpAmount) (Slither line:3028)
+RETURN node expression: borrowBalanceCurr (Slither line:3028)
+Checking function: _toUnderlying (Slither line:2988)
+_toUnderlying returns uint256 variable  (Slither line:3008)
+RETURN node expression: mulTrucate(redeemTokens,exchangeRate) (Slither line:3028)
+Checking function: mint (Slither line:2988)
+Checking function: repayBorrow (Slither line:2988)
+Checking function: mint (Slither line:2988)
+mint returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: repayBorrow (Slither line:2988)
+repayBorrow returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: liquidateBorrow (Slither line:2988)
+liquidateBorrow returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: redeem (Slither line:2988)
+redeem returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: redeemUnderlying (Slither line:2988)
+redeemUnderlying returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: borrow (Slither line:2988)
+borrow returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+RETURN node expression: cToken.approve(spenderAvatar,amount) (Slither line:3028)
+Checking function: collectCToken (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: _allowOnlyAvatarOwner (Slither line:2988)
+Checking function: _allowOnlyPool (Slither line:2988)
+Checking function: _allowOnlyBComptroller (Slither line:2988)
+Checking function: _initAvatarBase (Slither line:2988)
+Checking function: _hardReevaluate (Slither line:2988)
+Checking function: _softReevaluate (Slither line:2988)
+Checking function: _reevaluate (Slither line:2988)
+Checking function: _isCEther (Slither line:2988)
+_isCEther returns bool variable  (Slither line:3008)
+RETURN node expression: address(cToken) == registry.cEther() (Slither line:3028)
+Checking function: _score (Slither line:2988)
+_score returns IScore variable  (Slither line:3008)
+Checking function: toInt256 (Slither line:2988)
+toInt256 returns int256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: isPartiallyLiquidated (Slither line:2988)
+isPartiallyLiquidated returns bool variable  (Slither line:3008)
+RETURN node expression: remainingLiquidationAmount > 0 (Slither line:3028)
+Checking function: isToppedUp (Slither line:2988)
+isToppedUp returns bool variable  (Slither line:3008)
+RETURN node expression: toppedUpAmount > 0 (Slither line:3028)
+Checking function: canUntop (Slither line:2988)
+canUntop returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: result (Slither line:3028)
+Checking function: pool (Slither line:2988)
+pool returns address variable  (Slither line:3008)
+RETURN node expression: address(uint160(registry.pool())) (Slither line:3028)
+Checking function: canLiquidate (Slither line:2988)
+canLiquidate returns bool variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: _ensureUserNotQuitB (Slither line:2988)
+Checking function: topup (Slither line:2988)
+Checking function: topup (Slither line:2988)
+Checking function: untop (Slither line:2988)
+Checking function: _untop (Slither line:2988)
+Checking function: _untop (Slither line:2988)
+Checking function: _untopBeforeRepay (Slither line:2988)
+_untopBeforeRepay returns uint256 variable called amtToRepayOnCompound (Slither line:3008)
+Checking function: _doLiquidateBorrow (Slither line:2988)
+_doLiquidateBorrow returns uint256 variable  (Slither line:3008)
+RETURN node expression: seizeTokens (Slither line:3028)
+Checking function: getMaxLiquidationAmount (Slither line:2988)
+getMaxLiquidationAmount returns uint256 variable  (Slither line:3008)
+RETURN node expression: mulTrucate(comptroller.closeFactorMantissa(),totalDebt) (Slither line:3028)
+RETURN node expression: remainingLiquidationAmount (Slither line:3028)
+Checking function: splitAmountToLiquidate (Slither line:2988)
+splitAmountToLiquidate returns uint256 variable called amtToDeductFromTopup (Slither line:3008)
+splitAmountToLiquidate returns uint256 variable called amtToRepayOnCompound (Slither line:3008)
+Checking function: calcAmountToLiquidate (Slither line:2988)
+calcAmountToLiquidate returns uint256 variable called amtToDeductFromTopup (Slither line:3008)
+calcAmountToLiquidate returns uint256 variable called amtToRepayOnCompound (Slither line:3008)
+Checking function: quitB (Slither line:2988)
+Checking function: getExp (Slither line:2988)
+getExp returns CarefulMath.MathError variable  (Slither line:3008)
+getExp returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: (err0,Exp(0)) (Slither line:3028)
+RETURN node expression: (MathError.NO_ERROR,Exp(rational)) (Slither line:3028)
+RETURN node expression: (err1,Exp(0)) (Slither line:3028)
+Checking function: mulScalar (Slither line:2988)
+mulScalar returns CarefulMath.MathError variable  (Slither line:3008)
+mulScalar returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: (MathError.NO_ERROR,Exp(scaledMantissa)) (Slither line:3028)
+RETURN node expression: (err0,Exp(0)) (Slither line:3028)
+Checking function: mulScalarTruncate (Slither line:2988)
+mulScalarTruncate returns CarefulMath.MathError variable  (Slither line:3008)
+mulScalarTruncate returns uint256 variable  (Slither line:3008)
+RETURN node expression: (MathError.NO_ERROR,truncate(product)) (Slither line:3028)
+RETURN node expression: (err,0) (Slither line:3028)
+Checking function: divScalarByExp (Slither line:2988)
+divScalarByExp returns CarefulMath.MathError variable  (Slither line:3008)
+divScalarByExp returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: (err0,Exp(0)) (Slither line:3028)
+RETURN node expression: getExp(numerator,divisor.mantissa) (Slither line:3028)
+Checking function: mulExp (Slither line:2988)
+mulExp returns CarefulMath.MathError variable  (Slither line:3008)
+mulExp returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: (err1,Exp(0)) (Slither line:3028)
+RETURN node expression: (err0,Exp(0)) (Slither line:3028)
+RETURN node expression: (MathError.NO_ERROR,Exp(product)) (Slither line:3028)
+Checking function: mulExp (Slither line:2988)
+mulExp returns CarefulMath.MathError variable  (Slither line:3008)
+mulExp returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: mulExp(Exp(a),Exp(b)) (Slither line:3028)
+Checking function: divExp (Slither line:2988)
+divExp returns CarefulMath.MathError variable  (Slither line:3008)
+divExp returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: getExp(a.mantissa,b.mantissa) (Slither line:3028)
+Checking function: truncate (Slither line:2988)
+truncate returns uint256 variable  (Slither line:3008)
+RETURN node expression: exp.mantissa / expScale (Slither line:3028)
+Checking function: safe224 (Slither line:2988)
+safe224 returns uint224 variable  (Slither line:3008)
+RETURN node expression: uint224(n) (Slither line:3028)
+Checking function: add_ (Slither line:2988)
+add_ returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: Exp(add_(a.mantissa,b.mantissa)) (Slither line:3028)
+Checking function: add_ (Slither line:2988)
+add_ returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(add_(a.mantissa,b.mantissa)) (Slither line:3028)
+Checking function: add_ (Slither line:2988)
+add_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: add_(a,b,addition overflow) (Slither line:3028)
+Checking function: add_ (Slither line:2988)
+add_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: sub_ (Slither line:2988)
+sub_ returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: Exp(sub_(a.mantissa,b.mantissa)) (Slither line:3028)
+Checking function: sub_ (Slither line:2988)
+sub_ returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(sub_(a.mantissa,b.mantissa)) (Slither line:3028)
+Checking function: sub_ (Slither line:2988)
+sub_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: sub_(a,b,subtraction underflow) (Slither line:3028)
+Checking function: sub_ (Slither line:2988)
+sub_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: a - b (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: Exp(mul_(a.mantissa,b.mantissa) / expScale) (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: Exp(mul_(a.mantissa,b)) (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: mul_(a,b.mantissa) / expScale (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(mul_(a.mantissa,b.mantissa) / doubleScale) (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(mul_(a.mantissa,b)) (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: mul_(a,b.mantissa) / doubleScale (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: mul_(a,b,multiplication overflow) (Slither line:3028)
+Checking function: mul_ (Slither line:2988)
+mul_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: c (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: Exp(div_(mul_(a.mantissa,expScale),b.mantissa)) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns Exponential.Exp variable  (Slither line:3008)
+RETURN node expression: Exp(div_(a.mantissa,b)) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: div_(mul_(a,expScale),b.mantissa) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(div_(mul_(a.mantissa,doubleScale),b.mantissa)) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(div_(a.mantissa,b)) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: div_(mul_(a,doubleScale),b.mantissa) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: div_(a,b,divide by zero) (Slither line:3028)
+Checking function: div_ (Slither line:2988)
+div_ returns uint256 variable  (Slither line:3008)
+RETURN node expression: a / b (Slither line:3028)
+Checking function: fraction (Slither line:2988)
+fraction returns Exponential.Double variable  (Slither line:3008)
+RETURN node expression: Double(div_(mul_(a,doubleScale),b)) (Slither line:3028)
+Checking function: mulTrucate (Slither line:2988)
+mulTrucate returns uint256 variable  (Slither line:3008)
+RETURN node expression: mul_(a,b) / expScale (Slither line:3028)
+Checking function: mulUInt (Slither line:2988)
+mulUInt returns CarefulMath.MathError variable  (Slither line:3008)
+mulUInt returns uint256 variable  (Slither line:3008)
+RETURN node expression: (MathError.NO_ERROR,c) (Slither line:3028)
+RETURN node expression: (MathError.INTEGER_OVERFLOW,0) (Slither line:3028)
+RETURN node expression: (MathError.NO_ERROR,0) (Slither line:3028)
+Checking function: divUInt (Slither line:2988)
+divUInt returns CarefulMath.MathError variable  (Slither line:3008)
+divUInt returns uint256 variable  (Slither line:3008)
+RETURN node expression: (MathError.NO_ERROR,a / b) (Slither line:3028)
+RETURN node expression: (MathError.DIVISION_BY_ZERO,0) (Slither line:3028)
+Checking function: subUInt (Slither line:2988)
+subUInt returns CarefulMath.MathError variable  (Slither line:3008)
+subUInt returns uint256 variable  (Slither line:3008)
+RETURN node expression: (MathError.INTEGER_UNDERFLOW,0) (Slither line:3028)
+RETURN node expression: (MathError.NO_ERROR,a - b) (Slither line:3028)
+Checking function: addUInt (Slither line:2988)
+addUInt returns CarefulMath.MathError variable  (Slither line:3008)
+addUInt returns uint256 variable  (Slither line:3008)
+RETURN node expression: (MathError.INTEGER_OVERFLOW,0) (Slither line:3028)
+RETURN node expression: (MathError.NO_ERROR,c) (Slither line:3028)
+Checking function: addThenSubUInt (Slither line:2988)
+addThenSubUInt returns CarefulMath.MathError variable  (Slither line:3008)
+addThenSubUInt returns uint256 variable  (Slither line:3008)
+RETURN node expression: subUInt(sum,c) (Slither line:3028)
+RETURN node expression: (err0,0) (Slither line:3028)
+Checking function: enterMarket (Slither line:2988)
+enterMarket returns uint256 variable  (Slither line:3008)
+RETURN node expression: _enterMarket(cToken) (Slither line:3028)
+Checking function: _enterMarket (Slither line:2988)
+_enterMarket returns uint256 variable  (Slither line:3008)
+RETURN node expression: _enterMarkets(cTokens)[0] (Slither line:3028)
+Checking function: enterMarkets (Slither line:2988)
+enterMarkets returns uint256[] variable  (Slither line:3008)
+RETURN node expression: _enterMarkets(cTokens) (Slither line:3028)
+Checking function: _enterMarkets (Slither line:2988)
+_enterMarkets returns uint256[] variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: exitMarket (Slither line:2988)
+exitMarket returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: _disableCToken (Slither line:2988)
+Checking function: claimComp (Slither line:2988)
+Checking function: claimComp (Slither line:2988)
+Checking function: claimComp (Slither line:2988)
+Checking function: transferCOMP (Slither line:2988)
+Checking function: getAccountLiquidity (Slither line:2988)
+getAccountLiquidity returns uint256 variable called err (Slither line:3008)
+getAccountLiquidity returns uint256 variable called liquidity (Slither line:3008)
+getAccountLiquidity returns uint256 variable called shortFall (Slither line:3008)
+RETURN node expression: _getAccountLiquidity(oracle) (Slither line:3028)
+Checking function: getAccountLiquidity (Slither line:2988)
+getAccountLiquidity returns uint256 variable called err (Slither line:3008)
+getAccountLiquidity returns uint256 variable called liquidity (Slither line:3008)
+getAccountLiquidity returns uint256 variable called shortFall (Slither line:3008)
+RETURN node expression: _getAccountLiquidity(comptroller.oracle()) (Slither line:3028)
+Checking function: _getAccountLiquidity (Slither line:2988)
+_getAccountLiquidity returns uint256 variable called err (Slither line:3008)
+_getAccountLiquidity returns uint256 variable called liquidity (Slither line:3008)
+_getAccountLiquidity returns uint256 variable called shortFall (Slither line:3008)
+RETURN node expression: (err,liquidity,shortFall) (Slither line:3028)
+RETURN node expression: (0,0,0) (Slither line:3028)
+Checking function: initialize (Slither line:2988)
+Checking function: mint (Slither line:2988)
+Checking function: mint (Slither line:2988)
+mint returns uint256 variable  (Slither line:3008)
+RETURN node expression: result (Slither line:3028)
+Checking function: emergencyCall (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Avatar.find_getter_in_contract (Slither line:3083)
+
+
+Begin Avatar.find_setter_in_contract (Slither line:3119)
+
+Checking function: initialize(address,address,address) returns() (Slither line:3127)
+Checking function: mint() returns() (Slither line:3127)
+Visibility: public
+postPoolOp(false)
+_score().updateCollScore(address(this),address(cEther),toInt256(msg.value))
+IScore(registry.score())
+_hardReevaluate()
+_reevaluate(debtIncrease)
+onlyBToken()
+_softReevaluate()
+postPoolOp(false)
+true
+remainingLiquidationAmount > 0
+i ++
+require(bool,string)(result[i] == 0,enter-markets-fail)
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+_hardReevaluate()
+result
+result
+result
+_allowOnlyBToken()
+postPoolOp(false)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+cEther.mint.value(msg.value)()
+require(bool,string)(_enterMarket(address(cEther)) == 0,enterMarket-fail)
+cTokens[0] = cToken
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+toppedUpAmount > 0
+super.mint()
+_enterMarkets(cTokens)[0]
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: mint(ICErc20,uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+true
+_hardReevaluate()
+result
+cTokens[0] = cToken
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_enterMarkets(cTokens)[0]
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+postPoolOp(false)
+require(bool,string)(_enterMarket(address(cToken)) == 0,enterMarket-fail)
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+result
+_softReevaluate()
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+IScore(registry.score())
+underlying.safeApprove(address(cToken),mintAmount)
+require(bool,string)(result == 0,mint-fail)
+require(bool,string)(result >= 0,conversion-fail)
+_score().updateCollScore(address(this),address(cToken),toInt256(mintAmount))
+(codehash != accountHash && codehash != 0x0)
+result
+require(bool,string)((value == 0) || (token.allowance(address(this),spender) == 0),SafeERC20: approve from non-zero to non-zero allowance)
+result
+callOptionalReturn(token,abi.encodeWithSelector(token.approve.selector,spender,value))
+onlyBToken()
+postPoolOp(false)
+_reevaluate(debtIncrease)
+remainingLiquidationAmount > 0
+i ++
+require(bool,string)(result[i] == 0,enter-markets-fail)
+result
+_allowOnlyBToken()
+postPoolOp(false)
+toppedUpAmount > 0
+Checking function: emergencyCall(address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(quit || registry.whitelistedAvatarCalls(target,functionSig),not-listed)
+_allowOnlyAvatarOwner()
+require(bool,string)(succ,string(err))
+(succ,err) = target.call.value(msg.value)(data)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == registry.ownerOf(address(this)),sender-not-owner)
+onlyAvatarOwner()
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _allowOnlyBToken() returns() (Slither line:3127)
+Visibility: internal
+Checking function: isValidBToken(address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: borrowBalanceCurrent(ICToken) returns(uint256) (Slither line:3127)
+Visibility: public
+onlyBToken()
+require(bool,string)(c >= a,errorMessage)
+c
+_allowOnlyBToken()
+add_(borrowBalanceCurr,toppedUpAmount)
+add_(a,b,addition overflow)
+bComptroller.isBToken(bToken)
+borrowBalanceCurr
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: _toUnderlying(ICToken,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mint() returns() (Slither line:3127)
+Visibility: public
+_score().updateCollScore(address(this),address(cEther),toInt256(msg.value))
+IScore(registry.score())
+_hardReevaluate()
+_reevaluate(debtIncrease)
+onlyBToken()
+_softReevaluate()
+postPoolOp(false)
+true
+remainingLiquidationAmount > 0
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+_hardReevaluate()
+result
+result
+_allowOnlyBToken()
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+toppedUpAmount > 0
+cEther.mint.value(msg.value)()
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: repayBorrow() returns() (Slither line:3127)
+Visibility: external
+None
+require(bool,string)(toppedUpAmount >= amount,amount>=toppedUpAmount)
+toppedUpAmount = sub_(toppedUpAmount,amount)
+is an Assignment Operation (Slither line:3216)
+true
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+_hardReevaluate()
+result
+require(bool,string)(toppedUpCToken.borrow(amountToBorrow) == 0,borrow-fail)
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+onlyBToken()
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+sub_(a,b,subtraction underflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+success
+_softReevaluate()
+cEther.repayBorrow.value(amtToRepayOnCompound)()
+underlying.safeTransfer(pool(),amount)
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(b <= a,errorMessage)
+_score().updateDebtScore(address(this),address(cEther),- toInt256(msg.value))
+a - b
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+amtToUntopFromB = toppedUpAmount
+is an Assignment Operation (Slither line:3216)
+postPoolOp(false)
+amtToUntopFromB = repayAmount
+is an Assignment Operation (Slither line:3216)
+IScore(registry.score())
+address(uint160(registry.pool()))
+require(bool,string)(result >= 0,conversion-fail)
+(codehash != accountHash && codehash != 0x0)
+result
+_reevaluate(debtIncrease)
+remainingLiquidationAmount > 0
+_untop(toppedUpAmount,sub_(toppedUpAmount,amtToUntopFromB))
+_allowOnlyBToken()
+amtToRepayOnCompound = sub_(repayAmount,amtToUntopFromB)
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+amtToRepayOnCompound = repayAmount
+is an Assignment Operation (Slither line:3216)
+Checking function: mint(ICErc20,uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+IScore(registry.score())
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+_reevaluate(debtIncrease)
+require(bool,string)(success,SafeERC20: low-level call failed)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+underlying.safeApprove(address(cToken),mintAmount)
+_softReevaluate()
+true
+require(bool,string)(result == 0,mint-fail)
+remainingLiquidationAmount > 0
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+_score().updateCollScore(address(this),address(cToken),toInt256(mintAmount))
+_hardReevaluate()
+(codehash != accountHash && codehash != 0x0)
+result
+require(bool,string)((value == 0) || (token.allowance(address(this),spender) == 0),SafeERC20: approve from non-zero to non-zero allowance)
+result
+_allowOnlyBToken()
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+result
+callOptionalReturn(token,abi.encodeWithSelector(token.approve.selector,spender,value))
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+onlyBToken()
+toppedUpAmount > 0
+postPoolOp(false)
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: repayBorrow(ICErc20,uint256) returns(uint256) (Slither line:3127)
+Visibility: external
+None
+require(bool,string)(toppedUpAmount >= amount,amount>=toppedUpAmount)
+toppedUpAmount = sub_(toppedUpAmount,amount)
+is an Assignment Operation (Slither line:3216)
+true
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+_hardReevaluate()
+result
+require(bool,string)(toppedUpCToken.borrow(amountToBorrow) == 0,borrow-fail)
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+sub_(a,b,subtraction underflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+success
+_softReevaluate()
+underlying.safeTransfer(pool(),amount)
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(b <= a,errorMessage)
+a - b
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+amtToUntopFromB = toppedUpAmount
+is an Assignment Operation (Slither line:3216)
+amtToUntopFromB = repayAmount
+is an Assignment Operation (Slither line:3216)
+IScore(registry.score())
+_score().updateDebtScore(address(this),address(cToken),- toInt256(repayAmount))
+address(uint160(registry.pool()))
+onlyBToken()
+postPoolOp(false)
+require(bool,string)(result >= 0,conversion-fail)
+(codehash != accountHash && codehash != 0x0)
+result
+require(bool,string)((value == 0) || (token.allowance(address(this),spender) == 0),SafeERC20: approve from non-zero to non-zero allowance)
+callOptionalReturn(token,abi.encodeWithSelector(token.approve.selector,spender,value))
+_reevaluate(debtIncrease)
+remainingLiquidationAmount > 0
+result
+_untop(toppedUpAmount,sub_(toppedUpAmount,amtToUntopFromB))
+_allowOnlyBToken()
+underlying.safeApprove(address(cToken),amtToRepayOnCompound)
+amtToRepayOnCompound = sub_(repayAmount,amtToUntopFromB)
+is an Assignment Operation (Slither line:3216)
+result = cToken.repayBorrow(amtToRepayOnCompound)
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+require(bool,string)(result == 0,repayBorrow-fail)
+amtToRepayOnCompound = repayAmount
+is an Assignment Operation (Slither line:3216)
+Checking function: liquidateBorrow(uint256,uint256,ICToken) returns(uint256) (Slither line:3127)
+Visibility: external
+score.updateCollScore(address(this),address(cTokenColl),- toInt256(underlyingSeizedTokensColl))
+mulTrucate(redeemTokens,exchangeRate)
+require(bool,string)(c / a == b,errorMessage)
+score.updateDebtScore(address(this),address(cTokenDebt),- toInt256(underlyingAmtToLiquidateDebt))
+require(bool,string)(underlyingAmtToLiquidate <= remainingLiquidationAmount,amountToLiquidate-too-big)
+c
+require(bool,string)(debtCToken == liquidationCToken,debtCToken!=liquidationCToken)
+true
+mul_(a,b) / expScale
+require(bool,string)(debtCToken == toppedUpCToken,debtCToken!=toppedUpCToken)
+liquidationCToken = debtCToken
+is an Assignment Operation (Slither line:3216)
+result
+remainingLiquidationAmount = getMaxLiquidationAmount(debtCToken)
+is an Assignment Operation (Slither line:3216)
+add_(a,b,addition overflow)
+require(bool,string)(underlyingAmtToLiquidate >= amtToDeductFromTopup,amtToDeductFromTopup>underlyingAmtToLiquidate)
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(toppedUpAmount >= amtToDeductFromTopup,amtToDeductFromTopup>toppedUpAmount)
+require(bool,string)(success,SafeERC20: low-level call failed)
+sub_(a,b,subtraction underflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == pool(),only-pool-authorized)
+require(bool,string)(c >= a,errorMessage)
+c
+address(cToken) == registry.cEther()
+require(bool,string)(msg.value == amtToRepayOnCompound,insuffecient-ETH-sent)
+require(bool,string)(b <= a,errorMessage)
+a - b
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+cEther.repayBorrow.value(amtToRepayOnCompound)()
+require(bool,string)(isToppedUp() || partiallyLiquidated,cant-perform-liquidateBorrow)
+toppedUpAmount = sub_(toppedUpAmount,amtToDeductFromTopup)
+is an Assignment Operation (Slither line:3216)
+callOptionalReturn(token,abi.encodeWithSelector(token.transferFrom.selector,from,to,value))
+IScore(registry.score())
+underlying.safeTransferFrom(poolContract,address(this),amtToRepayOnCompound)
+underlying.safeApprove(address(debtCToken),amtToRepayOnCompound)
+address(uint160(registry.pool()))
+require(bool,string)(ICErc20(address(debtCToken)).repayBorrow(amtToRepayOnCompound) == 0,repayBorrow-fail)
+remainingLiquidationAmount = sub_(remainingLiquidationAmount,underlyingAmtToLiquidate)
+is an Assignment Operation (Slither line:3216)
+_allowOnlyPool()
+mulTrucate(comptroller.closeFactorMantissa(),totalDebt)
+require(bool,string)(err == 0,err-liquidateCalculateSeizeTokens)
+require(bool,string)(result >= 0,conversion-fail)
+(err,seizeTokens) = comptroller.liquidateCalculateSeizeTokens(address(debtCToken),address(collCToken),underlyingAmtToLiquidate)
+is an Assignment Operation (Slither line:3216)
+(codehash != accountHash && codehash != 0x0)
+result
+require(bool,string)((value == 0) || (token.allowance(address(this),spender) == 0),SafeERC20: approve from non-zero to non-zero allowance)
+callOptionalReturn(token,abi.encodeWithSelector(token.approve.selector,spender,value))
+result
+require(bool,string)(collCToken.transfer(poolContract,seizeTokens),collCToken-xfr-fail)
+seizeTokens
+onlyPool()
+mul_(a,b,multiplication overflow)
+require(bool,string)(canLiquidate(),cant-liquidate)
+remainingLiquidationAmount > 0
+0
+toppedUpAmount > 0
+remainingLiquidationAmount
+0
+Checking function: redeem(ICToken,uint256,address) returns(uint256) (Slither line:3127)
+Visibility: external
+mulTrucate(redeemTokens,exchangeRate)
+require(bool,string)(c / a == b,errorMessage)
+c
+underlying.safeTransfer(userOrDelegatee,redeemedAmount)
+true
+onlyBToken()
+mul_(a,b) / expScale
+postPoolOp(true)
+_hardReevaluate()
+result
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+require(bool,string)(result == 0,redeem-fail)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+_softReevaluate()
+_score().updateCollScore(address(this),address(cToken),- toInt256(underlyingRedeemAmount))
+address(cToken) == registry.cEther()
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+result
+bComptroller.isBToken(bToken)
+userOrDelegatee.transfer(address(this).balance)
+IScore(registry.score())
+require(bool,string)(result >= 0,conversion-fail)
+(codehash != accountHash && codehash != 0x0)
+result
+_reevaluate(debtIncrease)
+mul_(a,b,multiplication overflow)
+remainingLiquidationAmount > 0
+_allowOnlyBToken()
+toppedUpAmount > 0
+0
+Checking function: redeemUnderlying(ICToken,uint256,address) returns(uint256) (Slither line:3127)
+Visibility: external
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+IScore(registry.score())
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+_reevaluate(debtIncrease)
+_score().updateCollScore(address(this),address(cToken),- toInt256(redeemAmount))
+require(bool,string)(success,SafeERC20: low-level call failed)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+_softReevaluate()
+true
+result
+userOrDelegatee.transfer(redeemAmount)
+remainingLiquidationAmount > 0
+address(cToken) == registry.cEther()
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+_hardReevaluate()
+result
+(codehash != accountHash && codehash != 0x0)
+result
+_allowOnlyBToken()
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+underlying.safeTransfer(userOrDelegatee,redeemAmount)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+postPoolOp(true)
+toppedUpAmount > 0
+onlyBToken()
+require(bool,string)(result == 0,redeemUnderlying-fail)
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: borrow(ICToken,uint256,address) returns(uint256) (Slither line:3127)
+Visibility: external
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+IScore(registry.score())
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+_reevaluate(debtIncrease)
+userOrDelegatee.transfer(borrowAmount)
+require(bool,string)(success,SafeERC20: low-level call failed)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+_softReevaluate()
+true
+underlying.safeTransfer(userOrDelegatee,borrowAmount)
+remainingLiquidationAmount > 0
+address(cToken) == registry.cEther()
+require(bool,string)(canUntop(),cannot-untop)
+onlyBToken()
+require(bool,string)(result >= 0,conversion-fail)
+require(bool,string)(result == 0,borrow-fail)
+_hardReevaluate()
+(codehash != accountHash && codehash != 0x0)
+result
+postPoolOp(true)
+result
+_allowOnlyBToken()
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+_score().updateDebtScore(address(this),address(cToken),toInt256(borrowAmount))
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+toppedUpAmount > 0
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+result
+Checking function: transfer(ICToken,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+score.updateCollScore(dstAvatar,address(cToken),toInt256(underlyingRedeemAmount))
+IScore(registry.score())
+_hardReevaluate()
+_reevaluate(debtIncrease)
+mulTrucate(redeemTokens,exchangeRate)
+require(bool,string)(c / a == b,errorMessage)
+result
+c
+_softReevaluate()
+onlyBToken()
+mul_(a,b,multiplication overflow)
+true
+require(bool,string)(result,transfer-fail)
+postPoolOp(true)
+mul_(a,b) / expScale
+remainingLiquidationAmount > 0
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+_hardReevaluate()
+result
+result
+_allowOnlyBToken()
+score.updateCollScore(address(this),address(cToken),- toInt256(underlyingRedeemAmount))
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+toppedUpAmount > 0
+0
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: transferFrom(ICToken,address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+IScore(registry.score())
+_hardReevaluate()
+_reevaluate(debtIncrease)
+mulTrucate(redeemTokens,exchangeRate)
+require(bool,string)(c / a == b,errorMessage)
+_softReevaluate()
+c
+mul_(a,b,multiplication overflow)
+true
+score.updateCollScore(srcAvatar,address(cToken),- toInt256(underlyingRedeemAmount))
+mul_(a,b) / expScale
+remainingLiquidationAmount > 0
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+score.updateCollScore(dstAvatar,address(cToken),toInt256(underlyingRedeemAmount))
+_hardReevaluate()
+result
+result
+_allowOnlyBToken()
+result
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+bComptroller.isBToken(bToken)
+require(bool,string)(result,transferFrom-fail)
+toppedUpAmount > 0
+onlyBToken()
+require(bool,string)(IAvatar(srcAvatar).canUntop(),insuffecient-fund-at-src)
+0
+postPoolOp(true)
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: approve(ICToken,address,uint256) returns(bool) (Slither line:3127)
+Visibility: public
+bComptroller.isBToken(bToken)
+_allowOnlyBToken()
+cToken.approve(spenderAvatar,amount)
+onlyBToken()
+require(bool,string)(isValidBToken(msg.sender),only-BToken-authorized)
+Checking function: collectCToken(ICToken,address,uint256) returns() (Slither line:3127)
+Visibility: public
+IScore(registry.score())
+_hardReevaluate()
+_score().updateCollScore(address(this),address(cToken),toInt256(underlyingAmt))
+_reevaluate(debtIncrease)
+mulTrucate(redeemTokens,exchangeRate)
+require(bool,string)(c / a == b,errorMessage)
+c
+_softReevaluate()
+postPoolOp(false)
+mul_(a,b,multiplication overflow)
+true
+mul_(a,b) / expScale
+remainingLiquidationAmount > 0
+require(bool,string)(canUntop(),cannot-untop)
+require(bool,string)(result >= 0,conversion-fail)
+_hardReevaluate()
+result
+require(bool,string)(registry.ownerOf(from) == address(0),from-is-an-avatar)
+result
+require(bool,string)(cToken.transferFrom(from,address(this),cTokenAmt),transferFrom-fail)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+0
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _allowOnlyAvatarOwner() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _allowOnlyPool() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _allowOnlyBComptroller() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _initAvatarBase(address) returns() (Slither line:3127)
+Checking function: _hardReevaluate() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _softReevaluate() returns() (Slither line:3127)
+Visibility: private
+Checking function: _reevaluate(bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: _isCEther(ICToken) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: _score() returns(IScore) (Slither line:3127)
+Visibility: internal
+Checking function: toInt256(uint256) returns(int256) (Slither line:3127)
+Visibility: internal
+Checking function: isPartiallyLiquidated() returns(bool) (Slither line:3127)
+Visibility: public
+remainingLiquidationAmount > 0
+Checking function: isToppedUp() returns(bool) (Slither line:3127)
+Visibility: public
+toppedUpAmount > 0
+Checking function: canUntop() returns(bool) (Slither line:3127)
+Visibility: public
+true
+toppedUpAmount > 0
+result
+Checking function: pool() returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(registry.pool()))
+Checking function: canLiquidate() returns(bool) (Slither line:3127)
+Visibility: public
+result
+true
+toppedUpAmount > 0
+result
+Checking function: _ensureUserNotQuitB() returns() (Slither line:3127)
+Visibility: internal
+Checking function: topup() returns() (Slither line:3127)
+Visibility: external
+toppedUpCToken = cEther
+is an Assignment Operation (Slither line:3216)
+_ensureUserNotQuitB()
+toppedUpAmount = add_(toppedUpAmount,msg.value)
+is an Assignment Operation (Slither line:3216)
+address(uint160(registry.pool()))
+onlyPool()
+require(bool,string)(msg.sender == pool(),only-pool-authorized)
+require(bool,string)(c >= a,errorMessage)
+_allowOnlyPool()
+c
+require(bool,string)(address(toppedUpCToken) == cEtherAddr,already-topped-other-cToken)
+require(bool,string)(! quit,user-quit-B)
+add_(a,b,addition overflow)
+toppedUpAmount > 0
+cEther.repayBorrow.value(msg.value)()
+Checking function: topup(ICErc20,uint256) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+underlying.safeTransferFrom(pool(),address(this),topupAmount)
+require(bool,string)(success,SafeERC20: low-level call failed)
+underlying.safeApprove(address(cToken),topupAmount)
+address(uint160(registry.pool()))
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(cToken.repayBorrow(topupAmount) == 0,RepayBorrow-fail)
+require(bool,string)(msg.sender == pool(),only-pool-authorized)
+require(bool,string)(c >= a,errorMessage)
+_allowOnlyPool()
+c
+toppedUpCToken = cToken
+is an Assignment Operation (Slither line:3216)
+_ensureUserNotQuitB()
+toppedUpAmount = add_(toppedUpAmount,topupAmount)
+is an Assignment Operation (Slither line:3216)
+(codehash != accountHash && codehash != 0x0)
+onlyPool()
+require(bool,string)(! quit,user-quit-B)
+require(bool,string)((value == 0) || (token.allowance(address(this),spender) == 0),SafeERC20: approve from non-zero to non-zero allowance)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+callOptionalReturn(token,abi.encodeWithSelector(token.approve.selector,spender,value))
+add_(a,b,addition overflow)
+toppedUpAmount > 0
+require(bool,string)(toppedUpCToken == cToken,already-topped-other-cToken)
+callOptionalReturn(token,abi.encodeWithSelector(token.transferFrom.selector,from,to,value))
+Checking function: untop(uint256) returns() (Slither line:3127)
+Visibility: external
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+None
+require(bool,string)(success,SafeERC20: low-level call failed)
+address(uint160(registry.pool()))
+sub_(a,b,subtraction underflow)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+success
+require(bool,string)(toppedUpAmount >= amount,amount>=toppedUpAmount)
+require(bool,string)(msg.sender == pool(),only-pool-authorized)
+toppedUpAmount = sub_(toppedUpAmount,amount)
+is an Assignment Operation (Slither line:3216)
+_allowOnlyPool()
+_untop(amount,amount)
+underlying.safeTransfer(pool(),amount)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+onlyPool()
+require(bool,string)(b <= a,errorMessage)
+(codehash != accountHash && codehash != 0x0)
+a - b
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+require(bool,string)(toppedUpCToken.borrow(amountToBorrow) == 0,borrow-fail)
+toppedUpAmount > 0
+Checking function: _untop(uint256,uint256) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _untop() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _untopBeforeRepay(ICToken,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: _doLiquidateBorrow(ICToken,uint256,uint256,ICToken) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: getMaxLiquidationAmount(ICToken) returns(uint256) (Slither line:3127)
+Visibility: public
+require(bool,string)(c / a == b,errorMessage)
+c
+mul_(a,b,multiplication overflow)
+require(bool,string)(c >= a,errorMessage)
+mul_(a,b) / expScale
+c
+mulTrucate(comptroller.closeFactorMantissa(),totalDebt)
+remainingLiquidationAmount > 0
+add_(a,b,addition overflow)
+remainingLiquidationAmount
+0
+Checking function: splitAmountToLiquidate(uint256,uint256) returns(uint256,uint256) (Slither line:3127)
+Visibility: public
+require(bool,string)(b > 0,errorMessage)
+require(bool,string)(c / a == b,errorMessage)
+a / b
+sub_(a,b,subtraction underflow)
+c
+(MathError.NO_ERROR,Exp(scaledMantissa))
+mul_(a,b,multiplication overflow)
+(MathError.INTEGER_OVERFLOW,0)
+mul_(a,b) / expScale
+(err0,Exp(0))
+(MathError.NO_ERROR,c)
+amtToDeductFromTopup = mulTrucate(toppedUpAmount,percentInScale)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(b <= a,errorMessage)
+amtToRepayOnCompound = sub_(underlyingAmtToLiquidate,amtToDeductFromTopup)
+is an Assignment Operation (Slither line:3216)
+div_(a,b,divide by zero)
+a - b
+require(bool,string)(mErr == MathError.NO_ERROR,underlyingAmtToLiqScalar-fail)
+0
+(err0,scaledMantissa) = mulUInt(a.mantissa,scalar)
+is an Assignment Operation (Slither line:3216)
+(mErr,result) = mulScalar(Exp(underlyingAmtToLiquidate),expScale)
+is an Assignment Operation (Slither line:3216)
+(MathError.NO_ERROR,0)
+Checking function: calcAmountToLiquidate(ICToken,uint256) returns(uint256,uint256) (Slither line:3127)
+Visibility: external
+require(bool,string)(b > 0,errorMessage)
+require(bool,string)(c / a == b,errorMessage)
+a / b
+sub_(a,b,subtraction underflow)
+c
+(MathError.NO_ERROR,Exp(scaledMantissa))
+mul_(a,b,multiplication overflow)
+require(bool,string)(c >= a,errorMessage)
+(MathError.INTEGER_OVERFLOW,0)
+mul_(a,b) / expScale
+c
+mulTrucate(comptroller.closeFactorMantissa(),totalDebt)
+(err0,Exp(0))
+remainingLiquidationAmount > 0
+(MathError.NO_ERROR,c)
+amtToDeductFromTopup = mulTrucate(toppedUpAmount,percentInScale)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(b <= a,errorMessage)
+amtToRepayOnCompound = sub_(underlyingAmtToLiquidate,amtToDeductFromTopup)
+is an Assignment Operation (Slither line:3216)
+div_(a,b,divide by zero)
+(err0,scaledMantissa) = mulUInt(a.mantissa,scalar)
+is an Assignment Operation (Slither line:3216)
+a - b
+add_(a,b,addition overflow)
+(amtToDeductFromTopup,amtToRepayOnCompound) = splitAmountToLiquidate(underlyingAmtToLiquidate,amountToLiquidate)
+is an Assignment Operation (Slither line:3216)
+remainingLiquidationAmount
+require(bool,string)(mErr == MathError.NO_ERROR,underlyingAmtToLiqScalar-fail)
+amountToLiquidate = getMaxLiquidationAmount(debtCToken)
+is an Assignment Operation (Slither line:3216)
+0
+(mErr,result) = mulScalar(Exp(underlyingAmtToLiquidate),expScale)
+is an Assignment Operation (Slither line:3216)
+(MathError.NO_ERROR,0)
+Checking function: quitB() returns() (Slither line:3127)
+Visibility: external
+_allowOnlyAvatarOwner()
+_hardReevaluate()
+onlyAvatarOwner()
+true
+quit = true
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(canUntop(),cannot-untop)
+result
+require(bool,string)(msg.sender == registry.ownerOf(address(this)),sender-not-owner)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+Checking function: getExp(uint256,uint256) returns(CarefulMath.MathError,Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: mulScalar(Exponential.Exp,uint256) returns(CarefulMath.MathError,Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: mulScalarTruncate(Exponential.Exp,uint256) returns(CarefulMath.MathError,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: divScalarByExp(uint256,Exponential.Exp) returns(CarefulMath.MathError,Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: mulExp(Exponential.Exp,Exponential.Exp) returns(CarefulMath.MathError,Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: mulExp(uint256,uint256) returns(CarefulMath.MathError,Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: divExp(Exponential.Exp,Exponential.Exp) returns(CarefulMath.MathError,Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: truncate(Exponential.Exp) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: safe224(uint256,string) returns(uint224) (Slither line:3127)
+Visibility: internal
+Checking function: add_(Exponential.Exp,Exponential.Exp) returns(Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: add_(Exponential.Double,Exponential.Double) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: add_(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: add_(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub_(Exponential.Exp,Exponential.Exp) returns(Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: sub_(Exponential.Double,Exponential.Double) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: sub_(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub_(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(Exponential.Exp,Exponential.Exp) returns(Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(Exponential.Exp,uint256) returns(Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(uint256,Exponential.Exp) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(Exponential.Double,Exponential.Double) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(Exponential.Double,uint256) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(uint256,Exponential.Double) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul_(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div_(Exponential.Exp,Exponential.Exp) returns(Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: div_(Exponential.Exp,uint256) returns(Exponential.Exp) (Slither line:3127)
+Visibility: internal
+Checking function: div_(uint256,Exponential.Exp) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div_(Exponential.Double,Exponential.Double) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: div_(Exponential.Double,uint256) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: div_(uint256,Exponential.Double) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div_(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div_(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: fraction(uint256,uint256) returns(Exponential.Double) (Slither line:3127)
+Visibility: internal
+Checking function: mulTrucate(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mulUInt(uint256,uint256) returns(CarefulMath.MathError,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: divUInt(uint256,uint256) returns(CarefulMath.MathError,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: subUInt(uint256,uint256) returns(CarefulMath.MathError,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: addUInt(uint256,uint256) returns(CarefulMath.MathError,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: addThenSubUInt(uint256,uint256,uint256) returns(CarefulMath.MathError,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: enterMarket(address) returns(uint256) (Slither line:3127)
+Visibility: external
+postPoolOp(false)
+_hardReevaluate()
+_reevaluate(debtIncrease)
+require(bool,string)(msg.sender == registry.bComptroller(),only-BComptroller-authorized)
+_softReevaluate()
+true
+remainingLiquidationAmount > 0
+i ++
+require(bool,string)(result[i] == 0,enter-markets-fail)
+require(bool,string)(canUntop(),cannot-untop)
+_hardReevaluate()
+result
+result
+_allowOnlyBComptroller()
+postPoolOp(false)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+cTokens[0] = cToken
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_enterMarket(cToken)
+_enterMarkets(cTokens)[0]
+onlyBComptroller()
+Checking function: _enterMarket(address) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: enterMarkets(address[]) returns(uint256[]) (Slither line:3127)
+Visibility: external
+_hardReevaluate()
+onlyBComptroller()
+_reevaluate(debtIncrease)
+require(bool,string)(msg.sender == registry.bComptroller(),only-BComptroller-authorized)
+_softReevaluate()
+true
+remainingLiquidationAmount > 0
+i ++
+require(bool,string)(result[i] == 0,enter-markets-fail)
+require(bool,string)(canUntop(),cannot-untop)
+_hardReevaluate()
+result
+result
+_allowOnlyBComptroller()
+_enterMarkets(cTokens)
+postPoolOp(false)
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+i ++
+cTokens[i] = IBToken(bTokens[i]).cToken()
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: _enterMarkets(address[]) returns(uint256[]) (Slither line:3127)
+Visibility: internal
+Checking function: exitMarket(IBToken) returns(uint256) (Slither line:3127)
+Visibility: external
+_disableCToken(cToken)
+_hardReevaluate()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+_reevaluate(debtIncrease)
+result
+require(bool,string)(success,SafeERC20: low-level call failed)
+require(bool,string)(msg.sender == registry.bComptroller(),only-BComptroller-authorized)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+_softReevaluate()
+onlyBComptroller()
+true
+postPoolOp(true)
+remainingLiquidationAmount > 0
+require(bool,string)(canUntop(),cannot-untop)
+_hardReevaluate()
+(codehash != accountHash && codehash != 0x0)
+require(bool,string)((value == 0) || (token.allowance(address(this),spender) == 0),SafeERC20: approve from non-zero to non-zero allowance)
+result
+ICToken(cToken).underlying().safeApprove(cToken,0)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+callOptionalReturn(token,abi.encodeWithSelector(token.approve.selector,spender,value))
+_allowOnlyBComptroller()
+remainingLiquidationAmount = 0
+is an Assignment Operation (Slither line:3216)
+toppedUpAmount > 0
+Checking function: _disableCToken(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: claimComp() returns() (Slither line:3127)
+Visibility: external
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+require(bool,string)(msg.sender == registry.bComptroller(),only-BComptroller-authorized)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+comp.safeTransfer(owner,comp.balanceOf(address(this)))
+comptroller.claimComp(address(this))
+transferCOMP()
+onlyBComptroller()
+(codehash != accountHash && codehash != 0x0)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+_allowOnlyBComptroller()
+Checking function: claimComp(address[]) returns() (Slither line:3127)
+Visibility: external
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+require(bool,string)(msg.sender == registry.bComptroller(),only-BComptroller-authorized)
+i ++
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+cTokens[i] = IBToken(bTokens[i]).cToken()
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+comp.safeTransfer(owner,comp.balanceOf(address(this)))
+comptroller.claimComp(address(this),cTokens)
+transferCOMP()
+onlyBComptroller()
+(codehash != accountHash && codehash != 0x0)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+_allowOnlyBComptroller()
+Checking function: claimComp(address[],bool,bool) returns() (Slither line:3127)
+Visibility: external
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+transferCOMP()
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+onlyBComptroller()
+require(bool,string)(success,SafeERC20: low-level call failed)
+require(bool,string)(msg.sender == registry.bComptroller(),only-BComptroller-authorized)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+comp.safeTransfer(owner,comp.balanceOf(address(this)))
+i ++
+cTokens[i] = IBToken(bTokens[i]).cToken()
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(codehash != accountHash && codehash != 0x0)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+_allowOnlyBComptroller()
+holders[0] = address(this)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+comptroller.claimComp(holders,cTokens,borrowers,suppliers)
+Checking function: transferCOMP() returns() (Slither line:3127)
+Visibility: public
+callOptionalReturn(token,abi.encodeWithSelector(token.transfer.selector,to,value))
+require(bool,string)(address(token).isContract(),SafeERC20: call to non-contract)
+require(bool,string)(success,SafeERC20: low-level call failed)
+(success,returndata) = address(token).call(data)
+is an Assignment Operation (Slither line:3216)
+comp.safeTransfer(owner,comp.balanceOf(address(this)))
+(codehash != accountHash && codehash != 0x0)
+require(bool,string)(abi.decode(returndata,(bool)),SafeERC20: ERC20 operation did not succeed)
+Checking function: getAccountLiquidity(address) returns(uint256,uint256,uint256) (Slither line:3127)
+Visibility: external
+require(bool,string)(err == 0,Err-in-account-liquidity)
+shortFall = add_(shortFall,toppedUpAmtInUSD)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(c / a == b,errorMessage)
+sub_(a,b,subtraction underflow)
+(err,liquidity,shortFall)
+liquidity = sub_(liquidity,toppedUpAmtInUSD)
+is an Assignment Operation (Slither line:3216)
+c
+mul_(a,b,multiplication overflow)
+require(bool,string)(c >= a,errorMessage)
+shortFall = sub_(toppedUpAmtInUSD,liquidity)
+is an Assignment Operation (Slither line:3216)
+mul_(a,b) / expScale
+c
+liquidity = 0
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(b <= a,errorMessage)
+a - b
+_getAccountLiquidity(oracle)
+(0,0,0)
+add_(a,b,addition overflow)
+toppedUpAmount > 0
+(err,liquidity,shortFall) = comptroller.getAccountLiquidity(address(this))
+is an Assignment Operation (Slither line:3216)
+0
+Checking function: getAccountLiquidity() returns(uint256,uint256,uint256) (Slither line:3127)
+Visibility: external
+require(bool,string)(err == 0,Err-in-account-liquidity)
+shortFall = add_(shortFall,toppedUpAmtInUSD)
+is an Assignment Operation (Slither line:3216)
+_getAccountLiquidity(comptroller.oracle())
+require(bool,string)(c / a == b,errorMessage)
+sub_(a,b,subtraction underflow)
+(err,liquidity,shortFall)
+liquidity = sub_(liquidity,toppedUpAmtInUSD)
+is an Assignment Operation (Slither line:3216)
+c
+mul_(a,b,multiplication overflow)
+require(bool,string)(c >= a,errorMessage)
+shortFall = sub_(toppedUpAmtInUSD,liquidity)
+is an Assignment Operation (Slither line:3216)
+mul_(a,b) / expScale
+c
+liquidity = 0
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(b <= a,errorMessage)
+a - b
+(0,0,0)
+add_(a,b,addition overflow)
+toppedUpAmount > 0
+(err,liquidity,shortFall) = comptroller.getAccountLiquidity(address(this))
+is an Assignment Operation (Slither line:3216)
+0
+Checking function: _getAccountLiquidity(address) returns(uint256,uint256,uint256) (Slither line:3127)
+Visibility: internal
+
+End Avatar.find_setter_in_contract (Slither line:3345)
+
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type INLINE ASM (Slither line:1395)
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking external function fallback
+functions_writing_to_variable: masterCopy
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_masterCopy != address(0),Invalid master copy address provided) (proxy_features line:909)
+functions_writing_to_variable: exp = masterCopy = _masterCopy (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopy = _masterCopy (proxy_features line:912)
+functions_writing_to_variable: Identifier: masterCopy (proxy_features line:924)
+get_value_assigned: masterCopy = _masterCopy
+functions_writing_to_variable: constructor writes _masterCopy to masterCopy (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_masterCopy']
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)
+    if eq(calldataload(0), 0xa619486e00000000000000000000000000000000000000000000000000000000)
+    {
+        mstore(0, masterCopy)
+        return(0, 0x20)
+    }
+    calldatacopy(0, 0, calldatasize())
+    let success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    if eq(success, 0) { revert(0, returndatasize()) }
+    return(0, returndatasize())
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+
+Begin IComptroller.is_proxy (Slither line:1425)
+
+
+End IComptroller.is_proxy (Slither line:1428)
+
+
+Begin IComptroller.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IComptroller 
+
+End IComptroller.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRegistry.is_proxy (Slither line:1425)
+
+
+End IRegistry.is_proxy (Slither line:1428)
+
+
+Begin IRegistry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRegistry 
+
+End IRegistry.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IScore.is_proxy (Slither line:1425)
+
+
+End IScore.is_proxy (Slither line:1428)
+
+
+Begin IScore.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IScore 
+
+End IScore.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CarefulMath.is_proxy (Slither line:1425)
+
+
+End CarefulMath.is_proxy (Slither line:1428)
+
+
+Begin CarefulMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarefulMath 
+
+End CarefulMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Exponential.is_proxy (Slither line:1425)
+
+
+End Exponential.is_proxy (Slither line:1428)
+
+
+Begin Exponential.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Exponential 
+
+End Exponential.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CTokenInterface.is_proxy (Slither line:1425)
+
+
+End CTokenInterface.is_proxy (Slither line:1428)
+
+
+Begin CTokenInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CTokenInterface 
+
+End CTokenInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICToken.is_proxy (Slither line:1425)
+
+
+End ICToken.is_proxy (Slither line:1428)
+
+
+Begin ICToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICToken 
+
+End ICToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICErc20.is_proxy (Slither line:1425)
+
+
+End ICErc20.is_proxy (Slither line:1428)
+
+
+Begin ICErc20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICErc20 
+
+End ICErc20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICEther.is_proxy (Slither line:1425)
+
+
+End ICEther.is_proxy (Slither line:1428)
+
+
+Begin ICEther.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICEther 
+
+End ICEther.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IPriceOracle.is_proxy (Slither line:1425)
+
+
+End IPriceOracle.is_proxy (Slither line:1428)
+
+
+Begin IPriceOracle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPriceOracle 
+
+End IPriceOracle.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AbsAvatarBase.is_proxy (Slither line:1425)
+
+
+End AbsAvatarBase.is_proxy (Slither line:1428)
+
+
+Begin AbsAvatarBase.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AbsAvatarBase 
+
+End AbsAvatarBase.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBToken.is_proxy (Slither line:1425)
+
+
+End IBToken.is_proxy (Slither line:1428)
+
+
+Begin IBToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBToken 
+
+End IBToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AbsComptroller.is_proxy (Slither line:1425)
+
+
+End AbsComptroller.is_proxy (Slither line:1428)
+
+
+Begin AbsComptroller.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AbsComptroller 
+
+End AbsComptroller.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAvatarERC20.is_proxy (Slither line:1425)
+
+
+End IAvatarERC20.is_proxy (Slither line:1428)
+
+
+Begin IAvatarERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAvatarERC20 
+
+End IAvatarERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAvatar.is_proxy (Slither line:1425)
+
+
+End IAvatar.is_proxy (Slither line:1428)
+
+
+Begin IAvatar.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAvatar 
+
+End IAvatar.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAvatarCEther.is_proxy (Slither line:1425)
+
+
+End IAvatarCEther.is_proxy (Slither line:1428)
+
+
+Begin IAvatarCEther.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAvatarCEther 
+
+End IAvatarCEther.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAvatarCErc20.is_proxy (Slither line:1425)
+
+
+End IAvatarCErc20.is_proxy (Slither line:1428)
+
+
+Begin IAvatarCErc20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAvatarCErc20 
+
+End IAvatarCErc20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICushion.is_proxy (Slither line:1425)
+
+
+End ICushion.is_proxy (Slither line:1428)
+
+
+Begin ICushion.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICushion 
+
+End ICushion.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICushionCErc20.is_proxy (Slither line:1425)
+
+
+End ICushionCErc20.is_proxy (Slither line:1428)
+
+
+Begin ICushionCErc20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICushionCErc20 
+
+End ICushionCErc20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ICushionCEther.is_proxy (Slither line:1425)
+
+
+End ICushionCEther.is_proxy (Slither line:1428)
+
+
+Begin ICushionCEther.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICushionCEther 
+
+End ICushionCEther.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBComptroller.is_proxy (Slither line:1425)
+
+
+End IBComptroller.is_proxy (Slither line:1428)
+
+
+Begin IBComptroller.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBComptroller 
+
+End IBComptroller.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AbsCToken.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End AbsCToken.is_proxy (Slither line:1476)
+
+
+Begin AbsCToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AbsCToken 
+
+End AbsCToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IComp.is_proxy (Slither line:1425)
+
+
+End IComp.is_proxy (Slither line:1428)
+
+
+Begin IComp.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IComp 
+
+End IComp.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyStorage.is_proxy (Slither line:1425)
+
+
+End ProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyStorage 
+
+End ProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Avatar.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Avatar.is_proxy (Slither line:1476)
+
+
+Begin Avatar.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Avatar 
+
+End Avatar.is_upgradeable_proxy (Slither line:1407)
+

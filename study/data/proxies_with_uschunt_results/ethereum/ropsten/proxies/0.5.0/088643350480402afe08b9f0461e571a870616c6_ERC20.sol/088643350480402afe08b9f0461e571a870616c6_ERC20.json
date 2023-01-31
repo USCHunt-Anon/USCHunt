@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "VITA (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.0/088643350480402afe08b9f0461e571a870616c6_ERC20.sol/088643350480402afe08b9f0461e571a870616c6_ERC20.sol#498-662)",
+        "elements": [],
+        "description": "VITA (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.0/088643350480402afe08b9f0461e571a870616c6_ERC20.sol/088643350480402afe08b9f0461e571a870616c6_ERC20.sol#498-662) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "4c6ae84428e750fbe98c3aeecf492595d8a37f9b49fae7f8577b3e8084342ef4",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "VITA.implementation",
+          "impl_address_setter": "VITA.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "VITA (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.0/088643350480402afe08b9f0461e571a870616c6_ERC20.sol/088643350480402afe08b9f0461e571a870616c6_ERC20.sol#498-662)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "VITA.upgradeTo(address)": {
+                "check": "require(bool)(implementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "totalSupply()",
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)",
+              "name()",
+              "symbol()",
+              "decimals()"
+            ],
+            "other": [
+              "paused()",
+              "pause()",
+              "unpause()",
+              "isPauser(address)",
+              "addPauser(address)",
+              "removePauser(address)",
+              "renouncePauser()",
+              "isOwner(address)",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "increaseAllowance(address,uint256)",
+              "decreaseAllowance(address,uint256)",
+              "freezeAccount(address)",
+              "unfreezeAccount(address)",
+              "lock(address,uint256,uint256)",
+              "transferWithLock(address,uint256,uint256)",
+              "unlock(address,uint256)",
+              "upgradeTo(address)",
+              "burn(uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

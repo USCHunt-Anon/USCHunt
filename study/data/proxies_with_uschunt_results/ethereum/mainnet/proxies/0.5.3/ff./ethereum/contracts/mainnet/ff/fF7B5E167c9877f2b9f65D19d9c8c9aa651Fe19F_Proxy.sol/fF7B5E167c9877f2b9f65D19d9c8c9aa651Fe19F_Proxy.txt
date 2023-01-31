@@ -1,0 +1,1380 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff) (Slither line:1576)
+    if eq(calldataload(0), 0xa619486e00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        mstore(0, masterCopy) (Slither line:1576)
+        return(0, 0x20) (Slither line:1576)
+    } (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'masterCopy'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for masterCopy (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking masterCopy (Slither line:1689)
+masterCopy is a State Variable in contract Proxy (Slither line:1693)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to masterCopy
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for masterCopy at slot 0 in contract MasterCopy (Slither line:1355)
+Found masterCopy at slot 0 in contract MasterCopy (Slither line:1362)
+
+Begin MasterCopy.find_getter_in_contract (Slither line:2974)
+
+masterCopy is a Variable object
+Checking function: changeMasterCopy (Slither line:2988)
+
+End MasterCopy.find_getter_in_contract (Slither line:3083)
+
+
+Begin MasterCopy.find_setter_in_contract (Slither line:3119)
+
+Checking function: changeMasterCopy(address) returns() (Slither line:3127)
+Visibility: public
+ChangedMasterCopy(_masterCopy)
+require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+authorized()
+require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)
+masterCopy = _masterCopy
+is an Assignment Operation (Slither line:3216)
+
+End MasterCopy.find_setter_in_contract (Slither line:3345)
+
+Checking external function fallback
+functions_writing_to_variable: masterCopy
+functions_writing_to_variable: checking function MasterCopy.changeMasterCopy (proxy_features line:898)
+get_value_assigned: masterCopy = _masterCopy
+functions_writing_to_variable: changeMasterCopy writes _masterCopy to masterCopy (proxy_features line:1013)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_masterCopy != address(0),Invalid master copy address provided) (proxy_features line:909)
+functions_writing_to_variable: exp = masterCopy = _masterCopy (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterCopy = _masterCopy (proxy_features line:912)
+functions_writing_to_variable: Identifier: masterCopy (proxy_features line:924)
+get_value_assigned: masterCopy = _masterCopy
+functions_writing_to_variable: constructor writes _masterCopy to masterCopy (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_masterCopy']
+has_compatibility_checks: checking public function changeMasterCopy
+require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+has_compatibility_checks: condition msg.sender == address(this)
+require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)
+has_compatibility_checks: condition _masterCopy != address(0)
+check_condition_from_expression: modifier calls: ['authorized()']
+check_condition_from_expression: condition _masterCopy != address(0)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)
+    if eq(calldataload(0), 0xa619486e00000000000000000000000000000000000000000000000000000000)
+    {
+        mstore(0, masterCopy)
+        return(0, 0x20)
+    }
+    calldatacopy(0, 0, calldatasize())
+    let success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    if eq(success, 0)
+    {
+        revert(0, returndatasize())
+    }
+    return(0, returndatasize())
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found fallback
+has_time_delay: (node.type) EXPRESSION
+(Expression) ChangedMasterCopy(_masterCopy)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) authorized()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)
+has_time_delay: (node.type) EXPRESSION
+(Expression) masterCopy = _masterCopy
+
+Begin SelfAuthorized.is_proxy (Slither line:1425)
+
+
+End SelfAuthorized.is_proxy (Slither line:1428)
+
+
+Begin SelfAuthorized.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SelfAuthorized 
+
+End SelfAuthorized.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MasterCopy.is_proxy (Slither line:1425)
+
+
+End MasterCopy.is_proxy (Slither line:1428)
+
+
+Begin MasterCopy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MasterCopy 
+
+End MasterCopy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Module.is_proxy (Slither line:1425)
+
+
+End Module.is_proxy (Slither line:1428)
+
+
+Begin Module.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Module 
+
+End Module.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Enum.is_proxy (Slither line:1425)
+
+
+End Enum.is_proxy (Slither line:1428)
+
+
+Begin Enum.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Enum 
+
+End Enum.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Executor.is_proxy (Slither line:1425)
+
+
+End Executor.is_proxy (Slither line:1428)
+
+
+Begin Executor.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Executor 
+
+End Executor.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SecuredTokenTransfer.is_proxy (Slither line:1425)
+
+
+End SecuredTokenTransfer.is_proxy (Slither line:1428)
+
+
+Begin SecuredTokenTransfer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SecuredTokenTransfer 
+
+End SecuredTokenTransfer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ModuleManager.is_proxy (Slither line:1425)
+
+
+End ModuleManager.is_proxy (Slither line:1428)
+
+
+Begin ModuleManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ModuleManager 
+
+End ModuleManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnerManager.is_proxy (Slither line:1425)
+
+
+End OwnerManager.is_proxy (Slither line:1428)
+
+
+Begin OwnerManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnerManager 
+
+End OwnerManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FallbackManager.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin FallbackManager.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := call(gas(), handler, 0, 0, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(0, 0, returndatasize()) (Slither line:1576)
+    if eq(success, 0) (Slither line:1576)
+    { (Slither line:1576)
+        revert(0, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    return(0, returndatasize()) (Slither line:1576)
+} (Slither line:1576)
+
+End FallbackManager.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin FallbackManager.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := call(gas(), handler, 0, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'handler'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin FallbackManager.find_delegate_variable_from_name
+Searching for handler (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking FALLBACK_HANDLER_STORAGE_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking handler (Slither line:1703)
+handler is a Local Variable in FallbackManager.fallback (Slither line:1707)
+No expression found for handler
+Looking for assignment operation (Slither line:1761)
+AssignmentOperation: slot = FALLBACK_HANDLER_STORAGE_SLOT (Slither line:1767)
+Checking slot (Slither line:1703)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+Found sload in assembly:     handler := sload(slot) (Slither line:1884)
+dest: slot (Slither line:1887)
+
+End FallbackManager.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin FallbackManager.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End FallbackManager.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End FallbackManager.find_delegatecall_in_asm (Slither line:1637)
+
+Setting FallbackManager._delegate_variable = FallbackManager._proxy_impl_slot: FALLBACK_HANDLER_STORAGE_SLOT (Slither line:1473)
+
+
+End FallbackManager.is_proxy (Slither line:1476)
+
+
+Begin FallbackManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FallbackManager 
+Call destination FALLBACK_HANDLER_STORAGE_SLOT is constant (Slither line:1146)
+
+FALLBACK_HANDLER_STORAGE_SLOT is the implementation storage slot (Slither line:1149)
+
+FallbackManager is delegating to FALLBACK_HANDLER_STORAGE_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin FallbackManager.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (Slither line:3122)
+Checking function: internalSetFallbackHandler(address) returns() (Slither line:3127)
+Checking function: setFallbackHandler(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End FallbackManager.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in FallbackManager (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin FallbackManager.find_getter_in_contract (Slither line:2974)
+
+FALLBACK_HANDLER_STORAGE_SLOT is a Variable object
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+Checking function: internalSetFallbackHandler (Slither line:2988)
+Checking function: setFallbackHandler (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End FallbackManager.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in FallbackManager (Slither line:1305)
+Checking for FALLBACK_HANDLER_STORAGE_SLOT at slot 0 in contract Proxy (Slither line:1355)
+Checking for None at slot 0 in contract MasterCopy (Slither line:1355)
+Checking for None at slot 0 in contract Module (Slither line:1355)
+Checking for None at slot 0 in contract ModuleManager (Slither line:1355)
+Checking for None at slot 0 in contract OwnerManager (Slither line:1355)
+Checking for None at slot 0 in contract ISignatureValidatorConstants (Slither line:1355)
+Checking for None at slot 0 in contract ISignatureValidator (Slither line:1355)
+Checking for None at slot 0 in contract GnosisSafe (Slither line:1355)
+Found FALLBACK_HANDLER_STORAGE_SLOT at slot 0 in contract GnosisSafe (Slither line:1362)
+
+Begin GnosisSafe.find_getter_in_contract (Slither line:2974)
+
+FALLBACK_HANDLER_STORAGE_SLOT is a Variable object
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+Checking function: internalSetFallbackHandler (Slither line:2988)
+Checking function: setFallbackHandler (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: transferToken (Slither line:2988)
+transferToken returns bool variable called transferred (Slither line:3008)
+Checking function: recoverKey (Slither line:2988)
+recoverKey returns address variable  (Slither line:3008)
+RETURN node expression: ecrecover(bytes32,uint8,bytes32,bytes32)(messageHash,v,r,s) (Slither line:3028)
+Checking function: signatureSplit (Slither line:2988)
+signatureSplit returns uint8 variable called v (Slither line:3008)
+signatureSplit returns bytes32 variable called r (Slither line:3008)
+signatureSplit returns bytes32 variable called s (Slither line:3008)
+Checking function: setupOwners (Slither line:2988)
+Checking function: addOwnerWithThreshold (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: swapOwner (Slither line:2988)
+Checking function: changeThreshold (Slither line:2988)
+Checking function: getThreshold (Slither line:2988)
+getThreshold returns uint256 variable  (Slither line:3008)
+RETURN node expression: threshold (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: owner != SENTINEL_OWNERS && owners[owner] != address(0) (Slither line:3028)
+Checking function: getOwners (Slither line:2988)
+getOwners returns address[] variable  (Slither line:3008)
+RETURN node expression: array (Slither line:3028)
+Checking function: setupModules (Slither line:2988)
+Checking function: enableModule (Slither line:2988)
+Checking function: disableModule (Slither line:2988)
+Checking function: execTransactionFromModule (Slither line:2988)
+execTransactionFromModule returns bool variable called success (Slither line:3008)
+Checking function: execTransactionFromModuleReturnData (Slither line:2988)
+execTransactionFromModuleReturnData returns bool variable called success (Slither line:3008)
+execTransactionFromModuleReturnData returns bytes variable called returnData (Slither line:3008)
+Checking function: getModules (Slither line:2988)
+getModules returns address[] variable  (Slither line:3008)
+RETURN node expression: array (Slither line:3028)
+Checking function: getModulesPaginated (Slither line:2988)
+getModulesPaginated returns address[] variable called array (Slither line:3008)
+getModulesPaginated returns address variable called next (Slither line:3008)
+Checking function: execute (Slither line:2988)
+execute returns bool variable called success (Slither line:3008)
+Checking function: executeCall (Slither line:2988)
+executeCall returns bool variable called success (Slither line:3008)
+Checking function: executeDelegateCall (Slither line:2988)
+executeDelegateCall returns bool variable called success (Slither line:3008)
+Checking function: changeMasterCopy (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setup (Slither line:2988)
+Checking function: execTransaction (Slither line:2988)
+execTransaction returns bool variable called success (Slither line:3008)
+Checking function: handlePayment (Slither line:2988)
+handlePayment returns uint256 variable called payment (Slither line:3008)
+Checking function: checkSignatures (Slither line:2988)
+Checking function: requiredTxGas (Slither line:2988)
+requiredTxGas returns uint256 variable  (Slither line:3008)
+Checking function: approveHash (Slither line:2988)
+Checking function: signMessage (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: EIP1271_MAGIC_VALUE (Slither line:3028)
+Checking function: getMessageHash (Slither line:2988)
+getMessageHash returns bytes32 variable  (Slither line:3008)
+RETURN node expression: keccak256(bytes)(abi.encodePacked(bytes1(0x19),bytes1(0x01),domainSeparator,safeMessageHash)) (Slither line:3028)
+Checking function: encodeTransactionData (Slither line:2988)
+encodeTransactionData returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.encodePacked(bytes1(0x19),bytes1(0x01),domainSeparator,safeTxHash) (Slither line:3028)
+Checking function: getTransactionHash (Slither line:2988)
+getTransactionHash returns bytes32 variable  (Slither line:3008)
+RETURN node expression: keccak256(bytes)(encodeTransactionData(to,value,data,operation,safeTxGas,baseGas,gasPrice,gasToken,refundReceiver,_nonce)) (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End GnosisSafe.find_getter_in_contract (Slither line:3083)
+
+
+Begin GnosisSafe.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setup(address[],uint256,address,bytes,address,address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+setupOwners(_owners,_threshold)
+require(bool)(c / a == b)
+payment = gasUsed.add(baseGas).mul(gasPrice)
+is an Assignment Operation (Slither line:3216)
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+c
+threshold = _threshold
+is an Assignment Operation (Slither line:3216)
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+internalSetFallbackHandler(fallbackHandler)
+    sstore(slot, handler) (Slither line:3163)
+setup reads and/or writes to variable slot (Slither line:3170)
+setup reads and/or writes to variable FALLBACK_HANDLER_STORAGE_SLOT (Slither line:3170)
+
+End GnosisSafe.find_setter_in_contract (Slither line:3345)
+
+detect_storage_slot: FallbackManager
+Setter found in contract GnosisSafe
+Found public function: setFallbackHandler
+Checking public function setFallbackHandler
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function setFallbackHandler
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking external function fallback
+functions_writing_to_variable: FALLBACK_HANDLER_STORAGE_SLOT
+functions_writing_to_variable: checking function GnosisSafe.setFallbackHandler (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: setFallbackHandler writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GnosisSafe.enableModule (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.handlePayment (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.encodeTransactionData (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = SENTINEL_MODULES = address(0x1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SENTINEL_MODULES = address(0x1) (proxy_features line:912)
+functions_writing_to_variable: exp = SENTINEL_OWNERS = address(0x1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SENTINEL_OWNERS = address(0x1) (proxy_features line:912)
+functions_writing_to_variable: exp = EIP1271_MAGIC_VALUE = 0x20c13b0b (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: EIP1271_MAGIC_VALUE = 0x20c13b0b (proxy_features line:912)
+functions_writing_to_variable: exp = FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (proxy_features line:912)
+functions_writing_to_variable: Identifier: FALLBACK_HANDLER_STORAGE_SLOT (proxy_features line:924)
+get_value_assigned: FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+functions_writing_to_variable: exp = NAME = Gnosis Safe (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: NAME = Gnosis Safe (proxy_features line:912)
+functions_writing_to_variable: exp = VERSION = 1.1.1 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: VERSION = 1.1.1 (proxy_features line:912)
+functions_writing_to_variable: exp = DOMAIN_SEPARATOR_TYPEHASH = 0x035aff83d86937d35b32e04f0ddc6ff469290eef2f1b692d8a815c89404d4749 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: DOMAIN_SEPARATOR_TYPEHASH = 0x035aff83d86937d35b32e04f0ddc6ff469290eef2f1b692d8a815c89404d4749 (proxy_features line:912)
+functions_writing_to_variable: exp = SAFE_TX_TYPEHASH = 0xbb8310d486368db6bd6f849402fdd73ad53d316b5a4b2644ad6efe0f941286d8 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SAFE_TX_TYPEHASH = 0xbb8310d486368db6bd6f849402fdd73ad53d316b5a4b2644ad6efe0f941286d8 (proxy_features line:912)
+functions_writing_to_variable: exp = SAFE_MSG_TYPEHASH = 0x60b3cbf8b4a223d68d641b3b6ddf9a298e7f33710cf3d3a9d1146b5a6150fbca (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SAFE_MSG_TYPEHASH = 0x60b3cbf8b4a223d68d641b3b6ddf9a298e7f33710cf3d3a9d1146b5a6150fbca (proxy_features line:912)
+functions_writing_to_variable: checking function FallbackManager.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (proxy_features line:912)
+functions_writing_to_variable: Identifier: FALLBACK_HANDLER_STORAGE_SLOT (proxy_features line:924)
+get_value_assigned: FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+functions_writing_to_variable: checking function GnosisSafe.swapOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.executeCall (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.checkSignatures (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.signatureSplit (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getTransactionHash (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getModulesPaginated (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.requiredTxGas (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getModules (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.disableModule (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.addOwnerWithThreshold (proxy_features line:898)
+functions_writing_to_variable: checking function FallbackManager.internalSetFallbackHandler (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: internalSetFallbackHandler writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GnosisSafe.getOwners (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.approveHash (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.changeThreshold (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.transferToken (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execute (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execTransactionFromModule (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.signMessage (proxy_features line:898)
+functions_writing_to_variable: checking function FallbackManager.setFallbackHandler (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: setFallbackHandler writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GnosisSafe.recoverKey (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.setupOwners (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.isValidSignature (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.removeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.setupModules (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execTransactionFromModuleReturnData (proxy_features line:898)
+functions_writing_to_variable: checking function FallbackManager.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.setup (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: setup writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GnosisSafe.executeDelegateCall (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getMessageHash (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execTransaction (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.changeMasterCopy (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getThreshold (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.internalSetFallbackHandler (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: internalSetFallbackHandler writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function setFallbackHandler
+require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+has_compatibility_checks: condition msg.sender == address(this)
+has_compatibility_checks: skipping internal function internalSetFallbackHandler
+has_compatibility_checks: checking public function setFallbackHandler
+require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+has_compatibility_checks: condition msg.sender == address(this)
+has_compatibility_checks: checking external function setup
+require(bool)(c / a == b)
+has_compatibility_checks: condition c / a == b
+has_compatibility_checks: IF node exp = fallbackHandler != address(0)
+has_compatibility_checks: IF node exp = gasToken == address(0)
+has_compatibility_checks: IF node exp = refundReceiver == address(0)
+has_compatibility_checks: IF node exp = gasPrice < tx.gasprice
+require(bool)(c >= a)
+has_compatibility_checks: condition c >= a
+require(bool,string)(modules[SENTINEL_MODULES] == address(0),Modules have already been initialized)
+has_compatibility_checks: condition modules[SENTINEL_MODULES] == address(0)
+has_compatibility_checks: IF node exp = payment > 0
+require(bool,string)(owner != address(0) && owner != SENTINEL_OWNERS,Invalid owner address provided)
+has_compatibility_checks: condition owner != address(0) && owner != SENTINEL_OWNERS
+require(bool,string)(threshold == 0,Owners have already been setup)
+has_compatibility_checks: condition threshold == 0
+require(bool,string)(transferToken(gasToken,receiver,payment),Could not pay gas costs with token)
+has_compatibility_checks: condition transferToken(gasToken,receiver,payment)
+require(bool,string)(owners[owner] == address(0),Duplicate owner address provided)
+has_compatibility_checks: condition owners[owner] == address(0)
+has_compatibility_checks: IF node exp = to != address(0)
+require(bool,string)(_threshold <= _owners.length,Threshold cannot exceed owner count)
+has_compatibility_checks: condition _threshold <= _owners.length
+require(bool,string)(_threshold >= 1,Threshold needs to be greater than 0)
+has_compatibility_checks: condition _threshold >= 1
+require(bool,string)(receiver.send(payment),Could not pay gas costs with ether)
+has_compatibility_checks: condition receiver.send(payment)
+require(bool,string)(executeDelegateCall(to,data,gasleft()()),Could not finish initialization)
+has_compatibility_checks: condition executeDelegateCall(to,data,gasleft()())
+has_compatibility_checks: IF node exp = a == 0
+require(bool,string)(domainSeparator == 0,Domain Separator already set!)
+has_compatibility_checks: condition domainSeparator == 0
+has_compatibility_checks: skipping internal function internalSetFallbackHandler
+has_time_delay: (node.type) EXPRESSION
+(Expression) setupOwners(_owners,_threshold)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) i = 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(c / a == b)
+has_time_delay: (node.type) IF
+(Expression) fallbackHandler != address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) payment = gasUsed.add(baseGas).mul(gasPrice)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) data = abi.encodeWithSignature(transfer(address,uint256),receiver,amount)
+has_time_delay: (node.type) IF
+(Expression) gasToken == address(0)
+has_time_delay: (node.type) RETURN
+(Expression) c
+has_time_delay: (node.type) EXPRESSION
+(Expression) threshold = _threshold
+has_time_delay: (node.type) IF
+(Expression) refundReceiver == address(0)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = FALLBACK_HANDLER_STORAGE_SLOT
+has_time_delay: (node.type) IF_LOOP
+(Expression) i < _owners.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) internalSetFallbackHandler(fallbackHandler)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) c = a + b
+has_time_delay: (node.type) IF
+(Expression) gasPrice < tx.gasprice
+has_time_delay: (node.type) EXPRESSION
+(Expression) payment = gasUsed.add(baseGas).mul(gasPrice)
+has_time_delay: (node.type) EXPRESSION
+(Expression) i ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(c >= a)
+has_time_delay: (node.type) EXPRESSION
+(Expression) setupModules(to,data)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) owner = _owners[i]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(modules[SENTINEL_MODULES] == address(0),Modules have already been initialized)
+has_time_delay: (node.type) RETURN
+(Expression) c
+has_time_delay: (node.type) IF
+(Expression) payment > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) payment = gasUsed.add(baseGas).mul(tx.gasprice)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owner != address(0) && owner != SENTINEL_OWNERS,Invalid owner address provided)
+has_time_delay: (node.type) EXPRESSION
+(Expression) modules[SENTINEL_MODULES] = SENTINEL_MODULES
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(threshold == 0,Owners have already been setup)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(transferToken(gasToken,receiver,payment),Could not pay gas costs with token)
+has_time_delay: (node.type) EXPRESSION
+(Expression) receiver = tx.origin
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owners[owner] == address(0),Duplicate owner address provided)
+has_time_delay: (node.type) IF
+(Expression) to != address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_threshold <= _owners.length,Threshold cannot exceed owner count)
+has_time_delay: (node.type) EXPRESSION
+(Expression) receiver = refundReceiver
+has_time_delay: (node.type) EXPRESSION
+(Expression) owners[currentOwner] = owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) handlePayment(payment,0,1,paymentToken,paymentReceiver)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_threshold >= 1,Threshold needs to be greater than 0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(receiver.send(payment),Could not pay gas costs with ether)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(executeDelegateCall(to,data,gasleft()()),Could not finish initialization)
+has_time_delay: (node.type) EXPRESSION
+(Expression) currentOwner = owner
+has_time_delay: (node.type) IF
+(Expression) a == 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentOwner = SENTINEL_OWNERS
+has_time_delay: (node.type) EXPRESSION
+(Expression) owners[currentOwner] = SENTINEL_OWNERS
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(domainSeparator == 0,Domain Separator already set!)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ownerCount = _owners.length
+has_time_delay: (node.type) RETURN
+(Expression) 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) domainSeparator = keccak256(bytes)(abi.encode(DOMAIN_SEPARATOR_TYPEHASH,this))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) c = a * b
+
+Begin SignatureDecoder.is_proxy (Slither line:1425)
+
+
+End SignatureDecoder.is_proxy (Slither line:1428)
+
+
+Begin SignatureDecoder.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SignatureDecoder 
+
+End SignatureDecoder.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISignatureValidatorConstants.is_proxy (Slither line:1425)
+
+
+End ISignatureValidatorConstants.is_proxy (Slither line:1428)
+
+
+Begin ISignatureValidatorConstants.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISignatureValidatorConstants 
+
+End ISignatureValidatorConstants.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISignatureValidator.is_proxy (Slither line:1425)
+
+
+End ISignatureValidator.is_proxy (Slither line:1428)
+
+
+Begin ISignatureValidator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISignatureValidator 
+
+End ISignatureValidator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GnosisSafe.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GnosisSafe.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    handler := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End GnosisSafe.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin GnosisSafe.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    handler := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End GnosisSafe.find_delegatecall_in_asm (Slither line:1637)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GnosisSafe.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := call(gas(), handler, 0, 0, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(0, 0, returndatasize()) (Slither line:1576)
+    if eq(success, 0) (Slither line:1576)
+    { (Slither line:1576)
+        revert(0, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    return(0, returndatasize()) (Slither line:1576)
+} (Slither line:1576)
+
+End GnosisSafe.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin GnosisSafe.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let success := call(gas(), handler, 0, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'handler'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin GnosisSafe.find_delegate_variable_from_name
+Searching for handler (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking masterCopy (Slither line:1689)
+Checking SENTINEL_MODULES (Slither line:1689)
+Checking modules (Slither line:1689)
+Checking SENTINEL_OWNERS (Slither line:1689)
+Checking owners (Slither line:1689)
+Checking ownerCount (Slither line:1689)
+Checking threshold (Slither line:1689)
+Checking EIP1271_MAGIC_VALUE (Slither line:1689)
+Checking FALLBACK_HANDLER_STORAGE_SLOT (Slither line:1689)
+Checking NAME (Slither line:1689)
+Checking VERSION (Slither line:1689)
+Checking DOMAIN_SEPARATOR_TYPEHASH (Slither line:1689)
+Checking SAFE_TX_TYPEHASH (Slither line:1689)
+Checking SAFE_MSG_TYPEHASH (Slither line:1689)
+Checking nonce (Slither line:1689)
+Checking domainSeparator (Slither line:1689)
+Checking signedMessages (Slither line:1689)
+Checking approvedHashes (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking handler (Slither line:1703)
+handler is a Local Variable in GnosisSafe.fallback (Slither line:1707)
+No expression found for handler
+Looking for assignment operation (Slither line:1761)
+AssignmentOperation: slot = FALLBACK_HANDLER_STORAGE_SLOT (Slither line:1767)
+Checking slot (Slither line:1703)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+Found sload in assembly:     handler := sload(slot) (Slither line:1884)
+dest: slot (Slither line:1887)
+
+End GnosisSafe.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin GnosisSafe.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End GnosisSafe.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End GnosisSafe.find_delegatecall_in_asm (Slither line:1637)
+
+Setting GnosisSafe._delegate_variable = GnosisSafe._proxy_impl_slot: FALLBACK_HANDLER_STORAGE_SLOT (Slither line:1473)
+
+
+End GnosisSafe.is_proxy (Slither line:1476)
+
+
+Begin GnosisSafe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GnosisSafe 
+Call destination FALLBACK_HANDLER_STORAGE_SLOT is constant (Slither line:1146)
+
+FALLBACK_HANDLER_STORAGE_SLOT is the implementation storage slot (Slither line:1149)
+
+GnosisSafe is delegating to FALLBACK_HANDLER_STORAGE_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in FallbackManager (Slither line:1204)
+
+
+Begin FallbackManager.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (Slither line:3122)
+Checking function: internalSetFallbackHandler(address) returns() (Slither line:3127)
+Checking function: setFallbackHandler(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End FallbackManager.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in FallbackManager 
+Looking in GnosisSafe (Slither line:1213)
+
+Begin GnosisSafe.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setup(address[],uint256,address,bytes,address,address,uint256,address) returns() (Slither line:3127)
+Visibility: external
+setupOwners(_owners,_threshold)
+require(bool)(c / a == b)
+payment = gasUsed.add(baseGas).mul(gasPrice)
+is an Assignment Operation (Slither line:3216)
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+c
+threshold = _threshold
+is an Assignment Operation (Slither line:3216)
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+internalSetFallbackHandler(fallbackHandler)
+    sstore(slot, handler) (Slither line:3163)
+setup reads and/or writes to variable slot (Slither line:3170)
+setup reads and/or writes to variable FALLBACK_HANDLER_STORAGE_SLOT (Slither line:3170)
+
+End GnosisSafe.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setup in contract: GnosisSafe (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin FallbackManager.find_getter_in_contract (Slither line:2974)
+
+FALLBACK_HANDLER_STORAGE_SLOT is a Variable object
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+Checking function: internalSetFallbackHandler (Slither line:2988)
+Checking function: setFallbackHandler (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End FallbackManager.find_getter_in_contract (Slither line:3083)
+
+
+Begin GnosisSafe.find_getter_in_contract (Slither line:2974)
+
+FALLBACK_HANDLER_STORAGE_SLOT is a Variable object
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+Checking function: internalSetFallbackHandler (Slither line:2988)
+Checking function: setFallbackHandler (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: transferToken (Slither line:2988)
+transferToken returns bool variable called transferred (Slither line:3008)
+transferToken contains assembly (Slither line:3051)
+transferToken contains assembly (Slither line:3051)
+transferToken contains assembly (Slither line:3051)
+Checking function: recoverKey (Slither line:2988)
+recoverKey returns address variable  (Slither line:3008)
+RETURN node expression: ecrecover(bytes32,uint8,bytes32,bytes32)(messageHash,v,r,s) (Slither line:3028)
+Checking function: signatureSplit (Slither line:2988)
+signatureSplit returns uint8 variable called v (Slither line:3008)
+signatureSplit returns bytes32 variable called r (Slither line:3008)
+signatureSplit returns bytes32 variable called s (Slither line:3008)
+signatureSplit contains assembly (Slither line:3051)
+signatureSplit contains assembly (Slither line:3051)
+Checking function: setupOwners (Slither line:2988)
+Checking function: addOwnerWithThreshold (Slither line:2988)
+Checking function: removeOwner (Slither line:2988)
+Checking function: swapOwner (Slither line:2988)
+Checking function: changeThreshold (Slither line:2988)
+Checking function: getThreshold (Slither line:2988)
+getThreshold returns uint256 variable  (Slither line:3008)
+RETURN node expression: threshold (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: owner != SENTINEL_OWNERS && owners[owner] != address(0) (Slither line:3028)
+Checking function: getOwners (Slither line:2988)
+getOwners returns address[] variable  (Slither line:3008)
+RETURN node expression: array (Slither line:3028)
+Checking function: setupModules (Slither line:2988)
+Checking function: enableModule (Slither line:2988)
+Checking function: disableModule (Slither line:2988)
+Checking function: execTransactionFromModule (Slither line:2988)
+execTransactionFromModule returns bool variable called success (Slither line:3008)
+Checking function: execTransactionFromModuleReturnData (Slither line:2988)
+execTransactionFromModuleReturnData returns bool variable called success (Slither line:3008)
+execTransactionFromModuleReturnData returns bytes variable called returnData (Slither line:3008)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+execTransactionFromModuleReturnData contains assembly (Slither line:3051)
+Checking function: getModules (Slither line:2988)
+getModules returns address[] variable  (Slither line:3008)
+RETURN node expression: array (Slither line:3028)
+Checking function: getModulesPaginated (Slither line:2988)
+getModulesPaginated returns address[] variable called array (Slither line:3008)
+getModulesPaginated returns address variable called next (Slither line:3008)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+getModulesPaginated contains assembly (Slither line:3051)
+Checking function: execute (Slither line:2988)
+execute returns bool variable called success (Slither line:3008)
+Checking function: executeCall (Slither line:2988)
+executeCall returns bool variable called success (Slither line:3008)
+executeCall contains assembly (Slither line:3051)
+executeCall contains assembly (Slither line:3051)
+Checking function: executeDelegateCall (Slither line:2988)
+executeDelegateCall returns bool variable called success (Slither line:3008)
+executeDelegateCall contains assembly (Slither line:3051)
+executeDelegateCall contains assembly (Slither line:3051)
+Checking function: changeMasterCopy (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setup (Slither line:2988)
+Checking function: execTransaction (Slither line:2988)
+execTransaction returns bool variable called success (Slither line:3008)
+Checking function: handlePayment (Slither line:2988)
+handlePayment returns uint256 variable called payment (Slither line:3008)
+Checking function: checkSignatures (Slither line:2988)
+Checking function: requiredTxGas (Slither line:2988)
+requiredTxGas returns uint256 variable  (Slither line:3008)
+Checking function: approveHash (Slither line:2988)
+Checking function: signMessage (Slither line:2988)
+Checking function: isValidSignature (Slither line:2988)
+isValidSignature returns bytes4 variable  (Slither line:3008)
+RETURN node expression: EIP1271_MAGIC_VALUE (Slither line:3028)
+Checking function: getMessageHash (Slither line:2988)
+getMessageHash returns bytes32 variable  (Slither line:3008)
+RETURN node expression: keccak256(bytes)(abi.encodePacked(bytes1(0x19),bytes1(0x01),domainSeparator,safeMessageHash)) (Slither line:3028)
+Checking function: encodeTransactionData (Slither line:2988)
+encodeTransactionData returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.encodePacked(bytes1(0x19),bytes1(0x01),domainSeparator,safeTxHash) (Slither line:3028)
+Checking function: getTransactionHash (Slither line:2988)
+getTransactionHash returns bytes32 variable  (Slither line:3008)
+RETURN node expression: keccak256(bytes)(encodeTransactionData(to,value,data,operation,safeTxGas,baseGas,gasPrice,gasToken,refundReceiver,_nonce)) (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End GnosisSafe.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in GnosisSafe (Slither line:1305)
+or in FallbackManager (Slither line:1319)
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+FALLBACK_HANDLER_STORAGE_SLOT is a Variable object
+0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+detect_storage_slot: GnosisSafe
+Setter found in contract GnosisSafe
+impl_address_from_contract_call: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+impl_address_from_contract_call: StateVariable FALLBACK_HANDLER_STORAGE_SLOT
+impl_address_from_contract_call: getter is None
+Checking public function setFallbackHandler
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function setFallbackHandler
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function addOwnerWithThreshold
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function removeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function swapOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function changeThreshold
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function getThreshold
+Checking public function isOwner
+Checking public function getOwners
+Checking public function enableModule
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function disableModule
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking public function execTransactionFromModule
+Checking public function execTransactionFromModuleReturnData
+Checking public function getModules
+Checking public function getModulesPaginated
+Checking public function changeMasterCopy
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking external function setup
+Checking external function execTransaction
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == currentOwner || approvedHashes[currentOwner][dataHash] != 0,Hash has not been approved)
+Checking external function requiredTxGas
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking external function approveHash
+Checking external function signMessage
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+Checking external function isValidSignature
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == currentOwner || approvedHashes[currentOwner][dataHash] != 0,Hash has not been approved)
+Checking public function getMessageHash
+Checking public function encodeTransactionData
+Checking public function getTransactionHash
+Checking external function fallback
+functions_writing_to_variable: FALLBACK_HANDLER_STORAGE_SLOT
+functions_writing_to_variable: checking function GnosisSafe.setFallbackHandler (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: setFallbackHandler writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GnosisSafe.enableModule (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.handlePayment (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.encodeTransactionData (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = SENTINEL_MODULES = address(0x1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SENTINEL_MODULES = address(0x1) (proxy_features line:912)
+functions_writing_to_variable: exp = SENTINEL_OWNERS = address(0x1) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SENTINEL_OWNERS = address(0x1) (proxy_features line:912)
+functions_writing_to_variable: exp = EIP1271_MAGIC_VALUE = 0x20c13b0b (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: EIP1271_MAGIC_VALUE = 0x20c13b0b (proxy_features line:912)
+functions_writing_to_variable: exp = FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5 (proxy_features line:912)
+functions_writing_to_variable: Identifier: FALLBACK_HANDLER_STORAGE_SLOT (proxy_features line:924)
+get_value_assigned: FALLBACK_HANDLER_STORAGE_SLOT = 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5
+functions_writing_to_variable: exp = NAME = Gnosis Safe (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: NAME = Gnosis Safe (proxy_features line:912)
+functions_writing_to_variable: exp = VERSION = 1.1.1 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: VERSION = 1.1.1 (proxy_features line:912)
+functions_writing_to_variable: exp = DOMAIN_SEPARATOR_TYPEHASH = 0x035aff83d86937d35b32e04f0ddc6ff469290eef2f1b692d8a815c89404d4749 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: DOMAIN_SEPARATOR_TYPEHASH = 0x035aff83d86937d35b32e04f0ddc6ff469290eef2f1b692d8a815c89404d4749 (proxy_features line:912)
+functions_writing_to_variable: exp = SAFE_TX_TYPEHASH = 0xbb8310d486368db6bd6f849402fdd73ad53d316b5a4b2644ad6efe0f941286d8 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SAFE_TX_TYPEHASH = 0xbb8310d486368db6bd6f849402fdd73ad53d316b5a4b2644ad6efe0f941286d8 (proxy_features line:912)
+functions_writing_to_variable: exp = SAFE_MSG_TYPEHASH = 0x60b3cbf8b4a223d68d641b3b6ddf9a298e7f33710cf3d3a9d1146b5a6150fbca (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: SAFE_MSG_TYPEHASH = 0x60b3cbf8b4a223d68d641b3b6ddf9a298e7f33710cf3d3a9d1146b5a6150fbca (proxy_features line:912)
+functions_writing_to_variable: checking function GnosisSafe.swapOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.executeCall (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.checkSignatures (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.signatureSplit (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getTransactionHash (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getModulesPaginated (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.requiredTxGas (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getModules (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.disableModule (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.addOwnerWithThreshold (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getOwners (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.approveHash (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.changeThreshold (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.transferToken (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execute (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execTransactionFromModule (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.signMessage (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.recoverKey (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.setupOwners (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.isValidSignature (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.removeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.setupModules (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execTransactionFromModuleReturnData (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.setup (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: setup writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function GnosisSafe.executeDelegateCall (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getMessageHash (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.execTransaction (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.changeMasterCopy (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.getThreshold (proxy_features line:898)
+functions_writing_to_variable: checking function GnosisSafe.internalSetFallbackHandler (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, handler)
+(proxy_features line:953)
+handler
+functions_writing_to_variable: internalSetFallbackHandler writes handler to FALLBACK_HANDLER_STORAGE_SLOT w/ sstore (proxy_features line:959)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function setFallbackHandler
+require(bool,string)(msg.sender == address(this),Method can only be called from this contract)
+has_compatibility_checks: condition msg.sender == address(this)
+has_compatibility_checks: checking external function setup
+require(bool)(c / a == b)
+has_compatibility_checks: condition c / a == b
+has_compatibility_checks: IF node exp = fallbackHandler != address(0)
+has_compatibility_checks: IF node exp = gasToken == address(0)
+has_compatibility_checks: IF node exp = refundReceiver == address(0)
+has_compatibility_checks: IF node exp = gasPrice < tx.gasprice
+require(bool)(c >= a)
+has_compatibility_checks: condition c >= a
+require(bool,string)(modules[SENTINEL_MODULES] == address(0),Modules have already been initialized)
+has_compatibility_checks: condition modules[SENTINEL_MODULES] == address(0)
+has_compatibility_checks: IF node exp = payment > 0
+require(bool,string)(owner != address(0) && owner != SENTINEL_OWNERS,Invalid owner address provided)
+has_compatibility_checks: condition owner != address(0) && owner != SENTINEL_OWNERS
+require(bool,string)(threshold == 0,Owners have already been setup)
+has_compatibility_checks: condition threshold == 0
+require(bool,string)(transferToken(gasToken,receiver,payment),Could not pay gas costs with token)
+has_compatibility_checks: condition transferToken(gasToken,receiver,payment)
+require(bool,string)(owners[owner] == address(0),Duplicate owner address provided)
+has_compatibility_checks: condition owners[owner] == address(0)
+has_compatibility_checks: IF node exp = to != address(0)
+require(bool,string)(_threshold <= _owners.length,Threshold cannot exceed owner count)
+has_compatibility_checks: condition _threshold <= _owners.length
+require(bool,string)(_threshold >= 1,Threshold needs to be greater than 0)
+has_compatibility_checks: condition _threshold >= 1
+require(bool,string)(receiver.send(payment),Could not pay gas costs with ether)
+has_compatibility_checks: condition receiver.send(payment)
+require(bool,string)(executeDelegateCall(to,data,gasleft()()),Could not finish initialization)
+has_compatibility_checks: condition executeDelegateCall(to,data,gasleft()())
+has_compatibility_checks: IF node exp = a == 0
+require(bool,string)(domainSeparator == 0,Domain Separator already set!)
+has_compatibility_checks: condition domainSeparator == 0
+has_compatibility_checks: skipping internal function internalSetFallbackHandler
+Found public function: setFallbackHandler
+has_time_delay: (node.type) EXPRESSION
+(Expression) setupOwners(_owners,_threshold)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) i = 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(c / a == b)
+has_time_delay: (node.type) IF
+(Expression) fallbackHandler != address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) payment = gasUsed.add(baseGas).mul(gasPrice)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) data = abi.encodeWithSignature(transfer(address,uint256),receiver,amount)
+has_time_delay: (node.type) IF
+(Expression) gasToken == address(0)
+has_time_delay: (node.type) RETURN
+(Expression) c
+has_time_delay: (node.type) EXPRESSION
+(Expression) threshold = _threshold
+has_time_delay: (node.type) IF
+(Expression) refundReceiver == address(0)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = FALLBACK_HANDLER_STORAGE_SLOT
+has_time_delay: (node.type) IF_LOOP
+(Expression) i < _owners.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) internalSetFallbackHandler(fallbackHandler)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) c = a + b
+has_time_delay: (node.type) IF
+(Expression) gasPrice < tx.gasprice
+has_time_delay: (node.type) EXPRESSION
+(Expression) payment = gasUsed.add(baseGas).mul(gasPrice)
+has_time_delay: (node.type) EXPRESSION
+(Expression) i ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(c >= a)
+has_time_delay: (node.type) EXPRESSION
+(Expression) setupModules(to,data)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) owner = _owners[i]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(modules[SENTINEL_MODULES] == address(0),Modules have already been initialized)
+has_time_delay: (node.type) RETURN
+(Expression) c
+has_time_delay: (node.type) IF
+(Expression) payment > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) payment = gasUsed.add(baseGas).mul(tx.gasprice)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owner != address(0) && owner != SENTINEL_OWNERS,Invalid owner address provided)
+has_time_delay: (node.type) EXPRESSION
+(Expression) modules[SENTINEL_MODULES] = SENTINEL_MODULES
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(threshold == 0,Owners have already been setup)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(transferToken(gasToken,receiver,payment),Could not pay gas costs with token)
+has_time_delay: (node.type) EXPRESSION
+(Expression) receiver = tx.origin
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owners[owner] == address(0),Duplicate owner address provided)
+has_time_delay: (node.type) IF
+(Expression) to != address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_threshold <= _owners.length,Threshold cannot exceed owner count)
+has_time_delay: (node.type) EXPRESSION
+(Expression) receiver = refundReceiver
+has_time_delay: (node.type) EXPRESSION
+(Expression) owners[currentOwner] = owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) handlePayment(payment,0,1,paymentToken,paymentReceiver)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_threshold >= 1,Threshold needs to be greater than 0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(receiver.send(payment),Could not pay gas costs with ether)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(executeDelegateCall(to,data,gasleft()()),Could not finish initialization)
+has_time_delay: (node.type) EXPRESSION
+(Expression) currentOwner = owner
+has_time_delay: (node.type) IF
+(Expression) a == 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentOwner = SENTINEL_OWNERS
+has_time_delay: (node.type) EXPRESSION
+(Expression) owners[currentOwner] = SENTINEL_OWNERS
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(domainSeparator == 0,Domain Separator already set!)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ownerCount = _owners.length
+has_time_delay: (node.type) RETURN
+(Expression) 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) domainSeparator = keccak256(bytes)(abi.encode(DOMAIN_SEPARATOR_TYPEHASH,this))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) c = a * b

@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.3/ea2ee64f2aa12bcce65a1fe1c059a2590011a5df_Proxy.sol/ea2ee64f2aa12bcce65a1fe1c059a2590011a5df_Proxy.sol#83-111)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.3/ea2ee64f2aa12bcce65a1fe1c059a2590011a5df_Proxy.sol/ea2ee64f2aa12bcce65a1fe1c059a2590011a5df_Proxy.sol#83-111) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x7060c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3\nFound compatibility checks in all upgrade functions.\n",
+        "id": "973da566734eac8b8b1152a9d118c58155ecbdadac24358b902f0c4fa1ac5c66",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Upgradable.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "Upgradable.Upgrade(address)",
+          "impl_address_getter": "Upgradable._implementation()",
+          "impl_address_location": "Upgradable (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.3/ea2ee64f2aa12bcce65a1fe1c059a2590011a5df_Proxy.sol/ea2ee64f2aa12bcce65a1fe1c059a2590011a5df_Proxy.sol#52-81)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x7060c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "Upgradable.Upgrade(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(addr) > 0,Bad implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "Upgrade(address)",
+              "changeAdmin(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

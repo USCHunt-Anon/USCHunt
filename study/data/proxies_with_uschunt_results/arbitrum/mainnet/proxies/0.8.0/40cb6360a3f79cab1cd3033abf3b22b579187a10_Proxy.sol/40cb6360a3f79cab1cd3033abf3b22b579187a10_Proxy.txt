@@ -1,0 +1,240 @@
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in Proxy.delegatedFwd (Slither line:1805)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,_dst,_calldata + 0x20,mload(uint256)(_calldata),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,_dst,_calldata + 0x20,mload(uint256)(_calldata),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(ptr_delegatedFwd_asm_0,size_delegatedFwd_asm_0) (Slither line:1819)
+AssignmentOperation: returndatasize()() (Slither line:1811)
+CallExpression: returndatasize()() (Slither line:1819)
+CallExpression: return(uint256,uint256)(ptr_delegatedFwd_asm_0,size_delegatedFwd_asm_0) (Slither line:1819)
+AssignmentOperation: mload(uint256)(0x40) (Slither line:1811)
+CallExpression: mload(uint256)(0x40) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(ptr_delegatedFwd_asm_0,0,size_delegatedFwd_asm_0) (Slither line:1819)
+CallExpression: delegatedFwd(IBeacon(_getBeacon()).implementation(),msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(IBeacon(_getBeacon()).implementation(),msg.data) (Slither line:1832)
+The value passed to parameter #0 is IBeacon(_getBeacon()).implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+IBeacon(_getBeacon()).implementation() (Slither line:2003)
+called = IBeacon(_getBeacon()).implementation (Slither line:2010)
+Called member of IBeacon(_getBeacon()) (Slither line:2017)
+
+Begin Proxy.find_delegate_from_member_access
+
+Expression: IBeacon(_getBeacon()).implementation() (Slither line:2358)
+IBeacon(_getBeacon()) (Slither line:2371)
+implementation is a member of the contract type: IBeacon (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IBeacon (Slither line:2441)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2019)
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Local Variable: _dst (Slither line:1164)
+Proxy is delegating to _dst
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: _getBeacon() returns(address) (Slither line:3127)
+Visibility: public
+getAddressSlot(_BEACON_SLOT)
+r = sload(uint256)(slot)
+is an Assignment Operation (Slither line:3216)
+Checking function: _setBeacon(address) returns() (Slither line:3127)
+Visibility: public
+_setBeacon contains assembly (Slither line:3153)
+sstore(uint256,uint256)(_BEACON_SLOT,newBeacon)
+sstore(uint256,uint256)
+Checking function: getAddressSlot(bytes32) returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: delegatedFwd(address,bytes) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_dst is a Variable object
+Checking function: _getBeacon (Slither line:2988)
+_getBeacon returns address variable  (Slither line:3008)
+RETURN node expression: getAddressSlot(_BEACON_SLOT) (Slither line:3028)
+Checking function: _setBeacon (Slither line:2988)
+Checking function: getAddressSlot (Slither line:2988)
+getAddressSlot returns address variable called r (Slither line:3008)
+Checking function: fallback (Slither line:2988)
+Checking function: delegatedFwd (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+switch_expr_1525_176_0_delegatedFwd_asm_0
+None
+Checking node of type RETURN (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+result_delegatedFwd_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,_dst,_calldata + 0x20,mload(uint256)(_calldata),0,0)
+Checking node of type IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+result_delegatedFwd_asm_0
+None
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type END_IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+revert(uint256,uint256)(ptr_delegatedFwd_asm_0,size_delegatedFwd_asm_0)
+Checking node of type EXPRESSION (Slither line:1395)
+size_delegatedFwd_asm_0 = returndatasize()()
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(ptr_delegatedFwd_asm_0,size_delegatedFwd_asm_0)
+Checking node of type NEW VARIABLE (Slither line:1395)
+size_delegatedFwd_asm_0
+None
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+ptr_delegatedFwd_asm_0 = mload(uint256)(0x40)
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+ptr_delegatedFwd_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+returndatacopy(uint256,uint256,uint256)(ptr_delegatedFwd_asm_0,0,size_delegatedFwd_asm_0)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+delegatedFwd(IBeacon(_getBeacon()).implementation(),msg.data)
+Checking node of type EXPRESSION (Slither line:1395)
+r = sload(uint256)(slot)
+Checking node of type EXPRESSION (Slither line:1395)
+switch_expr_1525_176_0_delegatedFwd_asm_0 = result_delegatedFwd_asm_0
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+detect_storage_slot: Proxy
+Expression for _dst is None
+find_impl_slot_from_sload: ASSEMBLY node: {'AST': {'nodeType': 'YulBlock', 'src': '991:720:0', 'statements': [{'nodeType': 'YulVariableDeclaration', 'src': '1005:207:0', 'value': {'arguments': [{'arguments': [{'arguments': [], 'functionName': {'name': 'gas', 'nodeType': 'YulIdentifier', 'src': '1053:3:0'}, 'nodeType': 'YulFunctionCall', 'src': '1053:5:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1060:5:0', 'type': '', 'value': '10000'}], 'functionName': {'name': 'sub', 'nodeType': 'YulIdentifier', 'src': '1049:3:0'}, 'nodeType': 'YulFunctionCall', 'src': '1049:17:0'}, {'name': '_dst', 'nodeType': 'YulIdentifier', 'src': '1084:4:0'}, {'arguments': [{'name': '_calldata', 'nodeType': 'YulIdentifier', 'src': '1110:9:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1121:4:0', 'type': '', 'value': '0x20'}], 'functionName': {'name': 'add', 'nodeType': 'YulIdentifier', 'src': '1106:3:0'}, 'nodeType': 'YulFunctionCall', 'src': '1106:20:0'}, {'arguments': [{'name': '_calldata', 'nodeType': 'YulIdentifier', 'src': '1150:9:0'}], 'functionName': {'name': 'mload', 'nodeType': 'YulIdentifier', 'src': '1144:5:0'}, 'nodeType': 'YulFunctionCall', 'src': '1144:16:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1178:1:0', 'type': '', 'value': '0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1197:1:0', 'type': '', 'value': '0'}], 'functionName': {'name': 'delegatecall', 'nodeType': 'YulIdentifier', 'src': '1019:12:0'}, 'nodeType': 'YulFunctionCall', 'src': '1019:193:0'}, 'variables': [{'name': 'result', 'nodeType': 'YulTypedName', 'src': '1009:6:0', 'type': ''}]}, {'nodeType': 'YulVariableDeclaration', 'src': '1225:28:0', 'value': {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '1237:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '1237:16:0'}, 'variables': [{'name': 'size', 'nodeType': 'YulTypedName', 'src': '1229:4:0', 'type': ''}]}, {'nodeType': 'YulVariableDeclaration', 'src': '1271:22:0', 'value': {'arguments': [{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1288:4:0', 'type': '', 'value': '0x40'}], 'functionName': {'name': 'mload', 'nodeType': 'YulIdentifier', 'src': '1282:5:0'}, 'nodeType': 'YulFunctionCall', 'src': '1282:11:0'}, 'variables': [{'name': 'ptr', 'nodeType': 'YulTypedName', 'src': '1275:3:0', 'type': ''}]}, {'expression': {'arguments': [{'name': 'ptr', 'nodeType': 'YulIdentifier', 'src': '1321:3:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1326:1:0', 'type': '', 'value': '0'}, {'name': 'size', 'nodeType': 'YulIdentifier', 'src': '1329:4:0'}], 'functionName': {'name': 'returndatacopy', 'nodeType': 'YulIdentifier', 'src': '1306:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '1306:28:0'}, 'nodeType': 'YulExpressionStatement', 'src': '1306:28:0'}, {'cases': [{'body': {'nodeType': 'YulBlock', 'src': '1562:57:0', 'statements': [{'expression': {'arguments': [{'name': 'ptr', 'nodeType': 'YulIdentifier', 'src': '1591:3:0'}, {'name': 'size', 'nodeType': 'YulIdentifier', 'src': '1596:4:0'}], 'functionName': {'name': 'revert', 'nodeType': 'YulIdentifier', 'src': '1584:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '1584:17:0'}, 'nodeType': 'YulExpressionStatement', 'src': '1584:17:0'}]}, 'nodeType': 'YulCase', 'src': '1555:64:0', 'value': {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1560:1:0', 'type': '', 'value': '0'}}, {'body': {'nodeType': 'YulBlock', 'src': '1644:57:0', 'statements': [{'expression': {'arguments': [{'name': 'ptr', 'nodeType': 'YulIdentifier', 'src': '1673:3:0'}, {'name': 'size', 'nodeType': 'YulIdentifier', 'src': '1678:4:0'}], 'functionName': {'name': 'return', 'nodeType': 'YulIdentifier', 'src': '1666:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '1666:17:0'}, 'nodeType': 'YulExpressionStatement', 'src': '1666:17:0'}]}, 'nodeType': 'YulCase', 'src': '1636:65:0', 'value': 'default'}], 'expression': {'name': 'result', 'nodeType': 'YulIdentifier', 'src': '1532:6:0'}, 'nodeType': 'YulSwitch', 'src': '1525:176:0'}]}, 'evmVersion': 'istanbul', 'externalReferences': [{'declaration': 55, 'isOffset': False, 'isSlot': False, 'src': '1110:9:0', 'valueSize': 1}, {'declaration': 55, 'isOffset': False, 'isSlot': False, 'src': '1150:9:0', 'valueSize': 1}, {'declaration': 53, 'isOffset': False, 'isSlot': False, 'src': '1084:4:0', 'valueSize': 1}], 'id': 58, 'nodeType': 'InlineAssembly', 'src': '982:729:0'}
+find_impl_slot_from_sload: EXPRESSION node: result_delegatedFwd_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,_dst,_calldata + 0x20,mload(uint256)(_calldata),0,0)
+find_impl_slot_from_sload: EXPRESSION node: revert(uint256,uint256)(ptr_delegatedFwd_asm_0,size_delegatedFwd_asm_0)
+find_impl_slot_from_sload: EXPRESSION node: size_delegatedFwd_asm_0 = returndatasize()()
+find_impl_slot_from_sload: EXPRESSION node: return(uint256,uint256)(ptr_delegatedFwd_asm_0,size_delegatedFwd_asm_0)
+find_impl_slot_from_sload: EXPRESSION node: ptr_delegatedFwd_asm_0 = mload(uint256)(0x40)
+find_impl_slot_from_sload: EXPRESSION node: returndatacopy(uint256,uint256,uint256)(ptr_delegatedFwd_asm_0,0,size_delegatedFwd_asm_0)
+find_impl_slot_from_sload: ASSEMBLY node: {'AST': {'nodeType': 'YulBlock', 'src': '665:40:0', 'statements': [{'nodeType': 'YulAssignment', 'src': '679:16:0', 'value': {'arguments': [{'name': 'slot', 'nodeType': 'YulIdentifier', 'src': '690:4:0'}], 'functionName': {'name': 'sload', 'nodeType': 'YulIdentifier', 'src': '684:5:0'}, 'nodeType': 'YulFunctionCall', 'src': '684:11:0'}, 'variableNames': [{'name': 'r', 'nodeType': 'YulIdentifier', 'src': '679:1:0'}]}]}, 'evmVersion': 'istanbul', 'externalReferences': [{'declaration': 32, 'isOffset': False, 'isSlot': False, 'src': '679:1:0', 'valueSize': 1}, {'declaration': 29, 'isOffset': False, 'isSlot': False, 'src': '690:4:0', 'valueSize': 1}], 'id': 34, 'nodeType': 'InlineAssembly', 'src': '656:49:0'}
+find_impl_slot_from_sload: EXPRESSION node: delegatedFwd(IBeacon(_getBeacon()).implementation(),msg.data)
+find_impl_slot_from_sload: EXPRESSION node: r = sload(uint256)(slot)
+find_impl_slot_from_sload: EXPRESSION node: switch_expr_1525_176_0_delegatedFwd_asm_0 = result_delegatedFwd_asm_0
+impl_address_from_contract_call: None
+Checking public function _getBeacon
+Checking public function _setBeacon
+Checking external function fallback
+functions_writing_to_variable: _dst
+functions_writing_to_variable: checking function Proxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getAddressSlot (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._setBeacon (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_0', '_BEACON_SLOT', 'TMP_4', '', 'r', 'slot', 'TMP_3', 'TMP_2', 'TMP_5']
+functions_writing_to_variable: _BEACON_SLOT
+functions_writing_to_variable: checking function Proxy._getBeacon (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.delegatedFwd (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getAddressSlot (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50 (proxy_features line:912)
+functions_writing_to_variable: Identifier: _BEACON_SLOT (proxy_features line:924)
+get_value_assigned: _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50
+functions_writing_to_variable: checking function Proxy._setBeacon (proxy_features line:898)
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_delegatedFwd_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,_dst,_calldata + 0x20,mload(uint256)(_calldata),0,0)
+Found public function: _getBeacon
+
+Begin setNumberContract.is_proxy (Slither line:1425)
+
+
+End setNumberContract.is_proxy (Slither line:1428)
+
+
+Begin setNumberContract.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: setNumberContract 
+
+End setNumberContract.is_upgradeable_proxy (Slither line:1407)
+

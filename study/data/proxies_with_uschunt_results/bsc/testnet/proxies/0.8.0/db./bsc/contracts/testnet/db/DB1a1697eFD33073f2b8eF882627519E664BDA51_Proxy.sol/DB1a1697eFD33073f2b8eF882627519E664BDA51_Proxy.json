@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/db./bsc/contracts/testnet/db/DB1a1697eFD33073f2b8eF882627519E664BDA51_Proxy.sol/DB1a1697eFD33073f2b8eF882627519E664BDA51_Proxy.sol#4-110)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/db./bsc/contracts/testnet/db/DB1a1697eFD33073f2b8eF882627519E664BDA51_Proxy.sol/DB1a1697eFD33073f2b8eF882627519E664BDA51_Proxy.sol#4-110) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)\nMissing compatibility check in Proxy.constructor(address)\nFound compatibility check in Proxy.upgradeTo(address)\n",
+        "id": "f64973a9ef131bcd88ead3b6c9232afaab14213dbc486f36d1fb45db6bfaa78e",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.implementationPosition",
+          "impl_address_setter": "Proxy.upgradeTo(address)",
+          "impl_address_getter": "Proxy.implementation()",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/db./bsc/contracts/testnet/db/DB1a1697eFD33073f2b8eF882627519E664BDA51_Proxy.sol/DB1a1697eFD33073f2b8eF882627519E664BDA51_Proxy.sol#4-110)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Proxy.constructor(address)": "missing",
+              "Proxy.upgradeTo(address)": "require(bool,string)(currentImplementation != _newImplementation,DABridgeProxy: Cannot upgrade to the current implementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

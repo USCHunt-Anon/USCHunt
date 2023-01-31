@@ -1,0 +1,264 @@
+
+Begin NFTBrokerProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTBrokerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End NFTBrokerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTBrokerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: target = sload(uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd
+
+End NFTBrokerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin NFTBrokerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End NFTBrokerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin NFTBrokerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin NFTBrokerProxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking target (Slither line:1703)
+target is a Local Variable in NFTBrokerProxy.fallback (Slither line:1707)
+Expression: getTargetSlot() (Slither line:1719)
+
+Begin NFTBrokerProxy.find_delegate_from_call_exp
+
+getTargetSlot() (Slither line:2003)
+called = getTargetSlot (Slither line:2010)
+AssignmentOperation: target = sload(uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd (Slither line:2153)
+getTargetSlot returns a variable of type address   called target (Slither line:2193)
+getTargetSlot contains assembly - looking for sload (Slither line:2199)
+
+End NFTBrokerProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End NFTBrokerProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End NFTBrokerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting NFTBrokerProxy._delegate_variable = NFTBrokerProxy._proxy_impl_slot: 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd (Slither line:1473)
+
+
+End NFTBrokerProxy.is_proxy (Slither line:1476)
+
+
+Begin NFTBrokerProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: NFTBrokerProxy 
+Call destination 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd is constant (Slither line:1146)
+
+0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd is the implementation storage slot (Slither line:1149)
+
+NFTBrokerProxy is delegating to 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd
+Looking for setter (Slither line:1200)
+
+
+Begin NFTBrokerProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: getTargetSlot() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: getTarget() returns(address) (Slither line:3127)
+Visibility: public
+target = sload(uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd)
+is an Assignment Operation (Slither line:3216)
+0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd
+getTargetSlot()
+Checking function: setTargetSlot(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: setTarget(address) returns() (Slither line:3127)
+Visibility: public
+owner = sload(uint256)(0x2d33df155922a1acf3c04048b6cc8aa3f641ab2dc6ecf84d346b5653b679e017)
+is an Assignment Operation (Slither line:3216)
+0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd
+setTargetSlot(target)
+sstore(uint256,uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd,target)
+sstore(uint256,uint256)
+
+End NFTBrokerProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setTarget in contract: NFTBrokerProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin NFTBrokerProxy.find_getter_in_contract (Slither line:2974)
+
+0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd is a Variable object
+0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: getTargetSlot (Slither line:2988)
+getTargetSlot returns address variable called target (Slither line:3008)
+getTargetSlot contains assembly (Slither line:3051)
+getTargetSlot contains assembly (Slither line:3051)
+getTargetSlot contains assembly (Slither line:3051)
+Checking function: getTarget (Slither line:2988)
+getTarget returns address variable called target (Slither line:3008)
+RETURN node expression: getTargetSlot() (Slither line:3028)
+Checking function: setTargetSlot (Slither line:2988)
+Checking function: setTarget (Slither line:2988)
+Checking function: getOwnerSlot (Slither line:2988)
+getOwnerSlot returns address variable called owner (Slither line:3008)
+getOwnerSlot contains assembly (Slither line:3051)
+getOwnerSlot contains assembly (Slither line:3051)
+getOwnerSlot contains assembly (Slither line:3051)
+Checking function: getOwner (Slither line:2988)
+getOwner returns address variable called owner (Slither line:3008)
+RETURN node expression: getOwnerSlot() (Slither line:3028)
+Checking function: setOwnerSlot (Slither line:2988)
+Checking function: setOwner (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End NFTBrokerProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in NFTBrokerProxy (Slither line:1305)
+
+End NFTBrokerProxy.is_upgradeable_proxy (Slither line:1407)
+
+detect_storage_slot: NFTBrokerProxy
+Setter found in contract NFTBrokerProxy
+Checking public function getTarget
+Checking public function setTarget
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == getOwner(),caller not the owner)
+Checking public function getOwner
+Checking public function setOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == getOwner(),caller not the owner)
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == getOwner(),caller not the owner)
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd
+functions_writing_to_variable: checking function NFTBrokerProxy.setTarget (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd,target)
+functions_writing_to_variable: setTarget writes target to 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function NFTBrokerProxy.getTargetSlot (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.getTarget (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.getOwner (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.setTargetSlot (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd,target)
+functions_writing_to_variable: setTargetSlot writes target to 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function NFTBrokerProxy.getOwnerSlot (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.setOwnerSlot (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function NFTBrokerProxy.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd,target)
+functions_writing_to_variable: constructor writes target to 0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function NFTBrokerProxy.setOwner (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function setTarget
+require(bool,string)(msg.sender == getOwner(),caller not the owner)
+has_compatibility_checks: condition msg.sender == getOwner()
+has_compatibility_checks: skipping internal function setTargetSlot
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = getTargetSlot()
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,0,calldatasize()(),0,0)
+Found public function: constructor
+Found fallback
+Found external function: receive
+Found public function: getTarget
+has_time_delay: (node.type) EXPRESSION
+(Expression) owner = sload(uint256)(0x2d33df155922a1acf3c04048b6cc8aa3f641ab2dc6ecf84d346b5653b679e017)
+has_time_delay: (node.type) EXPRESSION
+(Expression) setTargetSlot(target)
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(0x172d303713ab541af50b05036cc57f0c0c8733f85d5ceb2137350b11166ad9bd,target)
+has_time_delay: (node.type) RETURN
+(Expression) getOwnerSlot()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == getOwner(),caller not the owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()

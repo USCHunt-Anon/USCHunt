@@ -1,0 +1,237 @@
+
+Begin TestProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin TestProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+size_fallback_asm_0
+
+End TestProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin TestProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1342_98_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End TestProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TestProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin TestProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking wards (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in TestProxy.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract TestProxy (Slither line:1730)
+
+End TestProxy.find_delegate_variable_by_name
+
+
+End TestProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End TestProxy.is_proxy (Slither line:1476)
+
+
+Begin TestProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TestProxy 
+TestProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin TestProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: rely(address) returns() (Slither line:3117)
+Visibility: external
+wards[usr] = 1
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+auth()
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+Rely(msg.sender)
+Checking function: deny(address) returns() (Slither line:3117)
+Visibility: external
+wards[usr] = 0
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+Deny(msg.sender)
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+auth()
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: external
+auth()
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End TestProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: TestProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin TestProxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: rely (Slither line:2978)
+Checking function: deny (Slither line:2978)
+Checking function: setImplementation (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End TestProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in TestProxy (Slither line:1305)
+
+Begin TestProxyImp.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: doRevert (Slither line:2978)
+Checking function: doCustomRevert (Slither line:2978)
+
+End TestProxyImp.find_getter_in_contract (Slither line:3073)
+
+Checking external function rely
+Checking external function deny
+Checking external function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function TestProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function TestProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function TestProxy.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = SetImplementation(implementation_) (proxy_features line:904)
+functions_writing_to_variable: exp = auth() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed) (proxy_features line:904)
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function TestProxy.deny (proxy_features line:893)
+functions_writing_to_variable: checking function TestProxy.rely (proxy_features line:893)
+has_compatibility_checks: dependencies: ['implementation_']
+has_compatibility_checks: checking external function setImplementation
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+has_compatibility_checks: condition wards[msg.sender] == 1
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0)
+Found public function: constructor
+Found external function: rely
+has_time_delay: (node.type) EXPRESSION
+(Expression) auth()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) SetImplementation(implementation_)
+
+Begin TestProxyImp.is_proxy (Slither line:1425)
+
+
+End TestProxyImp.is_proxy (Slither line:1428)
+
+
+Begin TestProxyImp.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TestProxyImp 
+
+End TestProxyImp.is_upgradeable_proxy (Slither line:1407)
+

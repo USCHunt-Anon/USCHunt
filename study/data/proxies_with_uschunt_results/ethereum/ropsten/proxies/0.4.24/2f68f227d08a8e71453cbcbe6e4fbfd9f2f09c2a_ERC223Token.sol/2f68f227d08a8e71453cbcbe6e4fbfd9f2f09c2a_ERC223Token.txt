@@ -1,0 +1,285 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC223Storage.is_proxy (Slither line:1425)
+
+
+End ERC223Storage.is_proxy (Slither line:1428)
+
+
+Begin ERC223Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC223Storage 
+
+End ERC223Storage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC223Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ERC223Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), implementation_slot, add(data, 0x20), mload(data), 0x0, 0x0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation_slot'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin ERC223Proxy.find_delegate_variable_from_name
+Searching for implementation_slot (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking pendingOwner (Slither line:1689)
+Checking minter (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking allowance (Slither line:1689)
+Checking privilegedTransferLocked (Slither line:1689)
+Checking privilegedMintLocked (Slither line:1689)
+Checking forceExecuteOf (Slither line:1689)
+Checking forceExecuteOfContracts (Slither line:1689)
+Checking forceExecuteOfUsers (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking data (Slither line:1703)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+Begin ERC223Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking pendingOwner (Slither line:1689)
+Checking minter (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking balanceOf (Slither line:1689)
+Checking allowance (Slither line:1689)
+Checking privilegedTransferLocked (Slither line:1689)
+Checking privilegedMintLocked (Slither line:1689)
+Checking forceExecuteOf (Slither line:1689)
+Checking forceExecuteOfContracts (Slither line:1689)
+Checking forceExecuteOfUsers (Slither line:1689)
+Checking implementation (Slither line:1689)
+implementation is a State Variable in contract ERC223Proxy (Slither line:1693)
+
+End ERC223Proxy.find_delegate_variable_by_name
+
+
+End ERC223Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End ERC223Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End ERC223Proxy.is_proxy (Slither line:1476)
+
+
+Begin ERC223Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC223Proxy 
+ERC223Proxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin ERC223Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: transferOwnership(address) returns(bool) (Slither line:3117)
+Visibility: public
+pendingOwner = newOwner
+is an Assignment Operation (Slither line:3206)
+require(bool)(msg.sender == owner)
+true
+onlyOwner()
+Checking function: claimOwnership() returns(bool) (Slither line:3117)
+Visibility: public
+true
+onlyPendingOwner()
+require(bool)(msg.sender == pendingOwner && pendingOwner != 0x0)
+owner = pendingOwner
+is an Assignment Operation (Slither line:3206)
+Checking function: upgrade(address) returns() (Slither line:3117)
+Visibility: public
+onlyOwner()
+require(bool)(msg.sender == owner)
+uncheckedUpgrade(newImplementation)
+implementation = newImplementation
+is an Assignment Operation (Slither line:3206)
+
+End ERC223Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgrade in contract: ERC223Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ERC223Proxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+newImplementation
+Checking function: constructor (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+transferOwnership returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: claimOwnership (Slither line:2978)
+claimOwnership returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: upgrade (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: uncheckedUpgrade (Slither line:2978)
+
+End ERC223Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in ERC223Proxy (Slither line:1305)
+
+Begin SafeMath.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+newImplementation
+Checking function: add (Slither line:2978)
+add returns uint256 variable called c (Slither line:2998)
+Checking function: sub (Slither line:2978)
+sub returns uint256 variable called c (Slither line:2998)
+Checking function: mul (Slither line:2978)
+mul returns uint256 variable called c (Slither line:2998)
+Checking function: div (Slither line:2978)
+div returns uint256 variable called c (Slither line:2998)
+
+End SafeMath.find_getter_in_contract (Slither line:3073)
+
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function claimOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == pendingOwner && pendingOwner != 0x0)
+Checking public function upgrade
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function claimOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == pendingOwner && pendingOwner != 0x0)
+Checking public function upgrade
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function ERC223Proxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function ERC223Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function ERC223Proxy.constructor (proxy_features line:893)
+get_value_assigned: implementation = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function ERC223Proxy.upgrade (proxy_features line:893)
+get_value_assigned: implementation = newImplementation
+functions_writing_to_variable: upgrade writes newImplementation to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function ERC223Proxy.uncheckedUpgrade (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = newImplementation
+functions_writing_to_variable: exp = Upgrade(implementation,newImplementation) (proxy_features line:904)
+functions_writing_to_variable: uncheckedUpgrade writes newImplementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function ERC223Proxy.claimOwnership (proxy_features line:893)
+has_compatibility_checks: dependencies: ['initialImplementation', 'newImplementation', 'newImplementation']
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: checking public function upgrade
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: skipping private function uncheckedUpgrade
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), implementation_slot, add(data, 0x20), mload(data), 0x0, 0x0)
+    let returnDataSize := returndatasize()
+    let returnData := mload(0x40)
+    returndatacopy(returnData, 0x0, returnDataSize)
+    switch result
+    case 0 {
+        revert(returnData, returnDataSize)
+    }
+    default {
+        return(returnData, returnDataSize)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: transferOwnership
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) uncheckedUpgrade(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgrade(implementation,newImplementation)
+
+Begin ERC223Receiver.is_proxy (Slither line:1425)
+
+
+End ERC223Receiver.is_proxy (Slither line:1428)
+
+
+Begin ERC223Receiver.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC223Receiver 
+
+End ERC223Receiver.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC223Token.is_proxy (Slither line:1425)
+
+
+End ERC223Token.is_proxy (Slither line:1428)
+
+
+Begin ERC223Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC223Token 
+
+End ERC223Token.is_upgradeable_proxy (Slither line:1407)
+

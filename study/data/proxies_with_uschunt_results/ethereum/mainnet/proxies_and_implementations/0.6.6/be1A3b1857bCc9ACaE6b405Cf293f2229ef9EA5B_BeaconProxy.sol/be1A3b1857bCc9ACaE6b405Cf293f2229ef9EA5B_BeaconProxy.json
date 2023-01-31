@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.6.6/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol#21-89)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.6.6/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol#21-89) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BeaconProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.6.6/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol#298-369)",
+        "elements": [],
+        "description": "BeaconProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.6.6/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol#298-369) is an upgradeable proxy.\nimplementation was found in a different contract.\nimplementation is an address state variable.\nBecon.implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.6.6/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol#380) gets value from a cross-contract call: IBeacon(_beacon()).implementation()\nIBeacon appears to be a Beacon contract for the proxy\nThe address of IBeacon is loaded from storage slot _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50\nMissing compatibility check in Becon.set(address)\nTo remove upgradeability, delete set from Becon\n",
+        "id": "206cfda71b4002bd2b2de4265f3a621368a7de4100fc6019a9c07cc3cb7222b4",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Becon.implementation",
+          "impl_address_setter": "Becon.set(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Becon (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.6.6/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol/be1A3b1857bCc9ACaE6b405Cf293f2229ef9EA5B_BeaconProxy.sol#379-385)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(_beacon()).implementation()",
+          "beacon": "IBeacon",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Becon.set(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove set from Becon"
+        }
+      }
+    ]
+  }
+}

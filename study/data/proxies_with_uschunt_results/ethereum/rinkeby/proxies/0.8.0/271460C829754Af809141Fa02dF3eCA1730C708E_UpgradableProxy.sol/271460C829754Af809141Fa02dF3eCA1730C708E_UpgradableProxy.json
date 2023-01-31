@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#9-41)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#9-41) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#43-83)",
+        "elements": [],
+        "description": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#43-83) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "b99d6b8ca254ac45fc8d35ed098628eebf5fbf799bbd280fb6d2ca7084616d5a",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "TransparentUpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#86-142)",
+        "elements": [],
+        "description": "TransparentUpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#86-142) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(proxy.upgradable.pattern.test.mine)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "871eb81bacbd0e5330e572f7d37b4c96748d265ea59a8ce1be8cc4d7024488ee",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradableProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "TransparentUpgradableProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradableProxy._implementation()",
+          "impl_address_location": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol/271460C829754Af809141Fa02dF3eCA1730C708E_UpgradableProxy.sol#43-83)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(proxy.upgradable.pattern.test.mine)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradableProxy.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,address not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradableProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,address not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradableProxy.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,address not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getImplementation()",
+              "admin()",
+              "implementation()",
+              "upgradeTo(address)",
+              "changeAdmin(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

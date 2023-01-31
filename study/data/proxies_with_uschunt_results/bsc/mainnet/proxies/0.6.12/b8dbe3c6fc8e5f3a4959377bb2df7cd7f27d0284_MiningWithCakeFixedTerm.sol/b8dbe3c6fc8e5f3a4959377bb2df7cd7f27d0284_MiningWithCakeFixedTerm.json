@@ -1,0 +1,83 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1392-1460)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1392-1460) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BeaconProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1477-1548)",
+        "elements": [],
+        "description": "BeaconProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1477-1548) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nUpgradeableBeacon._implementation (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1310) gets value from a cross-contract call: IBeacon(_beacon()).implementation()\nCustomBeacon appears to be a Beacon contract for the proxy\nThe address of CustomBeacon is loaded from storage slot _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from UpgradeableBeacon\n",
+        "id": "2e1a7c529c96dadd6d4805aa228c6b8092b2d7a634eeb8f3ada8a47039dfdcb7",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableBeacon._implementation",
+          "impl_address_setter": "UpgradeableBeacon.upgradeTo(address)",
+          "impl_address_getter": "UpgradeableBeacon.implementation()",
+          "impl_address_location": "UpgradeableBeacon (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1309-1358)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(_beacon()).implementation()",
+          "beacon": "CustomBeacon",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradeableBeacon.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableBeacon: implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from UpgradeableBeacon"
+        }
+      },
+      {
+        "contract": "CustomBeaconProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1555-1562)",
+        "elements": [],
+        "description": "CustomBeaconProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1555-1562) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nUpgradeableBeacon._implementation (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1310) gets value from a cross-contract call: IBeacon(_beacon()).implementation()\nCustomBeacon appears to be a Beacon contract for the proxy\nThe address of CustomBeacon is loaded from storage slot _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from UpgradeableBeacon\n",
+        "id": "e18e414cbfbb86d9be4242f73a9d5b0f886859d4f98067f16457f1138c5f1ec8",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableBeacon._implementation",
+          "impl_address_setter": "UpgradeableBeacon.upgradeTo(address)",
+          "impl_address_getter": "UpgradeableBeacon.implementation()",
+          "impl_address_location": "UpgradeableBeacon (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.6.12/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol/b8dbe3c6fc8e5f3a4959377bb2df7cd7f27d0284_MiningWithCakeFixedTerm.sol#1309-1358)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(_beacon()).implementation()",
+          "beacon": "CustomBeacon",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradeableBeacon.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableBeacon: implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from UpgradeableBeacon"
+        }
+      }
+    ]
+  }
+}

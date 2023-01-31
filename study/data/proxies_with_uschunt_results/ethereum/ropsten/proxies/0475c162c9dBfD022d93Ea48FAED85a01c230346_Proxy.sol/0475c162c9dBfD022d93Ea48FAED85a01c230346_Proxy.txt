@@ -1,0 +1,474 @@
+
+Begin StorageSlot.is_proxy (Slither line:1425)
+
+
+End StorageSlot.is_proxy (Slither line:1428)
+
+
+Begin StorageSlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageSlot 
+
+End StorageSlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(ptr__delegate_asm_0,size__delegate_asm_0) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr__delegate_asm_0
+size__delegate_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,ptr__delegate_asm_0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+impl
+ptr__delegate_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is impl (Slither line:2818)
+dest.value: impl (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPL_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking impl (Slither line:1800)
+impl is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(ptr__delegate_asm_0,size__delegate_asm_0) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,ptr__delegate_asm_0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,ptr__delegate_asm_0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: return(uint256,uint256)(ptr__delegate_asm_0,size__delegate_asm_0) (Slither line:1819)
+AssignmentOperation: returndatasize()() (Slither line:1811)
+CallExpression: returndatasize()() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(ptr__delegate_asm_0,0,size__delegate_asm_0) (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: mload(uint256)(0x40) (Slither line:1811)
+CallExpression: mload(uint256)(0x40) (Slither line:1819)
+CallExpression: _delegate(StorageSlot.getAddressAt(_IMPL_SLOT)) (Slither line:1819)
+Found where _delegate is called: _delegate(StorageSlot.getAddressAt(_IMPL_SLOT)) (Slither line:1832)
+The value passed to parameter #0 is StorageSlot.getAddressAt(_IMPL_SLOT) (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+StorageSlot.getAddressAt(_IMPL_SLOT) (Slither line:1993)
+called = StorageSlot.getAddressAt (Slither line:2000)
+Called member of StorageSlot (Slither line:2007)
+
+Begin Proxy.find_delegate_from_member_access
+
+Expression: StorageSlot.getAddressAt(_IMPL_SLOT) (Slither line:2348)
+StorageSlot (Slither line:2361)
+getAddressAt is a member of the contract type: StorageSlot (Slither line:2406)
+Looking for getAddressAt in StorageSlot (Slither line:2513)
+Found the function called getAddressAt (Slither line:2517)
+Returns a variable of type address called a (Slither line:2522)
+Found the return value from getAddressAt
+But it comes from a call expression: sload(uint256)(slot) (Slither line:2625)
+
+Begin StorageSlot.find_delegate_from_call_exp
+
+sload(uint256)(slot) (Slither line:1993)
+called = sload(uint256) (Slither line:2000)
+
+End StorageSlot.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Proxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End Proxy.find_delegate_from_call_exp (Slither line:2009)
+
+CallExpression: calldatacopy(uint256,uint256,uint256)(ptr__delegate_asm_0,0,calldatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr__delegate_asm_0,size__delegate_asm_0) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr__delegate_asm_0
+size__delegate_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: size__delegate_asm_0 = returndatasize()() (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: returndatasize()
+Type of call: uint256 (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(ptr__delegate_asm_0,0,size__delegate_asm_0) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr__delegate_asm_0
+0
+size__delegate_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: a = sload(uint256)(slot) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+slot
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPL_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking impl (Slither line:1800)
+impl is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(ptr__delegate_asm_0,size__delegate_asm_0) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,ptr__delegate_asm_0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,ptr__delegate_asm_0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: return(uint256,uint256)(ptr__delegate_asm_0,size__delegate_asm_0) (Slither line:1819)
+AssignmentOperation: returndatasize()() (Slither line:1811)
+CallExpression: returndatasize()() (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(ptr__delegate_asm_0,0,size__delegate_asm_0) (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: mload(uint256)(0x40) (Slither line:1811)
+CallExpression: mload(uint256)(0x40) (Slither line:1819)
+CallExpression: _delegate(StorageSlot.getAddressAt(_IMPL_SLOT)) (Slither line:1819)
+Found where _delegate is called: _delegate(StorageSlot.getAddressAt(_IMPL_SLOT)) (Slither line:1832)
+The value passed to parameter #0 is StorageSlot.getAddressAt(_IMPL_SLOT) (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+StorageSlot.getAddressAt(_IMPL_SLOT) (Slither line:1993)
+called = StorageSlot.getAddressAt (Slither line:2000)
+Called member of StorageSlot (Slither line:2007)
+
+Begin Proxy.find_delegate_from_member_access
+
+Expression: StorageSlot.getAddressAt(_IMPL_SLOT) (Slither line:2348)
+StorageSlot (Slither line:2361)
+getAddressAt is a member of the contract type: StorageSlot (Slither line:2406)
+Looking for getAddressAt in StorageSlot (Slither line:2513)
+Found the function called getAddressAt (Slither line:2517)
+Returns a variable of type address called a (Slither line:2522)
+Found the return value from getAddressAt
+But it comes from a call expression: sload(uint256)(slot) (Slither line:2625)
+
+Begin StorageSlot.find_delegate_from_call_exp
+
+sload(uint256)(slot) (Slither line:1993)
+called = sload(uint256) (Slither line:2000)
+
+End StorageSlot.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Proxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End Proxy.find_delegate_from_call_exp (Slither line:2009)
+
+CallExpression: calldatacopy(uint256,uint256,uint256)(ptr__delegate_asm_0,0,calldatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_978_92_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: ptr__delegate_asm_0 = mload(uint256)(0x40) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: mload(uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+0x40
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(StorageSlot.getAddressAt(_IMPL_SLOT)) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+StorageSlot.getAddressAt(_IMPL_SLOT)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr__delegate_asm_0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr__delegate_asm_0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin console.is_proxy (Slither line:1425)
+
+
+End console.is_proxy (Slither line:1428)
+
+
+Begin console.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: console 
+
+End console.is_upgradeable_proxy (Slither line:1407)
+

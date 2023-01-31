@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.11/2a/ethereum/contracts/mainnet/2a/2A8facc9D49fBc3ecFf569847833C380A13418a8_UpgradableProxy.sol/2A8facc9D49fBc3ecFf569847833C380A13418a8_UpgradableProxy.sol#156-196)",
+        "elements": [],
+        "description": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.11/2a/ethereum/contracts/mainnet/2a/2A8facc9D49fBc3ecFf569847833C380A13418a8_UpgradableProxy.sol/2A8facc9D49fBc3ecFf569847833C380A13418a8_UpgradableProxy.sol#156-196) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(proxy.implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "f340228432c8f0f88b6b003ed3dcd72d1db8c91bc86bc07bbf95407a141a4ea1",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradableProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "UpgradableProxy.updateImplementation(address)",
+          "impl_address_getter": "UpgradableProxy.implementation()",
+          "impl_address_location": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.11/2a/ethereum/contracts/mainnet/2a/2A8facc9D49fBc3ecFf569847833C380A13418a8_UpgradableProxy.sol/2A8facc9D49fBc3ecFf569847833C380A13418a8_UpgradableProxy.sol#156-196)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradableProxy.updateImplementation(address)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "owner()",
+              "transferOwnership(address)",
+              "implementation()",
+              "updateImplementation(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

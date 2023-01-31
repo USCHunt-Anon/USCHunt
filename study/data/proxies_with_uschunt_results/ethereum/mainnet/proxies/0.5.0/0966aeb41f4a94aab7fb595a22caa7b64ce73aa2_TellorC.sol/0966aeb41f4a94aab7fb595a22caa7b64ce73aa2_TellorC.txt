@@ -1,0 +1,113 @@
+
+Begin TellorWrapper.is_proxy (Slither line:1425)
+
+
+End TellorWrapper.is_proxy (Slither line:1428)
+
+
+Begin TellorWrapper.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TellorWrapper 
+
+End TellorWrapper.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TellorC.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TellorC.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.sender == address(0),Not allowed) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender == address(0)
+Not allowed
+
+End TellorC.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TellorC.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := call(not(0), addr, 0, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+    let size := returndatasize() (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(ptr, 0, size) (Slither line:1576)
+    switch result (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(ptr, size) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(ptr, size) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End TellorC.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin TellorC.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := call(not(0), addr, 0, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'addr'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin TellorC.find_delegate_variable_from_name
+Searching for addr (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking tellor (Slither line:1689)
+Checking slotProgress (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking miner (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _calldata (Slither line:1703)
+Checking addr (Slither line:1703)
+addr is a Local Variable in TellorC.fallback (Slither line:1707)
+Expression: tellor (Slither line:1719)
+Identifier value: tellor (Slither line:1725)
+tellor is a State Variable in contract TellorC (Slither line:1730)
+
+End TellorC.find_delegate_variable_by_name
+
+
+End TellorC.find_delegatecall_in_asm (Slither line:1637)
+
+
+End TellorC.is_proxy (Slither line:1476)
+
+
+Begin TellorC.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TellorC 
+Call destination 0x0Ba45A8b5d5575935B8158a88C631E9F9C95a2e5 is hardcoded (Slither line:1159)
+

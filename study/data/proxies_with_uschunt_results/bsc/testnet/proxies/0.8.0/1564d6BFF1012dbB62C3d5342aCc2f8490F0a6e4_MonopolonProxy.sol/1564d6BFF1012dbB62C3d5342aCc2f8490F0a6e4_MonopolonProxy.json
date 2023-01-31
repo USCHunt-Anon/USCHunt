@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "MonopolonProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/1564d6BFF1012dbB62C3d5342aCc2f8490F0a6e4_MonopolonProxy.sol/1564d6BFF1012dbB62C3d5342aCc2f8490F0a6e4_MonopolonProxy.sol#4-126)",
+        "elements": [],
+        "description": "MonopolonProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/1564d6BFF1012dbB62C3d5342aCc2f8490F0a6e4_MonopolonProxy.sol/1564d6BFF1012dbB62C3d5342aCc2f8490F0a6e4_MonopolonProxy.sol#4-126) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.monopolon-minting:2022)\nMissing compatibility check in MonopolonProxy.constructor(address)\nFound compatibility check in MonopolonProxy.upgradeTo(address)\n",
+        "id": "f067ef060c6caa78a27c568133bb2d6e01929830039b7754845a638a677f437e",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "MonopolonProxy.implementationPosition",
+          "impl_address_setter": "MonopolonProxy.upgradeTo(address)",
+          "impl_address_getter": "MonopolonProxy.implementation()",
+          "impl_address_location": "MonopolonProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/1564d6BFF1012dbB62C3d5342aCc2f8490F0a6e4_MonopolonProxy.sol/1564d6BFF1012dbB62C3d5342aCc2f8490F0a6e4_MonopolonProxy.sol#4-126)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.monopolon-minting:2022)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "MonopolonProxy.constructor(address)": "missing",
+              "MonopolonProxy.upgradeTo(address)": "require(bool)(currentImplementation != _newImplementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "setSuperAdmin(address)",
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

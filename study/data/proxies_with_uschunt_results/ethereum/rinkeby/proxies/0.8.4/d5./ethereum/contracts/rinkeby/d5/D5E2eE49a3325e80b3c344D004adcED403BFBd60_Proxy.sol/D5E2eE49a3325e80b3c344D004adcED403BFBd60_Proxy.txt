@@ -1,0 +1,149 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: address(0xe9fACf55C3E2B50F10FB51A150b3Df3D2bb2B44B) (Slither line:3112)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: changeImplementation(address,uint256) returns() (Slither line:3117)
+Visibility: public
+implementation = _newImplementation
+is an Assignment Operation (Slither line:3206)
+address(0xe9fACf55C3E2B50F10FB51A150b3Df3D2bb2B44B)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: changeImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+_newImplementation
+Checking function: constructor (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: changeImplementation (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+Begin Ownable.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+_newImplementation
+Checking function: constructor (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+
+End Ownable.find_getter_in_contract (Slither line:3073)
+
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == owner
+Checking public function changeImplementation
+Found 'msg.sender ==' in expression: msg.sender == owner
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.changeImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(_newVersion > version,New version must be greater then previous) (proxy_features line:904)
+functions_writing_to_variable: exp = implementation = _newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = _newImplementation
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == owner (proxy_features line:904)
+functions_writing_to_variable: changeImplementation writes _newImplementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.slitherConstructorVariables (proxy_features line:893)
+functions_writing_to_variable: exp = implementation = address(0xe9fACf55C3E2B50F10FB51A150b3Df3D2bb2B44B) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = address(0xe9fACf55C3E2B50F10FB51A150b3Df3D2bb2B44B) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = address(0xe9fACf55C3E2B50F10FB51A150b3Df3D2bb2B44B)
+functions_writing_to_variable: exp = version = 1 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: version = 1 (proxy_features line:907)
+functions_writing_to_variable: checking function Proxy.transferOwnership (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_newImplementation']
+has_compatibility_checks: checking public function changeImplementation
+require(bool,string)(_newVersion > version,New version must be greater then previous)
+has_compatibility_checks: condition _newVersion > version
+has_compatibility_checks: IF node exp = msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (sucess,_result) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: transferOwnership
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_newVersion > version,New version must be greater then previous)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) IF
+(Expression) msg.sender == owner

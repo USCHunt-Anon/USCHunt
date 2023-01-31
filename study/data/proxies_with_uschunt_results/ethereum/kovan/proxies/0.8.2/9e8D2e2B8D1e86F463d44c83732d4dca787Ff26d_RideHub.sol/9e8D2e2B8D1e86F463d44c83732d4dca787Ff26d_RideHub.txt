@@ -1,0 +1,424 @@
+
+Begin RideHub.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin RideHub.find_delegatecall_in_asm (Slither line:1541)
+
+
+End RideHub.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin RideHub.find_delegatecall_in_asm (Slither line:1541)
+
+
+End RideHub.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin RideHub.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End RideHub.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin RideHub.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(facet != address(0),RideHub: Function does not exist) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+facet != address(0)
+RideHub: Function does not exist
+
+End RideHub.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin RideHub.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End RideHub.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin RideHub.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+facet
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is facet (Slither line:2818)
+dest.value: facet (Slither line:2821)
+Expression: ds.selectorToFacetAndPosition[msg.sig].facetAddress (Slither line:2826)
+
+End RideHub.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End RideHub.is_proxy (Slither line:1476)
+
+
+Begin RideHub.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RideHub 
+Local Variable: facet (Slither line:1164)
+RideHub is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin RideHub.find_setter_in_contract (Slither line:3109)
+
+Expression: ds.selectorToFacetAndPosition[msg.sig].facetAddress (Slither line:3112)
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+Expression: require(bool,string)(contractSize > 0,_errorMessage) (Slither line:3284)
+require(bool,string)
+Expression: contractSize = extcodesize(uint256)(_contract) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: rus = position (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: enforceHasContractCode(_init,RideLibUtilsCut: _init address has no code) (Slither line:3284)
+enforceHasContractCode
+Expression: removeFunctions(_rideCut[facetIndex].facetAddress,_rideCut[facetIndex].functionSelectors) (Slither line:3284)
+removeFunctions
+Expression: addFacet(rus,_facetAddress) (Slither line:3284)
+addFacet
+Expression: (success,error) = _init.delegatecall(_calldata) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(oldFacetAddress != _facetAddress,RideLibUtilsCut: Can't replace function with same function) (Slither line:3284)
+require(bool,string)
+Expression: revert(string)(RideLibUtilsCut: Incorrect FacetCutAction) (Slither line:3284)
+revert(string)
+Expression: removeFunction(rus,oldFacetAddress,selector) (Slither line:3284)
+removeFunction
+Expression: addFunction(rus,selector,selectorPosition,_facetAddress) (Slither line:3284)
+addFunction
+Expression: selectorPosition ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: RideLibUtils.setContractOwner(_contractOwner) (Slither line:3284)
+RideLibUtils.setContractOwner
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: rus.contractOwner = _newOwner (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: OwnershipTransferred(previousOwner,_newOwner) (Slither line:3284)
+OwnershipTransferred
+Expression: require(bool,string)(_functionSelectors.length > 0,RideLibUtilsCut: No selectors in facet to cut) (Slither line:3284)
+require(bool,string)
+Expression: revert(string)(string(error)) (Slither line:3284)
+revert(string)
+Expression: require(bool,string)(_facetAddress != address(0),RideLibUtilsCut: Can't remove function that doesn't exist) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(oldFacetAddress == address(0),RideLibUtilsCut: Can't add function that already exists) (Slither line:3284)
+require(bool,string)
+Expression: functionSelectors[0] = IRideCut.rideCut.selector (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(_facetAddress != address(0),RideLibUtilsCut: Add facet can't be address(0)) (Slither line:3284)
+require(bool,string)
+Expression: addFunction(rus,selector,selectorPosition,_facetAddress) (Slither line:3284)
+addFunction
+Expression: revert(string)(RideLibUtilsCut: _init function reverted) (Slither line:3284)
+revert(string)
+Expression: cut[0] = IRideCut.FacetCut(_rideCutFacet,IRideCut.FacetCutAction.Add,functionSelectors) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorPosition ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: RideLibUtils.rideCut(cut,address(0),) (Slither line:3284)
+RideLibUtils.rideCut
+Expression: addFacet(rus,_facetAddress) (Slither line:3284)
+addFacet
+Expression: require(bool,string)(_functionSelectors.length > 0,RideLibUtilsCut: No selectors in facet to cut) (Slither line:3284)
+require(bool,string)
+Expression: enforceHasContractCode(_facetAddress,RideLibUtilsCut: New facet has no code) (Slither line:3284)
+enforceHasContractCode
+Expression: require(bool,string)(_facetAddress != address(0),RideLibUtilsCut: Add facet can't be address(0)) (Slither line:3284)
+require(bool,string)
+Expression: rus.facetFunctionSelectors[_facetAddress].facetAddressPosition = rus.facetAddresses.length (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: rus.facetAddresses.push(_facetAddress) (Slither line:3284)
+rus.facetAddresses.push
+Expression: require(bool,string)(_facetAddress != address(this),RideLibUtilsCut: Can't remove immutable function) (Slither line:3284)
+require(bool,string)
+Expression: rus.facetFunctionSelectors[_facetAddress].functionSelectors.pop() (Slither line:3284)
+rus.facetFunctionSelectors[_facetAddress].functionSelectors.pop
+Expression: require(bool,string)(_functionSelectors.length > 0,RideLibUtilsCut: No selectors in facet to cut) (Slither line:3284)
+require(bool,string)
+Expression: rus.facetFunctionSelectors[_facetAddress].functionSelectors[selectorPosition] = lastSelector (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(_facetAddress == address(0),RideLibUtilsCut: Remove facet address must be address(0)) (Slither line:3284)
+require(bool,string)
+Expression: rus.selectorToFacetAndPosition[lastSelector].functionSelectorPosition = uint96(selectorPosition) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: delete rus.selectorToFacetAndPosition[_selector] (Slither line:3284)
+Expression type: delete (Slither line:3286)
+Expression: replaceFunctions(_rideCut[facetIndex].facetAddress,_rideCut[facetIndex].functionSelectors) (Slither line:3284)
+replaceFunctions
+Expression: rus.selectorToFacetAndPosition[_selector].functionSelectorPosition = _selectorPosition (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: rus.facetFunctionSelectors[_facetAddress].functionSelectors.push(_selector) (Slither line:3284)
+rus.facetFunctionSelectors[_facetAddress].functionSelectors.push
+Expression: rus.selectorToFacetAndPosition[_selector].facetAddress = _facetAddress (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: facetIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: rus.facetAddresses.pop() (Slither line:3284)
+rus.facetAddresses.pop
+Expression: removeFunction(rus,oldFacetAddress,selector) (Slither line:3284)
+removeFunction
+Expression: rus.facetAddresses[facetAddressPosition] = lastFacetAddress (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: initializeRideCut(_init,_calldata) (Slither line:3284)
+initializeRideCut
+Expression: rus.facetFunctionSelectors[lastFacetAddress].facetAddressPosition = facetAddressPosition (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: RideCut(_rideCut,_init,_calldata) (Slither line:3284)
+RideCut
+Expression: addFunctions(_rideCut[facetIndex].facetAddress,_rideCut[facetIndex].functionSelectors) (Slither line:3284)
+addFunctions
+Expression: delete rus.facetFunctionSelectors[_facetAddress].facetAddressPosition (Slither line:3284)
+Expression type: delete (Slither line:3286)
+Expression: require(bool,string)(_calldata.length == 0,RideLibUtilsCut: _init is address(0) but_calldata is not empty) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(_calldata.length > 0,RideLibUtilsCut: _calldata is empty but _init is not address(0)) (Slither line:3284)
+require(bool,string)
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End RideHub.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in RideHub (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin RideHub.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+ds.selectorToFacetAndPosition[msg.sig].facetAddress
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: receive (Slither line:2978)
+
+End RideHub.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in RideHub (Slither line:1305)
+
+Begin RideLibUtils.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+ds.selectorToFacetAndPosition[msg.sig].facetAddress
+Checking function: rideUtilsStorage (Slither line:2978)
+rideUtilsStorage returns RideLibUtils.RideUtilsStorage variable called rus (Slither line:2998)
+Checking function: setContractOwner (Slither line:2978)
+Checking function: contractOwner (Slither line:2978)
+contractOwner returns address variable called contractOwner_ (Slither line:2998)
+Checking function: enforceIsContractOwner (Slither line:2978)
+Checking function: rideCut (Slither line:2978)
+Checking function: addFunctions (Slither line:2978)
+Checking function: replaceFunctions (Slither line:2978)
+Checking function: removeFunctions (Slither line:2978)
+Checking function: addFacet (Slither line:2978)
+Checking function: addFunction (Slither line:2978)
+Checking function: removeFunction (Slither line:2978)
+Checking function: initializeRideCut (Slither line:2978)
+Checking function: enforceHasContractCode (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End RideLibUtils.find_getter_in_contract (Slither line:3073)
+
+
+Begin RideLibUtils.find_setter_in_contract (Slither line:3109)
+
+Expression: ds.selectorToFacetAndPosition[msg.sig].facetAddress (Slither line:3112)
+Checking function: rideUtilsStorage() returns(RideLibUtils.RideUtilsStorage) (Slither line:3117)
+Visibility: internal
+Checking function: setContractOwner(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: contractOwner() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: enforceIsContractOwner() returns() (Slither line:3117)
+Visibility: internal
+Checking function: rideCut(IRideCut.FacetCut[],address,bytes) returns() (Slither line:3117)
+Visibility: internal
+Checking function: addFunctions(address,bytes4[]) returns() (Slither line:3117)
+Visibility: internal
+Checking function: replaceFunctions(address,bytes4[]) returns() (Slither line:3117)
+Visibility: internal
+Checking function: removeFunctions(address,bytes4[]) returns() (Slither line:3117)
+Visibility: internal
+Checking function: addFacet(RideLibUtils.RideUtilsStorage,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: addFunction(RideLibUtils.RideUtilsStorage,bytes4,uint96,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: removeFunction(RideLibUtils.RideUtilsStorage,address,bytes4) returns() (Slither line:3117)
+Visibility: internal
+Checking function: initializeRideCut(address,bytes) returns() (Slither line:3117)
+Checking function: enforceHasContractCode(address,string) returns() (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End RideLibUtils.find_setter_in_contract (Slither line:3315)
+
+
+Begin IRideCut.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+ds.selectorToFacetAndPosition[msg.sig].facetAddress
+
+End IRideCut.find_getter_in_contract (Slither line:3073)
+
+
+Begin IRideCut.find_setter_in_contract (Slither line:3109)
+
+Expression: ds.selectorToFacetAndPosition[msg.sig].facetAddress (Slither line:3112)
+Checking function: rideCut(IRideCut.FacetCut[],address,bytes) returns() (Slither line:3117)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End IRideCut.find_setter_in_contract (Slither line:3315)
+
+
+End RideHub.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RideLibUtils.is_proxy (Slither line:1425)
+
+
+End RideLibUtils.is_proxy (Slither line:1428)
+
+
+Begin RideLibUtils.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RideLibUtils 
+
+End RideLibUtils.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRideCut.is_proxy (Slither line:1425)
+
+
+End IRideCut.is_proxy (Slither line:1428)
+
+
+Begin IRideCut.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRideCut 
+
+End IRideCut.is_upgradeable_proxy (Slither line:1407)
+

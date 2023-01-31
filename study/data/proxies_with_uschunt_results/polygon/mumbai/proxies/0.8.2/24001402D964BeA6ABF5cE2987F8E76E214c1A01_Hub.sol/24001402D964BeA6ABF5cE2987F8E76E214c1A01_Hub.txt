@@ -1,0 +1,679 @@
+
+Begin Hub.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Hub.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End Hub.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Hub.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Hub.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Hub.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+facet
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is facet (Slither line:2818)
+dest.value: facet (Slither line:2821)
+Expression: address(bytes20(s1.facets[msg.sig])) (Slither line:2826)
+
+End Hub.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Hub.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Hub.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Hub.find_delegatecall_in_exp_node
+
+Found Expression Node: s1 = position (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Hub.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Hub.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'facet'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Hub.find_delegate_variable_from_name
+Searching for facet (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking s1 (Slither line:1703)
+Checking facet (Slither line:1703)
+facet is a Local Variable in Hub.fallback (Slither line:1707)
+facet appears to be a Diamond facet address (Slither line:1713)
+
+End Hub.find_delegate_variable_by_name
+
+
+End Hub.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Hub.is_proxy (Slither line:1476)
+
+
+Begin Hub.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Hub 
+Local Variable: facet (Slither line:1164)
+Hub is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin Hub.find_setter_in_contract (Slither line:3109)
+
+Expression: address(bytes20(s1.facets[msg.sig])) (Slither line:3112)
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: receive() returns() (Slither line:3117)
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+Expression: s1.selectorCount = uint16(selectorCount) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: s1.facets[selector_scope_1] = (oldFacet_scope_2 & CLEAR_ADDRESS_MASK) | bytes20(_newFacetAddress) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _selectorSlot = (_selectorSlot & ~ (CLEAR_SELECTOR_MASK >> selectorInSlotPosition)) | (bytes32(selector) >> selectorInSlotPosition) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: buffer[0] = 0 (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: DiamondCut(_cut,_init,_calldata) (Slither line:3284)
+DiamondCut
+Expression: buffer[1] = x (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _selectorCount ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: s1.selectorSlots[selectorCount >> 3] = selectorSlot (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: s1.selectorSlots[_selectorCount >> 3] = _selectorSlot (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(_newFacetAddress == address(0),LibCutAndLoupe: Remove facet address must be address(0)) (Slither line:3284)
+require(bool,string)
+Expression: _selectorSlot = 0 (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(address(bytes20(oldFacet_scope_5)) != address(0),LibCutAndLoupe: Can't remove function that doesn't exist) (Slither line:3284)
+require(bool,string)
+Expression: _initializeCut(_init,_calldata) (Slither line:3284)
+_initializeCut
+Expression: require(bool,string)(address(bytes20(oldFacet_scope_5)) != address(this),LibCutAndLoupe: Can't remove immutable function) (Slither line:3284)
+require(bool,string)
+Expression: lastSelector = bytes4(_selectorSlot << (selectorInSlotIndex << 5)) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: delete s1.facets[selector_scope_4] (Slither line:3284)
+Expression type: delete (Slither line:3286)
+Expression: -- i (Slither line:3284)
+Expression type: -- (Slither line:3286)
+Expression: s1.facets[lastSelector] = (oldFacet_scope_5 & CLEAR_ADDRESS_MASK) | bytes20(s1.facets[lastSelector]) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: buffer[i] = _HEX_SYMBOLS[value & 0xf] (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _requireHasContractCode(_newFacetAddress,LibCutAndLoupe: Replace facet has no code) (Slither line:3284)
+_requireHasContractCode
+Expression: value >>= 4 (Slither line:3284)
+Expression type: >>= (Slither line:3286)
+Expression: require(bool,string)(value == 0,Strings: hex length insufficient) (Slither line:3284)
+require(bool,string)
+Expression: oldSelectorsSlotCount = oldSelectorCount >> 3 (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorIndex_scope_3 ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: oldSelectorInSlotPosition = (oldSelectorCount & 7) << 5 (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _selectorCount = selectorSlotCount * 8 + selectorInSlotIndex (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorSlotCount -- (Slither line:3284)
+Expression type: -- (Slither line:3286)
+Expression: selectorIndex_scope_0 ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: _selectorSlot = s1.selectorSlots[selectorSlotCount] (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(_calldata.length == 0,LibCutAndLoupe: _init is address(0) but_calldata is not empty) (Slither line:3284)
+require(bool,string)
+Expression: oldSelectorSlot = (oldSelectorSlot & ~ (CLEAR_SELECTOR_MASK >> oldSelectorInSlotPosition)) | (bytes32(lastSelector) >> oldSelectorInSlotPosition) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorInSlotIndex = 7 (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: s1.selectorSlots[oldSelectorsSlotCount] = oldSelectorSlot (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(_calldata.length > 0,LibCutAndLoupe: _calldata is empty but _init is not address(0)) (Slither line:3284)
+require(bool,string)
+Expression: selectorInSlotIndex -- (Slither line:3284)
+Expression type: -- (Slither line:3286)
+Expression: _selectorSlot = (_selectorSlot & ~ (CLEAR_SELECTOR_MASK >> oldSelectorInSlotPosition)) | (bytes32(lastSelector) >> oldSelectorInSlotPosition) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(oldFacetAddress != address(this),LibCutAndLoupe: Can't replace immutable function) (Slither line:3284)
+require(bool,string)
+Expression: require(bool,string)(oldFacetAddress != _newFacetAddress,LibCutAndLoupe: Can't replace function with same function) (Slither line:3284)
+require(bool,string)
+Expression: _requireHasContractCode(_init,LibCutAndLoupe: _init address has no code) (Slither line:3284)
+_requireHasContractCode
+Expression: require(bool,string)(oldFacetAddress != address(0),LibCutAndLoupe: Can't replace function that doesn't exist) (Slither line:3284)
+require(bool,string)
+Expression: delete s1.selectorSlots[selectorSlotCount] (Slither line:3284)
+Expression type: delete (Slither line:3286)
+Expression: (success,error) = _init.delegatecall(_calldata) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _selectorSlot = 0 (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _storageAccessControl().roles[_role].members[_account] = true (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: LibAccessControl._requireOnlyRole(LibAccessControl.MAINTAINER_ROLE) (Slither line:3284)
+LibAccessControl._requireOnlyRole
+Expression: RoleGranted(_role,_account,msg.sender) (Slither line:3284)
+RoleGranted
+Expression: functionSelectors[0] = Cut.cut.selector (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _checkRole(_role,msg.sender) (Slither line:3284)
+_checkRole
+Expression: cut[0] = Cut.FacetCut(_cutFacet,Cut.FacetCutAction.Add,functionSelectors) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: revert(string)(LibCutAndLoupe: Incorrect FacetCutAction) (Slither line:3284)
+revert(string)
+Expression: LibCutAndLoupe.cut(cut,address(0),) (Slither line:3284)
+LibCutAndLoupe.cut
+Expression: _grantRole(_role,_account) (Slither line:3284)
+_grantRole
+Expression: require(bool,string)(_selectors.length > 0,LibCutAndLoupe: No selectors in facet to cut) (Slither line:3284)
+require(bool,string)
+Expression: revert(string)(string(error)) (Slither line:3284)
+revert(string)
+Expression: revert(string)(LibCutAndLoupe: _init function reverted) (Slither line:3284)
+revert(string)
+Expression: revert(string)(string(abi.encodePacked(AccessControl: account ,Strings.toHexString(uint160(_account),20), is missing role ,Strings.toHexString(uint256(_role),32)))) (Slither line:3284)
+revert(string)
+Expression: _requireHasContractCode(_newFacetAddress,LibCutAndLoupe: Add facet has no code) (Slither line:3284)
+_requireHasContractCode
+Expression: s = position (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: selectorSlot = s1.selectorSlots[selectorCount >> 3] (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: _checkRole(_role) (Slither line:3284)
+_checkRole
+Expression: selectorIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: facetIndex ++ (Slither line:3284)
+Expression type: ++ (Slither line:3286)
+Expression: (selectorCount,selectorSlot) = _addReplaceRemoveFacetSelectors(selectorCount,selectorSlot,_cut[facetIndex].facetAddress,_cut[facetIndex].action,_cut[facetIndex].functionSelectors) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: require(bool,string)(contractSize > 0,_errorMessage) (Slither line:3284)
+require(bool,string)
+Expression: LibAccessControl._setupRole(LibAccessControl.DEFAULT_ADMIN_ROLE,_multisig) (Slither line:3284)
+LibAccessControl._setupRole
+Expression: require(bool,string)(address(bytes20(oldFacet)) == address(0),LibCutAndLoupe: Can't add function that already exists) (Slither line:3284)
+require(bool,string)
+Expression: contractSize = extcodesize(uint256)(_contract) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: LibAccessControl._setupRole(LibAccessControl.MAINTAINER_ROLE,_multisig) (Slither line:3284)
+LibAccessControl._setupRole
+Expression: s1.facets[selector] = bytes20(_newFacetAddress) | bytes32(_selectorCount) (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: s = position (Slither line:3284)
+Expression type: = (Slither line:3286)
+Expression: LibAccessControl._setupRole(LibAccessControl.STRATEGIST_ROLE,_multisig) (Slither line:3284)
+LibAccessControl._setupRole
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End Hub.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Hub (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Hub.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+address(bytes20(s1.facets[msg.sig]))
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: receive (Slither line:2978)
+
+End Hub.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Hub (Slither line:1305)
+
+Begin LibAccessControl.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+address(bytes20(s1.facets[msg.sig]))
+Checking function: _storageAccessControl (Slither line:2978)
+_storageAccessControl returns LibAccessControl.StorageAccessControl variable called s (Slither line:2998)
+Checking function: _requireOnlyRole (Slither line:2978)
+Checking function: _hasRole (Slither line:2978)
+_hasRole returns bool variable  (Slither line:2998)
+RETURN node expression: _storageAccessControl().roles[_role].members[_account] (Slither line:3018)
+Checking function: _checkRole (Slither line:2978)
+Checking function: _checkRole (Slither line:2978)
+Checking function: _getRoleAdmin (Slither line:2978)
+_getRoleAdmin returns bytes32 variable  (Slither line:2998)
+RETURN node expression: _storageAccessControl().roles[_role].adminRole (Slither line:3018)
+Checking function: _setRoleAdmin (Slither line:2978)
+Checking function: _grantRole (Slither line:2978)
+Checking function: _revokeRole (Slither line:2978)
+Checking function: _setupRole (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End LibAccessControl.find_getter_in_contract (Slither line:3073)
+
+
+Begin LibAccessControl.find_setter_in_contract (Slither line:3109)
+
+Expression: address(bytes20(s1.facets[msg.sig])) (Slither line:3112)
+Checking function: _storageAccessControl() returns(LibAccessControl.StorageAccessControl) (Slither line:3117)
+Visibility: internal
+Checking function: _requireOnlyRole(bytes32) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _hasRole(bytes32,address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: _checkRole(bytes32) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _checkRole(bytes32,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _getRoleAdmin(bytes32) returns(bytes32) (Slither line:3117)
+Visibility: internal
+Checking function: _setRoleAdmin(bytes32,bytes32) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _grantRole(bytes32,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _revokeRole(bytes32,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _setupRole(bytes32,address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End LibAccessControl.find_setter_in_contract (Slither line:3315)
+
+
+Begin Strings.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+address(bytes20(s1.facets[msg.sig]))
+Checking function: toString (Slither line:2978)
+toString returns string variable  (Slither line:2998)
+RETURN node expression: string(buffer) (Slither line:3018)
+RETURN node expression: 0 (Slither line:3018)
+Checking function: toHexString (Slither line:2978)
+toHexString returns string variable  (Slither line:2998)
+RETURN node expression: 0x00 (Slither line:3018)
+RETURN node expression: toHexString(value,length) (Slither line:3018)
+Checking function: toHexString (Slither line:2978)
+toHexString returns string variable  (Slither line:2998)
+RETURN node expression: string(buffer) (Slither line:3018)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End Strings.find_getter_in_contract (Slither line:3073)
+
+
+Begin Strings.find_setter_in_contract (Slither line:3109)
+
+Expression: address(bytes20(s1.facets[msg.sig])) (Slither line:3112)
+Checking function: toString(uint256) returns(string) (Slither line:3117)
+Visibility: internal
+Checking function: toHexString(uint256) returns(string) (Slither line:3117)
+Visibility: internal
+Checking function: toHexString(uint256,uint256) returns(string) (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End Strings.find_setter_in_contract (Slither line:3315)
+
+
+Begin LibCutAndLoupe.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+address(bytes20(s1.facets[msg.sig]))
+Checking function: _storageCutAndLoupe (Slither line:2978)
+_storageCutAndLoupe returns LibCutAndLoupe.StorageCutAndLoupe variable called s (Slither line:2998)
+Checking function: cut (Slither line:2978)
+Checking function: _addReplaceRemoveFacetSelectors (Slither line:2978)
+_addReplaceRemoveFacetSelectors returns uint256 variable  (Slither line:2998)
+_addReplaceRemoveFacetSelectors returns bytes32 variable  (Slither line:2998)
+RETURN node expression: (_selectorCount,_selectorSlot) (Slither line:3018)
+Checking function: _initializeCut (Slither line:2978)
+Checking function: _requireHasContractCode (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End LibCutAndLoupe.find_getter_in_contract (Slither line:3073)
+
+
+Begin LibCutAndLoupe.find_setter_in_contract (Slither line:3109)
+
+Expression: address(bytes20(s1.facets[msg.sig])) (Slither line:3112)
+Checking function: _storageCutAndLoupe() returns(LibCutAndLoupe.StorageCutAndLoupe) (Slither line:3117)
+Visibility: internal
+Checking function: cut(Cut.FacetCut[],address,bytes) returns() (Slither line:3117)
+Visibility: internal
+Checking function: _addReplaceRemoveFacetSelectors(uint256,bytes32,address,Cut.FacetCutAction,bytes4[]) returns(uint256,bytes32) (Slither line:3117)
+Visibility: internal
+Checking function: _initializeCut(address,bytes) returns() (Slither line:3117)
+Checking function: _requireHasContractCode(address,string) returns() (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End LibCutAndLoupe.find_setter_in_contract (Slither line:3315)
+
+
+Begin Cut.find_getter_in_contract (Slither line:2964)
+
+facet is a Variable object
+address(bytes20(s1.facets[msg.sig]))
+Checking function: cut (Slither line:2978)
+
+End Cut.find_getter_in_contract (Slither line:3073)
+
+
+Begin Cut.find_setter_in_contract (Slither line:3109)
+
+Expression: address(bytes20(s1.facets[msg.sig])) (Slither line:3112)
+Checking function: cut(Cut.FacetCut[],address,bytes) returns() (Slither line:3117)
+Visibility: external
+s1.facets[selector_scope_1] = (oldFacet_scope_2 & CLEAR_ADDRESS_MASK) | bytes20(_newFacetAddress)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_selectorSlot = (_selectorSlot & ~ (CLEAR_SELECTOR_MASK >> selectorInSlotPosition)) | (bytes32(selector) >> selectorInSlotPosition)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+buffer[0] = 0
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+buffer[1] = x
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_selectorCount ++
+s1.selectorSlots[_selectorCount >> 3] = _selectorSlot
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(_newFacetAddress == address(0),LibCutAndLoupe: Remove facet address must be address(0))
+_selectorSlot = 0
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(address(bytes20(oldFacet_scope_5)) != address(0),LibCutAndLoupe: Can't remove function that doesn't exist)
+require(bool,string)(address(bytes20(oldFacet_scope_5)) != address(this),LibCutAndLoupe: Can't remove immutable function)
+lastSelector = bytes4(_selectorSlot << (selectorInSlotIndex << 5))
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+delete s1.facets[selector_scope_4]
+-- i
+s1.facets[lastSelector] = (oldFacet_scope_5 & CLEAR_ADDRESS_MASK) | bytes20(s1.facets[lastSelector])
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+buffer[i] = _HEX_SYMBOLS[value & 0xf]
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_requireHasContractCode(_newFacetAddress,LibCutAndLoupe: Replace facet has no code)
+value >>= 4
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(value == 0,Strings: hex length insufficient)
+LibAccessControl._requireOnlyRole(LibAccessControl.MAINTAINER_ROLE)
+string(buffer)
+oldSelectorsSlotCount = oldSelectorCount >> 3
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+selectorIndex_scope_3 ++
+oldSelectorInSlotPosition = (oldSelectorCount & 7) << 5
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_selectorCount = selectorSlotCount * 8 + selectorInSlotIndex
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+selectorSlotCount --
+selectorIndex_scope_0 ++
+_selectorSlot = s1.selectorSlots[selectorSlotCount]
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(_calldata.length == 0,LibCutAndLoupe: _init is address(0) but_calldata is not empty)
+oldSelectorSlot = (oldSelectorSlot & ~ (CLEAR_SELECTOR_MASK >> oldSelectorInSlotPosition)) | (bytes32(lastSelector) >> oldSelectorInSlotPosition)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+selectorInSlotIndex = 7
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+s1.selectorSlots[oldSelectorsSlotCount] = oldSelectorSlot
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(_calldata.length > 0,LibCutAndLoupe: _calldata is empty but _init is not address(0))
+selectorInSlotIndex --
+selectorSlot = ds.selectorSlots[selectorCount >> 3]
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_selectorSlot = (_selectorSlot & ~ (CLEAR_SELECTOR_MASK >> oldSelectorInSlotPosition)) | (bytes32(lastSelector) >> oldSelectorInSlotPosition)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(oldFacetAddress != address(this),LibCutAndLoupe: Can't replace immutable function)
+require(bool,string)(oldFacetAddress != _newFacetAddress,LibCutAndLoupe: Can't replace function with same function)
+_requireHasContractCode(_init,LibCutAndLoupe: _init address has no code)
+require(bool,string)(oldFacetAddress != address(0),LibCutAndLoupe: Can't replace function that doesn't exist)
+delete s1.selectorSlots[selectorSlotCount]
+(success,error) = _init.delegatecall(_calldata)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_selectorSlot = 0
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+_checkRole(_role,msg.sender)
+revert(string)(LibCutAndLoupe: Incorrect FacetCutAction)
+facetIndex ++
+(selectorCount,selectorSlot) = LibCutAndLoupe._addReplaceRemoveFacetSelectors(selectorCount,selectorSlot,_cut[facetIndex].facetAddress,_cut[facetIndex].action,_cut[facetIndex].functionSelectors)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(_selectors.length > 0,LibCutAndLoupe: No selectors in facet to cut)
+revert(string)(string(error))
+ds.selectorCount = uint16(selectorCount)
+is an Assignment Operation (Slither line:3206)
+Left side is a MemberAccess (Slither line:3209)
+revert(string)(LibCutAndLoupe: _init function reverted)
+DiamondCut(_cut,_init,_calldata)
+revert(string)(string(abi.encodePacked(AccessControl: account ,Strings.toHexString(uint160(_account),20), is missing role ,Strings.toHexString(uint256(_role),32))))
+(_selectorCount,_selectorSlot)
+_requireHasContractCode(_newFacetAddress,LibCutAndLoupe: Add facet has no code)
+ds.selectorSlots[selectorCount >> 3] = selectorSlot
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+s = position
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+LibCutAndLoupe._initializeCut(_init,_calldata)
+_checkRole(_role)
+selectorIndex ++
+require(bool,string)(contractSize > 0,_errorMessage)
+_storageAccessControl().roles[_role].members[_account]
+contractSize = extcodesize(uint256)(_contract)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+require(bool,string)(address(bytes20(oldFacet)) == address(0),LibCutAndLoupe: Can't add function that already exists)
+s = position
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+s1.facets[selector] = bytes20(_newFacetAddress) | bytes32(_selectorCount)
+is an Assignment Operation (Slither line:3206)
+address(bytes20(s1.facets[msg.sig]))
+
+Begin DiamondCut corner case handling (Slither line:3277)
+
+
+End DiamondCut corner case handling (Slither line:3313)
+
+
+End Cut.find_setter_in_contract (Slither line:3315)
+
+
+End Hub.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibAccessControl.is_proxy (Slither line:1425)
+
+
+End LibAccessControl.is_proxy (Slither line:1428)
+
+
+Begin LibAccessControl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibAccessControl 
+
+End LibAccessControl.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Strings.is_proxy (Slither line:1425)
+
+
+End Strings.is_proxy (Slither line:1428)
+
+
+Begin Strings.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Strings 
+
+End Strings.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibCutAndLoupe.is_proxy (Slither line:1425)
+
+
+End LibCutAndLoupe.is_proxy (Slither line:1428)
+
+
+Begin LibCutAndLoupe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibCutAndLoupe 
+
+End LibCutAndLoupe.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Cut.is_proxy (Slither line:1425)
+
+
+End Cut.is_proxy (Slither line:1428)
+
+
+Begin Cut.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Cut 
+
+End Cut.is_upgradeable_proxy (Slither line:1407)
+

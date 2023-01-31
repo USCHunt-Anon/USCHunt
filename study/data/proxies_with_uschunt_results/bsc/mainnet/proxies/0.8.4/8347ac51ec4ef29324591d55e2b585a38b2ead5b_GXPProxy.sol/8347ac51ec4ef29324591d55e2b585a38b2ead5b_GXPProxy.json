@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "GXPProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/8347ac51ec4ef29324591d55e2b585a38b2ead5b_GXPProxy.sol/8347ac51ec4ef29324591d55e2b585a38b2ead5b_GXPProxy.sol#387-426)",
+        "elements": [],
+        "description": "GXPProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/8347ac51ec4ef29324591d55e2b585a38b2ead5b_GXPProxy.sol/8347ac51ec4ef29324591d55e2b585a38b2ead5b_GXPProxy.sol#387-426) is an upgradeable proxy.\nlogic_contract was found in a different contract.\nlogic_contract is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "27b1b32f0eba84cbac1a3ebe0bbca9263762c587f1e203f0da98cc0103c5708a",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "GXPStorage.logic_contract",
+          "impl_address_setter": "GXPProxy.setLogicContract(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "GXPStorage (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/8347ac51ec4ef29324591d55e2b585a38b2ead5b_GXPProxy.sol/8347ac51ec4ef29324591d55e2b585a38b2ead5b_GXPProxy.sol#362-379)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "GXPProxy.setLogicContract(address)": {
+                "check": "require(bool,string)(_commander == _msgSender(),Ownable: caller is not the commander)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "commander()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "transferCommand(address)",
+              "renounceCommand()",
+              "setLogicContract(address)",
+              "rescueFunds20(address,uint256)",
+              "rescueFunds721(address,uint256)",
+              "rescueFunds1155(address,uint256,uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

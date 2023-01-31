@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Protocol (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.5.17/68f118ca875605ecbdbfe3ab2850dbed448283c0_Protocol.sol/68f118ca875605ecbdbfe3ab2850dbed448283c0_Protocol.sol#795-851)",
+        "elements": [],
+        "description": "Protocol (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.5.17/68f118ca875605ecbdbfe3ab2850dbed448283c0_Protocol.sol/68f118ca875605ecbdbfe3ab2850dbed448283c0_Protocol.sol#795-851) is an upgradeable proxy.\nlogicTargets was found in a different contract.\nlogicTargets is a mapping of type mapping(bytes4 => address)\nlogicTargets maps function signatures to addresses, suggesting multiple implementations.\nNo setter functions found to search for compatibility checks.\nCan toggle delegatecall on/off: condition: gasleft()() <= 2300\n",
+        "id": "6c4b0c8b2cc9ab66c24eb9b0b97cb6c8f55f127afd25608b003fa5137e3acfe4",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "State.logicTargets",
+          "impl_address_setter": "Protocol.setTargets(string[],address[])",
+          "impl_address_getter": "Protocol.getTarget(string)",
+          "impl_address_location": "State (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.5.17/68f118ca875605ecbdbfe3ab2850dbed448283c0_Protocol.sol/68f118ca875605ecbdbfe3ab2850dbed448283c0_Protocol.sol#710-786)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes4 => address)",
+          "impl_mapping_from_msg_sig": true,
+          "eip_2535": false,
+          "eip_1538": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!gasleft()() <= 2300",
+          "toggle_alternative_logic": "None",
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "isOwner()",
+              "transferOwnership(address)",
+              "replaceContract(address)",
+              "setTargets(string[],address[])",
+              "getTarget(string)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

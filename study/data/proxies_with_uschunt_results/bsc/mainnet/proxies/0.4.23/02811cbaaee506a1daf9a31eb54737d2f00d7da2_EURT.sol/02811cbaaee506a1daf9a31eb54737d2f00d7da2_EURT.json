@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "EURT (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.4.23/02811cbaaee506a1daf9a31eb54737d2f00d7da2_EURT.sol/02811cbaaee506a1daf9a31eb54737d2f00d7da2_EURT.sol#89-189)",
+        "elements": [],
+        "description": "EURT (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.4.23/02811cbaaee506a1daf9a31eb54737d2f00d7da2_EURT.sol/02811cbaaee506a1daf9a31eb54737d2f00d7da2_EURT.sol#89-189) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "a38b0a40441363ea2da914310a0363c751653d1932d04db4b1365c68f83e8f04",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "EURT.implementation",
+          "impl_address_setter": "EURT.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "EURT (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.4.23/02811cbaaee506a1daf9a31eb54737d2f00d7da2_EURT.sol/02811cbaaee506a1daf9a31eb54737d2f00d7da2_EURT.sol#89-189)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "EURT.upgradeTo(address)": {
+                "check": "require(bool)(implementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)"
+            ],
+            "other": [
+              "getSupply()",
+              "upgradeTo(address)",
+              "getInvesments(address)",
+              "isUserExists(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

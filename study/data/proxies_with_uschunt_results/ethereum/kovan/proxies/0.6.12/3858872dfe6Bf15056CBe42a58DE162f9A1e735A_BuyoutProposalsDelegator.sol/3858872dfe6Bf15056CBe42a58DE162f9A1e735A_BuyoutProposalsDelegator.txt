@@ -1,0 +1,333 @@
+
+Begin DelegationStorage.is_proxy (Slither line:1425)
+
+
+End DelegationStorage.is_proxy (Slither line:1428)
+
+
+Begin DelegationStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegationStorage 
+
+End DelegationStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBuyoutProposalsStorge.is_proxy (Slither line:1425)
+
+
+End IBuyoutProposalsStorge.is_proxy (Slither line:1428)
+
+
+Begin IBuyoutProposalsStorge.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBuyoutProposalsStorge 
+
+End IBuyoutProposalsStorge.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBuyoutProposals.is_proxy (Slither line:1425)
+
+
+End IBuyoutProposals.is_proxy (Slither line:1428)
+
+
+Begin IBuyoutProposals.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBuyoutProposals 
+
+End IBuyoutProposals.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BuyoutProposalsDelegator.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BuyoutProposalsDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End BuyoutProposalsDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin BuyoutProposalsDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End BuyoutProposalsDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End BuyoutProposalsDelegator.is_proxy (Slither line:1476)
+
+
+Begin BuyoutProposalsDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BuyoutProposalsDelegator 
+BuyoutProposalsDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in DelegationStorage (Slither line:1204)
+
+
+Begin DelegationStorage.find_setter_in_contract (Slither line:3109)
+
+
+End DelegationStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in DelegationStorage 
+Looking in BuyoutProposalsDelegator (Slither line:1213)
+
+Begin BuyoutProposalsDelegator.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address,address) returns() (Slither line:3117)
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End BuyoutProposalsDelegator.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _setImplementation in contract: BuyoutProposalsDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DelegationStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+
+End DelegationStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin BuyoutProposalsDelegator.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: _setGovernance (Slither line:2978)
+Checking function: createProposal (Slither line:2978)
+createProposal returns uint256 variable called proposalId (Slither line:2998)
+createProposal returns uint256 variable called buyoutTimes (Slither line:2998)
+RETURN node expression: abi.decode(data,(uint256,uint256)) (Slither line:3018)
+Checking function: vote (Slither line:2978)
+vote returns uint256 variable called proposalId (Slither line:2998)
+vote returns uint256 variable called balance (Slither line:2998)
+RETURN node expression: abi.decode(data,(uint256,uint256)) (Slither line:3018)
+Checking function: voteResultConfirm (Slither line:2978)
+voteResultConfirm returns uint256 variable called proposalId (Slither line:2998)
+voteResultConfirm returns bool variable called result (Slither line:2998)
+voteResultConfirm returns address variable called submitter (Slither line:2998)
+voteResultConfirm returns uint256 variable called shardAmount (Slither line:2998)
+voteResultConfirm returns uint256 variable called wantTokenAmount (Slither line:2998)
+RETURN node expression: abi.decode(data,(uint256,bool,address,uint256,uint256)) (Slither line:3018)
+Checking function: exchangeForWantToken (Slither line:2978)
+exchangeForWantToken returns uint256 variable called wantTokenAmount (Slither line:2998)
+RETURN node expression: abi.decode(data,(uint256)) (Slither line:3018)
+Checking function: redeemForBuyoutFailed (Slither line:2978)
+redeemForBuyoutFailed returns uint256 variable called _shardPoolId (Slither line:2998)
+redeemForBuyoutFailed returns uint256 variable called shardTokenAmount (Slither line:2998)
+redeemForBuyoutFailed returns uint256 variable called wantTokenAmount (Slither line:2998)
+RETURN node expression: abi.decode(data,(uint256,uint256,uint256)) (Slither line:3018)
+Checking function: setBuyoutTimes (Slither line:2978)
+Checking function: setVoteLenth (Slither line:2978)
+Checking function: setPassNeeded (Slither line:2978)
+Checking function: setBuyoutProportion (Slither line:2978)
+Checking function: setMarket (Slither line:2978)
+Checking function: setRegulator (Slither line:2978)
+Checking function: getProposalsForExactPool (Slither line:2978)
+getProposalsForExactPool returns uint256[] variable called _proposalsHistory (Slither line:2998)
+RETURN node expression: abi.decode(data,(uint256[])) (Slither line:3018)
+Checking function: delegateTo (Slither line:2978)
+delegateTo returns bytes variable  (Slither line:2998)
+RETURN node expression: returnData (Slither line:3018)
+Checking function: delegateToImplementation (Slither line:2978)
+delegateToImplementation returns bytes variable  (Slither line:2998)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3018)
+Checking function: delegateToViewImplementation (Slither line:2978)
+delegateToViewImplementation returns bytes variable  (Slither line:2998)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End BuyoutProposalsDelegator.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in BuyoutProposalsDelegator (Slither line:1305)
+or in DelegationStorage (Slither line:1319)
+
+Begin IBuyoutProposalsStorge.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: slitherConstructorVariables (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End IBuyoutProposalsStorge.find_getter_in_contract (Slither line:3073)
+
+
+End BuyoutProposalsDelegator.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking external function createProposal
+Checking external function vote
+Checking external function voteResultConfirm
+Checking external function exchangeForWantToken
+Checking external function redeemForBuyoutFailed
+Checking external function setBuyoutTimes
+Checking external function setVoteLenth
+Checking external function setPassNeeded
+Checking external function setBuyoutProportion
+Checking external function setMarket
+Checking external function setRegulator
+Checking external function getProposalsForExactPool
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+Checking public function _setGovernance
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == governance,UNAUTHORIZED)
+Checking external function createProposal
+Checking external function vote
+Checking external function voteResultConfirm
+Checking external function exchangeForWantToken
+Checking external function redeemForBuyoutFailed
+Checking external function setBuyoutTimes
+Checking external function setVoteLenth
+Checking external function setPassNeeded
+Checking external function setBuyoutProportion
+Checking external function setMarket
+Checking external function setRegulator
+Checking external function getProposalsForExactPool
+Checking public function delegateToImplementation
+Checking public function delegateToViewImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setMarket (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.vote (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.exchangeForWantToken (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setRegulator (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setMarket (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.constructor (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.redeemForBuyoutFailed (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.voteResultConfirm (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.slitherConstructorVariables (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.createProposal (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.getProposalsForExactPool (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:907)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:904)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setBuyoutTimes (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.redeemForBuyoutFailed (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setRegulator (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.delegateTo (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setVoteLenth (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator._setGovernance (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setVoteLenth (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.delegateToImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.createProposal (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.getProposalsForExactPool (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.exchangeForWantToken (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setPassNeeded (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setPassNeeded (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.vote (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.delegateToViewImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setBuyoutTimes (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setBuyoutProportion (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.voteResultConfirm (proxy_features line:893)
+functions_writing_to_variable: checking function BuyoutProposalsDelegator.setBuyoutProportion (proxy_features line:893)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: checking public function constructor
+require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+has_compatibility_checks: condition msg.sender == governance
+has_compatibility_checks: IF node exp = success == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if success == 0 then revert(uint256,uint256)(returnData + 0x20,returndatasize()()) else returnData
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+has_compatibility_checks: condition msg.sender == governance
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: msg.value > 0
+can_toggle_delegatecall_on_off: successors:
+ NodeType: INLINE ASM  expression: {'AST': {'nodeType': 'YulBlock', 'src': '11916:359:0', 'statements': [{'nodeType': 'YulVariableDeclaration', 'src': '11931:31:0', 'value': {'arguments': [{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '11957:4:0', 'type': '', 'value': '0x40'}], 'functionName': {'name': 'mload', 'nodeType': 'YulIdentifier', 'src': '11951:5:0'}, 'nodeType': 'YulFunctionCall', 'src': '11951:11:0'}, 'variables': [{'name': 'free_mem_ptr', 'nodeType': 'YulTypedName', 'src': '11935:12:0', 'type': ''}]}, {'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '11991:12:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '12005:1:0', 'type': '', 'value': '0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '12008:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '12008:16:0'}], 'functionName': {'name': 'returndatacopy', 'nodeType': 'YulIdentifier', 'src': '11976:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '11976:49:0'}, 'nodeType': 'YulExpressionStatement', 'src': '11976:49:0'}, {'cases': [{'body': {'nodeType': 'YulBlock', 'src': '12078:80:0', 'statements': [{'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '12108:12:0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '12122:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '12122:16:0'}], 'functionName': {'name': 'revert', 'nodeType': 'YulIdentifier', 'src': '12101:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '12101:38:0'}, 'nodeType': 'YulExpressionStatement', 'src': '12101:38:0'}]}, 'nodeType': 'YulCase', 'src': '12071:87:0', 'value': {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '12076:1:0', 'type': '', 'value': '0'}}, {'body': {'nodeType': 'YulBlock', 'src': '12184:80:0', 'statements': [{'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '12214:12:0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '12228:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '12228:16:0'}], 'functionName': {'name': 'return', 'nodeType': 'YulIdentifier', 'src': '12207:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '12207:38:0'}, 'nodeType': 'YulExpressionStatement', 'src': '12207:38:0'}]}, 'nodeType': 'YulCase', 'src': '12176:88:0', 'value': 'default'}], 'expression': {'name': 'success', 'nodeType': 'YulIdentifier', 'src': '12046:7:0'}, 'nodeType': 'YulSwitch', 'src': '12039:225:0'}]}, 'evmVersion': 'istanbul', 'externalReferences': [{'declaration': 691, 'isOffset': False, 'isSlot': False, 'src': '12046:7:0', 'valueSize': 1}], 'id': 698, 'nodeType': 'InlineAssembly', 'src': '11907:368:0'}
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off: delegatecall_condition = False
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: EXPRESSION  expression: returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+ NodeType: EXPRESSION  expression: free_mem_ptr_fallback_asm_0 = mload(uint256)(0x40)
+ NodeType: RETURN  expression: None
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: EXPRESSION  expression: revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+ NodeType: IF  expression: switch_expr_12039_225_0_fallback_asm_0 == 0
+ NodeType: EXPRESSION  expression: switch_expr_12039_225_0_fallback_asm_0 = success
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+ NodeType: NEW VARIABLE  expression: None
+Found external function: createProposal
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation

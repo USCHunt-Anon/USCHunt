@@ -1,0 +1,440 @@
+
+Begin EternalStorage.is_proxy (Slither line:1425)
+
+
+End EternalStorage.is_proxy (Slither line:1428)
+
+
+Begin EternalStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EternalStorage 
+
+End EternalStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeabilityStorage.is_proxy (Slither line:1425)
+
+
+End UpgradeabilityStorage.is_proxy (Slither line:1428)
+
+
+Begin UpgradeabilityStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityStorage 
+
+End UpgradeabilityStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenImplAddress.is_proxy (Slither line:1425)
+
+
+End TokenImplAddress.is_proxy (Slither line:1428)
+
+
+Begin TokenImplAddress.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenImplAddress 
+
+End TokenImplAddress.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize) (Slither line:1576)
+    let result := delegatecall(gas, _impl, ptr, calldatasize, 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implAddress (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: getImplementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+getImplementation() (Slither line:2003)
+called = getImplementation (Slither line:2010)
+Return node of function Proxy.getImplementation(): RETURN implAddress.implementation() (Slither line:2041)
+Encountered call expression at RETURN node: implAddress.implementation() (Slither line:2053)
+Encountered member access expression: implAddress.implementation (Slither line:2057)
+
+Begin Proxy.find_delegate_from_member_access
+
+Expression: implAddress.implementation (Slither line:2358)
+implAddress (Slither line:2371)
+implementation is a member of the contract type: TokenImplAddress (Slither line:2416)
+Looking for implementation in TokenImplAddress (Slither line:2523)
+Found the function called implementation (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: _implementation (Slither line:2544)
+Returns an Identifier (Slither line:2547)
+Found the return value from implementation
+It's a state variable in TokenImplAddress called _implementation (Slither line:2608)
+
+End Proxy.find_delegate_from_member_access (Slither line:2645)
+
+
+End Proxy.find_delegate_from_call_exp (Slither line:2104)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityStorage (Slither line:1204)
+
+
+Begin UpgradeabilityStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: version() returns(string) (Slither line:3127)
+Visibility: public
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End UpgradeabilityStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityStorage 
+Looking in Proxy (Slither line:1213)
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+implAddress.implementation()
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy (Slither line:1220)
+Looking for setter in TokenImplAddress (Slither line:1228)
+
+
+Begin TokenImplAddress.find_setter_in_contract (Slither line:3119)
+
+Checking function: version() returns(string) (Slither line:3127)
+Visibility: public
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End TokenImplAddress.find_setter_in_contract (Slither line:3345)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+implAddress.implementation()
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: implementation in contract: TokenImplAddress (Slither line:1285)
+
+Begin Proxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: _implementation (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+
+End Proxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Token.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End Token.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Token.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize) (Slither line:1576)
+    let result := delegatecall(gas, _impl, ptr, calldatasize, 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Token.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintStorage (Slither line:1689)
+Checking stringStorage (Slither line:1689)
+Checking addressStorage (Slither line:1689)
+Checking bytesStorage (Slither line:1689)
+Checking boolStorage (Slither line:1689)
+Checking intStorage (Slither line:1689)
+Checking implAddress (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Token.fallback (Slither line:1707)
+Expression: getImplementation() (Slither line:1719)
+
+Begin Token.find_delegate_from_call_exp
+
+getImplementation() (Slither line:2003)
+called = getImplementation (Slither line:2010)
+Return node of function Proxy.getImplementation(): RETURN implAddress.implementation() (Slither line:2041)
+Encountered call expression at RETURN node: implAddress.implementation() (Slither line:2053)
+Encountered member access expression: implAddress.implementation (Slither line:2057)
+
+Begin Token.find_delegate_from_member_access
+
+Expression: implAddress.implementation (Slither line:2358)
+implAddress (Slither line:2371)
+implementation is a member of the contract type: TokenImplAddress (Slither line:2416)
+Looking for implementation in TokenImplAddress (Slither line:2523)
+Found the function called implementation (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: _implementation (Slither line:2544)
+Returns an Identifier (Slither line:2547)
+Found the return value from implementation
+It's a state variable in TokenImplAddress called _implementation (Slither line:2608)
+
+End Token.find_delegate_from_member_access (Slither line:2645)
+
+
+End Token.find_delegate_from_call_exp (Slither line:2104)
+
+Call Expression
+End Token.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Token.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Token.is_proxy (Slither line:1476)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+Token is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityStorage (Slither line:1204)
+
+
+Begin UpgradeabilityStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: version() returns(string) (Slither line:3127)
+Visibility: public
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End UpgradeabilityStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityStorage 
+Looking in Token (Slither line:1213)
+
+Begin Token.find_setter_in_contract (Slither line:3119)
+
+Checking function: Token(address) returns() (Slither line:3127)
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+implAddress.implementation()
+Checking function: fallback() returns() (Slither line:3127)
+
+End Token.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Token (Slither line:1220)
+Looking for setter in TokenImplAddress (Slither line:1228)
+
+
+Begin TokenImplAddress.find_setter_in_contract (Slither line:3119)
+
+Checking function: version() returns(string) (Slither line:3127)
+Visibility: public
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End TokenImplAddress.find_setter_in_contract (Slither line:3345)
+
+
+Begin Token.find_setter_in_contract (Slither line:3119)
+
+Checking function: Token(address) returns() (Slither line:3127)
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+implAddress.implementation()
+Checking function: fallback() returns() (Slither line:3127)
+
+End Token.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Token (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: implementation in contract: TokenImplAddress (Slither line:1285)
+
+Begin Token.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: _implementation (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+
+End Token.getter_return_is_non_constant (Slither line:2942)
+
+
+End Token.is_upgradeable_proxy (Slither line:1293)
+

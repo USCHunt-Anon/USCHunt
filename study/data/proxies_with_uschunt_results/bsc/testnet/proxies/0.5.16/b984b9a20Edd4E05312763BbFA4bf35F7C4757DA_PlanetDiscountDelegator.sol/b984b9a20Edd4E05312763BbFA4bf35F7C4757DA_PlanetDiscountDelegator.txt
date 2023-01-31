@@ -1,0 +1,185 @@
+
+Begin PlanetStorage.is_proxy (Slither line:1425)
+
+
+End PlanetStorage.is_proxy (Slither line:1428)
+
+
+Begin PlanetStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PlanetStorage 
+
+End PlanetStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PlanetDelegationStorage.is_proxy (Slither line:1425)
+
+
+End PlanetDelegationStorage.is_proxy (Slither line:1428)
+
+
+Begin PlanetDelegationStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PlanetDelegationStorage 
+
+End PlanetDelegationStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PlanetDelegatorInterface.is_proxy (Slither line:1425)
+
+
+End PlanetDelegatorInterface.is_proxy (Slither line:1428)
+
+
+Begin PlanetDelegatorInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PlanetDelegatorInterface 
+
+End PlanetDelegatorInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PlanetDiscountDelegator.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End PlanetDiscountDelegator.is_proxy (Slither line:1476)
+
+
+Begin PlanetDiscountDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PlanetDiscountDelegator 
+PlanetDiscountDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in PlanetDelegationStorage (Slither line:1204)
+
+
+Begin PlanetDelegationStorage.find_setter_in_contract (Slither line:3109)
+
+
+End PlanetDelegationStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in PlanetDelegationStorage 
+Looking in PlanetDiscountDelegator (Slither line:1213)
+
+Begin PlanetDiscountDelegator.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address) returns() (Slither line:3117)
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End PlanetDiscountDelegator.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _setImplementation in contract: PlanetDiscountDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin PlanetDelegationStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+
+End PlanetDelegationStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin PlanetDiscountDelegator.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: _setAdmin (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+
+End PlanetDiscountDelegator.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in PlanetDiscountDelegator (Slither line:1305)
+or in PlanetDelegationStorage (Slither line:1319)
+
+Begin PlanetDelegatorInterface.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+
+End PlanetDelegatorInterface.find_getter_in_contract (Slither line:3073)
+
+
+End PlanetDiscountDelegator.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.value == 0,GErc20Delegator:fallback: cannot send value to fallback)
+impl_address_from_contract_call: arg is msg.value == 0
+impl_address_from_contract_call: arg is GErc20Delegator:fallback: cannot send value to fallback
+Checking public function _setImplementation
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,GErc20Delegator::_setImplementation: Caller must be admin)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,caller is not admin)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function PlanetDiscountDelegator._setImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function PlanetDiscountDelegator._setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function PlanetDiscountDelegator.slitherConstructorVariables (proxy_features line:893)
+functions_writing_to_variable: checking function PlanetDiscountDelegator.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function PlanetDiscountDelegator._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,GErc20Delegator::_setImplementation: Caller must be admin) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:907)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:904)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function PlanetDiscountDelegator.constructor (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1008)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == admin,GErc20Delegator::_setImplementation: Caller must be admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: checking public function constructor
+require(bool,string)(msg.sender == admin,GErc20Delegator::_setImplementation: Caller must be admin)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(msg.value == 0,GErc20Delegator:fallback: cannot send value to fallback)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,GErc20Delegator::_setImplementation: Caller must be admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation

@@ -1,0 +1,431 @@
+
+Begin Tangle.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Tangle.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'address_'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Tangle.find_delegate_variable_from_name
+Searching for address_ (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking selectorToAddress (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking addresses (Slither line:1689)
+Checking addressIndex (Slither line:1689)
+Checking addressToSelectors (Slither line:1689)
+Checking selectorIndex (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking address_ (Slither line:1703)
+address_ is a Local Variable in Tangle.fallback (Slither line:1707)
+Expression: selectorToAddress[msg.sig] (Slither line:1719)
+selectorToAddress is a State Variable in contract Tangle (Slither line:1749)
+
+End Tangle.find_delegate_variable_by_name
+
+
+End Tangle.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Tangle.is_proxy (Slither line:1476)
+
+
+Begin Tangle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Tangle 
+Tangle is delegating to selectorToAddress
+Looking for setter (Slither line:1200)
+
+
+Begin Tangle.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: fallback(bytes) returns(bytes) (Slither line:3127)
+Checking function: facetAddressExists(address) returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: addSelector(bytes4,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: removeSelector(bytes4,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: replaceSelector(bytes4,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: diamondCut(Tangle.FacetCut[],address,bytes) returns() (Slither line:3127)
+Visibility: external
+removeSelector(selector,facetAddress_)
+addressToSelectors[currentFacetAddress] = selectors
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+mstore(uint256,uint256)(selectors,mload(uint256)(selectors) - 1)
+changesMade = true
+is an Assignment Operation (Slither line:3216)
+selectorIndex[lastSelector] = selectorIndex[selector]
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+selectorToAddress[selector] = facetAddress_
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+
+End Tangle.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: diamondCut in contract: Tangle (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Tangle.find_getter_in_contract (Slither line:2974)
+
+selectorToAddress is a Variable object
+facetAddress_
+Checking function: constructor (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: facetAddressExists (Slither line:2988)
+facetAddressExists returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+Checking function: addSelector (Slither line:2988)
+Checking function: removeSelector (Slither line:2988)
+Checking function: replaceSelector (Slither line:2988)
+Checking function: diamondCut (Slither line:2988)
+Checking function: facets (Slither line:2988)
+facets returns Tangle.Facet[] variable  (Slither line:3008)
+RETURN node expression: facets_ (Slither line:3028)
+Checking function: facetFunctionSelectors (Slither line:2988)
+facetFunctionSelectors returns bytes4[] variable  (Slither line:3008)
+RETURN node expression: addressToSelectors[_facet] (Slither line:3028)
+Checking function: facetAddresses (Slither line:2988)
+facetAddresses returns address[] variable  (Slither line:3008)
+RETURN node expression: addresses (Slither line:3028)
+Checking function: facetAddress (Slither line:2988)
+facetAddress returns address variable  (Slither line:3008)
+RETURN node expression: selectorToAddress[_functionSelector] (Slither line:3028)
+
+End Tangle.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: facetAddress in contract: Tangle (Slither line:1285)
+
+End Tangle.is_upgradeable_proxy (Slither line:1293)
+
+Checking external function diamondCut
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,not owner)
+Checking external function facets
+Checking external function facetFunctionSelectors
+Checking external function facetAddresses
+Checking external function facetAddress
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: selectorToAddress
+functions_writing_to_variable: checking function Tangle.replaceSelector (proxy_features line:898)
+functions_writing_to_variable: exp = currentFacetAddress = selectorToAddress[selector] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: currentFacetAddress = selectorToAddress[selector] (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool,string)(currentFacetAddress != facetAddress_,selector replace) (proxy_features line:909)
+functions_writing_to_variable: exp = selectors = addressToSelectors[currentFacetAddress] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectors = addressToSelectors[currentFacetAddress] (proxy_features line:912)
+functions_writing_to_variable: exp = lastSelector = selectors[selectors.length - 1] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: lastSelector = selectors[selectors.length - 1] (proxy_features line:912)
+functions_writing_to_variable: exp = lastSelector != selector (proxy_features line:909)
+functions_writing_to_variable: exp = selectorIndex[lastSelector] = selectorIndex[selector] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorIndex[lastSelector] = selectorIndex[selector] (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorIndex[lastSelector] (proxy_features line:920)
+functions_writing_to_variable: exp = selectors[selectorIndex[selector]] = lastSelector (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectors[selectorIndex[selector]] = lastSelector (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectors[selectorIndex[selector]] (proxy_features line:920)
+functions_writing_to_variable: exp = selectors.length > 0 (proxy_features line:909)
+functions_writing_to_variable: exp = mstore(uint256,uint256)(selectors,mload(uint256)(selectors) - 1) (proxy_features line:909)
+functions_writing_to_variable: exp = addressToSelectors[currentFacetAddress] = selectors (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addressToSelectors[currentFacetAddress] = selectors (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addressToSelectors[currentFacetAddress] (proxy_features line:920)
+functions_writing_to_variable: exp = selectors.length == 0 (proxy_features line:909)
+functions_writing_to_variable: exp = lastAddress = addresses[addresses.length - 1] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: lastAddress = addresses[addresses.length - 1] (proxy_features line:912)
+functions_writing_to_variable: exp = lastAddress != currentFacetAddress (proxy_features line:909)
+functions_writing_to_variable: exp = addressIndex[lastAddress] = addressIndex[currentFacetAddress] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addressIndex[lastAddress] = addressIndex[currentFacetAddress] (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addressIndex[lastAddress] (proxy_features line:920)
+functions_writing_to_variable: exp = addresses[addressIndex[currentFacetAddress]] = lastAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addresses[addressIndex[currentFacetAddress]] = lastAddress (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addresses[addressIndex[currentFacetAddress]] (proxy_features line:920)
+functions_writing_to_variable: exp = addresses.pop() (proxy_features line:909)
+functions_writing_to_variable: exp = addressIndex[currentFacetAddress] = 0 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addressIndex[currentFacetAddress] = 0 (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addressIndex[currentFacetAddress] (proxy_features line:920)
+functions_writing_to_variable: exp = selectorToAddress[selector] = facetAddress_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorToAddress[selector] = facetAddress_ (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorToAddress[selector] (proxy_features line:920)
+functions_writing_to_variable: Identifier: selectorToAddress (proxy_features line:924)
+get_value_assigned: selectorToAddress[selector] = facetAddress_
+functions_writing_to_variable: exp = selectorIndex[selector] = addressToSelectors[facetAddress_].length (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorIndex[selector] = addressToSelectors[facetAddress_].length (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorIndex[selector] (proxy_features line:920)
+functions_writing_to_variable: exp = addressToSelectors[facetAddress_].push(selector) (proxy_features line:909)
+functions_writing_to_variable: replaceSelector writes facetAddress_ to selectorToAddress (proxy_features line:929)
+functions_writing_to_variable: checking function Tangle.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.facets (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.addSelector (proxy_features line:898)
+functions_writing_to_variable: exp = currentFacetAddress = selectorToAddress[selector] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: currentFacetAddress = selectorToAddress[selector] (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool,string)(currentFacetAddress == address(0),selector add) (proxy_features line:909)
+functions_writing_to_variable: exp = selectorToAddress[selector] = facetAddress_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorToAddress[selector] = facetAddress_ (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorToAddress[selector] (proxy_features line:920)
+functions_writing_to_variable: Identifier: selectorToAddress (proxy_features line:924)
+get_value_assigned: selectorToAddress[selector] = facetAddress_
+functions_writing_to_variable: exp = selectorIndex[selector] = addressToSelectors[facetAddress_].length (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorIndex[selector] = addressToSelectors[facetAddress_].length (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorIndex[selector] (proxy_features line:920)
+functions_writing_to_variable: exp = addressToSelectors[facetAddress_].push(selector) (proxy_features line:909)
+functions_writing_to_variable: addSelector writes facetAddress_ to selectorToAddress (proxy_features line:929)
+functions_writing_to_variable: checking function Tangle.facetAddresses (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.facetAddressExists (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.diamondCut (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.removeSelector (proxy_features line:898)
+functions_writing_to_variable: exp = currentFacetAddress = selectorToAddress[selector] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: currentFacetAddress = selectorToAddress[selector] (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool,string)(currentFacetAddress != address(0),selector remove) (proxy_features line:909)
+functions_writing_to_variable: exp = selectors = addressToSelectors[facetAddress_] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectors = addressToSelectors[facetAddress_] (proxy_features line:912)
+functions_writing_to_variable: exp = lastSelector = selectors[selectors.length - 1] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: lastSelector = selectors[selectors.length - 1] (proxy_features line:912)
+functions_writing_to_variable: exp = lastSelector != selector (proxy_features line:909)
+functions_writing_to_variable: exp = selectorIndex[lastSelector] = selectorIndex[selector] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorIndex[lastSelector] = selectorIndex[selector] (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorIndex[lastSelector] (proxy_features line:920)
+functions_writing_to_variable: exp = selectors[selectorIndex[selector]] = lastSelector (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectors[selectorIndex[selector]] = lastSelector (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectors[selectorIndex[selector]] (proxy_features line:920)
+functions_writing_to_variable: exp = selectors.length > 0 (proxy_features line:909)
+functions_writing_to_variable: exp = mstore(uint256,uint256)(selectors,mload(uint256)(selectors) - 1) (proxy_features line:909)
+functions_writing_to_variable: exp = addressToSelectors[facetAddress_] = selectors (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addressToSelectors[facetAddress_] = selectors (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addressToSelectors[facetAddress_] (proxy_features line:920)
+functions_writing_to_variable: exp = selectors.length == 0 (proxy_features line:909)
+functions_writing_to_variable: exp = lastAddress = addresses[addresses.length - 1] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: lastAddress = addresses[addresses.length - 1] (proxy_features line:912)
+functions_writing_to_variable: exp = lastAddress != facetAddress_ (proxy_features line:909)
+functions_writing_to_variable: exp = addressIndex[lastAddress] = addressIndex[facetAddress_] (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addressIndex[lastAddress] = addressIndex[facetAddress_] (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addressIndex[lastAddress] (proxy_features line:920)
+functions_writing_to_variable: exp = addresses[addressIndex[facetAddress_]] = lastAddress (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addresses[addressIndex[facetAddress_]] = lastAddress (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addresses[addressIndex[facetAddress_]] (proxy_features line:920)
+functions_writing_to_variable: exp = addresses.pop() (proxy_features line:909)
+functions_writing_to_variable: exp = addressIndex[facetAddress_] = 0 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: addressIndex[facetAddress_] = 0 (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: addressIndex[facetAddress_] (proxy_features line:920)
+functions_writing_to_variable: exp = selectorToAddress[selector] = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: selectorToAddress[selector] = address(0) (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: selectorToAddress[selector] (proxy_features line:920)
+functions_writing_to_variable: Identifier: selectorToAddress (proxy_features line:924)
+get_value_assigned: selectorToAddress[selector] = address(0)
+functions_writing_to_variable: checking function Tangle.facetFunctionSelectors (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.facetAddress (proxy_features line:898)
+functions_writing_to_variable: checking function Tangle.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['REF_68', 'facetAddress_', 'REF_69', 'facetAddress_', 'TMP_39', '_diamondCut', 'facetAddress_']
+has_compatibility_checks: skipping internal function replaceSelector
+has_compatibility_checks: skipping internal function addSelector
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(address_ != address(0),zero facet)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),address_,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: address_ = selectorToAddress[msg.sig]
+Found public function: constructor
+Found external function: receive
+Found fallback
+Found external function: diamondCut
+has_time_delay: (node.type) IF
+(Expression) _init != address(0)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selectors = addressToSelectors[facetAddress_]
+has_time_delay: (node.type) EXPRESSION
+(Expression) removeSelector(selector,facetAddress_)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressToSelectors[currentFacetAddress] = selectors
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastSelector = selectors[selectors.length - 1]
+has_time_delay: (node.type) IF
+(Expression) ! changesMade
+has_time_delay: (node.type) EXPRESSION
+(Expression) mstore(uint256,uint256)(selectors,mload(uint256)(selectors) - 1)
+has_time_delay: (node.type) IF
+(Expression) lastSelector != selector
+has_time_delay: (node.type) IF
+(Expression) selectors.length > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) changesMade = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex[lastSelector] = selectorIndex[selector]
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorToAddress[selector] = facetAddress_
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectors[selectorIndex[selector]] = lastSelector
+has_time_delay: (node.type) IF
+(Expression) changesMade
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastAddress = addresses[addresses.length - 1]
+has_time_delay: (node.type) IF
+(Expression) selectors.length == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_calldata.length > 0,empty calldata)
+has_time_delay: (node.type) IF
+(Expression) lastAddress != currentFacetAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(success,call unsuccessful)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addresses.pop()
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success) = _init.delegatecall(_calldata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressToSelectors[facetAddress_] = selectors
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressIndex[lastAddress] = addressIndex[currentFacetAddress]
+has_time_delay: (node.type) EXPRESSION
+(Expression) mstore(uint256,uint256)(selectors,mload(uint256)(selectors) - 1)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addresses[addressIndex[currentFacetAddress]] = lastAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressIndex[currentFacetAddress] = 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorToAddress[selector] = address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) DiamondCut(_diamondCut,_init,_calldata)
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex[selector] = addressToSelectors[facetAddress_].length
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastAddress = addresses[addresses.length - 1]
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressToSelectors[facetAddress_].push(selector)
+has_time_delay: (node.type) IF
+(Expression) lastAddress != facetAddress_
+has_time_delay: (node.type) EXPRESSION
+(Expression) addresses.pop()
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressIndex[lastAddress] = addressIndex[facetAddress_]
+has_time_delay: (node.type) EXPRESSION
+(Expression) addresses[addressIndex[facetAddress_]] = lastAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressIndex[facetAddress_] = 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex[selector] = addressToSelectors[facetAddress_].length
+has_time_delay: (node.type) IF
+(Expression) addresses.length == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressIndex[facetAddress_] = addresses.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) addressToSelectors[facetAddress_].push(selector)
+has_time_delay: (node.type) EXPRESSION
+(Expression) addresses.push(facetCut.facetAddress)
+has_time_delay: (node.type) RETURN
+(Expression) false
+has_time_delay: (node.type) IF
+(Expression) addresses[0] != address_ && addressIndex[address_] == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(currentFacetAddress != address(0),selector remove)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,not owner)
+has_time_delay: (node.type) RETURN
+(Expression) false
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) j = 0
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) IF
+(Expression) selectors.length == 0
+has_time_delay: (node.type) IF_LOOP
+(Expression) j < facetCut.functionSelectors.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) j ++
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selector = facetCut.functionSelectors[j]
+has_time_delay: (node.type) IF
+(Expression) facetCut.action == FacetCutAction.Add
+has_time_delay: (node.type) IF
+(Expression) facetCut.action == FacetCutAction.Replace
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) changesMade = false
+has_time_delay: (node.type) EXPRESSION
+(Expression) addSelector(selector,facetAddress_)
+has_time_delay: (node.type) IF
+(Expression) ! changesMade
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentFacetAddress = selectorToAddress[selector]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(currentFacetAddress != facetAddress_,selector replace)
+has_time_delay: (node.type) EXPRESSION
+(Expression) changesMade = true
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) i = 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) selectors = addressToSelectors[currentFacetAddress]
+has_time_delay: (node.type) IF_LOOP
+(Expression) i < _diamondCut.length
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) lastSelector = selectors[selectors.length - 1]
+has_time_delay: (node.type) IF
+(Expression) facetCut.action == FacetCutAction.Remove
+has_time_delay: (node.type) IF
+(Expression) lastSelector != selector
+has_time_delay: (node.type) EXPRESSION
+(Expression) i ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) replaceSelector(selector,facetAddress_)
+has_time_delay: (node.type) IF
+(Expression) selectors.length > 0
+has_time_delay: (node.type) IF
+(Expression) ! changesMade
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) facetCut = _diamondCut[i]
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorIndex[lastSelector] = selectorIndex[selector]
+has_time_delay: (node.type) EXPRESSION
+(Expression) changesMade = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectors[selectorIndex[selector]] = lastSelector
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) facetAddress_ = _diamondCut[i].facetAddress
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentFacetAddress = selectorToAddress[selector]
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentFacetAddress = selectorToAddress[selector]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(currentFacetAddress == address(0),selector add)
+has_time_delay: (node.type) IF
+(Expression) ! facetAddressExists(facetAddress_)
+has_time_delay: (node.type) EXPRESSION
+(Expression) selectorToAddress[selector] = facetAddress_

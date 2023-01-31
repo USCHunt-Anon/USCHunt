@@ -1,0 +1,524 @@
+
+Begin IERC1538.is_proxy (Slither line:1425)
+
+
+End IERC1538.is_proxy (Slither line:1428)
+
+
+Begin IERC1538.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC1538 
+
+End IERC1538.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyBaseStorage.is_proxy (Slither line:1425)
+
+
+End ProxyBaseStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyBaseStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyBaseStorage 
+
+End ProxyBaseStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin INFT.is_proxy (Slither line:1425)
+
+
+End INFT.is_proxy (Slither line:1428)
+
+
+Begin INFT.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: INFT 
+
+End INFT.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFactory.is_proxy (Slither line:1425)
+
+
+End IFactory.is_proxy (Slither line:1428)
+
+
+Begin IFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactory 
+
+End IFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LPInterface.is_proxy (Slither line:1425)
+
+
+End LPInterface.is_proxy (Slither line:1428)
+
+
+Begin LPInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LPInterface 
+
+End LPInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DexStorage.is_proxy (Slither line:1425)
+
+
+End DexStorage.is_proxy (Slither line:1428)
+
+
+Begin DexStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DexStorage 
+
+End DexStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DexProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DexProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), delegate, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'delegate'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin DexProxy.find_delegate_variable_from_name
+Searching for delegate (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _owner (Slither line:1689)
+Checking delegates (Slither line:1689)
+Checking funcSignatures (Slither line:1689)
+Checking funcSignatureToIndex (Slither line:1689)
+Checking proxy (Slither line:1689)
+Checking x (Slither line:1689)
+Checking ALIA (Slither line:1689)
+Checking XNFT (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking OldNFTDex (Slither line:1689)
+Checking BUSD (Slither line:1689)
+Checking BNB (Slither line:1689)
+Checking _tokenAuthors (Slither line:1689)
+Checking adminOwner (Slither line:1689)
+Checking platform (Slither line:1689)
+Checking authorVault (Slither line:1689)
+Checking platformPerecentage (Slither line:1689)
+Checking _saleTokens (Slither line:1689)
+Checking _supportNft (Slither line:1689)
+Checking _auctionTokens (Slither line:1689)
+Checking nonCryptoNFTVault (Slither line:1689)
+Checking _nonCryptoOwners (Slither line:1689)
+Checking _nonCryptoWallet (Slither line:1689)
+Checking LPAlia (Slither line:1689)
+Checking LPBNB (Slither line:1689)
+Checking adminDiscount (Slither line:1689)
+Checking admin (Slither line:1689)
+Checking revenueAddressBlindBox (Slither line:1689)
+Checking boxNameByToken (Slither line:1689)
+Checking collectionConfig (Slither line:1689)
+Checking countCopy (Slither line:1689)
+Checking _allowedCurrencies (Slither line:1689)
+Checking token (Slither line:1689)
+Checking allowedArray (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking delegate (Slither line:1703)
+delegate is a Local Variable in DexProxy.fallback (Slither line:1707)
+Expression: delegates[msg.sig] (Slither line:1719)
+delegates is a State Variable in contract ProxyBaseStorage (Slither line:1749)
+
+End DexProxy.find_delegate_variable_by_name
+
+
+End DexProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End DexProxy.is_proxy (Slither line:1476)
+
+
+Begin DexProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DexProxy 
+DexProxy is delegating to delegates
+Looking for setter (Slither line:1200)
+
+Looking for setter in ProxyBaseStorage (Slither line:1204)
+
+
+Begin ProxyBaseStorage.find_setter_in_contract (Slither line:3109)
+
+
+End ProxyBaseStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in ProxyBaseStorage 
+Looking in DexProxy (Slither line:1213)
+
+Begin DexProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: updateContract(address,string,string) returns() (Slither line:3117)
+Visibility: external
+updateContract contains assembly (Slither line:3143)
+delete funcSignatureToIndex[signatures]
+delegates[funcId] = _delegate
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+
+End DexProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: updateContract in contract: DexProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyBaseStorage.find_getter_in_contract (Slither line:2964)
+
+delegates is a Variable object
+_delegate
+
+End ProxyBaseStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin DexProxy.find_getter_in_contract (Slither line:2964)
+
+delegates is a Variable object
+_delegate
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: isOwner (Slither line:2978)
+isOwner returns bool variable  (Slither line:2998)
+RETURN node expression: msg.sender == _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: updateContract (Slither line:2978)
+
+End DexProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in DexProxy (Slither line:1305)
+or in ProxyBaseStorage (Slither line:1319)
+Checking for delegates at slot 1 in contract ProxyBaseStorage (Slither line:1355)
+Found funcSignatures at slot 1 in contract ProxyBaseStorage (Slither line:1362)
+Checking for funcSignatures at slot 1 in contract DexStorage (Slither line:1355)
+Found ALIA at slot 1 in contract DexStorage (Slither line:1362)
+
+Begin IERC1538.find_getter_in_contract (Slither line:2964)
+
+delegates is a Variable object
+_delegate
+
+End IERC1538.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: _delegate
+impl_address_from_contract_call: StateVariable delegates
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool,string)(delegate != address(0),Function does not exist.)
+impl_address_from_contract_call: arg is delegate != address(0)
+impl_address_from_contract_call: arg is Function does not exist.
+Checking external function updateContract
+Checking public function owner
+Checking public function isOwner
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking external function updateContract
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking external function fallback
+functions_writing_to_variable: delegates
+functions_writing_to_variable: checking function DexProxy.isOwner (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.updateContract (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = proxy = address(this) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxy = address(this) (proxy_features line:907)
+functions_writing_to_variable: exp = signature = updateContract(address,string,string) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signature = updateContract(address,string,string) (proxy_features line:907)
+functions_writing_to_variable: exp = funcId = bytes4(keccak256(bytes)(signature)) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcId = bytes4(keccak256(bytes)(signature)) (proxy_features line:907)
+functions_writing_to_variable: exp = delegates[funcId] = proxy (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: delegates[funcId] = proxy (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: delegates[funcId] (proxy_features line:915)
+functions_writing_to_variable: Identifier: delegates (proxy_features line:919)
+get_value_assigned: delegates[funcId] = proxy
+functions_writing_to_variable: exp = funcSignatures.push(signature) (proxy_features line:904)
+functions_writing_to_variable: exp = funcSignatureToIndex[signature] = funcSignatures.length (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcSignatureToIndex[signature] = funcSignatures.length (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: funcSignatureToIndex[signature] (proxy_features line:915)
+functions_writing_to_variable: exp = FunctionUpdate(funcId,address(0),proxy,string(signature)) (proxy_features line:904)
+functions_writing_to_variable: exp = CommitMessage(Added ERC1538 updateContract function at contract creation) (proxy_features line:904)
+functions_writing_to_variable: constructor writes proxy to delegates (proxy_features line:924)
+functions_writing_to_variable: checking function DexProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.owner (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.updateContract (proxy_features line:893)
+functions_writing_to_variable: exp = _delegate != address(0) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(pos > 0,_delegate address is not a contract and is not address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = signatures = bytes(_functionSignatures) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signatures = bytes(_functionSignatures) (proxy_features line:907)
+functions_writing_to_variable: exp = pos < signaturesEnd (proxy_features line:904)
+functions_writing_to_variable: exp = char == 0x29 (proxy_features line:904)
+functions_writing_to_variable: exp = pos ++ (proxy_features line:904)
+functions_writing_to_variable: exp = num = (pos - start) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: num = (pos - start) (proxy_features line:907)
+functions_writing_to_variable: exp = start = pos (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: start = pos (proxy_features line:907)
+functions_writing_to_variable: exp = funcId = bytes4(keccak256(bytes)(signatures)) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcId = bytes4(keccak256(bytes)(signatures)) (proxy_features line:907)
+functions_writing_to_variable: exp = oldDelegate = delegates[funcId] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldDelegate = delegates[funcId] (proxy_features line:907)
+functions_writing_to_variable: exp = _delegate == address(0) (proxy_features line:904)
+functions_writing_to_variable: exp = index = funcSignatureToIndex[signatures] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: index = funcSignatureToIndex[signatures] (proxy_features line:907)
+functions_writing_to_variable: exp = require(bool,string)(index != 0,Function does not exist.) (proxy_features line:904)
+functions_writing_to_variable: exp = index -- (proxy_features line:904)
+functions_writing_to_variable: exp = lastIndex = funcSignatures.length - 1 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: lastIndex = funcSignatures.length - 1 (proxy_features line:907)
+functions_writing_to_variable: exp = index != lastIndex (proxy_features line:904)
+functions_writing_to_variable: exp = funcSignatures[index] = funcSignatures[lastIndex] (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcSignatures[index] = funcSignatures[lastIndex] (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: funcSignatures[index] (proxy_features line:915)
+functions_writing_to_variable: exp = funcSignatureToIndex[funcSignatures[lastIndex]] = index + 1 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcSignatureToIndex[funcSignatures[lastIndex]] = index + 1 (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: funcSignatureToIndex[funcSignatures[lastIndex]] (proxy_features line:915)
+functions_writing_to_variable: exp = funcSignatures.length -- (proxy_features line:904)
+functions_writing_to_variable: exp = delete funcSignatureToIndex[signatures] (proxy_features line:904)
+functions_writing_to_variable: exp = delete delegates[funcId] (proxy_features line:904)
+functions_writing_to_variable: exp = FunctionUpdate(funcId,oldDelegate,address(0),string(signatures)) (proxy_features line:904)
+functions_writing_to_variable: exp = funcSignatureToIndex[signatures] == 0 (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(oldDelegate == address(0),FuncId clash.) (proxy_features line:904)
+functions_writing_to_variable: exp = delegates[funcId] = _delegate (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: delegates[funcId] = _delegate (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: delegates[funcId] (proxy_features line:915)
+functions_writing_to_variable: Identifier: delegates (proxy_features line:919)
+get_value_assigned: delegates[funcId] = _delegate
+functions_writing_to_variable: exp = funcSignatures.push(signatures) (proxy_features line:904)
+functions_writing_to_variable: exp = funcSignatureToIndex[signatures] = funcSignatures.length (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcSignatureToIndex[signatures] = funcSignatures.length (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: funcSignatureToIndex[signatures] (proxy_features line:915)
+functions_writing_to_variable: exp = FunctionUpdate(funcId,address(0),_delegate,string(signatures)) (proxy_features line:904)
+functions_writing_to_variable: exp = delegates[funcId] != _delegate (proxy_features line:904)
+functions_writing_to_variable: exp = delegates[funcId] = _delegate (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: delegates[funcId] = _delegate (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: delegates[funcId] (proxy_features line:915)
+functions_writing_to_variable: Identifier: delegates (proxy_features line:919)
+get_value_assigned: delegates[funcId] = _delegate
+functions_writing_to_variable: exp = FunctionUpdate(funcId,oldDelegate,_delegate,string(signatures)) (proxy_features line:904)
+functions_writing_to_variable: exp = pos ++ (proxy_features line:904)
+functions_writing_to_variable: exp = CommitMessage(_commitMessage) (proxy_features line:904)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(isOwner(),Ownable: caller is not the owner) (proxy_features line:904)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:904)
+functions_writing_to_variable: updateContract writes _delegate to delegates (proxy_features line:924)
+functions_writing_to_variable: checking function DexProxy.renounceOwnership (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_delegate', 'TMP_45', 'proxy', 'REF_16']
+functions_writing_to_variable: proxy
+functions_writing_to_variable: checking function DexProxy.isOwner (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.updateContract (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = proxy = address(this) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: proxy = address(this) (proxy_features line:907)
+functions_writing_to_variable: Identifier: proxy (proxy_features line:919)
+get_value_assigned: proxy = address(this)
+functions_writing_to_variable: exp = signature = updateContract(address,string,string) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: signature = updateContract(address,string,string) (proxy_features line:907)
+functions_writing_to_variable: exp = funcId = bytes4(keccak256(bytes)(signature)) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcId = bytes4(keccak256(bytes)(signature)) (proxy_features line:907)
+functions_writing_to_variable: exp = delegates[funcId] = proxy (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: delegates[funcId] = proxy (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: delegates[funcId] (proxy_features line:915)
+functions_writing_to_variable: exp = funcSignatures.push(signature) (proxy_features line:904)
+functions_writing_to_variable: exp = funcSignatureToIndex[signature] = funcSignatures.length (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: funcSignatureToIndex[signature] = funcSignatures.length (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: funcSignatureToIndex[signature] (proxy_features line:915)
+functions_writing_to_variable: exp = FunctionUpdate(funcId,address(0),proxy,string(signature)) (proxy_features line:904)
+functions_writing_to_variable: exp = CommitMessage(Added ERC1538 updateContract function at contract creation) (proxy_features line:904)
+functions_writing_to_variable: checking function DexProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.owner (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.updateContract (proxy_features line:893)
+functions_writing_to_variable: checking function DexProxy.renounceOwnership (proxy_features line:893)
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: checking external function updateContract
+has_compatibility_checks: IF node exp = _delegate == address(0)
+has_compatibility_checks: IF node exp = funcSignatureToIndex[signatures] == 0
+require(bool,string)(index != 0,Function does not exist.)
+has_compatibility_checks: condition index != 0
+require(bool,string)(oldDelegate == address(0),FuncId clash.)
+has_compatibility_checks: condition oldDelegate == address(0)
+has_compatibility_checks: IF node exp = char == 0x29
+has_compatibility_checks: IF node exp = _delegate != address(0)
+has_compatibility_checks: IF node exp = index != lastIndex
+require(bool,string)(pos > 0,_delegate address is not a contract and is not address(0))
+has_compatibility_checks: condition pos > 0
+has_compatibility_checks: IF node exp = delegates[funcId] != _delegate
+require(bool,string)(isOwner(),Ownable: caller is not the owner)
+has_compatibility_checks: condition isOwner()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), delegate, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(delegate != address(0),Function does not exist.)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: delegate = delegates[msg.sig]
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found external function: updateContract
+has_time_delay: (node.type) EXPRESSION
+(Expression) delete funcSignatureToIndex[signatures]
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegates[funcId] = _delegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) oldDelegate = delegates[funcId]
+has_time_delay: (node.type) EXPRESSION
+(Expression) delete delegates[funcId]
+has_time_delay: (node.type) EXPRESSION
+(Expression) FunctionUpdate(funcId,oldDelegate,_delegate,string(signatures))
+has_time_delay: (node.type) IF
+(Expression) _delegate == address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) FunctionUpdate(funcId,oldDelegate,address(0),string(signatures))
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _owner
+has_time_delay: (node.type) IF_LOOP
+(Expression) pos < signaturesEnd
+has_time_delay: (node.type) IF
+(Expression) funcSignatureToIndex[signatures] == 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) CommitMessage(_commitMessage)
+has_time_delay: (node.type) EXPRESSION
+(Expression) index = funcSignatureToIndex[signatures]
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(index != 0,Function does not exist.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) pos ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(oldDelegate == address(0),FuncId clash.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) index --
+has_time_delay: (node.type) IF
+(Expression) char == 0x29
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegates[funcId] = _delegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) lastIndex = funcSignatures.length - 1
+has_time_delay: (node.type) IF
+(Expression) _delegate != address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) funcSignatures.push(signatures)
+has_time_delay: (node.type) IF
+(Expression) index != lastIndex
+has_time_delay: (node.type) EXPRESSION
+(Expression) funcSignatureToIndex[signatures] = funcSignatures.length
+has_time_delay: (node.type) EXPRESSION
+(Expression) funcSignatures.length --
+has_time_delay: (node.type) EXPRESSION
+(Expression) pos ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) FunctionUpdate(funcId,address(0),_delegate,string(signatures))
+has_time_delay: (node.type) EXPRESSION
+(Expression) num = (pos - start)
+has_time_delay: (node.type) EXPRESSION
+(Expression) funcSignatures[index] = funcSignatures[lastIndex]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(pos > 0,_delegate address is not a contract and is not address(0))
+has_time_delay: (node.type) IF
+(Expression) delegates[funcId] != _delegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) start = pos
+has_time_delay: (node.type) EXPRESSION
+(Expression) funcSignatureToIndex[funcSignatures[lastIndex]] = index + 1
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isOwner(),Ownable: caller is not the owner)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) signatures = bytes(_functionSignatures)
+has_time_delay: (node.type) EXPRESSION
+(Expression) funcId = bytes4(keccak256(bytes)(signatures))

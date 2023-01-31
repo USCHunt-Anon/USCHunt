@@ -1,0 +1,1853 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _willFallback() (Slither line:2802)
+Expression called: _willFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OpenZeppelinUpgradesAddress.is_proxy (Slither line:1425)
+
+
+End OpenZeppelinUpgradesAddress.is_proxy (Slither line:1428)
+
+
+Begin OpenZeppelinUpgradesAddress.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OpenZeppelinUpgradesAddress 
+
+End OpenZeppelinUpgradesAddress.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BaseUpgradeabilityProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin BaseUpgradeabilityProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in BaseUpgradeabilityProxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin BaseUpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End BaseUpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End BaseUpgradeabilityProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin BaseUpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End BaseUpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting BaseUpgradeabilityProxy._delegate_variable = BaseUpgradeabilityProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End BaseUpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin BaseUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BaseUpgradeabilityProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+BaseUpgradeabilityProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in BaseUpgradeabilityProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: _willFallback (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable called impl (Slither line:3008)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+Begin BaseUpgradeabilityProxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+NEW VARIABLE: slot = IMPLEMENTATION_SLOT (Slither line:2888)
+INLINE ASM: None (Slither line:2888)
+
+End BaseUpgradeabilityProxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End BaseUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin Governable.is_proxy (Slither line:1425)
+
+
+End Governable.is_proxy (Slither line:1428)
+
+
+Begin Governable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Governable 
+
+End Governable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking governorPosition (Slither line:1689)
+Checking pendingGovernorPosition (Slither line:1689)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in InitializeGovernedUpgradeabilityProxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End InitializeGovernedUpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End InitializeGovernedUpgradeabilityProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End InitializeGovernedUpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End InitializeGovernedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting InitializeGovernedUpgradeabilityProxy._delegate_variable = InitializeGovernedUpgradeabilityProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End InitializeGovernedUpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin InitializeGovernedUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: InitializeGovernedUpgradeabilityProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+InitializeGovernedUpgradeabilityProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in BaseUpgradeabilityProxy (Slither line:1204)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BaseUpgradeabilityProxy 
+Looking in InitializeGovernedUpgradeabilityProxy (Slither line:1213)
+
+Begin InitializeGovernedUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: initialize(address,address,bytes) returns() (Slither line:3127)
+Checking function: admin() returns(address) (Slither line:3127)
+Visibility: external
+_governor()
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: external
+_implementation()
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+    sstore(slot, newImplementation) (Slither line:3163)
+upgradeTo reads and/or writes to variable slot (Slither line:3170)
+upgradeTo reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3170)
+upgradeTo reads and/or writes to variable OpenZeppelinUpgradesAddress (Slither line:3170)
+upgradeTo reads and/or writes to variable newImplementation (Slither line:3170)
+
+End InitializeGovernedUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: InitializeGovernedUpgradeabilityProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+End InitializeGovernedUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: InitializeGovernedUpgradeabilityProxy
+Setter found in contract InitializeGovernedUpgradeabilityProxy
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: OpenZeppelinUpgradesAddress.isContract
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression _willFallback()
+Checking public function governor
+Checking public function isGovernor
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function transferGovernance
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function claimGovernance
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _pendingGovernor(),Only the pending Governor can complete the claim)
+Checking public function initialize
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function admin
+Checking external function implementation
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.transferGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._pendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.initialize (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: initialize writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.admin (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.claimGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.isGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._changeGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._setGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.governor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.upgradeToAndCall (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:912)
+functions_writing_to_variable: exp = pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._governor (proxy_features line:898)
+functions_writing_to_variable: checking function InitializeGovernedUpgradeabilityProxy._setPendingGovernor (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: checking public function initialize
+require(bool)(_implementation() == address(0))
+has_compatibility_checks: condition _implementation() == address(0)
+assert(bool)(IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+require(bool,string)(_newGovernor != address(0),New Governor is address(0))
+has_compatibility_checks: condition _newGovernor != address(0)
+has_compatibility_checks: IF node exp = _data.length > 0
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyGovernor()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking external function upgradeTo
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyGovernor()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyGovernor()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 { revert(0, returndatasize()) }
+    default { return(0, returndatasize()) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found fallback
+Found public function: governor
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyGovernor()
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _governor()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = governorPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isGovernor(),Caller is not the Governor)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+
+Begin VaultProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VaultProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End VaultProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin VaultProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End VaultProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin VaultProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End VaultProxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VaultProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End VaultProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin VaultProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin VaultProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking governorPosition (Slither line:1689)
+Checking pendingGovernorPosition (Slither line:1689)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in VaultProxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin VaultProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End VaultProxy.find_delegate_from_call_exp (Slither line:2328)
+
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _willFallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End VaultProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin VaultProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End VaultProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End VaultProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting VaultProxy._delegate_variable = VaultProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End VaultProxy.is_proxy (Slither line:1476)
+
+
+Begin VaultProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VaultProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+VaultProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in BaseUpgradeabilityProxy (Slither line:1204)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BaseUpgradeabilityProxy 
+Looking in VaultProxy (Slither line:1213)
+
+Begin VaultProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: initialize(address,address,bytes) returns() (Slither line:3127)
+Checking function: admin() returns(address) (Slither line:3127)
+Visibility: external
+_governor()
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: external
+_implementation()
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+size > 0
+msg.sender == _governor()
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+require(bool,string)(isGovernor(),Caller is not the Governor)
+    sstore(slot, newImplementation) (Slither line:3163)
+upgradeTo reads and/or writes to variable slot (Slither line:3170)
+upgradeTo reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3170)
+upgradeTo reads and/or writes to variable OpenZeppelinUpgradesAddress (Slither line:3170)
+upgradeTo reads and/or writes to variable newImplementation (Slither line:3170)
+
+End VaultProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: VaultProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+End VaultProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: VaultProxy
+Setter found in contract VaultProxy
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: OpenZeppelinUpgradesAddress.isContract
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression _willFallback()
+Checking public function initialize
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking public function initialize
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function admin
+Checking external function implementation
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking public function governor
+Checking public function isGovernor
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function transferGovernance
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function claimGovernance
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _pendingGovernor(),Only the pending Governor can complete the claim)
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function VaultProxy._changeGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._setGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.governor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._governor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._setPendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:912)
+functions_writing_to_variable: exp = pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function VaultProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultProxy._pendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.transferGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultProxy.admin (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultProxy.isGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.claimGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.upgradeToAndCall (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: upgradeToAndCall writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultProxy.initialize (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: initialize writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VaultProxy.constructor (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: checking external function upgradeTo
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyGovernor()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyGovernor()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+has_compatibility_checks: checking public function initialize
+assert(bool)(IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1))
+has_compatibility_checks: condition IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(bytes)(eip1967.proxy.implementation)) - 1)
+require(bool,string)(_newGovernor != address(0),New Governor is address(0))
+has_compatibility_checks: condition _newGovernor != address(0)
+has_compatibility_checks: IF node exp = _data.length > 0
+require(bool)(success)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyGovernor()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+require(bool)(_implementation() == address(0))
+has_compatibility_checks: condition _implementation() == address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 { revert(0, returndatasize()) }
+    default { return(0, returndatasize()) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: initialize
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _governor()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = governorPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isGovernor(),Caller is not the Governor)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyGovernor()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStrategy.is_proxy (Slither line:1425)
+
+
+End IStrategy.is_proxy (Slither line:1428)
+
+
+Begin IStrategy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStrategy 
+
+End IStrategy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin InitializableERC20Detailed.is_proxy (Slither line:1425)
+
+
+End InitializableERC20Detailed.is_proxy (Slither line:1428)
+
+
+Begin InitializableERC20Detailed.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: InitializableERC20Detailed 
+
+End InitializableERC20Detailed.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin InitializableToken.is_proxy (Slither line:1425)
+
+
+End InitializableToken.is_proxy (Slither line:1428)
+
+
+Begin InitializableToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: InitializableToken 
+
+End InitializableToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StableMath.is_proxy (Slither line:1425)
+
+
+End StableMath.is_proxy (Slither line:1428)
+
+
+Begin StableMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StableMath 
+
+End StableMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OUSD.is_proxy (Slither line:1425)
+
+
+End OUSD.is_proxy (Slither line:1428)
+
+
+Begin OUSD.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OUSD 
+
+End OUSD.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBasicToken.is_proxy (Slither line:1425)
+
+
+End IBasicToken.is_proxy (Slither line:1428)
+
+
+Begin IBasicToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBasicToken 
+
+End IBasicToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Helpers.is_proxy (Slither line:1425)
+
+
+End Helpers.is_proxy (Slither line:1428)
+
+
+Begin Helpers.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Helpers 
+
+End Helpers.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin VaultStorage.is_proxy (Slither line:1425)
+
+
+End VaultStorage.is_proxy (Slither line:1428)
+
+
+Begin VaultStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VaultStorage 
+
+End VaultStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMinMaxOracle.is_proxy (Slither line:1425)
+
+
+End IMinMaxOracle.is_proxy (Slither line:1428)
+
+
+Begin IMinMaxOracle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMinMaxOracle 
+
+End IMinMaxOracle.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IViewMinMaxOracle.is_proxy (Slither line:1425)
+
+
+End IViewMinMaxOracle.is_proxy (Slither line:1428)
+
+
+Begin IViewMinMaxOracle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IViewMinMaxOracle 
+
+End IViewMinMaxOracle.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRebaseHooks.is_proxy (Slither line:1425)
+
+
+End IRebaseHooks.is_proxy (Slither line:1428)
+
+
+Begin IRebaseHooks.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRebaseHooks 
+
+End IRebaseHooks.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVault.is_proxy (Slither line:1425)
+
+
+End IVault.is_proxy (Slither line:1428)
+
+
+Begin IVault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVault 
+
+End IVault.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin VaultCore.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin VaultCore.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), sload(slot), 0, calldatasize(), 0, 0) (Slither line:1576)
+sload from variable: slot (Slither line:1599)
+Found storage slot: adminImplPosition
+Setting VaultCore._delegate_variable = VaultCore._proxy_impl_slot (Slither line:1609)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'slot'
+Looking for corresponding Variable
+Current function: fallback
+
+End VaultCore.find_delegatecall_in_asm (Slither line:1637)
+
+
+End VaultCore.is_proxy (Slither line:1476)
+
+
+Begin VaultCore.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VaultCore 
+Call destination adminImplPosition is constant (Slither line:1146)
+
+adminImplPosition is the implementation storage slot (Slither line:1149)
+
+VaultCore is delegating to adminImplPosition
+Looking for setter (Slither line:1200)
+
+Looking for setter in VaultStorage (Slither line:1204)
+
+
+Begin VaultStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9 (Slither line:3122)
+Checking function: setAdminImpl(address) returns() (Slither line:3127)
+Visibility: external
+setAdminImpl contains assembly (Slither line:3153)
+msg.sender == _governor()
+onlyGovernor()
+require(bool,string)(isGovernor(),Caller is not the Governor)
+{ sstore(position, newImpl) } (Slither line:3163)
+setAdminImpl reads and/or writes to variable position (Slither line:3170)
+setAdminImpl reads and/or writes to variable adminImplPosition (Slither line:3170)
+
+End VaultStorage.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setAdminImpl in contract: VaultStorage (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin VaultStorage.find_getter_in_contract (Slither line:2974)
+
+adminImplPosition is a Variable object
+0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9
+Checking function: constructor (Slither line:2988)
+Checking function: governor (Slither line:2988)
+governor returns address variable  (Slither line:3008)
+RETURN node expression: _governor() (Slither line:3028)
+Checking function: _governor (Slither line:2988)
+_governor returns address variable called governorOut (Slither line:3008)
+Checking function: _pendingGovernor (Slither line:2988)
+_pendingGovernor returns address variable called pendingGovernor (Slither line:3008)
+Checking function: isGovernor (Slither line:2988)
+isGovernor returns bool variable  (Slither line:3008)
+RETURN node expression: msg.sender == _governor() (Slither line:3028)
+Checking function: _setGovernor (Slither line:2988)
+Checking function: _setPendingGovernor (Slither line:2988)
+Checking function: transferGovernance (Slither line:2988)
+Checking function: claimGovernance (Slither line:2988)
+Checking function: _changeGovernor (Slither line:2988)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: setAdminImpl (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VaultStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin VaultCore.find_getter_in_contract (Slither line:2974)
+
+adminImplPosition is a Variable object
+0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9
+Checking function: setAdminImpl (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: governor (Slither line:2988)
+governor returns address variable  (Slither line:3008)
+RETURN node expression: _governor() (Slither line:3028)
+Checking function: _governor (Slither line:2988)
+_governor returns address variable called governorOut (Slither line:3008)
+_governor contains assembly (Slither line:3051)
+_governor contains assembly (Slither line:3051)
+_governor contains assembly (Slither line:3051)
+Checking function: _pendingGovernor (Slither line:2988)
+_pendingGovernor returns address variable called pendingGovernor (Slither line:3008)
+_pendingGovernor contains assembly (Slither line:3051)
+_pendingGovernor contains assembly (Slither line:3051)
+_pendingGovernor contains assembly (Slither line:3051)
+Checking function: isGovernor (Slither line:2988)
+isGovernor returns bool variable  (Slither line:3008)
+RETURN node expression: msg.sender == _governor() (Slither line:3028)
+Checking function: _setGovernor (Slither line:2988)
+Checking function: _setPendingGovernor (Slither line:2988)
+Checking function: transferGovernance (Slither line:2988)
+Checking function: claimGovernance (Slither line:2988)
+Checking function: _changeGovernor (Slither line:2988)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+isConstructor contains assembly (Slither line:3051)
+RETURN node expression: cs == 0 (Slither line:3028)
+isConstructor contains assembly (Slither line:3051)
+isConstructor contains assembly (Slither line:3051)
+isConstructor contains assembly (Slither line:3051)
+isConstructor contains assembly (Slither line:3051)
+Checking function: mint (Slither line:2988)
+Checking function: mintMultiple (Slither line:2988)
+Checking function: redeem (Slither line:2988)
+Checking function: _redeem (Slither line:2988)
+Checking function: redeemAll (Slither line:2988)
+Checking function: allocate (Slither line:2988)
+Checking function: _allocate (Slither line:2988)
+Checking function: rebase (Slither line:2988)
+rebase returns uint256 variable  (Slither line:3008)
+Checking function: rebase (Slither line:2988)
+rebase returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: totalValue (Slither line:2988)
+totalValue returns uint256 variable called value (Slither line:3008)
+Checking function: _totalValue (Slither line:2988)
+_totalValue returns uint256 variable called value (Slither line:3008)
+RETURN node expression: _totalValueInVault() + _totalValueInStrategies() (Slither line:3028)
+Checking function: _totalValueInVault (Slither line:2988)
+_totalValueInVault returns uint256 variable called value (Slither line:3008)
+Checking function: _totalValueInStrategies (Slither line:2988)
+_totalValueInStrategies returns uint256 variable called value (Slither line:3008)
+Checking function: _totalValueInStrategy (Slither line:2988)
+_totalValueInStrategy returns uint256 variable called value (Slither line:3008)
+Checking function: _strategyWeightDifference (Slither line:2988)
+_strategyWeightDifference returns uint256 variable called difference (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: _selectDepositStrategyAddr (Slither line:2988)
+_selectDepositStrategyAddr returns address variable called depositStrategyAddr (Slither line:3008)
+Checking function: _selectWithdrawStrategyAddr (Slither line:2988)
+_selectWithdrawStrategyAddr returns address variable called withdrawStrategyAddr (Slither line:3008)
+Checking function: checkBalance (Slither line:2988)
+checkBalance returns uint256 variable  (Slither line:3008)
+RETURN node expression: _checkBalance(_asset) (Slither line:3028)
+Checking function: _checkBalance (Slither line:2988)
+_checkBalance returns uint256 variable called balance (Slither line:3008)
+Checking function: _checkBalance (Slither line:2988)
+_checkBalance returns uint256 variable called balance (Slither line:3008)
+Checking function: calculateRedeemOutputs (Slither line:2988)
+calculateRedeemOutputs returns uint256[] variable  (Slither line:3008)
+RETURN node expression: _calculateRedeemOutputs(_amount) (Slither line:3028)
+Checking function: _calculateRedeemOutputs (Slither line:2988)
+_calculateRedeemOutputs returns uint256[] variable called outputs (Slither line:3008)
+Checking function: _getAssetPrices (Slither line:2988)
+_getAssetPrices returns uint256[] variable called assetPrices (Slither line:3008)
+Checking function: getAssetCount (Slither line:2988)
+getAssetCount returns uint256 variable  (Slither line:3008)
+RETURN node expression: allAssets.length (Slither line:3028)
+Checking function: getAllAssets (Slither line:2988)
+getAllAssets returns address[] variable  (Slither line:3008)
+RETURN node expression: allAssets (Slither line:3028)
+Checking function: getStrategyCount (Slither line:2988)
+getStrategyCount returns uint256 variable  (Slither line:3008)
+RETURN node expression: allStrategies.length (Slither line:3028)
+Checking function: isSupportedAsset (Slither line:2988)
+isSupportedAsset returns bool variable  (Slither line:3008)
+RETURN node expression: assets[_asset].isSupported (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VaultCore.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in VaultCore (Slither line:1305)
+or in VaultStorage (Slither line:1319)
+Checking for adminImplPosition at slot 17 in contract OUSD (Slither line:1355)
+Checking for None at slot 17 in contract VaultStorage (Slither line:1355)
+Found adminImplPosition at slot 17 in contract VaultStorage (Slither line:1362)
+
+Begin VaultStorage.find_getter_in_contract (Slither line:2974)
+
+adminImplPosition is a Variable object
+0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9
+Checking function: constructor (Slither line:2988)
+Checking function: governor (Slither line:2988)
+governor returns address variable  (Slither line:3008)
+RETURN node expression: _governor() (Slither line:3028)
+Checking function: _governor (Slither line:2988)
+_governor returns address variable called governorOut (Slither line:3008)
+Checking function: _pendingGovernor (Slither line:2988)
+_pendingGovernor returns address variable called pendingGovernor (Slither line:3008)
+Checking function: isGovernor (Slither line:2988)
+isGovernor returns bool variable  (Slither line:3008)
+RETURN node expression: msg.sender == _governor() (Slither line:3028)
+Checking function: _setGovernor (Slither line:2988)
+Checking function: _setPendingGovernor (Slither line:2988)
+Checking function: transferGovernance (Slither line:2988)
+Checking function: claimGovernance (Slither line:2988)
+Checking function: _changeGovernor (Slither line:2988)
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: setAdminImpl (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VaultStorage.find_getter_in_contract (Slither line:3083)
+
+detect_storage_slot: VaultCore
+Setter found in contract VaultStorage
+impl_address_from_contract_call: 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9
+impl_address_from_contract_call: StateVariable adminImplPosition
+impl_address_from_contract_call: getter is None
+Checking external function setAdminImpl
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function setAdminImpl
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking public function governor
+Checking public function isGovernor
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function transferGovernance
+Found 'msg.sender ==' in expression: msg.sender == _governor()
+Checking external function claimGovernance
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == _pendingGovernor(),Only the pending Governor can complete the claim)
+Checking external function mint
+Checking external function mintMultiple
+Checking public function redeem
+Checking external function redeemAll
+Checking public function allocate
+Checking public function rebase
+Checking external function totalValue
+Checking external function checkBalance
+Checking external function calculateRedeemOutputs
+Checking public function getAssetCount
+Checking external function getAllAssets
+Checking public function getStrategyCount
+Checking external function isSupportedAsset
+Checking external function fallback
+functions_writing_to_variable: adminImplPosition
+functions_writing_to_variable: checking function VaultStorage.isGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.claimGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._setGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._changeGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.redeemAll (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._totalValueInVault (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._checkBalance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.getStrategyCount (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.governor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:912)
+functions_writing_to_variable: exp = pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:912)
+functions_writing_to_variable: exp = adminImplPosition = 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: adminImplPosition = 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9 (proxy_features line:912)
+functions_writing_to_variable: Identifier: adminImplPosition (proxy_features line:924)
+get_value_assigned: adminImplPosition = 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9
+functions_writing_to_variable: checking function VaultCore.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governorPosition = 0x7bea13895fa79d2831e0a9e28edede30099005a50d652d8957cf8a607ee6ca4a (proxy_features line:912)
+functions_writing_to_variable: exp = pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingGovernorPosition = 0x44c4d30b2eaad5130ad70c3ba6972730566f3e6359ab83e800d905c61b1c51db (proxy_features line:912)
+functions_writing_to_variable: exp = adminImplPosition = 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: adminImplPosition = 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9 (proxy_features line:912)
+functions_writing_to_variable: Identifier: adminImplPosition (proxy_features line:924)
+get_value_assigned: adminImplPosition = 0xa2bd3d3cf188a41358c8b401076eb59066b09dec5775650c0de4c55187d17bd9
+functions_writing_to_variable: exp = MAX_UINT = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: MAX_UINT = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (proxy_features line:912)
+functions_writing_to_variable: checking function VaultCore.isConstructor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.allocate (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._totalValueInStrategies (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._checkBalance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage._setGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage._changeGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.isSupportedAsset (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._setPendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._governor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._allocate (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.governor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.calculateRedeemOutputs (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._totalValueInStrategy (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.isConstructor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.mint (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.rebase (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage._setPendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage._governor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.setAdminImpl (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+{ sstore(position, newImpl) }
+(proxy_features line:953)
+newImpl
+functions_writing_to_variable: setAdminImpl writes newImpl to adminImplPosition w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultCore._strategyWeightDifference (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.transferGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._calculateRedeemOutputs (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._pendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.mintMultiple (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.rebase (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._selectDepositStrategyAddr (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._getAssetPrices (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage.transferGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.redeem (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.setAdminImpl (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+{ sstore(position, newImpl) }
+(proxy_features line:953)
+newImpl
+functions_writing_to_variable: setAdminImpl writes newImpl to adminImplPosition w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function VaultCore.claimGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.isGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.totalValue (proxy_features line:898)
+functions_writing_to_variable: checking function VaultStorage._pendingGovernor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._selectWithdrawStrategyAddr (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.getAssetCount (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._totalValue (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore._redeem (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.checkBalance (proxy_features line:898)
+functions_writing_to_variable: checking function VaultCore.getAllAssets (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function setAdminImpl
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+has_compatibility_checks: checking external function setAdminImpl
+require(bool,string)(isGovernor(),Caller is not the Governor)
+has_compatibility_checks: condition isGovernor()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), sload(slot), 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 { revert(0, returndatasize()) }
+    default { return(0, returndatasize()) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: slot = adminImplPosition
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found external function: setAdminImpl
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _governor()
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyGovernor()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isGovernor(),Caller is not the Governor)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = governorPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = adminImplPosition

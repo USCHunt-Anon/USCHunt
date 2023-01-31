@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TrustPay (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.0/f5Fe988c5db2b4a1f52f75B065F168a34975A67F_TrustPay.sol/f5Fe988c5db2b4a1f52f75B065F168a34975A67F_TrustPay.sol#5-113)",
+        "elements": [],
+        "description": "TrustPay (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.0/f5Fe988c5db2b4a1f52f75B065F168a34975A67F_TrustPay.sol/f5Fe988c5db2b4a1f52f75B065F168a34975A67F_TrustPay.sol#5-113) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.trustpay:2021)\nMissing compatibility check in TrustPay.constructor(address)\nFound compatibility check in TrustPay.upgradeTo(address)\n",
+        "id": "d525c98170bb8e388c260a8b8db2e59c8e25cb976a3d80066f861a0fb98be2ec",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TrustPay.implementationPosition",
+          "impl_address_setter": "TrustPay.upgradeTo(address)",
+          "impl_address_getter": "TrustPay.implementation()",
+          "impl_address_location": "TrustPay (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.8.0/f5Fe988c5db2b4a1f52f75B065F168a34975A67F_TrustPay.sol/f5Fe988c5db2b4a1f52f75B065F168a34975A67F_TrustPay.sol#5-113)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.trustpay:2021)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "TrustPay.constructor(address)": "missing",
+              "TrustPay.upgradeTo(address)": "require(bool,string)(currentImplementation != _newImplementation,New implementation address must not be the same as old implementation address)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "setAdmin(address,bool)",
+              "emercencyWithdrawToken(string,address)",
+              "withdrawFund(address,address,uint256)",
+              "setTaxFee(uint256)",
+              "setFeeRecipientAddress(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#148-183)",
+        "elements": [],
+        "description": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#148-183) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "440593137f60d78a987507b62660a98bfae7c1b472301c2b1e475d7063be7232",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#185-216)",
+        "elements": [],
+        "description": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#185-216) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "30490bdc895a1bad2a925d1ede3644a9b8f55ae1e217cc7d434704cf915f9985",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "SQUID (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#218-257)",
+        "elements": [],
+        "description": "SQUID (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#218-257) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "ac225f741c9b4030a0ade33cf290e25c4518ab00e99065c4718251c7b36083f3",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ApprovedEngine.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "SQUID.approveTo(address)",
+          "impl_address_getter": "ApprovedEngine._implementation()",
+          "impl_address_location": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol/788415df4378cfbc227f9e9433e259a5cb7d6a76_SQUIDToken.sol#185-216)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "SQUID.approveTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "SQUID.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ApprovedEngine.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "approveTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

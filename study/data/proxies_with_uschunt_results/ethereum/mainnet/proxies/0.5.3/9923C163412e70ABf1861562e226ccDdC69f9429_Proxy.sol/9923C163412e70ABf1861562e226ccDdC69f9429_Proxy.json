@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#14-49)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#14-49) is an upgradeable proxy.\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nmasterCopy is declared in both the proxy and logic contract (MasterCopy) in storage slot 0.\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete changeMasterCopy from MasterCopy\n",
+        "id": "2f6dc997d2d6522b0a0a57ace4a08cfbf7800f1b7d13bb2c4dff93435302ade2",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.masterCopy",
+          "impl_address_setter": "MasterCopy.changeMasterCopy(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#14-49)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_also_declared_in": "../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#67-86",
+          "impl_address_slot": "0",
+          "master_copy_coupling": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MasterCopy.changeMasterCopy(address)": {
+                "check": "require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove changeMasterCopy from MasterCopy"
+        }
+      },
+      {
+        "contract": "FallbackManager (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#518-568)",
+        "elements": [],
+        "description": "FallbackManager (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#518-568) is an upgradeable proxy.\nFallbackManager uses `call` instead of `delegatecall`\nFALLBACK_HANDLER_STORAGE_SLOT is declared in the proxy.\n uses Unstructured Storage\nMissing compatibility check in FallbackManager.setFallbackHandler(address)\nMissing compatibility check in FallbackManager.setFallbackHandler(address)\nMissing compatibility check in GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)\nTo remove upgradeability, delete setup from GnosisSafe\n",
+        "id": "0c67ce3c1a9c036536ff034b6cd33fc6bb88b6476686a2c4f751a57a1a697605",
+        "features": {
+          "upgradeable": true,
+          "uses_call_instead_of_delegatecall": true,
+          "impl_address_variable": "FallbackManager.FALLBACK_HANDLER_STORAGE_SLOT",
+          "impl_address_setter": "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "FallbackManager (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#518-568)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5",
+          "unstructured_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "FallbackManager.setFallbackHandler(address)": "missing",
+              "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setup from GnosisSafe",
+          "immutable_functions": {
+            "other": [
+              "setFallbackHandler(address)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "GnosisSafe (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#725-1127)",
+        "elements": [],
+        "description": "GnosisSafe (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#725-1127) is an upgradeable proxy.\nGnosisSafe uses `call` instead of `delegatecall`\nFALLBACK_HANDLER_STORAGE_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5\nMissing compatibility check in FallbackManager.setFallbackHandler(address)\nMissing compatibility check in GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)\n",
+        "id": "53a0a46c2cf4de473bc4afc6879307c73d9c6faf788c01d4df0b89c2d70c5b1f",
+        "features": {
+          "upgradeable": true,
+          "uses_call_instead_of_delegatecall": true,
+          "impl_address_variable": "FallbackManager.FALLBACK_HANDLER_STORAGE_SLOT",
+          "impl_address_setter": "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "FallbackManager (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.3/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol/9923C163412e70ABf1861562e226ccDdC69f9429_Proxy.sol#518-568)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x6c9a6c4a39284e37ed1cf53d337577d14212a4870fb976a4366c693b939918d5",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "FallbackManager.setFallbackHandler(address)": "missing",
+              "GnosisSafe.setup(address[],uint256,address,bytes,address,address,uint256,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "containing_delegatecall": [
+              "execTransactionFromModuleReturnData(address,uint256,bytes,Enum.Operation)"
+            ],
+            "other": [
+              "setFallbackHandler(address)",
+              "addOwnerWithThreshold(address,uint256)",
+              "removeOwner(address,address,uint256)",
+              "swapOwner(address,address,address)",
+              "changeThreshold(uint256)",
+              "getThreshold()",
+              "isOwner(address)",
+              "getOwners()",
+              "enableModule(Module)",
+              "disableModule(Module,Module)",
+              "execTransactionFromModule(address,uint256,bytes,Enum.Operation)",
+              "getModules()",
+              "getModulesPaginated(address,uint256)",
+              "changeMasterCopy(address)",
+              "setup(address[],uint256,address,bytes,address,address,uint256,address)",
+              "execTransaction(address,uint256,bytes,Enum.Operation,uint256,uint256,uint256,address,address,bytes)",
+              "requiredTxGas(address,uint256,bytes,Enum.Operation)",
+              "approveHash(bytes32)",
+              "signMessage(bytes)",
+              "isValidSignature(bytes,bytes)",
+              "getMessageHash(bytes)",
+              "encodeTransactionData(address,uint256,bytes,Enum.Operation,uint256,uint256,uint256,address,address,uint256)",
+              "getTransactionHash(address,uint256,bytes,Enum.Operation,uint256,uint256,uint256,address,address,uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

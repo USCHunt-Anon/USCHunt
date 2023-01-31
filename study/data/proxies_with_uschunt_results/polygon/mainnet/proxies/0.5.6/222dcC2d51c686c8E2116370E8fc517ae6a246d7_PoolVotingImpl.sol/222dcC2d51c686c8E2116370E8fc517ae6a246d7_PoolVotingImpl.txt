@@ -1,0 +1,681 @@
+
+Begin PoolVoting.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin PoolVoting.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End PoolVoting.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PoolVoting.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin PoolVoting.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking MAX_VOTING_POOL_COUNT (Slither line:1689)
+Checking userVotingPoolAddress (Slither line:1689)
+Checking userVotingPoolAmount (Slither line:1689)
+Checking userVotingPoolCount (Slither line:1689)
+Checking poolAmount (Slither line:1689)
+Checking poolRanking (Slither line:1689)
+Checking poolCount (Slither line:1689)
+Checking marketIndex0 (Slither line:1689)
+Checking marketIndex1 (Slither line:1689)
+Checking userLastIndex0 (Slither line:1689)
+Checking userLastIndex1 (Slither line:1689)
+Checking userRewardSum0 (Slither line:1689)
+Checking userRewardSum1 (Slither line:1689)
+Checking validPoolOperator (Slither line:1689)
+Checking totalVotingAmount (Slither line:1689)
+Checking prevPoolAmount (Slither line:1689)
+Checking poolRankingExist (Slither line:1689)
+Checking prevTotalAmount (Slither line:1689)
+Checking isValidToken (Slither line:1689)
+Checking isBoostingToken (Slither line:1689)
+Checking boostingPowerMESH_A (Slither line:1689)
+Checking boostingPowerA_A (Slither line:1689)
+Checking boostingPowerMESH_B (Slither line:1689)
+Checking boostingPowerA_B (Slither line:1689)
+Checking boostingAmount (Slither line:1689)
+Checking prevBoostingAmount (Slither line:1689)
+Checking epochVoted (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking governance (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in PoolVoting.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract PoolVoting (Slither line:1730)
+
+End PoolVoting.find_delegate_variable_by_name
+
+
+End PoolVoting.find_delegatecall_in_asm (Slither line:1637)
+
+
+End PoolVoting.is_proxy (Slither line:1476)
+
+
+Begin PoolVoting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PoolVoting 
+PoolVoting is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin PoolVoting.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End PoolVoting.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: PoolVoting (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin PoolVoting.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End PoolVoting.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in PoolVoting (Slither line:1305)
+Checking for implementation at slot 29 in contract PoolVotingImpl (Slither line:1355)
+Found implementation at slot 29 in contract PoolVotingImpl (Slither line:1362)
+
+Begin PoolVotingImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: PoolVotingImpl20220322 (Slither line:3028)
+Checking function: setValidPoolOperator (Slither line:2988)
+Checking function: delisting (Slither line:2988)
+Checking function: setValidToken (Slither line:2988)
+Checking function: setBoostingToken (Slither line:2988)
+Checking function: setBoostingPower (Slither line:2988)
+Checking function: getPoolBoosting (Slither line:2988)
+getPoolBoosting returns uint256 variable called boostingPower (Slither line:3008)
+Checking function: getPoolVotingMining (Slither line:2988)
+getPoolVotingMining returns uint256 variable  (Slither line:3008)
+RETURN node expression: rate.mul(poolAmt).div(totalPoolAmt) (Slither line:3028)
+Checking function: writePoolVotingStatList (Slither line:2988)
+Checking function: writePoolVotingStatRange (Slither line:2988)
+Checking function: writePoolVotingStat (Slither line:2988)
+Checking function: addVoting (Slither line:2988)
+Checking function: removeVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: _removeAllVoting (Slither line:2988)
+Checking function: marketUpdate0 (Slither line:2988)
+Checking function: marketUpdate1 (Slither line:2988)
+Checking function: _giveReward (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimRewardAll (Slither line:2988)
+Checking function: _giveRewardAll (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End PoolVotingImpl.find_getter_in_contract (Slither line:3083)
+
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function PoolVoting.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVoting.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function PoolVoting.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVoting._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == governance) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function PoolVoting.slitherConstructorConstantVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation', '_newImp', 'TMP_34']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+require(bool)(msg.sender == governance)
+has_compatibility_checks: condition msg.sender == governance
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == governance)
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernance.is_proxy (Slither line:1425)
+
+
+End IGovernance.is_proxy (Slither line:1428)
+
+
+Begin IGovernance.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernance 
+
+End IGovernance.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFactory.is_proxy (Slither line:1425)
+
+
+End IFactory.is_proxy (Slither line:1428)
+
+
+Begin IFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactory 
+
+End IFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IExchange.is_proxy (Slither line:1425)
+
+
+End IExchange.is_proxy (Slither line:1428)
+
+
+Begin IExchange.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IExchange 
+
+End IExchange.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernor.is_proxy (Slither line:1425)
+
+
+End IGovernor.is_proxy (Slither line:1428)
+
+
+Begin IGovernor.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernor 
+
+End IGovernor.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PoolVotingImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin PoolVotingImpl.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End PoolVotingImpl.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PoolVotingImpl.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin PoolVotingImpl.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking MAX_VOTING_POOL_COUNT (Slither line:1689)
+Checking userVotingPoolAddress (Slither line:1689)
+Checking userVotingPoolAmount (Slither line:1689)
+Checking userVotingPoolCount (Slither line:1689)
+Checking poolAmount (Slither line:1689)
+Checking poolRanking (Slither line:1689)
+Checking poolCount (Slither line:1689)
+Checking marketIndex0 (Slither line:1689)
+Checking marketIndex1 (Slither line:1689)
+Checking userLastIndex0 (Slither line:1689)
+Checking userLastIndex1 (Slither line:1689)
+Checking userRewardSum0 (Slither line:1689)
+Checking userRewardSum1 (Slither line:1689)
+Checking validPoolOperator (Slither line:1689)
+Checking totalVotingAmount (Slither line:1689)
+Checking prevPoolAmount (Slither line:1689)
+Checking poolRankingExist (Slither line:1689)
+Checking prevTotalAmount (Slither line:1689)
+Checking isValidToken (Slither line:1689)
+Checking isBoostingToken (Slither line:1689)
+Checking boostingPowerMESH_A (Slither line:1689)
+Checking boostingPowerA_A (Slither line:1689)
+Checking boostingPowerMESH_B (Slither line:1689)
+Checking boostingPowerA_B (Slither line:1689)
+Checking boostingAmount (Slither line:1689)
+Checking prevBoostingAmount (Slither line:1689)
+Checking epochVoted (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking governance (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in PoolVotingImpl.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract PoolVoting (Slither line:1730)
+
+End PoolVotingImpl.find_delegate_variable_by_name
+
+
+End PoolVotingImpl.find_delegatecall_in_asm (Slither line:1637)
+
+
+End PoolVotingImpl.is_proxy (Slither line:1476)
+
+
+Begin PoolVotingImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PoolVotingImpl 
+PoolVotingImpl is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in PoolVoting (Slither line:1204)
+
+
+Begin PoolVoting.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImp (Slither line:3122)
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+_newImp
+
+End PoolVoting.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: PoolVoting (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin PoolVoting.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End PoolVoting.find_getter_in_contract (Slither line:3083)
+
+
+Begin PoolVotingImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: PoolVotingImpl20220322 (Slither line:3028)
+Checking function: setValidPoolOperator (Slither line:2988)
+Checking function: delisting (Slither line:2988)
+Checking function: setValidToken (Slither line:2988)
+Checking function: setBoostingToken (Slither line:2988)
+Checking function: setBoostingPower (Slither line:2988)
+Checking function: getPoolBoosting (Slither line:2988)
+getPoolBoosting returns uint256 variable called boostingPower (Slither line:3008)
+Checking function: getPoolVotingMining (Slither line:2988)
+getPoolVotingMining returns uint256 variable  (Slither line:3008)
+RETURN node expression: rate.mul(poolAmt).div(totalPoolAmt) (Slither line:3028)
+Checking function: writePoolVotingStatList (Slither line:2988)
+Checking function: writePoolVotingStatRange (Slither line:2988)
+Checking function: writePoolVotingStat (Slither line:2988)
+Checking function: addVoting (Slither line:2988)
+Checking function: removeVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: _removeAllVoting (Slither line:2988)
+Checking function: marketUpdate0 (Slither line:2988)
+Checking function: marketUpdate1 (Slither line:2988)
+Checking function: _giveReward (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimRewardAll (Slither line:2988)
+Checking function: _giveRewardAll (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End PoolVotingImpl.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in PoolVotingImpl (Slither line:1305)
+or in PoolVoting (Slither line:1319)
+Checking for implementation at slot 29 in contract PoolVoting (Slither line:1355)
+Found implementation at slot 29 in contract PoolVoting (Slither line:1362)
+
+Begin PoolVoting.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End PoolVoting.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _newImp
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool)(impl != address(0))
+impl_address_from_contract_call: arg is impl != address(0)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance)
+Checking public function version
+Checking public function setValidPoolOperator
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == IGovernance(governance).owner())
+Checking public function delisting
+Checking public function setValidToken
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance || msg.sender == validPoolOperator)
+Checking public function setBoostingToken
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance || msg.sender == validPoolOperator)
+Checking public function setBoostingPower
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governance || msg.sender == validPoolOperator)
+Checking public function getPoolBoosting
+Checking public function getPoolVotingMining
+Checking public function writePoolVotingStatList
+Checking public function writePoolVotingStatRange
+Checking public function addVoting
+Checking public function removeVoting
+Checking public function removeAllVoting
+Checking public function removeAllVoting
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == IGovernance(governance).votingMESH())
+Checking public function marketUpdate0
+Checking public function marketUpdate1
+Checking public function claimReward
+Checking public function claimRewardAll
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function PoolVotingImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.getPoolVotingMining (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVoting.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function PoolVotingImpl.removeAllVoting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl._giveRewardAll (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.setValidPoolOperator (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.writePoolVotingStatList (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl._removeAllVoting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVoting.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.writePoolVotingStatRange (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.delisting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.marketUpdate0 (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVoting.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.writePoolVotingStat (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.setValidToken (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.marketUpdate1 (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.addVoting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.setBoostingToken (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl._giveReward (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function PoolVoting._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == governance) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function PoolVotingImpl.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.removeVoting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == governance) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function PoolVotingImpl.setBoostingPower (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVoting.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.constructor (proxy_features line:898)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function PoolVotingImpl.removeAllVoting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.getPoolBoosting (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.claimRewardAll (proxy_features line:898)
+functions_writing_to_variable: checking function PoolVotingImpl.slitherConstructorConstantVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation', 'TMP_34', '_implementation', '_newImp', '_newImp']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+require(bool)(msg.sender == governance)
+has_compatibility_checks: condition msg.sender == governance
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == governance)
+has_compatibility_checks: condition msg.sender == governance
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == governance)

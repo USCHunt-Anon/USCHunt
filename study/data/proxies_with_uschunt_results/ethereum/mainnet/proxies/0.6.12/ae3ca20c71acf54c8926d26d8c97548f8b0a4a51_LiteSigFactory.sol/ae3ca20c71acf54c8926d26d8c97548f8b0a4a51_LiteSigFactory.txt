@@ -1,0 +1,521 @@
+
+Begin LiteSig.is_proxy (Slither line:1425)
+
+
+End LiteSig.is_proxy (Slither line:1428)
+
+
+Begin LiteSig.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LiteSig 
+
+End LiteSig.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Administratable.is_proxy (Slither line:1425)
+
+
+End Administratable.is_proxy (Slither line:1428)
+
+
+Begin Administratable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Administratable 
+
+End Administratable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking PROXIABLE_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'name': 'PROXIABLE_SLOT', 'nodeType': 'YulIdentifier', 'src': '15929:14:0'} (Slither line:1909)
+Found storage slot in fallback: PROXIABLE_SLOT (Slither line:1943)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: PROXIABLE_SLOT (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination PROXIABLE_SLOT is constant (Slither line:1146)
+
+PROXIABLE_SLOT is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to PROXIABLE_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+PROXIABLE_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for PROXIABLE_SLOT at slot 0 in contract LiteSig (Slither line:1355)
+Checking for None at slot 0 in contract Ownable (Slither line:1355)
+Checking for None at slot 0 in contract Administratable (Slither line:1355)
+Checking for None at slot 0 in contract LiteSigFactory (Slither line:1355)
+
+Begin LiteSig.find_getter_in_contract (Slither line:2974)
+
+PROXIABLE_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: init (Slither line:2988)
+Checking function: safeRecover (Slither line:2988)
+safeRecover returns address variable  (Slither line:3008)
+RETURN node expression: ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s) (Slither line:3028)
+RETURN node expression: address(0) (Slither line:3028)
+RETURN node expression: address(0) (Slither line:3028)
+Checking function: submit (Slither line:2988)
+submit returns bool variable  (Slither line:3008)
+RETURN node expression: success (Slither line:3028)
+Checking function: receive (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End LiteSig.find_getter_in_contract (Slither line:3083)
+
+
+Begin LiteSig.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: init(address[],uint256,uint256) returns() (Slither line:3127)
+Checking function: safeRecover(bytes32,uint8,bytes32,bytes32) returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: submit(uint8[],bytes32[],bytes32[],address,uint256,bytes) returns(bool) (Slither line:3127)
+Visibility: public
+nonce = nonce + 1
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(success) = address(destination).call{value: value}(data)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(initialized,Initialization must be complete)
+require(bool,string)(sigR.length == sigS.length && sigR.length == sigV.length,Sig arrays not the same lengths)
+require(bool,string)(sigR.length == requiredSignatures,Signatures list is not the expected length)
+address(0)
+success
+Execution(nonce,destination,value,data)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+i ++
+ExecutionFailure(nonce,destination,value,data)
+address(0)
+require(bool,string)(ownersMap[recovered],Signature must be from an owner)
+require(bool,string)(recovered > lastAdd,Signature must be unique)
+lastAdd = recovered
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: receive() returns() (Slither line:3127)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End LiteSig.find_setter_in_contract (Slither line:3345)
+
+
+Begin Context.find_getter_in_contract (Slither line:2974)
+
+PROXIABLE_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End Context.find_getter_in_contract (Slither line:3083)
+
+
+Begin Context.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Context.find_setter_in_contract (Slither line:3345)
+
+
+Begin Ownable.find_getter_in_contract (Slither line:2974)
+
+PROXIABLE_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End Ownable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Ownable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+OwnershipTransferred(_owner,address(0))
+msg.sender
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+OwnershipTransferred(_owner,newOwner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+msg.sender
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Ownable.find_setter_in_contract (Slither line:3345)
+
+
+Begin Administratable.find_getter_in_contract (Slither line:2974)
+
+PROXIABLE_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: isAdministrator (Slither line:2988)
+isAdministrator returns bool variable  (Slither line:3008)
+RETURN node expression: administrators[addressToTest] (Slither line:3028)
+Checking function: addAdmin (Slither line:2988)
+Checking function: removeAdmin (Slither line:2988)
+
+End Administratable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Administratable.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: isAdministrator(address) returns(bool) (Slither line:3127)
+Visibility: public
+administrators[addressToTest]
+Checking function: addAdmin(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(administrators[adminToAdd] == false,Account to be added to admin list is already an admin)
+administrators[adminToAdd] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+AdminAdded(adminToAdd,msg.sender)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+Checking function: removeAdmin(address) returns() (Slither line:3127)
+Visibility: public
+administrators[adminToRemove] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+AdminRemoved(adminToRemove,msg.sender)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+onlyOwner()
+require(bool,string)(administrators[adminToRemove] == true,Account to be removed from admin list is not already an admin)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+msg.sender
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+OwnershipTransferred(_owner,newOwner)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Administratable.find_setter_in_contract (Slither line:3345)
+
+
+Begin LiteSigFactory.find_getter_in_contract (Slither line:2974)
+
+PROXIABLE_SLOT is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isAdministrator (Slither line:2988)
+isAdministrator returns bool variable  (Slither line:3008)
+RETURN node expression: administrators[addressToTest] (Slither line:3028)
+Checking function: addAdmin (Slither line:2988)
+Checking function: removeAdmin (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: createLiteSig (Slither line:2988)
+createLiteSig returns address variable  (Slither line:3008)
+RETURN node expression: deployedAddress (Slither line:3028)
+
+End LiteSigFactory.find_getter_in_contract (Slither line:3083)
+
+
+Begin LiteSigFactory.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: createLiteSig(bytes32,address[],uint256,uint256) returns(address) (Slither line:3127)
+Visibility: public
+createLiteSig contains assembly (Slither line:3153)
+deployedAddress = create2(uint256,uint256,uint256,uint256)(0,deployCode + 0x20,mload(uint256)(deployCode),salt)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+revert(uint256,uint256)(0,0)
+onlyAdministrator()
+administrators[addressToTest]
+require(bool,string)(isAdministrator(msg.sender),Calling account is not an administrator.)
+Deployed(deployedAddress)
+LiteSig(deployedAddress).init(_owners,_requiredSignatures,chainId)
+deployedAddress
+Checking function: isAdministrator(address) returns(bool) (Slither line:3127)
+Visibility: public
+administrators[addressToTest]
+Checking function: addAdmin(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(administrators[adminToAdd] == false,Account to be added to admin list is already an admin)
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+administrators[adminToAdd] = true
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+msg.sender
+AdminAdded(adminToAdd,msg.sender)
+onlyOwner()
+Checking function: removeAdmin(address) returns() (Slither line:3127)
+Visibility: public
+administrators[adminToRemove] = false
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+AdminRemoved(adminToRemove,msg.sender)
+msg.sender
+onlyOwner()
+require(bool,string)(administrators[adminToRemove] == true,Account to be removed from admin list is not already an admin)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(_owner == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+msg.sender
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+OwnershipTransferred(_owner,newOwner)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End LiteSigFactory.find_setter_in_contract (Slither line:3345)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LiteSigFactory.is_proxy (Slither line:1425)
+
+
+End LiteSigFactory.is_proxy (Slither line:1428)
+
+
+Begin LiteSigFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LiteSigFactory 
+
+End LiteSigFactory.is_upgradeable_proxy (Slither line:1407)
+

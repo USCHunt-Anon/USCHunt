@@ -1,0 +1,272 @@
+
+Begin DSAuthority.is_proxy (Slither line:1425)
+
+
+End DSAuthority.is_proxy (Slither line:1428)
+
+
+Begin DSAuthority.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DSAuthority 
+
+End DSAuthority.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DSAuthEvents.is_proxy (Slither line:1425)
+
+
+End DSAuthEvents.is_proxy (Slither line:1428)
+
+
+Begin DSAuthEvents.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DSAuthEvents 
+
+End DSAuthEvents.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DSAuth.is_proxy (Slither line:1425)
+
+
+End DSAuth.is_proxy (Slither line:1428)
+
+
+Begin DSAuth.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DSAuth 
+
+End DSAuth.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Resolver.is_proxy (Slither line:1425)
+
+
+End Resolver.is_proxy (Slither line:1428)
+
+
+Begin Resolver.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Resolver 
+
+End Resolver.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EtherRouter.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EtherRouter.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let size := extcodesize(destination) (Slither line:1576)
+    if eq(size, 0) (Slither line:1576)
+    { (Slither line:1576)
+        revert(0, 0) (Slither line:1576)
+    } (Slither line:1576)
+    calldatacopy(mload(0x40), 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), destination, mload(0x40), calldatasize(), mload(0x40), 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'destination'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin EtherRouter.find_delegate_variable_from_name
+Searching for destination (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking authority (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking resolver (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking destination (Slither line:1703)
+destination is a Local Variable in EtherRouter.fallback (Slither line:1707)
+Expression: resolver.lookup(msg.sig) (Slither line:1719)
+
+Begin EtherRouter.find_delegate_from_call_exp
+
+resolver.lookup(msg.sig) (Slither line:1993)
+called = resolver.lookup (Slither line:2000)
+Called member of resolver (Slither line:2007)
+
+Begin EtherRouter.find_delegate_from_member_access
+
+Expression: resolver.lookup(msg.sig) (Slither line:2348)
+resolver (Slither line:2361)
+lookup is a member of the contract type: Resolver (Slither line:2406)
+Looking for lookup in Resolver (Slither line:2513)
+Found the function called lookup (Slither line:2517)
+Returns a variable of type address (Slither line:2522)
+Found RETURN node: pointers[sig] (Slither line:2534)
+Return expression is an IndexAccess on variable pointers (Slither line:2577)
+pointers is a StateVariable (Slither line:2582)
+
+End EtherRouter.find_delegate_from_member_access (Slither line:2635)
+
+
+End EtherRouter.find_delegate_from_call_exp (Slither line:2009)
+
+Call Expression
+End EtherRouter.find_delegate_variable_by_name (Slither line:1739)
+
+
+End EtherRouter.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EtherRouter.is_proxy (Slither line:1476)
+
+
+Begin EtherRouter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EtherRouter 
+EtherRouter is delegating to pointers
+Looking for setter (Slither line:1200)
+
+Looking for setter in Resolver (Slither line:1204)
+
+
+Begin Resolver.find_setter_in_contract (Slither line:3109)
+
+Checking function: register(string,address) returns() (Slither line:3117)
+Visibility: public
+true
+authority.canCall(src,address(this),sig)
+pointers[stringToSig(signature)] = destination
+is an Assignment Operation (Slither line:3206)
+Left side is an IndexAccess (Slither line:3235)
+
+End Resolver.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: register in contract: Resolver (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: lookup in contract: Resolver (Slither line:1285)
+
+End EtherRouter.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: destination
+impl_address_from_contract_call: StateVariable pointers
+impl_address_from_contract_call: getter is lookup
+getter.full_name = lookup(bytes4)
+impl_address_from_contract_call: CallExpression resolver.lookup(msg.sig)
+found MemberAccess calling getter in another contract: resolver.lookup(msg.sig)
+called: resolver.lookup
+found MemberAccess: resolver.lookup
+Identifier: resolver
+value is StateVariable: resolver
+Type: Resolver
+find_registry_address_source: resolver.lookup(msg.sig)
+MemberAccess: resolver.lookup
+Identifier: resolver
+Checking public function setOwner
+Checking public function setAuthority
+Checking public function setOwner
+Checking public function setAuthority
+Checking public function setResolver
+Checking external function fallback
+functions_writing_to_variable: pointers
+functions_writing_to_variable: checking function Resolver.setAuthority (proxy_features line:893)
+functions_writing_to_variable: checking function EtherRouter.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Resolver.isAuthorized (proxy_features line:893)
+functions_writing_to_variable: checking function EtherRouter.setResolver (proxy_features line:893)
+functions_writing_to_variable: checking function Resolver.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function EtherRouter.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Resolver.lookup (proxy_features line:893)
+functions_writing_to_variable: checking function Resolver.register (proxy_features line:893)
+functions_writing_to_variable: exp = pointers[stringToSig(signature)] = destination (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pointers[stringToSig(signature)] = destination (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: pointers[stringToSig(signature)] (proxy_features line:915)
+functions_writing_to_variable: Identifier: pointers (proxy_features line:919)
+get_value_assigned: pointers[stringToSig(signature)] = destination
+functions_writing_to_variable: exp = auth() (proxy_features line:904)
+functions_writing_to_variable: register writes destination to pointers (proxy_features line:924)
+functions_writing_to_variable: checking function Resolver.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function EtherRouter.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function EtherRouter.isAuthorized (proxy_features line:893)
+functions_writing_to_variable: checking function Resolver.stringToSig (proxy_features line:893)
+functions_writing_to_variable: checking function EtherRouter.setAuthority (proxy_features line:893)
+has_compatibility_checks: dependencies: ['destination']
+has_compatibility_checks: checking public function register
+has_compatibility_checks: IF node exp = src == owner
+has_compatibility_checks: IF node exp = authority == DSAuthority(0)
+require(bool,string)(isAuthorized(msg.sender,msg.sig),ds-auth-unauthorized)
+has_compatibility_checks: condition isAuthorized(msg.sender,msg.sig)
+has_compatibility_checks: IF node exp = src == address(this)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let size := extcodesize(destination)
+    if eq(size, 0)
+    {
+        revert(0, 0)
+    }
+    calldatacopy(mload(0x40), 0, calldatasize())
+    let result := delegatecall(gas(), destination, mload(0x40), calldatasize(), mload(0x40), 0)
+    returndatacopy(mload(0x40), 0, returndatasize())
+    switch result
+    case 1 {
+        return(mload(0x40), returndatasize())
+    }
+    default {
+        revert(mload(0x40), returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: msg.sig == 0
+can_toggle_delegatecall_on_off: successors:
+ NodeType: RETURN  expression: None
+ NodeType: INLINE ASM  expression: {
+    let size := extcodesize(destination)
+    if eq(size, 0)
+    {
+        revert(0, 0)
+    }
+    calldatacopy(mload(0x40), 0, calldatasize())
+    let result := delegatecall(gas(), destination, mload(0x40), calldatasize(), mload(0x40), 0)
+    returndatacopy(mload(0x40), 0, returndatasize())
+    switch result
+    case 1 {
+        return(mload(0x40), returndatasize())
+    }
+    default {
+        revert(mload(0x40), returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off: delegatecall_condition = False
+ NodeType: END_IF  expression: None
+ NodeType: NEW VARIABLE  expression: destination = resolver.lookup(msg.sig)
+Found public function: constructor
+Found public function: setOwner
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) RETURN
+(Expression) authority.canCall(src,address(this),sig)
+has_time_delay: (node.type) EXPRESSION
+(Expression) pointers[stringToSig(signature)] = destination
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) RETURN
+(Expression) false
+has_time_delay: (node.type) RETURN
+(Expression) bytes4(keccak256(bytes)(abi.encodePacked(signature)))
+has_time_delay: (node.type) IF
+(Expression) src == owner
+has_time_delay: (node.type) IF
+(Expression) authority == DSAuthority(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isAuthorized(msg.sender,msg.sig),ds-auth-unauthorized)
+has_time_delay: (node.type) IF
+(Expression) src == address(this)
+has_time_delay: (node.type) EXPRESSION
+(Expression) auth()

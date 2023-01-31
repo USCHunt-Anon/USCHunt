@@ -1,0 +1,385 @@
+
+Begin IOwnable.is_proxy (Slither line:1425)
+
+
+End IOwnable.is_proxy (Slither line:1428)
+
+
+Begin IOwnable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IOwnable 
+
+End IOwnable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAuthorizable.is_proxy (Slither line:1425)
+
+
+End IAuthorizable.is_proxy (Slither line:1428)
+
+
+Begin IAuthorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAuthorizable 
+
+End IAuthorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MAuthorizable.is_proxy (Slither line:1425)
+
+
+End MAuthorizable.is_proxy (Slither line:1428)
+
+
+Begin MAuthorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MAuthorizable 
+
+End MAuthorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MixinAuthorizable.is_proxy (Slither line:1425)
+
+
+End MixinAuthorizable.is_proxy (Slither line:1428)
+
+
+Begin MixinAuthorizable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MixinAuthorizable 
+
+End MixinAuthorizable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAssetProxy.is_proxy (Slither line:1425)
+
+
+End IAssetProxy.is_proxy (Slither line:1428)
+
+
+Begin IAssetProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAssetProxy 
+
+End IAssetProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IAssetProxyDispatcher.is_proxy (Slither line:1425)
+
+
+End IAssetProxyDispatcher.is_proxy (Slither line:1428)
+
+
+Begin IAssetProxyDispatcher.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IAssetProxyDispatcher 
+
+End IAssetProxyDispatcher.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MAssetProxyDispatcher.is_proxy (Slither line:1425)
+
+
+End MAssetProxyDispatcher.is_proxy (Slither line:1428)
+
+
+Begin MAssetProxyDispatcher.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MAssetProxyDispatcher 
+
+End MAssetProxyDispatcher.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MixinAssetProxyDispatcher.is_proxy (Slither line:1425)
+
+
+End MixinAssetProxyDispatcher.is_proxy (Slither line:1428)
+
+
+Begin MixinAssetProxyDispatcher.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MixinAssetProxyDispatcher 
+
+End MixinAssetProxyDispatcher.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MultiAssetProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MultiAssetProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let selector := and(calldataload(0), 0xffffffff00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    if eq(selector, 0xa85e59e400000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        mstore(0, caller()) (Slither line:1576)
+        mstore(32, authorized_slot) (Slither line:1576)
+        if iszero(sload(keccak256(0, 64))) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000001553454e4445525f4e4f545f415554484f52495a454400000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        let assetDataOffset := calldataload(4) (Slither line:1576)
+        let amountsOffset := calldataload(add(assetDataOffset, 40)) (Slither line:1576)
+        let nestedAssetDataOffset := calldataload(add(assetDataOffset, 72)) (Slither line:1576)
+        let amountsContentsStart := add(assetDataOffset, add(amountsOffset, 72)) (Slither line:1576)
+        let amountsLen := calldataload(sub(amountsContentsStart, 32)) (Slither line:1576)
+        let nestedAssetDataContentsStart := add(assetDataOffset, add(nestedAssetDataOffset, 72)) (Slither line:1576)
+        let nestedAssetDataLen := calldataload(sub(nestedAssetDataContentsStart, 32)) (Slither line:1576)
+        if iszero(eq(amountsLen, nestedAssetDataLen)) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000000f4c454e4754485f4d49534d4154434800000000000000000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        calldatacopy(0, 0, 100) (Slither line:1576)
+        mstore(4, 128) (Slither line:1576)
+        let amount := calldataload(100) (Slither line:1576)
+        let amountsByteLen := mul(amountsLen, 32) (Slither line:1576)
+        let assetProxyId := 0 (Slither line:1576)
+        let assetProxy := 0 (Slither line:1576)
+        for { (Slither line:1576)
+            let i := 0 (Slither line:1576)
+        } (Slither line:1576)
+        lt(i, amountsByteLen) (Slither line:1576)
+        { (Slither line:1576)
+            i := add(i, 32) (Slither line:1576)
+        } (Slither line:1576)
+        { (Slither line:1576)
+            let amountsElement := calldataload(add(amountsContentsStart, i)) (Slither line:1576)
+            let totalAmount := mul(amountsElement, amount) (Slither line:1576)
+            if iszero(eq(div(totalAmount, amount), amountsElement)) (Slither line:1576)
+            { (Slither line:1576)
+                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(64, 0x0000001055494e543235365f4f564552464c4f57000000000000000000000000) (Slither line:1576)
+                mstore(96, 0) (Slither line:1576)
+                revert(0, 100) (Slither line:1576)
+            } (Slither line:1576)
+            mstore(100, totalAmount) (Slither line:1576)
+            let nestedAssetDataElementOffset := calldataload(add(nestedAssetDataContentsStart, i)) (Slither line:1576)
+            let nestedAssetDataElementContentsStart := add(assetDataOffset, add(nestedAssetDataOffset, add(nestedAssetDataElementOffset, 104))) (Slither line:1576)
+            let nestedAssetDataElementLenStart := sub(nestedAssetDataElementContentsStart, 32) (Slither line:1576)
+            let nestedAssetDataElementLen := calldataload(nestedAssetDataElementLenStart) (Slither line:1576)
+            if lt(nestedAssetDataElementLen, 4) (Slither line:1576)
+            { (Slither line:1576)
+                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(64, 0x0000001e4c454e4754485f475245415445525f5448414e5f335f524551554952) (Slither line:1576)
+                mstore(96, 0x4544000000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                revert(0, 100) (Slither line:1576)
+            } (Slither line:1576)
+            let currentAssetProxyId := and(calldataload(nestedAssetDataElementContentsStart), 0xffffffff00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            if iszero(eq(currentAssetProxyId, assetProxyId)) (Slither line:1576)
+            { (Slither line:1576)
+                assetProxyId := currentAssetProxyId (Slither line:1576)
+                mstore(132, assetProxyId) (Slither line:1576)
+                mstore(164, assetProxies_slot) (Slither line:1576)
+                assetProxy := sload(keccak256(132, 64)) (Slither line:1576)
+            } (Slither line:1576)
+            if iszero(assetProxy) (Slither line:1576)
+            { (Slither line:1576)
+                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(64, 0x0000001a41535345545f50524f58595f444f45535f4e4f545f45584953540000) (Slither line:1576)
+                mstore(96, 0) (Slither line:1576)
+                revert(0, 100) (Slither line:1576)
+            } (Slither line:1576)
+            calldatacopy(132, nestedAssetDataElementLenStart, add(nestedAssetDataElementLen, 32)) (Slither line:1576)
+            let success := call(gas(), assetProxy, 0, 0, add(164, nestedAssetDataElementLen), 0, 0) (Slither line:1576)
+            if iszero(success) (Slither line:1576)
+            { (Slither line:1576)
+                returndatacopy(0, 0, returndatasize()) (Slither line:1576)
+                revert(0, returndatasize()) (Slither line:1576)
+            } (Slither line:1576)
+        } (Slither line:1576)
+        return(0, 0) (Slither line:1576)
+    } (Slither line:1576)
+    revert(0, 0) (Slither line:1576)
+} (Slither line:1576)
+
+End MultiAssetProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin MultiAssetProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let selector := and(calldataload(0), 0xffffffff00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    if eq(selector, 0xa85e59e400000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        mstore(0, caller()) (Slither line:1576)
+        mstore(32, authorized_slot) (Slither line:1576)
+        if iszero(sload(keccak256(0, 64))) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000001553454e4445525f4e4f545f415554484f52495a454400000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        let assetDataOffset := calldataload(4) (Slither line:1576)
+        let amountsOffset := calldataload(add(assetDataOffset, 40)) (Slither line:1576)
+        let nestedAssetDataOffset := calldataload(add(assetDataOffset, 72)) (Slither line:1576)
+        let amountsContentsStart := add(assetDataOffset, add(amountsOffset, 72)) (Slither line:1576)
+        let amountsLen := calldataload(sub(amountsContentsStart, 32)) (Slither line:1576)
+        let nestedAssetDataContentsStart := add(assetDataOffset, add(nestedAssetDataOffset, 72)) (Slither line:1576)
+        let nestedAssetDataLen := calldataload(sub(nestedAssetDataContentsStart, 32)) (Slither line:1576)
+        if iszero(eq(amountsLen, nestedAssetDataLen)) (Slither line:1576)
+        { (Slither line:1576)
+            mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            mstore(64, 0x0000000f4c454e4754485f4d49534d4154434800000000000000000000000000) (Slither line:1576)
+            mstore(96, 0) (Slither line:1576)
+            revert(0, 100) (Slither line:1576)
+        } (Slither line:1576)
+        calldatacopy(0, 0, 100) (Slither line:1576)
+        mstore(4, 128) (Slither line:1576)
+        let amount := calldataload(100) (Slither line:1576)
+        let amountsByteLen := mul(amountsLen, 32) (Slither line:1576)
+        let assetProxyId := 0 (Slither line:1576)
+        let assetProxy := 0 (Slither line:1576)
+        for { (Slither line:1576)
+            let i := 0 (Slither line:1576)
+        } (Slither line:1576)
+        lt(i, amountsByteLen) (Slither line:1576)
+        { (Slither line:1576)
+            i := add(i, 32) (Slither line:1576)
+        } (Slither line:1576)
+        { (Slither line:1576)
+            let amountsElement := calldataload(add(amountsContentsStart, i)) (Slither line:1576)
+            let totalAmount := mul(amountsElement, amount) (Slither line:1576)
+            if iszero(eq(div(totalAmount, amount), amountsElement)) (Slither line:1576)
+            { (Slither line:1576)
+                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(64, 0x0000001055494e543235365f4f564552464c4f57000000000000000000000000) (Slither line:1576)
+                mstore(96, 0) (Slither line:1576)
+                revert(0, 100) (Slither line:1576)
+            } (Slither line:1576)
+            mstore(100, totalAmount) (Slither line:1576)
+            let nestedAssetDataElementOffset := calldataload(add(nestedAssetDataContentsStart, i)) (Slither line:1576)
+            let nestedAssetDataElementContentsStart := add(assetDataOffset, add(nestedAssetDataOffset, add(nestedAssetDataElementOffset, 104))) (Slither line:1576)
+            let nestedAssetDataElementLenStart := sub(nestedAssetDataElementContentsStart, 32) (Slither line:1576)
+            let nestedAssetDataElementLen := calldataload(nestedAssetDataElementLenStart) (Slither line:1576)
+            if lt(nestedAssetDataElementLen, 4) (Slither line:1576)
+            { (Slither line:1576)
+                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(64, 0x0000001e4c454e4754485f475245415445525f5448414e5f335f524551554952) (Slither line:1576)
+                mstore(96, 0x4544000000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                revert(0, 100) (Slither line:1576)
+            } (Slither line:1576)
+            let currentAssetProxyId := and(calldataload(nestedAssetDataElementContentsStart), 0xffffffff00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+            if iszero(eq(currentAssetProxyId, assetProxyId)) (Slither line:1576)
+            { (Slither line:1576)
+                assetProxyId := currentAssetProxyId (Slither line:1576)
+                mstore(132, assetProxyId) (Slither line:1576)
+                mstore(164, assetProxies_slot) (Slither line:1576)
+                assetProxy := sload(keccak256(132, 64)) (Slither line:1576)
+            } (Slither line:1576)
+            if iszero(assetProxy) (Slither line:1576)
+            { (Slither line:1576)
+                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+                mstore(64, 0x0000001a41535345545f50524f58595f444f45535f4e4f545f45584953540000) (Slither line:1576)
+                mstore(96, 0) (Slither line:1576)
+                revert(0, 100) (Slither line:1576)
+            } (Slither line:1576)
+            calldatacopy(132, nestedAssetDataElementLenStart, add(nestedAssetDataElementLen, 32)) (Slither line:1576)
+            let success := call(gas(), assetProxy, 0, 0, add(164, nestedAssetDataElementLen), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'assetProxy'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin MultiAssetProxy.find_delegate_variable_from_name
+Searching for assetProxy (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking assetProxies (Slither line:1689)
+Checking authorized (Slither line:1689)
+Checking authorities (Slither line:1689)
+Checking PROXY_ID (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End MultiAssetProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin MultiAssetProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+slot: keccak256(132, 64 (Slither line:2679)
+
+Begin MultiAssetProxy.find_delegate_variable_from_name
+Searching for keccak256(132, 64 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking assetProxies (Slither line:1689)
+Checking authorized (Slither line:1689)
+Checking authorities (Slither line:1689)
+Checking PROXY_ID (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End MultiAssetProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End MultiAssetProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End MultiAssetProxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End MultiAssetProxy.is_proxy (Slither line:1476)
+
+
+Begin MultiAssetProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MultiAssetProxy 
+
+End MultiAssetProxy.is_upgradeable_proxy (Slither line:1407)
+

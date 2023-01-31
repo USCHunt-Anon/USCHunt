@@ -1,0 +1,244 @@
+
+Begin AccountImplementations.is_proxy (Slither line:1425)
+
+
+End AccountImplementations.is_proxy (Slither line:1428)
+
+
+Begin AccountImplementations.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AccountImplementations 
+
+End AccountImplementations.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin VaultAccountV2.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VaultAccountV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_implementation != address(0),VaultAccountV2: Not able to find _implementation) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation != address(0)
+VaultAccountV2: Not able to find _implementation
+
+End VaultAccountV2.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VaultAccountV2.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1554_220_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End VaultAccountV2.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VaultAccountV2.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End VaultAccountV2.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin VaultAccountV2.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation
+
+End VaultAccountV2.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin VaultAccountV2.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin VaultAccountV2.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementations (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in VaultAccountV2._delegate (Slither line:1805)
+CallExpression: require(bool,string)(_implementation != address(0),VaultAccountV2: Not able to find _implementation) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation) (Slither line:1832)
+The value passed to parameter #0 is _implementation (Slither line:1835)
+which is an Identifier with value _implementation (Slither line:1839)
+_implementation is a Local Variable with the expression: implementations.getImplementation(_sig) (Slither line:1850)
+
+Begin VaultAccountV2.find_delegate_from_call_exp
+
+implementations.getImplementation(_sig) (Slither line:1993)
+called = implementations.getImplementation (Slither line:2000)
+Called member of implementations (Slither line:2007)
+
+Begin VaultAccountV2.find_delegate_from_member_access
+
+Expression: implementations.getImplementation(_sig) (Slither line:2348)
+implementations (Slither line:2361)
+getImplementation is a member of the contract type: AccountImplementations (Slither line:2406)
+Which is an interface (Slither line:2410)
+Could not find a contract that inherits AccountImplementations (Slither line:2431)
+
+End VaultAccountV2.find_delegate_from_call_exp (Slither line:2009)
+
+
+End VaultAccountV2.find_delegate_variable_from_name (Slither line:1939)
+
+
+End VaultAccountV2.find_delegatecall_in_asm (Slither line:1637)
+
+
+End VaultAccountV2.is_proxy (Slither line:1476)
+
+
+Begin VaultAccountV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VaultAccountV2 
+Local Variable: _implementation (Slither line:1164)
+implementations (Slither line:1171)
+Call destination implementations.getImplementation(_sig) is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: VaultAccountV2
+_implementation is dependent on implementations
+Expression for _implementation: implementations.getImplementation(_sig)
+Called: implementations.getImplementation
+_sig.expression is None
+impl_address_from_contract_call: implementations.getImplementation(_sig)
+called: implementations.getImplementation
+found MemberAccess: implementations.getImplementation
+Identifier: implementations
+value is StateVariable: implementations
+Type: AccountImplementations
+find_registry_address_source: implementations.getImplementation(_sig)
+MemberAccess: implementations.getImplementation
+Identifier: implementations
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function VaultAccountV2.fallback (proxy_features line:893)
+get_value_assigned: _implementation = implementations.getImplementation(_sig)
+functions_writing_to_variable: fallback writes TMP_13 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function VaultAccountV2.receive (proxy_features line:893)
+get_value_assigned: _implementation = implementations.getImplementation(_sig)
+functions_writing_to_variable: receive writes TMP_13 to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function VaultAccountV2._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function VaultAccountV2.constructor (proxy_features line:893)
+has_compatibility_checks: dependencies: ['TMP_0', '_sig', 'TMP_13', '', 'implementations', '_implementations']
+functions_writing_to_variable: implementations
+functions_writing_to_variable: checking function VaultAccountV2._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function VaultAccountV2.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function VaultAccountV2.receive (proxy_features line:893)
+functions_writing_to_variable: checking function VaultAccountV2._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function VaultAccountV2.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = implementations = AccountImplementations(_implementations) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementations = AccountImplementations(_implementations) (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementations (proxy_features line:919)
+get_value_assigned: implementations = AccountImplementations(_implementations)
+has_compatibility_checks: checking external function fallback
+require(bool,string)(_implementation != address(0),VaultAccountV2: Not able to find _implementation)
+has_compatibility_checks: condition _implementation != address(0)
+has_compatibility_checks: IF node exp = switch_expr_1554_220_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_1554_220_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: checking external function receive
+has_compatibility_checks: IF node exp = switch_expr_1554_220_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_1554_220_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+require(bool,string)(_implementation != address(0),VaultAccountV2: Not able to find _implementation)
+has_compatibility_checks: condition _implementation != address(0)
+has_compatibility_checks: IF node exp = msg.sig != 0x00000000
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+Found public function: constructor
+Found fallback
+Found external function: receive

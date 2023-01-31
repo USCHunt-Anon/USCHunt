@@ -1,0 +1,81 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "DToken (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.20/4fb7469aeb548dc049e0271f70bb8fb4562ac913_DToken.sol/4fb7469aeb548dc049e0271f70bb8fb4562ac913_DToken.sol#262-870)",
+        "elements": [],
+        "description": "DToken (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.20/4fb7469aeb548dc049e0271f70bb8fb4562ac913_DToken.sol/4fb7469aeb548dc049e0271f70bb8fb4562ac913_DToken.sol#262-870) is an upgradeable proxy.\ndelegate is declared in the proxy.\ndelegate is an address state variable\nMissing compatibility check in DToken.setDelegate(address)\nCan toggle delegatecall on/off: condition: delegate == address(0)\n",
+        "id": "1a2e08a6c2654e837bcd64e870e2538e8c27d8507af14a38db07ae49834bdd6d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "DToken.delegate",
+          "impl_address_setter": "DToken.setDelegate(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "DToken (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.4.20/4fb7469aeb548dc049e0271f70bb8fb4562ac913_DToken.sol/4fb7469aeb548dc049e0271f70bb8fb4562ac913_DToken.sol#262-870)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "DToken.setDelegate(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "delegate != address(0)",
+          "toggle_alternative_logic": "placeholder for function with modifier",
+          "toggle_modifier": "delegatable",
+          "toggle_setters": [
+            "setDelegate"
+          ],
+          "immutable_functions": {
+            "containing_delegatecall": [
+              "name()",
+              "symbol()",
+              "decimals()",
+              "totalSupply()",
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)",
+              "delegatedTransfer(address,uint256,uint256,uint256,uint8,bytes32,bytes32)",
+              "createTokens(uint256)",
+              "burnTokens(uint256)",
+              "freezeTransfers()",
+              "unfreezeTransfers()",
+              "setFeeCollector(address)",
+              "nonce(address)",
+              "setFeeParameters(uint256,uint256,uint256,uint256)",
+              "getFeeParameters()",
+              "calculateFee(uint256)",
+              "setFlags(address,uint256)",
+              "flags(address)"
+            ],
+            "erc20": [
+              "totalSupply()",
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)",
+              "name()",
+              "symbol()",
+              "decimals()"
+            ],
+            "other": [
+              "setOwner(address)",
+              "setDelegate(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

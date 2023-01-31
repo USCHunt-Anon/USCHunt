@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AccountProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.0/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol#8-44)",
+        "elements": [],
+        "description": "AccountProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.0/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol#8-44) may be an upgradeable proxy.\n_opCodeAddress is declared in the proxy.\nAccountProxy.delegate(bytes4)._opCodeAddress (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.0/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol#32) gets value from a cross-contract call: opCenter.getOpCodeAddress(_sig)\nOperationCenterInterface appears to be a Registry contract for the proxy\nThe address of OperationCenterInterface is stored as a state variable: AccountProxy.opCenter\nCould not find setter for opCenter\nMissing compatibility check in AccountProxy.receive()\nMissing compatibility check in AccountProxy.fallback()\n",
+        "id": "68a5ad451c3c74512217f24eca3908e9d71745c20eb2750a750d5263e6a8ddf6",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "AccountProxy.delegate(bytes4)._opCodeAddress",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "AccountProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.0/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol/03332E251554666bd1c8f69568BDB384e3d216c4_AccountProxy.sol#8-44)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "opCenter.getOpCodeAddress(_sig)",
+          "registry": "OperationCenterInterface",
+          "registry_source_type": "OperationCenterInterface",
+          "registry_source_variable": "AccountProxy.opCenter",
+          "registry_source_constant": false,
+          "registry_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "AccountProxy.receive()": "missing",
+              "AccountProxy.fallback()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

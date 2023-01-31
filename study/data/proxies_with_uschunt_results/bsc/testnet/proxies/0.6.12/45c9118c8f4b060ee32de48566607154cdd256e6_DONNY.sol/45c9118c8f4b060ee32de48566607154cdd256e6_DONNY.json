@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#152-187)",
+        "elements": [],
+        "description": "Engine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#152-187) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "440593137f60d78a987507b62660a98bfae7c1b472301c2b1e475d7063be7232",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#189-220)",
+        "elements": [],
+        "description": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#189-220) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "30490bdc895a1bad2a925d1ede3644a9b8f55ae1e217cc7d434704cf915f9985",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "DONNY (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#222-261)",
+        "elements": [],
+        "description": "DONNY (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#222-261) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "07f189527a4370c94a9584bd6040d8ea6fbda91c27930175f5a01f3bf5459201",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ApprovedEngine.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "DONNY.approveTo(address)",
+          "impl_address_getter": "ApprovedEngine._implementation()",
+          "impl_address_location": "ApprovedEngine (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol/45c9118c8f4b060ee32de48566607154cdd256e6_DONNY.sol#189-220)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "DONNY.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "ApprovedEngine.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "DONNY.approveTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "approveTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

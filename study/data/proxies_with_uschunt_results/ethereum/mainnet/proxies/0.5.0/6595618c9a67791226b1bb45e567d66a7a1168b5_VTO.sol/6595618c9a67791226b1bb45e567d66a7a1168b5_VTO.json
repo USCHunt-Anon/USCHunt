@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "VTO (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.0/6595618c9a67791226b1bb45e567d66a7a1168b5_VTO.sol/6595618c9a67791226b1bb45e567d66a7a1168b5_VTO.sol#127-351)",
+        "elements": [],
+        "description": "VTO (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.0/6595618c9a67791226b1bb45e567d66a7a1168b5_VTO.sol/6595618c9a67791226b1bb45e567d66a7a1168b5_VTO.sol#127-351) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "8640391d129f1a0841edb5d7550d0e4f1900615642e0f7e884a2f39265652297",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "VTO.implementation",
+          "impl_address_setter": "VTO.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "VTO (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.0/6595618c9a67791226b1bb45e567d66a7a1168b5_VTO.sol/6595618c9a67791226b1bb45e567d66a7a1168b5_VTO.sol#127-351)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "VTO.upgradeTo(address)": {
+                "check": "require(bool)(implementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "totalSupply()",
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)"
+            ],
+            "other": [
+              "pause()",
+              "unpause()",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "upgradeTo(address)",
+              "multiTransfer(address[],uint256[])",
+              "increaseAllowance(address,uint256)",
+              "decreaseAllowance(address,uint256)",
+              "freezeAccount(address)",
+              "unfreezeAccount(address)",
+              "distribute(address,uint256)",
+              "claimToken(ERC20,address,uint256)",
+              "burn(uint256)",
+              "mint(address,uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

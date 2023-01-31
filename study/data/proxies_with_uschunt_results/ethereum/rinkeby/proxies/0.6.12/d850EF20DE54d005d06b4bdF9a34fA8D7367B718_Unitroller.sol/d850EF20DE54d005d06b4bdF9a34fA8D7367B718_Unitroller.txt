@@ -1,0 +1,332 @@
+
+Begin UnitrollerAdminStorage.is_proxy (Slither line:1425)
+
+
+End UnitrollerAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin UnitrollerAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UnitrollerAdminStorage 
+
+End UnitrollerAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ComptrollerErrorReporter.is_proxy (Slither line:1425)
+
+
+End ComptrollerErrorReporter.is_proxy (Slither line:1428)
+
+
+Begin ComptrollerErrorReporter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ComptrollerErrorReporter 
+
+End ComptrollerErrorReporter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Unitroller.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Unitroller.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is implementation (Slither line:2818)
+dest.value: implementation (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin Unitroller.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking admin (Slither line:1689)
+Checking pendingAdmin (Slither line:1689)
+Checking comptrollerImplementation (Slither line:1689)
+Checking pendingComptrollerImplementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Unitroller._delegate (Slither line:1805)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Unitroller.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Return node of function Unitroller._implementation(): RETURN comptrollerImplementation (Slither line:2031)
+comptrollerImplementation (Slither line:2038)
+_implementation returns a variable of type address   called comptrollerImplementation (Slither line:2183)
+
+End Unitroller.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Unitroller.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Unitroller.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Unitroller.is_proxy (Slither line:1476)
+
+
+Begin Unitroller.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Unitroller 
+Unitroller is delegating to comptrollerImplementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UnitrollerAdminStorage (Slither line:1204)
+
+
+Begin UnitrollerAdminStorage.find_setter_in_contract (Slither line:3109)
+
+
+End UnitrollerAdminStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in UnitrollerAdminStorage 
+Looking in Unitroller (Slither line:1213)
+
+Begin Unitroller.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3117)
+Visibility: public
+uint256(Error.NO_ERROR)
+Failure(uint256(err),uint256(info),0)
+pendingComptrollerImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3206)
+uint256(err)
+fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK)
+NewPendingImplementation(oldPendingImplementation,pendingComptrollerImplementation)
+Checking function: _acceptImplementation() returns(uint256) (Slither line:3117)
+Visibility: public
+uint256(Error.NO_ERROR)
+pendingComptrollerImplementation = address(0)
+is an Assignment Operation (Slither line:3206)
+NewImplementation(oldImplementation,comptrollerImplementation)
+NewPendingImplementation(oldPendingImplementation,pendingComptrollerImplementation)
+comptrollerImplementation = pendingComptrollerImplementation
+is an Assignment Operation (Slither line:3206)
+
+End Unitroller.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _acceptImplementation in contract: Unitroller (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UnitrollerAdminStorage.find_getter_in_contract (Slither line:2964)
+
+comptrollerImplementation is a Variable object
+pendingComptrollerImplementation
+
+End UnitrollerAdminStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin Unitroller.find_getter_in_contract (Slither line:2964)
+
+comptrollerImplementation is a Variable object
+pendingComptrollerImplementation
+Checking function: fail (Slither line:2978)
+fail returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(err) (Slither line:3018)
+Checking function: failOpaque (Slither line:2978)
+failOpaque returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(err) (Slither line:3018)
+Checking function: constructor (Slither line:2978)
+Checking function: _setPendingImplementation (Slither line:2978)
+_setPendingImplementation returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (Slither line:3018)
+Checking function: _acceptImplementation (Slither line:2978)
+_acceptImplementation returns uint256 variable  (Slither line:2998)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: _setPendingAdmin (Slither line:2978)
+_setPendingAdmin returns uint256 variable  (Slither line:2998)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_ADMIN_OWNER_CHECK) (Slither line:3018)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: _acceptAdmin (Slither line:2978)
+_acceptAdmin returns uint256 variable  (Slither line:2998)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_ADMIN_PENDING_ADMIN_CHECK) (Slither line:3018)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3018)
+Checking function: _delegate (Slither line:2978)
+Checking function: _implementation (Slither line:2978)
+_implementation returns address variable  (Slither line:2998)
+RETURN node expression: comptrollerImplementation (Slither line:3018)
+
+End Unitroller.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: Unitroller (Slither line:1285)
+
+End Unitroller.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: pendingComptrollerImplementation
+impl_address_from_contract_call: StateVariable comptrollerImplementation
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function _setPendingImplementation
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Found 'msg.sender ==' in expression: msg.sender != pendingAdmin || msg.sender == address(0)
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: comptrollerImplementation
+functions_writing_to_variable: checking function Unitroller._acceptAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.failOpaque (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._acceptImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = oldImplementation = comptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = comptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingComptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingComptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = comptrollerImplementation = pendingComptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: comptrollerImplementation = pendingComptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: comptrollerImplementation (proxy_features line:919)
+get_value_assigned: comptrollerImplementation = pendingComptrollerImplementation
+functions_writing_to_variable: exp = pendingComptrollerImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingComptrollerImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,comptrollerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingComptrollerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:904)
+functions_writing_to_variable: _acceptImplementation writes pendingComptrollerImplementation to comptrollerImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function Unitroller.fail (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._setPendingImplementation (proxy_features line:893)
+has_compatibility_checks: dependencies: ['pendingComptrollerImplementation', 'TMP_20', 'newPendingImplementation']
+functions_writing_to_variable: pendingComptrollerImplementation
+functions_writing_to_variable: checking function Unitroller._acceptAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.failOpaque (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._acceptImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = oldImplementation = comptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = comptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingComptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingComptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = comptrollerImplementation = pendingComptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: comptrollerImplementation = pendingComptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingComptrollerImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingComptrollerImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingComptrollerImplementation (proxy_features line:919)
+get_value_assigned: pendingComptrollerImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,comptrollerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingComptrollerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:904)
+functions_writing_to_variable: checking function Unitroller.fail (proxy_features line:893)
+functions_writing_to_variable: checking function Unitroller._setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = msg.sender != admin (proxy_features line:904)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (proxy_features line:904)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingComptrollerImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingComptrollerImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingComptrollerImplementation = newPendingImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingComptrollerImplementation = newPendingImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingComptrollerImplementation (proxy_features line:919)
+get_value_assigned: pendingComptrollerImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingComptrollerImplementation) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:904)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:904)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:904)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingComptrollerImplementation (proxy_features line:924)
+has_compatibility_checks: checking public function _acceptImplementation
+has_compatibility_checks: checking public function _setPendingImplementation
+has_compatibility_checks: IF node exp = msg.sender != admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) RETURN
+(Expression) uint256(Error.NO_ERROR)
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingComptrollerImplementation = address(0)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = comptrollerImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,comptrollerImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingComptrollerImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingComptrollerImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) comptrollerImplementation = pendingComptrollerImplementation

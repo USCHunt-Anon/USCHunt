@@ -1,0 +1,281 @@
+
+Begin CrowdsaleProxyTarget.is_proxy (Slither line:1425)
+
+
+End CrowdsaleProxyTarget.is_proxy (Slither line:1428)
+
+
+Begin CrowdsaleProxyTarget.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrowdsaleProxyTarget 
+
+End CrowdsaleProxyTarget.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrowdsaleProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CrowdsaleProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let success := delegatecall(sub(gas(), 10000), _target, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CrowdsaleProxy.find_delegate_variable_from_name
+Searching for _target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking TARGET_POSITION (Slither line:1689)
+Checking OWNER_POSITION (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _target (Slither line:1703)
+_target is a Local Variable in CrowdsaleProxy.fallback (Slither line:1707)
+Expression: ___proxyTarget() (Slither line:1719)
+
+Begin CrowdsaleProxy.find_delegate_from_call_exp
+
+___proxyTarget() (Slither line:2003)
+called = ___proxyTarget (Slither line:2010)
+___proxyTarget returns a variable of type address   called target (Slither line:2193)
+___proxyTarget contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{  (Slither line:2210)
+    target := sload(position)  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: TARGET_POSITION (Slither line:2232)
+
+End CrowdsaleProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End CrowdsaleProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+Begin CrowdsaleProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End CrowdsaleProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End CrowdsaleProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting CrowdsaleProxy._delegate_variable = CrowdsaleProxy._proxy_impl_slot: TARGET_POSITION (Slither line:1473)
+
+
+End CrowdsaleProxy.is_proxy (Slither line:1476)
+
+
+Begin CrowdsaleProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrowdsaleProxy 
+Call destination TARGET_POSITION is constant (Slither line:1146)
+
+TARGET_POSITION is the implementation storage slot (Slither line:1149)
+
+CrowdsaleProxy is delegating to TARGET_POSITION
+Looking for setter (Slither line:1200)
+
+
+Begin CrowdsaleProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: keccak256()(CrowdsaleProxy.target) (Slither line:3122)
+Checking function: CrowdsaleProxy(address) returns() (Slither line:3127)
+Checking function: ___initialize(address,address,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: ___coinAddress() returns(address) (Slither line:3127)
+Visibility: external
+CrowdsaleProxyTarget(this).token()
+Checking function: ___isActive() returns(bool) (Slither line:3127)
+Visibility: internal
+Checking function: ___proxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+___proxyOwner contains assembly (Slither line:3153)
+Checking function: ___setProxyOwner(address) returns() (Slither line:3127)
+Visibility: public
+___setProxyOwner contains assembly (Slither line:3153)
+_onlyProxyOwner()
+require(bool)(msg.sender == ___proxyOwner())
+    sstore(position, newOwner) (Slither line:3163)
+___setProxyOwner reads and/or writes to variable position (Slither line:3170)
+___setProxyOwner reads and/or writes to variable OWNER_POSITION (Slither line:3170)
+Checking function: ___proxyTarget() returns(address) (Slither line:3127)
+Visibility: public
+___proxyTarget contains assembly (Slither line:3153)
+Checking function: ___setTarget(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: ___upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+    sstore(position, target) (Slither line:3163)
+___upgradeTo reads and/or writes to variable position (Slither line:3170)
+___upgradeTo reads and/or writes to variable TARGET_POSITION (Slither line:3170)
+
+End CrowdsaleProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: ___upgradeTo in contract: CrowdsaleProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CrowdsaleProxy.find_getter_in_contract (Slither line:2974)
+
+TARGET_POSITION is a Variable object
+keccak256()(CrowdsaleProxy.target)
+Checking function: CrowdsaleProxy (Slither line:2988)
+Checking function: ___initialize (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: ___coinAddress (Slither line:2988)
+___coinAddress returns address variable  (Slither line:3008)
+RETURN node expression: CrowdsaleProxyTarget(this).token() (Slither line:3028)
+Checking function: ___isActive (Slither line:2988)
+___isActive returns bool variable called res (Slither line:3008)
+Checking function: ___proxyOwner (Slither line:2988)
+___proxyOwner returns address variable called owner (Slither line:3008)
+___proxyOwner contains assembly (Slither line:3051)
+___proxyOwner contains assembly (Slither line:3051)
+___proxyOwner contains assembly (Slither line:3051)
+Checking function: ___setProxyOwner (Slither line:2988)
+Checking function: ___proxyTarget (Slither line:2988)
+___proxyTarget returns address variable called target (Slither line:3008)
+___proxyTarget contains assembly (Slither line:3051)
+___proxyTarget contains assembly (Slither line:3051)
+___proxyTarget contains assembly (Slither line:3051)
+
+End CrowdsaleProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: ___proxyTarget in contract: CrowdsaleProxy (Slither line:1285)
+
+End CrowdsaleProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: CrowdsaleProxy
+Setter found in contract CrowdsaleProxy
+Checking public function ___initialize
+Checking external function ___coinAddress
+Checking public function ___proxyOwner
+Checking public function ___setProxyOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ___proxyOwner())
+Checking public function ___proxyTarget
+Checking public function ___upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ___proxyOwner())
+Checking public function ___upgradeToAndCall
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ___proxyOwner())
+Checking public function fallback
+functions_writing_to_variable: TARGET_POSITION
+functions_writing_to_variable: checking function CrowdsaleProxy.___proxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrowdsaleProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = TARGET_POSITION = keccak256()(CrowdsaleProxy.target) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: TARGET_POSITION = keccak256()(CrowdsaleProxy.target) (proxy_features line:912)
+functions_writing_to_variable: Identifier: TARGET_POSITION (proxy_features line:924)
+get_value_assigned: TARGET_POSITION = keccak256()(CrowdsaleProxy.target)
+functions_writing_to_variable: exp = OWNER_POSITION = keccak256()(CrowdsaleProxy.owner) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_POSITION = keccak256()(CrowdsaleProxy.owner) (proxy_features line:912)
+functions_writing_to_variable: checking function CrowdsaleProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CrowdsaleProxy.___setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrowdsaleProxy.___isActive (proxy_features line:898)
+functions_writing_to_variable: checking function CrowdsaleProxy.___upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(position, target)
+(proxy_features line:953)
+target
+functions_writing_to_variable: ___upgradeTo writes target to TARGET_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CrowdsaleProxy.___upgradeToAndCall (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(position, target)
+(proxy_features line:953)
+target
+functions_writing_to_variable: ___upgradeToAndCall writes target to TARGET_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CrowdsaleProxy.___setTarget (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(position, target)
+(proxy_features line:953)
+target
+functions_writing_to_variable: ___setTarget writes target to TARGET_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CrowdsaleProxy.___proxyTarget (proxy_features line:898)
+functions_writing_to_variable: checking function CrowdsaleProxy.CrowdsaleProxy (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(position, target)
+(proxy_features line:953)
+target
+functions_writing_to_variable: CrowdsaleProxy writes target to TARGET_POSITION w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CrowdsaleProxy.___coinAddress (proxy_features line:898)
+functions_writing_to_variable: checking function CrowdsaleProxy.___initialize (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function ___upgradeTo
+require(bool)(! ___isActive())
+has_compatibility_checks: condition ! ___isActive()
+require(bool)(msg.sender == ___proxyOwner())
+has_compatibility_checks: condition msg.sender == ___proxyOwner()
+require(bool)(___proxyTarget() != newTarget)
+has_compatibility_checks: condition ___proxyTarget() != newTarget
+has_compatibility_checks: checking public function ___upgradeToAndCall
+require(bool)(address(this).call.value(msg.value)(data))
+has_compatibility_checks: condition address(this).call.value(msg.value)(data)
+require(bool)(! ___isActive())
+has_compatibility_checks: condition ! ___isActive()
+require(bool)(msg.sender == ___proxyOwner())
+has_compatibility_checks: condition msg.sender == ___proxyOwner()
+require(bool)(___proxyTarget() != newTarget)
+has_compatibility_checks: condition ___proxyTarget() != newTarget
+has_compatibility_checks: skipping internal function ___setTarget
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let success := delegatecall(sub(gas(), 10000), _target, ptr, calldatasize(), 0, 0)
+    let retSz := returndatasize()
+    returndatacopy(ptr, 0, retSz)
+    switch success
+    case 0 {
+        revert(ptr, retSz)
+    }
+    default {
+        return(ptr, retSz)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _target = ___proxyTarget()
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: CrowdsaleProxy
+Found public function: ___initialize
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = TARGET_POSITION
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = OWNER_POSITION
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(! ___isActive())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = TARGET_POSITION
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == ___proxyOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(___proxyTarget() != newTarget)
+has_time_delay: (node.type) EXPRESSION
+(Expression) res = CrowdsaleProxyTarget(this).isActive()
+has_time_delay: (node.type) EXPRESSION
+(Expression) ___setTarget(newTarget)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(___proxyTarget())
+has_time_delay: (node.type) EXPRESSION
+(Expression) _onlyProxyOwner()

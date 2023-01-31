@@ -1,0 +1,445 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ScentTokenStorage.is_proxy (Slither line:1425)
+
+
+End ScentTokenStorage.is_proxy (Slither line:1428)
+
+
+Begin ScentTokenStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ScentTokenStorage 
+
+End ScentTokenStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ScentTokenInterface.is_proxy (Slither line:1425)
+
+
+End ScentTokenInterface.is_proxy (Slither line:1428)
+
+
+Begin ScentTokenInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ScentTokenInterface 
+
+End ScentTokenInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ScentDelegationStorage.is_proxy (Slither line:1425)
+
+
+End ScentDelegationStorage.is_proxy (Slither line:1428)
+
+
+Begin ScentDelegationStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ScentDelegationStorage 
+
+End ScentDelegationStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ScentDelegatorInterface.is_proxy (Slither line:1425)
+
+
+End ScentDelegatorInterface.is_proxy (Slither line:1428)
+
+
+Begin ScentDelegatorInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ScentDelegatorInterface 
+
+End ScentDelegatorInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin sCENT.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin sCENT.find_delegatecall_in_exp_node
+
+Found Expression Node: delegateAndReturn() (Slither line:2802)
+Expression called: delegateAndReturn
+Type of call: bytes memory (Slither line:2817)
+Args:
+
+End sCENT.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin sCENT.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.value == 0,ScentDelegator:fallback: cannot send value to fallback) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.value == 0
+ScentDelegator:fallback: cannot send value to fallback
+
+End sCENT.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End sCENT.is_proxy (Slither line:1476)
+
+
+Begin sCENT.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: sCENT 
+sCENT is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in ScentDelegationStorage (Slither line:1204)
+
+
+Begin ScentDelegationStorage.find_setter_in_contract (Slither line:3119)
+
+
+End ScentDelegationStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ScentDelegationStorage 
+Looking in sCENT (Slither line:1213)
+
+Begin sCENT.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(string,string,uint8,IERC20,address,uint256,address,bytes) returns() (Slither line:3127)
+Checking function: _setImplementation(address,bool,bytes) returns() (Slither line:3127)
+Visibility: public
+delegateTo(implementation,data)
+require(bool,string)(msg.sender == gov,ScentDelegator::_setImplementation: Caller must be gov)
+delegateToImplementation(abi.encodeWithSignature(_resignImplementation()))
+delegateToImplementation(abi.encodeWithSignature(_becomeImplementation(bytes),becomeImplementationData))
+(success,returnData) = callee.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+NewImplementation(oldImplementation,implementation)
+returnData
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End sCENT.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: sCENT (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ScentDelegationStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+
+End ScentDelegationStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin sCENT.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: mint (Slither line:2988)
+mint returns bool variable  (Slither line:3008)
+Checking function: burn (Slither line:2988)
+burn returns bool variable  (Slither line:3008)
+Checking function: transfer (Slither line:2988)
+transfer returns bool variable  (Slither line:3008)
+Checking function: transferFrom (Slither line:2988)
+transferFrom returns bool variable  (Slither line:3008)
+Checking function: approve (Slither line:2988)
+approve returns bool variable  (Slither line:3008)
+Checking function: increaseAllowance (Slither line:2988)
+increaseAllowance returns bool variable  (Slither line:3008)
+Checking function: maxScalingFactor (Slither line:2988)
+maxScalingFactor returns uint256 variable  (Slither line:3008)
+Checking function: enter (Slither line:2988)
+Checking function: leave (Slither line:2988)
+Checking function: rebase (Slither line:2988)
+rebase returns uint256 variable  (Slither line:3008)
+Checking function: decreaseAllowance (Slither line:2988)
+decreaseAllowance returns bool variable  (Slither line:3008)
+Checking function: permit (Slither line:2988)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable  (Slither line:3008)
+Checking function: rescueTokens (Slither line:2988)
+rescueTokens returns bool variable  (Slither line:3008)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable  (Slither line:3008)
+Checking function: balanceOfUnderlying (Slither line:2988)
+balanceOfUnderlying returns uint256 variable  (Slither line:3008)
+Checking function: _setPendingGov (Slither line:2988)
+Checking function: _setSAMOZ (Slither line:2988)
+Checking function: _setFarming (Slither line:2988)
+Checking function: _setRebaser (Slither line:2988)
+Checking function: _setIncentivizer (Slither line:2988)
+Checking function: _acceptGov (Slither line:2988)
+Checking function: scentToFragment (Slither line:2988)
+scentToFragment returns uint256 variable  (Slither line:3008)
+Checking function: fragmentToScent (Slither line:2988)
+fragmentToScent returns uint256 variable  (Slither line:3008)
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: delegateToImplementation (Slither line:2988)
+delegateToImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3028)
+Checking function: delegateToViewImplementation (Slither line:2988)
+delegateToViewImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3028)
+Checking function: delegateToViewAndReturn (Slither line:2988)
+delegateToViewAndReturn returns bytes variable  (Slither line:3008)
+Checking function: delegateAndReturn (Slither line:2988)
+delegateAndReturn returns bytes variable  (Slither line:3008)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End sCENT.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in sCENT (Slither line:1305)
+or in ScentDelegationStorage (Slither line:1319)
+
+Begin ScentDelegatorInterface.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+
+End ScentDelegatorInterface.find_getter_in_contract (Slither line:3083)
+
+
+End sCENT.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression delegateAndReturn()
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.value == 0,ScentDelegator:fallback: cannot send value to fallback)
+impl_address_from_contract_call: arg is msg.value == 0
+impl_address_from_contract_call: arg is ScentDelegator:fallback: cannot send value to fallback
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking public function _setImplementation
+Checking external function transfer
+Checking external function transferFrom
+Checking external function balanceOf
+Checking external function balanceOfUnderlying
+Checking external function allowance
+Checking external function approve
+Checking external function increaseAllowance
+Checking external function decreaseAllowance
+Checking external function maxScalingFactor
+Checking external function scentToFragment
+Checking external function fragmentToScent
+Checking external function mint
+Checking external function burn
+Checking external function enter
+Checking external function leave
+Checking external function rebase
+Checking external function _setSAMOZ
+Checking external function _setFarming
+Checking external function _setRebaser
+Checking external function _setIncentivizer
+Checking external function _setPendingGov
+Checking external function _acceptGov
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == gov,ScentDelegator::_setImplementation: Caller must be gov)
+Checking external function mint
+Checking external function burn
+Checking external function transfer
+Checking external function transferFrom
+Checking external function approve
+Checking external function increaseAllowance
+Checking external function maxScalingFactor
+Checking external function enter
+Checking external function leave
+Checking external function rebase
+Checking external function decreaseAllowance
+Checking external function permit
+Checking external function allowance
+Checking external function rescueTokens
+Checking external function balanceOf
+Checking external function balanceOfUnderlying
+Checking external function _setPendingGov
+Checking external function _setSAMOZ
+Checking external function _setFarming
+Checking external function _setRebaser
+Checking external function _setIncentivizer
+Checking external function _acceptGov
+Checking external function scentToFragment
+Checking external function fragmentToScent
+Checking public function delegateToImplementation
+Checking public function delegateToViewImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function sCENT.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._acceptGov (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.decreaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.delegateAndReturn (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.burn (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.balanceOfUnderlying (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.leave (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setIncentivizer (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.fragmentToScent (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setSAMOZ (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.approve (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.scentToFragment (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.enter (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.rebase (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setPendingGov (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.fragmentToScent (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setPendingGov (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.decreaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setSAMOZ (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.maxScalingFactor (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.mint (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.delegateTo (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.balanceOfUnderlying (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.approve (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.permit (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setFarming (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._acceptGov (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.increaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.delegateToImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.leave (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.increaseAllowance (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setFarming (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.constructor (proxy_features line:898)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function sCENT.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setRebaser (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.scentToFragment (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.delegateToViewImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.maxScalingFactor (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.burn (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == gov,ScentDelegator::_setImplementation: Caller must be gov) (proxy_features line:909)
+functions_writing_to_variable: exp = allowResign (proxy_features line:909)
+functions_writing_to_variable: exp = delegateToImplementation(abi.encodeWithSignature(_resignImplementation())) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = delegateToImplementation(abi.encodeWithSignature(_becomeImplementation(bytes),becomeImplementationData)) (proxy_features line:909)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = delegateTo(implementation,data) (proxy_features line:909)
+functions_writing_to_variable: exp = (success,returnData) = callee.delegatecall(data) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: (success,returnData) = callee.delegatecall(data) (proxy_features line:912)
+functions_writing_to_variable: exp = returnData (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function sCENT.rescueTokens (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setIncentivizer (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT._setRebaser (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.rebase (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.delegateToViewAndReturn (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.enter (proxy_features line:898)
+functions_writing_to_variable: checking function sCENT.mint (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == gov,ScentDelegator::_setImplementation: Caller must be gov)
+has_compatibility_checks: condition msg.sender == gov
+has_compatibility_checks: IF node exp = allowResign
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: _setImplementation
+has_time_delay: (node.type) RETURN
+(Expression) delegateTo(implementation,data)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == gov,ScentDelegator::_setImplementation: Caller must be gov)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegateToImplementation(abi.encodeWithSignature(_resignImplementation()))
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegateToImplementation(abi.encodeWithSignature(_becomeImplementation(bytes),becomeImplementationData))
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,returnData) = callee.delegatecall(data)
+has_time_delay: (node.type) IF
+(Expression) allowResign
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) RETURN
+(Expression) returnData
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_

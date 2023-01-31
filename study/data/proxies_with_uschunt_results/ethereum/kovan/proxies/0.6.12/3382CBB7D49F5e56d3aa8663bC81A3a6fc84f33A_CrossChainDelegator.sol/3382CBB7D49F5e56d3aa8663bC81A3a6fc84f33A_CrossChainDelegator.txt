@@ -1,0 +1,289 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossChainAdminStorage.is_proxy (Slither line:1425)
+
+
+End CrossChainAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin CrossChainAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossChainAdminStorage 
+
+End CrossChainAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossChainDelegator.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End CrossChainDelegator.is_proxy (Slither line:1476)
+
+
+Begin CrossChainDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossChainDelegator 
+CrossChainDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in CrossChainAdminStorage (Slither line:1204)
+
+
+Begin CrossChainAdminStorage.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: owner() returns(address) (Slither line:3117)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3206)
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+_owner = newOwner
+is an Assignment Operation (Slither line:3206)
+onlyOwner()
+msg.sender
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+_owner
+OwnershipTransferred(_owner,newOwner)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: _msgSender() returns(address) (Slither line:3117)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3117)
+Visibility: internal
+
+End CrossChainAdminStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in CrossChainAdminStorage 
+Looking in CrossChainDelegator (Slither line:1213)
+
+Begin CrossChainDelegator.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,uint256,uint8[],uint256,address) returns() (Slither line:3117)
+Checking function: _setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+implementation = implementation_
+is an Assignment Operation (Slither line:3206)
+
+End CrossChainDelegator.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: _setImplementation in contract: CrossChainDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CrossChainAdminStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+
+End CrossChainAdminStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin CrossChainDelegator.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+Checking function: constructor (Slither line:2978)
+Checking function: _setImplementation (Slither line:2978)
+Checking function: _setAdmin (Slither line:2978)
+Checking function: delegateTo (Slither line:2978)
+delegateTo returns bytes variable  (Slither line:2998)
+RETURN node expression: returnData (Slither line:3018)
+Checking function: delegateToImplementation (Slither line:2978)
+delegateToImplementation returns bytes variable  (Slither line:2998)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3018)
+Checking function: delegateToViewImplementation (Slither line:2978)
+delegateToViewImplementation returns bytes variable  (Slither line:2998)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3018)
+Checking function: receive (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End CrossChainDelegator.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in CrossChainDelegator (Slither line:1305)
+or in CrossChainAdminStorage (Slither line:1319)
+Checking for implementation at slot 2 in contract CrossChainAdminStorage (Slither line:1355)
+Found implementation at slot 2 in contract CrossChainAdminStorage (Slither line:1362)
+
+Begin CrossChainAdminStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2978)
+Checking function: owner (Slither line:2978)
+owner returns address variable  (Slither line:2998)
+RETURN node expression: _owner (Slither line:3018)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _msgSender (Slither line:2978)
+_msgSender returns address variable  (Slither line:2998)
+RETURN node expression: msg.sender (Slither line:3018)
+Checking function: _msgData (Slither line:2978)
+_msgData returns bytes variable  (Slither line:2998)
+RETURN node expression: msg.data (Slither line:3018)
+
+End CrossChainAdminStorage.find_getter_in_contract (Slither line:3073)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function owner
+Checking public function renounceOwnership
+Checking public function transferOwnership
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking public function delegateToImplementation
+Checking public function delegateToViewImplementation
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function CrossChainDelegator.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.receive (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.owner (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,UNAUTHORIZED) (proxy_features line:904)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:907)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:904)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function CrossChainDelegator._msgData (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator._msgSender (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.constructor (proxy_features line:893)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function CrossChainDelegator._setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.delegateToViewImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.delegateTo (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function CrossChainDelegator.delegateToImplementation (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_implementation', 'implementation_']
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = success == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(returnData + 0x20,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if success == 0 then revert(uint256,uint256)(returnData + 0x20,returndatasize()()) else returnData
+require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: owner
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)

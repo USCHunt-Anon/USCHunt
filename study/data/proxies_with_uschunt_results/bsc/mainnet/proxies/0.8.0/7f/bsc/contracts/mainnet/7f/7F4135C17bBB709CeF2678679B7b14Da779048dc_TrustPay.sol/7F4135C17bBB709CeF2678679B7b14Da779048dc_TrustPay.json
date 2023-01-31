@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TrustPay (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7f/bsc/contracts/mainnet/7f/7F4135C17bBB709CeF2678679B7b14Da779048dc_TrustPay.sol/7F4135C17bBB709CeF2678679B7b14Da779048dc_TrustPay.sol#5-117)",
+        "elements": [],
+        "description": "TrustPay (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7f/bsc/contracts/mainnet/7f/7F4135C17bBB709CeF2678679B7b14Da779048dc_TrustPay.sol/7F4135C17bBB709CeF2678679B7b14Da779048dc_TrustPay.sol#5-117) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.trustpay:2021)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "638245cabdbb35b61a51d9f204db80d035d2df73ab66c4ead682d80bdba76d5a",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TrustPay.implementationPosition",
+          "impl_address_setter": "TrustPay.upgradeTo(address)",
+          "impl_address_getter": "TrustPay.implementation()",
+          "impl_address_location": "TrustPay (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/7f/bsc/contracts/mainnet/7f/7F4135C17bBB709CeF2678679B7b14Da779048dc_TrustPay.sol/7F4135C17bBB709CeF2678679B7b14Da779048dc_TrustPay.sol#5-117)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.trustpay:2021)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TrustPay.upgradeTo(address)": {
+                "check": "require(bool,string)(currentImplementation != _newImplementation,New implementation address must not be the same as old implementation address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "setAdmin(address,bool)",
+              "setSuperAdmin(address,bool)",
+              "emercencyWithdrawToken(string,address)",
+              "withdrawFund(address,address,uint256)",
+              "setTaxFee(uint256)",
+              "setFeeRecipientAddress(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

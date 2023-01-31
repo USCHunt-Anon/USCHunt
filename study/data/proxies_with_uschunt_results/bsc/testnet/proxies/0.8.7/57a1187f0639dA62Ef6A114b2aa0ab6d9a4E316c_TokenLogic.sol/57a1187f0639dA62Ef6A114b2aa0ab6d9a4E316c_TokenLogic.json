@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.7/57a1187f0639dA62Ef6A114b2aa0ab6d9a4E316c_TokenLogic.sol/57a1187f0639dA62Ef6A114b2aa0ab6d9a4E316c_TokenLogic.sol#947-974)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.7/57a1187f0639dA62Ef6A114b2aa0ab6d9a4E316c_TokenLogic.sol/57a1187f0639dA62Ef6A114b2aa0ab6d9a4E316c_TokenLogic.sol#947-974) is an upgradeable proxy.\n0xc0a54b5aaffd0952eab1abe0284c308cfa06b67aba8db1aab0e187478d57c502 is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: 0xc0a54b5aaffd0952eab1abe0284c308cfa06b67aba8db1aab0e187478d57c502\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateCode from TokenLogic\n",
+        "id": "46c6602dfe59497964f1f9c2a5d56b95af8b7a1645f353f0dcd87482c30487d1",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.0xc0a54b5aaffd0952eab1abe0284c308cfa06b67aba8db1aab0e187478d57c502",
+          "impl_address_setter": "TokenLogic.updateCode(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.7/57a1187f0639dA62Ef6A114b2aa0ab6d9a4E316c_TokenLogic.sol/57a1187f0639dA62Ef6A114b2aa0ab6d9a4E316c_TokenLogic.sol#947-974)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xc0a54b5aaffd0952eab1abe0284c308cfa06b67aba8db1aab0e187478d57c502",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "eip_1822": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TokenLogic.updateCode(address)": {
+                "check": "require(bool,string)(bytes32(0xc0a54b5aaffd0952eab1abe0284c308cfa06b67aba8db1aab0e187478d57c502) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              },
+              "Proxy.constructor(bytes,address)": {
+                "check": "require(bool,string)(contractLogic.delegatecall(constructData),Construction failed)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateCode from TokenLogic"
+        }
+      }
+    ]
+  }
+}

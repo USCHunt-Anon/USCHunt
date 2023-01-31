@@ -1,0 +1,239 @@
+
+Begin MavToken.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MavToken.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End MavToken.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MavToken.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    impl := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End MavToken.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin MavToken.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    impl := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End MavToken.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MavToken.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End MavToken.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MavToken.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin MavToken.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking admin (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in MavToken._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin MavToken.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{  (Slither line:2210)
+    impl := sload(slot)  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End MavToken.find_delegate_from_call_exp (Slither line:2328)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End MavToken.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin MavToken.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End MavToken.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End MavToken.find_delegatecall_in_asm (Slither line:1637)
+
+Setting MavToken._delegate_variable = MavToken._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End MavToken.is_proxy (Slither line:1476)
+
+
+Begin MavToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MavToken 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+MavToken is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin MavToken.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3 (Slither line:3122)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End MavToken.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in MavToken (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin MavToken.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable called impl (Slither line:3008)
+_implementation contains assembly (Slither line:3051)
+
+End MavToken.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: MavToken (Slither line:1285)
+
+Begin MavToken.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+INLINE ASM: None (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+NEW VARIABLE: slot = IMPLEMENTATION_SLOT (Slither line:2888)
+
+End MavToken.getter_return_is_non_constant (Slither line:2942)
+
+
+End MavToken.is_upgradeable_proxy (Slither line:1293)
+

@@ -1,0 +1,143 @@
+
+Begin DummyProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DummyProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let res := call(sub(gas(), 10000), impl_m, callvalue(), ptr, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(ptr, 0, returndatasize()) (Slither line:1576)
+    switch res (Slither line:1576)
+    case 0 { revert(ptr, returndatasize()) } (Slither line:1576)
+    default { return(ptr, returndatasize()) } (Slither line:1576)
+} (Slither line:1576)
+
+End DummyProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin DummyProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let res := call(sub(gas(), 10000), impl_m, callvalue(), ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'impl_m'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin DummyProxy.find_delegate_variable_from_name
+Searching for impl_m (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking delegateDummy (Slither line:1689)
+Checking valueDummy (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl_m (Slither line:1703)
+impl_m is a Local Variable in DummyProxy.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract DummyProxy (Slither line:1730)
+
+End DummyProxy.find_delegate_variable_by_name
+
+
+End DummyProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End DummyProxy.is_proxy (Slither line:1476)
+
+
+Begin DummyProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DummyProxy 
+DummyProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin DummyProxy.find_setter_in_contract (Slither line:3117)
+
+Checking function: constructor(address,address) returns() (Slither line:3125)
+Checking function: fallback() returns() (Slither line:3125)
+
+End DummyProxy.find_setter_in_contract (Slither line:3343)
+
+
+Could not find implementation setter in DummyProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin DummyProxy.find_getter_in_contract (Slither line:2972)
+
+implementation is a Variable object
+Checking function: constructor (Slither line:2986)
+Checking function: fallback (Slither line:2986)
+
+End DummyProxy.find_getter_in_contract (Slither line:3081)
+
+Could not find implementation getter in DummyProxy (Slither line:1305)
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+impl_m
+impl_m = implementation
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+delegateDummy.delegatecall(abi.encodeWithSignature(setValueDummy()))
+
+End DummyProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateDummy.is_proxy (Slither line:1425)
+
+
+End DelegateDummy.is_proxy (Slither line:1428)
+
+
+Begin DelegateDummy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateDummy 
+
+End DelegateDummy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DummyImpl.is_proxy (Slither line:1425)
+
+
+End DummyImpl.is_proxy (Slither line:1428)
+
+
+Begin DummyImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DummyImpl 
+
+End DummyImpl.is_upgradeable_proxy (Slither line:1407)
+

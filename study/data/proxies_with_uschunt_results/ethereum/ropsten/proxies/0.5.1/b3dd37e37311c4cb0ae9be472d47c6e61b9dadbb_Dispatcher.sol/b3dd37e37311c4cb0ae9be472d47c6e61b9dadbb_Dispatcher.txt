@@ -1,0 +1,199 @@
+
+Begin Dispatcher.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Dispatcher.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Dispatcher.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking target (Slither line:1689)
+Checking admins (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Dispatcher.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Dispatcher.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Return node of function Dispatcher.implementation(): RETURN target (Slither line:2031)
+target (Slither line:2038)
+implementation returns a variable of type address   called target (Slither line:2183)
+
+End Dispatcher.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Dispatcher.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Dispatcher.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Dispatcher.is_proxy (Slither line:1476)
+
+
+Begin Dispatcher.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Dispatcher 
+Dispatcher is delegating to target
+Looking for setter (Slither line:1200)
+
+
+Begin Dispatcher.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address,address[]) returns() (Slither line:3117)
+Checking function: checkAdmin() returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: upgrade(address) returns() (Slither line:3117)
+Visibility: public
+i ++
+onlyAdmin()
+true
+require(bool)(checkAdmin())
+false
+target = _target
+is an Assignment Operation (Slither line:3206)
+
+End Dispatcher.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgrade in contract: Dispatcher (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Dispatcher.find_getter_in_contract (Slither line:2964)
+
+target is a Variable object
+_target
+Checking function: constructor (Slither line:2978)
+Checking function: checkAdmin (Slither line:2978)
+checkAdmin returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+RETURN node expression: false (Slither line:3018)
+Checking function: upgrade (Slither line:2978)
+Checking function: foo (Slither line:2978)
+foo returns address variable  (Slither line:2998)
+RETURN node expression: target (Slither line:3018)
+
+End Dispatcher.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: foo in contract: Dispatcher (Slither line:1285)
+
+End Dispatcher.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function upgrade
+Checking public function foo
+Checking public function implementation
+Checking external function fallback
+functions_writing_to_variable: target
+functions_writing_to_variable: checking function Dispatcher.checkAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function Dispatcher.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Dispatcher.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Dispatcher.foo (proxy_features line:893)
+functions_writing_to_variable: checking function Dispatcher.upgrade (proxy_features line:893)
+functions_writing_to_variable: exp = target = _target (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:907)
+functions_writing_to_variable: Identifier: target (proxy_features line:919)
+get_value_assigned: target = _target
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(checkAdmin()) (proxy_features line:904)
+functions_writing_to_variable: exp = admin = address(msg.sender) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: admin = address(msg.sender) (proxy_features line:907)
+functions_writing_to_variable: exp = i = 0 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: i = 0 (proxy_features line:907)
+functions_writing_to_variable: exp = i < admins.length (proxy_features line:904)
+functions_writing_to_variable: exp = admin == admins[i] (proxy_features line:904)
+functions_writing_to_variable: exp = true (proxy_features line:904)
+functions_writing_to_variable: exp = i ++ (proxy_features line:904)
+functions_writing_to_variable: exp = false (proxy_features line:904)
+functions_writing_to_variable: upgrade writes _target to target (proxy_features line:924)
+functions_writing_to_variable: checking function Dispatcher.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = target = _target (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:907)
+functions_writing_to_variable: Identifier: target (proxy_features line:919)
+get_value_assigned: target = _target
+functions_writing_to_variable: exp = admins = _admins (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: admins = _admins (proxy_features line:907)
+functions_writing_to_variable: constructor writes _target to target (proxy_features line:924)
+has_compatibility_checks: dependencies: ['_target', '_target']
+has_compatibility_checks: checking public function upgrade
+require(bool)(checkAdmin())
+has_compatibility_checks: condition checkAdmin()
+has_compatibility_checks: IF node exp = admin == admins[i]
+has_compatibility_checks: checking public function constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    case 1 {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: LogDelegate(msg.sender,msg.data)
+Found public function: constructor
+Found public function: upgrade
+has_time_delay: (node.type) EXPRESSION
+(Expression) i ++
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) i = 0
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(checkAdmin())
+has_time_delay: (node.type) IF
+(Expression) admin == admins[i]
+has_time_delay: (node.type) IF_LOOP
+(Expression) i < admins.length
+has_time_delay: (node.type) RETURN
+(Expression) false
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) admin = address(msg.sender)
+has_time_delay: (node.type) EXPRESSION
+(Expression) target = _target

@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#12-80)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#12-80) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#250-314)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#250-314) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "MerkleProofClaimProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#326-452)",
+        "elements": [],
+        "description": "MerkleProofClaimProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#326-452) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "ec7c4c6582afa18ec12346ae7c0ca98600fd38f669d03cc22068c64923ebc7bd",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "MerkleProofClaimProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeabilityProxy._implementation()",
+          "impl_address_location": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/ff./ethereum/contracts/rinkeby/ff/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol/Ff2AaE6bB075135EDD797a6fAE16dc292C68C975_MerkleProofClaimProxy.sol#250-314)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MerkleProofClaimProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "MerkleProofClaimProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "UpgradeabilityProxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "MerkleProofClaimProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

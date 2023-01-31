@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol#208-276)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol#208-276) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ForgeProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol#318-400)",
+        "elements": [],
+        "description": "ForgeProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol#318-400) is an upgradeable proxy.\n_IMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "575755a5ffe8fd1b3f1722a163c1ce65b102a9ba18e59e73041188c4f2dcc423",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ForgeProxy._IMPLEMENTATION_SLOT",
+          "impl_address_setter": "ForgeProxy.upgradeTo(address)",
+          "impl_address_getter": "ForgeProxy._implementation()",
+          "impl_address_location": "ForgeProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol/0d73Ad702AC09EDDAcc10cEB137cbf84e6B3b9e0_ForgeProxy.sol#318-400)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ForgeProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967Proxy: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "ForgeProxy.initialize(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967Proxy: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "initialize(address,address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

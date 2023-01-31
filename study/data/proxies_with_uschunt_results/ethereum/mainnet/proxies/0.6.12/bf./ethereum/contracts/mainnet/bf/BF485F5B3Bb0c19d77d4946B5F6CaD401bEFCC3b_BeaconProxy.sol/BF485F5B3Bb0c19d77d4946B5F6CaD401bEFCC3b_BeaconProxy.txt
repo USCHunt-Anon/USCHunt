@@ -1,0 +1,156 @@
+
+Begin BeaconProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+retSz_fallback_asm_0
+
+End BeaconProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,contractLogic,0x0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()() - 10000
+contractLogic
+0x0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractLogic (Slither line:2828)
+dest.value: contractLogic (Slither line:2831)
+Expression: IBeacon(BEACON).getCanonicalLib() (Slither line:2836)
+
+Begin BeaconProxy.find_delegate_from_call_exp
+
+IBeacon(BEACON).getCanonicalLib() (Slither line:2003)
+called = IBeacon(BEACON).getCanonicalLib (Slither line:2010)
+Called member of IBeacon(BEACON) (Slither line:2017)
+
+Begin BeaconProxy.find_delegate_from_member_access
+
+Expression: IBeacon(BEACON).getCanonicalLib() (Slither line:2358)
+IBeacon(BEACON) (Slither line:2371)
+getCanonicalLib is a member of the contract type: IBeacon (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IBeacon (Slither line:2441)
+
+End BeaconProxy.find_delegate_from_call_exp (Slither line:2019)
+
+
+End BeaconProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End BeaconProxy.is_proxy (Slither line:1476)
+
+
+Begin BeaconProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BeaconProxy 
+Local Variable: contractLogic (Slither line:1164)
+IBeacon(BEACON) (Slither line:1171)
+Call destination IBeacon(BEACON).getCanonicalLib() is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: BeaconProxy
+contractLogic is dependent on BEACON
+Expression for contractLogic: IBeacon(BEACON).getCanonicalLib()
+Called: IBeacon(BEACON).getCanonicalLib
+impl_address_from_contract_call: IBeacon(BEACON).getCanonicalLib()
+called: IBeacon(BEACON).getCanonicalLib
+found MemberAccess: IBeacon(BEACON).getCanonicalLib
+TypeConversion: IBeacon(BEACON)
+find_registry_address_source: IBeacon(BEACON).getCanonicalLib()
+MemberAccess: IBeacon(BEACON).getCanonicalLib
+TypeConversion: IBeacon(BEACON)
+Identifier: BEACON
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: contractLogic
+functions_writing_to_variable: checking function BeaconProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function BeaconProxy.constructor (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_beacon', 'TMP_5', 'BEACON', 'TMP_4']
+functions_writing_to_variable: BEACON
+functions_writing_to_variable: checking function BeaconProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function BeaconProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function BeaconProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = BEACON = _beacon (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: BEACON = _beacon (proxy_features line:912)
+functions_writing_to_variable: Identifier: BEACON (proxy_features line:924)
+get_value_assigned: BEACON = _beacon
+functions_writing_to_variable: exp = (success,returnData) = IBeacon(_beacon).getCanonicalLib().delegatecall(_constructData) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: (success,returnData) = IBeacon(_beacon).getCanonicalLib().delegatecall(_constructData) (proxy_features line:912)
+functions_writing_to_variable: exp = require(bool,string)(success,string(returnData)) (proxy_features line:909)
+functions_writing_to_variable: constructor writes _beacon to BEACON (proxy_features line:929)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,contractLogic,0x0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: contractLogic = IBeacon(BEACON).getCanonicalLib()
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+Found public function: constructor
+Found fallback
+Found external function: receive
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+

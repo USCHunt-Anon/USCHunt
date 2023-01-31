@@ -1,0 +1,54 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol#325-386)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol#325-386) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BEP721Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol#390-415)",
+        "elements": [],
+        "description": "BEP721Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol#390-415) is an upgradeable proxy.\n_implementationAddress was found in a different contract.\n_implementationAddress is an address state variable.\nMissing compatibility check in BEP721Proxy.constructor(address)\nFound compatibility check in BEP721Proxy.replaceImplementation(address)\n",
+        "id": "624df9e1dd107d72d23141546c53f98e8fecbe0c6107ebf74d0d1fca76d93a1c",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "BEP721Storage._implementationAddress",
+          "impl_address_setter": "BEP721Proxy.replaceImplementation(address)",
+          "impl_address_getter": "BEP721Proxy.implementation()",
+          "impl_address_location": "BEP721Storage (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol/5532d33a2ca39d33fd6c25b55a1e9da09b8ca499_BEP721Proxy.sol#292-311)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "BEP721Proxy.constructor(address)": "missing",
+              "BEP721Proxy.replaceImplementation(address)": "require(bool,string)(newTarget != address(0),SnakesNFTProxy: target's address is equal to zero address)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "newOwner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "implementation()",
+              "replaceImplementation(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

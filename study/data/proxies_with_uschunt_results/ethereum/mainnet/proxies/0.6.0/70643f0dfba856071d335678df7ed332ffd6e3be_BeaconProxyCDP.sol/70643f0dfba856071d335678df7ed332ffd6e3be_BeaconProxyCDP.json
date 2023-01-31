@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol#23-88)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol#23-88) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BeaconProxyCDP (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol#91-95)",
+        "elements": [],
+        "description": "BeaconProxyCDP (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol#91-95) may be an upgradeable proxy.\nimplementation is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: bytes32(uint256(1))\nProxy._delegate(address).implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol#47) gets value from a cross-contract call: IBeacon(_NPics_).implementations(_CDP_SHARD_)\nIBeacon appears to be a Registry contract for the proxy\nThe address of IBeacon is stored as a state variable: Constants._NPics_\n_NPics_ is constant, so the Registry address cannot be upgraded.\nNo setter functions found to search for compatibility checks.\n",
+        "id": "a01c057b738a1cf05d26d2eb3389ae126b8339e3bf1a34bc08d7bb986dbcd254",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Proxy._delegate(address).implementation",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "BeaconProxyCDP (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.0/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol/70643f0dfba856071d335678df7ed332ffd6e3be_BeaconProxyCDP.sol#91-95)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "impl_address_from_contract_call": "IBeacon(_NPics_).implementations(_CDP_SHARD_)",
+          "registry": "IBeacon",
+          "registry_source_type": "address",
+          "registry_source_variable": "Constants._NPics_",
+          "registry_source_constant": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

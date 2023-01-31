@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "CvcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/bf95d4957d481473e39c70d3bc08896740e3ca96_CvcMigrator.sol/bf95d4957d481473e39c70d3bc08896740e3ca96_CvcMigrator.sol#71-232)",
+        "elements": [],
+        "description": "CvcProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/bf95d4957d481473e39c70d3bc08896740e3ca96_CvcMigrator.sol/bf95d4957d481473e39c70d3bc08896740e3ca96_CvcMigrator.sol#71-232) is an upgradeable proxy.\nIMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb\nFound compatibility checks in all upgrade functions.\n",
+        "id": "14b9dff0d1027d869cc8a8d64fcd866421f942308f31b9c9132c2d27bfedd070",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ImplementationStorage.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "CvcProxy.upgradeTo(address)",
+          "impl_address_getter": "ImplementationStorage.implementation()",
+          "impl_address_location": "ImplementationStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/bf95d4957d481473e39c70d3bc08896740e3ca96_CvcMigrator.sol/bf95d4957d481473e39c70d3bc08896740e3ca96_CvcMigrator.sol#9-34)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "CvcProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(size > 0,Cannot set new implementation: no contract code at contract address)",
+                "is_correct": true
+              },
+              "CvcProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(size > 0,Cannot set new implementation: no contract code at contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "admin()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

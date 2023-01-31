@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#2632-2709)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#2632-2709) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BeaconProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3315-3368)",
+        "elements": [],
+        "description": "BeaconProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3315-3368) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nUpgradeableBeacon._implementation (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3491) gets value from a cross-contract call: IBeacon(_getBeacon()).implementation()\nUpgradeableBeacon appears to be a Beacon contract for the proxy\nThe address of UpgradeableBeacon comes from the value of ERC1967Upgrade._getBeacon(). (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3260)\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from UpgradeableBeacon\n",
+        "id": "27321c41e06259f5b6de66685299199fabdbe551fedc9101ab65b7f33a9c31fd",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableBeacon._implementation",
+          "impl_address_setter": "UpgradeableBeacon.upgradeTo(address)",
+          "impl_address_getter": "UpgradeableBeacon.implementation()",
+          "impl_address_location": "UpgradeableBeacon (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3490-3542)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(_getBeacon()).implementation()",
+          "beacon": "UpgradeableBeacon",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradeableBeacon.upgradeTo(address)": {
+                "check": "require(bool,string)(account.code.length > 0,UpgradeableBeacon: implementation is not a contract)",
+                "is_correct": true
+              },
+              "UpgradeableBeacon.constructor(address)": {
+                "check": "require(bool,string)(account.code.length > 0,UpgradeableBeacon: implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from UpgradeableBeacon"
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3687-3714)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3687-3714) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "211e994b39210eb9069681dcc1b67b974889fdbc5a5da463a2722040444f5164",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ArtistCreatorProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3724-3730)",
+        "elements": [],
+        "description": "ArtistCreatorProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.8.7/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol/87Ae6457cE4102826479448e9D9af935A7208c3C_Artist.sol#3724-3730) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "8ba6da8dd6a6b7f219317f9208e4e0a14f59f52aa301841939246782dafebc60",
+        "features": {
+          "upgradeable": false
+        }
+      }
+    ]
+  }
+}

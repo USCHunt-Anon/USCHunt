@@ -1,0 +1,253 @@
+
+Begin PrismProxy.is_proxy (Slither line:1425)
+
+
+End PrismProxy.is_proxy (Slither line:1428)
+
+
+Begin PrismProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PrismProxy 
+
+End PrismProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin VotingPowerPrism.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin VotingPowerPrism.find_delegatecall_in_exp_node
+
+Found Expression Node: _forwardToImplementation() (Slither line:2802)
+Expression called: _forwardToImplementation
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End VotingPowerPrism.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End VotingPowerPrism.is_proxy (Slither line:1476)
+
+
+Begin VotingPowerPrism.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: VotingPowerPrism 
+VotingPowerPrism is delegating to REF_62
+Looking for setter (Slither line:1200)
+
+
+Begin VotingPowerPrism.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: proxyStorage() returns(PrismProxy.ProxyStorage) (Slither line:3127)
+Visibility: internal
+Checking function: setPendingProxyImplementation(address) returns(bool) (Slither line:3127)
+Visibility: public
+true
+s.pendingImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+ps = position
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == s.admin,Prism::setPendingProxyImp: caller must be admin)
+NewPendingImplementation(oldPendingImplementation,s.pendingImplementation)
+Checking function: acceptProxyImplementation() returns(bool) (Slither line:3127)
+Visibility: public
+s.version ++
+require(bool,string)(msg.sender == s.pendingImplementation && s.pendingImplementation != address(0),Prism::acceptProxyImp: caller must be pending implementation)
+NewImplementation(oldImplementation,s.implementation)
+s.implementation = s.pendingImplementation
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+NewPendingImplementation(oldPendingImplementation,s.pendingImplementation)
+ps = position
+is an Assignment Operation (Slither line:3216)
+s.pendingImplementation = address(0)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+true
+Checking function: setPendingProxyAdmin(address) returns(bool) (Slither line:3127)
+Visibility: public
+s.pendingAdmin = newPendingAdmin
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(msg.sender == s.admin,Prism::setPendingProxyAdmin: caller must be admin)
+NewPendingAdmin(oldPendingAdmin,newPendingAdmin)
+ps = position
+is an Assignment Operation (Slither line:3216)
+true
+Checking function: acceptProxyAdmin() returns(bool) (Slither line:3127)
+Visibility: public
+true
+s.pendingAdmin = address(0)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+NewAdmin(oldAdmin,s.admin)
+s.admin = s.pendingAdmin
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+ps = position
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == s.pendingAdmin && msg.sender != address(0),Prism::acceptProxyAdmin: caller must be pending admin)
+NewPendingAdmin(oldPendingAdmin,s.pendingAdmin)
+Checking function: proxyAdmin() returns(address) (Slither line:3127)
+Visibility: public
+s.admin
+ps = position
+is an Assignment Operation (Slither line:3216)
+Checking function: pendingProxyAdmin() returns(address) (Slither line:3127)
+Visibility: public
+s.pendingAdmin
+ps = position
+is an Assignment Operation (Slither line:3216)
+Checking function: proxyImplementation() returns(address) (Slither line:3127)
+Visibility: public
+ps = position
+is an Assignment Operation (Slither line:3216)
+s.implementation
+Checking function: pendingProxyImplementation() returns(address) (Slither line:3127)
+Visibility: public
+ps = position
+is an Assignment Operation (Slither line:3216)
+s.pendingImplementation
+Checking function: proxyImplementationVersion() returns(uint8) (Slither line:3127)
+Visibility: public
+s.version
+ps = position
+is an Assignment Operation (Slither line:3216)
+Checking function: _forwardToImplementation() returns() (Slither line:3127)
+Visibility: internal
+
+End VotingPowerPrism.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in VotingPowerPrism (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin VotingPowerPrism.find_getter_in_contract (Slither line:2974)
+
+REF_62 is a Variable object
+Checking function: proxyStorage (Slither line:2988)
+proxyStorage returns PrismProxy.ProxyStorage variable called ps (Slither line:3008)
+Checking function: setPendingProxyImplementation (Slither line:2988)
+setPendingProxyImplementation returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: acceptProxyImplementation (Slither line:2988)
+acceptProxyImplementation returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: setPendingProxyAdmin (Slither line:2988)
+setPendingProxyAdmin returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: acceptProxyAdmin (Slither line:2988)
+acceptProxyAdmin returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+Checking function: proxyAdmin (Slither line:2988)
+proxyAdmin returns address variable  (Slither line:3008)
+RETURN node expression: s.admin (Slither line:3028)
+Checking function: pendingProxyAdmin (Slither line:2988)
+pendingProxyAdmin returns address variable  (Slither line:3008)
+RETURN node expression: s.pendingAdmin (Slither line:3028)
+Checking function: proxyImplementation (Slither line:2988)
+proxyImplementation returns address variable  (Slither line:3008)
+RETURN node expression: s.implementation (Slither line:3028)
+Checking function: pendingProxyImplementation (Slither line:2988)
+pendingProxyImplementation returns address variable  (Slither line:3008)
+RETURN node expression: s.pendingImplementation (Slither line:3028)
+Checking function: proxyImplementationVersion (Slither line:2988)
+proxyImplementationVersion returns uint8 variable  (Slither line:3008)
+RETURN node expression: s.version (Slither line:3028)
+Checking function: _forwardToImplementation (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End VotingPowerPrism.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in VotingPowerPrism (Slither line:1305)
+Checking node of type IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+s
+s = proxyStorage()
+Checking node of type EXPRESSION (Slither line:1395)
+_forwardToImplementation()
+Checking node of type END_IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+(success) = s.implementation.delegatecall(msg.data)
+Checking node of type EXPRESSION (Slither line:1395)
+revert(uint256,uint256)(free_mem_ptr__forwardToImplementation_asm_0,returndatasize()())
+Checking node of type NEW VARIABLE (Slither line:1395)
+success
+None
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(free_mem_ptr__forwardToImplementation_asm_0,returndatasize()())
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+position
+position = PRISM_PROXY_STORAGE_POSITION
+Checking node of type EXPRESSION (Slither line:1395)
+free_mem_ptr__forwardToImplementation_asm_0 = mload(uint256)(0x40)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+free_mem_ptr__forwardToImplementation_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+ps = position
+Checking node of type EXPRESSION (Slither line:1395)
+returndatacopy(uint256,uint256,uint256)(free_mem_ptr__forwardToImplementation_asm_0,0,returndatasize()())
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+switch_expr_7447_143_0__forwardToImplementation_asm_0 = success
+Checking node of type NEW VARIABLE (Slither line:1395)
+switch_expr_7447_143_0__forwardToImplementation_asm_0
+None
+Checking node of type ENTRY_POINT (Slither line:1395)
+
+End VotingPowerPrism.is_upgradeable_proxy (Slither line:1407)
+

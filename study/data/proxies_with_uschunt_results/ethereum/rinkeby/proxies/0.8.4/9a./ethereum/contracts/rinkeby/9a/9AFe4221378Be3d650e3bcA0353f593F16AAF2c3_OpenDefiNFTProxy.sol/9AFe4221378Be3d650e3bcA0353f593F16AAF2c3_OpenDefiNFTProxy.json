@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OpenDefiNFTProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.4/9a./ethereum/contracts/rinkeby/9a/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol#6-35)",
+        "elements": [],
+        "description": "OpenDefiNFTProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.4/9a./ethereum/contracts/rinkeby/9a/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol#6-35) may be an upgradeable proxy.\nimpl is declared in the proxy.\nOpenDefiNFTProxy.fallback().impl (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.4/9a./ethereum/contracts/rinkeby/9a/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol#15) gets value from a cross-contract call: IBeacon(beacon).implementation()\nIBeacon appears to be a Beacon contract for the proxy\nThe address of IBeacon is stored as a state variable: OpenDefiNFTProxy.beacon\nCould not find setter for beacon\nFound compatibility checks in all upgrade functions.\n",
+        "id": "f1b4ae1c443414bfe570c609339eea04f3d035049626e0d6c20ab5d32eddee71",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "OpenDefiNFTProxy.fallback().impl",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "OpenDefiNFTProxy._implementation()",
+          "impl_address_location": "OpenDefiNFTProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.4/9a./ethereum/contracts/rinkeby/9a/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol/9AFe4221378Be3d650e3bcA0353f593F16AAF2c3_OpenDefiNFTProxy.sol#6-35)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(beacon).implementation()",
+          "beacon": "IBeacon",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "OpenDefiNFTProxy.beacon",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OpenDefiNFTProxy.constructor(address)": {
+                "check": "require(bool,string)(_beacon != address(0),OpenDefiNFTProxy:ZERO_ADDRESS )",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

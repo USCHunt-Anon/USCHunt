@@ -1,0 +1,1057 @@
+
+Begin Factory.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Factory.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End Factory.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Factory.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Factory.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking exchangeImplementation (Slither line:1689)
+Checking WETH (Slither line:1689)
+Checking WBTC (Slither line:1689)
+Checking router (Slither line:1689)
+Checking pools (Slither line:1689)
+Checking poolExist (Slither line:1689)
+Checking tokenToPool (Slither line:1689)
+Checking createFee (Slither line:1689)
+Checking entered (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in Factory.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract Factory (Slither line:1730)
+
+End Factory.find_delegate_variable_by_name
+
+
+End Factory.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Factory.is_proxy (Slither line:1476)
+
+
+Begin Factory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Factory 
+Factory is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Factory.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End Factory.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Factory (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Factory.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setExchangeImplementation (Slither line:2988)
+Checking function: getExchangeImplementation (Slither line:2988)
+getExchangeImplementation returns address variable  (Slither line:3008)
+RETURN node expression: exchangeImplementation (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+
+End Factory.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Factory (Slither line:1305)
+Checking for implementation at slot 2 in contract Governance (Slither line:1355)
+Found implAdmin at slot 2 in contract Governance (Slither line:1362)
+Checking for implAdmin at slot 2 in contract GovernanceImpl (Slither line:1355)
+Found implAdmin at slot 2 in contract GovernanceImpl (Slither line:1362)
+
+Begin ImplGetter.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+
+End ImplGetter.find_getter_in_contract (Slither line:3083)
+
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setExchangeImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setExchangeImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getExchangeImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Factory.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = WBTC = _WBTC (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: WBTC = _WBTC (proxy_features line:912)
+functions_writing_to_variable: exp = exchangeImplementation = _exchangeImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: exchangeImplementation = _exchangeImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = WETH = _WETH (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: WETH = _WETH (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Factory._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Factory.getExchangeImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Factory._setExchangeImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Factory.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation', '_newImp']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+
+Begin ImplGetter.is_proxy (Slither line:1425)
+
+
+End ImplGetter.is_proxy (Slither line:1428)
+
+
+Begin ImplGetter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ImplGetter 
+
+End ImplGetter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Governance.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Governance.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Governance.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking implAdmin (Slither line:1689)
+Checking executor (Slither line:1689)
+Checking teamAdmin (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking mesh (Slither line:1689)
+Checking votingMESH (Slither line:1689)
+Checking poolVoting (Slither line:1689)
+Checking treasury (Slither line:1689)
+Checking buyback (Slither line:1689)
+Checking governor (Slither line:1689)
+Checking ecoPotVoting (Slither line:1689)
+Checking singlePoolFactory (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking vMESHMiningRate (Slither line:1689)
+Checking feeShareRate (Slither line:1689)
+Checking isInitialized (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking transactionCount (Slither line:1689)
+Checking transactionExecuted (Slither line:1689)
+Checking transactionDestination (Slither line:1689)
+Checking transactionValue (Slither line:1689)
+Checking transactionData (Slither line:1689)
+Checking interval (Slither line:1689)
+Checking nextTime (Slither line:1689)
+Checking prevTime (Slither line:1689)
+Checking epoch (Slither line:1689)
+Checking epochMined (Slither line:1689)
+Checking lastEpoch (Slither line:1689)
+Checking epochRates (Slither line:1689)
+Checking singlePoolMiningRate (Slither line:1689)
+Checking miningShareRate (Slither line:1689)
+Checking rateNumerator (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in Governance.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract Governance (Slither line:1730)
+
+End Governance.find_delegate_variable_by_name
+
+
+End Governance.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Governance.is_proxy (Slither line:1476)
+
+
+Begin Governance.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Governance 
+Governance is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Governance.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+onlyImplAdmin()
+require(bool)(implementation != _newImp)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End Governance.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Governance (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Governance.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setFactoryImplementation (Slither line:2988)
+Checking function: _setExchangeImplementation (Slither line:2988)
+Checking function: _setVotingMESHImplementation (Slither line:2988)
+Checking function: _setPoolVotingImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End Governance.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Governance (Slither line:1305)
+Checking for implementation at slot 14 in contract GovernanceImpl (Slither line:1355)
+Found implementation at slot 14 in contract GovernanceImpl (Slither line:1362)
+
+Begin GovernanceImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setFactoryImplementation (Slither line:2988)
+Checking function: _setExchangeImplementation (Slither line:2988)
+Checking function: _setVotingMESHImplementation (Slither line:2988)
+Checking function: _setPoolVotingImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: GovernanceImpl20220502 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: changeTeamWallet (Slither line:2988)
+Checking function: setImplAdmin (Slither line:2988)
+Checking function: setExecutor (Slither line:2988)
+Checking function: setTeamAdmin (Slither line:2988)
+Checking function: setTimeParams (Slither line:2988)
+Checking function: setFeeShareRate (Slither line:2988)
+Checking function: setVotingMESHMiningRate (Slither line:2988)
+Checking function: setSinglePoolMiningRate (Slither line:2988)
+Checking function: setMiningShareRate (Slither line:2988)
+Checking function: changeMiningRates (Slither line:2988)
+Checking function: setEcoPotVoting (Slither line:2988)
+Checking function: changeCreateFee (Slither line:2988)
+Checking function: changePoolFee (Slither line:2988)
+Checking function: addTransaction (Slither line:2988)
+Checking function: executeTransaction (Slither line:2988)
+Checking function: sendReward (Slither line:2988)
+Checking function: setMiningRate (Slither line:2988)
+Checking function: acceptEpoch (Slither line:2988)
+Checking function: getEpochMining (Slither line:2988)
+getEpochMining returns uint256 variable called curEpoch (Slither line:3008)
+getEpochMining returns uint256 variable called prevEpoch (Slither line:3008)
+getEpochMining returns uint256[] variable called rates (Slither line:3008)
+getEpochMining returns uint256[] variable called mined (Slither line:3008)
+Checking function: getBoostingMining (Slither line:2988)
+getBoostingMining returns uint256 variable called curEpoch (Slither line:3008)
+getBoostingMining returns uint256 variable called prevEpoch (Slither line:3008)
+getBoostingMining returns uint256[] variable called mined (Slither line:3008)
+getBoostingMining returns uint256[] variable called rates (Slither line:3008)
+getBoostingMining returns uint256[] variable called rateNumerators (Slither line:3008)
+Checking function: getCurrentRateNumerator (Slither line:2988)
+getCurrentRateNumerator returns uint256 variable  (Slither line:3008)
+RETURN node expression: epochRates[epoch][address(3)] (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End GovernanceImpl.find_getter_in_contract (Slither line:3083)
+
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setFactoryImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setExchangeImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setVotingMESHImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setPoolVotingImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setFactoryImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setExchangeImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setVotingMESHImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setPoolVotingImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Governance._setFactoryImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setVotingMESHImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Governance.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: exp = onlyImplAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this)) (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Governance._setExchangeImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setPoolVotingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Governance.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = implAdmin = _implAdmin (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implAdmin = _implAdmin (proxy_features line:912)
+functions_writing_to_variable: exp = executor = _executor (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: executor = _executor (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Governance.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation', '_newImp', 'TMP_74']
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+has_compatibility_checks: condition msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this)
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: modifier calls: ['onlyImplAdmin()']
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyImplAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVotingMESH.is_proxy (Slither line:1425)
+
+
+End IVotingMESH.is_proxy (Slither line:1428)
+
+
+Begin IVotingMESH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVotingMESH 
+
+End IVotingMESH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IPoolVoting.is_proxy (Slither line:1425)
+
+
+End IPoolVoting.is_proxy (Slither line:1428)
+
+
+Begin IPoolVoting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPoolVoting 
+
+End IPoolVoting.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFactory.is_proxy (Slither line:1425)
+
+
+End IFactory.is_proxy (Slither line:1428)
+
+
+Begin IFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFactory 
+
+End IFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernor.is_proxy (Slither line:1425)
+
+
+End IGovernor.is_proxy (Slither line:1428)
+
+
+Begin IGovernor.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernor 
+
+End IGovernor.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBuybackFund.is_proxy (Slither line:1425)
+
+
+End IBuybackFund.is_proxy (Slither line:1428)
+
+
+Begin IBuybackFund.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBuybackFund 
+
+End IBuybackFund.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMESH.is_proxy (Slither line:1425)
+
+
+End IMESH.is_proxy (Slither line:1428)
+
+
+Begin IMESH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMESH 
+
+End IMESH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IExchange.is_proxy (Slither line:1425)
+
+
+End IExchange.is_proxy (Slither line:1428)
+
+
+Begin IExchange.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IExchange 
+
+End IExchange.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GovernanceImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GovernanceImpl.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End GovernanceImpl.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GovernanceImpl.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin GovernanceImpl.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking implAdmin (Slither line:1689)
+Checking executor (Slither line:1689)
+Checking teamAdmin (Slither line:1689)
+Checking factory (Slither line:1689)
+Checking mesh (Slither line:1689)
+Checking votingMESH (Slither line:1689)
+Checking poolVoting (Slither line:1689)
+Checking treasury (Slither line:1689)
+Checking buyback (Slither line:1689)
+Checking governor (Slither line:1689)
+Checking ecoPotVoting (Slither line:1689)
+Checking singlePoolFactory (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking vMESHMiningRate (Slither line:1689)
+Checking feeShareRate (Slither line:1689)
+Checking isInitialized (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking transactionCount (Slither line:1689)
+Checking transactionExecuted (Slither line:1689)
+Checking transactionDestination (Slither line:1689)
+Checking transactionValue (Slither line:1689)
+Checking transactionData (Slither line:1689)
+Checking interval (Slither line:1689)
+Checking nextTime (Slither line:1689)
+Checking prevTime (Slither line:1689)
+Checking epoch (Slither line:1689)
+Checking epochMined (Slither line:1689)
+Checking lastEpoch (Slither line:1689)
+Checking epochRates (Slither line:1689)
+Checking singlePoolMiningRate (Slither line:1689)
+Checking miningShareRate (Slither line:1689)
+Checking rateNumerator (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in GovernanceImpl.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract Governance (Slither line:1730)
+
+End GovernanceImpl.find_delegate_variable_by_name
+
+
+End GovernanceImpl.find_delegatecall_in_asm (Slither line:1637)
+
+
+End GovernanceImpl.is_proxy (Slither line:1476)
+
+
+Begin GovernanceImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GovernanceImpl 
+GovernanceImpl is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Governance (Slither line:1204)
+
+
+Begin Governance.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImp (Slither line:3122)
+Checking function: constructor(address,address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+onlyImplAdmin()
+require(bool)(implementation != _newImp)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+_newImp
+
+End Governance.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: Governance (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Governance.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setFactoryImplementation (Slither line:2988)
+Checking function: _setExchangeImplementation (Slither line:2988)
+Checking function: _setVotingMESHImplementation (Slither line:2988)
+Checking function: _setPoolVotingImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End Governance.find_getter_in_contract (Slither line:3083)
+
+
+Begin GovernanceImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setFactoryImplementation (Slither line:2988)
+Checking function: _setExchangeImplementation (Slither line:2988)
+Checking function: _setVotingMESHImplementation (Slither line:2988)
+Checking function: _setPoolVotingImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: GovernanceImpl20220502 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: changeTeamWallet (Slither line:2988)
+Checking function: setImplAdmin (Slither line:2988)
+Checking function: setExecutor (Slither line:2988)
+Checking function: setTeamAdmin (Slither line:2988)
+Checking function: setTimeParams (Slither line:2988)
+Checking function: setFeeShareRate (Slither line:2988)
+Checking function: setVotingMESHMiningRate (Slither line:2988)
+Checking function: setSinglePoolMiningRate (Slither line:2988)
+Checking function: setMiningShareRate (Slither line:2988)
+Checking function: changeMiningRates (Slither line:2988)
+Checking function: setEcoPotVoting (Slither line:2988)
+Checking function: changeCreateFee (Slither line:2988)
+Checking function: changePoolFee (Slither line:2988)
+Checking function: addTransaction (Slither line:2988)
+Checking function: executeTransaction (Slither line:2988)
+Checking function: sendReward (Slither line:2988)
+Checking function: setMiningRate (Slither line:2988)
+Checking function: acceptEpoch (Slither line:2988)
+Checking function: getEpochMining (Slither line:2988)
+getEpochMining returns uint256 variable called curEpoch (Slither line:3008)
+getEpochMining returns uint256 variable called prevEpoch (Slither line:3008)
+getEpochMining returns uint256[] variable called rates (Slither line:3008)
+getEpochMining returns uint256[] variable called mined (Slither line:3008)
+Checking function: getBoostingMining (Slither line:2988)
+getBoostingMining returns uint256 variable called curEpoch (Slither line:3008)
+getBoostingMining returns uint256 variable called prevEpoch (Slither line:3008)
+getBoostingMining returns uint256[] variable called mined (Slither line:3008)
+getBoostingMining returns uint256[] variable called rates (Slither line:3008)
+getBoostingMining returns uint256[] variable called rateNumerators (Slither line:3008)
+Checking function: getCurrentRateNumerator (Slither line:2988)
+getCurrentRateNumerator returns uint256 variable  (Slither line:3008)
+RETURN node expression: epochRates[epoch][address(3)] (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End GovernanceImpl.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in GovernanceImpl (Slither line:1305)
+or in Governance (Slither line:1319)
+Checking for implementation at slot 14 in contract Governance (Slither line:1355)
+Found implementation at slot 14 in contract Governance (Slither line:1362)
+
+Begin Governance.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setFactoryImplementation (Slither line:2988)
+Checking function: _setExchangeImplementation (Slither line:2988)
+Checking function: _setVotingMESHImplementation (Slither line:2988)
+Checking function: _setPoolVotingImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End Governance.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _newImp
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool)(impl != address(0))
+impl_address_from_contract_call: arg is impl != address(0)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setFactoryImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setExchangeImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setVotingMESHImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setPoolVotingImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setFactoryImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setExchangeImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setVotingMESHImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function _setPoolVotingImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+Checking public function version
+Checking public function changeNextOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nextOwner)
+Checking public function changeTeamWallet
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == teamAdmin)
+Checking public function setImplAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setExecutor
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setTeamAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setTimeParams
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setFeeShareRate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == address(this))
+Checking public function setVotingMESHMiningRate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == address(this))
+Checking public function setSinglePoolMiningRate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == address(this))
+Checking public function setMiningShareRate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == address(this))
+Checking public function changeMiningRates
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == address(this))
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == address(this))
+Checking public function setEcoPotVoting
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function changeCreateFee
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function changePoolFee
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function addTransaction
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == governor)
+Checking public function executeTransaction
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == executor)
+Checking public function sendReward
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == votingMESH || msg.sender == singlePoolFactory)
+Checking public function setMiningRate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == tx.origin)
+Checking public function acceptEpoch
+Found 'msg.sender ==' in expression: require(bool)(IFactory(factory).poolExist(msg.sender) || msg.sender == votingMESH || msg.sender == singlePoolFactory)
+Checking public function getEpochMining
+Checking public function getBoostingMining
+Checking public function getCurrentRateNumerator
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function GovernanceImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = implAdmin = _implAdmin (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implAdmin = _implAdmin (proxy_features line:912)
+functions_writing_to_variable: exp = executor = _executor (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: executor = _executor (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function GovernanceImpl.setImplAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Governance.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.changeMiningRates (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.setMiningRate (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.setVotingMESHMiningRate (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl._setVotingMESHImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: exp = onlyImplAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this)) (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function GovernanceImpl.setExecutor (proxy_features line:898)
+functions_writing_to_variable: checking function Governance.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = implAdmin = _implAdmin (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implAdmin = _implAdmin (proxy_features line:912)
+functions_writing_to_variable: exp = executor = _executor (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: executor = _executor (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function GovernanceImpl.setEcoPotVoting (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.acceptEpoch (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.constructor (proxy_features line:898)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function GovernanceImpl.setTeamAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: exp = onlyImplAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this)) (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function GovernanceImpl._setPoolVotingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.getEpochMining (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.changeCreateFee (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.setFeeShareRate (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.setTimeParams (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setFactoryImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setPoolVotingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.getBoostingMining (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.changePoolFee (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.changeNextOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setExchangeImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.getCurrentRateNumerator (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl._setFactoryImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.addTransaction (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.setSinglePoolMiningRate (proxy_features line:898)
+functions_writing_to_variable: checking function Governance._setVotingMESHImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.executeTransaction (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.changeTeamWallet (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.setMiningShareRate (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl._setExchangeImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Governance.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function GovernanceImpl.sendReward (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImp', '_implementation', '_newImp', 'TMP_74', '_implementation']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: modifier calls: ['onlyImplAdmin()']
+check_condition_from_expression: condition _newImp != _newImp
+require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+has_compatibility_checks: condition msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this)
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+has_compatibility_checks: condition msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this)
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: modifier calls: ['onlyImplAdmin()']
+check_condition_from_expression: condition _newImp != _newImp
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner || msg.sender == implAdmin || msg.sender == address(this))
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyImplAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp

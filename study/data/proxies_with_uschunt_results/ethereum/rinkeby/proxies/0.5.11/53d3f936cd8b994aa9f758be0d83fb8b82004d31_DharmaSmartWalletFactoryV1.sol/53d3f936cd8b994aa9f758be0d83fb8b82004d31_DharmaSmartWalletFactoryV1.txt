@@ -1,0 +1,315 @@
+
+Begin DharmaSmartWalletFactoryV1Interface.is_proxy (Slither line:1425)
+
+
+End DharmaSmartWalletFactoryV1Interface.is_proxy (Slither line:1428)
+
+
+Begin DharmaSmartWalletFactoryV1Interface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DharmaSmartWalletFactoryV1Interface 
+
+End DharmaSmartWalletFactoryV1Interface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DharmaSmartWalletInitializer.is_proxy (Slither line:1425)
+
+
+End DharmaSmartWalletInitializer.is_proxy (Slither line:1428)
+
+
+Begin DharmaSmartWalletInitializer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DharmaSmartWalletInitializer 
+
+End DharmaSmartWalletInitializer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeBeaconProxyV1.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxyV1.find_delegatecall_in_exp_node
+
+Found Expression Node: implementation = abi.decode(returnData,(address)) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: abi.decode
+Type of call: address payable (Slither line:2807)
+Args:
+returnData
+(address)
+
+End UpgradeBeaconProxyV1.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxyV1.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation()
+
+End UpgradeBeaconProxyV1.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin UpgradeBeaconProxyV1.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(ok,string(returnData)) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+ok
+string(returnData)
+
+End UpgradeBeaconProxyV1.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeBeaconProxyV1.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin UpgradeBeaconProxyV1.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _UPGRADE_BEACON (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in UpgradeBeaconProxyV1._delegate (Slither line:1805)
+AssignmentOperation: abi.decode(returnData,(address)) (Slither line:1811)
+CallExpression: abi.decode(returnData,(address)) (Slither line:1819)
+called is a MemberAccess: abi.decode
+called.expression = abi (Slither line:1822)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin UpgradeBeaconProxyV1.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+AssignmentOperation: implementation = abi.decode(returnData,(address)) (Slither line:2107)
+CallExpression: abi.decode (Slither line:2113)
+Value of implementation comes from decoding the value of returnData (Slither line:2148)
+returnData has no expression (Slither line:2158)
+AssignmentOperation: (ok,returnData) = _UPGRADE_BEACON.staticcall() (Slither line:2107)
+_implementation returns a variable of type address   called implementation (Slither line:2183)
+Return value is LocalVariable: implementation (Slither line:2256)
+Return expression: _UPGRADE_BEACON.staticcall() (Slither line:2260)
+CallExpression: _UPGRADE_BEACON.staticcall (Slither line:2264)
+MemberAccess: _UPGRADE_BEACON.staticcall (Slither line:2276)
+
+Begin UpgradeBeaconProxyV1.find_delegate_from_member_access
+
+Expression: _UPGRADE_BEACON.staticcall() (Slither line:2348)
+_UPGRADE_BEACON (Slither line:2361)
+_UPGRADE_BEACON is an address variable (Slither line:2458)
+Call to _UPGRADE_BEACON is staticcall with argument  (Slither line:2467)
+Looking for fallback in contract DharmaSmartWalletFactoryV1Interface (Slither line:2474)
+Looking for fallback in contract DharmaSmartWalletInitializer (Slither line:2474)
+Looking for fallback in contract DharmaSmartWalletFactoryV1 (Slither line:2474)
+
+End UpgradeBeaconProxyV1.find_delegate_from_member_access (Slither line:2635)
+
+
+End UpgradeBeaconProxyV1.find_delegate_from_call_exp (Slither line:2318)
+
+
+End UpgradeBeaconProxyV1.find_delegate_variable_from_name (Slither line:1939)
+
+
+End UpgradeBeaconProxyV1.find_delegatecall_in_asm (Slither line:1637)
+
+
+End UpgradeBeaconProxyV1.is_proxy (Slither line:1476)
+
+
+Begin UpgradeBeaconProxyV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeBeaconProxyV1 
+Local Variable: implementation (Slither line:1164)
+_UPGRADE_BEACON (Slither line:1171)
+UpgradeBeaconProxyV1 is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin UpgradeBeaconProxyV1.find_setter_in_contract (Slither line:3109)
+
+Expression: _UPGRADE_BEACON.staticcall() (Slither line:3112)
+Checking function: constructor(bytes) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: _implementation() returns(address) (Slither line:3117)
+Visibility: private
+Checking function: _delegate(address) returns() (Slither line:3117)
+Visibility: private
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+
+End UpgradeBeaconProxyV1.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in UpgradeBeaconProxyV1 (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeBeaconProxyV1.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+_UPGRADE_BEACON.staticcall()
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: _implementation (Slither line:2978)
+_implementation returns address variable called implementation (Slither line:2998)
+
+_implementation appears to be the implementation getter (Slither line:3002)
+
+
+End UpgradeBeaconProxyV1.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: _implementation in contract: UpgradeBeaconProxyV1 (Slither line:1285)
+
+Begin UpgradeBeaconProxyV1.getter_return_is_non_constant (Slither line:2873)
+
+Found getter function but not setter
+Checking if getter calls any other function
+NEW VARIABLE: None (Slither line:2878)
+EXPRESSION: implementation = abi.decode(returnData,(address)) (Slither line:2878)
+abi.decode(returnData,(address)) (Slither line:2883)
+Call Expression (Slither line:2888)
+
+End UpgradeBeaconProxyV1.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: UpgradeBeaconProxyV1
+implementation is dependent on _UPGRADE_BEACON
+Expression for implementation: _UPGRADE_BEACON.staticcall()
+Called: _UPGRADE_BEACON.staticcall
+CallExpression argument  is not an Identifier
+impl_address_from_contract_call: _UPGRADE_BEACON.staticcall()
+called: _UPGRADE_BEACON.staticcall
+found MemberAccess: _UPGRADE_BEACON.staticcall
+Identifier: _UPGRADE_BEACON
+value is StateVariable: _UPGRADE_BEACON
+Type: address
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1.constructor (proxy_features line:893)
+get_value_assigned: implementation = abi.decode(returnData,(address))
+functions_writing_to_variable: constructor writes TMP_6 to implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1.fallback (proxy_features line:893)
+get_value_assigned: implementation = abi.decode(returnData,(address))
+functions_writing_to_variable: fallback writes TMP_6 to implementation (proxy_features line:1008)
+has_compatibility_checks: dependencies: ['address', 'returnData', 'TMP_6', '_UPGRADE_BEACON', 'TUPLE_1']
+functions_writing_to_variable: _UPGRADE_BEACON
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = _UPGRADE_BEACON = address(0x2b95782fcA7bBF2FE3DC77D6a963b35771846B43) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _UPGRADE_BEACON = address(0x2b95782fcA7bBF2FE3DC77D6a963b35771846B43) (proxy_features line:907)
+functions_writing_to_variable: Identifier: _UPGRADE_BEACON (proxy_features line:919)
+get_value_assigned: _UPGRADE_BEACON = address(0x2b95782fcA7bBF2FE3DC77D6a963b35771846B43)
+functions_writing_to_variable: checking function UpgradeBeaconProxyV1.fallback (proxy_features line:893)
+has_compatibility_checks: checking public function constructor
+has_compatibility_checks: IF node exp = ! ok
+require(bool,string)(ok,string(returnData))
+has_compatibility_checks: condition ok
+check_condition_from_expression: Identifier ok
+has_compatibility_checks: checking external function fallback
+require(bool,string)(ok,string(returnData))
+has_compatibility_checks: condition ok
+check_condition_from_expression: Identifier ok
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 { revert(0, returndatasize()) }
+    default { return(0, returndatasize()) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+
+Begin DharmaSmartWalletFactoryV1.is_proxy (Slither line:1425)
+
+
+End DharmaSmartWalletFactoryV1.is_proxy (Slither line:1428)
+
+
+Begin DharmaSmartWalletFactoryV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DharmaSmartWalletFactoryV1 
+
+End DharmaSmartWalletFactoryV1.is_upgradeable_proxy (Slither line:1407)
+

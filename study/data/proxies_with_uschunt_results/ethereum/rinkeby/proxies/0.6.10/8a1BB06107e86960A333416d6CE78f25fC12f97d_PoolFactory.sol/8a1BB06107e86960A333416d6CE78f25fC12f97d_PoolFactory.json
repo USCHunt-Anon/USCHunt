@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OwnedProxyWithReference (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.6.10/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol#283-471)",
+        "elements": [],
+        "description": "OwnedProxyWithReference (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.6.10/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol#283-471) is an upgradeable proxy.\nimplementation was found in a different contract.\nimplementation is an address state variable.\nImplementationReference.implementation (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.6.10/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol#243) gets value from a cross-contract call: ImplementationReference(implementationReference).implementation()\nImplementationReference appears to be a Beacon contract for the proxy\nThe address of ImplementationReference is loaded from storage slot implementationReferencePosition = keccak256(bytes)(trueFiPool.implementation.reference)\nMissing compatibility check in ImplementationReference.constructor(address)\nMissing compatibility check in ImplementationReference.setImplementation(address)\nTo remove upgradeability, delete setImplementation from ImplementationReference\n",
+        "id": "c56d9ffef3bde332d40a29efa750ce6e0cb57e943cab411f385a761f40d1938b",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ImplementationReference.implementation",
+          "impl_address_setter": "ImplementationReference.setImplementation(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ImplementationReference (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.6.10/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol/8a1BB06107e86960A333416d6CE78f25fC12f97d_PoolFactory.sol#242-268)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "ImplementationReference(implementationReference).implementation()",
+          "beacon": "ImplementationReference",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "keccak256(bytes)(trueFiPool.implementation.reference)",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ImplementationReference.constructor(address)": "missing",
+              "ImplementationReference.setImplementation(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setImplementation from ImplementationReference",
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "pendingProxyOwner()",
+              "transferProxyOwnership(address)",
+              "claimProxyOwnership()",
+              "changeImplementationReference(address)",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

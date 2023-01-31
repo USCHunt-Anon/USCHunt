@@ -1,0 +1,245 @@
+
+Begin DABridgeProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DABridgeProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegatecall() (Slither line:2802)
+Expression called: _delegatecall
+Type of call: tuple() (Slither line:2817)
+Args:
+
+Found delegatecall in expression:
+_delegatecall (Slither line:2824)
+
+
+End DABridgeProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DABridgeProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: _delegatecall
+
+Begin DABridgeProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementationPosition (Slither line:1689)
+Checking proxyOwnerPosition (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in DABridgeProxy._delegatecall (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin DABridgeProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+AssignmentOperation: impl = sload(uint256)(position) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: implementationPosition (Slither line:2140)
+implementation returns a variable of type address   called impl (Slither line:2193)
+implementation contains assembly - looking for sload (Slither line:2199)
+
+End DABridgeProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End DABridgeProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End DABridgeProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting DABridgeProxy._delegate_variable = DABridgeProxy._proxy_impl_slot: implementationPosition (Slither line:1473)
+
+
+End DABridgeProxy.is_proxy (Slither line:1476)
+
+
+Begin DABridgeProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DABridgeProxy 
+Call destination implementationPosition is constant (Slither line:1146)
+
+implementationPosition is the implementation storage slot (Slither line:1149)
+
+DABridgeProxy is delegating to implementationPosition
+Looking for setter (Slither line:1200)
+
+
+Begin DABridgeProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: proxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+proxyOwner contains assembly (Slither line:3153)
+owner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3216)
+keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+implementation contains assembly (Slither line:3153)
+impl = sload(uint256)(position)
+is an Assignment Operation (Slither line:3216)
+keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)
+Checking function: transferProxyOwnership(address) returns() (Slither line:3127)
+Visibility: public
+ProxyOwnershipTransferred(proxyOwner(),_newOwner)
+require(bool,string)(_newOwner != address(0),Implementation: Transfer proxy ownership to zero address)
+sstore(uint256,uint256)(position,_newProxyOwner)
+sstore(uint256,uint256)
+_setUpgradeabilityOwner(_newOwner)
+owner = sload(uint256)(position)
+is an Assignment Operation (Slither line:3216)
+keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)
+require(bool)(msg.sender == proxyOwner())
+require(bool,string)(_newOwner != proxyOwner(),Implementation: Transfer proxy ownership to current owner)
+onlyProxyOwner()
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+_setImplementation(_newImplementation)
+Upgraded(_newImplementation)
+onlyProxyOwner()
+require(bool)(msg.sender == proxyOwner())
+sstore(uint256,uint256)(position,_newImplementation)
+sstore(uint256,uint256)
+
+End DABridgeProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: DABridgeProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DABridgeProxy.find_getter_in_contract (Slither line:2974)
+
+implementationPosition is a Variable object
+keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)
+Checking function: constructor (Slither line:2988)
+Checking function: proxyOwner (Slither line:2988)
+proxyOwner returns address variable called owner (Slither line:3008)
+proxyOwner contains assembly (Slither line:3051)
+proxyOwner contains assembly (Slither line:3051)
+proxyOwner contains assembly (Slither line:3051)
+proxyOwner contains assembly (Slither line:3051)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable called impl (Slither line:3008)
+implementation contains assembly (Slither line:3051)
+
+End DABridgeProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: DABridgeProxy (Slither line:1285)
+
+End DABridgeProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: DABridgeProxy
+Setter found in contract DABridgeProxy
+Checking public function proxyOwner
+Checking public function implementation
+Checking public function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyOwner())
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == proxyOwner())
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: implementationPosition
+functions_writing_to_variable: checking function DABridgeProxy.transferProxyOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = implementationPosition = keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022) (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:924)
+get_value_assigned: implementationPosition = keccak256(bytes)(implementation.contract.diamond-alpha-bridge:2022)
+functions_writing_to_variable: exp = proxyOwnerPosition = keccak256(bytes)(owner.contract.diamond-alpha-bridge:2022) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: proxyOwnerPosition = keccak256(bytes)(owner.contract.diamond-alpha-bridge:2022) (proxy_features line:912)
+functions_writing_to_variable: checking function DABridgeProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy.proxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy.upgradeTo (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: upgradeTo writes _newImplementation to implementationPosition using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DABridgeProxy._setUpgradeabilityOwner (proxy_features line:898)
+functions_writing_to_variable: checking function DABridgeProxy._setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: _setImplementation writes _newImplementation to implementationPosition using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DABridgeProxy._delegatecall (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == proxyOwner())
+has_compatibility_checks: condition msg.sender == proxyOwner()
+require(bool)(currentImplementation != _newImplementation)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: modifier calls: ['onlyProxyOwner()']
+check_condition_from_expression: condition implementation() != _newImplementation
+has_compatibility_checks: skipping internal function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: _delegatecall()
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: proxyOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyProxyOwner()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == proxyOwner())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = proxyOwnerPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(position,_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) impl = sload(uint256)(position)
+has_time_delay: (node.type) EXPRESSION
+(Expression) owner = sload(uint256)(position)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentImplementation = implementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(currentImplementation != _newImplementation)

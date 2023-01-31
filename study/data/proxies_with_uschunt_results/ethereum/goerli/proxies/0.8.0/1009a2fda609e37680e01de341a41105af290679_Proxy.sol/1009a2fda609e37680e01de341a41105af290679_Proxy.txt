@@ -1,0 +1,329 @@
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IProxy.is_proxy (Slither line:1425)
+
+
+End IProxy.is_proxy (Slither line:1428)
+
+
+Begin IProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IProxy 
+
+End IProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyStorage.is_proxy (Slither line:1425)
+
+
+End ProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyStorage 
+
+End ProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_implementation != address(0x0),MISSING_IMPLEMENTATION) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation != address(0x0)
+MISSING_IMPLEMENTATION
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+_implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is _implementation (Slither line:2818)
+dest.value: _implementation (Slither line:2821)
+Expression: implementation() (Slither line:2826)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Return node of function Proxy.implementation(): RETURN rootToken (Slither line:2031)
+rootToken (Slither line:2038)
+implementation returns a variable of type address   called rootToken (Slither line:2183)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to rootToken
+Looking for setter (Slither line:1200)
+
+Looking for setter in ProxyStorage (Slither line:1204)
+
+
+Begin ProxyStorage.find_setter_in_contract (Slither line:3109)
+
+
+End ProxyStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in ProxyStorage 
+Looking in Proxy (Slither line:1213)
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: public
+IERC20(rootToken).balanceOf(owner)
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: public
+true
+IERC20(rootToken).transferFrom(form,to,amount)
+Checking function: setImplementation(string,address) returns(bool) (Slither line:3117)
+Visibility: public
+Upgraded(logicContracts[version])
+true
+rootToken = _execToken
+is an Assignment Operation (Slither line:3206)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyStorage.find_getter_in_contract (Slither line:2964)
+
+rootToken is a Variable object
+_execToken
+
+End ProxyStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+rootToken is a Variable object
+_execToken
+Checking function: balanceOf (Slither line:2978)
+balanceOf returns uint256 variable  (Slither line:2998)
+RETURN node expression: IERC20(rootToken).balanceOf(owner) (Slither line:3018)
+Checking function: transferFrom (Slither line:2978)
+transferFrom returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: setImplementation (Slither line:2978)
+setImplementation returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable called _impl (Slither line:2998)
+RETURN node expression: rootToken (Slither line:3018)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _execToken
+impl_address_from_contract_call: StateVariable rootToken
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression require(bool,string)(_implementation != address(0x0),MISSING_IMPLEMENTATION)
+impl_address_from_contract_call: arg is _implementation != address(0x0)
+impl_address_from_contract_call: arg is MISSING_IMPLEMENTATION
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression implementation()
+Checking public function balanceOf
+Checking public function transferFrom
+Checking public function setImplementation
+Checking public function implementation
+Checking external function initialize
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: rootToken
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = rootToken = _execToken (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: rootToken = _execToken (proxy_features line:907)
+functions_writing_to_variable: Identifier: rootToken (proxy_features line:919)
+get_value_assigned: rootToken = _execToken
+functions_writing_to_variable: exp = logicContracts[version] = rootToken (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: logicContracts[version] = rootToken (proxy_features line:907)
+functions_writing_to_variable: IndexAccess: logicContracts[version] (proxy_features line:915)
+functions_writing_to_variable: exp = Upgraded(logicContracts[version]) (proxy_features line:904)
+functions_writing_to_variable: exp = true (proxy_features line:904)
+functions_writing_to_variable: setImplementation writes _execToken to rootToken (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.initialize (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+has_compatibility_checks: dependencies: ['_execToken']
+has_compatibility_checks: checking public function setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_implementation != address(0x0),MISSING_IMPLEMENTATION)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation()
+Found public function: balanceOf
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(logicContracts[version])
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) rootToken = _execToken
+has_time_delay: (node.type) EXPRESSION
+(Expression) logicContracts[version] = rootToken

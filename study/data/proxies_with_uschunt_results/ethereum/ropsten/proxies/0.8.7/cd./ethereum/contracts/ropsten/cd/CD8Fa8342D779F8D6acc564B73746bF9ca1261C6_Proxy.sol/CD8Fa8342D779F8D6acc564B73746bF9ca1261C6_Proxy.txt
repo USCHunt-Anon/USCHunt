@@ -1,0 +1,244 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_implementation != address(0x0),MISSING_IMPLEMENTATION) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation != address(0x0)
+MISSING_IMPLEMENTATION
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_implementation'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _implementation (Slither line:1703)
+_implementation is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+AssignmentOperation: _implementation = sload(uint256)(slot) (Slither line:2107)
+CallExpression: sload(uint256) (Slither line:2113)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2130)
+implementation returns a variable of type address   called _implementation (Slither line:2183)
+implementation contains assembly - looking for sload (Slither line:2189)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0x177667240aeeea7e35eabe3a35e18306f336219e1386f7710a6bf8783f761b24 (Slither line:3112)
+Checking function: setImplementation(address) returns() (Slither line:3117)
+Visibility: public
+setImplementation contains assembly (Slither line:3143)
+sstore(uint256,uint256)(slot,newImplementation)
+sstore(uint256,uint256)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setImplementation in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x177667240aeeea7e35eabe3a35e18306f336219e1386f7710a6bf8783f761b24
+Checking function: setImplementation (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable called _implementation (Slither line:2998)
+implementation contains assembly (Slither line:3041)
+implementation contains assembly (Slither line:3041)
+implementation contains assembly (Slither line:3041)
+implementation contains assembly (Slither line:3041)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+Setter found in contract Proxy
+Checking public function setImplementation
+Checking public function implementation
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(slot,newImplementation)
+functions_writing_to_variable: setImplementation writes newImplementation to IMPLEMENTATION_SLOT using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x177667240aeeea7e35eabe3a35e18306f336219e1386f7710a6bf8783f761b24 (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x177667240aeeea7e35eabe3a35e18306f336219e1386f7710a6bf8783f761b24 (proxy_features line:907)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:919)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x177667240aeeea7e35eabe3a35e18306f336219e1386f7710a6bf8783f761b24
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_implementation != address(0x0),MISSING_IMPLEMENTATION)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_implementation,0,calldatasize()(),0,0)
+Found public function: setImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,newImplementation)

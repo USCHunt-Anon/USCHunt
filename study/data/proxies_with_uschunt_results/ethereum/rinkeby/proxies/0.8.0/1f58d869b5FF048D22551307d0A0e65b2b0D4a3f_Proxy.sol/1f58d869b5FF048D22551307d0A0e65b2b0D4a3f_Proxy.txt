@@ -1,0 +1,95 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is implementation (Slither line:2818)
+dest.value: implementation (Slither line:2821)
+Expression: _implementation (Slither line:2826)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+_implementation is a Variable object
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking node of type EXPRESSION (Slither line:1395)
+result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+Checking node of type NEW VARIABLE (Slither line:1395)
+result_fallback_asm_0
+None
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type END_IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+implementation
+implementation = _implementation
+Checking node of type EXPRESSION (Slither line:1395)
+revert(uint256,uint256)(0,returndatasize()())
+Checking node of type EXPRESSION (Slither line:1395)
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Checking node of type EXPRESSION (Slither line:1395)
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+Checking node of type EXPRESSION (Slither line:1395)
+switch_expr_881_178_0_fallback_asm_0 = result_fallback_asm_0
+Checking node of type IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(0,returndatasize()())
+Checking node of type NEW VARIABLE (Slither line:1395)
+switch_expr_881_178_0_fallback_asm_0
+None
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+

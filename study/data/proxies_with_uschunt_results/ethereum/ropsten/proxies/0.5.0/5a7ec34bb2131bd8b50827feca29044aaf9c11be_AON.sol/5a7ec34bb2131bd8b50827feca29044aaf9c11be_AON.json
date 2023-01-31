@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "AON (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.0/5a7ec34bb2131bd8b50827feca29044aaf9c11be_AON.sol/5a7ec34bb2131bd8b50827feca29044aaf9c11be_AON.sol#494-653)",
+        "elements": [],
+        "description": "AON (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.0/5a7ec34bb2131bd8b50827feca29044aaf9c11be_AON.sol/5a7ec34bb2131bd8b50827feca29044aaf9c11be_AON.sol#494-653) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "4e79aa486429b29a110bc0496287ff47fdc1257c6b93cb978c652974ec0b520d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "AON.implementation",
+          "impl_address_setter": "AON.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "AON (../../smart-contract-sanctuary/ethereum/contracts/ropsten/sorted/0.5.0/5a7ec34bb2131bd8b50827feca29044aaf9c11be_AON.sol/5a7ec34bb2131bd8b50827feca29044aaf9c11be_AON.sol#494-653)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "AON.upgradeTo(address)": {
+                "check": "require(bool)(implementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "totalSupply()",
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)",
+              "name()",
+              "symbol()",
+              "decimals()"
+            ],
+            "other": [
+              "paused()",
+              "pause()",
+              "unpause()",
+              "isPauser(address)",
+              "addPauser(address)",
+              "removePauser(address)",
+              "renouncePauser()",
+              "isOwner(address)",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "increaseAllowance(address,uint256)",
+              "decreaseAllowance(address,uint256)",
+              "freezeAccount(address)",
+              "unfreezeAccount(address)",
+              "lock(address,uint256,uint256)",
+              "transferWithLock(address,uint256,uint256)",
+              "unlock(address,uint256)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

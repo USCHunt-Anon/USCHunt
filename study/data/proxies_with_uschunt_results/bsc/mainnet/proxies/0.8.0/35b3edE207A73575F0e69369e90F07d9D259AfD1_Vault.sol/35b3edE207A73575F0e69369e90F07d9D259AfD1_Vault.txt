@@ -1,0 +1,173 @@
+
+Begin Vault.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Vault.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'imp'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Vault.find_delegate_variable_from_name
+Searching for imp (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking pool (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking imp (Slither line:1703)
+imp is a Local Variable in Vault._delegate (Slither line:1707)
+Expression: IPool(pool).vaultImplementation() (Slither line:1719)
+
+Begin Vault.find_delegate_from_call_exp
+
+IPool(pool).vaultImplementation() (Slither line:2003)
+called = IPool(pool).vaultImplementation (Slither line:2010)
+Called member of IPool(pool) (Slither line:2017)
+
+Begin Vault.find_delegate_from_member_access
+
+Expression: IPool(pool).vaultImplementation() (Slither line:2358)
+IPool(pool) (Slither line:2371)
+vaultImplementation is a member of the contract type: IPool (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IPool (Slither line:2441)
+
+End Vault.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End Vault.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Vault.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Vault.is_proxy (Slither line:1476)
+
+
+Begin Vault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Vault 
+Local Variable: imp (Slither line:1164)
+IPool(pool) (Slither line:1171)
+Call destination IPool(pool).vaultImplementation() is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: Vault
+imp is dependent on pool
+Expression for imp: IPool(pool).vaultImplementation()
+Called: IPool(pool).vaultImplementation
+impl_address_from_contract_call: IPool(pool).vaultImplementation()
+called: IPool(pool).vaultImplementation
+found MemberAccess: IPool(pool).vaultImplementation
+TypeConversion: IPool(pool)
+find_registry_address_source: IPool(pool).vaultImplementation()
+MemberAccess: IPool(pool).vaultImplementation
+TypeConversion: IPool(pool)
+Identifier: pool
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: imp
+functions_writing_to_variable: checking function Vault.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Vault.fallback (proxy_features line:898)
+get_value_assigned: imp = IPool(pool).vaultImplementation()
+functions_writing_to_variable: fallback writes TMP_2 to imp (proxy_features line:1013)
+functions_writing_to_variable: checking function Vault.constructor (proxy_features line:898)
+has_compatibility_checks: dependencies: ['pool_', 'TMP_2', 'TMP_1', 'pool']
+functions_writing_to_variable: pool
+functions_writing_to_variable: checking function Vault.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Vault.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Vault.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = pool = pool_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pool = pool_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: pool (proxy_features line:924)
+get_value_assigned: pool = pool_
+functions_writing_to_variable: constructor writes pool_ to pool (proxy_features line:929)
+functions_writing_to_variable: checking function Vault._delegate (proxy_features line:898)
+has_compatibility_checks: checking external function fallback
+has_compatibility_checks: IF node exp = switch_expr_610_118_0__delegate_asm_0 == 0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0,returndatasize()())', 'return(uint256,uint256)(0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if switch_expr_610_118_0__delegate_asm_0 == 0 then revert(uint256,uint256)(0,returndatasize()()) else return(uint256,uint256)(0,returndatasize()())
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: imp = IPool(pool).vaultImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),imp,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: receive
+
+Begin IPool.is_proxy (Slither line:1425)
+
+
+End IPool.is_proxy (Slither line:1428)
+
+
+Begin IPool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPool 
+
+End IPool.is_upgradeable_proxy (Slither line:1407)
+

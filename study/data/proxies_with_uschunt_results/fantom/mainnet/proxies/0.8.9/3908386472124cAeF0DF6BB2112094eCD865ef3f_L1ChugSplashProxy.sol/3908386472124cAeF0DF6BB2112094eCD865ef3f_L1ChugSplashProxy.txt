@@ -1,0 +1,289 @@
+
+Begin L1ChugSplashProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin L1ChugSplashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: success__doProxyCall_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0x0,calldatasize()(),0x0,0x0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+implementation
+0x0
+calldatasize()()
+0x0
+0x0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is implementation (Slither line:2828)
+dest.value: implementation (Slither line:2831)
+Expression: _getImplementation() (Slither line:2836)
+
+Begin L1ChugSplashProxy.find_delegate_from_call_exp
+
+_getImplementation() (Slither line:2003)
+called = _getImplementation (Slither line:2010)
+Return node of function L1ChugSplashProxy._getImplementation(): RETURN implementation (Slither line:2041)
+implementation (Slither line:2048)
+_getImplementation returns a variable of type address   called implementation (Slither line:2193)
+_getImplementation contains assembly - looking for sload (Slither line:2199)
+Looking in EXPRESSION node (Slither line:2238)
+Assignment operation: implementation = sload(uint256)(IMPLEMENTATION_KEY) (Slither line:2242)
+Found implementation on left side of assignment (Slither line:2247)
+Found storage slot: IMPLEMENTATION_KEY (Slither line:2256)
+
+End L1ChugSplashProxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End L1ChugSplashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting L1ChugSplashProxy._delegate_variable = L1ChugSplashProxy._proxy_impl_slot: IMPLEMENTATION_KEY (Slither line:1473)
+
+
+End L1ChugSplashProxy.is_proxy (Slither line:1476)
+
+
+Begin L1ChugSplashProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: L1ChugSplashProxy 
+Call destination IMPLEMENTATION_KEY is constant (Slither line:1146)
+
+IMPLEMENTATION_KEY is the implementation storage slot (Slither line:1149)
+
+L1ChugSplashProxy is delegating to IMPLEMENTATION_KEY
+Looking for setter (Slither line:1200)
+
+
+Begin L1ChugSplashProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setCode(bytes) returns() (Slither line:3127)
+Visibility: public
+setCode contains assembly (Slither line:3153)
+_setImplementation(newImplementation)
+codeHash = extcodehash(uint256)(_account)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+success__doProxyCall_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0x0,calldatasize()(),0x0,0x0)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+sstore(uint256,uint256)(IMPLEMENTATION_KEY,_implementation)
+sstore(uint256,uint256)
+
+End L1ChugSplashProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setCode in contract: L1ChugSplashProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin L1ChugSplashProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_KEY is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: setCode (Slither line:2988)
+Checking function: setStorage (Slither line:2988)
+Checking function: setOwner (Slither line:2988)
+Checking function: getOwner (Slither line:2988)
+getOwner returns address variable  (Slither line:3008)
+RETURN node expression: _getOwner() (Slither line:3028)
+Checking function: getImplementation (Slither line:2988)
+getImplementation returns address variable  (Slither line:3008)
+RETURN node expression: _getImplementation() (Slither line:3028)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _getImplementation (Slither line:2988)
+_getImplementation returns address variable  (Slither line:3008)
+_getImplementation contains assembly (Slither line:3051)
+_getImplementation contains assembly (Slither line:3051)
+_getImplementation contains assembly (Slither line:3051)
+RETURN node expression: implementation (Slither line:3028)
+_getImplementation contains assembly (Slither line:3051)
+_getImplementation contains assembly (Slither line:3051)
+
+End L1ChugSplashProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _getImplementation in contract: L1ChugSplashProxy (Slither line:1285)
+
+End L1ChugSplashProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: L1ChugSplashProxy
+Setter found in contract L1ChugSplashProxy
+Checking public function setCode
+Found 'msg.sender ==' in expression: msg.sender == _getOwner() || msg.sender == address(0)
+Checking public function setStorage
+Found 'msg.sender ==' in expression: msg.sender == _getOwner() || msg.sender == address(0)
+Checking public function setOwner
+Found 'msg.sender ==' in expression: msg.sender == _getOwner() || msg.sender == address(0)
+Checking public function getOwner
+Found 'msg.sender ==' in expression: msg.sender == _getOwner() || msg.sender == address(0)
+Checking public function getImplementation
+Found 'msg.sender ==' in expression: msg.sender == _getOwner() || msg.sender == address(0)
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_KEY
+functions_writing_to_variable: checking function L1ChugSplashProxy.setCode (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(IMPLEMENTATION_KEY,_implementation)
+functions_writing_to_variable: setCode writes _implementation to IMPLEMENTATION_KEY using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function L1ChugSplashProxy._setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(IMPLEMENTATION_KEY,_implementation)
+functions_writing_to_variable: _setImplementation writes _implementation to IMPLEMENTATION_KEY using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function L1ChugSplashProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy.getOwner (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy._doProxyCall (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = DEPLOY_CODE_PREFIX = 0x600D380380600D6000396000f3 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: DEPLOY_CODE_PREFIX = 0x600D380380600D6000396000f3 (proxy_features line:912)
+functions_writing_to_variable: exp = IMPLEMENTATION_KEY = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_KEY = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_KEY (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_KEY = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = OWNER_KEY = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_KEY = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: checking function L1ChugSplashProxy._getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy._getOwner (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy.setStorage (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy._getAccountCodeHash (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy.setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function L1ChugSplashProxy._setOwner (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function setCode
+has_compatibility_checks: IF node exp = keccak256(bytes)(_code) == _getAccountCodeHash(implementation)
+require(bool,string)(ret == 0,L1ChugSplashProxy: system is currently being upgraded)
+has_compatibility_checks: condition ret == 0
+has_compatibility_checks: IF node exp = ! success__doProxyCall_asm_0
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0x0,returndatasize()())']
+has_compatibility_checks: IF node can lead to revert ['revert(uint256,uint256)(0x0,returndatasize()())']
+has_compatibility_checks: ConditionalExpression if ! success__doProxyCall_asm_0 then revert(uint256,uint256)(0x0,returndatasize()()) else return(uint256,uint256)(0x0,returndatasize()())
+has_compatibility_checks: IF node exp = msg.sender == _getOwner() || msg.sender == address(0)
+has_compatibility_checks: IF node exp = success && returndata.length == 32
+require(bool,string)(implementation != address(0),L1ChugSplashProxy: implementation is not set yet)
+has_compatibility_checks: condition implementation != address(0)
+require(bool,string)(_getAccountCodeHash(newImplementation) == keccak256(bytes)(_code),L1ChugSplashProxy: code was not correctly deployed.)
+has_compatibility_checks: condition _getAccountCodeHash(newImplementation) == keccak256(bytes)(_code)
+has_compatibility_checks: skipping internal function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: onlyWhenNotPaused()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: success__doProxyCall_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0x0,calldatasize()(),0x0,0x0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: implementation = _getImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(implementation != address(0),L1ChugSplashProxy: implementation is not set yet)
+Found public function: constructor
+Found fallback
+Found public function: setCode
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) codeHash = extcodehash(uint256)(_account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) success__doProxyCall_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0x0,calldatasize()(),0x0,0x0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(IMPLEMENTATION_KEY,_implementation)
+has_time_delay: (node.type) RETURN
+(Expression) owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) proxyCallIfNotOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) owner = sload(uint256)(OWNER_KEY)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) implementation = _getImplementation()
+has_time_delay: (node.type) IF
+(Expression) keccak256(bytes)(_code) == _getAccountCodeHash(implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) ret = abi.decode(returndata,(uint256))
+has_time_delay: (node.type) EXPRESSION
+(Expression) returndatacopy(uint256,uint256,uint256)(0x0,0x0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(ret == 0,L1ChugSplashProxy: system is currently being upgraded)
+has_time_delay: (node.type) IF
+(Expression) ! success__doProxyCall_asm_0
+has_time_delay: (node.type) IF
+(Expression) msg.sender == _getOwner() || msg.sender == address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) return(uint256,uint256)(0x0,returndatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) revert(uint256,uint256)(0x0,returndatasize()())
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) deploycode = abi.encodePacked(DEPLOY_CODE_PREFIX,_code)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) owner = _getOwner()
+has_time_delay: (node.type) RETURN
+(Expression) implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyWhenNotPaused()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) implementation = _getImplementation()
+has_time_delay: (node.type) IF
+(Expression) success && returndata.length == 32
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = sload(uint256)(IMPLEMENTATION_KEY)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(implementation != address(0),L1ChugSplashProxy: implementation is not set yet)
+has_time_delay: (node.type) EXPRESSION
+(Expression) (success,returndata) = owner.staticcall(abi.encodeWithSelector(iL1ChugSplashDeployer.isUpgrading.selector))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_getAccountCodeHash(newImplementation) == keccak256(bytes)(_code),L1ChugSplashProxy: code was not correctly deployed.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _doProxyCall()
+has_time_delay: (node.type) EXPRESSION
+(Expression) newImplementation = create(uint256,uint256,uint256)(0x0,deploycode + 0x20,mload(uint256)(deploycode))
+has_time_delay: (node.type) RETURN
+(Expression) codeHash
+
+Begin iL1ChugSplashDeployer.is_proxy (Slither line:1425)
+
+
+End iL1ChugSplashDeployer.is_proxy (Slither line:1428)
+
+
+Begin iL1ChugSplashDeployer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: iL1ChugSplashDeployer 
+
+End iL1ChugSplashDeployer.is_upgradeable_proxy (Slither line:1407)
+

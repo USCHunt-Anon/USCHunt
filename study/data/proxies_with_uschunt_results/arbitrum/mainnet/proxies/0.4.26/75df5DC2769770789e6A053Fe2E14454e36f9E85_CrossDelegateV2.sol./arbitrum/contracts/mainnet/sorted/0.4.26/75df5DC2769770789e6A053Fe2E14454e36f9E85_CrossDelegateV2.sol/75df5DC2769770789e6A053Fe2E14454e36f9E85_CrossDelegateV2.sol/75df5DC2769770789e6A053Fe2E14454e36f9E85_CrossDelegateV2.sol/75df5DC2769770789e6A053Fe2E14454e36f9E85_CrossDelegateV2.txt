@@ -1,0 +1,1466 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+Begin Proxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+RETURN: _implementation (Slither line:2888)
+
+End Proxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Halt.is_proxy (Slither line:1425)
+
+
+End Halt.is_proxy (Slither line:1428)
+
+
+Begin Halt.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Halt 
+
+End Halt.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicStorageLib.is_proxy (Slither line:1425)
+
+
+End BasicStorageLib.is_proxy (Slither line:1428)
+
+
+Begin BasicStorageLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicStorageLib 
+
+End BasicStorageLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicStorage.is_proxy (Slither line:1425)
+
+
+End BasicStorage.is_proxy (Slither line:1428)
+
+
+Begin BasicStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicStorage 
+
+End BasicStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRC20Protocol.is_proxy (Slither line:1425)
+
+
+End IRC20Protocol.is_proxy (Slither line:1428)
+
+
+Begin IRC20Protocol.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRC20Protocol 
+
+End IRC20Protocol.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IQuota.is_proxy (Slither line:1425)
+
+
+End IQuota.is_proxy (Slither line:1428)
+
+
+Begin IQuota.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IQuota 
+
+End IQuota.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStoremanGroup.is_proxy (Slither line:1425)
+
+
+End IStoremanGroup.is_proxy (Slither line:1428)
+
+
+Begin IStoremanGroup.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStoremanGroup 
+
+End IStoremanGroup.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ITokenManager.is_proxy (Slither line:1425)
+
+
+End ITokenManager.is_proxy (Slither line:1428)
+
+
+Begin ITokenManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ITokenManager 
+
+End ITokenManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISignatureVerifier.is_proxy (Slither line:1425)
+
+
+End ISignatureVerifier.is_proxy (Slither line:1428)
+
+
+Begin ISignatureVerifier.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISignatureVerifier 
+
+End ISignatureVerifier.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin HTLCTxLib.is_proxy (Slither line:1425)
+
+
+End HTLCTxLib.is_proxy (Slither line:1428)
+
+
+Begin HTLCTxLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HTLCTxLib 
+
+End HTLCTxLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RapidityTxLib.is_proxy (Slither line:1425)
+
+
+End RapidityTxLib.is_proxy (Slither line:1428)
+
+
+Begin RapidityTxLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RapidityTxLib 
+
+End RapidityTxLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossTypesV1.is_proxy (Slither line:1425)
+
+
+End CrossTypesV1.is_proxy (Slither line:1428)
+
+
+Begin CrossTypesV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossTypesV1 
+
+End CrossTypesV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossStorageV1.is_proxy (Slither line:1425)
+
+
+End CrossStorageV1.is_proxy (Slither line:1428)
+
+
+Begin CrossStorageV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossStorageV1 
+
+End CrossStorageV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossStorageV2.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CrossStorageV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End CrossStorageV2.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CrossStorageV2.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CrossStorageV2.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking storageData (Slither line:1689)
+Checking lockedTime (Slither line:1689)
+Checking smgFeeReceiverTimeout (Slither line:1689)
+Checking _notEntered (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking currentChainID (Slither line:1689)
+Checking admin (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CrossStorageV2.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End CrossStorageV2.find_delegate_variable_by_name
+
+
+End CrossStorageV2.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CrossStorageV2.is_proxy (Slither line:1476)
+
+
+Begin CrossStorageV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossStorageV2 
+CrossStorageV2 is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in CrossStorageV2 (Slither line:1213)
+
+Begin CrossStorageV2.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+require(bool,string)(msg.sender == owner,Not owner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossStorageV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CrossStorageV2 (Slither line:1220)
+
+Begin CrossStorageV2.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+require(bool,string)(msg.sender == owner,Not owner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossStorageV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in CrossStorageV2 (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+Begin CrossStorageV2.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+RETURN: _implementation (Slither line:2888)
+
+End CrossStorageV2.getter_return_is_non_constant (Slither line:2942)
+
+
+End CrossStorageV2.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin HTLCDebtLibV2.is_proxy (Slither line:1425)
+
+
+End HTLCDebtLibV2.is_proxy (Slither line:1428)
+
+
+Begin HTLCDebtLibV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HTLCDebtLibV2 
+
+End HTLCDebtLibV2.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISmgFeeProxy.is_proxy (Slither line:1425)
+
+
+End ISmgFeeProxy.is_proxy (Slither line:1428)
+
+
+Begin ISmgFeeProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISmgFeeProxy 
+
+End ISmgFeeProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RapidityLibV2.is_proxy (Slither line:1425)
+
+
+End RapidityLibV2.is_proxy (Slither line:1428)
+
+
+Begin RapidityLibV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RapidityLibV2 
+
+End RapidityLibV2.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossDelegateV2.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CrossDelegateV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End CrossDelegateV2.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CrossDelegateV2.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CrossDelegateV2.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking storageData (Slither line:1689)
+Checking lockedTime (Slither line:1689)
+Checking smgFeeReceiverTimeout (Slither line:1689)
+Checking _notEntered (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking currentChainID (Slither line:1689)
+Checking admin (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CrossDelegateV2.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End CrossDelegateV2.find_delegate_variable_by_name
+
+
+End CrossDelegateV2.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CrossDelegateV2.is_proxy (Slither line:1476)
+
+
+Begin CrossDelegateV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossDelegateV2 
+CrossDelegateV2 is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in CrossDelegateV2 (Slither line:1213)
+
+Begin CrossDelegateV2.find_setter_in_contract (Slither line:3119)
+
+Checking function: userLock(bytes32,uint256,uint256,bytes) returns() (Slither line:3127)
+Visibility: external
+c
+c
+storageData.quota.userLock(params.tokenPairID,params.smgID,params.value)
+UserLockLogger(params.smgID,params.tokenPairID,tokenScAddr,params.value,contractFee,params.destUserAccount)
+RapidityLibV2.userLock(storageData,params)
+left = (msg.value).sub(params.value).sub(contractFee)
+is an Assignment Operation (Slither line:3216)
+beforeBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+notHalted()
+tokenScAddr.call(bytes4(keccak256()(transferFrom(address,address,uint256))),from,to,value)
+afterBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+onlyReadySmg(smgID)
+left = (msg.value).sub(contractFee)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(CrossTypesV1.transferFrom(tokenScAddr,msg.sender,this,params.value),Lock token failed)
+afterBalance == beforeBalance.add(value)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+storageData.mapStoremanFee[bytes32(0)] = storageData.mapStoremanFee[bytes32(0)].add(contractFee)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(msg.sender).transfer(left)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+(fromChainID,fromTokenAccount,toChainID) = storageData.tokenManager.getTokenPairInfoSlim(params.tokenPairID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(fromChainID != 0,Token does not exist)
+(storageData.smgFeeProxy).transfer(contractFee)
+require(bool,string)(b <= a,SafeMath sub b > a)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: userBurn(bytes32,uint256,uint256,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+c
+afterBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+c
+UserBurnLogger(params.smgID,params.tokenPairID,tokenScAddr,params.value,contractFee,params.fee,params.destUserAccount)
+require(bool,string)(burnShadowToken(tokenManager,tokenScAddr,msg.sender,params.value),burn failed)
+afterBalance == beforeBalance.sub(value)
+(msg.sender).transfer(left)
+storageData.quota.userBurn(params.tokenPairID,params.smgID,params.value)
+require(bool,string)(params.srcTokenAccount == tokenScAddr,invalid token account)
+contractFee = storageData.mapContractFee[toChainID][fromChainID]
+is an Assignment Operation (Slither line:3216)
+tokenScAddr = CrossTypesV1.bytesToAddress(toTokenAccount)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(! halted,Smart contract is halted)
+RapidityLibV2.userBurn(storageData,params)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+contractFee = storageData.mapContractFee[fromChainID][toChainID]
+is an Assignment Operation (Slither line:3216)
+notHalted()
+storageData.mapStoremanFee[bytes32(0)] = storageData.mapStoremanFee[bytes32(0)].add(contractFee)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+tokenScAddr = CrossTypesV1.bytesToAddress(fromTokenAccount)
+is an Assignment Operation (Slither line:3216)
+(fromChainID,fromTokenAccount,toChainID,toTokenAccount) = tokenManager.getTokenPairInfo(params.tokenPairID)
+is an Assignment Operation (Slither line:3216)
+onlyReadySmg(smgID)
+require(bool,string)(fromChainID != 0,Token does not exist)
+require(bool,string)(b <= a,SafeMath sub b > a)
+(storageData.smgFeeProxy).transfer(contractFee)
+require(bool,string)(false,Invalid token pair)
+beforeBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+ITokenManager(tokenManager).burnToken(tokenAddress,userAccount,value)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: smgMint(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+afterBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+afterBalance == beforeBalance.add(value)
+c
+SmgMintLogger(params.uniqueID,params.smgID,params.tokenPairID,params.value,params.destTokenAccount,params.destUserAccount)
+(curveID,PK) = acquireReadySmgInfo(smgID)
+is an Assignment Operation (Slither line:3216)
+RapidityLibV2.smgMint(storageData,params)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(status == TxStatus.None,Rapidity tx exists)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+self.mapTxStatus[uniqueID] = TxStatus.Redeemed
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(curveID,PK)
+verifySignature(curveID,mHash,PK,r,s)
+notHalted()
+storageData.rapidityTxData.addRapidityTx(params.uniqueID)
+beforeBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(mintShadowToken(storageData.tokenManager,params.destTokenAccount,params.destUserAccount,params.value),mint failed)
+ITokenManager(tokenManager).mintToken(tokenAddress,userAccount,value)
+storageData.quota.smgMint(params.tokenPairID,params.smgID,params.value)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: smgRelease(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+c
+beforeBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+tokenScAddr.call(bytes4(keccak256()(transfer(address,uint256))),to,value)
+storageData.rapidityTxData.addRapidityTx(params.uniqueID)
+afterBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+(curveID,PK) = acquireReadySmgInfo(smgID)
+is an Assignment Operation (Slither line:3216)
+afterBalance == beforeBalance.add(value)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == TxStatus.None,Rapidity tx exists)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+storageData.quota.smgRelease(params.tokenPairID,params.smgID,params.value)
+RapidityLibV2.smgRelease(storageData,params)
+self.mapTxStatus[uniqueID] = TxStatus.Redeemed
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(curveID,PK)
+verifySignature(curveID,mHash,PK,r,s)
+SmgReleaseLogger(params.uniqueID,params.smgID,params.tokenPairID,params.value,params.destTokenAccount,params.destUserAccount)
+(params.destUserAccount).transfer(params.value)
+notHalted()
+require(bool,string)(CrossTypesV1.transfer(params.destTokenAccount,params.destUserAccount,params.value),Transfer token failed)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: transferAsset(bytes32,bytes32,bytes32,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+storageData.quota.transferAsset(params.srcSmgID,params.destSmgID)
+notHalted()
+onlyReadySmg(destSmgID)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+(curveID,PK) = acquireUnregisteredSmgInfo(srcSmgID)
+is an Assignment Operation (Slither line:3216)
+TransferAssetLogger(params.uniqueID,params.srcSmgID,params.destSmgID)
+(None,status,None,None,None,curveID,None,PK,None,None,None) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(status == uint8(GroupStatus.unregistered),PK is not unregistered)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+HTLCDebtLibV2.transferAsset(storageData,params)
+verifySignature(curveID,mHash,PK,r,s)
+Checking function: receiveDebt(bytes32,bytes32,bytes32,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+verifySignature(curveID,mHash,PK,r,s)
+notHalted()
+ReceiveDebtLogger(params.uniqueID,params.srcSmgID,params.destSmgID)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+storageData.quota.receiveDebt(params.srcSmgID,params.destSmgID)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+(curveID,PK)
+(curveID,PK) = acquireReadySmgInfo(destSmgID)
+is an Assignment Operation (Slither line:3216)
+HTLCDebtLibV2.receiveDebt(storageData,params)
+Checking function: setFee(CrossStorageV2.SetFeesParam) returns() (Slither line:3127)
+Visibility: public
+onlyAdmin()
+storageData.mapContractFee[param.srcChainID][param.destChainID] = param.contractFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+storageData.mapAgentFee[param.srcChainID][param.destChainID] = param.agentFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(msg.sender == admin,not admin)
+SetFee(param.srcChainID,param.destChainID,param.contractFee,param.agentFee)
+Checking function: setFees(CrossStorageV2.SetFeesParam[]) returns() (Slither line:3127)
+Visibility: public
+SetFee(params[i].srcChainID,params[i].destChainID,params[i].contractFee,params[i].agentFee)
+++ i
+storageData.mapContractFee[params[i].srcChainID][params[i].destChainID] = params[i].contractFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+onlyAdmin()
+require(bool,string)(msg.sender == admin,not admin)
+storageData.mapAgentFee[params[i].srcChainID][params[i].destChainID] = params[i].agentFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: setChainID(uint256) returns() (Slither line:3127)
+Visibility: external
+currentChainID = chainID
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == admin,not admin)
+onlyAdmin()
+Checking function: setAdmin(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == owner,Not owner)
+admin = adminAccount
+is an Assignment Operation (Slither line:3216)
+SetAdmin(adminAccount)
+onlyOwner()
+Checking function: setUintValue(bytes,bytes,uint256) returns() (Slither line:3127)
+Visibility: external
+uintData.setStorage(key,innerKey,value)
+self._storage[key][innerKey] = value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+onlyAdmin()
+require(bool,string)(msg.sender == admin,not admin)
+Checking function: delUintValue(bytes,bytes) returns() (Slither line:3127)
+Visibility: external
+delete self._storage[key][innerKey]
+uintData.delStorage(key,innerKey)
+require(bool,string)(msg.sender == admin,not admin)
+onlyAdmin()
+Checking function: setPartners(address,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+storageData.smgAdminProxy = IStoremanGroup(smgAdminProxy)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+storageData.sigVerifier = ISignatureVerifier(sigVerifier)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(msg.sender == owner,Not owner)
+storageData.tokenManager = ITokenManager(tokenManager)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyOwner()
+storageData.quota = IQuota(quota)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(tokenManager != address(0) && smgAdminProxy != address(0) && sigVerifier != address(0),Parameter is invalid)
+storageData.smgFeeProxy = smgFeeProxy
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: smgWithdrawFee(bytes32[]) returns() (Slither line:3127)
+Visibility: external
+c
+require(bool,string)(fee > 0,Fee is null)
+delete storageData.mapStoremanFee[bytes32(0)]
+fee = fee.add(currentFee)
+is an Assignment Operation (Slither line:3216)
+smgFeeProxy.transfer(fee)
+WithdrawContractFeeLogger(block.number,block.timestamp,smgFeeProxy,fee)
+++ i
+currentFee = storageData.mapStoremanFee[smgIDs[i]]
+is an Assignment Operation (Slither line:3216)
+delete storageData.mapStoremanFee[smgIDs[i]]
+fee = fee.add(currentFee)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(smgFeeProxy != address(0),invalid smgFeeProxy)
+SmgWithdrawFeeLogger(smgIDs[i],block.timestamp,smgFeeProxy,currentFee)
+smgFeeProxy = owner
+is an Assignment Operation (Slither line:3216)
+currentFee = storageData.mapStoremanFee[bytes32(0)]
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: getUintValue(bytes,bytes) returns(uint256) (Slither line:3127)
+Visibility: public
+self._storage[key][innerKey]
+uintData.getStorage(key,innerKey)
+Checking function: getStoremanFee(bytes32) returns(uint256) (Slither line:3127)
+Visibility: external
+fee = storageData.mapStoremanFee[smgID]
+is an Assignment Operation (Slither line:3216)
+Checking function: getFee(CrossStorageV2.GetFeesParam) returns(CrossStorageV2.GetFeesReturn) (Slither line:3127)
+Visibility: public
+fee.contractFee = storageData.mapContractFee[param.srcChainID][param.destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fee.agentFee = storageData.mapAgentFee[param.srcChainID][param.destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: getFees(CrossStorageV2.GetFeesParam[]) returns(CrossStorageV2.GetFeesReturn[]) (Slither line:3127)
+Visibility: public
+++ i
+fees[i].contractFee = storageData.mapContractFee[params[i].srcChainID][params[i].destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fees[i].agentFee = storageData.mapAgentFee[params[i].srcChainID][params[i].destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fees = new CrossStorageV2.GetFeesReturn[](params.length)
+is an Assignment Operation (Slither line:3216)
+Checking function: getPartners() returns(address,address,address,address,address) (Slither line:3127)
+Visibility: external
+tokenManager = address(storageData.tokenManager)
+is an Assignment Operation (Slither line:3216)
+sigVerifier = address(storageData.sigVerifier)
+is an Assignment Operation (Slither line:3216)
+smgAdminProxy = address(storageData.smgAdminProxy)
+is an Assignment Operation (Slither line:3216)
+smgFeeProxy = storageData.smgFeeProxy
+is an Assignment Operation (Slither line:3216)
+quota = address(storageData.quota)
+is an Assignment Operation (Slither line:3216)
+Checking function: acquireReadySmgInfo(bytes32) returns(uint256,bytes) (Slither line:3127)
+Visibility: internal
+Checking function: acquireUnregisteredSmgInfo(bytes32) returns(uint256,bytes) (Slither line:3127)
+Visibility: internal
+Checking function: bytesToBytes32(bytes,uint256) returns(bytes32) (Slither line:3127)
+Visibility: internal
+Checking function: verifySignature(uint256,bytes32,bytes,bytes,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossDelegateV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CrossDelegateV2 (Slither line:1220)
+Looking for setter in CrossStorageV2 (Slither line:1228)
+
+
+Begin CrossStorageV2.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+require(bool,string)(msg.sender == owner,Not owner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossStorageV2.find_setter_in_contract (Slither line:3345)
+
+
+Begin CrossDelegateV2.find_setter_in_contract (Slither line:3119)
+
+Checking function: userLock(bytes32,uint256,uint256,bytes) returns() (Slither line:3127)
+Visibility: external
+c
+c
+storageData.quota.userLock(params.tokenPairID,params.smgID,params.value)
+UserLockLogger(params.smgID,params.tokenPairID,tokenScAddr,params.value,contractFee,params.destUserAccount)
+RapidityLibV2.userLock(storageData,params)
+left = (msg.value).sub(params.value).sub(contractFee)
+is an Assignment Operation (Slither line:3216)
+beforeBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+notHalted()
+tokenScAddr.call(bytes4(keccak256()(transferFrom(address,address,uint256))),from,to,value)
+afterBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+onlyReadySmg(smgID)
+left = (msg.value).sub(contractFee)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(CrossTypesV1.transferFrom(tokenScAddr,msg.sender,this,params.value),Lock token failed)
+afterBalance == beforeBalance.add(value)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+storageData.mapStoremanFee[bytes32(0)] = storageData.mapStoremanFee[bytes32(0)].add(contractFee)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(msg.sender).transfer(left)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+(fromChainID,fromTokenAccount,toChainID) = storageData.tokenManager.getTokenPairInfoSlim(params.tokenPairID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(fromChainID != 0,Token does not exist)
+(storageData.smgFeeProxy).transfer(contractFee)
+require(bool,string)(b <= a,SafeMath sub b > a)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: userBurn(bytes32,uint256,uint256,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+c
+afterBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+c
+UserBurnLogger(params.smgID,params.tokenPairID,tokenScAddr,params.value,contractFee,params.fee,params.destUserAccount)
+require(bool,string)(burnShadowToken(tokenManager,tokenScAddr,msg.sender,params.value),burn failed)
+afterBalance == beforeBalance.sub(value)
+(msg.sender).transfer(left)
+storageData.quota.userBurn(params.tokenPairID,params.smgID,params.value)
+require(bool,string)(params.srcTokenAccount == tokenScAddr,invalid token account)
+contractFee = storageData.mapContractFee[toChainID][fromChainID]
+is an Assignment Operation (Slither line:3216)
+tokenScAddr = CrossTypesV1.bytesToAddress(toTokenAccount)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(! halted,Smart contract is halted)
+RapidityLibV2.userBurn(storageData,params)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+contractFee = storageData.mapContractFee[fromChainID][toChainID]
+is an Assignment Operation (Slither line:3216)
+notHalted()
+storageData.mapStoremanFee[bytes32(0)] = storageData.mapStoremanFee[bytes32(0)].add(contractFee)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+tokenScAddr = CrossTypesV1.bytesToAddress(fromTokenAccount)
+is an Assignment Operation (Slither line:3216)
+(fromChainID,fromTokenAccount,toChainID,toTokenAccount) = tokenManager.getTokenPairInfo(params.tokenPairID)
+is an Assignment Operation (Slither line:3216)
+onlyReadySmg(smgID)
+require(bool,string)(fromChainID != 0,Token does not exist)
+require(bool,string)(b <= a,SafeMath sub b > a)
+(storageData.smgFeeProxy).transfer(contractFee)
+require(bool,string)(false,Invalid token pair)
+beforeBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+ITokenManager(tokenManager).burnToken(tokenAddress,userAccount,value)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: smgMint(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+afterBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+afterBalance == beforeBalance.add(value)
+c
+SmgMintLogger(params.uniqueID,params.smgID,params.tokenPairID,params.value,params.destTokenAccount,params.destUserAccount)
+(curveID,PK) = acquireReadySmgInfo(smgID)
+is an Assignment Operation (Slither line:3216)
+RapidityLibV2.smgMint(storageData,params)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(status == TxStatus.None,Rapidity tx exists)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+self.mapTxStatus[uniqueID] = TxStatus.Redeemed
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(curveID,PK)
+verifySignature(curveID,mHash,PK,r,s)
+notHalted()
+storageData.rapidityTxData.addRapidityTx(params.uniqueID)
+beforeBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(mintShadowToken(storageData.tokenManager,params.destTokenAccount,params.destUserAccount,params.value),mint failed)
+ITokenManager(tokenManager).mintToken(tokenAddress,userAccount,value)
+storageData.quota.smgMint(params.tokenPairID,params.smgID,params.value)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: smgRelease(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+c
+beforeBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+tokenScAddr.call(bytes4(keccak256()(transfer(address,uint256))),to,value)
+storageData.rapidityTxData.addRapidityTx(params.uniqueID)
+afterBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+(curveID,PK) = acquireReadySmgInfo(smgID)
+is an Assignment Operation (Slither line:3216)
+afterBalance == beforeBalance.add(value)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == TxStatus.None,Rapidity tx exists)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+storageData.quota.smgRelease(params.tokenPairID,params.smgID,params.value)
+RapidityLibV2.smgRelease(storageData,params)
+self.mapTxStatus[uniqueID] = TxStatus.Redeemed
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+(curveID,PK)
+verifySignature(curveID,mHash,PK,r,s)
+SmgReleaseLogger(params.uniqueID,params.smgID,params.tokenPairID,params.value,params.destTokenAccount,params.destUserAccount)
+(params.destUserAccount).transfer(params.value)
+notHalted()
+require(bool,string)(CrossTypesV1.transfer(params.destTokenAccount,params.destUserAccount,params.value),Transfer token failed)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: transferAsset(bytes32,bytes32,bytes32,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+storageData.quota.transferAsset(params.srcSmgID,params.destSmgID)
+notHalted()
+onlyReadySmg(destSmgID)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+(curveID,PK) = acquireUnregisteredSmgInfo(srcSmgID)
+is an Assignment Operation (Slither line:3216)
+TransferAssetLogger(params.uniqueID,params.srcSmgID,params.destSmgID)
+(None,status,None,None,None,curveID,None,PK,None,None,None) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(status == uint8(GroupStatus.unregistered),PK is not unregistered)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+HTLCDebtLibV2.transferAsset(storageData,params)
+verifySignature(curveID,mHash,PK,r,s)
+Checking function: receiveDebt(bytes32,bytes32,bytes32,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+verifySignature(curveID,mHash,PK,r,s)
+notHalted()
+ReceiveDebtLogger(params.uniqueID,params.srcSmgID,params.destSmgID)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+storageData.quota.receiveDebt(params.srcSmgID,params.destSmgID)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+(curveID,PK)
+(curveID,PK) = acquireReadySmgInfo(destSmgID)
+is an Assignment Operation (Slither line:3216)
+HTLCDebtLibV2.receiveDebt(storageData,params)
+Checking function: setFee(CrossStorageV2.SetFeesParam) returns() (Slither line:3127)
+Visibility: public
+onlyAdmin()
+storageData.mapContractFee[param.srcChainID][param.destChainID] = param.contractFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+storageData.mapAgentFee[param.srcChainID][param.destChainID] = param.agentFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(msg.sender == admin,not admin)
+SetFee(param.srcChainID,param.destChainID,param.contractFee,param.agentFee)
+Checking function: setFees(CrossStorageV2.SetFeesParam[]) returns() (Slither line:3127)
+Visibility: public
+SetFee(params[i].srcChainID,params[i].destChainID,params[i].contractFee,params[i].agentFee)
+++ i
+storageData.mapContractFee[params[i].srcChainID][params[i].destChainID] = params[i].contractFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+onlyAdmin()
+require(bool,string)(msg.sender == admin,not admin)
+storageData.mapAgentFee[params[i].srcChainID][params[i].destChainID] = params[i].agentFee
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Checking function: setChainID(uint256) returns() (Slither line:3127)
+Visibility: external
+currentChainID = chainID
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == admin,not admin)
+onlyAdmin()
+Checking function: setAdmin(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == owner,Not owner)
+admin = adminAccount
+is an Assignment Operation (Slither line:3216)
+SetAdmin(adminAccount)
+onlyOwner()
+Checking function: setUintValue(bytes,bytes,uint256) returns() (Slither line:3127)
+Visibility: external
+uintData.setStorage(key,innerKey,value)
+self._storage[key][innerKey] = value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+onlyAdmin()
+require(bool,string)(msg.sender == admin,not admin)
+Checking function: delUintValue(bytes,bytes) returns() (Slither line:3127)
+Visibility: external
+delete self._storage[key][innerKey]
+uintData.delStorage(key,innerKey)
+require(bool,string)(msg.sender == admin,not admin)
+onlyAdmin()
+Checking function: setPartners(address,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+storageData.smgAdminProxy = IStoremanGroup(smgAdminProxy)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+storageData.sigVerifier = ISignatureVerifier(sigVerifier)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(msg.sender == owner,Not owner)
+storageData.tokenManager = ITokenManager(tokenManager)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyOwner()
+storageData.quota = IQuota(quota)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(tokenManager != address(0) && smgAdminProxy != address(0) && sigVerifier != address(0),Parameter is invalid)
+storageData.smgFeeProxy = smgFeeProxy
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: smgWithdrawFee(bytes32[]) returns() (Slither line:3127)
+Visibility: external
+c
+require(bool,string)(fee > 0,Fee is null)
+delete storageData.mapStoremanFee[bytes32(0)]
+fee = fee.add(currentFee)
+is an Assignment Operation (Slither line:3216)
+smgFeeProxy.transfer(fee)
+WithdrawContractFeeLogger(block.number,block.timestamp,smgFeeProxy,fee)
+++ i
+currentFee = storageData.mapStoremanFee[smgIDs[i]]
+is an Assignment Operation (Slither line:3216)
+delete storageData.mapStoremanFee[smgIDs[i]]
+fee = fee.add(currentFee)
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(smgFeeProxy != address(0),invalid smgFeeProxy)
+SmgWithdrawFeeLogger(smgIDs[i],block.timestamp,smgFeeProxy,currentFee)
+smgFeeProxy = owner
+is an Assignment Operation (Slither line:3216)
+currentFee = storageData.mapStoremanFee[bytes32(0)]
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(c >= a,SafeMath add overflow)
+Checking function: getUintValue(bytes,bytes) returns(uint256) (Slither line:3127)
+Visibility: public
+self._storage[key][innerKey]
+uintData.getStorage(key,innerKey)
+Checking function: getStoremanFee(bytes32) returns(uint256) (Slither line:3127)
+Visibility: external
+fee = storageData.mapStoremanFee[smgID]
+is an Assignment Operation (Slither line:3216)
+Checking function: getFee(CrossStorageV2.GetFeesParam) returns(CrossStorageV2.GetFeesReturn) (Slither line:3127)
+Visibility: public
+fee.contractFee = storageData.mapContractFee[param.srcChainID][param.destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fee.agentFee = storageData.mapAgentFee[param.srcChainID][param.destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: getFees(CrossStorageV2.GetFeesParam[]) returns(CrossStorageV2.GetFeesReturn[]) (Slither line:3127)
+Visibility: public
+++ i
+fees[i].contractFee = storageData.mapContractFee[params[i].srcChainID][params[i].destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fees[i].agentFee = storageData.mapAgentFee[params[i].srcChainID][params[i].destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fees = new CrossStorageV2.GetFeesReturn[](params.length)
+is an Assignment Operation (Slither line:3216)
+Checking function: getPartners() returns(address,address,address,address,address) (Slither line:3127)
+Visibility: external
+tokenManager = address(storageData.tokenManager)
+is an Assignment Operation (Slither line:3216)
+sigVerifier = address(storageData.sigVerifier)
+is an Assignment Operation (Slither line:3216)
+smgAdminProxy = address(storageData.smgAdminProxy)
+is an Assignment Operation (Slither line:3216)
+smgFeeProxy = storageData.smgFeeProxy
+is an Assignment Operation (Slither line:3216)
+quota = address(storageData.quota)
+is an Assignment Operation (Slither line:3216)
+Checking function: acquireReadySmgInfo(bytes32) returns(uint256,bytes) (Slither line:3127)
+Visibility: internal
+Checking function: acquireUnregisteredSmgInfo(bytes32) returns(uint256,bytes) (Slither line:3127)
+Visibility: internal
+Checking function: bytesToBytes32(bytes,uint256) returns(bytes32) (Slither line:3127)
+Visibility: internal
+Checking function: verifySignature(uint256,bytes32,bytes,bytes,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossDelegateV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in CrossDelegateV2 (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+Begin CrossDelegateV2.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+RETURN: _implementation (Slither line:2888)
+
+End CrossDelegateV2.getter_return_is_non_constant (Slither line:2942)
+
+
+End CrossDelegateV2.is_upgradeable_proxy (Slither line:1293)
+

@@ -1,0 +1,614 @@
+
+Begin SinglePoolFactoryStorage.is_proxy (Slither line:1425)
+
+
+End SinglePoolFactoryStorage.is_proxy (Slither line:1428)
+
+
+Begin SinglePoolFactoryStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SinglePoolFactoryStorage 
+
+End SinglePoolFactoryStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISinglePoolFactory.is_proxy (Slither line:1425)
+
+
+End ISinglePoolFactory.is_proxy (Slither line:1428)
+
+
+Begin ISinglePoolFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISinglePoolFactory 
+
+End ISinglePoolFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SinglePool.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin SinglePool.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    adm := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End SinglePool.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin SinglePool.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    adm := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End SinglePool.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin SinglePool.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End SinglePool.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin SinglePool.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin SinglePool.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in SinglePool.fallback (Slither line:1707)
+Expression: ISinglePoolFactory(_owner()).singlePoolImpl() (Slither line:1719)
+
+Begin SinglePool.find_delegate_from_call_exp
+
+ISinglePoolFactory(_owner()).singlePoolImpl() (Slither line:2003)
+called = ISinglePoolFactory(_owner()).singlePoolImpl (Slither line:2010)
+Called member of ISinglePoolFactory(_owner()) (Slither line:2017)
+
+Begin SinglePool.find_delegate_from_member_access
+
+Expression: ISinglePoolFactory(_owner()).singlePoolImpl() (Slither line:2358)
+ISinglePoolFactory(_owner()) (Slither line:2371)
+singlePoolImpl is a member of the contract type: ISinglePoolFactory (Slither line:2416)
+Which is an interface (Slither line:2420)
+Looking for singlePoolImpl in SinglePoolFactoryImpl (Slither line:2523)
+
+End SinglePool.find_delegate_from_member_access (Slither line:2645)
+
+
+End SinglePool.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End SinglePool.find_delegate_variable_by_name (Slither line:1739)
+
+
+End SinglePool.find_delegatecall_in_asm (Slither line:1637)
+
+
+End SinglePool.is_proxy (Slither line:1476)
+
+
+Begin SinglePool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SinglePool 
+SinglePool is delegating to singlePoolImpl
+Looking for setter (Slither line:1200)
+
+Looking for setter in SinglePoolFactoryStorage (Slither line:1204)
+
+
+Begin SinglePoolFactoryStorage.find_setter_in_contract (Slither line:3119)
+
+
+End SinglePoolFactoryStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in SinglePoolFactoryStorage 
+Looking in SinglePool (Slither line:1213)
+
+Begin SinglePool.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,bytes) returns() (Slither line:3127)
+Checking function: Owner() returns(address) (Slither line:3127)
+Visibility: external
+_owner()
+onlyOwner()
+require(bool)(msg.sender == _owner())
+Checking function: _owner() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _setOwner(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: external
+OwnerChanged(_owner(),newOwner)
+    sstore(slot, newOwner) (Slither line:3163)
+changeOwner reads and/or writes to variable slot (Slither line:3170)
+changeOwner reads and/or writes to variable _ADMIN_SLOT (Slither line:3170)
+_setOwner(newOwner)
+require(bool)(msg.sender == _owner())
+onlyOwner()
+require(bool,string)(newOwner != address(0),Proxy: new Owner is the zero address)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End SinglePool.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in SinglePool (Slither line:1220)
+Looking for setter in SinglePoolFactoryImpl (Slither line:1228)
+
+
+Begin SinglePoolFactoryImpl.find_setter_in_contract (Slither line:3119)
+
+Checking function: __SinglePoolFactory_init(address,address,address,address) returns() (Slither line:3127)
+Checking function: __SinglePoolFactory_init_unchained(address,address,address,address) returns() (Slither line:3127)
+Checking function: setSinglePoolImpl(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+onlyOwner()
+require(bool)(singlePoolImpl != newSinglePoolImpl)
+singlePoolImpl = newSinglePoolImpl
+is an Assignment Operation (Slither line:3216)
+
+End SinglePoolFactoryImpl.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setSinglePoolImpl in contract: SinglePoolFactoryImpl (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin SinglePoolFactoryStorage.find_getter_in_contract (Slither line:2974)
+
+singlePoolImpl is a Variable object
+newSinglePoolImpl
+
+End SinglePoolFactoryStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin SinglePool.find_getter_in_contract (Slither line:2974)
+
+singlePoolImpl is a Variable object
+newSinglePoolImpl
+Checking function: constructor (Slither line:2988)
+Checking function: Owner (Slither line:2988)
+Owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner() (Slither line:3028)
+Checking function: _owner (Slither line:2988)
+_owner returns address variable called adm (Slither line:3008)
+Checking function: _setOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End SinglePool.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in SinglePool (Slither line:1305)
+or in SinglePoolFactoryStorage (Slither line:1319)
+
+Begin SinglePoolFactoryImpl.find_getter_in_contract (Slither line:2974)
+
+singlePoolImpl is a Variable object
+newSinglePoolImpl
+Checking function: isConstructor (Slither line:2988)
+isConstructor returns bool variable  (Slither line:3008)
+RETURN node expression: cs == 0 (Slither line:3028)
+Checking function: __SinglePoolFactory_init (Slither line:2988)
+Checking function: __SinglePoolFactory_init_unchained (Slither line:2988)
+Checking function: setSinglePoolImpl (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: SinglePoolFactoryImpl20220526 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: setPlusPoolFactory (Slither line:2988)
+Checking function: getPlusPoolFactory (Slither line:2988)
+getPlusPoolFactory returns address variable  (Slither line:3008)
+RETURN node expression: plusPoolFactory (Slither line:3028)
+Checking function: changeOperator (Slither line:2988)
+Checking function: changeInterestRateModel (Slither line:2988)
+Checking function: changeNativeWithdrawer (Slither line:2988)
+Checking function: createPool (Slither line:2988)
+Checking function: getPoolCount (Slither line:2988)
+getPoolCount returns uint256 variable  (Slither line:3008)
+RETURN node expression: singlePools.length (Slither line:3028)
+Checking function: getPoolAddressByIndex (Slither line:2988)
+getPoolAddressByIndex returns address variable  (Slither line:3008)
+RETURN node expression: singlePools[idx] (Slither line:3028)
+Checking function: getPoolAddressByToken (Slither line:2988)
+getPoolAddressByToken returns address variable  (Slither line:3008)
+RETURN node expression: singlePoolVault[token] (Slither line:3028)
+Checking function: setDepositActive (Slither line:2988)
+Checking function: setWithdrawActive (Slither line:2988)
+Checking function: setPoolInterestRateModel (Slither line:2988)
+Checking function: setPoolReserveFactor (Slither line:2988)
+Checking function: reducePoolReserves (Slither line:2988)
+Checking function: borrow (Slither line:2988)
+borrow returns uint256 variable  (Slither line:3008)
+borrow returns uint256 variable  (Slither line:3008)
+RETURN node expression: ISinglePool(singlePoolVault[token]).borrow(user,amount,msg.sender) (Slither line:3028)
+Checking function: repay (Slither line:2988)
+repay returns uint256 variable  (Slither line:3008)
+RETURN node expression: ISinglePool(singlePoolVault[token]).repayToken(user,amount,msg.sender,msg.sender) (Slither line:3028)
+Checking function: transferDebt (Slither line:2988)
+Checking function: repayInsurance (Slither line:2988)
+repayInsurance returns uint256 variable  (Slither line:3008)
+RETURN node expression: ISinglePool(singlePoolVault[token]).repayToken(insurance,amount,plusPoolAddress,insurance) (Slither line:3028)
+Checking function: borrowBalanceStored (Slither line:2988)
+borrowBalanceStored returns uint256 variable  (Slither line:3008)
+RETURN node expression: ISinglePool(singlePoolVault[token]).borrowBalanceStored(user,poolAddress) (Slither line:3028)
+Checking function: borrowBalanceCurrent (Slither line:2988)
+borrowBalanceCurrent returns uint256 variable  (Slither line:3008)
+RETURN node expression: ISinglePool(singlePoolVault[token]).borrowBalanceCurrent(user,poolAddress) (Slither line:3028)
+Checking function: borrowBalanceInfo (Slither line:2988)
+borrowBalanceInfo returns uint256 variable  (Slither line:3008)
+borrowBalanceInfo returns uint256 variable  (Slither line:3008)
+RETURN node expression: ISinglePool(singlePoolVault[token]).borrowBalanceInfo(user,poolAddress) (Slither line:3028)
+Checking function: changeMiningRate (Slither line:2988)
+Checking function: updateEpochMining (Slither line:2988)
+Checking function: updateTotalMined (Slither line:2988)
+Checking function: getTotalMined (Slither line:2988)
+getTotalMined returns uint256 variable  (Slither line:3008)
+RETURN node expression: curTotalMined (Slither line:3028)
+Checking function: sendReward (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End SinglePoolFactoryImpl.find_getter_in_contract (Slither line:3083)
+
+
+End SinglePool.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: newSinglePoolImpl
+impl_address_from_contract_call: StateVariable singlePoolImpl
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression ISinglePoolFactory(_owner()).singlePoolImpl()
+found MemberAccess calling getter in another contract: ISinglePoolFactory(_owner()).singlePoolImpl()
+called: ISinglePoolFactory(_owner()).singlePoolImpl
+found MemberAccess: ISinglePoolFactory(_owner()).singlePoolImpl
+TypeConversion: ISinglePoolFactory(_owner())
+find_registry_address_source: ISinglePoolFactory(_owner()).singlePoolImpl()
+MemberAccess: ISinglePoolFactory(_owner()).singlePoolImpl
+TypeConversion: ISinglePoolFactory(_owner())
+CallExpression: _owner()
+Identifier: _owner
+Checking external function Owner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function Owner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == _owner())
+Checking external function fallback
+functions_writing_to_variable: singlePoolImpl
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.borrowBalanceInfo (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.getPoolAddressByIndex (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool.Owner (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.__SinglePoolFactory_init (proxy_features line:898)
+get_value_assigned: singlePoolImpl = _singlePoolImpl
+functions_writing_to_variable: __SinglePoolFactory_init writes _singlePoolImpl to singlePoolImpl (proxy_features line:1013)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.borrow (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.getPlusPoolFactory (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.changeMiningRate (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.getPoolAddressByToken (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool._owner (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.__SinglePoolFactory_init_unchained (proxy_features line:898)
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: exp = governance != address(0) (proxy_features line:909)
+functions_writing_to_variable: exp = mesh = IConstructor(governance).mesh() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: mesh = IConstructor(governance).mesh() (proxy_features line:912)
+functions_writing_to_variable: exp = lastMined = IConstructor(mesh).mined() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: lastMined = IConstructor(mesh).mined() (proxy_features line:912)
+functions_writing_to_variable: exp = singlePoolImpl = _singlePoolImpl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: singlePoolImpl = _singlePoolImpl (proxy_features line:912)
+functions_writing_to_variable: Identifier: singlePoolImpl (proxy_features line:924)
+get_value_assigned: singlePoolImpl = _singlePoolImpl
+functions_writing_to_variable: exp = interestRateModel = _interestRateModel (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: interestRateModel = _interestRateModel (proxy_features line:912)
+functions_writing_to_variable: exp = reserveFactorMax = 1e18 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: reserveFactorMax = 1e18 (proxy_features line:912)
+functions_writing_to_variable: exp = initializer() (proxy_features line:909)
+functions_writing_to_variable: __SinglePoolFactory_init_unchained writes _singlePoolImpl to singlePoolImpl (proxy_features line:929)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.repay (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.changeOperator (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.updateEpochMining (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.setDepositActive (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool._setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.setSinglePoolImpl (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(singlePoolImpl != newSinglePoolImpl) (proxy_features line:909)
+functions_writing_to_variable: exp = singlePoolImpl = newSinglePoolImpl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: singlePoolImpl = newSinglePoolImpl (proxy_features line:912)
+functions_writing_to_variable: Identifier: singlePoolImpl (proxy_features line:924)
+get_value_assigned: singlePoolImpl = newSinglePoolImpl
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: setSinglePoolImpl writes newSinglePoolImpl to singlePoolImpl (proxy_features line:929)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.reducePoolReserves (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.transferDebt (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.changeInterestRateModel (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.updateTotalMined (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.setWithdrawActive (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.repayInsurance (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.getTotalMined (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.changeNativeWithdrawer (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.setPoolInterestRateModel (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.changeNextOwner (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.borrowBalanceStored (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.sendReward (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.setPoolReserveFactor (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.createPool (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.borrowBalanceCurrent (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.isConstructor (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.getPoolCount (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePool.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function SinglePoolFactoryImpl.setPlusPoolFactory (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_singlePoolImpl', '_singlePoolImpl', 'newSinglePoolImpl']
+has_compatibility_checks: checking public function __SinglePoolFactory_init
+has_compatibility_checks: IF node exp = governance != address(0)
+require(bool,string)(initializing || isConstructor() || ! initialized,Contract instance has already been initialized)
+has_compatibility_checks: condition initializing || isConstructor() || ! initialized
+has_compatibility_checks: IF node exp = isTopLevelCall
+has_compatibility_checks: IF node exp = isTopLevelCall
+has_compatibility_checks: skipping internal function __SinglePoolFactory_init_unchained
+has_compatibility_checks: checking public function setSinglePoolImpl
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(singlePoolImpl != newSinglePoolImpl)
+has_compatibility_checks: condition singlePoolImpl != newSinglePoolImpl
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition newSinglePoolImpl != newSinglePoolImpl
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = ISinglePoolFactory(_owner()).singlePoolImpl()
+Found public function: constructor
+Found external function: Owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(singlePoolImpl != newSinglePoolImpl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) singlePoolImpl = newSinglePoolImpl
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernance.is_proxy (Slither line:1425)
+
+
+End IGovernance.is_proxy (Slither line:1428)
+
+
+Begin IGovernance.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernance 
+
+End IGovernance.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISinglePool.is_proxy (Slither line:1425)
+
+
+End ISinglePool.is_proxy (Slither line:1428)
+
+
+Begin ISinglePool.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISinglePool 
+
+End ISinglePool.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IConstructor.is_proxy (Slither line:1425)
+
+
+End IConstructor.is_proxy (Slither line:1428)
+
+
+Begin IConstructor.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IConstructor 
+
+End IConstructor.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMESH.is_proxy (Slither line:1425)
+
+
+End IMESH.is_proxy (Slither line:1428)
+
+
+Begin IMESH.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMESH 
+
+End IMESH.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IPlusPoolFactory.is_proxy (Slither line:1425)
+
+
+End IPlusPoolFactory.is_proxy (Slither line:1428)
+
+
+Begin IPlusPoolFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IPlusPoolFactory 
+
+End IPlusPoolFactory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SinglePoolFactoryImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin SinglePoolFactoryImpl.find_delegatecall_in_exp_node
+
+Found Expression Node: revert()() (Slither line:2802)
+Expression called: revert()
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End SinglePoolFactoryImpl.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End SinglePoolFactoryImpl.is_proxy (Slither line:1476)
+
+
+Begin SinglePoolFactoryImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SinglePoolFactoryImpl 
+
+End SinglePoolFactoryImpl.is_upgradeable_proxy (Slither line:1407)
+

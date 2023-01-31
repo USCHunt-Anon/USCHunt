@@ -1,0 +1,95 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#3454-3538)",
+        "elements": [],
+        "description": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#3454-3538) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(matic.network.proxy.implementation)\nMissing compatibility check in UpgradableProxy.constructor(address)\nFound compatibility check in UpgradableProxy.updateImplementation(address)\nFound compatibility check in UpgradableProxy.updateAndCall(address,bytes)\n",
+        "id": "1e24fdd5dca088baf627d7064526c95489dc44fe9773a882313580572abf1cc5",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradableProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "UpgradableProxy.updateImplementation(address)",
+          "impl_address_getter": "UpgradableProxy.loadImplementation()",
+          "impl_address_location": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#3454-3538)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(matic.network.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "UpgradableProxy.constructor(address)": "missing",
+              "UpgradableProxy.updateImplementation(address)": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+              "UpgradableProxy.updateAndCall(address,bytes)": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "owner()",
+              "implementation()",
+              "transferOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "ValidatorShareProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#3546-3552)",
+        "elements": [],
+        "description": "ValidatorShareProxy (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#3546-3552) is an upgradeable proxy.\ncontractMap was found in a different contract.\ncontractMap is a mapping of type mapping(bytes32 => address)\ncontractMap is a mapping of type mapping(bytes32 => address)\nRegistry.contractMap (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#988) gets value from a cross-contract call: Registry(super.loadImplementation()).getValidatorShareAddress()\nRegistry appears to be a Registry contract for the proxy\nThe address of Registry comes from the value of UpgradableProxy.loadImplementation()._impl (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#3495)\nMissing compatibility check in Registry.updateContractMap(bytes32,address)\nTo remove upgradeability, delete updateContractMap from Registry\n",
+        "id": "f1980e7f36fe373e7a30baa0e5780303920bfffd8bc0d5da95748c1bc1f3f475",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Registry.contractMap",
+          "impl_address_setter": "Registry.updateContractMap(bytes32,address)",
+          "impl_address_getter": "Registry.getValidatorShareAddress()",
+          "impl_address_location": "Registry (../../smart-contract-sanctuary/ethereum/contracts/goerli/sorted/0.5.17/c1./ethereum/contracts/goerli/c1/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol/C1b9b1Ff63EF14502F7C6c8e9F5eeD47654695aE_StakeManager.sol#974-1105)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes32 => address)",
+          "impl_mapping_from_msg_sig": false,
+          "impl_address_from_contract_call": "Registry(super.loadImplementation()).getValidatorShareAddress()",
+          "registry": "Registry",
+          "registry_source_type": "address",
+          "registry_source_variable": "_impl",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Registry.updateContractMap(bytes32,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateContractMap from Registry",
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "implementation()",
+              "transferOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)",
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

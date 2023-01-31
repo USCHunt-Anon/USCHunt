@@ -1,0 +1,848 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AbstractToken.is_proxy (Slither line:1425)
+
+
+End AbstractToken.is_proxy (Slither line:1428)
+
+
+Begin AbstractToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AbstractToken 
+
+End AbstractToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EURSToken.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Begin EURSToken.find_delegatecall_in_exp_node
+
+Found Expression Node: delegatable() (Slither line:2800)
+Expression called: delegatable
+Type of call: Modifier (Slither line:2815)
+Args:
+
+End EURSToken.find_delegatecall_in_exp_node (Slither line:2856)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EURSToken.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let oldOwner := sload(owner_slot) (Slither line:1576)
+    let oldDelegate := sload(delegate_slot) (Slither line:1576)
+    let buffer := mload(0x40) (Slither line:1576)
+    calldatacopy(buffer, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), oldDelegate, buffer, calldatasize(), buffer, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'oldDelegate'
+Looking for corresponding Variable
+Current function: delegatable
+
+Begin EURSToken.find_delegate_variable_from_name
+Searching for oldDelegate (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking MAX_UINT256 (Slither line:1689)
+Checking accounts (Slither line:1689)
+Checking allowances (Slither line:1689)
+Checking FEE_DENOMINATOR (Slither line:1689)
+Checking MAX_FEE_NUMERATOR (Slither line:1689)
+Checking MIN_FEE_NUMERATIOR (Slither line:1689)
+Checking MAX_TOKENS_COUNT (Slither line:1689)
+Checking DEFAULT_FEE (Slither line:1689)
+Checking BLACK_LIST_FLAG (Slither line:1689)
+Checking ZERO_FEE_FLAG (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking feeCollector (Slither line:1689)
+Checking tokensCount (Slither line:1689)
+Checking frozen (Slither line:1689)
+Checking nonces (Slither line:1689)
+Checking fixedFee (Slither line:1689)
+Checking minVariableFee (Slither line:1689)
+Checking maxVariableFee (Slither line:1689)
+Checking variableFeeNumerator (Slither line:1689)
+Checking addressFlags (Slither line:1689)
+Checking delegate (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+delegatable contains assembly, searching for sload (Slither line:1875)
+Found sload in assembly:     let oldDelegate := sload(delegate_slot) (Slither line:1884)
+
+Begin EURSToken.find_delegate_variable_from_name
+Searching for delegate (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking MAX_UINT256 (Slither line:1689)
+Checking accounts (Slither line:1689)
+Checking allowances (Slither line:1689)
+Checking FEE_DENOMINATOR (Slither line:1689)
+Checking MAX_FEE_NUMERATOR (Slither line:1689)
+Checking MIN_FEE_NUMERATIOR (Slither line:1689)
+Checking MAX_TOKENS_COUNT (Slither line:1689)
+Checking DEFAULT_FEE (Slither line:1689)
+Checking BLACK_LIST_FLAG (Slither line:1689)
+Checking ZERO_FEE_FLAG (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking feeCollector (Slither line:1689)
+Checking tokensCount (Slither line:1689)
+Checking frozen (Slither line:1689)
+Checking nonces (Slither line:1689)
+Checking fixedFee (Slither line:1689)
+Checking minVariableFee (Slither line:1689)
+Checking maxVariableFee (Slither line:1689)
+Checking variableFeeNumerator (Slither line:1689)
+Checking addressFlags (Slither line:1689)
+Checking delegate (Slither line:1689)
+delegate is a State Variable in contract EURSToken (Slither line:1693)
+
+End EURSToken.find_delegate_variable_by_name
+
+
+End EURSToken.find_delegate_variable_from_name (Slither line:1947)
+
+
+End EURSToken.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EURSToken.is_proxy (Slither line:1476)
+
+
+Begin EURSToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EURSToken 
+EURSToken is delegating to delegate
+Looking for setter (Slither line:1200)
+
+
+Begin EURSToken.find_setter_in_contract (Slither line:3117)
+
+Checking function: EURSToken(address) returns() (Slither line:3125)
+Checking function: fallback() returns() (Slither line:3125)
+Checking function: name() returns(string) (Slither line:3125)
+Visibility: public
+delegatable()
+require(bool)(msg.value == 0)
+STASIS EURS Token
+Checking function: symbol() returns(string) (Slither line:3125)
+Visibility: public
+delegatable()
+EURS
+require(bool)(msg.value == 0)
+Checking function: decimals() returns(uint8) (Slither line:3125)
+Visibility: public
+2
+require(bool)(msg.value == 0)
+delegatable()
+Checking function: totalSupply() returns(uint256) (Slither line:3125)
+Visibility: public
+tokensCount
+delegatable()
+require(bool)(msg.value == 0)
+Checking function: balanceOf(address) returns(uint256) (Slither line:3125)
+Visibility: public
+delegatable()
+accounts[_owner]
+require(bool)(msg.value == 0)
+AbstractToken.balanceOf(_owner)
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+true
+true
+x - y
+delegatable()
+false
+require(bool)(_amount <= MAX_TOKENS_COUNT)
+false
+_fee = safeMul(_amount,variableFeeNumerator) / FEE_DENOMINATOR
+is an Assignment Operation (Slither line:3214)
+assert(bool)(x <= MAX_UINT256 - y)
+x + y
+_fee = minVariableFee
+is an Assignment Operation (Slither line:3214)
+false
+false
+require(bool)(AbstractToken.transfer(feeCollector,fee))
+_fee = maxVariableFee
+is an Assignment Operation (Slither line:3214)
+Transfer(msg.sender,_to,_value)
+_fee = safeAdd(_fee,fixedFee)
+is an Assignment Operation (Slither line:3214)
+0
+accounts[msg.sender] = safeSub(fromBalance,_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+accounts[_to] = safeAdd(accounts[_to],_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+delegatable()
+require(bool)(AbstractToken.transfer(_to,_value))
+fee = 0
+is an Assignment Operation (Slither line:3214)
+assert(bool)(x <= MAX_UINT256 / y)
+require(bool)(msg.value == 0)
+fee = calculateFee(_value)
+is an Assignment Operation (Slither line:3214)
+assert(bool)(x >= y)
+x * y
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+allowances[_from][msg.sender] = safeSub(spenderAllowance,_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+x - y
+require(bool)(_amount <= MAX_TOKENS_COUNT)
+Transfer(_from,_to,_value)
+_fee = safeMul(_amount,variableFeeNumerator) / FEE_DENOMINATOR
+is an Assignment Operation (Slither line:3214)
+assert(bool)(x <= MAX_UINT256 - y)
+false
+accounts[_from] = safeSub(fromBalance,_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+x + y
+accounts[_to] = safeAdd(accounts[_to],_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+_fee = minVariableFee
+is an Assignment Operation (Slither line:3214)
+true
+false
+fee = 0
+is an Assignment Operation (Slither line:3214)
+_fee = maxVariableFee
+is an Assignment Operation (Slither line:3214)
+delegatable()
+fee = calculateFee(_value)
+is an Assignment Operation (Slither line:3214)
+require(bool)(AbstractToken.transferFrom(_from,_to,_value))
+assert(bool)(x >= y)
+_fee = safeAdd(_fee,fixedFee)
+is an Assignment Operation (Slither line:3214)
+0
+require(bool)(AbstractToken.transferFrom(_from,feeCollector,fee))
+true
+false
+delegatable()
+false
+assert(bool)(x <= MAX_UINT256 / y)
+require(bool)(msg.value == 0)
+false
+x * y
+Checking function: approve(address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+AbstractToken.approve(_spender,_value)
+allowances[msg.sender][_spender] = _value
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+Approval(msg.sender,_spender,_value)
+true
+require(bool)(msg.value == 0)
+delegatable()
+Checking function: allowance(address,address) returns(uint256) (Slither line:3125)
+Visibility: public
+delegatable()
+allowances[_owner][_spender]
+require(bool)(msg.value == 0)
+AbstractToken.allowance(_owner,_spender)
+Checking function: delegatedTransfer(address,uint256,uint256,uint256,uint8,bytes32,bytes32) returns(bool) (Slither line:3125)
+Visibility: public
+assert(bool)(x <= MAX_UINT256 - y)
+this
+x + y
+msg.sender
+assert(bool)(x >= y)
+x - y
+console.log(EUROS: delegated)
+0
+assert(bool)(x <= MAX_UINT256 / y)
+false
+x * y
+delegatable()
+balance = safeSub(balance,fee)
+is an Assignment Operation (Slither line:3214)
+console.log(EUROS: not frozen)
+console.log(EUROS: thisAddress,thisAddress())
+false
+console.log(EUROS: messageSenderAddress,messageSenderAddress())
+console.log(EUROS: to,_to)
+fee = 0
+is an Assignment Operation (Slither line:3214)
+balance = safeSub(balance,_fee)
+is an Assignment Operation (Slither line:3214)
+fee = calculateFee(_value)
+is an Assignment Operation (Slither line:3214)
+nonces[_from] = _nonce + 1
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+accounts[_from] = balance
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+console.log(EUROS: from,_from)
+accounts[_to] = safeAdd(accounts[_to],_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+accounts[feeCollector] = safeAdd(accounts[feeCollector],fee)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+false
+accounts[msg.sender] = safeAdd(accounts[msg.sender],_fee)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+Transfer(_from,_to,_value)
+console.log(EUROS: nonce OK)
+Transfer(_from,feeCollector,fee)
+require(bool)(msg.value == 0)
+Transfer(_from,msg.sender,_fee)
+true
+false
+require(bool)(_amount <= MAX_TOKENS_COUNT)
+_fee = safeMul(_amount,variableFeeNumerator) / FEE_DENOMINATOR
+is an Assignment Operation (Slither line:3214)
+_sendLogPayload(abi.encodeWithSignature(log(string,address),p0,p1))
+_fee = minVariableFee
+is an Assignment Operation (Slither line:3214)
+false
+_fee = maxVariableFee
+is an Assignment Operation (Slither line:3214)
+_sendLogPayload(abi.encodeWithSignature(log(string),p0))
+balance = safeSub(balance,_value)
+is an Assignment Operation (Slither line:3214)
+_fee = safeAdd(_fee,fixedFee)
+is an Assignment Operation (Slither line:3214)
+delegatable()
+false
+Checking function: createTokens(uint256) returns(bool) (Slither line:3125)
+Visibility: public
+true
+x - y
+false
+assert(bool)(x <= MAX_UINT256 - y)
+delegatable()
+x + y
+true
+require(bool)(msg.sender == owner)
+accounts[msg.sender] = safeAdd(accounts[msg.sender],_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+tokensCount = safeAdd(tokensCount,_value)
+is an Assignment Operation (Slither line:3214)
+require(bool)(msg.value == 0)
+Transfer(address(0),msg.sender,_value)
+assert(bool)(x >= y)
+Checking function: burnTokens(uint256) returns(bool) (Slither line:3125)
+Visibility: public
+x - y
+tokensCount = safeSub(tokensCount,_value)
+is an Assignment Operation (Slither line:3214)
+Transfer(msg.sender,address(0),_value)
+true
+false
+require(bool)(msg.sender == owner)
+delegatable()
+true
+require(bool)(msg.value == 0)
+assert(bool)(x >= y)
+accounts[msg.sender] = safeSub(accounts[msg.sender],_value)
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+Checking function: freezeTransfers() returns() (Slither line:3125)
+Visibility: public
+require(bool)(msg.sender == owner)
+frozen = true
+is an Assignment Operation (Slither line:3214)
+Freeze()
+require(bool)(msg.value == 0)
+delegatable()
+Checking function: unfreezeTransfers() returns() (Slither line:3125)
+Visibility: public
+delegatable()
+require(bool)(msg.sender == owner)
+frozen = false
+is an Assignment Operation (Slither line:3214)
+require(bool)(msg.value == 0)
+Unfreeze()
+Checking function: setOwner(address) returns() (Slither line:3125)
+Visibility: public
+require(bool)(msg.sender == owner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3214)
+Checking function: setFeeCollector(address) returns() (Slither line:3125)
+Visibility: public
+delegatable()
+require(bool)(msg.sender == owner)
+require(bool)(msg.value == 0)
+feeCollector = _newFeeCollector
+is an Assignment Operation (Slither line:3214)
+Checking function: nonce(address) returns(uint256) (Slither line:3125)
+Visibility: public
+nonces[_owner]
+delegatable()
+require(bool)(msg.value == 0)
+Checking function: setFeeParameters(uint256,uint256,uint256,uint256) returns() (Slither line:3125)
+Visibility: public
+fixedFee = _fixedFee
+is an Assignment Operation (Slither line:3214)
+require(bool)(msg.sender == owner)
+FeeChange(_fixedFee,_minVariableFee,_maxVariableFee,_variableFeeNumerator)
+minVariableFee = _minVariableFee
+is an Assignment Operation (Slither line:3214)
+require(bool)(_minVariableFee <= _maxVariableFee)
+maxVariableFee = _maxVariableFee
+is an Assignment Operation (Slither line:3214)
+delegatable()
+require(bool)(msg.value == 0)
+require(bool)(_variableFeeNumerator <= MAX_FEE_NUMERATOR)
+variableFeeNumerator = _variableFeeNumerator
+is an Assignment Operation (Slither line:3214)
+Checking function: getFeeParameters() returns(uint256,uint256,uint256,uint256) (Slither line:3125)
+Visibility: public
+_variableFeeNumnerator = variableFeeNumerator
+is an Assignment Operation (Slither line:3214)
+_fixedFee = fixedFee
+is an Assignment Operation (Slither line:3214)
+_minVariableFee = minVariableFee
+is an Assignment Operation (Slither line:3214)
+delegatable()
+require(bool)(msg.value == 0)
+_maxVariableFee = maxVariableFee
+is an Assignment Operation (Slither line:3214)
+Checking function: calculateFee(uint256) returns(uint256) (Slither line:3125)
+Visibility: public
+require(bool)(_amount <= MAX_TOKENS_COUNT)
+_fee = safeMul(_amount,variableFeeNumerator) / FEE_DENOMINATOR
+is an Assignment Operation (Slither line:3214)
+assert(bool)(x <= MAX_UINT256 - y)
+x + y
+_fee = minVariableFee
+is an Assignment Operation (Slither line:3214)
+_fee = maxVariableFee
+is an Assignment Operation (Slither line:3214)
+_fee = safeAdd(_fee,fixedFee)
+is an Assignment Operation (Slither line:3214)
+0
+delegatable()
+assert(bool)(x <= MAX_UINT256 / y)
+require(bool)(msg.value == 0)
+x * y
+Checking function: setFlags(address,uint256) returns() (Slither line:3125)
+Visibility: public
+require(bool)(msg.sender == owner)
+addressFlags[_address] = _flags
+is an Assignment Operation (Slither line:3214)
+Left side is an IndexAccess (Slither line:3243)
+require(bool)(msg.value == 0)
+delegatable()
+Checking function: flags(address) returns(uint256) (Slither line:3125)
+Visibility: public
+addressFlags[_address]
+delegatable()
+require(bool)(msg.value == 0)
+Checking function: setDelegate(address) returns() (Slither line:3125)
+Visibility: public
+require(bool)(msg.sender == owner)
+delegate = _delegate
+is an Assignment Operation (Slither line:3214)
+
+End EURSToken.find_setter_in_contract (Slither line:3343)
+
+
+Implementation set by function: setDelegate in contract: EURSToken (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin EURSToken.find_getter_in_contract (Slither line:2972)
+
+delegate is a Variable object
+_delegate
+Checking function: AbstractToken (Slither line:2986)
+Checking function: balanceOf (Slither line:2986)
+balanceOf returns uint256 variable called balance (Slither line:3006)
+RETURN node expression: accounts[_owner] (Slither line:3026)
+Checking function: transfer (Slither line:2986)
+transfer returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+Checking function: transferFrom (Slither line:2986)
+transferFrom returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+Checking function: approve (Slither line:2986)
+approve returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: allowance (Slither line:2986)
+allowance returns uint256 variable called remaining (Slither line:3006)
+RETURN node expression: allowances[_owner][_spender] (Slither line:3026)
+Checking function: safeAdd (Slither line:2986)
+safeAdd returns uint256 variable called z (Slither line:3006)
+RETURN node expression: x + y (Slither line:3026)
+Checking function: safeSub (Slither line:2986)
+safeSub returns uint256 variable called z (Slither line:3006)
+RETURN node expression: x - y (Slither line:3026)
+Checking function: safeMul (Slither line:2986)
+safeMul returns uint256 variable called z (Slither line:3006)
+RETURN node expression: 0 (Slither line:3026)
+RETURN node expression: x * y (Slither line:3026)
+Checking function: EURSToken (Slither line:2986)
+Checking function: fallback (Slither line:2986)
+Checking function: name (Slither line:2986)
+name returns string variable  (Slither line:3006)
+RETURN node expression: STASIS EURS Token (Slither line:3026)
+Checking function: symbol (Slither line:2986)
+symbol returns string variable  (Slither line:3006)
+RETURN node expression: EURS (Slither line:3026)
+Checking function: decimals (Slither line:2986)
+decimals returns uint8 variable  (Slither line:3006)
+RETURN node expression: 2 (Slither line:3026)
+Checking function: totalSupply (Slither line:2986)
+totalSupply returns uint256 variable  (Slither line:3006)
+RETURN node expression: tokensCount (Slither line:3026)
+Checking function: balanceOf (Slither line:2986)
+balanceOf returns uint256 variable called balance (Slither line:3006)
+RETURN node expression: AbstractToken.balanceOf(_owner) (Slither line:3026)
+Checking function: transfer (Slither line:2986)
+transfer returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+Checking function: transferFrom (Slither line:2986)
+transferFrom returns bool variable  (Slither line:3006)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+Checking function: approve (Slither line:2986)
+approve returns bool variable called success (Slither line:3006)
+RETURN node expression: AbstractToken.approve(_spender,_value) (Slither line:3026)
+Checking function: allowance (Slither line:2986)
+allowance returns uint256 variable called remaining (Slither line:3006)
+RETURN node expression: AbstractToken.allowance(_owner,_spender) (Slither line:3026)
+Checking function: delegatedTransfer (Slither line:2986)
+delegatedTransfer returns bool variable  (Slither line:3006)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+Checking function: createTokens (Slither line:2986)
+createTokens returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: true (Slither line:3026)
+Checking function: burnTokens (Slither line:2986)
+burnTokens returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+RETURN node expression: false (Slither line:3026)
+RETURN node expression: true (Slither line:3026)
+Checking function: freezeTransfers (Slither line:2986)
+Checking function: unfreezeTransfers (Slither line:2986)
+Checking function: setOwner (Slither line:2986)
+Checking function: setFeeCollector (Slither line:2986)
+Checking function: nonce (Slither line:2986)
+nonce returns uint256 variable  (Slither line:3006)
+RETURN node expression: nonces[_owner] (Slither line:3026)
+Checking function: setFeeParameters (Slither line:2986)
+Checking function: getFeeParameters (Slither line:2986)
+getFeeParameters returns uint256 variable called _fixedFee (Slither line:3006)
+getFeeParameters returns uint256 variable called _minVariableFee (Slither line:3006)
+getFeeParameters returns uint256 variable called _maxVariableFee (Slither line:3006)
+getFeeParameters returns uint256 variable called _variableFeeNumnerator (Slither line:3006)
+Checking function: calculateFee (Slither line:2986)
+calculateFee returns uint256 variable called _fee (Slither line:3006)
+Checking function: setFlags (Slither line:2986)
+Checking function: flags (Slither line:2986)
+flags returns uint256 variable  (Slither line:3006)
+RETURN node expression: addressFlags[_address] (Slither line:3026)
+Checking function: setDelegate (Slither line:2986)
+Checking function: thisAddress (Slither line:2986)
+thisAddress returns address variable  (Slither line:3006)
+RETURN node expression: this (Slither line:3026)
+Checking function: messageSenderAddress (Slither line:2986)
+messageSenderAddress returns address variable  (Slither line:3006)
+RETURN node expression: msg.sender (Slither line:3026)
+Checking function: slitherConstructorConstantVariables (Slither line:2986)
+
+End EURSToken.find_getter_in_contract (Slither line:3081)
+
+Could not find implementation getter in EURSToken (Slither line:1305)
+
+Begin SafeMath.find_getter_in_contract (Slither line:2972)
+
+delegate is a Variable object
+_delegate
+Checking function: safeAdd (Slither line:2986)
+safeAdd returns uint256 variable called z (Slither line:3006)
+RETURN node expression: x + y (Slither line:3026)
+Checking function: safeSub (Slither line:2986)
+safeSub returns uint256 variable called z (Slither line:3006)
+RETURN node expression: x - y (Slither line:3026)
+Checking function: safeMul (Slither line:2986)
+safeMul returns uint256 variable called z (Slither line:3006)
+RETURN node expression: x * y (Slither line:3026)
+RETURN node expression: 0 (Slither line:3026)
+Checking function: slitherConstructorConstantVariables (Slither line:2986)
+
+End SafeMath.find_getter_in_contract (Slither line:3081)
+
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferFrom
+Checking public function approve
+Checking public function allowance
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferFrom
+Checking public function approve
+Checking public function allowance
+Checking public function name
+Checking public function symbol
+Checking public function decimals
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferFrom
+Checking public function approve
+Checking public function allowance
+Checking public function delegatedTransfer
+Checking public function createTokens
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function burnTokens
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function freezeTransfers
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function unfreezeTransfers
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setFeeCollector
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function nonce
+Checking public function setFeeParameters
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getFeeParameters
+Checking public function calculateFee
+Checking public function setFlags
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function flags
+Checking public function setDelegate
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: delegate
+functions_writing_to_variable: checking function EURSToken.transfer (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.allowance (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.EURSToken (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.freezeTransfers (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.transfer (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.transferFrom (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.totalSupply (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.calculateFee (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.fallback (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.safeSub (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.transferFrom (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.unfreezeTransfers (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.setFlags (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.allowance (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.name (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.setOwner (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.approve (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.transferFrom (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.flags (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.symbol (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.allowance (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.approve (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.setFeeCollector (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.balanceOf (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.setDelegate (proxy_features line:895)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:906)
+functions_writing_to_variable: exp = delegate != _delegate (proxy_features line:906)
+functions_writing_to_variable: exp = delegate = _delegate (proxy_features line:906)
+functions_writing_to_variable: AssignmentOperation: delegate = _delegate (proxy_features line:909)
+functions_writing_to_variable: Identifier: delegate (proxy_features line:921)
+get_value_assigned: delegate = _delegate
+functions_writing_to_variable: exp = Delegation(delegate) (proxy_features line:906)
+functions_writing_to_variable: setDelegate writes _delegate to delegate (proxy_features line:926)
+functions_writing_to_variable: checking function EURSToken.slitherConstructorConstantVariables (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.decimals (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.delegatedTransfer (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.safeMul (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.nonce (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.thisAddress (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.safeAdd (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.transfer (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.totalSupply (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.createTokens (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.approve (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.setFeeParameters (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.AbstractToken (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.messageSenderAddress (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.balanceOf (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.balanceOf (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.burnTokens (proxy_features line:895)
+functions_writing_to_variable: checking function EURSToken.getFeeParameters (proxy_features line:895)
+has_compatibility_checks: dependencies: ['_delegate']
+has_compatibility_checks: checking public function setDelegate
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: IF node exp = delegate != _delegate
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let oldOwner := sload(owner_slot)
+    let oldDelegate := sload(delegate_slot)
+    let buffer := mload(0x40)
+    calldatacopy(buffer, 0, calldatasize())
+    let result := delegatecall(gas(), oldDelegate, buffer, calldatasize(), buffer, 0)
+    switch eq(oldOwner, sload(owner_slot))
+    case 1 {
+    }
+    default {
+        revert(0, 0)
+    }
+    switch eq(oldDelegate, sload(delegate_slot))
+    case 1 {
+    }
+    default {
+        revert(0, 0)
+    }
+    returndatacopy(buffer, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(buffer, returndatasize())
+    }
+    default {
+        return(buffer, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: delegate == address(0)
+can_toggle_delegatecall_on_off: successors:
+ NodeType: END_IF  expression: None
+ NodeType: INLINE ASM  expression: {
+    let oldOwner := sload(owner_slot)
+    let oldDelegate := sload(delegate_slot)
+    let buffer := mload(0x40)
+    calldatacopy(buffer, 0, calldatasize())
+    let result := delegatecall(gas(), oldDelegate, buffer, calldatasize(), buffer, 0)
+    switch eq(oldOwner, sload(owner_slot))
+    case 1 {
+    }
+    default {
+        revert(0, 0)
+    }
+    switch eq(oldDelegate, sload(delegate_slot))
+    case 1 {
+    }
+    default {
+        revert(0, 0)
+    }
+    returndatacopy(buffer, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(buffer, returndatasize())
+    }
+    default {
+        return(buffer, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off: delegatecall_condition = False
+ NodeType: EXPRESSION  expression: require(bool)(msg.value == 0)
+ NodeType: _  expression: None
+Found public function: AbstractToken
+Found public function: balanceOf
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegate = _delegate
+has_time_delay: (node.type) IF
+(Expression) delegate != _delegate
+has_time_delay: (node.type) EXPRESSION
+(Expression) Delegation(delegate)
+
+Begin console.is_proxy (Slither line:1425)
+
+
+End console.is_proxy (Slither line:1428)
+
+
+Begin console.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: console 
+
+End console.is_upgradeable_proxy (Slither line:1407)
+

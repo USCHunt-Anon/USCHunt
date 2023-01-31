@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "SmartLPProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/c8c090f7b318f74c8f9a2fad58072300a667806e_SmartLP.sol/c8c090f7b318f74c8f9a2fad58072300a667806e_SmartLP.sol#414-450)",
+        "elements": [],
+        "description": "SmartLPProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/c8c090f7b318f74c8f9a2fad58072300a667806e_SmartLP.sol/c8c090f7b318f74c8f9a2fad58072300a667806e_SmartLP.sol#414-450) is an upgradeable proxy.\ntarget is declared in the proxy.\ntarget is an address state variable\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: gasleft()() <= 2300\n",
+        "id": "234e18e2155a8d11a92f7a5fea66174d8605412bd826d63076fa63c6e7ed3d4e",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "SmartLPProxy.target",
+          "impl_address_setter": "SmartLPProxy.setTarget(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "SmartLPProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.0/c8c090f7b318f74c8f9a2fad58072300a667806e_SmartLP.sol/c8c090f7b318f74c8f9a2fad58072300a667806e_SmartLP.sol#414-450)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "SmartLPProxy.setTarget(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Target not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!gasleft()() <= 2300",
+          "toggle_alternative_logic": "revert()()",
+          "immutable_functions": {
+            "erc165": [
+              "supportsInterface(bytes4)"
+            ],
+            "other": [
+              "getOwner()",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "setTarget(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

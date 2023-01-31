@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Unitroller (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.5.16/dff18aC4146d67Bf2ccbE98e7db1E4Fa32b96881_ControllerV2.sol/dff18aC4146d67Bf2ccbE98e7db1E4Fa32b96881_ControllerV2.sol#2188-2304)",
+        "elements": [],
+        "description": "Unitroller (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.5.16/dff18aC4146d67Bf2ccbE98e7db1E4Fa32b96881_ControllerV2.sol/dff18aC4146d67Bf2ccbE98e7db1E4Fa32b96881_ControllerV2.sol#2188-2304) is an upgradeable proxy.\ncontrollerImplementation was found in a different contract.\ncontrollerImplementation is an address state variable.\n uses Inherited Storage\nMissing compatibility check in Unitroller._setPendingImplementation(address)\nFound compatibility check in Unitroller._acceptImplementation()\n",
+        "id": "e4559939af7e4b30413469a7ba8476bc57331659de876ef658f267e64528b8bf",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UnitrollerAdminStorage.controllerImplementation",
+          "impl_address_setter": "Unitroller._acceptImplementation()",
+          "impl_address_getter": "not found",
+          "impl_address_location": "UnitrollerAdminStorage (../../smart-contract-sanctuary/avalanche/contracts/mainnet/proxies/0.5.16/dff18aC4146d67Bf2ccbE98e7db1E4Fa32b96881_ControllerV2.sol/dff18aC4146d67Bf2ccbE98e7db1E4Fa32b96881_ControllerV2.sol#2061-2081)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Unitroller._setPendingImplementation(address)": "missing",
+              "Unitroller._acceptImplementation()": "require(bool,string)(pendingControllerImplementation != address(0) && msg.sender == pendingControllerImplementation,unauthorized)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "_setPendingImplementation(address)",
+              "_acceptImplementation()",
+              "_setPendingAdmin(address)",
+              "_acceptAdmin()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

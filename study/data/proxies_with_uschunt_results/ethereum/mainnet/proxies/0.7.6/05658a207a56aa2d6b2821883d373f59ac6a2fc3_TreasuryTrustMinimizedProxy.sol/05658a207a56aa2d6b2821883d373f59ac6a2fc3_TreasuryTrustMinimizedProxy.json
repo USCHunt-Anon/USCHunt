@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TreasuryTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/05658a207a56aa2d6b2821883d373f59ac6a2fc3_TreasuryTrustMinimizedProxy.sol/05658a207a56aa2d6b2821883d373f59ac6a2fc3_TreasuryTrustMinimizedProxy.sol#10-71)",
+        "elements": [],
+        "description": "TreasuryTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/05658a207a56aa2d6b2821883d373f59ac6a2fc3_TreasuryTrustMinimizedProxy.sol/05658a207a56aa2d6b2821883d373f59ac6a2fc3_TreasuryTrustMinimizedProxy.sol#10-71) is an upgradeable proxy.\nLOGIC_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nMissing compatibility check in TreasuryTrustMinimizedProxy.proposeToAndCall(address,bytes)\nMissing compatibility check in TreasuryTrustMinimizedProxy.upgrade()\nMissing compatibility check in TreasuryTrustMinimizedProxy.cancelUpgrade()\nFound compatibility check in TreasuryTrustMinimizedProxy.proposeToAndCall(address,bytes)\n",
+        "id": "41d6c51ca0b4d0477cb1ba44e698098712275bc29324013183584b345e6938de",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TreasuryTrustMinimizedProxy.LOGIC_SLOT",
+          "impl_address_setter": "TreasuryTrustMinimizedProxy.upgrade()",
+          "impl_address_getter": "TreasuryTrustMinimizedProxy._logic()",
+          "impl_address_location": "TreasuryTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.6/05658a207a56aa2d6b2821883d373f59ac6a2fc3_TreasuryTrustMinimizedProxy.sol/05658a207a56aa2d6b2821883d373f59ac6a2fc3_TreasuryTrustMinimizedProxy.sol#10-71)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "TreasuryTrustMinimizedProxy.proposeToAndCall(address,bytes)": "require(bool)(newLogic.delegatecall(data))",
+              "TreasuryTrustMinimizedProxy.upgrade()": "missing",
+              "TreasuryTrustMinimizedProxy.cancelUpgrade()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "changeAdmin(address)",
+              "upgrade()",
+              "cancelUpgrade()",
+              "prolongLock(uint256)",
+              "removeTrust()",
+              "proposeToAndCall(address,bytes)"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "block.number >= _nextLogicBlock()"
+          }
+        }
+      }
+    ]
+  }
+}

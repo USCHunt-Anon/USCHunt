@@ -1,0 +1,338 @@
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GasTracker.is_proxy (Slither line:1425)
+
+
+End GasTracker.is_proxy (Slither line:1428)
+
+
+Begin GasTracker.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GasTracker 
+
+End GasTracker.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxEvents.is_proxy (Slither line:1425)
+
+
+End BZxEvents.is_proxy (Slither line:1428)
+
+
+Begin BZxEvents.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxEvents 
+
+End BZxEvents.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxObjects.is_proxy (Slither line:1425)
+
+
+End BZxObjects.is_proxy (Slither line:1428)
+
+
+Begin BZxObjects.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxObjects 
+
+End BZxObjects.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxStorage.is_proxy (Slither line:1425)
+
+
+End BZxStorage.is_proxy (Slither line:1428)
+
+
+Begin BZxStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxStorage 
+
+End BZxStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxProxiable.is_proxy (Slither line:1425)
+
+
+End BZxProxiable.is_proxy (Slither line:1428)
+
+
+Begin BZxProxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxProxiable 
+
+End BZxProxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin BZxProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(! targetIsPaused[msg.sig],BZxProxy::Function temporarily paused) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+! targetIsPaused[msg.sig]
+BZxProxy::Function temporarily paused
+
+End BZxProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BZxProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), target, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin BZxProxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking REENTRANCY_GUARD_FREE (Slither line:1689)
+Checking REENTRANCY_GUARD_LOCKED (Slither line:1689)
+Checking reentrancyLock (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking gasUsed (Slither line:1689)
+Checking MAX_UINT (Slither line:1689)
+Checking bZRxTokenContract (Slither line:1689)
+Checking vaultContract (Slither line:1689)
+Checking oracleRegistryContract (Slither line:1689)
+Checking bZxTo0xContract (Slither line:1689)
+Checking bZxTo0xV2Contract (Slither line:1689)
+Checking DEBUG_MODE (Slither line:1689)
+Checking orders (Slither line:1689)
+Checking orderAux (Slither line:1689)
+Checking orderFilledAmounts (Slither line:1689)
+Checking orderCancelledAmounts (Slither line:1689)
+Checking orderLender (Slither line:1689)
+Checking loanPositions (Slither line:1689)
+Checking loanPositionsIds (Slither line:1689)
+Checking orderList (Slither line:1689)
+Checking orderListIndex (Slither line:1689)
+Checking orderPositionList (Slither line:1689)
+Checking positionList (Slither line:1689)
+Checking positionListIndex (Slither line:1689)
+Checking interestTotal (Slither line:1689)
+Checking interestPaid (Slither line:1689)
+Checking interestPaidDate (Slither line:1689)
+Checking oracleAddresses (Slither line:1689)
+Checking preSigned (Slither line:1689)
+Checking allowedValidators (Slither line:1689)
+Checking targets (Slither line:1689)
+Checking targetIsPaused (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking data (Slither line:1703)
+Checking target (Slither line:1703)
+target is a Local Variable in BZxProxy.fallback (Slither line:1707)
+Expression: targets[msg.sig] (Slither line:1719)
+targets is a State Variable in contract BZxProxiable (Slither line:1749)
+
+End BZxProxy.find_delegate_variable_by_name
+
+
+End BZxProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End BZxProxy.is_proxy (Slither line:1476)
+
+
+Begin BZxProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxProxy 
+BZxProxy is delegating to targets
+Looking for setter (Slither line:1200)
+
+Looking for setter in BZxProxiable (Slither line:1204)
+
+
+Begin BZxProxiable.find_setter_in_contract (Slither line:3109)
+
+Checking function: initialize(address) returns() (Slither line:3117)
+
+End BZxProxiable.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in BZxProxiable 
+Looking in BZxProxy (Slither line:1213)
+
+Begin BZxProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: initialize(address) returns() (Slither line:3117)
+Checking function: slitherConstructorVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: initialize(address) returns() (Slither line:3117)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+owner = address(0)
+is an Assignment Operation (Slither line:3206)
+require(bool)(msg.sender == owner)
+onlyOwner()
+OwnershipRenounced(owner)
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(_newOwner != address(0))
+OwnershipTransferred(owner,_newOwner)
+onlyOwner()
+_transferOwnership(_newOwner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3206)
+require(bool)(msg.sender == owner)
+Checking function: _transferOwnership(address) returns() (Slither line:3117)
+Visibility: internal
+
+End BZxProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in BZxProxy (Slither line:1220)
+
+Begin BZxProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+Checking function: initialize(address) returns() (Slither line:3117)
+Checking function: slitherConstructorVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3117)
+Visibility: internal
+Checking function: initialize(address) returns() (Slither line:3117)
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: renounceOwnership() returns() (Slither line:3117)
+Visibility: public
+owner = address(0)
+is an Assignment Operation (Slither line:3206)
+require(bool)(msg.sender == owner)
+onlyOwner()
+OwnershipRenounced(owner)
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(_newOwner != address(0))
+OwnershipTransferred(owner,_newOwner)
+onlyOwner()
+_transferOwnership(_newOwner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3206)
+require(bool)(msg.sender == owner)
+Checking function: _transferOwnership(address) returns() (Slither line:3117)
+Visibility: internal
+
+End BZxProxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in BZxProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin BZxProxiable.find_getter_in_contract (Slither line:2964)
+
+targets is a Variable object
+
+End BZxProxiable.find_getter_in_contract (Slither line:3073)
+
+
+Begin BZxProxy.find_getter_in_contract (Slither line:2964)
+
+targets is a Variable object
+Checking function: constructor (Slither line:2978)
+Checking function: renounceOwnership (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: _transferOwnership (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: initialize (Slither line:2978)
+Checking function: slitherConstructorVariables (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End BZxProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in BZxProxy (Slither line:1305)
+or in BZxProxiable (Slither line:1319)
+Checking node of type EXPRESSION (Slither line:1395)
+require(bool,string)(! targetIsPaused[msg.sig],BZxProxy::Function temporarily paused)
+Checking node of type NEW VARIABLE (Slither line:1395)
+data
+data = msg.data
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+target
+target = targets[msg.sig]
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+require(bool,string)(target != address(0),BZxProxy::Target not found)
+
+End BZxProxy.is_upgradeable_proxy (Slither line:1407)
+

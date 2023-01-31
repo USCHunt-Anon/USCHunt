@@ -1,0 +1,880 @@
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Initializable.is_proxy (Slither line:1425)
+
+
+End Initializable.is_proxy (Slither line:1428)
+
+
+Begin Initializable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Initializable 
+
+End Initializable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Implementation.is_proxy (Slither line:1425)
+
+
+End Implementation.is_proxy (Slither line:1428)
+
+
+Begin Implementation.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Implementation 
+
+End Implementation.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Got abstract function, looking for overriding function (Slither line:2015)
+Failure (Slither line:2023)
+_implementation returns a variable of type address   (Slither line:2183)
+Return value is LocalVariable:  (Slither line:2256)
+has no expression (Slither line:2316)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_24646_227_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2792)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2792)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2807)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2792)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is implementation (Slither line:2818)
+dest.value: implementation (Slither line:2821)
+Expression: None (Slither line:2826)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Got abstract function, looking for overriding function (Slither line:2015)
+Failure (Slither line:2023)
+_implementation returns a variable of type address   (Slither line:2183)
+Return value is LocalVariable:  (Slither line:2256)
+has no expression (Slither line:2316)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageSlot.is_proxy (Slither line:1425)
+
+
+End StorageSlot.is_proxy (Slither line:1428)
+
+
+Begin StorageSlot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageSlot 
+
+End StorageSlot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC1967Upgrade.is_proxy (Slither line:1425)
+
+
+End ERC1967Upgrade.is_proxy (Slither line:1428)
+
+
+Begin ERC1967Upgrade.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC1967Upgrade 
+
+End ERC1967Upgrade.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BeaconProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin BeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_24646_227_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End BeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin BeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: r = slot (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+
+End BeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin BeaconProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2792)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2807)
+Args:
+
+End BeaconProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BeaconProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End BeaconProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin BeaconProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End BeaconProxy.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BeaconProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin BeaconProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _ROLLBACK_SLOT (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+Checking _ADMIN_SLOT (Slither line:1689)
+Checking _BEACON_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in BeaconProxy._delegate (Slither line:1805)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: slot (Slither line:1811)
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin BeaconProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:1993)
+called = _implementation (Slither line:2000)
+Return node of function BeaconProxy._implementation(): RETURN IBeacon(_getBeacon()).implementation() (Slither line:2031)
+Encountered call expression at RETURN node: IBeacon(_getBeacon()).implementation() (Slither line:2043)
+Encountered member access expression: IBeacon(_getBeacon()).implementation (Slither line:2047)
+
+Begin BeaconProxy.find_delegate_from_member_access
+
+Expression: IBeacon(_getBeacon()).implementation (Slither line:2348)
+IBeacon(_getBeacon()) (Slither line:2361)
+implementation is a member of the contract type: IBeacon (Slither line:2406)
+Which is an interface (Slither line:2410)
+UpgradeableBeacon inherits IBeacon (Slither line:2417)
+MultiAddress inherits UpgradeableBeacon (Slither line:2417)
+Looking for implementation in MultiAddress (Slither line:2513)
+Found the function called implementation (Slither line:2517)
+Returns a variable of type address (Slither line:2522)
+Found RETURN node: _implementation (Slither line:2534)
+Returns an Identifier (Slither line:2537)
+Found the return value from implementation
+It's a state variable in MultiAddress called _implementation (Slither line:2598)
+Found the function called implementation (Slither line:2517)
+Returns a variable of type address (Slither line:2522)
+
+End BeaconProxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End BeaconProxy.find_delegate_from_call_exp (Slither line:2094)
+
+
+End BeaconProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End BeaconProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End BeaconProxy.is_proxy (Slither line:1476)
+
+
+Begin BeaconProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BeaconProxy 
+BeaconProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeableBeacon (Slither line:1204)
+
+
+Begin UpgradeableBeacon.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: public
+_implementation
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: public
+onlyOwner()
+msg.sender
+require(bool,string)(Address.isContract(newImplementation),UpgradeableBeacon: implementation is not a contract)
+_owner
+_implementation = newImplementation
+is an Assignment Operation (Slither line:3206)
+
+End UpgradeableBeacon.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: UpgradeableBeacon (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: implementation in contract: MultiAddress (Slither line:1285)
+
+End BeaconProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: newImplementation
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: StorageSlot.getBooleanSlot
+library call: Address.isContract
+library call: StorageSlot.getAddressSlot
+library call: Address.functionDelegateCall
+impl_address_from_contract_call: CallExpression IBeacon(_getBeacon()).implementation()
+found MemberAccess calling getter in another contract: IBeacon(_getBeacon()).implementation()
+called: IBeacon(_getBeacon()).implementation
+found MemberAccess: IBeacon(_getBeacon()).implementation
+TypeConversion: IBeacon(_getBeacon())
+find_registry_address_source: IBeacon(_getBeacon()).implementation()
+MemberAccess: IBeacon(_getBeacon()).implementation
+TypeConversion: IBeacon(_getBeacon())
+CallExpression: _getBeacon()
+Identifier: _getBeacon
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function BeaconProxy._getAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon._transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._beacon (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._upgradeTo (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._setBeacon (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._implementation (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon._msgSender (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._upgradeToAndCall (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._fallback (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._setBeacon (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._upgradeBeaconToAndCall (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.constructor (proxy_features line:893)
+get_value_assigned: _implementation = newImplementation
+functions_writing_to_variable: constructor writes newImplementation to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function UpgradeableBeacon.owner (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon._msgData (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._upgradeToAndCallSecure (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.renounceOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._delegate (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._changeAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy.receive (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._setImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._getImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.upgradeTo (proxy_features line:893)
+get_value_assigned: _implementation = newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to _implementation (proxy_features line:1008)
+functions_writing_to_variable: checking function BeaconProxy._beforeFallback (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function BeaconProxy._getBeacon (proxy_features line:893)
+functions_writing_to_variable: checking function UpgradeableBeacon._setImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(newImplementation),UpgradeableBeacon: implementation is not a contract) (proxy_features line:904)
+functions_writing_to_variable: exp = _implementation = newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _implementation = newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:919)
+get_value_assigned: _implementation = newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to _implementation (proxy_features line:924)
+has_compatibility_checks: dependencies: ['newImplementation', 'TMP_315', 'implementation_', 'newImplementation']
+has_compatibility_checks: checking public function constructor
+require(bool,string)(Address.isContract(newImplementation),UpgradeableBeacon: implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(Address.isContract(newImplementation),UpgradeableBeacon: implementation is not a contract)
+has_compatibility_checks: condition Address.isContract(newImplementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition owner() == _msgSender()
+has_compatibility_checks: skipping private function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found fallback
+Found external function: receive
+Found public function: constructor
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(newImplementation),UpgradeableBeacon: implementation is not a contract)
+has_time_delay: (node.type) RETURN
+(Expression) _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+
+Begin UpgradeableBeacon.is_proxy (Slither line:1425)
+
+
+End UpgradeableBeacon.is_proxy (Slither line:1428)
+
+
+Begin UpgradeableBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeableBeacon 
+
+End UpgradeableBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Create2.is_proxy (Slither line:1425)
+
+
+End Create2.is_proxy (Slither line:1428)
+
+
+Begin Create2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Create2 
+
+End Create2.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MultiAddress.is_proxy (Slither line:1425)
+
+
+End MultiAddress.is_proxy (Slither line:1428)
+
+
+Begin MultiAddress.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MultiAddress 
+
+End MultiAddress.is_upgradeable_proxy (Slither line:1407)
+

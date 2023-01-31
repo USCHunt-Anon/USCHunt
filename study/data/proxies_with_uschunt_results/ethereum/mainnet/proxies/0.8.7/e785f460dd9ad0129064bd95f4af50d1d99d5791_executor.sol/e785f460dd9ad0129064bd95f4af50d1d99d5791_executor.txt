@@ -1,0 +1,201 @@
+
+Begin executor.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin executor.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1293_390_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End executor.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin executor.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End executor.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin executor.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_imp,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+_imp
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is _imp (Slither line:2828)
+dest.value: _imp (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin executor.find_delegate_variable_from_name
+Searching for _imp (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _imp (Slither line:1800)
+_imp is a Parameter in executor._delegate (Slither line:1805)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_imp,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_imp,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: _delegate(implementation) (Slither line:1819)
+Found where _delegate is called: _delegate(implementation) (Slither line:1832)
+The value passed to parameter #0 is implementation (Slither line:1835)
+which is an Identifier with value implementation (Slither line:1839)
+implementation is a State Variable (Slither line:1842)
+
+End executor.find_delegate_variable_from_name (Slither line:1949)
+
+
+End executor.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End executor.is_proxy (Slither line:1476)
+
+
+Begin executor.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: executor 
+executor is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin executor.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(owner == msg.sender,Go away)
+implementation = _imp
+is an Assignment Operation (Slither line:3216)
+
+End executor.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: executor (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin executor.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_imp
+Checking function: constructor (Slither line:2988)
+Checking function: setImplementation (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End executor.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in executor (Slither line:1305)
+
+End executor.is_upgradeable_proxy (Slither line:1407)
+
+Checking public function setImplementation
+Checking public function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function executor._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function executor.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function executor.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function executor.setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _imp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _imp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _imp
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(owner == msg.sender,Go away) (proxy_features line:909)
+functions_writing_to_variable: setImplementation writes _imp to implementation (proxy_features line:929)
+has_compatibility_checks: dependencies: ['_imp']
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(owner == msg.sender,Go away)
+has_compatibility_checks: condition owner == msg.sender
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_imp,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found public function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owner == msg.sender,Go away)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _imp
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()

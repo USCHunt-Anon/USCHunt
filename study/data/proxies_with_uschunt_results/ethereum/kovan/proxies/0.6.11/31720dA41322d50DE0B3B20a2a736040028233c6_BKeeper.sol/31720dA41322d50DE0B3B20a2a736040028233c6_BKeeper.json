@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "KeeperProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.6.11/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol#269-314)",
+        "elements": [],
+        "description": "KeeperProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.6.11/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol#269-314) is an upgradeable proxy.\nmasterCopy is declared in the proxy.\nmasterCopy is an address state variable\nmasterCopy is declared in both the proxy and logic contract (BKeeper) in storage slot 0.\nMissing compatibility check in BKeeper.upgrade(address)\nFound compatibility check in KeeperProxy.constructor(address)\nTo remove upgradeability, delete upgrade from BKeeper\n",
+        "id": "6dcb32f282b34d9527d29b5b1613d60c564a4c5c56de7209fe45f14905e75caf",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "KeeperProxy.masterCopy",
+          "impl_address_setter": "BKeeper.upgrade(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "KeeperProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.6.11/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol#269-314)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_also_declared_in": "../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.6.11/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol/31720dA41322d50DE0B3B20a2a736040028233c6_BKeeper.sol#138-267",
+          "impl_address_slot": "0",
+          "master_copy_coupling": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "BKeeper.upgrade(address)": "missing",
+              "KeeperProxy.constructor(address)": "require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgrade from BKeeper"
+        }
+      }
+    ]
+  }
+}

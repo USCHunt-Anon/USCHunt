@@ -1,0 +1,54 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/6a/ethereum/contracts/mainnet/6a/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol#280-348)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/6a/ethereum/contracts/mainnet/6a/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol#280-348) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "BeaconProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/6a/ethereum/contracts/mainnet/6a/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol#560-631)",
+        "elements": [],
+        "description": "BeaconProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/6a/ethereum/contracts/mainnet/6a/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol#560-631) is an upgradeable proxy.\n_childImplementation was found in a different contract.\n_childImplementation is an address state variable.\nUpgradeableBeacon._childImplementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/6a/ethereum/contracts/mainnet/6a/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol#814) gets value from a cross-contract call: IBeacon(_beacon()).childImplementation()\nNFTXVaultFactoryUpgradeable appears to be a Beacon contract for the proxy\nThe address of NFTXVaultFactoryUpgradeable is loaded from storage slot _BEACON_SLOT = 0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeChildTo from UpgradeableBeacon\n",
+        "id": "70fbecaea957930b26ddc5be5ba2951c7e991958860a721d96cecfef745c28ca",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableBeacon._childImplementation",
+          "impl_address_setter": "UpgradeableBeacon.upgradeChildTo(address)",
+          "impl_address_getter": "UpgradeableBeacon.childImplementation()",
+          "impl_address_location": "UpgradeableBeacon (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/6a/ethereum/contracts/mainnet/6a/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol/6A911d2aaABe631f8d7DaA82AFbFe38633cb0DAB_NFTXVaultFactoryUpgradeable.sol#813-862)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IBeacon(_beacon()).childImplementation()",
+          "beacon": "NFTXVaultFactoryUpgradeable",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradeableBeacon.__UpgradeableBeacon__init(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableBeacon: child implementation is not a contract)",
+                "is_correct": true
+              },
+              "UpgradeableBeacon.upgradeChildTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,UpgradeableBeacon: child implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeChildTo from UpgradeableBeacon"
+        }
+      }
+    ]
+  }
+}

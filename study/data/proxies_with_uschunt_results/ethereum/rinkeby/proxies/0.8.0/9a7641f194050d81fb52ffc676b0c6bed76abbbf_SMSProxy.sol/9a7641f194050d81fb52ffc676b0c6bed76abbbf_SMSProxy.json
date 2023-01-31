@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "SMSProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/9a7641f194050d81fb52ffc676b0c6bed76abbbf_SMSProxy.sol/9a7641f194050d81fb52ffc676b0c6bed76abbbf_SMSProxy.sol#9-133)",
+        "elements": [],
+        "description": "SMSProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/9a7641f194050d81fb52ffc676b0c6bed76abbbf_SMSProxy.sol/9a7641f194050d81fb52ffc676b0c6bed76abbbf_SMSProxy.sol#9-133) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(xyz.secretmoneysociety.implementation.address)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "2551512f3dd28e71a3b9a38a7c88903e23be401b12a69c05d29243fbdeea0b23",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "SMSProxy.implementationPosition",
+          "impl_address_setter": "SMSProxy.upgradeTo(address)",
+          "impl_address_getter": "SMSProxy.implementation()",
+          "impl_address_location": "SMSProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/9a7641f194050d81fb52ffc676b0c6bed76abbbf_SMSProxy.sol/9a7641f194050d81fb52ffc676b0c6bed76abbbf_SMSProxy.sol#9-133)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(xyz.secretmoneysociety.implementation.address)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "SMSProxy.upgradeTo(address)": {
+                "check": "require(bool)(currentImplementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "implementation()",
+              "proxyOwner()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

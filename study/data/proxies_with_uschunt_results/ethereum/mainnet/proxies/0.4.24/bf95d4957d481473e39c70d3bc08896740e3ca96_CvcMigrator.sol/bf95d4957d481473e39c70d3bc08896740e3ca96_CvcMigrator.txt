@@ -1,0 +1,457 @@
+
+Begin ImplementationStorage.is_proxy (Slither line:1425)
+
+
+End ImplementationStorage.is_proxy (Slither line:1428)
+
+
+Begin ImplementationStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ImplementationStorage 
+
+End ImplementationStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AddressUtils.is_proxy (Slither line:1425)
+
+
+End AddressUtils.is_proxy (Slither line:1428)
+
+
+Begin AddressUtils.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AddressUtils 
+
+End AddressUtils.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CvcProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CvcProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.sender != currentAdmin(),Message sender is not contract admin) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender != currentAdmin()
+Message sender is not contract admin
+
+End CvcProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CvcProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    proxyAdmin := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End CvcProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin CvcProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    proxyAdmin := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End CvcProxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CvcProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    impl := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End CvcProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin CvcProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    impl := sload(slot) (Slither line:1576)
+} (Slither line:1576)
+
+End CvcProxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CvcProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_implementation'
+Looking for corresponding Variable
+Current function: delegate
+
+Begin CvcProxy.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking IMPLEMENTATION_SLOT (Slither line:1689)
+Checking ADMIN_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _implementation (Slither line:1800)
+_implementation is a Parameter in CvcProxy.delegate (Slither line:1805)
+CallExpression: require(bool,string)(msg.sender != currentAdmin(),Message sender is not contract admin) (Slither line:1819)
+AssignmentOperation: ADMIN_SLOT (Slither line:1811)
+AssignmentOperation: IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: delegate(implementation()) (Slither line:1819)
+Found where delegate is called: delegate(implementation()) (Slither line:1832)
+The value passed to parameter #0 is implementation() (Slither line:1835)
+
+Begin CvcProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+implementation returns a variable of type address   called impl (Slither line:2193)
+implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{  (Slither line:2210)
+    impl := sload(slot)  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End CvcProxy.find_delegate_from_call_exp (Slither line:2328)
+
+delegate contains assembly, searching for sload (Slither line:1875)
+
+End CvcProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin CvcProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End CvcProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End CvcProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting CvcProxy._delegate_variable = CvcProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End CvcProxy.is_proxy (Slither line:1476)
+
+
+Begin CvcProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CvcProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+CvcProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in ImplementationStorage (Slither line:1204)
+
+
+Begin ImplementationStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+implementation contains assembly (Slither line:3153)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End ImplementationStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ImplementationStorage 
+Looking in CvcProxy (Slither line:1213)
+
+Begin CvcProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+AdminChanged(currentAdmin(),_newAdmin)
+setAdmin(_newAdmin)
+ifAdmin()
+    sstore(slot, _newAdmin) (Slither line:3163)
+changeAdmin reads and/or writes to variable slot (Slither line:3170)
+changeAdmin reads and/or writes to variable ADMIN_SLOT (Slither line:3170)
+delegate(implementation())
+require(bool,string)(_newAdmin != address(0),Cannot change contract admin to zero address)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: external
+    sstore(slot, _newImplementation) (Slither line:3163)
+upgradeTo reads and/or writes to variable slot (Slither line:3170)
+upgradeTo reads and/or writes to variable AddressUtils (Slither line:3170)
+upgradeTo reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3170)
+upgradeTo reads and/or writes to variable _newImplementation (Slither line:3170)
+
+End CvcProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: CvcProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ImplementationStorage.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb
+Checking function: constructor (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable called impl (Slither line:3008)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ImplementationStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin CvcProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb
+Checking function: constructor (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable called impl (Slither line:3008)
+implementation contains assembly (Slither line:3051)
+implementation contains assembly (Slither line:3051)
+implementation contains assembly (Slither line:3051)
+
+End CvcProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: CvcProxy (Slither line:1285)
+
+End CvcProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: CvcProxy
+Setter found in contract CvcProxy
+impl_address_from_contract_call: 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: AddressUtils.isContract
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.sender != currentAdmin(),Message sender is not contract admin)
+impl_address_from_contract_call: arg is msg.sender != currentAdmin()
+impl_address_from_contract_call: arg is Message sender is not contract admin
+impl_address_from_contract_call: CallExpression delegate(implementation())
+impl_address_from_contract_call: arg is implementation()
+impl_address_from_contract_call: CallExpression implementation()
+Checking public function implementation
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: msg.sender == currentAdmin()
+Checking external function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == currentAdmin()
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: msg.sender == currentAdmin()
+Checking external function admin
+Found 'msg.sender ==' in expression: msg.sender == currentAdmin()
+Checking external function fallback
+Found 'msg.sender !=' in expression: require(bool,string)(msg.sender != currentAdmin(),Message sender is not contract admin)
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function CvcProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.upgradeImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, _newImplementation)
+(proxy_features line:953)
+_newImplementation
+functions_writing_to_variable: upgradeImplementation writes _newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CvcProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.currentAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.admin (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.upgradeToAndCall (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, _newImplementation)
+(proxy_features line:953)
+_newImplementation
+functions_writing_to_variable: upgradeToAndCall writes _newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CvcProxy.delegate (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, _newImplementation)
+(proxy_features line:953)
+_newImplementation
+functions_writing_to_variable: setImplementation writes _newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CvcProxy.changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CvcProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, _newImplementation)
+(proxy_features line:953)
+_newImplementation
+functions_writing_to_variable: upgradeTo writes _newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function CvcProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0xa490aab0d89837371982f93f57ffd20c47991f88066ef92475bc8233036969bb
+functions_writing_to_variable: exp = ADMIN_SLOT = 0x2bbac3e52eee27be250d682577104e2abe776c40160cd3167b24633933100433 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ADMIN_SLOT = 0x2bbac3e52eee27be250d682577104e2abe776c40160cd3167b24633933100433 (proxy_features line:912)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping private function upgradeImplementation
+has_compatibility_checks: checking external function upgradeToAndCall
+has_compatibility_checks: IF node exp = msg.sender == currentAdmin()
+require(bool,string)(currentImplementation != _newImplementation,Upgrade error: proxy contract already uses specified implementation)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition implementation() != _newImplementation
+require(bool,string)(address(this).call.value(msg.value)(_data),Upgrade error: initialization method call failed)
+has_compatibility_checks: condition address(this).call.value(msg.value)(_data)
+require(bool,string)(AddressUtils.isContract(_newImplementation),Cannot set new implementation: no contract code at contract address)
+has_compatibility_checks: condition AddressUtils.isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: skipping private function setImplementation
+has_compatibility_checks: checking external function upgradeTo
+has_compatibility_checks: IF node exp = msg.sender == currentAdmin()
+require(bool,string)(currentImplementation != _newImplementation,Upgrade error: proxy contract already uses specified implementation)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition implementation() != _newImplementation
+require(bool,string)(AddressUtils.isContract(_newImplementation),Cannot set new implementation: no contract code at contract address)
+has_compatibility_checks: condition AddressUtils.isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['ifAdmin()']
+check_condition_from_expression: condition size > 0
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), _implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) upgradeImplementation(_implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ifAdmin()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) IF
+(Expression) msg.sender == currentAdmin()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentImplementation = implementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(currentImplementation != _newImplementation,Upgrade error: proxy contract already uses specified implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) setImplementation(_newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delegate(implementation())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(AddressUtils.isContract(_newImplementation),Cannot set new implementation: no contract code at contract address)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = ADMIN_SLOT
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CvcMigrator.is_proxy (Slither line:1425)
+
+
+End CvcMigrator.is_proxy (Slither line:1428)
+
+
+Begin CvcMigrator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CvcMigrator 
+
+End CvcMigrator.is_upgradeable_proxy (Slither line:1407)
+

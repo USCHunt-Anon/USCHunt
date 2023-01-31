@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#93-127)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#93-127) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#241-310)",
+        "elements": [],
+        "description": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#241-310) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "001f1e881993c8963486586c5b8d35f5b673b76c05b3d7bd7d800b7e7b7eec2f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OwnedUpgradeabilityStorage._implementation",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "OwnedUpgradeabilityStorage.implementation()",
+          "impl_address_location": "OwnedUpgradeabilityStorage (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#52-90)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "upgradeabilityOwner()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "OwnableDelegateProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#312-323)",
+        "elements": [],
+        "description": "OwnableDelegateProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#312-323) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "6622cfd330976cb09d4d77df1d8378ff3e5aa738fb9f8d7245e078f1b61919ee",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OwnedUpgradeabilityStorage._implementation",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(address)",
+          "impl_address_getter": "OwnedUpgradeabilityStorage.implementation()",
+          "impl_address_location": "OwnedUpgradeabilityStorage (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.4.24/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol/c1054d5aE13b2dcb5589a3966E0005d524C463bc_WyvernProxyRegistry.sol#52-90)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnableDelegateProxy.constructor(address,address,bytes)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeTo(address)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "upgradeabilityOwner()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "proxyType()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

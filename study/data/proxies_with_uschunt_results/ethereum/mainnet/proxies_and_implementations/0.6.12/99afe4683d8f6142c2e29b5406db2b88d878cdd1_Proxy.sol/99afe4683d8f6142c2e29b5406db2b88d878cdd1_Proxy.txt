@@ -1,0 +1,556 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_1530_113_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: target_fallback_asm_0 = sload(uint256)(0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '1338:1:0', 'type': '', 'value': '0'} (Slither line:1909)
+Found sload(0), getting first state variable
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for implementation at slot 0 in contract BaseWallet (Slither line:1355)
+Found implementation at slot 0 in contract BaseWallet (Slither line:1362)
+
+Begin BaseWallet.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+Checking function: init (Slither line:2988)
+Checking function: authoriseModule (Slither line:2988)
+Checking function: enableStaticCall (Slither line:2988)
+Checking function: setOwner (Slither line:2988)
+Checking function: invoke (Slither line:2988)
+invoke returns bytes variable called _result (Slither line:3008)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+
+End BaseWallet.find_getter_in_contract (Slither line:3083)
+
+
+Begin BaseWallet.find_setter_in_contract (Slither line:3119)
+
+Checking function: init(address,address[]) returns() (Slither line:3127)
+Checking function: authoriseModule(address,bool) returns() (Slither line:3127)
+Visibility: external
+AuthorisedModule(_module,_value)
+modules += 1
+is an Assignment Operation (Slither line:3216)
+moduleOnly()
+modules -= 1
+is an Assignment Operation (Slither line:3216)
+authorised[_module] = true
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+require(bool,string)(authorised[msg.sender],BW: msg.sender not an authorized module)
+require(bool,string)(modules > 0,BW: wallet must have at least one module)
+IModule(_module).init(address(this))
+delete authorised[_module]
+Checking function: enableStaticCall(address,bytes4) returns() (Slither line:3127)
+Visibility: external
+moduleOnly()
+require(bool,string)(authorised[_module],BW: must be an authorised module for static call)
+require(bool,string)(authorised[msg.sender],BW: msg.sender not an authorized module)
+enabled[_method] = _module
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+EnabledStaticCall(_module,_method)
+Checking function: setOwner(address) returns() (Slither line:3127)
+Visibility: external
+moduleOnly()
+require(bool,string)(_newOwner != address(0),BW: address cannot be null)
+require(bool,string)(authorised[msg.sender],BW: msg.sender not an authorized module)
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+OwnerChanged(_newOwner)
+Checking function: invoke(address,uint256,bytes) returns(bytes) (Slither line:3127)
+Visibility: external
+invoke contains assembly (Slither line:3153)
+moduleOnly()
+Invoked(msg.sender,_target,_value,_data)
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+require(bool,string)(authorised[msg.sender],BW: msg.sender not an authorized module)
+revert(uint256,uint256)(0,returndatasize()())
+(success,_result) = _target.call{value: _value}(_data)
+is an Assignment Operation (Slither line:3216)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: modules() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setOwner(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: authorised(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: enabled(bytes4) returns(address) (Slither line:3127)
+Visibility: external
+Checking function: authoriseModule(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: enableStaticCall(address,bytes4) returns() (Slither line:3127)
+Visibility: external
+
+End BaseWallet.find_setter_in_contract (Slither line:3345)
+
+Checking node of type IF (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+switch_expr_1530_113_0_fallback_asm_0 = result_fallback_asm_0
+Checking node of type NEW VARIABLE (Slither line:1395)
+result_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+target_fallback_asm_0 = sload(uint256)(0)
+Checking node of type END_IF (Slither line:1395)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type EXPRESSION (Slither line:1395)
+calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Checking node of type NEW VARIABLE (Slither line:1395)
+switch_expr_1530_113_0_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+Checking node of type EXPRESSION (Slither line:1395)
+result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target_fallback_asm_0,0,calldatasize()(),0,0)
+Checking node of type EXPRESSION (Slither line:1395)
+revert(uint256,uint256)(0,returndatasize()())
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+target_fallback_asm_0
+None
+Checking node of type EXPRESSION (Slither line:1395)
+return(uint256,uint256)(0,returndatasize()())
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation']
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: target_fallback_asm_0 = sload(uint256)(0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target_fallback_asm_0,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found external function: receive
+
+Begin IModule.is_proxy (Slither line:1425)
+
+
+End IModule.is_proxy (Slither line:1428)
+
+
+Begin IModule.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IModule 
+
+End IModule.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IWallet.is_proxy (Slither line:1425)
+
+
+End IWallet.is_proxy (Slither line:1428)
+
+
+Begin IWallet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IWallet 
+
+End IWallet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BaseWallet.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_9786_123_0_fallback_asm_0 = result_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(authorised[module],BW: must be an authorised module for static call) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+authorised[module]
+BW: must be an authorised module for static call
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = staticcall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),module,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: staticcall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+module
+0
+calldatasize()()
+0
+0
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseWallet.find_delegatecall_in_exp_node
+
+Found Expression Node: Received(msg.value,msg.sender,msg.data) (Slither line:2802)
+Expression called: Received
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.value
+msg.sender
+msg.data
+
+End BaseWallet.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BaseWallet.find_delegatecall_in_asm (Slither line:1541)
+
+
+End BaseWallet.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin BaseWallet.find_delegatecall_in_asm (Slither line:1541)
+
+
+End BaseWallet.find_delegatecall_in_asm (Slither line:1637)
+
+
+End BaseWallet.is_proxy (Slither line:1476)
+
+
+Begin BaseWallet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BaseWallet 
+
+End BaseWallet.is_upgradeable_proxy (Slither line:1407)
+

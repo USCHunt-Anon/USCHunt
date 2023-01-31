@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ControllerProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#130-150)",
+        "elements": [],
+        "description": "ControllerProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#130-150) is an upgradeable proxy.\ncontrollerDelegate was found in a different contract.\ncontrollerDelegate is an address state variable.\nMissing compatibility check in ControllerProxy.setControllerDelegate(address)\n",
+        "id": "2c140a6fc24db9c7699937a86e0c6d56fd864d426bbb9ce01d5af76bf0044f00",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ControllerStorage.controllerDelegate",
+          "impl_address_setter": "ControllerProxy.setControllerDelegate(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ControllerStorage (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#92-98)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ControllerProxy.setControllerDelegate(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "getDelegate()",
+              "isWorker(address)",
+              "allWorkers()",
+              "addWorker(address)",
+              "removeWorker(address)",
+              "setOwner(address)",
+              "getDelegate()",
+              "setWalletsDelegate(address)",
+              "setControllerDelegate(address)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "WalletProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#161-176)",
+        "elements": [],
+        "description": "WalletProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#161-176) is an upgradeable proxy.\nwalletsDelegate was found in a different contract.\nwalletsDelegate is an address state variable.\nControllerStorage.walletsDelegate (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#93) gets value from a cross-contract call: DelegateProvider(owner).getDelegate()\nControllerProxy appears to be a Beacon contract for the proxy\nThe address of ControllerProxy is stored as a state variable: WalletStorage.owner\nCould not find setter for owner\nMissing compatibility check in ControllerProxy.setWalletsDelegate(address)\nTo remove upgradeability, delete setWalletsDelegate from ControllerProxy\n",
+        "id": "94af1ad1ef8f7dcca295532c55bdbf8d468f19632ec2ab9684136c6b8da21124",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ControllerStorage.walletsDelegate",
+          "impl_address_setter": "ControllerProxy.setWalletsDelegate(address)",
+          "impl_address_getter": "ControllerProxy.getDelegate()",
+          "impl_address_location": "ControllerStorage (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.23/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol/23c69f681ec1718fc4de77f0eafb703848179bd8_WalletProxy.sol#92-98)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "DelegateProvider(owner).getDelegate()",
+          "beacon": "ControllerProxy",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "WalletStorage.owner",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ControllerProxy.setWalletsDelegate(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove setWalletsDelegate from ControllerProxy"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+
+Begin UnistryAdminStorage.is_proxy (Slither line:1425)
+
+
+End UnistryAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin UnistryAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UnistryAdminStorage 
+
+End UnistryAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ministry.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Ministry.is_proxy (Slither line:1476)
+
+
+Begin Ministry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ministry 
+Ministry is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UnistryAdminStorage (Slither line:1204)
+
+
+Begin UnistryAdminStorage.find_setter_in_contract (Slither line:3119)
+
+
+End UnistryAdminStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UnistryAdminStorage 
+Looking in Ministry (Slither line:1213)
+
+Begin Ministry.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(bool) returns() (Slither line:3127)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == admin,Not Admin)
+pendingImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+NewPendingImplementation(oldPendingImplementation,pendingImplementation)
+0
+Checking function: _acceptImplementation() returns(uint256) (Slither line:3127)
+Visibility: public
+NewImplementation(oldImplementation,implementation)
+require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation)
+NewPendingImplementation(oldPendingImplementation,pendingImplementation)
+implementation = pendingImplementation
+is an Assignment Operation (Slither line:3216)
+
+End Ministry.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _acceptImplementation in contract: Ministry (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UnistryAdminStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingImplementation
+
+End UnistryAdminStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin Ministry.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingImplementation
+Checking function: constructor (Slither line:2988)
+Checking function: _setPendingImplementation (Slither line:2988)
+_setPendingImplementation returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: _acceptImplementation (Slither line:2988)
+_acceptImplementation returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: _setPendingAdmin (Slither line:2988)
+_setPendingAdmin returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: _acceptAdmin (Slither line:2988)
+_acceptAdmin returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+
+End Ministry.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Ministry (Slither line:1305)
+or in UnistryAdminStorage (Slither line:1319)
+
+Begin RegistryV0Storage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingImplementation
+
+End RegistryV0Storage.find_getter_in_contract (Slither line:3083)
+
+
+End Ministry.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingImplementation
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking public function _setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not Admin)
+Checking public function _acceptImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation)
+Checking public function _setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not Admin)
+Checking public function _acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),Not the EXISTING pending admin)
+Checking public function _setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not Admin)
+Checking public function _acceptImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation)
+Checking public function _setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not Admin)
+Checking public function _acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),Not the EXISTING pending admin)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function Ministry.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = pendingImplementation
+functions_writing_to_variable: exp = pendingImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = 0 (proxy_features line:909)
+functions_writing_to_variable: _acceptImplementation writes pendingImplementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Ministry._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry._acceptAdmin (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_8', 'pendingImplementation', 'newPendingImplementation']
+functions_writing_to_variable: pendingImplementation
+functions_writing_to_variable: checking function Ministry.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,Not Admin) (proxy_features line:909)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingImplementation = newPendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = newPendingImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingImplementation (proxy_features line:924)
+get_value_assigned: pendingImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = 0 (proxy_features line:909)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingImplementation (proxy_features line:929)
+functions_writing_to_variable: checking function Ministry.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = pendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingImplementation (proxy_features line:924)
+get_value_assigned: pendingImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = 0 (proxy_features line:909)
+functions_writing_to_variable: checking function Ministry._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Ministry._acceptAdmin (proxy_features line:898)
+has_compatibility_checks: checking public function _acceptImplementation
+require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation)
+has_compatibility_checks: condition msg.sender == pendingImplementation && pendingImplementation != address(0)
+check_condition_from_expression: condition msg.sender == pendingImplementation && pendingImplementation != address(0)
+has_compatibility_checks: checking public function _setPendingImplementation
+require(bool,string)(msg.sender == admin,Not Admin)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Not the EXISTING registry implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = pendingImplementation
+has_time_delay: (node.type) RETURN
+(Expression) 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingImplementation = address(0)
+
+Begin RegistryV0Storage.is_proxy (Slither line:1425)
+
+
+End RegistryV0Storage.is_proxy (Slither line:1428)
+
+
+Begin RegistryV0Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RegistryV0Storage 
+
+End RegistryV0Storage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RegistryV1Storage.is_proxy (Slither line:1425)
+
+
+End RegistryV1Storage.is_proxy (Slither line:1428)
+
+
+Begin RegistryV1Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RegistryV1Storage 
+
+End RegistryV1Storage.is_upgradeable_proxy (Slither line:1407)
+

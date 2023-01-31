@@ -1,0 +1,427 @@
+
+Begin Admin.is_proxy (Slither line:1425)
+
+
+End Admin.is_proxy (Slither line:1428)
+
+
+Begin Admin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Admin 
+
+End Admin.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Upgradeable.is_proxy (Slither line:1425)
+
+
+End Upgradeable.is_proxy (Slither line:1428)
+
+
+Begin Upgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Upgradeable 
+
+End Upgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: implementation = sload(uint256)(position) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+position
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(msg.data.length > 0,Upgradeable: Invalid data sent) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.data.length > 0
+Upgradeable: Invalid data sent
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0x0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+0x0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0x0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+_impl
+ptr_fallback_asm_0
+calldatasize()()
+0x0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is _impl (Slither line:2828)
+dest.value: _impl (Slither line:2831)
+Expression: getImplementation() (Slither line:2836)
+
+Begin Proxy.find_delegate_from_call_exp
+
+getImplementation() (Slither line:2003)
+called = getImplementation (Slither line:2010)
+AssignmentOperation: implementation = sload(uint256)(position) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: implementationPosition (Slither line:2140)
+getImplementation returns a variable of type address   called implementation (Slither line:2193)
+getImplementation contains assembly - looking for sload (Slither line:2199)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: implementationPosition (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination implementationPosition is constant (Slither line:1146)
+
+implementationPosition is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to implementationPosition
+Looking for setter (Slither line:1200)
+
+Looking for setter in Upgradeable (Slither line:1204)
+
+
+Begin Upgradeable.find_setter_in_contract (Slither line:3119)
+
+Expression: keccak256(bytes)(implementation) (Slither line:3122)
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+getImplementation contains assembly (Slither line:3153)
+implementation = sload(uint256)(position)
+is an Assignment Operation (Slither line:3216)
+keccak256(bytes)(implementation)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: external
+setImplementation contains assembly (Slither line:3153)
+size > 0
+require(bool,string)(isContract(_newImplementation),Upgradeable: Implemenentation address must be a contract)
+size = extcodesize(uint256)(_target)
+is an Assignment Operation (Slither line:3216)
+keccak256(bytes)(implementation)
+require(bool,string)(currentImplementation != _newImplementation,Upgradeable: Old and New implementation addresses are same)
+implementation = sload(uint256)(position)
+is an Assignment Operation (Slither line:3216)
+keccak256(bytes)(implementation)
+require(bool,string)(msg.sender == admin,Admin: Not admin)
+sstore(uint256,uint256)(position,_newImplementation)
+sstore(uint256,uint256)
+
+End Upgradeable.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: Upgradeable (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Upgradeable.find_getter_in_contract (Slither line:2974)
+
+implementationPosition is a Variable object
+keccak256(bytes)(implementation)
+Checking function: constructor (Slither line:2988)
+Checking function: setAdmin (Slither line:2988)
+Checking function: tranfserAdminRights (Slither line:2988)
+Checking function: _transferAdminRights (Slither line:2988)
+Checking function: getImplementation (Slither line:2988)
+getImplementation returns address variable called implementation (Slither line:3008)
+Checking function: setImplementation (Slither line:2988)
+Checking function: isContract (Slither line:2988)
+isContract returns bool variable  (Slither line:3008)
+RETURN node expression: false (Slither line:3028)
+RETURN node expression: size > 0 (Slither line:3028)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End Upgradeable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+implementationPosition is a Variable object
+keccak256(bytes)(implementation)
+Checking function: getImplementation (Slither line:2988)
+getImplementation returns address variable called implementation (Slither line:3008)
+getImplementation contains assembly (Slither line:3051)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getImplementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+Setter found in contract Upgradeable
+impl_address_from_contract_call: keccak256(bytes)(implementation)
+impl_address_from_contract_call: StateVariable implementationPosition
+impl_address_from_contract_call: getter is getImplementation
+getter.full_name = getImplementation()
+impl_address_from_contract_call: CallExpression sload(uint256)(position)
+impl_address_from_contract_call: arg is position
+impl_address_from_contract_call: CallExpression require(bool,string)(msg.data.length > 0,Upgradeable: Invalid data sent)
+impl_address_from_contract_call: arg is msg.data.length > 0
+impl_address_from_contract_call: arg is Upgradeable: Invalid data sent
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0x0,calldatasize()())
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0x0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0)
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is size_fallback_asm_0
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0)
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is size_fallback_asm_0
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0x0,size_fallback_asm_0)
+impl_address_from_contract_call: arg is ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is size_fallback_asm_0
+impl_address_from_contract_call: CallExpression getImplementation()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+called: keccak256(bytes)
+Checking public function getImplementation
+Checking external function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Admin: Not admin)
+Checking external function tranfserAdminRights
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Admin: Not admin)
+Checking external function fallback
+functions_writing_to_variable: implementationPosition
+functions_writing_to_variable: checking function Upgradeable.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = implementationPosition = keccak256(bytes)(implementation) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = keccak256(bytes)(implementation) (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:924)
+get_value_assigned: implementationPosition = keccak256(bytes)(implementation)
+functions_writing_to_variable: checking function Proxy._transferAdminRights (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.tranfserAdminRights (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable._transferAdminRights (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = implementationPosition = keccak256(bytes)(implementation) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementationPosition = keccak256(bytes)(implementation) (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementationPosition (proxy_features line:924)
+get_value_assigned: implementationPosition = keccak256(bytes)(implementation)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.tranfserAdminRights (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.isContract (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.isContract (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: setImplementation writes _newImplementation to implementationPosition using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Upgradeable.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Upgradeable.setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newImplementation)
+functions_writing_to_variable: setImplementation writes _newImplementation to implementationPosition using sstore (proxy_features line:998)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function setImplementation
+require(bool,string)(msg.sender == admin,Admin: Not admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: IF node exp = _target == address(0)
+require(bool,string)(_newImplementation != address(0),Upgradeable: Zero Address)
+has_compatibility_checks: condition _newImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _newImplementation != address(0)
+require(bool,string)(isContract(_newImplementation),Upgradeable: Implemenentation address must be a contract)
+has_compatibility_checks: condition isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+require(bool,string)(currentImplementation != _newImplementation,Upgradeable: Old and New implementation addresses are same)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition getImplementation() != _newImplementation
+has_compatibility_checks: checking external function setImplementation
+require(bool,string)(isContract(_newImplementation),Upgradeable: Implemenentation address must be a contract)
+has_compatibility_checks: condition isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+require(bool,string)(currentImplementation != _newImplementation,Upgradeable: Old and New implementation addresses are same)
+has_compatibility_checks: condition currentImplementation != _newImplementation
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition getImplementation() != _newImplementation
+has_compatibility_checks: IF node exp = _target == address(0)
+require(bool,string)(msg.sender == admin,Admin: Not admin)
+has_compatibility_checks: condition msg.sender == admin
+require(bool,string)(_newImplementation != address(0),Upgradeable: Zero Address)
+has_compatibility_checks: condition _newImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _newImplementation != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = getImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0x0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(msg.data.length > 0,Upgradeable: Invalid data sent)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+Found public function: getImplementation
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(isContract(_newImplementation),Upgradeable: Implemenentation address must be a contract)
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(_target)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) currentImplementation = getImplementation()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(currentImplementation != _newImplementation,Upgradeable: Old and New implementation addresses are same)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = sload(uint256)(position)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = implementationPosition
+has_time_delay: (node.type) IF
+(Expression) _target == address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,Admin: Not admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(position,_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_newImplementation != address(0),Upgradeable: Zero Address)
+has_time_delay: (node.type) RETURN
+(Expression) false

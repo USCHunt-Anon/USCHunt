@@ -1,0 +1,264 @@
+
+Begin BrickAccessControl.is_proxy (Slither line:1425)
+
+
+End BrickAccessControl.is_proxy (Slither line:1428)
+
+
+Begin BrickAccessControl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BrickAccessControl 
+
+End BrickAccessControl.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(contractAddress != address(0),Cannot set address to address(0)) (Slither line:2792)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2807)
+Args:
+contractAddress != address(0)
+Cannot set address to address(0)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), contractAddress, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'contractAddress'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractAddress (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking admin (Slither line:1689)
+Checking nodes (Slither line:1689)
+Checking nodeToId (Slither line:1689)
+Checking brickAddress (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking contractAddress (Slither line:1703)
+contractAddress is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: getBrickAddress() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+getBrickAddress() (Slither line:1993)
+called = getBrickAddress (Slither line:2000)
+Return node of function Proxy.getBrickAddress(): RETURN brickAddress (Slither line:2031)
+brickAddress (Slither line:2038)
+getBrickAddress returns a variable of type address   called brickAddress (Slither line:2183)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to brickAddress
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: getBrickAddress() returns(address) (Slither line:3117)
+Visibility: public
+brickAddress
+Checking function: setBrickAddress(address) returns() (Slither line:3117)
+Visibility: public
+brickAddress = _brickAddress
+is an Assignment Operation (Slither line:3206)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setBrickAddress in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+brickAddress is a Variable object
+_brickAddress
+Checking function: constructor (Slither line:2978)
+Checking function: setAdmin (Slither line:2978)
+Checking function: getNodes (Slither line:2978)
+getNodes returns address[] variable  (Slither line:2998)
+RETURN node expression: nodes (Slither line:3018)
+Checking function: addNode (Slither line:2978)
+Checking function: removeNode (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: getBrickAddress (Slither line:2978)
+getBrickAddress returns address variable  (Slither line:2998)
+RETURN node expression: brickAddress (Slither line:3018)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: getBrickAddress in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not authorized admin.)
+Checking public function setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not authorized admin.)
+Checking public function getNodes
+Checking public function addNode
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not authorized admin.)
+Checking public function removeNode
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not authorized admin.)
+Checking public function getBrickAddress
+Checking public function setBrickAddress
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,Not authorized admin.)
+Checking public function fallback
+functions_writing_to_variable: brickAddress
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.addNode (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.getNodes (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.removeNode (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.getBrickAddress (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.setAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.setBrickAddress (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(_brickAddress != address(0),Cannot upgrade to the same address.) (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(_brickAddress != brickAddress,Cannot upgrade to empty address.) (proxy_features line:904)
+functions_writing_to_variable: exp = brickAddress = _brickAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: brickAddress = _brickAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: brickAddress (proxy_features line:919)
+get_value_assigned: brickAddress = _brickAddress
+functions_writing_to_variable: exp = BrickUpgraded(brickAddress) (proxy_features line:904)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,Not authorized admin.) (proxy_features line:904)
+functions_writing_to_variable: setBrickAddress writes _brickAddress to brickAddress (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+get_value_assigned: brickAddress = _brickAddress
+functions_writing_to_variable: constructor writes _brickAddress to brickAddress (proxy_features line:1008)
+has_compatibility_checks: dependencies: ['_brickAddress', '_brickAddress']
+has_compatibility_checks: checking public function setBrickAddress
+require(bool,string)(_brickAddress != address(0),Cannot upgrade to the same address.)
+has_compatibility_checks: condition _brickAddress != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _brickAddress != address(0)
+require(bool,string)(msg.sender == admin,Not authorized admin.)
+has_compatibility_checks: condition msg.sender == admin
+require(bool,string)(_brickAddress != brickAddress,Cannot upgrade to empty address.)
+has_compatibility_checks: condition _brickAddress != brickAddress
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _brickAddress != brickAddress
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_brickAddress != address(0),Cannot upgrade to the same address.)
+has_compatibility_checks: condition _brickAddress != address(0)
+check_condition_from_expression: condition _brickAddress != address(0)
+require(bool,string)(msg.sender == admin,Not authorized admin.)
+has_compatibility_checks: condition msg.sender == admin
+require(bool,string)(_brickAddress != brickAddress,Cannot upgrade to empty address.)
+has_compatibility_checks: condition _brickAddress != brickAddress
+check_condition_from_expression: condition _brickAddress != brickAddress
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), contractAddress, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: contractAddress = getBrickAddress()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(contractAddress != address(0),Cannot set address to address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: setAdmin
+has_time_delay: (node.type) EXPRESSION
+(Expression) brickAddress = _brickAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) BrickUpgraded(brickAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_brickAddress != address(0),Cannot upgrade to the same address.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,Not authorized admin.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_brickAddress != brickAddress,Cannot upgrade to empty address.)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()

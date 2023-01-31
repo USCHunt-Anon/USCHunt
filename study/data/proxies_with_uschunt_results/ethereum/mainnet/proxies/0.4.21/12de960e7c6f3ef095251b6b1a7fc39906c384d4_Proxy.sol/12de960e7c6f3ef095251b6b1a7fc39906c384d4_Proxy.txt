@@ -1,0 +1,228 @@
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: target.setMessageSender(msg.sender) (Slither line:2802)
+Expression called: target.setMessageSender
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(free_ptr, 0, calldatasize()) (Slither line:1576)
+    let result := call(gas(), sload(target_slot), callvalue(), free_ptr, calldatasize(), 0, 0) (Slither line:1576)
+    returndatacopy(free_ptr, 0, returndatasize()) (Slither line:1576)
+    if iszero(result) (Slither line:1576)
+    { (Slither line:1576)
+        revert(free_ptr, calldatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    return(free_ptr, returndatasize()) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(free_ptr, 0, calldatasize()) (Slither line:1576)
+    let result := call(gas(), sload(target_slot), callvalue(), free_ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called 'target_slot'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for target_slot (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nominatedOwner (Slither line:1689)
+Checking target (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking nominatedOwner (Slither line:1689)
+Checking target (Slither line:1689)
+target is a State Variable in contract Proxy (Slither line:1693)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to target
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: Proxy(Proxyable,address) returns() (Slither line:3127)
+Checking function: _setTarget(address) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+require(bool)(_target != address(0))
+require(bool)(msg.sender == owner)
+target = Proxyable(_target)
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setTarget in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+Proxyable(_target)
+Checking function: Owned (Slither line:2988)
+Checking function: nominateOwner (Slither line:2988)
+Checking function: acceptOwnership (Slither line:2988)
+Checking function: Proxy (Slither line:2988)
+Checking function: _setTarget (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for target at slot 2 in contract Proxyable (Slither line:1355)
+Found proxy at slot 2 in contract Proxyable (Slither line:1362)
+
+Begin Owned.find_getter_in_contract (Slither line:2974)
+
+target is a Variable object
+Proxyable(_target)
+Checking function: Owned (Slither line:2988)
+Checking function: nominateOwner (Slither line:2988)
+Checking function: acceptOwnership (Slither line:2988)
+
+End Owned.find_getter_in_contract (Slither line:3083)
+
+Checking external function nominateOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nominatedOwner)
+Checking external function _setTarget
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function nominateOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function acceptOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nominatedOwner)
+Checking external function _setTarget
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: target
+functions_writing_to_variable: checking function Proxy.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.nominateOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._setTarget (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_target != address(0)) (proxy_features line:909)
+functions_writing_to_variable: exp = target = Proxyable(_target) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: target = Proxyable(_target) (proxy_features line:912)
+functions_writing_to_variable: Identifier: target (proxy_features line:924)
+get_value_assigned: target = Proxyable(_target)
+functions_writing_to_variable: exp = TargetChanged(_target) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: checking function Proxy.Owned (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.Proxy (proxy_features line:898)
+functions_writing_to_variable: exp = target = _target (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: target = _target (proxy_features line:912)
+functions_writing_to_variable: Identifier: target (proxy_features line:924)
+get_value_assigned: target = _target
+functions_writing_to_variable: exp = TargetChanged(_target) (proxy_features line:909)
+functions_writing_to_variable: exp = Owned(_owner) (proxy_features line:909)
+functions_writing_to_variable: Proxy writes _target to target (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_target', '_target', 'TMP_19']
+has_compatibility_checks: skipping constructor
+Found public function: Owned
+Found external function: nominateOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_target != address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) target = Proxyable(_target)
+has_time_delay: (node.type) EXPRESSION
+(Expression) TargetChanged(_target)
+
+Begin Proxyable.is_proxy (Slither line:1425)
+
+
+End Proxyable.is_proxy (Slither line:1428)
+
+
+Begin Proxyable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxyable 
+
+End Proxyable.is_upgradeable_proxy (Slither line:1407)
+

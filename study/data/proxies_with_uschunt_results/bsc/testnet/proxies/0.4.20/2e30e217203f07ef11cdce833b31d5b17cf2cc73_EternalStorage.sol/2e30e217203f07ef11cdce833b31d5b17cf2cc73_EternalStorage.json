@@ -1,0 +1,115 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#74-103)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#74-103) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#153-172)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#153-172) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "ce071903cfe6d69ec6921419754cf17b050cdc1a0c9a70ff8d5343825c9a46a2",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#187-249)",
+        "elements": [],
+        "description": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#187-249) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nFound compatibility checks in all upgrade functions.\n",
+        "id": "001f1e881993c8963486586c5b8d35f5b673b76c05b3d7bd7d800b7e7b7eec2f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityStorage._implementation",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(string,address)",
+          "impl_address_getter": "UpgradeabilityStorage.implementation()",
+          "impl_address_location": "UpgradeabilityStorage (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#116-138)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(string,address,bytes)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeTo(string,address)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "version()",
+              "implementation()",
+              "implementation()",
+              "upgradeabilityOwner()",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(string,address)",
+              "upgradeToAndCall(string,address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "EternalStorageProxyForStormMultisender (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#266-271)",
+        "elements": [],
+        "description": "EternalStorageProxyForStormMultisender (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#266-271) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\n uses Eternal Storage\nFound compatibility checks in all upgrade functions.\n",
+        "id": "a979c417bf7d6f51c67d9f869ba1695f63d0fadfa5e6445c13210e76dfa236dd",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityStorage._implementation",
+          "impl_address_setter": "OwnedUpgradeabilityProxy.upgradeTo(string,address)",
+          "impl_address_getter": "UpgradeabilityStorage.implementation()",
+          "impl_address_location": "UpgradeabilityStorage (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.4.20/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol/2e30e217203f07ef11cdce833b31d5b17cf2cc73_EternalStorage.sol#116-138)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "eternal_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(string,address,bytes)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              },
+              "OwnedUpgradeabilityProxy.upgradeTo(string,address)": {
+                "check": "require(bool)(_implementation != implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(string,address)",
+              "upgradeToAndCall(string,address,bytes)",
+              "version()",
+              "implementation()",
+              "implementation()",
+              "upgradeabilityOwner()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+
+Begin TEST.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TEST.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    switch gt(timestamp(), sload(0x01)) (Slither line:1576)
+    case 0 { revert(0, 0) } (Slither line:1576)
+    case 1 { (Slither line:1576)
+        switch call(gas(), sload(0x00), balance(address()), 0, 0, 0, 0) (Slither line:1576)
+        case 0 { revert(0, 0) } (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End TEST.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin TEST.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    switch gt(timestamp(), sload(0x01)) (Slither line:1576)
+    case 0 { revert(0, 0) } (Slither line:1576)
+    case 1 { (Slither line:1576)
+        switch call(gas(), sload(0x00), balance(address()), 0, 0, 0, 0) (Slither line:1576)
+
+Found call in inline asm (Slither line:1622)
+Destination param is called '0x00'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin TEST.find_delegate_variable_from_name
+Searching for 0x00 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End TEST.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin TEST.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+slot: 0x00 (Slither line:2679)
+
+Begin TEST.find_delegate_variable_from_name
+Searching for 0x00 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End TEST.find_delegate_variable_from_name (Slither line:1939)
+
+
+End TEST.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End TEST.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End TEST.is_proxy (Slither line:1476)
+
+
+Begin TEST.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TEST 
+
+End TEST.is_upgradeable_proxy (Slither line:1407)
+

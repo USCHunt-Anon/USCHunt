@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "fnxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.5.16/e45344d766fdebb11c5896c8cf258e81e8c00978_leveragedFactroy.sol/e45344d766fdebb11c5896c8cf258e81e8c00978_leveragedFactroy.sol#283-388)",
+        "elements": [],
+        "description": "fnxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.5.16/e45344d766fdebb11c5896c8cf258e81e8c00978_leveragedFactroy.sol/e45344d766fdebb11c5896c8cf258e81e8c00978_leveragedFactroy.sol#283-388) is an upgradeable proxy.\nimplementPositon is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(org.Finnexus.implementation.storage)\nMissing compatibility check in fnxProxy.constructor(address,uint256)\nFound compatibility check in fnxProxy.upgradeTo(address,uint256)\n",
+        "id": "91f7f2e93c07e96947857a914382bce6790ee5fd562c9ddaa9bfe328fb5fc48d",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "fnxProxy.implementPositon",
+          "impl_address_setter": "fnxProxy.upgradeTo(address,uint256)",
+          "impl_address_getter": "fnxProxy.implementation()",
+          "impl_address_location": "fnxProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.5.16/e45344d766fdebb11c5896c8cf258e81e8c00978_leveragedFactroy.sol/e45344d766fdebb11c5896c8cf258e81e8c00978_leveragedFactroy.sol#283-388)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(org.Finnexus.implementation.storage)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "fnxProxy.constructor(address,uint256)": "missing",
+              "fnxProxy.upgradeTo(address,uint256)": "require(bool)(currentImplementation != _newImplementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "transferProxyOwnership(address)",
+              "version()",
+              "proxyOwner()",
+              "proxyType()",
+              "implementation()",
+              "upgradeTo(address,uint256)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

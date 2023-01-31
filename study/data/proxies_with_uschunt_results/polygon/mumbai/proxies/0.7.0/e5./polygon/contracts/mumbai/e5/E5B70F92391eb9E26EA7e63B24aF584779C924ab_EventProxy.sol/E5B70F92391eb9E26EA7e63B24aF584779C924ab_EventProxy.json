@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "EventProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.7.0/e5./polygon/contracts/mumbai/e5/E5B70F92391eb9E26EA7e63B24aF584779C924ab_EventProxy.sol/E5B70F92391eb9E26EA7e63B24aF584779C924ab_EventProxy.sol#9-41)",
+        "elements": [],
+        "description": "EventProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.7.0/e5./polygon/contracts/mumbai/e5/E5B70F92391eb9E26EA7e63B24aF584779C924ab_EventProxy.sol/E5B70F92391eb9E26EA7e63B24aF584779C924ab_EventProxy.sol#9-41) may be an upgradeable proxy.\nsingleton is declared in the proxy.\nsingleton is an address state variable\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: calldataload(uint256)(0) == 0xa619486e00000000000000000000000000000000000000000000000000000000\n",
+        "id": "431dd150819d97500b25a7db9095e3e8734bcb3a68219534ca07d28e337b57ce",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "EventProxy.singleton",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "not found",
+          "impl_address_location": "EventProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.7.0/e5./polygon/contracts/mumbai/e5/E5B70F92391eb9E26EA7e63B24aF584779C924ab_EventProxy.sol/E5B70F92391eb9E26EA7e63B24aF584779C924ab_EventProxy.sol#9-41)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "EventProxy.constructor(address)": {
+                "check": "require(bool,string)(_singleton != address(0),Invalid singleton address provided)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "calldataload(uint256)(0) != 0xa619486e00000000000000000000000000000000000000000000000000000000",
+          "toggle_alternative_logic": "mstore(uint256,uint256)(0,_singleton_fallback_asm_0)"
+        }
+      }
+    ]
+  }
+}

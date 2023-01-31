@@ -1,0 +1,844 @@
+
+Begin EcoPotVoting.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin EcoPotVoting.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End EcoPotVoting.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EcoPotVoting.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin EcoPotVoting.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking MAX_VOTING_POT_COUNT (Slither line:1689)
+Checking ecoPotList (Slither line:1689)
+Checking ecoPotExist (Slither line:1689)
+Checking userVotingPotAddress (Slither line:1689)
+Checking userVotingPotAmount (Slither line:1689)
+Checking userVotingPotCount (Slither line:1689)
+Checking potTotalVotedAmount (Slither line:1689)
+Checking ecoPotCount (Slither line:1689)
+Checking governance (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking ecoPotImplementation (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking policyAdmin (Slither line:1689)
+Checking operatorToEcoPot (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in EcoPotVoting.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract EcoPotVoting (Slither line:1730)
+
+End EcoPotVoting.find_delegate_variable_by_name
+
+
+End EcoPotVoting.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EcoPotVoting.is_proxy (Slither line:1476)
+
+
+Begin EcoPotVoting.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EcoPotVoting 
+EcoPotVoting is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin EcoPotVoting.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+require(bool)(implementation != _newImp)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+
+End EcoPotVoting.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: EcoPotVoting (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin EcoPotVoting.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setEcoPotImplementation (Slither line:2988)
+Checking function: getEcoPotImplementation (Slither line:2988)
+getEcoPotImplementation returns address variable  (Slither line:3008)
+RETURN node expression: ecoPotImplementation (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End EcoPotVoting.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in EcoPotVoting (Slither line:1305)
+Checking for implementation at slot 9 in contract EcoPot (Slither line:1355)
+Found distributionIndex at slot 9 in contract EcoPot (Slither line:1362)
+Checking for distributionIndex at slot 9 in contract EcoPotVotingImpl (Slither line:1355)
+Found implementation at slot 9 in contract EcoPotVotingImpl (Slither line:1362)
+
+Begin EcoPotVotingImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setEcoPotImplementation (Slither line:2988)
+Checking function: getEcoPotImplementation (Slither line:2988)
+getEcoPotImplementation returns address variable  (Slither line:3008)
+RETURN node expression: ecoPotImplementation (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: EcoPotVotingImpl20220322 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: setPolicyAdmin (Slither line:2988)
+Checking function: createEcoPot (Slither line:2988)
+Checking function: removeEcoPot (Slither line:2988)
+Checking function: changeEcoPotAvailable (Slither line:2988)
+Checking function: addVoting (Slither line:2988)
+Checking function: removeVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: _removeAllVoting (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimRewardAll (Slither line:2988)
+Checking function: _giveReward (Slither line:2988)
+Checking function: _giveRewardAll (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End EcoPotVotingImpl.find_getter_in_contract (Slither line:3083)
+
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setEcoPotImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setEcoPotImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getEcoPotImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function EcoPotVoting.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPotVoting.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = ecoPotImplementation = _ecoPotImpl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ecoPotImplementation = _ecoPotImpl (proxy_features line:912)
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPotVoting.getEcoPotImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting._setEcoPotImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImp', '_implementation', 'TMP_48']
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp
+
+Begin ImplGetter.is_proxy (Slither line:1425)
+
+
+End ImplGetter.is_proxy (Slither line:1428)
+
+
+Begin ImplGetter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ImplGetter 
+
+End ImplGetter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EcoPot.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin EcoPot.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End EcoPot.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EcoPot.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin EcoPot.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ecoPotVoting (Slither line:1689)
+Checking operator (Slither line:1689)
+Checking token (Slither line:1689)
+Checking decimal (Slither line:1689)
+Checking totalAmount (Slither line:1689)
+Checking amountPerBlock (Slither line:1689)
+Checking distributableBlock (Slither line:1689)
+Checking distributedAmount (Slither line:1689)
+Checking lastDistributed (Slither line:1689)
+Checking distributionIndex (Slither line:1689)
+Checking userIndex (Slither line:1689)
+Checking userRewardSum (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking isInitialized (Slither line:1689)
+Checking isAvailable (Slither line:1689)
+Checking name (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in EcoPot.fallback (Slither line:1707)
+Expression: ImplGetter(ecoPotVoting).getEcoPotImplementation() (Slither line:1719)
+
+Begin EcoPot.find_delegate_from_call_exp
+
+ImplGetter(ecoPotVoting).getEcoPotImplementation() (Slither line:2003)
+called = ImplGetter(ecoPotVoting).getEcoPotImplementation (Slither line:2010)
+Called member of ImplGetter(ecoPotVoting) (Slither line:2017)
+
+Begin EcoPot.find_delegate_from_member_access
+
+Expression: ImplGetter(ecoPotVoting).getEcoPotImplementation() (Slither line:2358)
+ImplGetter(ecoPotVoting) (Slither line:2371)
+getEcoPotImplementation is a member of the contract type: ImplGetter (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits ImplGetter (Slither line:2441)
+
+End EcoPot.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End EcoPot.find_delegate_variable_by_name (Slither line:1739)
+
+
+End EcoPot.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EcoPot.is_proxy (Slither line:1476)
+
+
+Begin EcoPot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EcoPot 
+Local Variable: impl (Slither line:1164)
+ImplGetter(ecoPotVoting) (Slither line:1171)
+Call destination ImplGetter(ecoPotVoting).getEcoPotImplementation() is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: EcoPot
+impl is dependent on ecoPotVoting
+Expression for impl: ImplGetter(ecoPotVoting).getEcoPotImplementation()
+Called: ImplGetter(ecoPotVoting).getEcoPotImplementation
+impl_address_from_contract_call: ImplGetter(ecoPotVoting).getEcoPotImplementation()
+called: ImplGetter(ecoPotVoting).getEcoPotImplementation
+found MemberAccess: ImplGetter(ecoPotVoting).getEcoPotImplementation
+TypeConversion: ImplGetter(ecoPotVoting)
+find_registry_address_source: ImplGetter(ecoPotVoting).getEcoPotImplementation()
+MemberAccess: ImplGetter(ecoPotVoting).getEcoPotImplementation
+TypeConversion: ImplGetter(ecoPotVoting)
+Identifier: ecoPotVoting
+Checking external function fallback
+functions_writing_to_variable: impl
+functions_writing_to_variable: checking function EcoPot.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPot.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_11', 'TMP_12', 'ecoPotVoting']
+functions_writing_to_variable: ecoPotVoting
+functions_writing_to_variable: checking function EcoPot.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = ecoPotVoting = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ecoPotVoting = msg.sender (proxy_features line:912)
+functions_writing_to_variable: Identifier: ecoPotVoting (proxy_features line:924)
+get_value_assigned: ecoPotVoting = msg.sender
+functions_writing_to_variable: exp = operator = _operator (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: operator = _operator (proxy_features line:912)
+functions_writing_to_variable: exp = token = _token (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: token = _token (proxy_features line:912)
+functions_writing_to_variable: exp = name = _name (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: name = _name (proxy_features line:912)
+functions_writing_to_variable: constructor writes msg.sender to ecoPotVoting (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPot.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPot.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = ImplGetter(ecoPotVoting).getEcoPotImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found fallback
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGovernance.is_proxy (Slither line:1425)
+
+
+End IGovernance.is_proxy (Slither line:1428)
+
+
+Begin IGovernance.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGovernance 
+
+End IGovernance.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IEcoPot.is_proxy (Slither line:1425)
+
+
+End IEcoPot.is_proxy (Slither line:1428)
+
+
+Begin IEcoPot.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IEcoPot 
+
+End IEcoPot.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IEcoPotOperator.is_proxy (Slither line:1425)
+
+
+End IEcoPotOperator.is_proxy (Slither line:1428)
+
+
+Begin IEcoPotOperator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IEcoPotOperator 
+
+End IEcoPotOperator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EcoPotVotingImpl.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin EcoPotVotingImpl.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+impl != address(0)
+
+End EcoPotVotingImpl.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EcoPotVotingImpl.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin EcoPotVotingImpl.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking MAX_VOTING_POT_COUNT (Slither line:1689)
+Checking ecoPotList (Slither line:1689)
+Checking ecoPotExist (Slither line:1689)
+Checking userVotingPotAddress (Slither line:1689)
+Checking userVotingPotAmount (Slither line:1689)
+Checking userVotingPotCount (Slither line:1689)
+Checking potTotalVotedAmount (Slither line:1689)
+Checking ecoPotCount (Slither line:1689)
+Checking governance (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking ecoPotImplementation (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking nextOwner (Slither line:1689)
+Checking entered (Slither line:1689)
+Checking policyAdmin (Slither line:1689)
+Checking operatorToEcoPot (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in EcoPotVotingImpl.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract EcoPotVoting (Slither line:1730)
+
+End EcoPotVotingImpl.find_delegate_variable_by_name
+
+
+End EcoPotVotingImpl.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EcoPotVotingImpl.is_proxy (Slither line:1476)
+
+
+Begin EcoPotVotingImpl.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EcoPotVotingImpl 
+EcoPotVotingImpl is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in EcoPotVoting (Slither line:1204)
+
+
+Begin EcoPotVoting.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImp (Slither line:3122)
+Checking function: constructor(address,address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+require(bool)(implementation != _newImp)
+implementation = _newImp
+is an Assignment Operation (Slither line:3216)
+_newImp
+
+End EcoPotVoting.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: EcoPotVoting (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin EcoPotVoting.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setEcoPotImplementation (Slither line:2988)
+Checking function: getEcoPotImplementation (Slither line:2988)
+getEcoPotImplementation returns address variable  (Slither line:3008)
+RETURN node expression: ecoPotImplementation (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End EcoPotVoting.find_getter_in_contract (Slither line:3083)
+
+
+Begin EcoPotVotingImpl.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setEcoPotImplementation (Slither line:2988)
+Checking function: getEcoPotImplementation (Slither line:2988)
+getEcoPotImplementation returns address variable  (Slither line:3008)
+RETURN node expression: ecoPotImplementation (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: version (Slither line:2988)
+version returns string variable  (Slither line:3008)
+RETURN node expression: EcoPotVotingImpl20220322 (Slither line:3028)
+Checking function: changeNextOwner (Slither line:2988)
+Checking function: changeOwner (Slither line:2988)
+Checking function: setPolicyAdmin (Slither line:2988)
+Checking function: createEcoPot (Slither line:2988)
+Checking function: removeEcoPot (Slither line:2988)
+Checking function: changeEcoPotAvailable (Slither line:2988)
+Checking function: addVoting (Slither line:2988)
+Checking function: removeVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: removeAllVoting (Slither line:2988)
+Checking function: _removeAllVoting (Slither line:2988)
+Checking function: claimReward (Slither line:2988)
+Checking function: claimRewardAll (Slither line:2988)
+Checking function: _giveReward (Slither line:2988)
+Checking function: _giveRewardAll (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End EcoPotVotingImpl.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in EcoPotVotingImpl (Slither line:1305)
+or in EcoPotVoting (Slither line:1319)
+Checking for implementation at slot 9 in contract EcoPotVoting (Slither line:1355)
+Found implementation at slot 9 in contract EcoPotVoting (Slither line:1362)
+
+Begin EcoPotVoting.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+_newImp
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setEcoPotImplementation (Slither line:2988)
+Checking function: getEcoPotImplementation (Slither line:2988)
+getEcoPotImplementation returns address variable  (Slither line:3008)
+RETURN node expression: ecoPotImplementation (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End EcoPotVoting.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: _newImp
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression require(bool)(impl != address(0))
+impl_address_from_contract_call: arg is impl != address(0)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setEcoPotImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function _setEcoPotImplementation
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getEcoPotImplementation
+Checking public function version
+Checking public function changeNextOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == nextOwner)
+Checking public function setPolicyAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function createEcoPot
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == policyAdmin)
+Checking public function removeEcoPot
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function changeEcoPotAvailable
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner || msg.sender == policyAdmin)
+Checking public function addVoting
+Checking public function removeVoting
+Checking public function removeAllVoting
+Checking public function removeAllVoting
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == IGovernance(governance).votingMESH())
+Checking public function claimReward
+Checking public function claimRewardAll
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function EcoPotVotingImpl.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.createEcoPot (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl._setEcoPotImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl._removeAllVoting (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.removeEcoPot (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.claimReward (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = ecoPotImplementation = _ecoPotImpl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ecoPotImplementation = _ecoPotImpl (proxy_features line:912)
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPotVoting._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPotVotingImpl.constructor (proxy_features line:898)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function EcoPotVoting.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = owner = _owner (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: owner = _owner (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = ecoPotImplementation = _ecoPotImpl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ecoPotImplementation = _ecoPotImpl (proxy_features line:912)
+functions_writing_to_variable: exp = governance = _governance (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: governance = _governance (proxy_features line:912)
+functions_writing_to_variable: constructor writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPotVotingImpl.getEcoPotImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.changeEcoPotAvailable (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.claimRewardAll (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting._setEcoPotImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.version (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.addVoting (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(implementation != _newImp) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _newImp (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _newImp (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _newImp
+functions_writing_to_variable: _setImplementation writes _newImp to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EcoPotVotingImpl._giveReward (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.changeNextOwner (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting.getEcoPotImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.removeVoting (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl._giveRewardAll (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVoting.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.removeAllVoting (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.setPolicyAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function EcoPotVotingImpl.removeAllVoting (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImp', '_implementation', '_newImp', 'TMP_48', '_implementation']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function _setImplementation
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool)(implementation != _newImp)
+has_compatibility_checks: condition implementation != _newImp
+check_condition_from_expression: condition _newImp != _newImp
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(implementation != _newImp)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = _newImp

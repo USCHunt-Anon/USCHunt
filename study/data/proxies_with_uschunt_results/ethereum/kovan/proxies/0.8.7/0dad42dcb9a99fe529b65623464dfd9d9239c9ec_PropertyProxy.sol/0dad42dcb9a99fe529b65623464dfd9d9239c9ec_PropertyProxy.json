@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "PropertyProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.7/0dad42dcb9a99fe529b65623464dfd9d9239c9ec_PropertyProxy.sol/0dad42dcb9a99fe529b65623464dfd9d9239c9ec_PropertyProxy.sol#8-117)",
+        "elements": [],
+        "description": "PropertyProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.7/0dad42dcb9a99fe529b65623464dfd9d9239c9ec_PropertyProxy.sol/0dad42dcb9a99fe529b65623464dfd9d9239c9ec_PropertyProxy.sol#8-117) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(matic.network.proxy.implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "afb0d2142921f0ea57b22d6566a14a3893c70380ea5ac874ebc63c8d9b5556dd",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "PropertyProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "PropertyProxy.updateImplementation(address)",
+          "impl_address_getter": "PropertyProxy.loadImplementation()",
+          "impl_address_location": "PropertyProxy (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.8.7/0dad42dcb9a99fe529b65623464dfd9d9239c9ec_PropertyProxy.sol/0dad42dcb9a99fe529b65623464dfd9d9239c9ec_PropertyProxy.sol#8-117)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(matic.network.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "PropertyProxy.updateImplementation(address)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              },
+              "PropertyProxy.updateAndCall(address,bytes)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

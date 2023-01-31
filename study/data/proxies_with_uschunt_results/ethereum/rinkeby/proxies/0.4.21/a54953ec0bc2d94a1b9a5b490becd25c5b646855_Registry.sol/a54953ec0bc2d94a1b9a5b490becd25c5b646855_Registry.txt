@@ -1,0 +1,81 @@
+
+Begin Registry.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Registry.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let _target := sload(0) (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _target, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Registry.find_delegate_variable_from_name
+Searching for _target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking target (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End Registry.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin Registry.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+slot: 0 (Slither line:2679)
+
+Begin Registry.find_delegate_variable_from_name
+Searching for 0 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking target (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End Registry.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Registry.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End Registry.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Registry.is_proxy (Slither line:1476)
+
+
+Begin Registry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Registry 
+
+End Registry.is_upgradeable_proxy (Slither line:1407)
+

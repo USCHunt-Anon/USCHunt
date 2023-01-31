@@ -1,0 +1,197 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Storage.is_proxy (Slither line:1425)
+
+
+End Storage.is_proxy (Slither line:1428)
+
+
+Begin Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Storage 
+
+End Storage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Registry.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Registry.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), target, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Registry.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _enabled (Slither line:1689)
+Checking buyBackEnabled (Slither line:1689)
+Checking _taxFee (Slither line:1689)
+Checking _liquidityFee (Slither line:1689)
+Checking rewardDivisor (Slither line:1689)
+Checking _maxTxAmount (Slither line:1689)
+Checking minimumTokensBeforeSwap (Slither line:1689)
+Checking buyBackUpperLimit (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking logic_contract (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking target (Slither line:1703)
+target is a Local Variable in Registry.fallback (Slither line:1707)
+Expression: logic_contract (Slither line:1719)
+Identifier value: logic_contract (Slither line:1725)
+logic_contract is a State Variable in contract Registry (Slither line:1730)
+
+End Registry.find_delegate_variable_by_name
+
+
+End Registry.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Registry.is_proxy (Slither line:1476)
+
+
+Begin Registry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Registry 
+Registry is delegating to logic_contract
+Looking for setter (Slither line:1200)
+
+
+Begin Registry.find_setter_in_contract (Slither line:3117)
+
+Checking function: setLogicContract(address) returns(bool) (Slither line:3125)
+Visibility: public
+onlyOwner()
+require(bool)(msg.sender == owner)
+true
+logic_contract = _c
+is an Assignment Operation (Slither line:3214)
+
+End Registry.find_setter_in_contract (Slither line:3343)
+
+
+Implementation set by function: setLogicContract in contract: Registry (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Registry.find_getter_in_contract (Slither line:2972)
+
+logic_contract is a Variable object
+_c
+Checking function: constructor (Slither line:2986)
+Checking function: setLogicContract (Slither line:2986)
+setLogicContract returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: fallback (Slither line:2986)
+
+End Registry.find_getter_in_contract (Slither line:3081)
+
+Could not find implementation getter in Registry (Slither line:1305)
+
+Begin Ownable.find_getter_in_contract (Slither line:2972)
+
+logic_contract is a Variable object
+_c
+Checking function: constructor (Slither line:2986)
+
+End Ownable.find_getter_in_contract (Slither line:3081)
+
+Checking public function setLogicContract
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setLogicContract
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: logic_contract
+functions_writing_to_variable: checking function Registry.fallback (proxy_features line:895)
+functions_writing_to_variable: checking function Registry.constructor (proxy_features line:895)
+functions_writing_to_variable: checking function Registry.setLogicContract (proxy_features line:895)
+functions_writing_to_variable: exp = logic_contract = _c (proxy_features line:906)
+functions_writing_to_variable: AssignmentOperation: logic_contract = _c (proxy_features line:909)
+functions_writing_to_variable: Identifier: logic_contract (proxy_features line:921)
+get_value_assigned: logic_contract = _c
+functions_writing_to_variable: exp = true (proxy_features line:906)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:906)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:906)
+functions_writing_to_variable: setLogicContract writes _c to logic_contract (proxy_features line:926)
+has_compatibility_checks: dependencies: ['_c']
+has_compatibility_checks: checking public function setLogicContract
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), target, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    case 1 {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = logic_contract
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: constructor
+Found public function: setLogicContract
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) logic_contract = _c

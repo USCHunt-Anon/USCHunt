@@ -1,0 +1,341 @@
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EIP20Interface.is_proxy (Slither line:1425)
+
+
+End EIP20Interface.is_proxy (Slither line:1428)
+
+
+Begin EIP20Interface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EIP20Interface 
+
+End EIP20Interface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin bardiStakingContractProxyStorage.is_proxy (Slither line:1425)
+
+
+End bardiStakingContractProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin bardiStakingContractProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: bardiStakingContractProxyStorage 
+
+End bardiStakingContractProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin bardiStakingContractProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin bardiStakingContractProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End bardiStakingContractProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin bardiStakingContractProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End bardiStakingContractProxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+Found LowLevelCall (Slither line:2730)
+
+
+Found delegatecall in LowLevelCall (Slither line:2732)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End bardiStakingContractProxy.is_proxy (Slither line:1476)
+
+
+Begin bardiStakingContractProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: bardiStakingContractProxy 
+bardiStakingContractProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in bardiStakingContractProxyStorage (Slither line:1204)
+
+
+Begin bardiStakingContractProxyStorage.find_setter_in_contract (Slither line:3109)
+
+
+End bardiStakingContractProxyStorage.find_setter_in_contract (Slither line:3315)
+
+
+Could not find setter in bardiStakingContractProxyStorage 
+Looking in bardiStakingContractProxy (Slither line:1213)
+
+Begin bardiStakingContractProxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor() returns() (Slither line:3117)
+Checking function: setPendingAdmin(address) returns() (Slither line:3117)
+Visibility: public
+pendingAdmin = newAdmin
+is an Assignment Operation (Slither line:3206)
+require(bool,string)(msg.sender == admin,admin only)
+adminOnly()
+Checking function: acceptPendingAdmin() returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),Caller must be the pending admin)
+admin = pendingAdmin
+is an Assignment Operation (Slither line:3206)
+pendingAdmin = address(0)
+is an Assignment Operation (Slither line:3206)
+Checking function: setPendingImplementation(address) returns() (Slither line:3117)
+Visibility: public
+pendingImplementation = newImplementation
+is an Assignment Operation (Slither line:3206)
+adminOnly()
+require(bool,string)(msg.sender == admin,admin only)
+Checking function: acceptPendingImplementation() returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this)
+implementation = pendingImplementation
+is an Assignment Operation (Slither line:3206)
+
+End bardiStakingContractProxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: acceptPendingImplementation in contract: bardiStakingContractProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin bardiStakingContractProxyStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+pendingImplementation
+
+End bardiStakingContractProxyStorage.find_getter_in_contract (Slither line:3073)
+
+
+Begin bardiStakingContractProxy.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+pendingImplementation
+Checking function: constructor (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: setPendingAdmin (Slither line:2978)
+Checking function: acceptPendingAdmin (Slither line:2978)
+Checking function: setPendingImplementation (Slither line:2978)
+Checking function: acceptPendingImplementation (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End bardiStakingContractProxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in bardiStakingContractProxy (Slither line:1305)
+or in bardiStakingContractProxyStorage (Slither line:1319)
+
+Begin bardiStakingContractStorage.find_getter_in_contract (Slither line:2964)
+
+implementation is a Variable object
+pendingImplementation
+Checking function: slitherConstructorConstantVariables (Slither line:2978)
+
+End bardiStakingContractStorage.find_getter_in_contract (Slither line:3073)
+
+
+End bardiStakingContractProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingImplementation
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking public function setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin only)
+Checking public function acceptPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),Caller must be the pending admin)
+Checking public function setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin only)
+Checking public function acceptPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this)
+Checking public function setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin only)
+Checking public function acceptPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin && pendingAdmin != address(0),Caller must be the pending admin)
+Checking public function setPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,admin only)
+Checking public function acceptPendingImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function bardiStakingContractProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.acceptPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this) (proxy_features line:904)
+functions_writing_to_variable: exp = implementation = pendingImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:919)
+get_value_assigned: implementation = pendingImplementation
+functions_writing_to_variable: exp = pendingImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: acceptPendingImplementation writes pendingImplementation to implementation (proxy_features line:924)
+functions_writing_to_variable: checking function bardiStakingContractProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.acceptPendingAdmin (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newImplementation', 'pendingImplementation', 'TMP_43']
+functions_writing_to_variable: pendingImplementation
+functions_writing_to_variable: checking function bardiStakingContractProxy.slitherConstructorConstantVariables (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.acceptPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this) (proxy_features line:904)
+functions_writing_to_variable: exp = implementation = pendingImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingImplementation (proxy_features line:907)
+functions_writing_to_variable: exp = pendingImplementation = address(0) (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = address(0) (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingImplementation (proxy_features line:919)
+get_value_assigned: pendingImplementation = address(0)
+functions_writing_to_variable: checking function bardiStakingContractProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.setPendingAdmin (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.setPendingImplementation (proxy_features line:893)
+functions_writing_to_variable: exp = pendingImplementation = newImplementation (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: pendingImplementation = newImplementation (proxy_features line:907)
+functions_writing_to_variable: Identifier: pendingImplementation (proxy_features line:919)
+get_value_assigned: pendingImplementation = newImplementation
+functions_writing_to_variable: exp = adminOnly() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,admin only) (proxy_features line:904)
+functions_writing_to_variable: setPendingImplementation writes newImplementation to pendingImplementation (proxy_features line:924)
+functions_writing_to_variable: checking function bardiStakingContractProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function bardiStakingContractProxy.acceptPendingAdmin (proxy_features line:893)
+has_compatibility_checks: checking public function acceptPendingImplementation
+require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this)
+has_compatibility_checks: condition msg.sender == pendingImplementation && pendingImplementation != address(0)
+check_condition_from_expression: condition msg.sender == pendingImplementation && pendingImplementation != address(0)
+has_compatibility_checks: checking public function setPendingImplementation
+require(bool,string)(msg.sender == admin,admin only)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+Found public function: constructor
+Found public function: constructor
+Found public function: setPendingAdmin
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == pendingImplementation && pendingImplementation != address(0),Only the pending implementation contract can call this)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = pendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingImplementation = address(0)
+
+Begin bardiStakingContractStorage.is_proxy (Slither line:1425)
+
+
+End bardiStakingContractStorage.is_proxy (Slither line:1428)
+
+
+Begin bardiStakingContractStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: bardiStakingContractStorage 
+
+End bardiStakingContractStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin bardiStakingContract.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End bardiStakingContract.is_proxy (Slither line:1476)
+
+
+Begin bardiStakingContract.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: bardiStakingContract 
+
+End bardiStakingContract.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ExchangeProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/ee./bsc/contracts/testnet/ee/eE609b9831AB14EE90170805BcECE14569F9FC09_ExchangeProxy.sol/eE609b9831AB14EE90170805BcECE14569F9FC09_ExchangeProxy.sol#9-124)",
+        "elements": [],
+        "description": "ExchangeProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/ee./bsc/contracts/testnet/ee/eE609b9831AB14EE90170805BcECE14569F9FC09_ExchangeProxy.sol/eE609b9831AB14EE90170805BcECE14569F9FC09_ExchangeProxy.sol#9-124) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(implementation.contract.pestaking:2021)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "fc7a870d403ba16375e875392a09bd556b22fcf8236b86f628531ee7a679b0ba",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ExchangeProxy.implementationPosition",
+          "impl_address_setter": "ExchangeProxy.upgradeTo(address)",
+          "impl_address_getter": "ExchangeProxy.implementation()",
+          "impl_address_location": "ExchangeProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.0/ee./bsc/contracts/testnet/ee/eE609b9831AB14EE90170805BcECE14569F9FC09_ExchangeProxy.sol/eE609b9831AB14EE90170805BcECE14569F9FC09_ExchangeProxy.sol#9-124)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(implementation.contract.pestaking:2021)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "ExchangeProxy.upgradeTo(address)": {
+                "check": "require(bool)(currentImplementation != newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(address)",
+              "setAdmin(address,bool)",
+              "setSigner(address,bool)",
+              "setSignatureUtilsAddress(address)",
+              "setNftCollection(address)",
+              "setRewardToken(address)",
+              "initPool(address,address,address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

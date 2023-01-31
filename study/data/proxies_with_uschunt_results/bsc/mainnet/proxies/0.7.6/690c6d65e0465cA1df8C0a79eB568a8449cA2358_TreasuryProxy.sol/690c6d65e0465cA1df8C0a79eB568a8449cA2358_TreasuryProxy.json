@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TreasuryProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.6/690c6d65e0465cA1df8C0a79eB568a8449cA2358_TreasuryProxy.sol/690c6d65e0465cA1df8C0a79eB568a8449cA2358_TreasuryProxy.sol#58-167)",
+        "elements": [],
+        "description": "TreasuryProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.6/690c6d65e0465cA1df8C0a79eB568a8449cA2358_TreasuryProxy.sol/690c6d65e0465cA1df8C0a79eB568a8449cA2358_TreasuryProxy.sol#58-167) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(bsc.network.proxy.implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "10ec1a97e6479bc83c8bfea05b6ea435d880d670a124405e075200233fc800e5",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TreasuryProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "TreasuryProxy.updateImplementation(address)",
+          "impl_address_getter": "TreasuryProxy.loadImplementation()",
+          "impl_address_location": "TreasuryProxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.7.6/690c6d65e0465cA1df8C0a79eB568a8449cA2358_TreasuryProxy.sol/690c6d65e0465cA1df8C0a79eB568a8449cA2358_TreasuryProxy.sol#58-167)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(bsc.network.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TreasuryProxy.updateImplementation(address)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              },
+              "TreasuryProxy.updateAndCall(address,bytes)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "proxyOwner()",
+              "implementation()",
+              "transferProxyOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

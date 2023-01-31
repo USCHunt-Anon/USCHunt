@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol#2255-2298)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol#2255-2298) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "PoolProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol#2531-2598)",
+        "elements": [],
+        "description": "PoolProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol#2531-2598) may be an upgradeable proxy.\nimplementation is declared in the proxy.\nProxy.fallback().implementation (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol#2264) gets value from a cross-contract call: IDiamondLoupe(DIAMOND).facetAddress(msg.sig)\nIDiamondLoupe appears to be a Registry contract for the proxy\nThe address of IDiamondLoupe is stored as a state variable: PoolProxy.DIAMOND\nCould not find setter for DIAMOND\nNo setter functions found to search for compatibility checks.\n",
+        "id": "70ea2814a89b8dfbd4f0b66fc123a30798bdf69903365fdc4cb7f3001c287fea",
+        "features": {
+          "upgradeable": "maybe",
+          "impl_address_variable": "Proxy.fallback().implementation",
+          "impl_address_setter": "not found",
+          "impl_address_getter": "PoolProxy._getImplementation()",
+          "impl_address_location": "PoolProxy (../../smart-contract-sanctuary/fantom/contracts/mainnet/proxies/0.8.0/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol/07bbB494cc048da39b5a11938F405424C66b75Fb_PoolProxy.sol#2531-2598)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "IDiamondLoupe(DIAMOND).facetAddress(msg.sig)",
+          "registry": "IDiamondLoupe",
+          "registry_source_type": "address",
+          "registry_source_variable": "PoolProxy.DIAMOND",
+          "registry_source_constant": false,
+          "registry_source_setters": "none found",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": "no setters found"
+          },
+          "can_remove_upgradeability": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#203-271)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#203-271) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#447-465)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#447-465) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 using slot from ERC-1967 (i.e. OpenZeppelin UUPS)\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from ChildOfProxiable\n",
+        "id": "114d0b724caff097e574f99f6fc6eaf7872b8a2bb437b8d08b8906b692d1b15c",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "UUPSUpgradeable.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "ERC1967Proxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#447-465)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UUPSUpgradeable.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from ChildOfProxiable"
+        }
+      },
+      {
+        "contract": "TransparentUpgradeableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#675-767)",
+        "elements": [],
+        "description": "TransparentUpgradeableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#675-767) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from ChildOfProxiable\n",
+        "id": "d2c06edc133c82ed721bb1b42b5cb3dce941062fc29a78f4b5543a00ffe2c94c",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "UUPSUpgradeable.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "TransparentUpgradeableProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#675-767)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UUPSUpgradeable.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from ChildOfProxiable",
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#769-772)",
+        "elements": [],
+        "description": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#769-772) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "4469710a81a1f77d680f9507bf63b11aaf307c141e4ccd0ca34c0dd2a87bda86",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "TransparentUpgradeableProxy.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "AdminUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.0/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol/20A01F555B136F304eF446353bD3d558a38B2368_ERC1967Proxy.sol#769-772)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TransparentUpgradeableProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "ERC1967Proxy.constructor(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "AdminUpgradeabilityProxy.constructor(address,address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

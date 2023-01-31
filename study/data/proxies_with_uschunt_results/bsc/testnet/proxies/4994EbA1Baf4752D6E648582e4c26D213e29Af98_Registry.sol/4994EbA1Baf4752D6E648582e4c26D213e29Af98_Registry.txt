@@ -1,0 +1,271 @@
+
+Begin Storage.is_proxy (Slither line:1425)
+
+
+End Storage.is_proxy (Slither line:1428)
+
+
+Begin Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Storage 
+
+End Storage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Registry.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Registry.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+0
+calldatasize()()
+
+End Registry.find_delegatecall_in_exp_node (Slither line:2848)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Registry.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0) (Slither line:2792)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+ptr_fallback_asm_0
+size_fallback_asm_0
+
+End Registry.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Registry.find_delegatecall_in_exp_node
+
+Found Expression Node: res_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr_fallback_asm_0,calldatasize()(),0,0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()()
+target
+ptr_fallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is target (Slither line:2818)
+dest.value: target (Slither line:2821)
+Expression: logic (Slither line:2826)
+
+End Registry.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Registry.is_proxy (Slither line:1476)
+
+
+Begin Registry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Registry 
+Registry is delegating to logic
+Looking for setter (Slither line:1200)
+
+
+Begin Registry.find_setter_in_contract (Slither line:3109)
+
+Checking function: setLogic(address) returns(bool) (Slither line:3117)
+Visibility: external
+logic = logic_
+is an Assignment Operation (Slither line:3206)
+
+End Registry.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: setLogic in contract: Registry (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Registry.find_getter_in_contract (Slither line:2964)
+
+logic is a Variable object
+logic_
+Checking function: constructor (Slither line:2978)
+Checking function: setOwner (Slither line:2978)
+Checking function: setLogic (Slither line:2978)
+setLogic returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: fallback (Slither line:2978)
+
+End Registry.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Registry (Slither line:1305)
+
+Begin Storage.find_getter_in_contract (Slither line:2964)
+
+logic is a Variable object
+logic_
+
+End Storage.find_getter_in_contract (Slither line:3073)
+
+Checking external function setOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,not owner)
+Checking external function setLogic
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,not owner)
+Checking external function setOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,not owner)
+Checking external function setLogic
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,not owner)
+Checking external function fallback
+functions_writing_to_variable: logic
+functions_writing_to_variable: checking function Registry.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Registry.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function Registry.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Registry.setLogic (proxy_features line:893)
+functions_writing_to_variable: exp = logic = logic_ (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: logic = logic_ (proxy_features line:907)
+functions_writing_to_variable: Identifier: logic (proxy_features line:919)
+get_value_assigned: logic = logic_
+functions_writing_to_variable: exp = true (proxy_features line:904)
+functions_writing_to_variable: exp = _onlyOwner_() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,not owner) (proxy_features line:904)
+functions_writing_to_variable: setLogic writes logic_ to logic (proxy_features line:924)
+has_compatibility_checks: dependencies: ['logic_']
+has_compatibility_checks: checking external function setLogic
+require(bool,string)(msg.sender == owner,not owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = logic
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: console.log(target)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: res_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),target,ptr_fallback_asm_0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found external function: setOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) logic = logic_
+has_time_delay: (node.type) RETURN
+(Expression) true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,not owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _onlyOwner_()
+
+Begin LogicOne.is_proxy (Slither line:1425)
+
+
+End LogicOne.is_proxy (Slither line:1428)
+
+
+Begin LogicOne.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LogicOne 
+
+End LogicOne.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LogicTwo.is_proxy (Slither line:1425)
+
+
+End LogicTwo.is_proxy (Slither line:1428)
+
+
+Begin LogicTwo.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LogicTwo 
+
+End LogicTwo.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin console.is_proxy (Slither line:1425)
+
+
+End console.is_proxy (Slither line:1428)
+
+
+Begin console.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: console 
+
+End console.is_upgradeable_proxy (Slither line:1407)
+

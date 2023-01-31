@@ -1,0 +1,1608 @@
+
+Begin IDispatcher.is_proxy (Slither line:1425)
+
+
+End IDispatcher.is_proxy (Slither line:1428)
+
+
+Begin IDispatcher.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDispatcher 
+
+End IDispatcher.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMigratableVault.is_proxy (Slither line:1425)
+
+
+End IMigratableVault.is_proxy (Slither line:1428)
+
+
+Begin IMigratableVault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMigratableVault 
+
+End IMigratableVault.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IMigrationHookHandler.is_proxy (Slither line:1425)
+
+
+End IMigrationHookHandler.is_proxy (Slither line:1428)
+
+
+Begin IMigrationHookHandler.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IMigrationHookHandler 
+
+End IMigrationHookHandler.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IFundDeployer.is_proxy (Slither line:1425)
+
+
+End IFundDeployer.is_proxy (Slither line:1428)
+
+
+Begin IFundDeployer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IFundDeployer 
+
+End IFundDeployer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IComptroller.is_proxy (Slither line:1425)
+
+
+End IComptroller.is_proxy (Slither line:1428)
+
+
+Begin IComptroller.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IComptroller 
+
+End IComptroller.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IVault.is_proxy (Slither line:1425)
+
+
+End IVault.is_proxy (Slither line:1428)
+
+
+Begin IVault.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IVault 
+
+End IVault.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FundDeployer.is_proxy (Slither line:1425)
+
+
+End FundDeployer.is_proxy (Slither line:1428)
+
+
+Begin FundDeployer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FundDeployer 
+
+End FundDeployer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: retSz_fallback_asm_0 = returndatasize()() (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: returndatasize()
+Type of call: uint256 (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,contractLogic_fallback_asm_0,0x0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()() - 10000
+contractLogic_fallback_asm_0
+0x0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractLogic_fallback_asm_0 (Slither line:2828)
+dest.value: contractLogic_fallback_asm_0 (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic_fallback_asm_0 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_28896_175_0_fallback_asm_0 = success_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '28459:66:0', 'type': '', 'value': '0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc'} (Slither line:1909)
+Found hardcoded storage slot in fallback: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1927)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is constant (Slither line:1146)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(bytes,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+Begin IDispatcher.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IDispatcher.find_getter_in_contract (Slither line:3083)
+
+
+Begin IDispatcher.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: cancelMigration(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: claimOwnership() returns() (Slither line:3127)
+Visibility: external
+Checking function: deployVaultProxy(address,address,address,string) returns(address) (Slither line:3127)
+Visibility: external
+Checking function: executeMigration(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: getCurrentFundDeployer() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getFundDeployerForVaultProxy(address) returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getMigrationRequestDetailsForVaultProxy(address) returns(address,address,address,uint256) (Slither line:3127)
+Visibility: external
+Checking function: getMigrationTimelock() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: getNominatedOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getSharesTokenSymbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: getTimelockRemainingForMigrationRequest(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: hasExecutableMigrationRequest(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: hasMigrationRequest(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: removeNominatedOwner() returns() (Slither line:3127)
+Visibility: external
+Checking function: setCurrentFundDeployer(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setMigrationTimelock(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: setNominatedOwner(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setSharesTokenSymbol(string) returns() (Slither line:3127)
+Visibility: external
+Checking function: signalMigration(address,address,address,bool) returns() (Slither line:3127)
+Visibility: external
+
+End IDispatcher.find_setter_in_contract (Slither line:3345)
+
+
+Begin IMigratableVault.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IMigratableVault.find_getter_in_contract (Slither line:3083)
+
+
+Begin IMigratableVault.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: canMigrate(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: init(address,address,string) returns() (Slither line:3127)
+Checking function: setAccessor(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setVaultLib(address) returns() (Slither line:3127)
+Visibility: external
+
+End IMigratableVault.find_setter_in_contract (Slither line:3345)
+
+
+Begin IMigrationHookHandler.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IMigrationHookHandler.find_getter_in_contract (Slither line:3083)
+
+
+Begin IMigrationHookHandler.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: invokeMigrationInCancelHook(address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+Checking function: invokeMigrationOutHook(IMigrationHookHandler.MigrationOutHook,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+
+End IMigrationHookHandler.find_setter_in_contract (Slither line:3345)
+
+
+Begin IFundDeployer.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IFundDeployer.find_getter_in_contract (Slither line:3083)
+
+
+Begin IFundDeployer.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getReleaseStatus() returns(IFundDeployer.ReleaseStatus) (Slither line:3127)
+Visibility: external
+Checking function: isRegisteredVaultCall(address,bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IFundDeployer.find_setter_in_contract (Slither line:3345)
+
+
+Begin IComptroller.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IComptroller.find_getter_in_contract (Slither line:3083)
+
+
+Begin IComptroller.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: activate(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: calcGav(bool) returns(uint256,bool) (Slither line:3127)
+Visibility: external
+Checking function: calcGrossShareValue(bool) returns(uint256,bool) (Slither line:3127)
+Visibility: external
+Checking function: callOnExtension(address,uint256,bytes) returns() (Slither line:3127)
+Visibility: external
+Checking function: configureExtensions(bytes,bytes) returns() (Slither line:3127)
+Visibility: external
+Checking function: destruct() returns() (Slither line:3127)
+Visibility: external
+Checking function: getDenominationAsset() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getVaultProxy() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: init(address,uint256) returns() (Slither line:3127)
+Checking function: permissionedVaultAction(IComptroller.VaultAction,bytes) returns() (Slither line:3127)
+Visibility: external
+
+End IComptroller.find_setter_in_contract (Slither line:3345)
+
+
+Begin IVault.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IVault.find_getter_in_contract (Slither line:3083)
+
+
+Begin IVault.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: addTrackedAsset(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: approveAssetSpender(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: burnShares(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: callOnContract(address,bytes) returns() (Slither line:3127)
+Visibility: external
+Checking function: getAccessor() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getTrackedAssets() returns(address[]) (Slither line:3127)
+Visibility: external
+Checking function: isTrackedAsset(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: mintShares(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: removeTrackedAsset(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: transferShares(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: withdrawAssetTo(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: canMigrate(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: init(address,address,string) returns() (Slither line:3127)
+Checking function: setAccessor(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setVaultLib(address) returns() (Slither line:3127)
+Visibility: external
+
+End IVault.find_setter_in_contract (Slither line:3345)
+
+
+Begin FundDeployer.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: setComptrollerLib (Slither line:2988)
+Checking function: setReleaseStatus (Slither line:2988)
+Checking function: getOwner (Slither line:2988)
+getOwner returns address variable called owner_ (Slither line:3008)
+RETURN node expression: IDispatcher(DISPATCHER).getOwner() (Slither line:3028)
+RETURN node expression: CREATOR (Slither line:3028)
+Checking function: createMigratedFundConfig (Slither line:2988)
+createMigratedFundConfig returns address variable called comptrollerProxy_ (Slither line:3008)
+RETURN node expression: comptrollerProxy_ (Slither line:3028)
+Checking function: createNewFund (Slither line:2988)
+createNewFund returns address variable called comptrollerProxy_ (Slither line:3008)
+createNewFund returns address variable called vaultProxy_ (Slither line:3008)
+RETURN node expression: __createNewFund(_fundOwner,_fundName,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData) (Slither line:3028)
+Checking function: __createNewFund (Slither line:2988)
+__createNewFund returns address variable called comptrollerProxy_ (Slither line:3008)
+__createNewFund returns address variable called vaultProxy_ (Slither line:3008)
+RETURN node expression: (comptrollerProxy_,vaultProxy_) (Slither line:3028)
+Checking function: __deployComptrollerProxy (Slither line:2988)
+__deployComptrollerProxy returns address variable called comptrollerProxy_ (Slither line:3008)
+RETURN node expression: comptrollerProxy_ (Slither line:3028)
+Checking function: cancelMigration (Slither line:2988)
+Checking function: cancelMigrationEmergency (Slither line:2988)
+Checking function: executeMigration (Slither line:2988)
+Checking function: executeMigrationEmergency (Slither line:2988)
+Checking function: invokeMigrationInCancelHook (Slither line:2988)
+Checking function: signalMigration (Slither line:2988)
+Checking function: signalMigrationEmergency (Slither line:2988)
+Checking function: __cancelMigration (Slither line:2988)
+Checking function: __executeMigration (Slither line:2988)
+Checking function: __signalMigration (Slither line:2988)
+Checking function: invokeMigrationOutHook (Slither line:2988)
+Checking function: deregisterVaultCalls (Slither line:2988)
+Checking function: registerVaultCalls (Slither line:2988)
+Checking function: __registerVaultCalls (Slither line:2988)
+Checking function: getComptrollerLib (Slither line:2988)
+getComptrollerLib returns address variable called comptrollerLib_ (Slither line:3008)
+RETURN node expression: comptrollerLib (Slither line:3028)
+Checking function: getCreator (Slither line:2988)
+getCreator returns address variable called creator_ (Slither line:3008)
+RETURN node expression: CREATOR (Slither line:3028)
+Checking function: getDispatcher (Slither line:2988)
+getDispatcher returns address variable called dispatcher_ (Slither line:3008)
+RETURN node expression: DISPATCHER (Slither line:3028)
+Checking function: getPendingComptrollerProxyCreator (Slither line:2988)
+getPendingComptrollerProxyCreator returns address variable called pendingComptrollerProxyCreator_ (Slither line:3008)
+RETURN node expression: pendingComptrollerProxyToCreator[_comptrollerProxy] (Slither line:3028)
+Checking function: getReleaseStatus (Slither line:2988)
+getReleaseStatus returns IFundDeployer.ReleaseStatus variable called status_ (Slither line:3008)
+RETURN node expression: releaseStatus (Slither line:3028)
+Checking function: getVaultLib (Slither line:2988)
+getVaultLib returns address variable called vaultLib_ (Slither line:3008)
+RETURN node expression: VAULT_LIB (Slither line:3028)
+Checking function: isRegisteredVaultCall (Slither line:2988)
+isRegisteredVaultCall returns bool variable called isRegistered_ (Slither line:3008)
+RETURN node expression: contractToSelectorToIsRegisteredVaultCall[_contract][_selector] (Slither line:3028)
+
+End FundDeployer.find_getter_in_contract (Slither line:3083)
+
+
+Begin FundDeployer.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address,address[],bytes4[]) returns() (Slither line:3127)
+Checking function: setComptrollerLib(address) returns() (Slither line:3127)
+Visibility: external
+ComptrollerLibSet(_comptrollerLib)
+IDispatcher(DISPATCHER).getOwner()
+onlyOwner()
+require(bool,string)(comptrollerLib == address(0),setComptrollerLib: This value can only be set once)
+comptrollerLib = _comptrollerLib
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+CREATOR
+require(bool,string)(msg.sender == getOwner(),Only the contract owner can call this function)
+Checking function: setReleaseStatus(IFundDeployer.ReleaseStatus) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == getOwner(),setReleaseStatus: Only the owner can call this function)
+ReleaseStatusSet(prevStatus,_nextStatus)
+IDispatcher(DISPATCHER).getOwner()
+require(bool,string)(_nextStatus != ReleaseStatus.PreLaunch,setReleaseStatus: Cannot return to PreLaunch status)
+require(bool,string)(_nextStatus != prevStatus,setReleaseStatus: _nextStatus is the current status)
+CREATOR
+require(bool,string)(comptrollerLib != address(0),setReleaseStatus: Can only set the release status when comptrollerLib is set)
+releaseStatus = _nextStatus
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: public
+IDispatcher(DISPATCHER).getOwner()
+CREATOR
+Checking function: createMigratedFundConfig(address,uint256,bytes,bytes) returns(address) (Slither line:3127)
+Visibility: external
+comptrollerProxy_
+comptrollerProxy_ = __deployComptrollerProxy(_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,true)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+comptrollerProxy_ = address(new ComptrollerProxy(constructData,comptrollerLib))
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+IComptroller(comptrollerProxy_).configureExtensions(_feeManagerConfigData,_policyManagerConfigData)
+require(bool,string)(_denominationAsset != address(0),__deployComptrollerProxy: _denominationAsset cannot be empty)
+onlyLiveRelease()
+ComptrollerProxyDeployed(msg.sender,comptrollerProxy_,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,_forMigration)
+pendingComptrollerProxyToCreator[comptrollerProxy_] = msg.sender
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+comptrollerProxy_
+Checking function: createNewFund(address,string,address,uint256,bytes,bytes) returns(address,address) (Slither line:3127)
+Visibility: external
+require(bool,string)(_denominationAsset != address(0),__deployComptrollerProxy: _denominationAsset cannot be empty)
+require(bool,string)(_fundOwner != address(0),__createNewFund: _owner cannot be empty)
+comptrollerProxy_ = __deployComptrollerProxy(_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,false)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+vaultProxy_ = IDispatcher(DISPATCHER).deployVaultProxy(VAULT_LIB,_fundOwner,comptrollerProxy_,_fundName)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+comptrollerProxy_ = address(new ComptrollerProxy(constructData,comptrollerLib))
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+IComptroller(comptrollerProxy_).activate(vaultProxy_,false)
+__createNewFund(_fundOwner,_fundName,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData)
+NewFundCreated(msg.sender,comptrollerProxy_,vaultProxy_,_fundOwner,_fundName,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData)
+onlyLiveRelease()
+ComptrollerProxyDeployed(msg.sender,comptrollerProxy_,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,_forMigration)
+(comptrollerProxy_,vaultProxy_)
+IComptroller(comptrollerProxy_).configureExtensions(_feeManagerConfigData,_policyManagerConfigData)
+comptrollerProxy_
+Checking function: __createNewFund(address,string,address,uint256,bytes,bytes) returns(address,address) (Slither line:3127)
+Visibility: private
+Checking function: __deployComptrollerProxy(address,uint256,bytes,bytes,bool) returns(address) (Slither line:3127)
+Visibility: private
+Checking function: cancelMigration(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+__cancelMigration(_vaultProxy,false)
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+IDispatcher(DISPATCHER).cancelMigration(_vaultProxy,_bypassFailure)
+onlyMigrator(_vaultProxy)
+Checking function: cancelMigrationEmergency(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+IDispatcher(DISPATCHER).cancelMigration(_vaultProxy,_bypassFailure)
+onlyMigrator(_vaultProxy)
+__cancelMigration(_vaultProxy,true)
+Checking function: executeMigration(address) returns() (Slither line:3127)
+Visibility: external
+onlyMigrator(_vaultProxy)
+(comptrollerProxy) = dispatcherContract.getMigrationRequestDetailsForVaultProxy(_vaultProxy)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+delete pendingComptrollerProxyToCreator[comptrollerProxy]
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyLiveRelease()
+__executeMigration(_vaultProxy,false)
+dispatcherContract.executeMigration(_vaultProxy,_bypassFailure)
+IComptroller(comptrollerProxy).activate(_vaultProxy,true)
+Checking function: executeMigrationEmergency(address) returns() (Slither line:3127)
+Visibility: external
+onlyMigrator(_vaultProxy)
+(comptrollerProxy) = dispatcherContract.getMigrationRequestDetailsForVaultProxy(_vaultProxy)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+__executeMigration(_vaultProxy,true)
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+delete pendingComptrollerProxyToCreator[comptrollerProxy]
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyLiveRelease()
+dispatcherContract.executeMigration(_vaultProxy,_bypassFailure)
+IComptroller(comptrollerProxy).activate(_vaultProxy,true)
+Checking function: invokeMigrationInCancelHook(address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+None
+Checking function: signalMigration(address,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+require(bool,string)(msg.sender == pendingComptrollerProxyToCreator[_comptrollerProxy],Only the ComptrollerProxy creator can call this function)
+__signalMigration(_vaultProxy,_comptrollerProxy,false)
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyPendingComptrollerProxyCreator(_comptrollerProxy)
+IDispatcher(DISPATCHER).signalMigration(_vaultProxy,_comptrollerProxy,VAULT_LIB,_bypassFailure)
+onlyMigrator(_vaultProxy)
+Checking function: signalMigrationEmergency(address,address) returns() (Slither line:3127)
+Visibility: external
+__signalMigration(_vaultProxy,_comptrollerProxy,true)
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+require(bool,string)(msg.sender == pendingComptrollerProxyToCreator[_comptrollerProxy],Only the ComptrollerProxy creator can call this function)
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyPendingComptrollerProxyCreator(_comptrollerProxy)
+IDispatcher(DISPATCHER).signalMigration(_vaultProxy,_comptrollerProxy,VAULT_LIB,_bypassFailure)
+onlyMigrator(_vaultProxy)
+Checking function: __cancelMigration(address,bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: __executeMigration(address,bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: __signalMigration(address,address,bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: invokeMigrationOutHook(IMigrationHookHandler.MigrationOutHook,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == DISPATCHER,postMigrateOriginHook: Only Dispatcher can call this function)
+None
+IComptroller(comptrollerProxy).destruct()
+Checking function: deregisterVaultCalls(address[],bytes4[]) returns() (Slither line:3127)
+Visibility: external
+VaultCallDeregistered(_contracts[i],_selectors[i])
+require(bool,string)(_contracts.length == _selectors.length,deregisterVaultCalls: Uneven input arrays)
+require(bool,string)(_contracts.length > 0,deregisterVaultCalls: Empty _contracts)
+onlyOwner()
+IDispatcher(DISPATCHER).getOwner()
+CREATOR
+require(bool,string)(msg.sender == getOwner(),Only the contract owner can call this function)
+contractToSelectorToIsRegisteredVaultCall[_contract][_selector]
+i ++
+require(bool,string)(isRegisteredVaultCall(_contracts[i],_selectors[i]),deregisterVaultCalls: Call not registered)
+contractToSelectorToIsRegisteredVaultCall[_contracts[i]][_selectors[i]] = false
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: registerVaultCalls(address[],bytes4[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_contracts.length == _selectors.length,__registerVaultCalls: Uneven input arrays)
+require(bool,string)(_contracts.length > 0,registerVaultCalls: Empty _contracts)
+__registerVaultCalls(_contracts,_selectors)
+onlyOwner()
+IDispatcher(DISPATCHER).getOwner()
+CREATOR
+require(bool,string)(msg.sender == getOwner(),Only the contract owner can call this function)
+i ++
+require(bool,string)(! isRegisteredVaultCall(_contracts[i],_selectors[i]),__registerVaultCalls: Call already registered)
+contractToSelectorToIsRegisteredVaultCall[_contracts[i]][_selectors[i]] = true
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+contractToSelectorToIsRegisteredVaultCall[_contract][_selector]
+VaultCallRegistered(_contracts[i],_selectors[i])
+Checking function: __registerVaultCalls(address[],bytes4[]) returns() (Slither line:3127)
+Visibility: private
+Checking function: getComptrollerLib() returns(address) (Slither line:3127)
+Visibility: external
+comptrollerLib
+Checking function: getCreator() returns(address) (Slither line:3127)
+Visibility: external
+CREATOR
+Checking function: getDispatcher() returns(address) (Slither line:3127)
+Visibility: external
+DISPATCHER
+Checking function: getPendingComptrollerProxyCreator(address) returns(address) (Slither line:3127)
+Visibility: external
+pendingComptrollerProxyToCreator[_comptrollerProxy]
+Checking function: getReleaseStatus() returns(IFundDeployer.ReleaseStatus) (Slither line:3127)
+Visibility: external
+releaseStatus
+Checking function: getVaultLib() returns(address) (Slither line:3127)
+Visibility: external
+VAULT_LIB
+Checking function: isRegisteredVaultCall(address,bytes4) returns(bool) (Slither line:3127)
+Visibility: public
+contractToSelectorToIsRegisteredVaultCall[_contract][_selector]
+Checking function: invokeMigrationInCancelHook(address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+Checking function: invokeMigrationOutHook(IMigrationHookHandler.MigrationOutHook,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getReleaseStatus() returns(IFundDeployer.ReleaseStatus) (Slither line:3127)
+Visibility: external
+Checking function: isRegisteredVaultCall(address,bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+
+End FundDeployer.find_setter_in_contract (Slither line:3345)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ComptrollerProxy.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0x0
+0x0
+calldatasize()()
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: contractLogic_fallback_asm_0 = sload(uint256)(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_28896_175_0_fallback_asm_0 = success_fallback_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,contractLogic_fallback_asm_0,0x0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()() - 10000
+contractLogic_fallback_asm_0
+0x0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractLogic_fallback_asm_0 (Slither line:2828)
+dest.value: contractLogic_fallback_asm_0 (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin ComptrollerProxy.find_delegate_variable_from_name
+Searching for contractLogic_fallback_asm_0 (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End ComptrollerProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+retSz_fallback_asm_0
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: retSz_fallback_asm_0 = returndatasize()() (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: returndatasize()
+Type of call: uint256 (Slither line:2817)
+Args:
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+retSz_fallback_asm_0
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,retSz_fallback_asm_0) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+retSz_fallback_asm_0
+
+End ComptrollerProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ComptrollerProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin ComptrollerProxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '28459:66:0', 'type': '', 'value': '0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc'} (Slither line:1909)
+Found hardcoded storage slot in fallback: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1927)
+
+End ComptrollerProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End ComptrollerProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting ComptrollerProxy._delegate_variable = ComptrollerProxy._proxy_impl_slot: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:1473)
+
+
+End ComptrollerProxy.is_proxy (Slither line:1476)
+
+
+Begin ComptrollerProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ComptrollerProxy 
+Call destination 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is constant (Slither line:1146)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is the implementation storage slot (Slither line:1149)
+
+ComptrollerProxy is delegating to 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Looking for setter (Slither line:1200)
+
+
+Begin ComptrollerProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(bytes,address) returns() (Slither line:3127)
+Checking function: constructor(bytes,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End ComptrollerProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in ComptrollerProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin ComptrollerProxy.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+
+End ComptrollerProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in ComptrollerProxy (Slither line:1305)
+
+Begin IDispatcher.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IDispatcher.find_getter_in_contract (Slither line:3083)
+
+
+Begin IDispatcher.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: cancelMigration(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: claimOwnership() returns() (Slither line:3127)
+Visibility: external
+Checking function: deployVaultProxy(address,address,address,string) returns(address) (Slither line:3127)
+Visibility: external
+Checking function: executeMigration(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: getCurrentFundDeployer() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getFundDeployerForVaultProxy(address) returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getMigrationRequestDetailsForVaultProxy(address) returns(address,address,address,uint256) (Slither line:3127)
+Visibility: external
+Checking function: getMigrationTimelock() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: getNominatedOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getSharesTokenSymbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: getTimelockRemainingForMigrationRequest(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: hasExecutableMigrationRequest(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: hasMigrationRequest(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: removeNominatedOwner() returns() (Slither line:3127)
+Visibility: external
+Checking function: setCurrentFundDeployer(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setMigrationTimelock(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: setNominatedOwner(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setSharesTokenSymbol(string) returns() (Slither line:3127)
+Visibility: external
+Checking function: signalMigration(address,address,address,bool) returns() (Slither line:3127)
+Visibility: external
+
+End IDispatcher.find_setter_in_contract (Slither line:3345)
+
+
+Begin IMigratableVault.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IMigratableVault.find_getter_in_contract (Slither line:3083)
+
+
+Begin IMigratableVault.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: canMigrate(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: init(address,address,string) returns() (Slither line:3127)
+Checking function: setAccessor(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setVaultLib(address) returns() (Slither line:3127)
+Visibility: external
+
+End IMigratableVault.find_setter_in_contract (Slither line:3345)
+
+
+Begin IMigrationHookHandler.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IMigrationHookHandler.find_getter_in_contract (Slither line:3083)
+
+
+Begin IMigrationHookHandler.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: invokeMigrationInCancelHook(address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+Checking function: invokeMigrationOutHook(IMigrationHookHandler.MigrationOutHook,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+
+End IMigrationHookHandler.find_setter_in_contract (Slither line:3345)
+
+
+Begin IFundDeployer.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IFundDeployer.find_getter_in_contract (Slither line:3083)
+
+
+Begin IFundDeployer.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getReleaseStatus() returns(IFundDeployer.ReleaseStatus) (Slither line:3127)
+Visibility: external
+Checking function: isRegisteredVaultCall(address,bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IFundDeployer.find_setter_in_contract (Slither line:3345)
+
+
+Begin IComptroller.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IComptroller.find_getter_in_contract (Slither line:3083)
+
+
+Begin IComptroller.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: activate(address,bool) returns() (Slither line:3127)
+Visibility: external
+Checking function: calcGav(bool) returns(uint256,bool) (Slither line:3127)
+Visibility: external
+Checking function: calcGrossShareValue(bool) returns(uint256,bool) (Slither line:3127)
+Visibility: external
+Checking function: callOnExtension(address,uint256,bytes) returns() (Slither line:3127)
+Visibility: external
+Checking function: configureExtensions(bytes,bytes) returns() (Slither line:3127)
+Visibility: external
+Checking function: destruct() returns() (Slither line:3127)
+Visibility: external
+Checking function: getDenominationAsset() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getVaultProxy() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: init(address,uint256) returns() (Slither line:3127)
+Checking function: permissionedVaultAction(IComptroller.VaultAction,bytes) returns() (Slither line:3127)
+Visibility: external
+
+End IComptroller.find_setter_in_contract (Slither line:3345)
+
+
+Begin IVault.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End IVault.find_getter_in_contract (Slither line:3083)
+
+
+Begin IVault.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: addTrackedAsset(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: approveAssetSpender(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: burnShares(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: callOnContract(address,bytes) returns() (Slither line:3127)
+Visibility: external
+Checking function: getAccessor() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getTrackedAssets() returns(address[]) (Slither line:3127)
+Visibility: external
+Checking function: isTrackedAsset(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: mintShares(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: removeTrackedAsset(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: transferShares(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: withdrawAssetTo(address,address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: canMigrate(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: init(address,address,string) returns() (Slither line:3127)
+Checking function: setAccessor(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: setVaultLib(address) returns() (Slither line:3127)
+Visibility: external
+
+End IVault.find_setter_in_contract (Slither line:3345)
+
+
+Begin FundDeployer.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: setComptrollerLib (Slither line:2988)
+Checking function: setReleaseStatus (Slither line:2988)
+Checking function: getOwner (Slither line:2988)
+getOwner returns address variable called owner_ (Slither line:3008)
+RETURN node expression: IDispatcher(DISPATCHER).getOwner() (Slither line:3028)
+RETURN node expression: CREATOR (Slither line:3028)
+Checking function: createMigratedFundConfig (Slither line:2988)
+createMigratedFundConfig returns address variable called comptrollerProxy_ (Slither line:3008)
+RETURN node expression: comptrollerProxy_ (Slither line:3028)
+Checking function: createNewFund (Slither line:2988)
+createNewFund returns address variable called comptrollerProxy_ (Slither line:3008)
+createNewFund returns address variable called vaultProxy_ (Slither line:3008)
+RETURN node expression: __createNewFund(_fundOwner,_fundName,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData) (Slither line:3028)
+Checking function: __createNewFund (Slither line:2988)
+__createNewFund returns address variable called comptrollerProxy_ (Slither line:3008)
+__createNewFund returns address variable called vaultProxy_ (Slither line:3008)
+RETURN node expression: (comptrollerProxy_,vaultProxy_) (Slither line:3028)
+Checking function: __deployComptrollerProxy (Slither line:2988)
+__deployComptrollerProxy returns address variable called comptrollerProxy_ (Slither line:3008)
+RETURN node expression: comptrollerProxy_ (Slither line:3028)
+Checking function: cancelMigration (Slither line:2988)
+Checking function: cancelMigrationEmergency (Slither line:2988)
+Checking function: executeMigration (Slither line:2988)
+Checking function: executeMigrationEmergency (Slither line:2988)
+Checking function: invokeMigrationInCancelHook (Slither line:2988)
+Checking function: signalMigration (Slither line:2988)
+Checking function: signalMigrationEmergency (Slither line:2988)
+Checking function: __cancelMigration (Slither line:2988)
+Checking function: __executeMigration (Slither line:2988)
+Checking function: __signalMigration (Slither line:2988)
+Checking function: invokeMigrationOutHook (Slither line:2988)
+Checking function: deregisterVaultCalls (Slither line:2988)
+Checking function: registerVaultCalls (Slither line:2988)
+Checking function: __registerVaultCalls (Slither line:2988)
+Checking function: getComptrollerLib (Slither line:2988)
+getComptrollerLib returns address variable called comptrollerLib_ (Slither line:3008)
+RETURN node expression: comptrollerLib (Slither line:3028)
+Checking function: getCreator (Slither line:2988)
+getCreator returns address variable called creator_ (Slither line:3008)
+RETURN node expression: CREATOR (Slither line:3028)
+Checking function: getDispatcher (Slither line:2988)
+getDispatcher returns address variable called dispatcher_ (Slither line:3008)
+RETURN node expression: DISPATCHER (Slither line:3028)
+Checking function: getPendingComptrollerProxyCreator (Slither line:2988)
+getPendingComptrollerProxyCreator returns address variable called pendingComptrollerProxyCreator_ (Slither line:3008)
+RETURN node expression: pendingComptrollerProxyToCreator[_comptrollerProxy] (Slither line:3028)
+Checking function: getReleaseStatus (Slither line:2988)
+getReleaseStatus returns IFundDeployer.ReleaseStatus variable called status_ (Slither line:3008)
+RETURN node expression: releaseStatus (Slither line:3028)
+Checking function: getVaultLib (Slither line:2988)
+getVaultLib returns address variable called vaultLib_ (Slither line:3008)
+RETURN node expression: VAULT_LIB (Slither line:3028)
+Checking function: isRegisteredVaultCall (Slither line:2988)
+isRegisteredVaultCall returns bool variable called isRegistered_ (Slither line:3008)
+RETURN node expression: contractToSelectorToIsRegisteredVaultCall[_contract][_selector] (Slither line:3028)
+
+End FundDeployer.find_getter_in_contract (Slither line:3083)
+
+
+Begin FundDeployer.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,address,address[],bytes4[]) returns() (Slither line:3127)
+Checking function: setComptrollerLib(address) returns() (Slither line:3127)
+Visibility: external
+ComptrollerLibSet(_comptrollerLib)
+IDispatcher(DISPATCHER).getOwner()
+onlyOwner()
+require(bool,string)(comptrollerLib == address(0),setComptrollerLib: This value can only be set once)
+comptrollerLib = _comptrollerLib
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+CREATOR
+require(bool,string)(msg.sender == getOwner(),Only the contract owner can call this function)
+Checking function: setReleaseStatus(IFundDeployer.ReleaseStatus) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == getOwner(),setReleaseStatus: Only the owner can call this function)
+ReleaseStatusSet(prevStatus,_nextStatus)
+IDispatcher(DISPATCHER).getOwner()
+require(bool,string)(_nextStatus != ReleaseStatus.PreLaunch,setReleaseStatus: Cannot return to PreLaunch status)
+require(bool,string)(_nextStatus != prevStatus,setReleaseStatus: _nextStatus is the current status)
+CREATOR
+require(bool,string)(comptrollerLib != address(0),setReleaseStatus: Can only set the release status when comptrollerLib is set)
+releaseStatus = _nextStatus
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: public
+IDispatcher(DISPATCHER).getOwner()
+CREATOR
+Checking function: createMigratedFundConfig(address,uint256,bytes,bytes) returns(address) (Slither line:3127)
+Visibility: external
+comptrollerProxy_
+comptrollerProxy_ = __deployComptrollerProxy(_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,true)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+comptrollerProxy_ = address(new ComptrollerProxy(constructData,comptrollerLib))
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+IComptroller(comptrollerProxy_).configureExtensions(_feeManagerConfigData,_policyManagerConfigData)
+require(bool,string)(_denominationAsset != address(0),__deployComptrollerProxy: _denominationAsset cannot be empty)
+onlyLiveRelease()
+ComptrollerProxyDeployed(msg.sender,comptrollerProxy_,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,_forMigration)
+pendingComptrollerProxyToCreator[comptrollerProxy_] = msg.sender
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+comptrollerProxy_
+Checking function: createNewFund(address,string,address,uint256,bytes,bytes) returns(address,address) (Slither line:3127)
+Visibility: external
+require(bool,string)(_denominationAsset != address(0),__deployComptrollerProxy: _denominationAsset cannot be empty)
+require(bool,string)(_fundOwner != address(0),__createNewFund: _owner cannot be empty)
+comptrollerProxy_ = __deployComptrollerProxy(_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,false)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+vaultProxy_ = IDispatcher(DISPATCHER).deployVaultProxy(VAULT_LIB,_fundOwner,comptrollerProxy_,_fundName)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+comptrollerProxy_ = address(new ComptrollerProxy(constructData,comptrollerLib))
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+IComptroller(comptrollerProxy_).activate(vaultProxy_,false)
+__createNewFund(_fundOwner,_fundName,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData)
+NewFundCreated(msg.sender,comptrollerProxy_,vaultProxy_,_fundOwner,_fundName,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData)
+onlyLiveRelease()
+ComptrollerProxyDeployed(msg.sender,comptrollerProxy_,_denominationAsset,_sharesActionTimelock,_feeManagerConfigData,_policyManagerConfigData,_forMigration)
+(comptrollerProxy_,vaultProxy_)
+IComptroller(comptrollerProxy_).configureExtensions(_feeManagerConfigData,_policyManagerConfigData)
+comptrollerProxy_
+Checking function: __createNewFund(address,string,address,uint256,bytes,bytes) returns(address,address) (Slither line:3127)
+Visibility: private
+Checking function: __deployComptrollerProxy(address,uint256,bytes,bytes,bool) returns(address) (Slither line:3127)
+Visibility: private
+Checking function: cancelMigration(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+__cancelMigration(_vaultProxy,false)
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+IDispatcher(DISPATCHER).cancelMigration(_vaultProxy,_bypassFailure)
+onlyMigrator(_vaultProxy)
+Checking function: cancelMigrationEmergency(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+IDispatcher(DISPATCHER).cancelMigration(_vaultProxy,_bypassFailure)
+onlyMigrator(_vaultProxy)
+__cancelMigration(_vaultProxy,true)
+Checking function: executeMigration(address) returns() (Slither line:3127)
+Visibility: external
+onlyMigrator(_vaultProxy)
+(comptrollerProxy) = dispatcherContract.getMigrationRequestDetailsForVaultProxy(_vaultProxy)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+delete pendingComptrollerProxyToCreator[comptrollerProxy]
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyLiveRelease()
+__executeMigration(_vaultProxy,false)
+dispatcherContract.executeMigration(_vaultProxy,_bypassFailure)
+IComptroller(comptrollerProxy).activate(_vaultProxy,true)
+Checking function: executeMigrationEmergency(address) returns() (Slither line:3127)
+Visibility: external
+onlyMigrator(_vaultProxy)
+(comptrollerProxy) = dispatcherContract.getMigrationRequestDetailsForVaultProxy(_vaultProxy)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+__executeMigration(_vaultProxy,true)
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+delete pendingComptrollerProxyToCreator[comptrollerProxy]
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyLiveRelease()
+dispatcherContract.executeMigration(_vaultProxy,_bypassFailure)
+IComptroller(comptrollerProxy).activate(_vaultProxy,true)
+Checking function: invokeMigrationInCancelHook(address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+None
+Checking function: signalMigration(address,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+require(bool,string)(msg.sender == pendingComptrollerProxyToCreator[_comptrollerProxy],Only the ComptrollerProxy creator can call this function)
+__signalMigration(_vaultProxy,_comptrollerProxy,false)
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyPendingComptrollerProxyCreator(_comptrollerProxy)
+IDispatcher(DISPATCHER).signalMigration(_vaultProxy,_comptrollerProxy,VAULT_LIB,_bypassFailure)
+onlyMigrator(_vaultProxy)
+Checking function: signalMigrationEmergency(address,address) returns() (Slither line:3127)
+Visibility: external
+__signalMigration(_vaultProxy,_comptrollerProxy,true)
+require(bool,string)(releaseStatus == ReleaseStatus.Live,Release is not Live)
+onlyLiveRelease()
+require(bool,string)(msg.sender == pendingComptrollerProxyToCreator[_comptrollerProxy],Only the ComptrollerProxy creator can call this function)
+require(bool,string)(IVault(_vaultProxy).canMigrate(msg.sender),Only a permissioned migrator can call this function)
+onlyPendingComptrollerProxyCreator(_comptrollerProxy)
+IDispatcher(DISPATCHER).signalMigration(_vaultProxy,_comptrollerProxy,VAULT_LIB,_bypassFailure)
+onlyMigrator(_vaultProxy)
+Checking function: __cancelMigration(address,bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: __executeMigration(address,bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: __signalMigration(address,address,bool) returns() (Slither line:3127)
+Visibility: private
+Checking function: invokeMigrationOutHook(IMigrationHookHandler.MigrationOutHook,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == DISPATCHER,postMigrateOriginHook: Only Dispatcher can call this function)
+None
+IComptroller(comptrollerProxy).destruct()
+Checking function: deregisterVaultCalls(address[],bytes4[]) returns() (Slither line:3127)
+Visibility: external
+VaultCallDeregistered(_contracts[i],_selectors[i])
+require(bool,string)(_contracts.length == _selectors.length,deregisterVaultCalls: Uneven input arrays)
+require(bool,string)(_contracts.length > 0,deregisterVaultCalls: Empty _contracts)
+onlyOwner()
+IDispatcher(DISPATCHER).getOwner()
+CREATOR
+require(bool,string)(msg.sender == getOwner(),Only the contract owner can call this function)
+contractToSelectorToIsRegisteredVaultCall[_contract][_selector]
+i ++
+require(bool,string)(isRegisteredVaultCall(_contracts[i],_selectors[i]),deregisterVaultCalls: Call not registered)
+contractToSelectorToIsRegisteredVaultCall[_contracts[i]][_selectors[i]] = false
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: registerVaultCalls(address[],bytes4[]) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_contracts.length == _selectors.length,__registerVaultCalls: Uneven input arrays)
+require(bool,string)(_contracts.length > 0,registerVaultCalls: Empty _contracts)
+__registerVaultCalls(_contracts,_selectors)
+onlyOwner()
+IDispatcher(DISPATCHER).getOwner()
+CREATOR
+require(bool,string)(msg.sender == getOwner(),Only the contract owner can call this function)
+i ++
+require(bool,string)(! isRegisteredVaultCall(_contracts[i],_selectors[i]),__registerVaultCalls: Call already registered)
+contractToSelectorToIsRegisteredVaultCall[_contracts[i]][_selectors[i]] = true
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+contractToSelectorToIsRegisteredVaultCall[_contract][_selector]
+VaultCallRegistered(_contracts[i],_selectors[i])
+Checking function: __registerVaultCalls(address[],bytes4[]) returns() (Slither line:3127)
+Visibility: private
+Checking function: getComptrollerLib() returns(address) (Slither line:3127)
+Visibility: external
+comptrollerLib
+Checking function: getCreator() returns(address) (Slither line:3127)
+Visibility: external
+CREATOR
+Checking function: getDispatcher() returns(address) (Slither line:3127)
+Visibility: external
+DISPATCHER
+Checking function: getPendingComptrollerProxyCreator(address) returns(address) (Slither line:3127)
+Visibility: external
+pendingComptrollerProxyToCreator[_comptrollerProxy]
+Checking function: getReleaseStatus() returns(IFundDeployer.ReleaseStatus) (Slither line:3127)
+Visibility: external
+releaseStatus
+Checking function: getVaultLib() returns(address) (Slither line:3127)
+Visibility: external
+VAULT_LIB
+Checking function: isRegisteredVaultCall(address,bytes4) returns(bool) (Slither line:3127)
+Visibility: public
+contractToSelectorToIsRegisteredVaultCall[_contract][_selector]
+Checking function: invokeMigrationInCancelHook(address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+Checking function: invokeMigrationOutHook(IMigrationHookHandler.MigrationOutHook,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+Checking function: getOwner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: getReleaseStatus() returns(IFundDeployer.ReleaseStatus) (Slither line:3127)
+Visibility: external
+Checking function: isRegisteredVaultCall(address,bytes4) returns(bool) (Slither line:3127)
+Visibility: external
+
+End FundDeployer.find_setter_in_contract (Slither line:3345)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(bytes,address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+End ComptrollerProxy.is_upgradeable_proxy (Slither line:1407)
+

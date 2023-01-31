@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol#2563-2592)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol#2563-2592) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "SimpleProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol#2598-2625)",
+        "elements": [],
+        "description": "SimpleProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol#2598-2625) is an upgradeable proxy.\nimplementationPosition is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(org.loopring.protocol.simple.proxy)\nMissing compatibility check in SimpleProxy.setImplementation(address)\n",
+        "id": "53a4a1cba5966ca329ca11bd4ff3214ac9d560ce38af76b994065244c9011a71",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "SimpleProxy.implementationPosition",
+          "impl_address_setter": "SimpleProxy.setImplementation(address)",
+          "impl_address_getter": "SimpleProxy.implementation()",
+          "impl_address_location": "SimpleProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol/0c8dbfb40a324674ad26fe7aeccd4c654036aa82_WalletFactory.sol#2598-2625)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(org.loopring.protocol.simple.proxy)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "SimpleProxy.setImplementation(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "implementation()",
+              "setImplementation(address)",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

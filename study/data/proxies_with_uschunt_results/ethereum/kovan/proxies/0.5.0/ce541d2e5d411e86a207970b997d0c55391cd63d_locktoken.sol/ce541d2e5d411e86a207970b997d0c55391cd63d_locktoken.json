@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "locktoken (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.5.0/ce541d2e5d411e86a207970b997d0c55391cd63d_locktoken.sol/ce541d2e5d411e86a207970b997d0c55391cd63d_locktoken.sol#492-651)",
+        "elements": [],
+        "description": "locktoken (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.5.0/ce541d2e5d411e86a207970b997d0c55391cd63d_locktoken.sol/ce541d2e5d411e86a207970b997d0c55391cd63d_locktoken.sol#492-651) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "c03ba7b144a2bb447cd02b86e414e2c61903a95f5147d37953d60c3694d7013f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "locktoken.implementation",
+          "impl_address_setter": "locktoken.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "locktoken (../../smart-contract-sanctuary/ethereum/contracts/kovan/sorted/0.5.0/ce541d2e5d411e86a207970b997d0c55391cd63d_locktoken.sol/ce541d2e5d411e86a207970b997d0c55391cd63d_locktoken.sol#492-651)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "locktoken.upgradeTo(address)": {
+                "check": "require(bool)(implementation != _newImplementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "erc20": [
+              "totalSupply()",
+              "balanceOf(address)",
+              "transfer(address,uint256)",
+              "transferFrom(address,address,uint256)",
+              "approve(address,uint256)",
+              "allowance(address,address)",
+              "name()",
+              "symbol()",
+              "decimals()"
+            ],
+            "other": [
+              "paused()",
+              "pause()",
+              "unpause()",
+              "isPauser(address)",
+              "addPauser(address)",
+              "removePauser(address)",
+              "renouncePauser()",
+              "isOwner(address)",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "increaseAllowance(address,uint256)",
+              "decreaseAllowance(address,uint256)",
+              "freezeAccount(address)",
+              "unfreezeAccount(address)",
+              "lock(address,uint256,uint256)",
+              "transferWithLock(address,uint256,uint256)",
+              "unlock(address,uint256)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

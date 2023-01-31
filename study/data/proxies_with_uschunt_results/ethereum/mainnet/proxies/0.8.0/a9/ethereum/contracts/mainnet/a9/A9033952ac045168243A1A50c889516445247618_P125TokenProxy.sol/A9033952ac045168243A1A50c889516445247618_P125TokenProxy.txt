@@ -1,0 +1,392 @@
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Upgradeable_0_8.is_proxy (Slither line:1425)
+
+
+End Upgradeable_0_8.is_proxy (Slither line:1428)
+
+
+Begin Upgradeable_0_8.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Upgradeable_0_8 
+
+End Upgradeable_0_8.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin P125TokenProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin P125TokenProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End P125TokenProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin P125TokenProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End P125TokenProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin P125TokenProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+impl
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is impl (Slither line:2828)
+dest.value: impl (Slither line:2831)
+Expression: implementation (Slither line:2836)
+
+End P125TokenProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End P125TokenProxy.is_proxy (Slither line:1476)
+
+
+Begin P125TokenProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: P125TokenProxy 
+P125TokenProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Upgradeable_0_8 (Slither line:1204)
+
+
+Begin Upgradeable_0_8.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+OwnershipTransferred(oldOwner,newOwner)
+msg.sender
+_setOwner(address(0))
+_owner
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+OwnershipTransferred(oldOwner,newOwner)
+_setOwner(newOwner)
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+msg.sender
+_owner
+onlyOwner()
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: _setOwner(address) returns() (Slither line:3127)
+Visibility: private
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Upgradeable_0_8.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Upgradeable_0_8 
+Looking in P125TokenProxy (Slither line:1213)
+
+Begin P125TokenProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: replaceImplementation(address) returns() (Slither line:3127)
+Visibility: public
+size = extcodesize(uint256)(account)
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+msg.sender
+_owner
+implementation = impl
+is an Assignment Operation (Slither line:3216)
+
+End P125TokenProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: replaceImplementation in contract: P125TokenProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Upgradeable_0_8.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _setOwner (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End Upgradeable_0_8.find_getter_in_contract (Slither line:3083)
+
+
+Begin P125TokenProxy.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _setOwner (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: replaceImplementation (Slither line:2988)
+
+End P125TokenProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in P125TokenProxy (Slither line:1305)
+or in Upgradeable_0_8 (Slither line:1319)
+Checking for implementation at slot 1 in contract Upgradeable_0_8 (Slither line:1355)
+Found implementation at slot 1 in contract Upgradeable_0_8 (Slither line:1362)
+
+Begin Upgradeable_0_8.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _setOwner (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End Upgradeable_0_8.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function owner
+Checking public function renounceOwnership
+Checking public function transferOwnership
+Checking public function replaceImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function P125TokenProxy.constructor (proxy_features line:898)
+get_value_assigned: implementation = impl
+functions_writing_to_variable: constructor writes impl to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function P125TokenProxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy.replaceImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(impl),not a contract) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = impl
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner) (proxy_features line:909)
+functions_writing_to_variable: exp = size = extcodesize(uint256)(account) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: size = extcodesize(uint256)(account) (proxy_features line:912)
+functions_writing_to_variable: exp = size > 0 (proxy_features line:909)
+functions_writing_to_variable: exp = _owner (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender (proxy_features line:909)
+functions_writing_to_variable: replaceImplementation writes impl to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function P125TokenProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy.owner (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy._msgData (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy._setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy._msgSender (proxy_features line:898)
+functions_writing_to_variable: checking function P125TokenProxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_impl', 'impl']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function replaceImplementation
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_compatibility_checks: condition owner() == _msgSender()
+require(bool,string)(Address.isContract(impl),not a contract)
+has_compatibility_checks: condition Address.isContract(impl)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),impl,0,calldatasize()(),0,0)
+Found public function: owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender
+has_time_delay: (node.type) RETURN
+(Expression) _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = impl
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(impl),not a contract)

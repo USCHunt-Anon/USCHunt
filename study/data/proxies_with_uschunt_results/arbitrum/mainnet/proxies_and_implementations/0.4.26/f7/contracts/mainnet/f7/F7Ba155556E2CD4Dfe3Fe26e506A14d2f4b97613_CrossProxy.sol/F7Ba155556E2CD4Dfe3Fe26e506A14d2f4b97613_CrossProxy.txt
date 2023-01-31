@@ -1,0 +1,1607 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+Begin Proxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: _implementation (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+
+End Proxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin Owned.is_proxy (Slither line:1425)
+
+
+End Owned.is_proxy (Slither line:1428)
+
+
+Begin Owned.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Owned 
+
+End Owned.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Halt.is_proxy (Slither line:1425)
+
+
+End Halt.is_proxy (Slither line:1428)
+
+
+Begin Halt.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Halt 
+
+End Halt.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicStorageLib.is_proxy (Slither line:1425)
+
+
+End BasicStorageLib.is_proxy (Slither line:1428)
+
+
+Begin BasicStorageLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicStorageLib 
+
+End BasicStorageLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicStorage.is_proxy (Slither line:1425)
+
+
+End BasicStorage.is_proxy (Slither line:1428)
+
+
+Begin BasicStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicStorage 
+
+End BasicStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IRC20Protocol.is_proxy (Slither line:1425)
+
+
+End IRC20Protocol.is_proxy (Slither line:1428)
+
+
+Begin IRC20Protocol.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRC20Protocol 
+
+End IRC20Protocol.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IQuota.is_proxy (Slither line:1425)
+
+
+End IQuota.is_proxy (Slither line:1428)
+
+
+Begin IQuota.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IQuota 
+
+End IQuota.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IStoremanGroup.is_proxy (Slither line:1425)
+
+
+End IStoremanGroup.is_proxy (Slither line:1428)
+
+
+Begin IStoremanGroup.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IStoremanGroup 
+
+End IStoremanGroup.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ITokenManager.is_proxy (Slither line:1425)
+
+
+End ITokenManager.is_proxy (Slither line:1428)
+
+
+Begin ITokenManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ITokenManager 
+
+End ITokenManager.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISignatureVerifier.is_proxy (Slither line:1425)
+
+
+End ISignatureVerifier.is_proxy (Slither line:1428)
+
+
+Begin ISignatureVerifier.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISignatureVerifier 
+
+End ISignatureVerifier.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin HTLCTxLib.is_proxy (Slither line:1425)
+
+
+End HTLCTxLib.is_proxy (Slither line:1428)
+
+
+Begin HTLCTxLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HTLCTxLib 
+
+End HTLCTxLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RapidityTxLib.is_proxy (Slither line:1425)
+
+
+End RapidityTxLib.is_proxy (Slither line:1428)
+
+
+Begin RapidityTxLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RapidityTxLib 
+
+End RapidityTxLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossTypes.is_proxy (Slither line:1425)
+
+
+End CrossTypes.is_proxy (Slither line:1428)
+
+
+Begin CrossTypes.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossTypes 
+
+End CrossTypes.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossStorage.is_proxy (Slither line:1425)
+
+
+End CrossStorage.is_proxy (Slither line:1428)
+
+
+Begin CrossStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossStorage 
+
+End CrossStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CrossProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CrossProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking storageData (Slither line:1689)
+Checking lockedTime (Slither line:1689)
+Checking smgFeeReceiverTimeout (Slither line:1689)
+Checking _notEntered (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CrossProxy.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End CrossProxy.find_delegate_variable_by_name
+
+
+End CrossProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CrossProxy.is_proxy (Slither line:1476)
+
+
+Begin CrossProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossProxy 
+CrossProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in CrossProxy (Slither line:1213)
+
+Begin CrossProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+Upgraded(impl)
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+onlyOwner()
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+
+End CrossProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: CrossProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End CrossProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression require(bool,string)(_impl != address(0),implementation contract not set)
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: arg is implementation contract not set
+Checking public function implementation
+Checking public function setHalt
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function transferOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: msg.sender == newOwner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function CrossProxy.transferOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(impl != address(0),Cannot upgrade to invalid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,Not owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CrossProxy.implementation (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_compatibility_checks: condition impl != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != address(0)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_compatibility_checks: condition impl != _implementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != _implementation
+require(bool,string)(msg.sender == owner,Not owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = _implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_impl != address(0),implementation contract not set)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Not owner)
+
+Begin CrossTypesV1.is_proxy (Slither line:1425)
+
+
+End CrossTypesV1.is_proxy (Slither line:1428)
+
+
+Begin CrossTypesV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossTypesV1 
+
+End CrossTypesV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossStorageV1.is_proxy (Slither line:1425)
+
+
+End CrossStorageV1.is_proxy (Slither line:1428)
+
+
+Begin CrossStorageV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossStorageV1 
+
+End CrossStorageV1.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossStorageV2.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CrossStorageV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End CrossStorageV2.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CrossStorageV2.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CrossStorageV2.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking storageData (Slither line:1689)
+Checking lockedTime (Slither line:1689)
+Checking smgFeeReceiverTimeout (Slither line:1689)
+Checking _notEntered (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking currentChainID (Slither line:1689)
+Checking admin (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CrossStorageV2.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End CrossStorageV2.find_delegate_variable_by_name
+
+
+End CrossStorageV2.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CrossStorageV2.is_proxy (Slither line:1476)
+
+
+Begin CrossStorageV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossStorageV2 
+CrossStorageV2 is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in CrossStorageV2 (Slither line:1213)
+
+Begin CrossStorageV2.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(msg.sender == owner,Not owner)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+require(bool,string)(msg.sender == owner,Not owner)
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossStorageV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CrossStorageV2 (Slither line:1220)
+Looking for setter in CrossProxy (Slither line:1228)
+
+
+Begin CrossProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+Upgraded(impl)
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+onlyOwner()
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+impl
+
+End CrossProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: CrossProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End CrossStorageV2.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression require(bool,string)(_impl != address(0),implementation contract not set)
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: arg is implementation contract not set
+Checking public function implementation
+Checking public function setHalt
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function transferOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: msg.sender == newOwner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function CrossStorageV2.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(impl != address(0),Cannot upgrade to invalid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,Not owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CrossProxy.transferOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossStorageV2.transferOwner (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_compatibility_checks: condition impl != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != address(0)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_compatibility_checks: condition impl != _implementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != _implementation
+require(bool,string)(msg.sender == owner,Not owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = _implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_impl != address(0),implementation contract not set)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Not owner)
+
+Begin HTLCDebtLibV2.is_proxy (Slither line:1425)
+
+
+End HTLCDebtLibV2.is_proxy (Slither line:1428)
+
+
+Begin HTLCDebtLibV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HTLCDebtLibV2 
+
+End HTLCDebtLibV2.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ISmgFeeProxy.is_proxy (Slither line:1425)
+
+
+End ISmgFeeProxy.is_proxy (Slither line:1428)
+
+
+Begin ISmgFeeProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ISmgFeeProxy 
+
+End ISmgFeeProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RapidityLibV2.is_proxy (Slither line:1425)
+
+
+End RapidityLibV2.is_proxy (Slither line:1428)
+
+
+Begin RapidityLibV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RapidityLibV2 
+
+End RapidityLibV2.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CrossDelegateV2.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CrossDelegateV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(_impl != address(0),implementation contract not set) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+implementation contract not set
+
+End CrossDelegateV2.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CrossDelegateV2.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CrossDelegateV2.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintData (Slither line:1689)
+Checking boolData (Slither line:1689)
+Checking addressData (Slither line:1689)
+Checking bytesData (Slither line:1689)
+Checking stringData (Slither line:1689)
+Checking storageData (Slither line:1689)
+Checking lockedTime (Slither line:1689)
+Checking smgFeeReceiverTimeout (Slither line:1689)
+Checking _notEntered (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking halted (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking currentChainID (Slither line:1689)
+Checking admin (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CrossDelegateV2.fallback (Slither line:1707)
+Expression: _implementation (Slither line:1719)
+Identifier value: _implementation (Slither line:1725)
+_implementation is a State Variable in contract Proxy (Slither line:1730)
+
+End CrossDelegateV2.find_delegate_variable_by_name
+
+
+End CrossDelegateV2.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CrossDelegateV2.is_proxy (Slither line:1476)
+
+
+Begin CrossDelegateV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CrossDelegateV2 
+CrossDelegateV2 is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxy 
+Looking in CrossDelegateV2 (Slither line:1213)
+
+Begin CrossDelegateV2.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: userLock(bytes32,uint256,uint256,bytes) returns() (Slither line:3127)
+Visibility: external
+left = (msg.value).sub(params.value).sub(contractFee)
+is an Assignment Operation (Slither line:3216)
+impl
+beforeBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+impl
+notHalted()
+require(bool,string)(b <= a,SafeMath sub b > a)
+tokenScAddr.call(bytes4(keccak256()(transferFrom(address,address,uint256))),from,to,value)
+afterBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+impl
+onlyReadySmg(smgID)
+left = (msg.value).sub(contractFee)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(CrossTypesV1.transferFrom(tokenScAddr,msg.sender,this,params.value),Lock token failed)
+afterBalance == beforeBalance.add(value)
+require(bool,string)(c >= a,SafeMath add overflow)
+c
+c
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+storageData.mapStoremanFee[bytes32(0)] = storageData.mapStoremanFee[bytes32(0)].add(contractFee)
+is an Assignment Operation (Slither line:3216)
+impl
+(msg.sender).transfer(left)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+RapidityLibV2.userLock(storageData,params)
+(fromChainID,fromTokenAccount,toChainID) = storageData.tokenManager.getTokenPairInfoSlim(params.tokenPairID)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(fromChainID != 0,Token does not exist)
+(storageData.smgFeeProxy).transfer(contractFee)
+storageData.quota.userLock(params.tokenPairID,params.smgID,params.value)
+UserLockLogger(params.smgID,params.tokenPairID,tokenScAddr,params.value,contractFee,params.destUserAccount)
+Checking function: userBurn(bytes32,uint256,uint256,uint256,address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(params.srcTokenAccount == tokenScAddr,invalid token account)
+contractFee = storageData.mapContractFee[toChainID][fromChainID]
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(b <= a,SafeMath sub b > a)
+tokenScAddr = CrossTypesV1.bytesToAddress(toTokenAccount)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(c >= a,SafeMath add overflow)
+c
+c
+RapidityLibV2.userBurn(storageData,params)
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+contractFee = storageData.mapContractFee[fromChainID][toChainID]
+is an Assignment Operation (Slither line:3216)
+impl
+notHalted()
+storageData.mapStoremanFee[bytes32(0)] = storageData.mapStoremanFee[bytes32(0)].add(contractFee)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+tokenScAddr = CrossTypesV1.bytesToAddress(fromTokenAccount)
+is an Assignment Operation (Slither line:3216)
+impl
+(fromChainID,fromTokenAccount,toChainID,toTokenAccount) = tokenManager.getTokenPairInfo(params.tokenPairID)
+is an Assignment Operation (Slither line:3216)
+impl
+onlyReadySmg(smgID)
+require(bool,string)(fromChainID != 0,Token does not exist)
+(storageData.smgFeeProxy).transfer(contractFee)
+require(bool,string)(false,Invalid token pair)
+beforeBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+impl
+ITokenManager(tokenManager).burnToken(tokenAddress,userAccount,value)
+storageData.quota.userBurn(params.tokenPairID,params.smgID,params.value)
+afterBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(burnShadowToken(tokenManager,tokenScAddr,msg.sender,params.value),burn failed)
+UserBurnLogger(params.smgID,params.tokenPairID,tokenScAddr,params.value,contractFee,params.fee,params.destUserAccount)
+afterBalance == beforeBalance.sub(value)
+(msg.sender).transfer(left)
+Checking function: smgMint(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+RapidityLibV2.smgMint(storageData,params)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+require(bool,string)(c >= a,SafeMath add overflow)
+(curveID,PK)
+verifySignature(curveID,mHash,PK,r,s)
+c
+notHalted()
+storageData.rapidityTxData.addRapidityTx(params.uniqueID)
+beforeBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(mintShadowToken(storageData.tokenManager,params.destTokenAccount,params.destUserAccount,params.value),mint failed)
+ITokenManager(tokenManager).mintToken(tokenAddress,userAccount,value)
+storageData.quota.smgMint(params.tokenPairID,params.smgID,params.value)
+afterBalance = IRC20Protocol(tokenAddress).balanceOf(userAccount)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(status == TxStatus.None,Rapidity tx exists)
+afterBalance == beforeBalance.add(value)
+self.mapTxStatus[uniqueID] = TxStatus.Redeemed
+is an Assignment Operation (Slither line:3216)
+impl
+SmgMintLogger(params.uniqueID,params.smgID,params.tokenPairID,params.value,params.destTokenAccount,params.destUserAccount)
+(curveID,PK) = acquireReadySmgInfo(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: smgRelease(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+storageData.rapidityTxData.addRapidityTx(params.uniqueID)
+afterBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+impl
+(curveID,PK) = acquireReadySmgInfo(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+afterBalance == beforeBalance.add(value)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+require(bool,string)(c >= a,SafeMath add overflow)
+storageData.quota.smgRelease(params.tokenPairID,params.smgID,params.value)
+RapidityLibV2.smgRelease(storageData,params)
+(curveID,PK)
+c
+verifySignature(curveID,mHash,PK,r,s)
+SmgReleaseLogger(params.uniqueID,params.smgID,params.tokenPairID,params.value,params.destTokenAccount,params.destUserAccount)
+(params.destUserAccount).transfer(params.value)
+notHalted()
+require(bool,string)(CrossTypesV1.transfer(params.destTokenAccount,params.destUserAccount,params.value),Transfer token failed)
+require(bool,string)(status == TxStatus.None,Rapidity tx exists)
+self.mapTxStatus[uniqueID] = TxStatus.Redeemed
+is an Assignment Operation (Slither line:3216)
+impl
+beforeBalance = IRC20Protocol(tokenScAddr).balanceOf(to)
+is an Assignment Operation (Slither line:3216)
+impl
+tokenScAddr.call(bytes4(keccak256()(transfer(address,uint256))),to,value)
+Checking function: transferAsset(bytes32,bytes32,bytes32,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+(curveID,PK) = acquireUnregisteredSmgInfo(srcSmgID)
+is an Assignment Operation (Slither line:3216)
+impl
+TransferAssetLogger(params.uniqueID,params.srcSmgID,params.destSmgID)
+(None,status,None,None,None,curveID,None,PK,None,None,None) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+(status,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupStatus(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(status == uint8(GroupStatus.unregistered),PK is not unregistered)
+HTLCDebtLibV2.transferAsset(storageData,params)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+verifySignature(curveID,mHash,PK,r,s)
+storageData.quota.transferAsset(params.srcSmgID,params.destSmgID)
+notHalted()
+onlyReadySmg(destSmgID)
+Checking function: receiveDebt(bytes32,bytes32,bytes32,bytes,bytes32) returns() (Slither line:3127)
+Visibility: external
+ReceiveDebtLogger(params.uniqueID,params.srcSmgID,params.destSmgID)
+(None,status,None,None,None,curveID,None,PK,None,startTime,endTime) = storageData.smgAdminProxy.getStoremanGroupConfig(smgID)
+is an Assignment Operation (Slither line:3216)
+impl
+storageData.quota.receiveDebt(params.srcSmgID,params.destSmgID)
+require(bool,string)(storageData.sigVerifier.verify(curveID,s,PKx,PKy,Rx,Ry,message),Signature verification failed)
+require(bool,string)(! halted,Smart contract is halted)
+require(bool,string)(status == uint8(GroupStatus.ready) && now >= startTime && now <= endTime,PK is not ready)
+(curveID,PK)
+(curveID,PK) = acquireReadySmgInfo(destSmgID)
+is an Assignment Operation (Slither line:3216)
+impl
+HTLCDebtLibV2.receiveDebt(storageData,params)
+verifySignature(curveID,mHash,PK,r,s)
+notHalted()
+Checking function: setFee(CrossStorageV2.SetFeesParam) returns() (Slither line:3127)
+Visibility: public
+SetFee(param.srcChainID,param.destChainID,param.contractFee,param.agentFee)
+onlyAdmin()
+storageData.mapContractFee[param.srcChainID][param.destChainID] = param.contractFee
+is an Assignment Operation (Slither line:3216)
+impl
+storageData.mapAgentFee[param.srcChainID][param.destChainID] = param.agentFee
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(msg.sender == admin,not admin)
+Checking function: setFees(CrossStorageV2.SetFeesParam[]) returns() (Slither line:3127)
+Visibility: public
+SetFee(params[i].srcChainID,params[i].destChainID,params[i].contractFee,params[i].agentFee)
+require(bool,string)(msg.sender == admin,not admin)
+++ i
+storageData.mapContractFee[params[i].srcChainID][params[i].destChainID] = params[i].contractFee
+is an Assignment Operation (Slither line:3216)
+impl
+onlyAdmin()
+storageData.mapAgentFee[params[i].srcChainID][params[i].destChainID] = params[i].agentFee
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: setChainID(uint256) returns() (Slither line:3127)
+Visibility: external
+onlyAdmin()
+require(bool,string)(msg.sender == admin,not admin)
+currentChainID = chainID
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: setAdmin(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(msg.sender == owner,Not owner)
+admin = adminAccount
+is an Assignment Operation (Slither line:3216)
+impl
+SetAdmin(adminAccount)
+onlyOwner()
+Checking function: setUintValue(bytes,bytes,uint256) returns() (Slither line:3127)
+Visibility: external
+uintData.setStorage(key,innerKey,value)
+self._storage[key][innerKey] = value
+is an Assignment Operation (Slither line:3216)
+impl
+onlyAdmin()
+require(bool,string)(msg.sender == admin,not admin)
+Checking function: delUintValue(bytes,bytes) returns() (Slither line:3127)
+Visibility: external
+delete self._storage[key][innerKey]
+uintData.delStorage(key,innerKey)
+require(bool,string)(msg.sender == admin,not admin)
+onlyAdmin()
+Checking function: setPartners(address,address,address,address,address) returns() (Slither line:3127)
+Visibility: external
+storageData.smgAdminProxy = IStoremanGroup(smgAdminProxy)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+storageData.sigVerifier = ISignatureVerifier(sigVerifier)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(msg.sender == owner,Not owner)
+storageData.tokenManager = ITokenManager(tokenManager)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+onlyOwner()
+storageData.quota = IQuota(quota)
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+require(bool,string)(tokenManager != address(0) && smgAdminProxy != address(0) && sigVerifier != address(0),Parameter is invalid)
+storageData.smgFeeProxy = smgFeeProxy
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: smgWithdrawFee(bytes32[]) returns() (Slither line:3127)
+Visibility: external
+fee = fee.add(currentFee)
+is an Assignment Operation (Slither line:3216)
+impl
+smgFeeProxy.transfer(fee)
+require(bool,string)(c >= a,SafeMath add overflow)
+WithdrawContractFeeLogger(block.number,block.timestamp,smgFeeProxy,fee)
+c
+++ i
+currentFee = storageData.mapStoremanFee[smgIDs[i]]
+is an Assignment Operation (Slither line:3216)
+impl
+delete storageData.mapStoremanFee[smgIDs[i]]
+fee = fee.add(currentFee)
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(smgFeeProxy != address(0),invalid smgFeeProxy)
+SmgWithdrawFeeLogger(smgIDs[i],block.timestamp,smgFeeProxy,currentFee)
+smgFeeProxy = owner
+is an Assignment Operation (Slither line:3216)
+impl
+currentFee = storageData.mapStoremanFee[bytes32(0)]
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(fee > 0,Fee is null)
+delete storageData.mapStoremanFee[bytes32(0)]
+Checking function: getUintValue(bytes,bytes) returns(uint256) (Slither line:3127)
+Visibility: public
+self._storage[key][innerKey]
+uintData.getStorage(key,innerKey)
+Checking function: getStoremanFee(bytes32) returns(uint256) (Slither line:3127)
+Visibility: external
+fee = storageData.mapStoremanFee[smgID]
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: getFee(CrossStorageV2.GetFeesParam) returns(CrossStorageV2.GetFeesReturn) (Slither line:3127)
+Visibility: public
+fee.contractFee = storageData.mapContractFee[param.srcChainID][param.destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fee.agentFee = storageData.mapAgentFee[param.srcChainID][param.destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+Checking function: getFees(CrossStorageV2.GetFeesParam[]) returns(CrossStorageV2.GetFeesReturn[]) (Slither line:3127)
+Visibility: public
+++ i
+fees[i].contractFee = storageData.mapContractFee[params[i].srcChainID][params[i].destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fees[i].agentFee = storageData.mapAgentFee[params[i].srcChainID][params[i].destChainID]
+is an Assignment Operation (Slither line:3216)
+Left side is a MemberAccess (Slither line:3219)
+fees = new CrossStorageV2.GetFeesReturn[](params.length)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: getPartners() returns(address,address,address,address,address) (Slither line:3127)
+Visibility: external
+tokenManager = address(storageData.tokenManager)
+is an Assignment Operation (Slither line:3216)
+impl
+sigVerifier = address(storageData.sigVerifier)
+is an Assignment Operation (Slither line:3216)
+impl
+smgAdminProxy = address(storageData.smgAdminProxy)
+is an Assignment Operation (Slither line:3216)
+impl
+smgFeeProxy = storageData.smgFeeProxy
+is an Assignment Operation (Slither line:3216)
+impl
+quota = address(storageData.quota)
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: acquireReadySmgInfo(bytes32) returns(uint256,bytes) (Slither line:3127)
+Visibility: internal
+Checking function: acquireUnregisteredSmgInfo(bytes32) returns(uint256,bytes) (Slither line:3127)
+Visibility: internal
+Checking function: bytesToBytes32(bytes,uint256) returns(bytes32) (Slither line:3127)
+Visibility: internal
+Checking function: verifySignature(uint256,bytes32,bytes,bytes,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: setHalt(bool) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+halted = halt
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferOwner(address) returns() (Slither line:3127)
+Visibility: public
+owner = _newOwner
+is an Assignment Operation (Slither line:3216)
+impl
+require(bool,string)(msg.sender == owner,Not owner)
+onlyOwner()
+require(bool,string)(_newOwner != address(0),New owner is the zero address)
+OwnershipTransferred(owner,_newOwner)
+Checking function: changeOwner(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+newOwner = _newOwner
+is an Assignment Operation (Slither line:3216)
+impl
+onlyOwner()
+Checking function: acceptOwnership() returns() (Slither line:3127)
+Visibility: public
+owner = newOwner
+is an Assignment Operation (Slither line:3216)
+impl
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == owner,Not owner)
+owner = address(0)
+is an Assignment Operation (Slither line:3216)
+impl
+onlyOwner()
+Checking function: constructor() returns() (Slither line:3127)
+
+End CrossDelegateV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CrossDelegateV2 (Slither line:1220)
+Looking for setter in CrossProxy (Slither line:1228)
+
+
+Begin CrossProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+Upgraded(impl)
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+onlyOwner()
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+impl
+
+End CrossProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: CrossProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End CrossDelegateV2.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: SafeMath.add
+library call: BasicStorageLib.getStorage
+library call: CrossTypesV1.transfer
+library call: RapidityLibV2.smgMint
+library call: RapidityTxLib.addRapidityTx
+library call: HTLCDebtLibV2.receiveDebt
+library call: RapidityLibV2.userLock
+library call: CrossTypesV1.transferFrom
+library call: RapidityLibV2.smgRelease
+library call: SafeMath.sub
+library call: BasicStorageLib.delStorage
+library call: RapidityLibV2.userBurn
+library call: CrossTypesV1.bytesToAddress
+library call: BasicStorageLib.setStorage
+library call: HTLCDebtLibV2.transferAsset
+impl_address_from_contract_call: CallExpression require(bool,string)(_impl != address(0),implementation contract not set)
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: arg is implementation contract not set
+Checking public function implementation
+Checking public function setHalt
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function transferOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function changeOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking public function acceptOwnership
+Found 'msg.sender ==' in expression: msg.sender == newOwner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function userLock
+Checking external function userBurn
+Checking external function smgMint
+Checking external function smgRelease
+Checking external function transferAsset
+Checking external function receiveDebt
+Checking public function setFee
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,not admin)
+Checking public function setFees
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,not admin)
+Checking external function setChainID
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,not admin)
+Checking external function setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function setUintValue
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,not admin)
+Checking external function delUintValue
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,not admin)
+Checking external function setPartners
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == owner,Not owner)
+Checking external function smgWithdrawFee
+Checking public function getUintValue
+Checking external function getStoremanFee
+Checking public function getFee
+Checking public function getFees
+Checking external function getPartners
+Checking external function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function CrossDelegateV2.receiveDebt (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setPartners (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.acquireReadySmgInfo (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setFee (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.smgWithdrawFee (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.acquireUnregisteredSmgInfo (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setHalt (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.userLock (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setFees (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.getUintValue (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.bytesToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(impl != address(0),Cannot upgrade to invalid address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == owner,Not owner) (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CrossDelegateV2.userBurn (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setChainID (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.getStoremanFee (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.verifySignature (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.transferOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.smgMint (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.getFee (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.transferOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.smgRelease (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.getFees (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.setUintValue (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.changeOwner (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.transferAsset (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.getPartners (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.delUintValue (proxy_features line:898)
+functions_writing_to_variable: checking function CrossProxy.acceptOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CrossDelegateV2.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_compatibility_checks: condition impl != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != address(0)
+require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_compatibility_checks: condition impl != _implementation
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != _implementation
+require(bool,string)(msg.sender == owner,Not owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = _implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(_impl != address(0),implementation contract not set)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != address(0),Cannot upgrade to invalid address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(impl != _implementation,Cannot upgrade to the same implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Not owner)

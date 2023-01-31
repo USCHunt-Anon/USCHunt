@@ -1,0 +1,356 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBEP20.is_proxy (Slither line:1425)
+
+
+End IBEP20.is_proxy (Slither line:1428)
+
+
+Begin IBEP20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBEP20 
+
+End IBEP20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CommunityVaultAdminStorage.is_proxy (Slither line:1425)
+
+
+End CommunityVaultAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin CommunityVaultAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CommunityVaultAdminStorage 
+
+End CommunityVaultAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CommunityVaultErrorReporter.is_proxy (Slither line:1425)
+
+
+End CommunityVaultErrorReporter.is_proxy (Slither line:1428)
+
+
+Begin CommunityVaultErrorReporter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CommunityVaultErrorReporter 
+
+End CommunityVaultErrorReporter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CommunityVaultProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CommunityVaultProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End CommunityVaultProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin CommunityVaultProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End CommunityVaultProxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End CommunityVaultProxy.is_proxy (Slither line:1476)
+
+
+Begin CommunityVaultProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CommunityVaultProxy 
+CommunityVaultProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in CommunityVaultAdminStorage (Slither line:1204)
+
+
+Begin CommunityVaultAdminStorage.find_setter_in_contract (Slither line:3119)
+
+
+End CommunityVaultAdminStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in CommunityVaultAdminStorage 
+Looking in CommunityVaultProxy (Slither line:1213)
+
+Begin CommunityVaultProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3127)
+Visibility: public
+fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK)
+NewPendingImplementation(oldPendingImplementation,pendingCommunityVaultImplementation)
+Failure(uint256(err),uint256(info),0)
+uint256(Error.NO_ERROR)
+pendingCommunityVaultImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+uint256(err)
+Checking function: _acceptImplementation() returns(uint256) (Slither line:3127)
+Visibility: public
+implementation = pendingCommunityVaultImplementation
+is an Assignment Operation (Slither line:3216)
+
+End CommunityVaultProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _acceptImplementation in contract: CommunityVaultProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CommunityVaultAdminStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingCommunityVaultImplementation
+
+End CommunityVaultAdminStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin CommunityVaultProxy.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingCommunityVaultImplementation
+Checking function: fail (Slither line:2988)
+fail returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(err) (Slither line:3028)
+Checking function: failOpaque (Slither line:2988)
+failOpaque returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(err) (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: _setPendingImplementation (Slither line:2988)
+_setPendingImplementation returns uint256 variable  (Slither line:3008)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (Slither line:3028)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+Checking function: _acceptImplementation (Slither line:2988)
+_acceptImplementation returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (Slither line:3028)
+Checking function: _setPendingAdmin (Slither line:2988)
+_setPendingAdmin returns uint256 variable  (Slither line:3008)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_ADMIN_OWNER_CHECK) (Slither line:3028)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+Checking function: _acceptAdmin (Slither line:2988)
+_acceptAdmin returns uint256 variable  (Slither line:3008)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_ADMIN_PENDING_ADMIN_CHECK) (Slither line:3028)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+
+End CommunityVaultProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in CommunityVaultProxy (Slither line:1305)
+or in CommunityVaultAdminStorage (Slither line:1319)
+
+Begin CommunityVaultStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+pendingCommunityVaultImplementation
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End CommunityVaultStorage.find_getter_in_contract (Slither line:3083)
+
+
+End CommunityVaultProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingCommunityVaultImplementation
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function CommunityVaultProxy.failOpaque (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = msg.sender != pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingCommunityVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingCommunityVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = pendingCommunityVaultImplementation
+functions_writing_to_variable: exp = pendingCommunityVaultImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingCommunityVaultImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingCommunityVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:909)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:909)
+functions_writing_to_variable: _acceptImplementation writes pendingCommunityVaultImplementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CommunityVaultProxy._acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy.fail (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['newPendingImplementation', 'TMP_50', 'pendingCommunityVaultImplementation']
+functions_writing_to_variable: pendingCommunityVaultImplementation
+functions_writing_to_variable: checking function CommunityVaultProxy.failOpaque (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = msg.sender != pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingCommunityVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = pendingCommunityVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingCommunityVaultImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingCommunityVaultImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingCommunityVaultImplementation (proxy_features line:924)
+get_value_assigned: pendingCommunityVaultImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingCommunityVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:909)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:909)
+functions_writing_to_variable: checking function CommunityVaultProxy._acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = msg.sender != admin (proxy_features line:909)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (proxy_features line:909)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingCommunityVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingCommunityVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingCommunityVaultImplementation = newPendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingCommunityVaultImplementation = newPendingImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingCommunityVaultImplementation (proxy_features line:924)
+get_value_assigned: pendingCommunityVaultImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingCommunityVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:909)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:909)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingCommunityVaultImplementation (proxy_features line:929)
+functions_writing_to_variable: checking function CommunityVaultProxy._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy.fail (proxy_features line:898)
+functions_writing_to_variable: checking function CommunityVaultProxy.fallback (proxy_features line:898)
+has_compatibility_checks: checking public function _acceptImplementation
+has_compatibility_checks: IF node exp = msg.sender != pendingCommunityVaultImplementation
+has_compatibility_checks: checking public function _setPendingImplementation
+has_compatibility_checks: IF node exp = msg.sender != admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = pendingCommunityVaultImplementation
+has_time_delay: (node.type) RETURN
+(Expression) uint256(Error.NO_ERROR)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Failure(uint256(err),uint256(info),0)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingCommunityVaultImplementation = address(0)
+has_time_delay: (node.type) IF
+(Expression) msg.sender != pendingCommunityVaultImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingCommunityVaultImplementation
+has_time_delay: (node.type) RETURN
+(Expression) fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingCommunityVaultImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(err)
+
+Begin CommunityVaultStorage.is_proxy (Slither line:1425)
+
+
+End CommunityVaultStorage.is_proxy (Slither line:1428)
+
+
+Begin CommunityVaultStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CommunityVaultStorage 
+
+End CommunityVaultStorage.is_upgradeable_proxy (Slither line:1407)
+

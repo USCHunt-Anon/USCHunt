@@ -1,0 +1,315 @@
+
+Begin Upgradeable.is_proxy (Slither line:1425)
+
+
+End Upgradeable.is_proxy (Slither line:1428)
+
+
+Begin Upgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Upgradeable 
+
+End Upgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Dispatcher.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Dispatcher.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Dispatcher.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Dispatcher.find_delegatecall_in_asm (Slither line:1541)
+
+
+End Dispatcher.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Dispatcher.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()()) (Slither line:2792)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0x0
+0x0
+calldatasize()()
+
+End Dispatcher.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Dispatcher.find_delegatecall_in_exp_node
+
+Found Expression Node: sig = calldataload(uint256)(0) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: calldataload(uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+0
+
+End Dispatcher.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Dispatcher.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,len) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+len
+
+End Dispatcher.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Dispatcher.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,target,0x0,calldatasize()(),0,len) (Slither line:2792)
+Expression Type: = (Slither line:2795)
+Checking right side of assignment expression... (Slither line:2803)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2807)
+Args:
+gas()() - 10000
+target
+0x0
+calldatasize()()
+0
+len
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2814)
+
+Destination is target (Slither line:2818)
+dest.value: target (Slither line:2821)
+Expression: _dest (Slither line:2826)
+
+End Dispatcher.find_delegatecall_in_exp_node (Slither line:2848)
+
+
+End Dispatcher.is_proxy (Slither line:1476)
+
+
+Begin Dispatcher.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Dispatcher 
+Dispatcher is delegating to _dest
+Looking for setter (Slither line:1200)
+
+Looking for setter in Upgradeable (Slither line:1204)
+
+
+Begin Upgradeable.find_setter_in_contract (Slither line:3109)
+
+Checking function: initialize() returns() (Slither line:3117)
+Checking function: replace(address) returns() (Slither line:3117)
+Visibility: public
+_dest = target
+is an Assignment Operation (Slither line:3206)
+
+End Upgradeable.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: replace in contract: Upgradeable (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Upgradeable.find_getter_in_contract (Slither line:2964)
+
+_dest is a Variable object
+target
+Checking function: replace (Slither line:2978)
+
+End Upgradeable.find_getter_in_contract (Slither line:3073)
+
+
+Begin Dispatcher.find_getter_in_contract (Slither line:2964)
+
+_dest is a Variable object
+target
+Checking function: replace (Slither line:2978)
+Checking function: constructor (Slither line:2978)
+Checking function: initialize (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Dispatcher.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Dispatcher (Slither line:1305)
+or in Upgradeable (Slither line:1319)
+
+Begin Example.find_getter_in_contract (Slither line:2964)
+
+_dest is a Variable object
+target
+Checking function: replace (Slither line:2978)
+Checking function: initialize (Slither line:2978)
+Checking function: getUint (Slither line:2978)
+getUint returns uint256 variable  (Slither line:2998)
+RETURN node expression: _value + 5 (Slither line:3018)
+Checking function: setUint (Slither line:2978)
+
+End Example.find_getter_in_contract (Slither line:3073)
+
+
+End Dispatcher.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: target
+impl_address_from_contract_call: StateVariable _dest
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression calldataload(uint256)(0)
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,len)
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is len
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,target,0x0,calldatasize()(),0,len)
+impl_address_from_contract_call: arg is gas()() - 10000
+impl_address_from_contract_call: arg is target
+impl_address_from_contract_call: arg is 0x0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+Checking public function initialize
+Checking public function replace
+Checking public function initialize
+Checking external function fallback
+functions_writing_to_variable: _dest
+functions_writing_to_variable: checking function Upgradeable.initialize (proxy_features line:893)
+functions_writing_to_variable: checking function Dispatcher.initialize (proxy_features line:893)
+functions_writing_to_variable: checking function Upgradeable.replace (proxy_features line:893)
+functions_writing_to_variable: exp = _dest = target (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _dest = target (proxy_features line:907)
+functions_writing_to_variable: Identifier: _dest (proxy_features line:919)
+get_value_assigned: _dest = target
+functions_writing_to_variable: exp = target.delegatecall(abi.encodeWithSelector(bytes4(keccak256(bytes)(initialize())))) (proxy_features line:904)
+functions_writing_to_variable: replace writes target to _dest (proxy_features line:924)
+functions_writing_to_variable: checking function Dispatcher.replace (proxy_features line:893)
+functions_writing_to_variable: exp = _dest = target (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _dest = target (proxy_features line:907)
+functions_writing_to_variable: Identifier: _dest (proxy_features line:919)
+get_value_assigned: _dest = target
+functions_writing_to_variable: exp = target.delegatecall(abi.encodeWithSelector(bytes4(keccak256(bytes)(initialize())))) (proxy_features line:904)
+functions_writing_to_variable: replace writes target to _dest (proxy_features line:924)
+functions_writing_to_variable: checking function Dispatcher.constructor (proxy_features line:893)
+get_value_assigned: _dest = target
+functions_writing_to_variable: constructor writes target to _dest (proxy_features line:1008)
+functions_writing_to_variable: checking function Dispatcher.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Dispatcher.initialize (proxy_features line:893)
+has_compatibility_checks: dependencies: ['target', 'target', 'target']
+has_compatibility_checks: checking public function replace
+has_compatibility_checks: checking public function replace
+has_compatibility_checks: checking public function constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = _dest
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: sig = calldataload(uint256)(0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,target,0x0,calldatasize()(),0,len)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: len = _sizes[sig]
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: initialize
+has_time_delay: (node.type) EXPRESSION
+(Expression) _dest = target
+has_time_delay: (node.type) EXPRESSION
+(Expression) target.delegatecall(abi.encodeWithSelector(bytes4(keccak256(bytes)(initialize()))))
+
+Begin Example.is_proxy (Slither line:1425)
+
+
+End Example.is_proxy (Slither line:1428)
+
+
+Begin Example.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Example 
+
+End Example.is_upgradeable_proxy (Slither line:1407)
+

@@ -1,0 +1,728 @@
+
+Begin SafeMathLib.is_proxy (Slither line:1425)
+
+
+End SafeMathLib.is_proxy (Slither line:1428)
+
+
+Begin SafeMathLib.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMathLib 
+
+End SafeMathLib.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ApproveAndCallFallBack.is_proxy (Slither line:1425)
+
+
+End ApproveAndCallFallBack.is_proxy (Slither line:1428)
+
+
+Begin ApproveAndCallFallBack.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ApproveAndCallFallBack 
+
+End ApproveAndCallFallBack.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GameTesterToken.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2735)
+
+
+Found LowLevelCall (Slither line:2738)
+
+
+Found delegatecall in LowLevelCall (Slither line:2740)
+
+TemporaryVariable TMP_27 expression: address(this) (Slither line:2758)
+
+End Contract.find_delegatecall_in_ir (Slither line:2771)
+
+
+End GameTesterToken.is_proxy (Slither line:1476)
+
+
+Begin GameTesterToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GameTesterToken 
+GameTesterToken is delegating to TMP_27
+Looking for setter (Slither line:1200)
+
+
+Begin GameTesterToken.find_setter_in_contract (Slither line:3117)
+
+Expression: address(this) (Slither line:3120)
+Checking function: GameTesterToken() returns() (Slither line:3125)
+Checking function: fallback() returns() (Slither line:3125)
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+c
+assert(bool)(b <= a)
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+true
+require(bool)(_transfer(msg.sender,_to,_amount))
+require(bool)(_to != address(0))
+assert(bool)(c >= a)
+a - b
+Transfer(_from,_to,_amount)
+require(bool)(balances[_from] >= _amount)
+true
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+assert(bool)(b <= a)
+a - b
+require(bool)(_to != address(0))
+require(bool)(balances[_from] >= _amount)
+require(bool)(balances[_from] >= _amount && allowed[_from][msg.sender] >= _amount)
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(_transfer(_from,_to,_amount))
+Transfer(_from,_to,_amount)
+true
+true
+assert(bool)(c >= a)
+c
+Checking function: approve(address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+allowed[_owner][_spender] = _amount
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(_approve(msg.sender,_spender,_amount))
+Approval(_owner,_spender,_amount)
+true
+true
+Checking function: increaseApproval(address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+require(bool)(_increaseApproval(msg.sender,_spender,_amount))
+Approval(_owner,_spender,allowed[_owner][_spender])
+true
+true
+assert(bool)(c >= a)
+c
+allowed[_owner][_spender] = allowed[_owner][_spender].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+Checking function: decreaseApproval(address,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+require(bool)(_decreaseApproval(msg.sender,_spender,_amount))
+allowed[_owner][_spender] = 0
+is an Assignment Operation (Slither line:3214)
+address(this)
+Approval(_owner,_spender,allowed[_owner][_spender])
+true
+assert(bool)(b <= a)
+true
+allowed[_owner][_spender] = allowed[_owner][_spender].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+a - b
+Checking function: approveAndCall(address,uint256,bytes) returns(bool) (Slither line:3125)
+Visibility: public
+allowed[_owner][_spender] = _amount
+is an Assignment Operation (Slither line:3214)
+address(this)
+ApproveAndCallFallBack(_spender).receiveApproval(msg.sender,_amount,address(this),_data)
+Approval(_owner,_spender,_amount)
+true
+true
+require(bool)(_approve(msg.sender,_spender,_amount))
+Checking function: _transfer(address,address,uint256) returns(bool) (Slither line:3125)
+Visibility: internal
+Checking function: _approve(address,address,uint256) returns(bool) (Slither line:3125)
+Visibility: internal
+Checking function: _increaseApproval(address,address,uint256) returns(bool) (Slither line:3125)
+Visibility: internal
+Checking function: _decreaseApproval(address,address,uint256) returns(bool) (Slither line:3125)
+Visibility: internal
+Checking function: transferPreSigned(bytes,address,uint256,uint256,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+nonces[from] ++
+ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig)
+assert(bool)(b <= a)
+require(bool)(_transfer(from,_to,_value))
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+a - b
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+SignatureRedeemed(_signature,from)
+assert(bool)(a == 0 || c / a == b)
+require(bool)(payload_size >= _size)
+address(0)
+c
+gas = 35000 + gas.sub(gasleft()())
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(_to != address(0))
+require(bool)(_transfer(from,msg.sender,_gasPrice.mul(gas)))
+require(bool)(balances[_from] >= _amount)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+true
+Transfer(_from,_to,_amount)
+validPayload(292)
+address(0)
+true
+keccak256()(Ethereum Signed Message:
+32,_hash)
+require(bool)(from != address(0))
+c
+require(bool)(! invalidSignatures[from][_signature])
+assert(bool)(c >= a)
+invalidSignatures[from][_signature] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+Checking function: approvePreSigned(bytes,address,uint256,uint256,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+validPayload(292)
+ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig)
+assert(bool)(b <= a)
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(from != address(0))
+a - b
+require(bool)(! invalidSignatures[from][_signature])
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+invalidSignatures[from][_signature] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+assert(bool)(a == 0 || c / a == b)
+require(bool)(payload_size >= _size)
+address(0)
+nonces[from] ++
+c
+require(bool)(_to != address(0))
+require(bool)(_approve(from,_to,_value))
+require(bool)(balances[_from] >= _amount)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+SignatureRedeemed(_signature,from)
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+Transfer(_from,_to,_amount)
+gas = 35000 + gas.sub(gasleft()())
+is an Assignment Operation (Slither line:3214)
+address(this)
+address(0)
+true
+require(bool)(_transfer(from,msg.sender,_gasPrice.mul(gas)))
+allowed[_owner][_spender] = _amount
+is an Assignment Operation (Slither line:3214)
+address(this)
+keccak256()(Ethereum Signed Message:
+32,_hash)
+c
+Approval(_owner,_spender,_amount)
+assert(bool)(c >= a)
+true
+true
+Checking function: increaseApprovalPreSigned(bytes,address,uint256,uint256,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+gas = 35000 + gas.sub(gasleft()())
+is an Assignment Operation (Slither line:3214)
+address(this)
+ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig)
+assert(bool)(b <= a)
+require(bool)(_transfer(from,msg.sender,_gasPrice.mul(gas)))
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+a - b
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+true
+assert(bool)(a == 0 || c / a == b)
+require(bool)(payload_size >= _size)
+validPayload(292)
+address(0)
+c
+require(bool)(_to != address(0))
+require(bool)(balances[_from] >= _amount)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+require(bool)(from != address(0))
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(! invalidSignatures[from][_signature])
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+invalidSignatures[from][_signature] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+Transfer(_from,_to,_amount)
+nonces[from] ++
+allowed[_owner][_spender] = allowed[_owner][_spender].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+address(0)
+true
+require(bool)(_increaseApproval(from,_to,_value))
+Approval(_owner,_spender,allowed[_owner][_spender])
+keccak256()(Ethereum Signed Message:
+32,_hash)
+c
+true
+assert(bool)(c >= a)
+SignatureRedeemed(_signature,from)
+Checking function: decreaseApprovalPreSigned(bytes,address,uint256,uint256,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+nonces[from] ++
+ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig)
+assert(bool)(b <= a)
+require(bool)(_decreaseApproval(from,_to,_value))
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+a - b
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+SignatureRedeemed(_signature,from)
+allowed[_owner][_spender] = 0
+is an Assignment Operation (Slither line:3214)
+address(this)
+assert(bool)(a == 0 || c / a == b)
+require(bool)(payload_size >= _size)
+address(0)
+gas = 35000 + gas.sub(gasleft()())
+is an Assignment Operation (Slither line:3214)
+address(this)
+c
+require(bool)(_to != address(0))
+allowed[_owner][_spender] = allowed[_owner][_spender].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(_transfer(from,msg.sender,_gasPrice.mul(gas)))
+require(bool)(balances[_from] >= _amount)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+Approval(_owner,_spender,allowed[_owner][_spender])
+true
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+true
+validPayload(292)
+Transfer(_from,_to,_amount)
+address(0)
+true
+require(bool)(from != address(0))
+keccak256()(Ethereum Signed Message:
+32,_hash)
+c
+require(bool)(! invalidSignatures[from][_signature])
+assert(bool)(c >= a)
+invalidSignatures[from][_signature] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+Checking function: approveAndCallPreSigned(bytes,address,uint256,bytes,uint256,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig)
+validPayload(356)
+assert(bool)(b <= a)
+require(bool)(from != address(0))
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+a - b
+require(bool)(! invalidSignatures[from][_signature])
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+invalidSignatures[from][_signature] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+assert(bool)(a == 0 || c / a == b)
+require(bool)(payload_size >= _size)
+nonces[from] ++
+address(0)
+c
+require(bool)(_to != address(0))
+require(bool)(_approve(from,_to,_value))
+require(bool)(balances[_from] >= _amount)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+ApproveAndCallFallBack(_to).receiveApproval(from,_value,address(this),_extraData)
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+SignatureRedeemed(_signature,from)
+Transfer(_from,_to,_amount)
+address(0)
+true
+gas = 35000 + gas.sub(gasleft()())
+is an Assignment Operation (Slither line:3214)
+address(this)
+allowed[_owner][_spender] = _amount
+is an Assignment Operation (Slither line:3214)
+address(this)
+keccak256()(Ethereum Signed Message:
+32,_hash)
+require(bool)(_transfer(from,msg.sender,_gasPrice.mul(gas)))
+c
+Approval(_owner,_spender,_amount)
+assert(bool)(c >= a)
+true
+true
+Checking function: revokeSignature(bytes) returns(bool) (Slither line:3125)
+Visibility: public
+SignatureRedeemed(_sigToRevoke,msg.sender)
+true
+invalidSignatures[msg.sender][_sigToRevoke] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+Checking function: revokeSignaturePreSigned(bytes,bytes,uint256) returns(bool) (Slither line:3125)
+Visibility: public
+require(bool)(! invalidSignatures[from][_signature])
+assert(bool)(b <= a)
+invalidSignatures[from][_signature] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+a - b
+keccak256()(revokeSignatureSig,_sigToRevoke,_gasPrice)
+invalidSignatures[from][_sigToRevoke] = true
+is an Assignment Operation (Slither line:3214)
+address(this)
+assert(bool)(a == 0 || c / a == b)
+SignatureRedeemed(_signature,from)
+require(bool)(payload_size >= _size)
+address(0)
+c
+require(bool)(_to != address(0))
+gas = 35000 + gas.sub(gasleft()())
+is an Assignment Operation (Slither line:3214)
+address(this)
+require(bool)(balances[_from] >= _amount)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+require(bool)(_transfer(from,msg.sender,_gasPrice.mul(gas)))
+balances[_from] = balances[_from].sub(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+balances[_to] = balances[_to].add(_amount)
+is an Assignment Operation (Slither line:3214)
+address(this)
+true
+ecrecoverFromSig(getSignHash(getRevokeHash(_sigToRevoke,_gasPrice)),_signature)
+Transfer(_from,_to,_amount)
+address(0)
+true
+validPayload(356)
+keccak256()(Ethereum Signed Message:
+32,_hash)
+c
+assert(bool)(c >= a)
+Checking function: getRevokeHash(bytes,uint256) returns(bytes32) (Slither line:3125)
+Visibility: public
+keccak256()(revokeSignatureSig,_sigToRevoke,_gasPrice)
+Checking function: recoverRevokeHash(bytes,bytes,uint256) returns(address) (Slither line:3125)
+Visibility: public
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+keccak256()(revokeSignatureSig,_sigToRevoke,_gasPrice)
+address(0)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+ecrecoverFromSig(getSignHash(getRevokeHash(_sigToRevoke,_gasPrice)),_signature)
+address(0)
+keccak256()(Ethereum Signed Message:
+32,_hash)
+Checking function: getPreSignedHash(bytes4,address,uint256,bytes,uint256,uint256) returns(bytes32) (Slither line:3125)
+Visibility: public
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+Checking function: recoverPreSigned(bytes,bytes4,address,uint256,bytes,uint256,uint256) returns(address) (Slither line:3125)
+Visibility: public
+ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig)
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce)
+address(0)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+address(0)
+keccak256()(Ethereum Signed Message:
+32,_hash)
+Checking function: getSignHash(bytes32) returns(bytes32) (Slither line:3125)
+Visibility: public
+keccak256()(Ethereum Signed Message:
+32,_hash)
+Checking function: ecrecoverFromSig(bytes32,bytes) returns(address) (Slither line:3125)
+Visibility: public
+ecrecoverFromSig contains assembly (Slither line:3151)
+address(0)
+v += 27
+is an Assignment Operation (Slither line:3214)
+address(this)
+address(0)
+ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s)
+Checking function: getNonce(address) returns(uint256) (Slither line:3125)
+Visibility: external
+nonces[_owner]
+Checking function: totalSupply() returns(uint256) (Slither line:3125)
+Visibility: external
+_totalSupply
+Checking function: balanceOf(address) returns(uint256) (Slither line:3125)
+Visibility: external
+balances[_owner]
+Checking function: allowance(address,address) returns(uint256) (Slither line:3125)
+Visibility: external
+allowed[_owner][_spender]
+Checking function: token_escape(address) returns() (Slither line:3125)
+Visibility: external
+onlyOwner()
+require(bool)(msg.sender == owner)
+lostToken.transfer(owner,stuckTokens)
+Checking function: updateStandard(bytes4,bytes4) returns(bool) (Slither line:3125)
+Visibility: external
+standardSigs[_standardSig] = _ourSig
+is an Assignment Operation (Slither line:3214)
+address(this)
+true
+require(bool)(msg.sender == owner)
+onlyOwner()
+require(bool)(_ourSig == 0x1296830d || _ourSig == 0x617b390b || _ourSig == 0xadb8249e || _ourSig == 0x8be52783 || _ourSig == 0xc8d4b389 || _ourSig == 0xe391a7c4)
+Checking function: slitherConstructorVariables() returns() (Slither line:3125)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3125)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3125)
+Checking function: transferOwnership(address) returns() (Slither line:3125)
+Visibility: public
+require(bool)(newOwner != address(0))
+onlyOwner()
+OwnershipTransferred(owner,newOwner)
+require(bool)(msg.sender == owner)
+owner = newOwner
+is an Assignment Operation (Slither line:3214)
+address(this)
+
+End GameTesterToken.find_setter_in_contract (Slither line:3343)
+
+
+Could not find implementation setter in GameTesterToken (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin GameTesterToken.find_getter_in_contract (Slither line:2972)
+
+TMP_27 is a Variable object
+address(this)
+Checking function: constructor (Slither line:2986)
+Checking function: transferOwnership (Slither line:2986)
+Checking function: GameTesterToken (Slither line:2986)
+Checking function: fallback (Slither line:2986)
+Checking function: transfer (Slither line:2986)
+transfer returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: transferFrom (Slither line:2986)
+transferFrom returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: approve (Slither line:2986)
+approve returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: increaseApproval (Slither line:2986)
+increaseApproval returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: decreaseApproval (Slither line:2986)
+decreaseApproval returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: approveAndCall (Slither line:2986)
+approveAndCall returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: _transfer (Slither line:2986)
+_transfer returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: _approve (Slither line:2986)
+_approve returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: _increaseApproval (Slither line:2986)
+_increaseApproval returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: _decreaseApproval (Slither line:2986)
+_decreaseApproval returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: transferPreSigned (Slither line:2986)
+transferPreSigned returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: approvePreSigned (Slither line:2986)
+approvePreSigned returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: increaseApprovalPreSigned (Slither line:2986)
+increaseApprovalPreSigned returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: decreaseApprovalPreSigned (Slither line:2986)
+decreaseApprovalPreSigned returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: approveAndCallPreSigned (Slither line:2986)
+approveAndCallPreSigned returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: revokeSignature (Slither line:2986)
+revokeSignature returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: revokeSignaturePreSigned (Slither line:2986)
+revokeSignaturePreSigned returns bool variable  (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: getRevokeHash (Slither line:2986)
+getRevokeHash returns bytes32 variable called txHash (Slither line:3006)
+RETURN node expression: keccak256()(revokeSignatureSig,_sigToRevoke,_gasPrice) (Slither line:3026)
+Checking function: recoverRevokeHash (Slither line:2986)
+recoverRevokeHash returns address variable called from (Slither line:3006)
+RETURN node expression: ecrecoverFromSig(getSignHash(getRevokeHash(_sigToRevoke,_gasPrice)),_signature) (Slither line:3026)
+Checking function: getPreSignedHash (Slither line:2986)
+getPreSignedHash returns bytes32 variable called txHash (Slither line:3006)
+RETURN node expression: keccak256()(address(this),_function,_to,_value,_extraData,_gasPrice,_nonce) (Slither line:3026)
+Checking function: recoverPreSigned (Slither line:2986)
+recoverPreSigned returns address variable called recovered (Slither line:3006)
+RETURN node expression: ecrecoverFromSig(getSignHash(getPreSignedHash(_function,_to,_value,_extraData,_gasPrice,_nonce)),_sig) (Slither line:3026)
+Checking function: getSignHash (Slither line:2986)
+getSignHash returns bytes32 variable called signHash (Slither line:3006)
+RETURN node expression: keccak256()(Ethereum Signed Message:
+32,_hash) (Slither line:3026)
+Checking function: ecrecoverFromSig (Slither line:2986)
+ecrecoverFromSig returns address variable called recoveredAddress (Slither line:3006)
+RETURN node expression: address(0) (Slither line:3026)
+RETURN node expression: address(0) (Slither line:3026)
+RETURN node expression: ecrecover(bytes32,uint8,bytes32,bytes32)(hash,v,r,s) (Slither line:3026)
+Checking function: getNonce (Slither line:2986)
+getNonce returns uint256 variable called nonce (Slither line:3006)
+RETURN node expression: nonces[_owner] (Slither line:3026)
+Checking function: totalSupply (Slither line:2986)
+totalSupply returns uint256 variable  (Slither line:3006)
+RETURN node expression: _totalSupply (Slither line:3026)
+Checking function: balanceOf (Slither line:2986)
+balanceOf returns uint256 variable  (Slither line:3006)
+RETURN node expression: balances[_owner] (Slither line:3026)
+Checking function: allowance (Slither line:2986)
+allowance returns uint256 variable  (Slither line:3006)
+RETURN node expression: allowed[_owner][_spender] (Slither line:3026)
+Checking function: token_escape (Slither line:2986)
+Checking function: updateStandard (Slither line:2986)
+updateStandard returns bool variable called success (Slither line:3006)
+RETURN node expression: true (Slither line:3026)
+Checking function: slitherConstructorVariables (Slither line:2986)
+Checking function: slitherConstructorConstantVariables (Slither line:2986)
+
+End GameTesterToken.find_getter_in_contract (Slither line:3081)
+
+Could not find implementation getter in GameTesterToken (Slither line:1305)
+
+Begin SafeMathLib.find_getter_in_contract (Slither line:2972)
+
+TMP_27 is a Variable object
+address(this)
+Checking function: mul (Slither line:2986)
+mul returns uint256 variable  (Slither line:3006)
+RETURN node expression: c (Slither line:3026)
+Checking function: div (Slither line:2986)
+div returns uint256 variable  (Slither line:3006)
+RETURN node expression: c (Slither line:3026)
+Checking function: sub (Slither line:2986)
+sub returns uint256 variable  (Slither line:3006)
+RETURN node expression: a - b (Slither line:3026)
+Checking function: add (Slither line:2986)
+add returns uint256 variable  (Slither line:3006)
+RETURN node expression: c (Slither line:3026)
+
+End SafeMathLib.find_getter_in_contract (Slither line:3081)
+
+
+Begin SafeMathLib.find_setter_in_contract (Slither line:3117)
+
+Expression: address(this) (Slither line:3120)
+Checking function: mul(uint256,uint256) returns(uint256) (Slither line:3125)
+Visibility: internal
+Checking function: div(uint256,uint256) returns(uint256) (Slither line:3125)
+Visibility: internal
+Checking function: sub(uint256,uint256) returns(uint256) (Slither line:3125)
+Visibility: internal
+Checking function: add(uint256,uint256) returns(uint256) (Slither line:3125)
+Visibility: internal
+
+End SafeMathLib.find_setter_in_contract (Slither line:3343)
+
+
+Begin Ownable.find_getter_in_contract (Slither line:2972)
+
+TMP_27 is a Variable object
+address(this)
+Checking function: constructor (Slither line:2986)
+Checking function: transferOwnership (Slither line:2986)
+
+End Ownable.find_getter_in_contract (Slither line:3081)
+
+
+Begin Ownable.find_setter_in_contract (Slither line:3117)
+
+Expression: address(this) (Slither line:3120)
+Checking function: constructor() returns() (Slither line:3125)
+Checking function: transferOwnership(address) returns() (Slither line:3125)
+Visibility: public
+require(bool)(newOwner != address(0))
+onlyOwner()
+OwnershipTransferred(owner,newOwner)
+require(bool)(msg.sender == owner)
+owner = newOwner
+is an Assignment Operation (Slither line:3214)
+address(this)
+
+End Ownable.find_setter_in_contract (Slither line:3343)
+
+
+Begin ApproveAndCallFallBack.find_getter_in_contract (Slither line:2972)
+
+TMP_27 is a Variable object
+address(this)
+
+End ApproveAndCallFallBack.find_getter_in_contract (Slither line:3081)
+
+
+Begin ApproveAndCallFallBack.find_setter_in_contract (Slither line:3117)
+
+Expression: address(this) (Slither line:3120)
+Checking function: receiveApproval(address,uint256,address,bytes) returns() (Slither line:3125)
+Visibility: public
+
+End ApproveAndCallFallBack.find_setter_in_contract (Slither line:3343)
+
+
+End GameTesterToken.is_upgradeable_proxy (Slither line:1407)
+

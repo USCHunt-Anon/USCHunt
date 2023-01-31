@@ -1,0 +1,316 @@
+
+Begin Upgradeable.is_proxy (Slither line:1425)
+
+
+End Upgradeable.is_proxy (Slither line:1428)
+
+
+Begin Upgradeable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Upgradeable 
+
+End Upgradeable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeableMaster.is_proxy (Slither line:1425)
+
+
+End UpgradeableMaster.is_proxy (Slither line:1428)
+
+
+Begin UpgradeableMaster.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeableMaster 
+
+End UpgradeableMaster.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr__fallback_asm_0,0x0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr__fallback_asm_0
+0x0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_target,ptr__fallback_asm_0,calldatasize()(),0x0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+_target
+ptr__fallback_asm_0
+calldatasize()()
+0x0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is _target (Slither line:2828)
+dest.value: _target (Slither line:2831)
+Expression: getTarget() (Slither line:2836)
+
+Begin Proxy.find_delegate_from_call_exp
+
+getTarget() (Slither line:2003)
+called = getTarget (Slither line:2010)
+AssignmentOperation: target = sload(uint256)(position) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: targetPosition (Slither line:2140)
+getTarget returns a variable of type address   called target (Slither line:2193)
+getTarget contains assembly - looking for sload (Slither line:2199)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: targetPosition (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination targetPosition is constant (Slither line:1146)
+
+targetPosition is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to targetPosition
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,bytes) returns() (Slither line:3127)
+Checking function: initialize(bytes) returns() (Slither line:3127)
+Checking function: upgrade(bytes) returns() (Slither line:3127)
+Visibility: external
+revert(string)(upg11)
+Checking function: getTarget() returns(address) (Slither line:3127)
+Visibility: public
+getTarget contains assembly (Slither line:3153)
+target = sload(uint256)(position)
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: setTarget(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: upgradeTarget(address,bytes) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(upgradeSuccess,ufu11)
+require(bool,string)(_address == getMaster(),1c)
+(upgradeSuccess) = getTarget().delegatecall(abi.encodeWithSignature(upgrade(bytes),newTargetUpgradeParameters))
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+sstore(uint256,uint256)(position,_newTarget)
+sstore(uint256,uint256)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTarget in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+targetPosition is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: constructor (Slither line:2988)
+Checking function: requireMaster (Slither line:2988)
+Checking function: getMaster (Slither line:2988)
+getMaster returns address variable called master (Slither line:3008)
+getMaster contains assembly (Slither line:3051)
+getMaster contains assembly (Slither line:3051)
+getMaster contains assembly (Slither line:3051)
+getMaster contains assembly (Slither line:3051)
+Checking function: setMaster (Slither line:2988)
+Checking function: transferMastership (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: initialize (Slither line:2988)
+Checking function: upgrade (Slither line:2988)
+Checking function: getTarget (Slither line:2988)
+getTarget returns address variable called target (Slither line:3008)
+getTarget contains assembly (Slither line:3051)
+getTarget contains assembly (Slither line:3051)
+getTarget contains assembly (Slither line:3051)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getTarget in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: Proxy
+Setter found in contract Proxy
+Checking public function getMaster
+Checking external function transferMastership
+Checking external function getNoticePeriod
+Checking external function upgradeNoticePeriodStarted
+Checking external function upgradePreparationStarted
+Checking external function upgradeCanceled
+Checking external function upgradeFinishes
+Checking external function isReadyForUpgrade
+Checking external function upgradeTarget
+Checking external function initialize
+Checking external function upgrade
+Checking public function getTarget
+Checking external function upgradeTarget
+Checking external function getNoticePeriod
+Checking external function upgradeNoticePeriodStarted
+Checking external function upgradePreparationStarted
+Checking external function upgradeCanceled
+Checking external function upgradeFinishes
+Checking external function isReadyForUpgrade
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: targetPosition
+functions_writing_to_variable: checking function Proxy.upgrade (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getNoticePeriod (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.isReadyForUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getTarget (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.requireMaster (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getNoticePeriod (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeNoticePeriodStarted (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTarget (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.setTarget (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newTarget)
+functions_writing_to_variable: setTarget writes _newTarget to targetPosition using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Proxy.upgradePreparationStarted (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.getMaster (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeNoticePeriodStarted (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTarget (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newTarget)
+functions_writing_to_variable: upgradeTarget writes _newTarget to targetPosition using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Proxy.upgradeCanceled (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(position,_newTarget)
+functions_writing_to_variable: constructor writes _newTarget to targetPosition using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function Proxy.setMaster (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradePreparationStarted (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeFinishes (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = masterPosition = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: masterPosition = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: exp = targetPosition = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: targetPosition = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: targetPosition (proxy_features line:924)
+get_value_assigned: targetPosition = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeCanceled (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.isReadyForUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.transferMastership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeFinishes (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function setTarget
+has_compatibility_checks: checking external function upgradeTarget
+require(bool,string)(upgradeSuccess,ufu11)
+has_compatibility_checks: condition upgradeSuccess
+check_condition_from_expression: Identifier upgradeSuccess
+require(bool,string)(_address == getMaster(),1c)
+has_compatibility_checks: condition _address == getMaster()
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr__fallback_asm_0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr__fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _target = getTarget()
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_target,ptr__fallback_asm_0,calldatasize()(),0x0,0)
+Found public function: constructor
+Found public function: getMaster
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(upgradeSuccess,ufu11)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_address == getMaster(),1c)
+has_time_delay: (node.type) EXPRESSION
+(Expression) (upgradeSuccess) = getTarget().delegatecall(abi.encodeWithSignature(upgrade(bytes),newTargetUpgradeParameters))
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = targetPosition
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = targetPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(position,_newTarget)
+has_time_delay: (node.type) EXPRESSION
+(Expression) target = sload(uint256)(position)
+has_time_delay: (node.type) EXPRESSION
+(Expression) requireMaster(msg.sender)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) position = masterPosition
+has_time_delay: (node.type) EXPRESSION
+(Expression) master = sload(uint256)(position)
+has_time_delay: (node.type) EXPRESSION
+(Expression) setTarget(newTarget)

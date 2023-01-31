@@ -1,0 +1,97 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#139-209)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#139-209) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#712-730)",
+        "elements": [],
+        "description": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#712-730) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1822 using slot from ERC-1967 (i.e. OpenZeppelin UUPS)\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete upgradeTo from UUPSUpgradeable\n",
+        "id": "0fdade1076e4386907a2b7b2a4699b920ea127daf6e5a1a5cd6cf6bd49e4a895",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "UUPSUpgradeable.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "ERC1967Proxy (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#712-730)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "eip_1822": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UUPSUpgradeable.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from UUPSUpgradeable"
+        }
+      },
+      {
+        "contract": "NDCFrontGate (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#787-799)",
+        "elements": [],
+        "description": "NDCFrontGate (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#787-799) is an upgradeable proxy.\nStorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\nFound compatibility checks in all upgrade functions.\n",
+        "id": "89567b9ce9a6bad10418d27e8a36a7e4ed6f53d225ed3f2a4f80ae2b244a4157",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ERC1967Upgrade._getImplementation().StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value",
+          "impl_address_setter": "UUPSUpgradeable.upgradeTo(address)",
+          "impl_address_getter": "ERC1967Upgrade._getImplementation()",
+          "impl_address_location": "NDCFrontGate (../../smart-contract-sanctuary/bsc/contracts/mainnet/proxies/0.8.4/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol/ce4bcfb7bc9258172d41fa9bc1ba187efff7cea4_NDCFrontGate.sol#787-799)",
+          "impl_address_scope": "LocalVariable",
+          "impl_address_type": "address",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UUPSUpgradeable.upgradeTo(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              },
+              "UUPSUpgradeable.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,ERC1967: new implementation is not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)",
+              "owner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+
+Begin Receiver.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Receiver.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(string)(not payable) (Slither line:2802)
+Expression called: revert(string)
+Type of call: tuple() (Slither line:2817)
+Args:
+not payable
+
+End Receiver.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Receiver.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    switch calldatasize() (Slither line:1576)
+    case 0 { (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        let free_ptr := mload(0x40) (Slither line:1576)
+        calldatacopy(free_ptr, 0, calldatasize()) (Slither line:1576)
+        let result := delegatecall(gas(), caller(), free_ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'free_ptr'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Receiver.find_delegate_variable_from_name
+Searching for free_ptr (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementation (Slither line:1689)
+Checking isPayable (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+
+End Receiver.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin Receiver.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End Receiver.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Receiver.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Receiver.find_delegatecall_in_exp_node
+
+Found Expression Node: LogPaymentReceived(msg.sender,msg.value) (Slither line:2802)
+Expression called: LogPaymentReceived
+Type of call: tuple() (Slither line:2817)
+Args:
+msg.sender
+msg.value
+
+End Receiver.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End Receiver.is_proxy (Slither line:1476)
+
+
+Begin Receiver.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Receiver 
+
+End Receiver.is_upgradeable_proxy (Slither line:1407)
+

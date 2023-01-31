@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "ManagerProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.1/baf7B5D32e8e9b17aB5fB14a8b4482A221deEd68_Manager.sol/baf7B5D32e8e9b17aB5fB14a8b4482A221deEd68_Manager.sol#360-481)",
+        "elements": [],
+        "description": "ManagerProxy (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.1/baf7B5D32e8e9b17aB5fB14a8b4482A221deEd68_Manager.sol/baf7B5D32e8e9b17aB5fB14a8b4482A221deEd68_Manager.sol#360-481) is an upgradeable proxy.\nmanagerImplementation was found in a different contract.\nmanagerImplementation is an address state variable.\n uses Inherited Storage\nMissing compatibility check in ManagerProxy._setPendingImplementation(address)\nFound compatibility check in ManagerProxy._acceptImplementation()\n",
+        "id": "2c3085ed1281f2d1221b0043647eb2fd81b53c1e3513ef37ada91e16d49b96cf",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ManagerStorage.managerImplementation",
+          "impl_address_setter": "ManagerProxy._acceptImplementation()",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ManagerStorage (../../smart-contract-sanctuary/ethereum/contracts/rinkeby/sorted/0.8.1/baf7B5D32e8e9b17aB5fB14a8b4482A221deEd68_Manager.sol/baf7B5D32e8e9b17aB5fB14a8b4482A221deEd68_Manager.sol#27-48)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "inherited_storage": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "ManagerProxy._setPendingImplementation(address)": "missing",
+              "ManagerProxy._acceptImplementation()": "require(bool,string)(msg.sender == pendingManagerImplementation && pendingManagerImplementation != address(0),illegal pendingManagerImplementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "_setPendingImplementation(address)",
+              "_acceptImplementation()",
+              "_setPendingAdmin(address)",
+              "_acceptAdmin()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#27-85)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#27-85) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#96-154)",
+        "elements": [],
+        "description": "UpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#96-154) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "6498cef87413584e0151e2db149e748f6a8bbf5f5e1bfa6a9d5cf68d98a5879e",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "TransparentUpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#177-297)",
+        "elements": [],
+        "description": "TransparentUpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#177-297) is an upgradeable proxy.\n_IMPLEMENTATION_SLOT was found in a different contract.\n uses Unstructured Storage\n uses non-standard slot: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbf\nFound compatibility checks in all upgrade functions.\n",
+        "id": "2fb1389b852cced8d42730ec93a89c340347e3c1755aa22040b2970548efafd4",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeableProxy._IMPLEMENTATION_SLOT",
+          "impl_address_setter": "TransparentUpgradeableProxy.upgradeTo(address)",
+          "impl_address_getter": "UpgradeableProxy._implementation()",
+          "impl_address_location": "UpgradeableProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol/2992B85c6116Dfc52e7CC9e4d956d8326C8Ad1F5_TransparentUpgradeableProxy.sol#96-154)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbf",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TransparentUpgradeableProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(implementation != newImplementation,Proxy: Attemps update proxy with the same implementation)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.constructor(address,address)": {
+                "check": "require(bool,string)(implementation != newImplementation,Proxy: Attemps update proxy with the same implementation)",
+                "is_correct": true
+              },
+              "TransparentUpgradeableProxy.upgradeToAndCall(address,bytes)": {
+                "check": "require(bool,string)(implementation != newImplementation,Proxy: Attemps update proxy with the same implementation)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "admin()",
+              "implementation()",
+              "changeAdmin(address)",
+              "upgradeTo(address)",
+              "upgradeToAndCall(address,bytes)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

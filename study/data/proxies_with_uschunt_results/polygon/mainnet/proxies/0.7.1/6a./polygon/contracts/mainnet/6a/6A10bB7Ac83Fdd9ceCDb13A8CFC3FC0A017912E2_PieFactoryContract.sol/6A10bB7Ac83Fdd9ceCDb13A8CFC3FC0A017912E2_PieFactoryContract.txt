@@ -1,0 +1,1485 @@
+
+Begin ICallFacet.is_proxy (Slither line:1425)
+
+
+End ICallFacet.is_proxy (Slither line:1428)
+
+
+Begin ICallFacet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ICallFacet 
+
+End ICallFacet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20Facet.is_proxy (Slither line:1425)
+
+
+End IERC20Facet.is_proxy (Slither line:1428)
+
+
+Begin IERC20Facet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20Facet 
+
+End IERC20Facet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBasketFacet.is_proxy (Slither line:1425)
+
+
+End IBasketFacet.is_proxy (Slither line:1428)
+
+
+Begin IBasketFacet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBasketFacet 
+
+End IBasketFacet.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC173.is_proxy (Slither line:1425)
+
+
+End IERC173.is_proxy (Slither line:1428)
+
+
+Begin IERC173.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC173 
+
+End IERC173.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IExperiPie.is_proxy (Slither line:1425)
+
+
+End IExperiPie.is_proxy (Slither line:1428)
+
+
+Begin IExperiPie.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IExperiPie 
+
+End IExperiPie.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PProxyStorage.is_proxy (Slither line:1425)
+
+
+End PProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin PProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PProxyStorage 
+
+End PProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PProxy.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin PProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(ptr_internalFallback_asm_0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_internalFallback_asm_0
+0
+calldatasize()()
+
+End PProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin PProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result_internalFallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractAddr,ptr_internalFallback_asm_0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+contractAddr
+ptr_internalFallback_asm_0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is contractAddr (Slither line:2828)
+dest.value: contractAddr (Slither line:2831)
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:2836)
+
+Begin PProxy.find_delegate_from_call_exp
+
+readAddress(IMPLEMENTATION_SLOT) (Slither line:2003)
+called = readAddress (Slither line:2010)
+Return node of function PProxyStorage.readAddress(bytes32): RETURN bytes32ToAddress(storageRead(_key)) (Slither line:2041)
+Encountered call expression at RETURN node: bytes32ToAddress(storageRead(_key)) (Slither line:2053)
+Recursively calling PProxy.find_delegate_from_call_exp (Slither line:2073)
+
+Begin PProxy.find_delegate_from_call_exp
+
+bytes32ToAddress(storageRead(_key)) (Slither line:2003)
+called = bytes32ToAddress (Slither line:2010)
+Return node of function PProxyStorage.bytes32ToAddress(bytes32): RETURN address(uint160(uint256(_value))) (Slither line:2041)
+bytes32ToAddress returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End PProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Recursive PProxy.find_delegate_from_call_exp returned None (Slither line:2077)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2100)
+
+End PProxy.find_delegate_from_call_exp (Slither line:2104)
+
+
+End PProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End PProxy.is_proxy (Slither line:1476)
+
+
+Begin PProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PProxy 
+Local Variable: contractAddr (Slither line:1164)
+PProxy is delegating to contractAddr
+Looking for setter (Slither line:1200)
+
+
+Begin PProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: readAddress(IMPLEMENTATION_SLOT) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: getProxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+readAddress(OWNER_SLOT)
+address(uint160(uint256(_value)))
+value
+Checking function: setProxyOwner(address) returns() (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+bytes32(uint256(_value))
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),PProxy.onlyProxyOwner: msg sender not owner)
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+setAddress(OWNER_SLOT,_newOwner)
+onlyProxyOwner()
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+value
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+bytes32(uint256(_value))
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),PProxy.onlyProxyOwner: msg sender not owner)
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+setAddress(IMPLEMENTATION_SLOT,_newImplementation)
+onlyProxyOwner()
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: internalFallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: readBool(bytes32) returns(bool) (Slither line:3127)
+Visibility: public
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+storageRead(_key) == bytes32(uint256(1))
+value
+Checking function: setBool(bytes32,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: readAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+value
+Checking function: setAddress(bytes32,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: storageRead(bytes32) returns(bytes32) (Slither line:3127)
+Visibility: public
+storageRead contains assembly (Slither line:3153)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+readAddress(IMPLEMENTATION_SLOT)
+value
+Checking function: storageSet(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: bytes32ToAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+Checking function: addressToBytes32(address) returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(uint256(_value))
+
+End PProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in PProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin PProxy.find_getter_in_contract (Slither line:2974)
+
+contractAddr is a Variable object
+readAddress(IMPLEMENTATION_SLOT)
+Checking function: readBool (Slither line:2988)
+readBool returns bool variable  (Slither line:3008)
+RETURN node expression: storageRead(_key) == bytes32(uint256(1)) (Slither line:3028)
+Checking function: setBool (Slither line:2988)
+Checking function: readAddress (Slither line:2988)
+
+readAddress appears to be the implementation getter (Slither line:2993)
+
+
+End PProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: readAddress in contract: PProxy (Slither line:1285)
+
+Begin PProxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: bytes32ToAddress(storageRead(_key)) (Slither line:2888)
+
+End PProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: PProxy
+contractAddr is dependent on IMPLEMENTATION_SLOT
+contractAddr is dependent on OWNER_SLOT
+impl_address_from_contract_call: readAddress(IMPLEMENTATION_SLOT)
+called: readAddress
+readAddress returns bytes32ToAddress(storageRead(_key))
+called: bytes32ToAddress
+bytes32ToAddress returns address(uint160(uint256(_value)))
+Checking public function readBool
+Checking public function readAddress
+Checking public function storageRead
+Checking public function bytes32ToAddress
+Checking public function addressToBytes32
+Checking public function getProxyOwner
+Checking public function setProxyOwner
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),PProxy.onlyProxyOwner: msg sender not owner)
+Checking public function getImplementation
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == readAddress(OWNER_SLOT),PProxy.onlyProxyOwner: msg sender not owner)
+Checking external function fallback
+functions_writing_to_variable: contractAddr
+functions_writing_to_variable: checking function PProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setBool (proxy_features line:898)
+has_compatibility_checks: dependencies: ['IMPLEMENTATION_SLOT', 'value', '_key', '_key', 'TMP_37', 'OWNER_SLOT', '', 'TMP_32', '_key', '', 'TMP_38', 'TMP_35', 'TMP_31', '_value', 'TMP_50', '', 'TMP_39']
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function PProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.internalFallback (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT))
+functions_writing_to_variable: exp = OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: checking function PProxy.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setBool (proxy_features line:898)
+functions_writing_to_variable: OWNER_SLOT
+functions_writing_to_variable: checking function PProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.readAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.internalFallback (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.readBool (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = keccak256(bytes)(abi.encodePacked(IMPLEMENTATION_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: exp = OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT)) (proxy_features line:912)
+functions_writing_to_variable: Identifier: OWNER_SLOT (proxy_features line:924)
+get_value_assigned: OWNER_SLOT = keccak256(bytes)(abi.encodePacked(OWNER_SLOT))
+functions_writing_to_variable: checking function PProxy.bytes32ToAddress (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.getProxyOwner (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.storageSet (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.storageRead (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.addressToBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function PProxy.setBool (proxy_features line:898)
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_internalFallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_internalFallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: contractAddr = readAddress(IMPLEMENTATION_SLOT)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_internalFallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),contractAddr,ptr_internalFallback_asm_0,calldatasize()(),0,0)
+Found public function: readBool
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeERC20.is_proxy (Slither line:1425)
+
+
+End SafeERC20.is_proxy (Slither line:1428)
+
+
+Begin SafeERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeERC20 
+
+End SafeERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC165.is_proxy (Slither line:1425)
+
+
+End IERC165.is_proxy (Slither line:1428)
+
+
+Begin IERC165.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC165 
+
+End IERC165.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDiamondLoupe.is_proxy (Slither line:1425)
+
+
+End IDiamondLoupe.is_proxy (Slither line:1428)
+
+
+Begin IDiamondLoupe.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondLoupe 
+
+End IDiamondLoupe.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibDiamondInitialize.is_proxy (Slither line:1425)
+
+
+End LibDiamondInitialize.is_proxy (Slither line:1428)
+
+
+Begin LibDiamondInitialize.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibDiamondInitialize 
+
+End LibDiamondInitialize.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IDiamondCut.is_proxy (Slither line:1425)
+
+
+End IDiamondCut.is_proxy (Slither line:1428)
+
+
+Begin IDiamondCut.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IDiamondCut 
+
+End IDiamondCut.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin LibDiamond.is_proxy (Slither line:1425)
+
+
+End LibDiamond.is_proxy (Slither line:1428)
+
+
+Begin LibDiamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: LibDiamond 
+
+End LibDiamond.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Diamond.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(facet != address(0),Diamond: Function does not exist) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+facet != address(0)
+Diamond: Function does not exist
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+facet
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is facet (Slither line:2828)
+dest.value: facet (Slither line:2831)
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:2836)
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: ds = position (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Diamond.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Diamond.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Diamond.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'facet'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Diamond.find_delegate_variable_from_name
+Searching for facet (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking position (Slither line:1703)
+Checking ds (Slither line:1703)
+Checking facet (Slither line:1703)
+facet is a Local Variable in Diamond.fallback (Slither line:1707)
+facet appears to be a Diamond facet address (Slither line:1713)
+
+End Diamond.find_delegate_variable_by_name
+
+
+End Diamond.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Diamond.is_proxy (Slither line:1476)
+
+
+Begin Diamond.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Diamond 
+Local Variable: facet (Slither line:1164)
+Diamond is delegating to facet
+Looking for setter (Slither line:1200)
+
+
+Begin Diamond.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: initialize(IDiamondCut.FacetCut[],address) returns() (Slither line:3127)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End Diamond.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in Diamond (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Diamond.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+Checking function: initialize (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+
+End Diamond.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in Diamond (Slither line:1305)
+
+Begin ICallFacet.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End ICallFacet.find_getter_in_contract (Slither line:3083)
+
+
+Begin ICallFacet.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: call(address[],bytes[],uint256[]) returns() (Slither line:3127)
+Visibility: external
+Checking function: callNoValue(address[],bytes[]) returns() (Slither line:3127)
+Visibility: external
+Checking function: singleCall(address,bytes,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: addCaller(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: removeCaller(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: canCall(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: getCallers() returns(address[]) (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End ICallFacet.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20Facet.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End IERC20Facet.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20Facet.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: external
+Checking function: mint(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: burn(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: initialize(uint256,string,string) returns() (Slither line:3127)
+Checking function: setName(string) returns() (Slither line:3127)
+Visibility: external
+Checking function: setSymbol(string) returns() (Slither line:3127)
+Visibility: external
+Checking function: increaseApproval(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: decreaseApproval(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End IERC20Facet.find_setter_in_contract (Slither line:3345)
+
+
+Begin IBasketFacet.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End IBasketFacet.find_getter_in_contract (Slither line:3083)
+
+
+Begin IBasketFacet.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: setEntryFee(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getEntryFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setExitFee(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getExitFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setAnnualizedFee(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getAnnualizedFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setFeeBeneficiary(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: getFeeBeneficiary() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: setEntryFeeBeneficiaryShare(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getEntryFeeBeneficiaryShare() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setExitFeeBeneficiaryShare(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getExitFeeBeneficiaryShare() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: calcOutStandingAnnualizedFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: chargeOutstandingAnnualizedFee() returns() (Slither line:3127)
+Visibility: external
+Checking function: joinPool(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: exitPool(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getLock() returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: getLockBlock() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setLock(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getCap() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setCap(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: balance(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: getTokens() returns(address[]) (Slither line:3127)
+Visibility: external
+Checking function: addToken(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: removeToken(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: getTokenInPool(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: calcTokensForAmount(uint256) returns(address[],uint256[]) (Slither line:3127)
+Visibility: external
+Checking function: calcTokensForAmountExit(uint256) returns(address[],uint256[]) (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End IBasketFacet.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End IERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End IERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC173.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End IERC173.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC173.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End IERC173.find_setter_in_contract (Slither line:3345)
+
+
+Begin IExperiPie.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End IExperiPie.find_getter_in_contract (Slither line:3083)
+
+
+Begin IExperiPie.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: call(address[],bytes[],uint256[]) returns() (Slither line:3127)
+Visibility: external
+Checking function: callNoValue(address[],bytes[]) returns() (Slither line:3127)
+Visibility: external
+Checking function: singleCall(address,bytes,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: addCaller(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: removeCaller(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: canCall(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: getCallers() returns(address[]) (Slither line:3127)
+Visibility: external
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3127)
+Visibility: external
+Checking function: mint(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: burn(address,uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: initialize(uint256,string,string) returns() (Slither line:3127)
+Checking function: setName(string) returns() (Slither line:3127)
+Visibility: external
+Checking function: setSymbol(string) returns() (Slither line:3127)
+Visibility: external
+Checking function: increaseApproval(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: decreaseApproval(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: setEntryFee(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getEntryFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setExitFee(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getExitFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setAnnualizedFee(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getAnnualizedFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setFeeBeneficiary(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: getFeeBeneficiary() returns(address) (Slither line:3127)
+Visibility: external
+Checking function: setEntryFeeBeneficiaryShare(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getEntryFeeBeneficiaryShare() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setExitFeeBeneficiaryShare(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getExitFeeBeneficiaryShare() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: calcOutStandingAnnualizedFee() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: chargeOutstandingAnnualizedFee() returns() (Slither line:3127)
+Visibility: external
+Checking function: joinPool(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: exitPool(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getLock() returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: getLockBlock() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setLock(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: getCap() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: setCap(uint256) returns() (Slither line:3127)
+Visibility: external
+Checking function: balance(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: getTokens() returns(address[]) (Slither line:3127)
+Visibility: external
+Checking function: addToken(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: removeToken(address) returns() (Slither line:3127)
+Visibility: external
+Checking function: getTokenInPool(address) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: calcTokensForAmount(uint256) returns(address[],uint256[]) (Slither line:3127)
+Visibility: external
+Checking function: calcTokensForAmountExit(uint256) returns(address[],uint256[]) (Slither line:3127)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End IExperiPie.find_setter_in_contract (Slither line:3345)
+
+
+Begin PProxyStorage.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+Checking function: readBool (Slither line:2988)
+readBool returns bool variable  (Slither line:3008)
+RETURN node expression: storageRead(_key) == bytes32(uint256(1)) (Slither line:3028)
+Checking function: setBool (Slither line:2988)
+Checking function: readAddress (Slither line:2988)
+readAddress returns address variable  (Slither line:3008)
+RETURN node expression: bytes32ToAddress(storageRead(_key)) (Slither line:3028)
+Checking function: setAddress (Slither line:2988)
+Checking function: storageRead (Slither line:2988)
+storageRead returns bytes32 variable  (Slither line:3008)
+RETURN node expression: value (Slither line:3028)
+Checking function: storageSet (Slither line:2988)
+Checking function: bytes32ToAddress (Slither line:2988)
+bytes32ToAddress returns address variable  (Slither line:3008)
+RETURN node expression: address(uint160(uint256(_value))) (Slither line:3028)
+Checking function: addressToBytes32 (Slither line:2988)
+addressToBytes32 returns bytes32 variable  (Slither line:3008)
+RETURN node expression: bytes32(uint256(_value)) (Slither line:3028)
+
+End PProxyStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin PProxyStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: readBool(bytes32) returns(bool) (Slither line:3127)
+Visibility: public
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+storageRead(_key) == bytes32(uint256(1))
+value
+Checking function: setBool(bytes32,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: readAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+value
+address(uint160(uint256(_value)))
+Checking function: setAddress(bytes32,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: storageRead(bytes32) returns(bytes32) (Slither line:3127)
+Visibility: public
+storageRead contains assembly (Slither line:3153)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+value
+Checking function: storageSet(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: bytes32ToAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+Checking function: addressToBytes32(address) returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(uint256(_value))
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End PProxyStorage.find_setter_in_contract (Slither line:3345)
+
+
+Begin PProxy.find_getter_in_contract (Slither line:2974)
+
+facet is a Variable object
+address(bytes20(ds.facets[msg.sig]))
+
+End PProxy.find_getter_in_contract (Slither line:3083)
+
+
+Begin PProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: address(bytes20(ds.facets[msg.sig])) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: getProxyOwner() returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+readAddress(OWNER_SLOT)
+address(uint160(uint256(_value)))
+value
+Checking function: setProxyOwner(address) returns() (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+bytes32(uint256(_value))
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),PProxy.onlyProxyOwner: msg sender not owner)
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+setAddress(OWNER_SLOT,_newOwner)
+onlyProxyOwner()
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+readAddress(IMPLEMENTATION_SLOT)
+address(uint160(uint256(_value)))
+value
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+bytes32(uint256(_value))
+sstore(uint256,uint256)(implAddressStorageKey,_value)
+sstore(uint256,uint256)
+value
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+require(bool,string)(msg.sender == readAddress(OWNER_SLOT),PProxy.onlyProxyOwner: msg sender not owner)
+address(uint160(uint256(_value)))
+storageSet(_key,addressToBytes32(_value))
+setAddress(IMPLEMENTATION_SLOT,_newImplementation)
+onlyProxyOwner()
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: internalFallback() returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: readBool(bytes32) returns(bool) (Slither line:3127)
+Visibility: public
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+storageRead(_key) == bytes32(uint256(1))
+value
+Checking function: setBool(bytes32,bool) returns() (Slither line:3127)
+Visibility: internal
+Checking function: readAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+bytes32ToAddress(storageRead(_key))
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+address(uint160(uint256(_value)))
+value
+Checking function: setAddress(bytes32,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: storageRead(bytes32) returns(bytes32) (Slither line:3127)
+Visibility: public
+storageRead contains assembly (Slither line:3153)
+value = sload(uint256)(_key)
+is an Assignment Operation (Slither line:3216)
+address(bytes20(ds.facets[msg.sig]))
+value
+Checking function: storageSet(bytes32,bytes32) returns() (Slither line:3127)
+Visibility: internal
+Checking function: bytes32ToAddress(bytes32) returns(address) (Slither line:3127)
+Visibility: public
+address(uint160(uint256(_value)))
+Checking function: addressToBytes32(address) returns(bytes32) (Slither line:3127)
+Visibility: public
+bytes32(uint256(_value))
+
+Begin DiamondCut corner case handling (Slither line:3287)
+
+storageSet
+setAddress
+sstore(uint256,uint256)
+
+End DiamondCut corner case handling (Slither line:3343)
+
+
+End PProxy.find_setter_in_contract (Slither line:3345)
+
+
+Begin PProxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+RETURN: bytes32ToAddress(storageRead(_key)) (Slither line:2888)
+Looking for Loupe functions in PProxyStorage
+readBool(bytes32) returns(bool)
+setBool(bytes32,bool) returns()
+readAddress(bytes32) returns(address)
+setAddress(bytes32,address) returns()
+storageRead(bytes32) returns(bytes32)
+storageSet(bytes32,bytes32) returns()
+bytes32ToAddress(bytes32) returns(address)
+addressToBytes32(address) returns(bytes32)
+Looking for Loupe functions in PProxy
+readBool(bytes32) returns(bool)
+setBool(bytes32,bool) returns()
+readAddress(bytes32) returns(address)
+setAddress(bytes32,address) returns()
+storageRead(bytes32) returns(bytes32)
+storageSet(bytes32,bytes32) returns()
+bytes32ToAddress(bytes32) returns(address)
+addressToBytes32(address) returns(bytes32)
+constructor() returns()
+getProxyOwner() returns(address)
+setProxyOwner(address) returns()
+getImplementation() returns(address)
+setImplementation(address) returns()
+fallback() returns()
+internalFallback() returns()
+slitherConstructorConstantVariables() returns()
+Looking for Loupe functions in Address
+isContract(address) returns(bool)
+sendValue(address,uint256) returns()
+functionCall(address,bytes) returns(bytes)
+functionCall(address,bytes,string) returns(bytes)
+functionCallWithValue(address,bytes,uint256) returns(bytes)
+functionCallWithValue(address,bytes,uint256,string) returns(bytes)
+_functionCallWithValue(address,bytes,uint256,string) returns(bytes)
+Looking for Loupe functions in SafeMath
+add(uint256,uint256) returns(uint256)
+sub(uint256,uint256) returns(uint256)
+sub(uint256,uint256,string) returns(uint256)
+mul(uint256,uint256) returns(uint256)
+div(uint256,uint256) returns(uint256)
+div(uint256,uint256,string) returns(uint256)
+mod(uint256,uint256) returns(uint256)
+mod(uint256,uint256,string) returns(uint256)
+Looking for Loupe functions in SafeERC20
+safeTransfer(IERC20,address,uint256) returns()
+safeTransferFrom(IERC20,address,address,uint256) returns()
+safeApprove(IERC20,address,uint256) returns()
+safeIncreaseAllowance(IERC20,address,uint256) returns()
+safeDecreaseAllowance(IERC20,address,uint256) returns()
+_callOptionalReturn(IERC20,bytes) returns()
+Looking for Loupe functions in Context
+_msgSender() returns(address)
+_msgData() returns(bytes)
+Looking for Loupe functions in Ownable
+_msgSender() returns(address)
+_msgData() returns(bytes)
+constructor() returns()
+owner() returns(address)
+renounceOwnership() returns()
+transferOwnership(address) returns()
+Looking for Loupe functions in LibDiamondInitialize
+diamondInitializeStorage() returns(LibDiamondInitialize.InitializedStorage)
+slitherConstructorConstantVariables() returns()
+Looking for Loupe functions in LibDiamond
+diamondStorage() returns(LibDiamond.DiamondStorage)
+setContractOwner(address) returns()
+contractOwner() returns(address)
+enforceIsContractOwner() returns()
+diamondCut(IDiamondCut.FacetCut[],address,bytes) returns()
+addReplaceRemoveFacetSelectors(uint256,bytes32,address,IDiamondCut.FacetCutAction,bytes4[]) returns(uint256,bytes32)
+initializeDiamondCut(address,bytes) returns()
+enforceHasContractCode(address,string) returns()
+slitherConstructorConstantVariables() returns()
+Looking for Loupe functions in PieFactoryContract
+constructor() returns()
+owner() returns(address)
+renounceOwnership() returns()
+transferOwnership(address) returns()
+_msgSender() returns(address)
+_msgData() returns(bytes)
+constructor() returns()
+setDefaultController(address) returns()
+removeFacet(uint256) returns()
+addFacet(IDiamondCut.FacetCut) returns()
+setDiamondImplementation(address) returns()
+bakePie(address[],uint256[],uint256,string,string) returns()
+getDefaultCut() returns(IDiamondCut.FacetCut[])
+getDefaultCutCount() returns(uint256)
+impl_address_from_contract_call: address(bytes20(ds.facets[msg.sig]))
+Checking external function initialize
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: facet
+functions_writing_to_variable: checking function Diamond.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function Diamond.receive (proxy_features line:898)
+has_compatibility_checks: dependencies: ['TMP_314', 'REF_112', 'REF_113', 'ds', 'TMP_313']
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool,string)(facet != address(0),Diamond: Function does not exist)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_1 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),facet,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ds = position
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: position = LibDiamond.DIAMOND_STORAGE_POSITION
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: facet = address(bytes20(ds.facets[msg.sig]))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found external function: initialize
+
+Begin PieFactoryContract.is_proxy (Slither line:1425)
+
+
+End PieFactoryContract.is_proxy (Slither line:1428)
+
+
+Begin PieFactoryContract.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PieFactoryContract 
+
+End PieFactoryContract.is_upgradeable_proxy (Slither line:1407)
+

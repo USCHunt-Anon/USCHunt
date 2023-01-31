@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "DexProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.0/0650680b6d4fb4619402269e611b3d3a067a1ead_DexProxy.sol/0650680b6d4fb4619402269e611b3d3a067a1ead_DexProxy.sol#551-681)",
+        "elements": [],
+        "description": "DexProxy (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.0/0650680b6d4fb4619402269e611b3d3a067a1ead_DexProxy.sol/0650680b6d4fb4619402269e611b3d3a067a1ead_DexProxy.sol#551-681) is an upgradeable proxy.\ndelegates was found in a different contract.\ndelegates is a mapping of type mapping(bytes4 => address)\ndelegates maps function signatures to addresses, suggesting multiple implementations.\nMissing compatibility check in DexProxy.constructor()\nMissing compatibility check in DexProxy.updateContract(address,string,string)\nCan toggle delegatecall on/off: condition: msg.sig == bytes4(0) && msg.value != uint256(0)\n",
+        "id": "426e1c1f68e99c0bed972d8324b3b353be46758fc5c51bb85c1edca14f265b37",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "ProxyBaseStorage.delegates",
+          "impl_address_setter": "DexProxy.updateContract(address,string,string)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "ProxyBaseStorage (../../smart-contract-sanctuary/polygon/contracts/mumbai/sorted/0.5.0/0650680b6d4fb4619402269e611b3d3a067a1ead_DexProxy.sol/0650680b6d4fb4619402269e611b3d3a067a1ead_DexProxy.sol#67-87)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes4 => address)",
+          "impl_mapping_from_msg_sig": true,
+          "eip_2535": false,
+          "eip_1538": true,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "DexProxy.constructor()": "missing",
+              "DexProxy.updateContract(address,string,string)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "msg.sig != bytes4(0) && msg.value != uint256(0)",
+          "toggle_alternative_logic": "None",
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "isOwner()",
+              "renounceOwnership()",
+              "transferOwnership(address)",
+              "updateContract(address,string,string)",
+              "updateContract(address,string,string)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

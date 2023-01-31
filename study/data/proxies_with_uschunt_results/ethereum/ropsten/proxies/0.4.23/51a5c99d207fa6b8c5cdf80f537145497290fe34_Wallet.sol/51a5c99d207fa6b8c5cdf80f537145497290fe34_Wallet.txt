@@ -1,0 +1,236 @@
+
+Begin DelegateProvider.is_proxy (Slither line:1425)
+
+
+End DelegateProvider.is_proxy (Slither line:1428)
+
+
+Begin DelegateProvider.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateProvider 
+
+End DelegateProvider.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegateProxy.is_proxy (Slither line:1425)
+
+
+End DelegateProxy.is_proxy (Slither line:1428)
+
+
+Begin DelegateProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegateProxy 
+
+End DelegateProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WalletStorage.is_proxy (Slither line:1425)
+
+
+End WalletStorage.is_proxy (Slither line:1428)
+
+
+Begin WalletStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WalletStorage 
+
+End WalletStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin WalletProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin WalletProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(sub(gas(), 10000), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_dst'
+Looking for corresponding Variable
+Current function: delegatedFwd
+
+Begin WalletProxy.find_delegate_variable_from_name
+Searching for _dst (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _dst (Slither line:1800)
+_dst is a Parameter in WalletProxy.delegatedFwd (Slither line:1805)
+CallExpression: ReceivedETH(msg.sender,msg.value) (Slither line:1819)
+CallExpression: delegatedFwd(DelegateProvider(owner).getDelegate(),msg.data) (Slither line:1819)
+Found where delegatedFwd is called: delegatedFwd(DelegateProvider(owner).getDelegate(),msg.data) (Slither line:1832)
+The value passed to parameter #0 is DelegateProvider(owner).getDelegate() (Slither line:1835)
+
+Begin WalletProxy.find_delegate_from_call_exp
+
+DelegateProvider(owner).getDelegate() (Slither line:1993)
+called = DelegateProvider(owner).getDelegate (Slither line:2000)
+Called member of DelegateProvider(owner) (Slither line:2007)
+
+Begin WalletProxy.find_delegate_from_member_access
+
+Expression: DelegateProvider(owner).getDelegate() (Slither line:2348)
+DelegateProvider(owner) (Slither line:2361)
+getDelegate is a member of the contract type: DelegateProvider (Slither line:2406)
+Which is an interface (Slither line:2410)
+Looking for getDelegate in DelegateProvider (Slither line:2513)
+Found the function called getDelegate (Slither line:2517)
+Returns a variable of type address called delegate (Slither line:2522)
+
+End WalletProxy.find_delegate_from_member_access (Slither line:2635)
+
+
+End WalletProxy.find_delegate_from_call_exp (Slither line:2009)
+
+delegatedFwd contains assembly, searching for sload (Slither line:1875)
+
+End WalletProxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+Begin WalletProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2673)
+
+
+End WalletProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2700)
+
+
+End WalletProxy.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin WalletProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: ReceivedETH(msg.sender,msg.value) (Slither line:2792)
+Expression called: ReceivedETH
+Type of call: tuple() (Slither line:2807)
+Args:
+msg.sender
+msg.value
+
+End WalletProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin WalletProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: delegatedFwd(DelegateProvider(owner).getDelegate(),msg.data) (Slither line:2792)
+Expression called: delegatedFwd
+Type of call: tuple() (Slither line:2807)
+Args:
+DelegateProvider(owner).getDelegate()
+msg.data
+
+End WalletProxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End WalletProxy.is_proxy (Slither line:1476)
+
+
+Begin WalletProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: WalletProxy 
+
+End WalletProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Wallet.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+End Wallet.is_proxy (Slither line:1476)
+
+
+Begin Wallet.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Wallet 
+
+End Wallet.is_upgradeable_proxy (Slither line:1407)
+

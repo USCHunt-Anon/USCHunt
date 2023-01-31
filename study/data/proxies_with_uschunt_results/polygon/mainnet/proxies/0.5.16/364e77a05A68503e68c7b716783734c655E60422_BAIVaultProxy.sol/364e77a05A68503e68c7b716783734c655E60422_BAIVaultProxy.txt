@@ -1,0 +1,300 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBEP20.is_proxy (Slither line:1425)
+
+
+End IBEP20.is_proxy (Slither line:1428)
+
+
+Begin IBEP20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBEP20 
+
+End IBEP20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BAIVaultAdminStorage.is_proxy (Slither line:1425)
+
+
+End BAIVaultAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin BAIVaultAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BAIVaultAdminStorage 
+
+End BAIVaultAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BAIVaultStorage.is_proxy (Slither line:1425)
+
+
+End BAIVaultStorage.is_proxy (Slither line:1428)
+
+
+Begin BAIVaultStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BAIVaultStorage 
+
+End BAIVaultStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BAIVaultErrorReporter.is_proxy (Slither line:1425)
+
+
+End BAIVaultErrorReporter.is_proxy (Slither line:1428)
+
+
+Begin BAIVaultErrorReporter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BAIVaultErrorReporter 
+
+End BAIVaultErrorReporter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BAIVaultProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End BAIVaultProxy.is_proxy (Slither line:1476)
+
+
+Begin BAIVaultProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BAIVaultProxy 
+BAIVaultProxy is delegating to vaiVaultImplementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in BAIVaultAdminStorage (Slither line:1204)
+
+
+Begin BAIVaultAdminStorage.find_setter_in_contract (Slither line:3119)
+
+
+End BAIVaultAdminStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BAIVaultAdminStorage 
+Looking in BAIVaultProxy (Slither line:1213)
+
+Begin BAIVaultProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3127)
+Visibility: public
+fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK)
+NewPendingImplementation(oldPendingImplementation,pendingBAIVaultImplementation)
+uint256(err)
+uint256(Error.NO_ERROR)
+Failure(uint256(err),uint256(info),0)
+pendingBAIVaultImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+Checking function: _acceptImplementation() returns(uint256) (Slither line:3127)
+Visibility: public
+fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK)
+NewPendingImplementation(oldPendingImplementation,pendingBAIVaultImplementation)
+uint256(err)
+vaiVaultImplementation = pendingBAIVaultImplementation
+is an Assignment Operation (Slither line:3216)
+
+End BAIVaultProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _acceptImplementation in contract: BAIVaultProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BAIVaultAdminStorage.find_getter_in_contract (Slither line:2974)
+
+vaiVaultImplementation is a Variable object
+pendingBAIVaultImplementation
+
+End BAIVaultAdminStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin BAIVaultProxy.find_getter_in_contract (Slither line:2974)
+
+vaiVaultImplementation is a Variable object
+pendingBAIVaultImplementation
+Checking function: fail (Slither line:2988)
+fail returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(err) (Slither line:3028)
+Checking function: failOpaque (Slither line:2988)
+failOpaque returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(err) (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: _setPendingImplementation (Slither line:2988)
+_setPendingImplementation returns uint256 variable  (Slither line:3008)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (Slither line:3028)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+Checking function: _acceptImplementation (Slither line:2988)
+_acceptImplementation returns uint256 variable  (Slither line:3008)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (Slither line:3028)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+Checking function: _setPendingAdmin (Slither line:2988)
+_setPendingAdmin returns uint256 variable  (Slither line:3008)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_ADMIN_OWNER_CHECK) (Slither line:3028)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+Checking function: _acceptAdmin (Slither line:2988)
+_acceptAdmin returns uint256 variable  (Slither line:3008)
+RETURN node expression: uint256(Error.NO_ERROR) (Slither line:3028)
+RETURN node expression: fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_ADMIN_PENDING_ADMIN_CHECK) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+
+End BAIVaultProxy.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in BAIVaultProxy (Slither line:1305)
+or in BAIVaultAdminStorage (Slither line:1319)
+
+Begin BAIVaultStorage.find_getter_in_contract (Slither line:2974)
+
+vaiVaultImplementation is a Variable object
+pendingBAIVaultImplementation
+
+End BAIVaultStorage.find_getter_in_contract (Slither line:3083)
+
+
+End BAIVaultProxy.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: pendingBAIVaultImplementation
+impl_address_from_contract_call: StateVariable vaiVaultImplementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression vaiVaultImplementation.delegatecall(msg.data)
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Checking external function fallback
+functions_writing_to_variable: vaiVaultImplementation
+functions_writing_to_variable: checking function BAIVaultProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy.failOpaque (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = msg.sender != pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = vaiVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = vaiVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingBAIVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = vaiVaultImplementation = pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: vaiVaultImplementation = pendingBAIVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: vaiVaultImplementation (proxy_features line:924)
+get_value_assigned: vaiVaultImplementation = pendingBAIVaultImplementation
+functions_writing_to_variable: exp = pendingBAIVaultImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingBAIVaultImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,vaiVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingBAIVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:909)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:909)
+functions_writing_to_variable: _acceptImplementation writes pendingBAIVaultImplementation to vaiVaultImplementation (proxy_features line:929)
+functions_writing_to_variable: checking function BAIVaultProxy._acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy.fail (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['newPendingImplementation', 'TMP_42', 'pendingBAIVaultImplementation']
+functions_writing_to_variable: pendingBAIVaultImplementation
+functions_writing_to_variable: checking function BAIVaultProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy.failOpaque (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = msg.sender != pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = vaiVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = vaiVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingBAIVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = vaiVaultImplementation = pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: vaiVaultImplementation = pendingBAIVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingBAIVaultImplementation = address(0) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingBAIVaultImplementation = address(0) (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingBAIVaultImplementation (proxy_features line:924)
+get_value_assigned: pendingBAIVaultImplementation = address(0)
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,vaiVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingBAIVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:909)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:909)
+functions_writing_to_variable: checking function BAIVaultProxy._acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy.fail (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = msg.sender != admin (proxy_features line:909)
+functions_writing_to_variable: exp = fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK) (proxy_features line:909)
+functions_writing_to_variable: exp = oldPendingImplementation = pendingBAIVaultImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldPendingImplementation = pendingBAIVaultImplementation (proxy_features line:912)
+functions_writing_to_variable: exp = pendingBAIVaultImplementation = newPendingImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: pendingBAIVaultImplementation = newPendingImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: pendingBAIVaultImplementation (proxy_features line:924)
+get_value_assigned: pendingBAIVaultImplementation = newPendingImplementation
+functions_writing_to_variable: exp = NewPendingImplementation(oldPendingImplementation,pendingBAIVaultImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(Error.NO_ERROR) (proxy_features line:909)
+functions_writing_to_variable: exp = Failure(uint256(err),uint256(info),0) (proxy_features line:909)
+functions_writing_to_variable: exp = uint256(err) (proxy_features line:909)
+functions_writing_to_variable: _setPendingImplementation writes newPendingImplementation to pendingBAIVaultImplementation (proxy_features line:929)
+functions_writing_to_variable: checking function BAIVaultProxy._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function BAIVaultProxy.fallback (proxy_features line:898)
+has_compatibility_checks: checking public function _acceptImplementation
+has_compatibility_checks: IF node exp = msg.sender != pendingBAIVaultImplementation
+has_compatibility_checks: checking public function _setPendingImplementation
+has_compatibility_checks: IF node exp = msg.sender != admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = vaiVaultImplementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingBAIVaultImplementation
+has_time_delay: (node.type) RETURN
+(Expression) fail(Error.UNAUTHORIZED,FailureInfo.ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingBAIVaultImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(err)
+has_time_delay: (node.type) EXPRESSION
+(Expression) vaiVaultImplementation = pendingBAIVaultImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,vaiVaultImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(Error.NO_ERROR)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Failure(uint256(err),uint256(info),0)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = vaiVaultImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingBAIVaultImplementation = address(0)
+has_time_delay: (node.type) IF
+(Expression) msg.sender != pendingBAIVaultImplementation

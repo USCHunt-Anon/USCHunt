@@ -1,0 +1,490 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Role.is_proxy (Slither line:1425)
+
+
+End Role.is_proxy (Slither line:1428)
+
+
+Begin Role.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Role 
+
+End Role.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), _implementation, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_implementation'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking adminGroup (Slither line:1689)
+Checking _linkedContractAddress (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking data (Slither line:1703)
+Checking _implementation (Slither line:1703)
+_implementation is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Return node of function Proxy.implementation(): RETURN _linkedContractAddress (Slither line:2031)
+_linkedContractAddress (Slither line:2038)
+implementation returns a variable of type address   called _linkedContractAddress (Slither line:2183)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _linkedContractAddress
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: public
+_linkedContractAddress
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+adminGroup.administers[account]
+require(bool)(newContractAddress != address(0))
+administerAndAbove()
+_linkedContractAddress = newContractAddress
+is an Assignment Operation (Slither line:3206)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+_linkedContractAddress is a Variable object
+newContractAddress
+Checking function: isAdminister (Slither line:2978)
+isAdminister returns bool variable  (Slither line:2998)
+RETURN node expression: adminGroup.administers[account] (Slither line:3018)
+Checking function: addAdminister (Slither line:2978)
+Checking function: removeAdminister (Slither line:2978)
+Checking function: getAdministerList (Slither line:2978)
+getAdministerList returns address[] variable  (Slither line:2998)
+RETURN node expression: adminGroup.administerList (Slither line:3018)
+Checking function: isPauser (Slither line:2978)
+isPauser returns bool variable  (Slither line:2998)
+RETURN node expression: adminGroup.pausers[account] (Slither line:3018)
+Checking function: addPauser (Slither line:2978)
+Checking function: removePauser (Slither line:2978)
+Checking function: getPauserList (Slither line:2978)
+getPauserList returns address[] variable  (Slither line:2998)
+RETURN node expression: adminGroup.pauserList (Slither line:3018)
+Checking function: constructor (Slither line:2978)
+Checking function: implementation (Slither line:2978)
+implementation returns address variable  (Slither line:2998)
+RETURN node expression: _linkedContractAddress (Slither line:3018)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function isAdminister
+Checking public function addAdminister
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removeAdminister
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getAdministerList
+Checking public function isPauser
+Checking public function addPauser
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removePauser
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getPauserList
+Checking public function implementation
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+Checking public function fallback
+functions_writing_to_variable: _linkedContractAddress
+functions_writing_to_variable: checking function Proxy.getAdministerList (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool)(newContractAddress != address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = _linkedContractAddress = newContractAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _linkedContractAddress = newContractAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: _linkedContractAddress (proxy_features line:919)
+get_value_assigned: _linkedContractAddress = newContractAddress
+functions_writing_to_variable: exp = Upgraded(newContractAddress) (proxy_features line:904)
+functions_writing_to_variable: exp = administerAndAbove() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isAdminister(msg.sender) || msg.sender == owner) (proxy_features line:904)
+functions_writing_to_variable: exp = adminGroup.administers[account] (proxy_features line:904)
+functions_writing_to_variable: upgradeTo writes newContractAddress to _linkedContractAddress (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.removeAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.addPauser (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.getPauserList (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.removePauser (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.addAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isPauser (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newContractAddress']
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+has_compatibility_checks: condition isAdminister(msg.sender) || msg.sender == owner
+require(bool)(newContractAddress != address(0))
+has_compatibility_checks: condition newContractAddress != address(0)
+check_condition_from_expression: modifier calls: ['administerAndAbove()']
+check_condition_from_expression: condition newContractAddress != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), _implementation, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_implementation != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+Found public function: isAdminister
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+has_time_delay: (node.type) RETURN
+(Expression) adminGroup.administers[account]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(newContractAddress != address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) administerAndAbove()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _linkedContractAddress = newContractAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newContractAddress)
+
+Begin PathHiveNetworkProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PathHiveNetworkProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), _implementation, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_implementation'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin PathHiveNetworkProxy.find_delegate_variable_from_name
+Searching for _implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking adminGroup (Slither line:1689)
+Checking _linkedContractAddress (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _implementation (Slither line:1703)
+_implementation is a Local Variable in PathHiveNetworkProxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin PathHiveNetworkProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:1993)
+called = implementation (Slither line:2000)
+Return node of function Proxy.implementation(): RETURN _linkedContractAddress (Slither line:2031)
+_linkedContractAddress (Slither line:2038)
+implementation returns a variable of type address   called _linkedContractAddress (Slither line:2183)
+
+End PathHiveNetworkProxy.find_delegate_from_call_exp (Slither line:2318)
+
+Call Expression
+End PathHiveNetworkProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End PathHiveNetworkProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End PathHiveNetworkProxy.is_proxy (Slither line:1476)
+
+
+Begin PathHiveNetworkProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PathHiveNetworkProxy 
+PathHiveNetworkProxy is delegating to _linkedContractAddress
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: newContractAddress (Slither line:3112)
+Checking function: implementation() returns(address) (Slither line:3117)
+Visibility: public
+_linkedContractAddress
+Checking function: upgradeTo(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+adminGroup.administers[account]
+require(bool)(newContractAddress != address(0))
+administerAndAbove()
+_linkedContractAddress = newContractAddress
+is an Assignment Operation (Slither line:3206)
+newContractAddress
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Implementation set by function: upgradeTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+_linkedContractAddress is a Variable object
+newContractAddress
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End PathHiveNetworkProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: newContractAddress
+impl_address_from_contract_call: StateVariable _linkedContractAddress
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression implementation()
+impl_address_from_contract_call: CallExpression require(bool)(_implementation != address(0))
+impl_address_from_contract_call: arg is _implementation != address(0)
+Checking public function implementation
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+Checking public function isAdminister
+Checking public function addAdminister
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removeAdminister
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getAdministerList
+Checking public function isPauser
+Checking public function addPauser
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removePauser
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getPauserList
+Checking public function fallback
+functions_writing_to_variable: _linkedContractAddress
+functions_writing_to_variable: checking function Proxy.removeAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.implementation (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.removeAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.upgradeTo (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool)(newContractAddress != address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = _linkedContractAddress = newContractAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _linkedContractAddress = newContractAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: _linkedContractAddress (proxy_features line:919)
+get_value_assigned: _linkedContractAddress = newContractAddress
+functions_writing_to_variable: exp = Upgraded(newContractAddress) (proxy_features line:904)
+functions_writing_to_variable: exp = administerAndAbove() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isAdminister(msg.sender) || msg.sender == owner) (proxy_features line:904)
+functions_writing_to_variable: exp = adminGroup.administers[account] (proxy_features line:904)
+functions_writing_to_variable: upgradeTo writes newContractAddress to _linkedContractAddress (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.removePauser (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.removePauser (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.getAdministerList (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.getAdministerList (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.getPauserList (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.getPauserList (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isPauser (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.isPauser (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.isAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.constructor (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.isAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.addAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.addAdminister (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool)(newContractAddress != address(0)) (proxy_features line:904)
+functions_writing_to_variable: exp = _linkedContractAddress = newContractAddress (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: _linkedContractAddress = newContractAddress (proxy_features line:907)
+functions_writing_to_variable: Identifier: _linkedContractAddress (proxy_features line:919)
+get_value_assigned: _linkedContractAddress = newContractAddress
+functions_writing_to_variable: exp = Upgraded(newContractAddress) (proxy_features line:904)
+functions_writing_to_variable: exp = administerAndAbove() (proxy_features line:904)
+functions_writing_to_variable: exp = require(bool)(isAdminister(msg.sender) || msg.sender == owner) (proxy_features line:904)
+functions_writing_to_variable: exp = adminGroup.administers[account] (proxy_features line:904)
+functions_writing_to_variable: upgradeTo writes newContractAddress to _linkedContractAddress (proxy_features line:924)
+functions_writing_to_variable: checking function Proxy.addPauser (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.slitherConstructorVariables (proxy_features line:893)
+functions_writing_to_variable: checking function PathHiveNetworkProxy.addPauser (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:893)
+has_compatibility_checks: dependencies: ['newContractAddress', 'newContractAddress']
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(newContractAddress != address(0))
+has_compatibility_checks: condition newContractAddress != address(0)
+check_condition_from_expression: modifier calls: ['administerAndAbove()']
+check_condition_from_expression: condition newContractAddress != address(0)
+require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+has_compatibility_checks: condition isAdminister(msg.sender) || msg.sender == owner
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+has_compatibility_checks: condition isAdminister(msg.sender) || msg.sender == owner
+require(bool)(newContractAddress != address(0))
+has_compatibility_checks: condition newContractAddress != address(0)
+check_condition_from_expression: modifier calls: ['administerAndAbove()']
+check_condition_from_expression: condition newContractAddress != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), _implementation, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _implementation = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_implementation != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isAdminister(msg.sender) || msg.sender == owner)
+has_time_delay: (node.type) RETURN
+(Expression) adminGroup.administers[account]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(newContractAddress != address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) administerAndAbove()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _linkedContractAddress = newContractAddress
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newContractAddress)

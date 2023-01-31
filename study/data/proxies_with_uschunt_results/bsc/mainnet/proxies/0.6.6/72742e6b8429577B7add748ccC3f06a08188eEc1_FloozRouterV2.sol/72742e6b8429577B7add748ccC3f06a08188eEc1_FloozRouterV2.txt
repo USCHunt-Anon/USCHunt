@@ -1,0 +1,462 @@
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Context.is_proxy (Slither line:1425)
+
+
+End Context.is_proxy (Slither line:1428)
+
+
+Begin Context.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Context 
+
+End Context.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FloozRouterV2.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin FloozRouterV2.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool,string)(success,EXECUTING_SWAP_FAILED) (Slither line:2802)
+Expression called: require(bool,string)
+Type of call: tuple() (Slither line:2817)
+Args:
+success
+EXECUTING_SWAP_FAILED
+
+End FloozRouterV2.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End FloozRouterV2.is_proxy (Slither line:1476)
+
+
+Begin FloozRouterV2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FloozRouterV2 
+FloozRouterV2 is delegating to to
+Looking for setter (Slither line:1200)
+
+
+Begin FloozRouterV2.find_setter_in_contract (Slither line:3119)
+
+Expression: address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF) (Slither line:3122)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: pause() returns() (Slither line:3127)
+Visibility: external
+_paused = true
+is an Assignment Operation (Slither line:3216)
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+Paused(_msgSender())
+_owner
+whenNotPaused()
+msg.sender
+_pause()
+onlyOwner()
+require(bool,string)(! paused(),Pausable: paused)
+_paused
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: unpause() returns() (Slither line:3127)
+Visibility: external
+_unpause()
+onlyOwner()
+_owner
+whenPaused()
+require(bool,string)(paused(),Pausable: not paused)
+msg.sender
+_paused = false
+is an Assignment Operation (Slither line:3216)
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+_paused
+Unpaused(_msgSender())
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: paused() returns(bool) (Slither line:3127)
+Visibility: public
+_paused
+Checking function: _pause() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _unpause() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+_owner
+onlyOwner()
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+msg.sender
+OwnershipTransferred(_owner,newOwner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+_owner
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+onlyOwner()
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+
+End FloozRouterV2.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in FloozRouterV2 (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin FloozRouterV2.find_getter_in_contract (Slither line:2974)
+
+to is a Variable object
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+Checking function: constructor (Slither line:2988)
+Checking function: paused (Slither line:2988)
+paused returns bool variable  (Slither line:3008)
+RETURN node expression: _paused (Slither line:3028)
+Checking function: _pause (Slither line:2988)
+Checking function: _unpause (Slither line:2988)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: pause (Slither line:2988)
+Checking function: unpause (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+
+End FloozRouterV2.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in FloozRouterV2 (Slither line:1305)
+
+Begin SafeMath.find_getter_in_contract (Slither line:2974)
+
+to is a Variable object
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+Checking function: tryAdd (Slither line:2988)
+tryAdd returns bool variable  (Slither line:3008)
+tryAdd returns uint256 variable  (Slither line:3008)
+RETURN node expression: (false,0) (Slither line:3028)
+RETURN node expression: (true,c) (Slither line:3028)
+Checking function: trySub (Slither line:2988)
+trySub returns bool variable  (Slither line:3008)
+trySub returns uint256 variable  (Slither line:3008)
+RETURN node expression: (true,a - b) (Slither line:3028)
+RETURN node expression: (false,0) (Slither line:3028)
+Checking function: tryMul (Slither line:2988)
+tryMul returns bool variable  (Slither line:3008)
+tryMul returns uint256 variable  (Slither line:3008)
+RETURN node expression: (true,0) (Slither line:3028)
+RETURN node expression: (true,c) (Slither line:3028)
+RETURN node expression: (false,0) (Slither line:3028)
+Checking function: tryDiv (Slither line:2988)
+tryDiv returns bool variable  (Slither line:3008)
+tryDiv returns uint256 variable  (Slither line:3008)
+RETURN node expression: (false,0) (Slither line:3028)
+RETURN node expression: (true,a / b) (Slither line:3028)
+Checking function: tryMod (Slither line:2988)
+tryMod returns bool variable  (Slither line:3008)
+tryMod returns uint256 variable  (Slither line:3008)
+RETURN node expression: (true,a % b) (Slither line:3028)
+RETURN node expression: (false,0) (Slither line:3028)
+Checking function: add (Slither line:2988)
+add returns uint256 variable  (Slither line:3008)
+RETURN node expression: c (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: a - b (Slither line:3028)
+Checking function: mul (Slither line:2988)
+mul returns uint256 variable  (Slither line:3008)
+RETURN node expression: 0 (Slither line:3028)
+RETURN node expression: c (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: a / b (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: a % b (Slither line:3028)
+Checking function: sub (Slither line:2988)
+sub returns uint256 variable  (Slither line:3008)
+RETURN node expression: a - b (Slither line:3028)
+Checking function: div (Slither line:2988)
+div returns uint256 variable  (Slither line:3008)
+RETURN node expression: a / b (Slither line:3028)
+Checking function: mod (Slither line:2988)
+mod returns uint256 variable  (Slither line:3008)
+RETURN node expression: a % b (Slither line:3028)
+
+End SafeMath.find_getter_in_contract (Slither line:3083)
+
+
+Begin SafeMath.find_setter_in_contract (Slither line:3119)
+
+Expression: address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF) (Slither line:3122)
+Checking function: tryAdd(uint256,uint256) returns(bool,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: trySub(uint256,uint256) returns(bool,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: tryMul(uint256,uint256) returns(bool,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: tryDiv(uint256,uint256) returns(bool,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: tryMod(uint256,uint256) returns(bool,uint256) (Slither line:3127)
+Visibility: internal
+Checking function: add(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mul(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: sub(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: div(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+Checking function: mod(uint256,uint256,string) returns(uint256) (Slither line:3127)
+Visibility: internal
+
+End SafeMath.find_setter_in_contract (Slither line:3345)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2974)
+
+to is a Variable object
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+
+End IERC20.find_getter_in_contract (Slither line:3083)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3119)
+
+Expression: address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF) (Slither line:3122)
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3127)
+Visibility: external
+
+End IERC20.find_setter_in_contract (Slither line:3345)
+
+
+Begin Context.find_getter_in_contract (Slither line:2974)
+
+to is a Variable object
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+
+End Context.find_getter_in_contract (Slither line:3083)
+
+
+Begin Context.find_setter_in_contract (Slither line:3119)
+
+Expression: address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF) (Slither line:3122)
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Context.find_setter_in_contract (Slither line:3345)
+
+
+Begin Ownable.find_getter_in_contract (Slither line:2974)
+
+to is a Variable object
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+
+End Ownable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Ownable.find_setter_in_contract (Slither line:3119)
+
+Expression: address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: owner() returns(address) (Slither line:3127)
+Visibility: public
+_owner
+Checking function: renounceOwnership() returns() (Slither line:3127)
+Visibility: public
+OwnershipTransferred(_owner,address(0))
+msg.sender
+_owner = address(0)
+is an Assignment Operation (Slither line:3216)
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+_owner
+onlyOwner()
+Checking function: transferOwnership(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(newOwner != address(0),Ownable: new owner is the zero address)
+onlyOwner()
+msg.sender
+OwnershipTransferred(_owner,newOwner)
+_owner = newOwner
+is an Assignment Operation (Slither line:3216)
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+require(bool,string)(owner() == _msgSender(),Ownable: caller is not the owner)
+_owner
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Ownable.find_setter_in_contract (Slither line:3345)
+
+
+Begin Pausable.find_getter_in_contract (Slither line:2974)
+
+to is a Variable object
+address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF)
+Checking function: _msgSender (Slither line:2988)
+_msgSender returns address variable  (Slither line:3008)
+RETURN node expression: msg.sender (Slither line:3028)
+Checking function: _msgData (Slither line:2988)
+_msgData returns bytes variable  (Slither line:3008)
+RETURN node expression: msg.data (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: paused (Slither line:2988)
+paused returns bool variable  (Slither line:3008)
+RETURN node expression: _paused (Slither line:3028)
+Checking function: _pause (Slither line:2988)
+Checking function: _unpause (Slither line:2988)
+
+End Pausable.find_getter_in_contract (Slither line:3083)
+
+
+Begin Pausable.find_setter_in_contract (Slither line:3119)
+
+Expression: address(0xDef1C0ded9bec7F1a1670819833240f027b25EfF) (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: paused() returns(bool) (Slither line:3127)
+Visibility: public
+_paused
+Checking function: _pause() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _unpause() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _msgSender() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _msgData() returns(bytes) (Slither line:3127)
+Visibility: internal
+
+End Pausable.find_setter_in_contract (Slither line:3345)
+
+
+End FloozRouterV2.is_upgradeable_proxy (Slither line:1407)
+

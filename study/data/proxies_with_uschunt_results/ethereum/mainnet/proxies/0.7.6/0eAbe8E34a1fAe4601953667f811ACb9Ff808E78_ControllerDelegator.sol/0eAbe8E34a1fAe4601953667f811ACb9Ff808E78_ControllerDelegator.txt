@@ -1,0 +1,572 @@
+
+Begin Adminable.is_proxy (Slither line:1425)
+
+
+End Adminable.is_proxy (Slither line:1428)
+
+
+Begin Adminable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Adminable 
+
+End Adminable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DelegatorInterface.is_proxy (Slither line:1425)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End DelegatorInterface.is_proxy (Slither line:1476)
+
+
+Begin DelegatorInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DelegatorInterface 
+DelegatorInterface is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin DelegatorInterface.find_setter_in_contract (Slither line:3119)
+
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+Checking function: delegateTo(address,bytes) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: delegateToImplementation(bytes) returns(bytes) (Slither line:3127)
+Visibility: public
+(success,returnData) = callee.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+revert(uint256,uint256)(returnData + 0x20,returndatasize()())
+returnData
+delegateTo(implementation,data)
+Checking function: delegateToViewImplementation(bytes) returns(bytes) (Slither line:3127)
+Visibility: public
+delegateToViewImplementation contains assembly (Slither line:3153)
+(success,returnData) = address(this).staticcall(abi.encodeWithSignature(delegateToImplementation(bytes),data))
+is an Assignment Operation (Slither line:3216)
+revert(uint256,uint256)(returnData + 0x20,returndatasize()())
+abi.decode(returnData,(bytes))
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End DelegatorInterface.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in DelegatorInterface (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin DelegatorInterface.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: delegateToImplementation (Slither line:2988)
+delegateToImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3028)
+Checking function: delegateToViewImplementation (Slither line:2988)
+delegateToViewImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+
+End DelegatorInterface.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in DelegatorInterface (Slither line:1305)
+Checking for implementation at slot 0 in contract Adminable (Slither line:1355)
+Found admin at slot 0 in contract Adminable (Slither line:1362)
+Checking for admin at slot 0 in contract ControllerDelegator (Slither line:1355)
+Found implementation at slot 0 in contract ControllerDelegator (Slither line:1362)
+
+Begin ControllerDelegator.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+Checking function: constructor (Slither line:2988)
+Checking function: setPendingAdmin (Slither line:2988)
+Checking function: acceptAdmin (Slither line:2988)
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: delegateToImplementation (Slither line:2988)
+delegateToImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3028)
+Checking function: delegateToViewImplementation (Slither line:2988)
+delegateToViewImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setImplementation (Slither line:2988)
+
+End ControllerDelegator.find_getter_in_contract (Slither line:3083)
+
+
+Begin ControllerDelegator.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address,address,address,bytes,address,address) returns() (Slither line:3127)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == admin,caller must be admin)
+onlyAdmin()
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End ControllerDelegator.find_setter_in_contract (Slither line:3345)
+
+Checking public function setImplementation
+Checking public function delegateToImplementation
+Checking public function delegateToViewImplementation
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function ControllerDelegator.delegateToImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function DelegatorInterface.receive (proxy_features line:898)
+functions_writing_to_variable: checking function DelegatorInterface.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.receive (proxy_features line:898)
+functions_writing_to_variable: checking function DelegatorInterface.delegateToViewImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function DelegatorInterface.delegateToImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.delegateToViewImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function DelegatorInterface.delegateTo (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = admin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = delegateTo(implementation_,abi.encodeWithSignature(initialize(address,address,address,address,address,address,bytes),_oleToken,_xoleToken,_wETH,_lpoolImplementation,_openlev,_dexAggregator,_oleWethDexData)) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = admin = admin_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = admin_ (proxy_features line:912)
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function ControllerDelegator.delegateTo (proxy_features line:898)
+functions_writing_to_variable: checking function DelegatorInterface.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:909)
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function DelegatorInterface._fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(msg.sender == admin,caller must be admin)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: msg.data.length > 0
+can_toggle_delegatecall_on_off: successors:
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off: delegatecall_condition = True
+ NodeType: EXPRESSION  expression: free_mem_ptr__fallback_asm_0 = mload(uint256)(0x40)
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: EXPRESSION  expression: returndatacopy(uint256,uint256,uint256)(free_mem_ptr__fallback_asm_0,0,returndatasize()())
+ NodeType: EXPRESSION  expression: revert(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()())
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: IF  expression: switch_expr_4740_144_0__fallback_asm_0 == 0
+ NodeType: EXPRESSION  expression: return(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()())
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: EXPRESSION  expression: switch_expr_4740_144_0__fallback_asm_0 = success
+ NodeType: END_IF  expression: None
+ NodeType: INLINE ASM  expression: {'AST': {'nodeType': 'YulBlock', 'src': '4608:290:0', 'statements': [{'nodeType': 'YulVariableDeclaration', 'src': '4626:31:0', 'value': {'arguments': [{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '4652:4:0', 'type': '', 'value': '0x40'}], 'functionName': {'name': 'mload', 'nodeType': 'YulIdentifier', 'src': '4646:5:0'}, 'nodeType': 'YulFunctionCall', 'src': '4646:11:0'}, 'variables': [{'name': 'free_mem_ptr', 'nodeType': 'YulTypedName', 'src': '4630:12:0', 'type': ''}]}, {'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '4689:12:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '4703:1:0', 'type': '', 'value': '0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '4706:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4706:16:0'}], 'functionName': {'name': 'returndatacopy', 'nodeType': 'YulIdentifier', 'src': '4674:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4674:49:0'}, 'nodeType': 'YulExpressionStatement', 'src': '4674:49:0'}, {'cases': [{'body': {'nodeType': 'YulBlock', 'src': '4778:40:0', 'statements': [{'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '4786:12:0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '4800:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4800:16:0'}], 'functionName': {'name': 'revert', 'nodeType': 'YulIdentifier', 'src': '4779:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '4779:38:0'}, 'nodeType': 'YulExpressionStatement', 'src': '4779:38:0'}]}, 'nodeType': 'YulCase', 'src': '4771:47:0', 'value': {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '4776:1:0', 'type': '', 'value': '0'}}, {'body': {'nodeType': 'YulBlock', 'src': '4843:41:0', 'statements': [{'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '4852:12:0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '4866:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4866:16:0'}], 'functionName': {'name': 'return', 'nodeType': 'YulIdentifier', 'src': '4844:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '4844:39:0'}, 'nodeType': 'YulExpressionStatement', 'src': '4844:39:0'}]}, 'nodeType': 'YulCase', 'src': '4835:49:0', 'value': 'default'}], 'expression': {'name': 'success', 'nodeType': 'YulIdentifier', 'src': '4747:7:0'}, 'nodeType': 'YulSwitch', 'src': '4740:144:0'}]}, 'evmVersion': 'istanbul', 'externalReferences': [{'declaration': 232, 'isOffset': False, 'isSlot': False, 'src': '4747:7:0', 'valueSize': 1}], 'id': 239, 'nodeType': 'InlineAssembly', 'src': '4599:299:0'}
+Found public function: setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,caller must be admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+
+Begin ControllerDelegator.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ControllerDelegator.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+free_mem_ptr__fallback_asm_0
+returndatasize()()
+
+End ControllerDelegator.find_delegatecall_in_exp_node (Slither line:2858)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ControllerDelegator.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_4740_144_0__fallback_asm_0 = success (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End ControllerDelegator.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ControllerDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ControllerDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ControllerDelegator.find_delegatecall_in_asm (Slither line:1541)
+
+
+End ControllerDelegator.find_delegatecall_in_asm (Slither line:1637)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End ControllerDelegator.is_proxy (Slither line:1476)
+
+
+Begin ControllerDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ControllerDelegator 
+ControllerDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in DelegatorInterface (Slither line:1204)
+
+
+Begin DelegatorInterface.find_setter_in_contract (Slither line:3119)
+
+Expression: implementation_ (Slither line:3122)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+Checking function: delegateTo(address,bytes) returns(bytes) (Slither line:3127)
+Visibility: internal
+Checking function: delegateToImplementation(bytes) returns(bytes) (Slither line:3127)
+Visibility: public
+(success,returnData) = callee.delegatecall(data)
+is an Assignment Operation (Slither line:3216)
+implementation_
+revert(uint256,uint256)(returnData + 0x20,returndatasize()())
+returnData
+delegateTo(implementation,data)
+Checking function: delegateToViewImplementation(bytes) returns(bytes) (Slither line:3127)
+Visibility: public
+delegateToViewImplementation contains assembly (Slither line:3153)
+(success,returnData) = address(this).staticcall(abi.encodeWithSignature(delegateToImplementation(bytes),data))
+is an Assignment Operation (Slither line:3216)
+implementation_
+revert(uint256,uint256)(returnData + 0x20,returndatasize()())
+abi.decode(returnData,(bytes))
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: receive() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End DelegatorInterface.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in DelegatorInterface 
+Looking in ControllerDelegator (Slither line:1213)
+
+Begin ControllerDelegator.find_setter_in_contract (Slither line:3119)
+
+Expression: implementation_ (Slither line:3122)
+Checking function: constructor(address,address,address,address,address,address,bytes,address,address) returns() (Slither line:3127)
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == admin,caller must be admin)
+onlyAdmin()
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+implementation_
+
+End ControllerDelegator.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: ControllerDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DelegatorInterface.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: delegateToImplementation (Slither line:2988)
+delegateToImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3028)
+Checking function: delegateToViewImplementation (Slither line:2988)
+delegateToViewImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+
+End DelegatorInterface.find_getter_in_contract (Slither line:3083)
+
+
+Begin ControllerDelegator.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: setPendingAdmin (Slither line:2988)
+Checking function: acceptAdmin (Slither line:2988)
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: delegateToImplementation (Slither line:2988)
+delegateToImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3028)
+Checking function: delegateToViewImplementation (Slither line:2988)
+delegateToViewImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: setImplementation (Slither line:2988)
+
+End ControllerDelegator.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in ControllerDelegator (Slither line:1305)
+or in DelegatorInterface (Slither line:1319)
+Checking for implementation at slot 0 in contract Adminable (Slither line:1355)
+Found admin at slot 0 in contract Adminable (Slither line:1362)
+Checking for admin at slot 0 in contract DelegatorInterface (Slither line:1355)
+Found implementation at slot 0 in contract DelegatorInterface (Slither line:1362)
+
+Begin DelegatorInterface.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: delegateToImplementation (Slither line:2988)
+delegateToImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: delegateTo(implementation,data) (Slither line:3028)
+Checking function: delegateToViewImplementation (Slither line:2988)
+delegateToViewImplementation returns bytes variable  (Slither line:3008)
+RETURN node expression: abi.decode(returnData,(bytes)) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: receive (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+
+End DelegatorInterface.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr__fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr__fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr__fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr__fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression _fallback()
+Checking external function setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,caller must be admin)
+Checking external function acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin,only pendingAdmin can accept admin)
+Checking external function setPendingAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,caller must be admin)
+Checking external function acceptAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == pendingAdmin,only pendingAdmin can accept admin)
+Checking public function setImplementation
+Checking public function delegateToImplementation
+Checking public function delegateToViewImplementation
+Checking public function setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,caller must be admin)
+Checking external function fallback
+Checking external function receive
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function ControllerDelegator.delegateToViewImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.delegateTo (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.delegateToImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,caller must be admin) (proxy_features line:909)
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function ControllerDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.receive (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.setImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ControllerDelegator.constructor (proxy_features line:898)
+functions_writing_to_variable: exp = admin = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = delegateTo(implementation_,abi.encodeWithSignature(initialize(address,address,address,address,address,address,bytes),_oleToken,_xoleToken,_wETH,_lpoolImplementation,_openlev,_dexAggregator,_oleWethDexData)) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = admin = admin_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = admin_ (proxy_features line:912)
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:929)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: checking public function setImplementation
+require(bool,string)(msg.sender == admin,caller must be admin)
+has_compatibility_checks: condition msg.sender == admin
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: IF
+ dominator expression: msg.data.length > 0
+can_toggle_delegatecall_on_off: successors:
+ NodeType: EXPRESSION  expression: return(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()())
+ NodeType: IF  expression: switch_expr_4740_144_0__fallback_asm_0 == 0
+ NodeType: EXPRESSION  expression: switch_expr_4740_144_0__fallback_asm_0 = success
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: INLINE ASM  expression: {'AST': {'nodeType': 'YulBlock', 'src': '4608:290:0', 'statements': [{'nodeType': 'YulVariableDeclaration', 'src': '4626:31:0', 'value': {'arguments': [{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '4652:4:0', 'type': '', 'value': '0x40'}], 'functionName': {'name': 'mload', 'nodeType': 'YulIdentifier', 'src': '4646:5:0'}, 'nodeType': 'YulFunctionCall', 'src': '4646:11:0'}, 'variables': [{'name': 'free_mem_ptr', 'nodeType': 'YulTypedName', 'src': '4630:12:0', 'type': ''}]}, {'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '4689:12:0'}, {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '4703:1:0', 'type': '', 'value': '0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '4706:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4706:16:0'}], 'functionName': {'name': 'returndatacopy', 'nodeType': 'YulIdentifier', 'src': '4674:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4674:49:0'}, 'nodeType': 'YulExpressionStatement', 'src': '4674:49:0'}, {'cases': [{'body': {'nodeType': 'YulBlock', 'src': '4778:40:0', 'statements': [{'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '4786:12:0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '4800:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4800:16:0'}], 'functionName': {'name': 'revert', 'nodeType': 'YulIdentifier', 'src': '4779:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '4779:38:0'}, 'nodeType': 'YulExpressionStatement', 'src': '4779:38:0'}]}, 'nodeType': 'YulCase', 'src': '4771:47:0', 'value': {'kind': 'number', 'nodeType': 'YulLiteral', 'src': '4776:1:0', 'type': '', 'value': '0'}}, {'body': {'nodeType': 'YulBlock', 'src': '4843:41:0', 'statements': [{'expression': {'arguments': [{'name': 'free_mem_ptr', 'nodeType': 'YulIdentifier', 'src': '4852:12:0'}, {'arguments': [], 'functionName': {'name': 'returndatasize', 'nodeType': 'YulIdentifier', 'src': '4866:14:0'}, 'nodeType': 'YulFunctionCall', 'src': '4866:16:0'}], 'functionName': {'name': 'return', 'nodeType': 'YulIdentifier', 'src': '4844:6:0'}, 'nodeType': 'YulFunctionCall', 'src': '4844:39:0'}, 'nodeType': 'YulExpressionStatement', 'src': '4844:39:0'}]}, 'nodeType': 'YulCase', 'src': '4835:49:0', 'value': 'default'}], 'expression': {'name': 'success', 'nodeType': 'YulIdentifier', 'src': '4747:7:0'}, 'nodeType': 'YulSwitch', 'src': '4740:144:0'}]}, 'evmVersion': 'istanbul', 'externalReferences': [{'declaration': 232, 'isOffset': False, 'isSlot': False, 'src': '4747:7:0', 'valueSize': 1}], 'id': 239, 'nodeType': 'InlineAssembly', 'src': '4599:299:0'}
+ NodeType: END_IF  expression: None
+ NodeType: END_IF  expression: None
+ NodeType: EXPRESSION  expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off: delegatecall_condition = True
+ NodeType: EXPRESSION  expression: free_mem_ptr__fallback_asm_0 = mload(uint256)(0x40)
+ NodeType: NEW VARIABLE  expression: None
+ NodeType: EXPRESSION  expression: returndatacopy(uint256,uint256,uint256)(free_mem_ptr__fallback_asm_0,0,returndatasize()())
+ NodeType: EXPRESSION  expression: revert(uint256,uint256)(free_mem_ptr__fallback_asm_0,returndatasize()())
+ NodeType: NEW VARIABLE  expression: None
+Found external function: setPendingAdmin
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,caller must be admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)

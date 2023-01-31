@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "JobMarketTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.7.6/f38a689712a6935a90d6955ed6b9d0fa7ce7123e_JobMarketTrustMinimizedProxy.sol/f38a689712a6935a90d6955ed6b9d0fa7ce7123e_JobMarketTrustMinimizedProxy.sol#10-70)",
+        "elements": [],
+        "description": "JobMarketTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.7.6/f38a689712a6935a90d6955ed6b9d0fa7ce7123e_JobMarketTrustMinimizedProxy.sol/f38a689712a6935a90d6955ed6b9d0fa7ce7123e_JobMarketTrustMinimizedProxy.sol#10-70) is an upgradeable proxy.\nLOGIC_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nMissing compatibility check in JobMarketTrustMinimizedProxy.cancelUpgrade()\nMissing compatibility check in JobMarketTrustMinimizedProxy.upgrade()\nMissing compatibility check in JobMarketTrustMinimizedProxy.proposeToAndCall(address,bytes)\nFound compatibility check in JobMarketTrustMinimizedProxy.proposeToAndCall(address,bytes)\n",
+        "id": "a4d48b314084abb375ce02fdde565e3549700ffe8fbd975661f896d76cc8ffa4",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "JobMarketTrustMinimizedProxy.LOGIC_SLOT",
+          "impl_address_setter": "JobMarketTrustMinimizedProxy.upgrade()",
+          "impl_address_getter": "JobMarketTrustMinimizedProxy._logic()",
+          "impl_address_location": "JobMarketTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.7.6/f38a689712a6935a90d6955ed6b9d0fa7ce7123e_JobMarketTrustMinimizedProxy.sol/f38a689712a6935a90d6955ed6b9d0fa7ce7123e_JobMarketTrustMinimizedProxy.sol#10-70)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "JobMarketTrustMinimizedProxy.cancelUpgrade()": "missing",
+              "JobMarketTrustMinimizedProxy.upgrade()": "missing",
+              "JobMarketTrustMinimizedProxy.proposeToAndCall(address,bytes)": "require(bool)(newLogic.delegatecall(data))"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "changeAdmin(address)",
+              "upgrade()",
+              "cancelUpgrade()",
+              "prolongLock(uint256)",
+              "removeTrust()",
+              "proposeToAndCall(address,bytes)"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "block.number >= _nextLogicBlock()"
+          }
+        }
+      }
+    ]
+  }
+}

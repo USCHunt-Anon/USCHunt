@@ -1,0 +1,1899 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,retSz_fallback_asm_0) (Slither line:2792)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,retSz_fallback_asm_0) (Slither line:2792)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2807)
+Args:
+0
+retSz_fallback_asm_0
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2848)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'contractLogic'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for contractLogic (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+fallback contains assembly, searching for sload (Slither line:1875)
+{'kind': 'number', 'nodeType': 'YulLiteral', 'src': '796:66:0', 'type': '', 'value': '0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7'} (Slither line:1899)
+Found hardcoded storage slot in fallback: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1917)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1939)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting Proxy._delegate_variable = Proxy._proxy_impl_slot: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:1473)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Call destination 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is constant (Slither line:1146)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is the implementation storage slot (Slither line:1149)
+
+Proxy is delegating to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: constructor(bytes,address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+
+Begin Proxiable.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: updateCodeAddress (Slither line:2978)
+Checking function: proxiableUUID (Slither line:2978)
+proxiableUUID returns bytes32 variable  (Slither line:2998)
+RETURN node expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3018)
+
+End Proxiable.find_getter_in_contract (Slither line:3073)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: updateCodeAddress(address) returns() (Slither line:3117)
+Visibility: internal
+Checking function: proxiableUUID() returns(bytes32) (Slither line:3117)
+Visibility: public
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End Proxiable.find_setter_in_contract (Slither line:3315)
+
+
+Begin SafeMath.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: mul (Slither line:2978)
+mul returns uint256 variable  (Slither line:2998)
+RETURN node expression: c (Slither line:3018)
+Checking function: div (Slither line:2978)
+div returns uint256 variable  (Slither line:2998)
+RETURN node expression: c (Slither line:3018)
+Checking function: sub (Slither line:2978)
+sub returns uint256 variable  (Slither line:2998)
+RETURN node expression: a - b (Slither line:3018)
+Checking function: add (Slither line:2978)
+add returns uint256 variable  (Slither line:2998)
+RETURN node expression: c (Slither line:3018)
+
+End SafeMath.find_getter_in_contract (Slither line:3073)
+
+
+Begin SafeMath.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: mul(uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: div(uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: sub(uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+Checking function: add(uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: internal
+
+End SafeMath.find_setter_in_contract (Slither line:3315)
+
+
+Begin OwnerHelper.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: setOwner (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: transferManager (Slither line:2978)
+
+End OwnerHelper.find_getter_in_contract (Slither line:3073)
+
+
+Begin OwnerHelper.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: setOwner(address) returns() (Slither line:3117)
+Visibility: public
+owner = to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(owner == address(0),Already initalized)
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(_to != manager)
+owner = _to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool)(_to != address(0x0))
+ChangeOwner(from,_to)
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+onlyOwner()
+require(bool)(_to != owner)
+Checking function: transferManager(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(_to != address(0x0))
+ChangeManager(from,_to)
+require(bool)(_to != owner)
+onlyOwner()
+require(bool)(_to != manager)
+manager = _to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+
+End OwnerHelper.find_setter_in_contract (Slither line:3315)
+
+
+Begin IERC20.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IERC20.find_getter_in_contract (Slither line:3073)
+
+
+Begin IERC20.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: totalSupply() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+
+End IERC20.find_setter_in_contract (Slither line:3315)
+
+
+Begin Address.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: isContract (Slither line:2978)
+isContract returns bool variable  (Slither line:2998)
+RETURN node expression: (codehash != accountHash && codehash != 0x0) (Slither line:3018)
+Checking function: sendValue (Slither line:2978)
+Checking function: functionCall (Slither line:2978)
+functionCall returns bytes variable  (Slither line:2998)
+RETURN node expression: functionCall(target,data,Address: low-level call failed) (Slither line:3018)
+Checking function: functionCall (Slither line:2978)
+functionCall returns bytes variable  (Slither line:2998)
+RETURN node expression: _functionCallWithValue(target,data,0,errorMessage) (Slither line:3018)
+Checking function: functionCallWithValue (Slither line:2978)
+functionCallWithValue returns bytes variable  (Slither line:2998)
+RETURN node expression: functionCallWithValue(target,data,value,Address: low-level call with value failed) (Slither line:3018)
+Checking function: functionCallWithValue (Slither line:2978)
+functionCallWithValue returns bytes variable  (Slither line:2998)
+RETURN node expression: _functionCallWithValue(target,data,value,errorMessage) (Slither line:3018)
+Checking function: _functionCallWithValue (Slither line:2978)
+_functionCallWithValue returns bytes variable  (Slither line:2998)
+RETURN node expression: returndata (Slither line:3018)
+
+End Address.find_getter_in_contract (Slither line:3073)
+
+
+Begin Address.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: isContract(address) returns(bool) (Slither line:3117)
+Visibility: internal
+Checking function: sendValue(address,uint256) returns() (Slither line:3117)
+Visibility: internal
+Checking function: functionCall(address,bytes) returns(bytes) (Slither line:3117)
+Visibility: internal
+Checking function: functionCall(address,bytes,string) returns(bytes) (Slither line:3117)
+Visibility: internal
+Checking function: functionCallWithValue(address,bytes,uint256) returns(bytes) (Slither line:3117)
+Visibility: internal
+Checking function: functionCallWithValue(address,bytes,uint256,string) returns(bytes) (Slither line:3117)
+Visibility: internal
+Checking function: _functionCallWithValue(address,bytes,uint256,string) returns(bytes) (Slither line:3117)
+Visibility: private
+
+End Address.find_setter_in_contract (Slither line:3315)
+
+
+Begin IUniswapV2Factory.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IUniswapV2Factory.find_getter_in_contract (Slither line:3073)
+
+
+Begin IUniswapV2Factory.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: feeTo() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: feeToSetter() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: getPair(address,address) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: allPairs(uint256) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: allPairsLength() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: createPair(address,address) returns(address) (Slither line:3117)
+Visibility: external
+Checking function: setFeeTo(address) returns() (Slither line:3117)
+Visibility: external
+Checking function: setFeeToSetter(address) returns() (Slither line:3117)
+Visibility: external
+
+End IUniswapV2Factory.find_setter_in_contract (Slither line:3315)
+
+
+Begin IUniswapV2Pair.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IUniswapV2Pair.find_getter_in_contract (Slither line:3073)
+
+
+Begin IUniswapV2Pair.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: name() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: symbol() returns(string) (Slither line:3117)
+Visibility: external
+Checking function: decimals() returns(uint8) (Slither line:3117)
+Visibility: external
+Checking function: totalSupply() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: DOMAIN_SEPARATOR() returns(bytes32) (Slither line:3117)
+Visibility: external
+Checking function: PERMIT_TYPEHASH() returns(bytes32) (Slither line:3117)
+Visibility: external
+Checking function: nonces(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: permit(address,address,uint256,uint256,uint8,bytes32,bytes32) returns() (Slither line:3117)
+Visibility: external
+Checking function: MINIMUM_LIQUIDITY() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: factory() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: token0() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: token1() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: getReserves() returns(uint112,uint112,uint32) (Slither line:3117)
+Visibility: external
+Checking function: price0CumulativeLast() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: price1CumulativeLast() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: kLast() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: mint(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: burn(address) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: swap(uint256,uint256,address,bytes) returns() (Slither line:3117)
+Visibility: external
+Checking function: skim(address) returns() (Slither line:3117)
+Visibility: external
+Checking function: sync() returns() (Slither line:3117)
+Visibility: external
+Checking function: initialize(address,address) returns() (Slither line:3117)
+
+End IUniswapV2Pair.find_setter_in_contract (Slither line:3315)
+
+
+Begin IUniswapV2Router01.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IUniswapV2Router01.find_getter_in_contract (Slither line:3073)
+
+
+Begin IUniswapV2Router01.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: factory() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: WETH() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256) returns(uint256,uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: addLiquidityETH(address,uint256,uint256,uint256,address,uint256) returns(uint256,uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidity(address,address,uint256,uint256,uint256,address,uint256) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityETH(address,uint256,uint256,uint256,address,uint256) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: swapExactTokensForTokens(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapTokensForExactTokens(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapExactETHForTokens(uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapTokensForExactETH(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapExactTokensForETH(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapETHForExactTokens(uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: quote(uint256,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: getAmountOut(uint256,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: getAmountIn(uint256,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: getAmountsOut(uint256,address[]) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: getAmountsIn(uint256,address[]) returns(uint256[]) (Slither line:3117)
+Visibility: external
+
+End IUniswapV2Router01.find_setter_in_contract (Slither line:3315)
+
+
+Begin IUniswapV2Router02.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+
+End IUniswapV2Router02.find_getter_in_contract (Slither line:3073)
+
+
+Begin IUniswapV2Router02.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256) returns() (Slither line:3117)
+Visibility: external
+Checking function: swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256) returns() (Slither line:3117)
+Visibility: external
+Checking function: swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256) returns() (Slither line:3117)
+Visibility: external
+Checking function: factory() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: WETH() returns(address) (Slither line:3117)
+Visibility: external
+Checking function: addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256) returns(uint256,uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: addLiquidityETH(address,uint256,uint256,uint256,address,uint256) returns(uint256,uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidity(address,address,uint256,uint256,uint256,address,uint256) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityETH(address,uint256,uint256,uint256,address,uint256) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32) returns(uint256,uint256) (Slither line:3117)
+Visibility: external
+Checking function: swapExactTokensForTokens(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapTokensForExactTokens(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapExactETHForTokens(uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapTokensForExactETH(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapExactTokensForETH(uint256,uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: swapETHForExactTokens(uint256,address[],address,uint256) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: quote(uint256,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: getAmountOut(uint256,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: getAmountIn(uint256,uint256,uint256) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: getAmountsOut(uint256,address[]) returns(uint256[]) (Slither line:3117)
+Visibility: external
+Checking function: getAmountsIn(uint256,address[]) returns(uint256[]) (Slither line:3117)
+Visibility: external
+
+End IUniswapV2Router02.find_setter_in_contract (Slither line:3315)
+
+
+Begin FansOnlyCoin.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: setOwner (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: transferManager (Slither line:2978)
+Checking function: constructor1 (Slither line:2978)
+Checking function: name (Slither line:2978)
+name returns string variable  (Slither line:2998)
+RETURN node expression: _name (Slither line:3018)
+Checking function: symbol (Slither line:2978)
+symbol returns string variable  (Slither line:2998)
+RETURN node expression: _symbol (Slither line:3018)
+Checking function: decimals (Slither line:2978)
+decimals returns uint8 variable  (Slither line:2998)
+RETURN node expression: _decimals (Slither line:3018)
+Checking function: totalSupply (Slither line:2978)
+totalSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: _tTotal (Slither line:3018)
+Checking function: balanceOf (Slither line:2978)
+balanceOf returns uint256 variable  (Slither line:2998)
+RETURN node expression: _tOwned[account] (Slither line:3018)
+RETURN node expression: tokenFromReflection(_rOwned[account]) (Slither line:3018)
+Checking function: transfer (Slither line:2978)
+transfer returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: allowance (Slither line:2978)
+allowance returns uint256 variable  (Slither line:2998)
+RETURN node expression: _allowances[owner][spender] (Slither line:3018)
+Checking function: approve (Slither line:2978)
+approve returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: transferFrom (Slither line:2978)
+transferFrom returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: increaseAllowance (Slither line:2978)
+increaseAllowance returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: decreaseAllowance (Slither line:2978)
+decreaseAllowance returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: isExcludedFromReward (Slither line:2978)
+isExcludedFromReward returns bool variable  (Slither line:2998)
+RETURN node expression: _isExcluded[account] (Slither line:3018)
+Checking function: totalFees (Slither line:2978)
+totalFees returns uint256 variable  (Slither line:2998)
+RETURN node expression: _tFeeTotal (Slither line:3018)
+Checking function: reflectionFromToken (Slither line:2978)
+reflectionFromToken returns uint256 variable  (Slither line:2998)
+RETURN node expression: rTransferAmount (Slither line:3018)
+RETURN node expression: rAmount (Slither line:3018)
+Checking function: tokenFromReflection (Slither line:2978)
+tokenFromReflection returns uint256 variable  (Slither line:2998)
+RETURN node expression: rAmount.div(currentRate) (Slither line:3018)
+Checking function: excludeFromReward (Slither line:2978)
+Checking function: includeInReward (Slither line:2978)
+Checking function: excludeFromFee (Slither line:2978)
+Checking function: includeInFee (Slither line:2978)
+Checking function: setLiquidityFeePercent (Slither line:2978)
+Checking function: setMaxTxPercent (Slither line:2978)
+Checking function: setSwapAndLiquifyEnabled (Slither line:2978)
+Checking function: receive (Slither line:2978)
+Checking function: _reflectFee (Slither line:2978)
+Checking function: _getValues (Slither line:2978)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+RETURN node expression: (rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) (Slither line:3018)
+Checking function: _getTValues (Slither line:2978)
+_getTValues returns uint256 variable  (Slither line:2998)
+_getTValues returns uint256 variable  (Slither line:2998)
+_getTValues returns uint256 variable  (Slither line:2998)
+_getTValues returns uint256 variable  (Slither line:2998)
+RETURN node expression: (tTransferAmount,tFee,tBurn,tLiquidity) (Slither line:3018)
+Checking function: _getRValues (Slither line:2978)
+_getRValues returns uint256 variable  (Slither line:2998)
+_getRValues returns uint256 variable  (Slither line:2998)
+_getRValues returns uint256 variable  (Slither line:2998)
+RETURN node expression: (rAmount,rTransferAmount,rFee) (Slither line:3018)
+Checking function: _getRate (Slither line:2978)
+_getRate returns uint256 variable  (Slither line:2998)
+RETURN node expression: rSupply.div(tSupply) (Slither line:3018)
+Checking function: _getCurrentSupply (Slither line:2978)
+_getCurrentSupply returns uint256 variable  (Slither line:2998)
+_getCurrentSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: (_rTotal,_tTotal) (Slither line:3018)
+RETURN node expression: (_rTotal,_tTotal) (Slither line:3018)
+RETURN node expression: (rSupply,tSupply) (Slither line:3018)
+Checking function: _takeLiquidity (Slither line:2978)
+Checking function: calculateTaxFee (Slither line:2978)
+calculateTaxFee returns uint256 variable  (Slither line:2998)
+RETURN node expression: _amount.mul(_taxFee).div(10 ** 2) (Slither line:3018)
+Checking function: calculateBurnFee (Slither line:2978)
+calculateBurnFee returns uint256 variable  (Slither line:2998)
+RETURN node expression: _amount.mul(_burnFee).div(10 ** 2) (Slither line:3018)
+Checking function: calculateLiquidityFee (Slither line:2978)
+calculateLiquidityFee returns uint256 variable  (Slither line:2998)
+RETURN node expression: _amount.mul(_liquidityFee).div(10 ** 2) (Slither line:3018)
+Checking function: removeAllFee (Slither line:2978)
+Checking function: restoreAllFee (Slither line:2978)
+Checking function: isExcludedFromFee (Slither line:2978)
+isExcludedFromFee returns bool variable  (Slither line:2998)
+RETURN node expression: _isExcludedFromFee[account] (Slither line:3018)
+Checking function: _approve (Slither line:2978)
+Checking function: _transfer (Slither line:2978)
+Checking function: swapAndLiquify (Slither line:2978)
+Checking function: swapTokensForEth (Slither line:2978)
+Checking function: addLiquidity (Slither line:2978)
+Checking function: _tokenTransfer (Slither line:2978)
+Checking function: _transferStandard (Slither line:2978)
+Checking function: _transferToExcluded (Slither line:2978)
+Checking function: _transferFromExcluded (Slither line:2978)
+Checking function: _transferBothExcluded (Slither line:2978)
+Checking function: saleIssueLock (Slither line:2978)
+
+End FansOnlyCoin.find_getter_in_contract (Slither line:3073)
+
+
+Begin FansOnlyCoin.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: constructor1() returns() (Slither line:3117)
+Visibility: public
+_name = FansOnlyCoin
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+account2 = 0x69CF1F0aA15952ecC0ee6e9E028BE0b298003D7A
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_isExcludedFromFee[address(this)] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_symbol = FOC
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+account3 = 0x814b0C1b4F24bEa34fdF195Ed7130Ab54c36D441
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+lastRun = block.timestamp
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_decimals = 18
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+account4 = 0xc9b384668686d4Bb356D92719F6191115F8bc0df
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+month = 2592000
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+setOwner(msg.sender)
+vestinglock = 0
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[msg.sender] = _rTotal
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_taxFee = 2
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[msg.sender] = _tTotal
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+MAX = ~ uint256(0)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_previousTaxFee = _taxFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_burnFee = 2
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory()).createPair(address(this),_uniswapV2Router.WETH())
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_liquidityFee = 2
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+uniswapV2Router = _uniswapV2Router
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_previousLiquidityFee = _liquidityFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_isExcludedFromFee[owner] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+swapAndLiquifyEnabled = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(owner == address(0),Already initalized)
+_isExcludedFromFee[account1] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_maxTxAmount = 25 * 10 ** 7 * 10 ** 18
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+owner = to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_isExcludedFromFee[account2] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+numTokensSellToAddToLiquidity = 25 * 10 ** 7 * 10 ** 18
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tTotal = 10 ** 9 * 10 ** 18
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_isExcludedFromFee[account3] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+account1 = 0xB8fC6c753dF7798886bc9Dc6BFA179DC422E1c76
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rTotal = (MAX - (MAX % _tTotal))
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_isExcludedFromFee[account4] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: name() returns(string) (Slither line:3117)
+Visibility: public
+_name
+Checking function: symbol() returns(string) (Slither line:3117)
+Visibility: public
+_symbol
+Checking function: decimals() returns(uint8) (Slither line:3117)
+Visibility: public
+_decimals
+Checking function: totalSupply() returns(uint256) (Slither line:3117)
+Visibility: public
+_tTotal
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: public
+(_rTotal,_tTotal)
+rSupply.div(tSupply)
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account]
+c
+tokenFromReflection(_rOwned[account])
+(_rTotal,_tTotal)
+(rSupply,tSupply)
+require(bool,string)(rAmount <= _rTotal,Amount must be less than total reflections)
+rAmount.div(currentRate)
+i ++
+assert(bool)(b <= a)
+a - b
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3117)
+Visibility: public
+Transfer(sender,recipient,tTransferAmount)
+(_rTotal,_tTotal)
+_tOwned[recipient] = _tOwned[recipient].add(tTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+(_rTotal,_tTotal)
+swapTokensForEth(half)
+None
+(rSupply,tSupply)
+require(bool,string)(from != address(0),ERC20: transfer from the zero address)
+addLiquidity(otherHalf,newBalance)
+_tOwned[sender] = _tOwned[sender].sub(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_previousTaxFee = _taxFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(to != address(0),ERC20: transfer to the zero address)
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+SwapAndLiquify(half,newBalance,otherHalf)
+_previousLiquidityFee = _liquidityFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(amount > 0,Transfer amount must be greater than zero)
+_taxFee = 0
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+lockTheSwap()
+_tOwned[sender] = _tOwned[sender].sub(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+assert(bool)(b <= a)
+_liquidityFee = 0
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+inSwapAndLiquify = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+a - b
+assert(bool)(a == 0 || c / a == b)
+path[0] = address(this)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+inSwapAndLiquify = false
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+path[1] = uniswapV2Router.WETH()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+contractTokenBalance = _maxTxAmount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_approve(address(this),address(uniswapV2Router),tokenAmount)
+uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(tokenAmount,0,path,address(this),block.timestamp)
+_approve(address(this),address(uniswapV2Router),tokenAmount)
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+contractTokenBalance = numTokensSellToAddToLiquidity
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+uniswapV2Router.addLiquidityETH{value: ethAmount}(address(this),tokenAmount,0,0,owner,block.timestamp)
+vestinglock = uint256(block.timestamp - lastRun) / month
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+swapAndLiquify(contractTokenBalance)
+_tOwned[recipient] = _tOwned[recipient].add(tTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+assert(bool)(c >= a)
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account1] = _tOwned[account1].add(tFee / 2)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account2] = _tOwned[account2].add(tFee / 2)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_takeLiquidity(tLiquidity)
+_tokenTransfer(from,to,amount,takeFee)
+_tOwned[account3] = _tOwned[account3].add(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_reflectFee(rFee,tFee)
+_tOwned[account4] = _tOwned[account4].add(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_taxFee = _previousTaxFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+takeFee = false
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+restoreAllFee()
+_tTotal = _tTotal.sub(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_liquidityFee = _previousLiquidityFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_takeLiquidity(tLiquidity)
+_rOwned[address(this)] = _rOwned[address(this)].add(rLiquidity)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply.div(tSupply)
+(rAmount,rTransferAmount,rFee)
+_takeLiquidity(tLiquidity)
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_reflectFee(rFee,tFee)
+_reflectFee(rFee,tFee)
+Transfer(sender,recipient,tTransferAmount)
+_transferBothExcluded(sender,recipient,amount)
+Transfer(sender,recipient,tTransferAmount)
+_tOwned[address(this)] = _tOwned[address(this)].add(tLiquidity)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account]
+_transferStandard(sender,recipient,amount)
+tokenFromReflection(_rOwned[account])
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity)
+(tTransferAmount,tFee,tBurn,tLiquidity) = _getTValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_takeLiquidity(tLiquidity)
+_amount.mul(_taxFee).div(10 ** 2)
+_reflectFee(rFee,tFee)
+Transfer(sender,recipient,tTransferAmount)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+removeAllFee()
+Approval(owner,spender,amount)
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+saleIssueLock()
+(rAmount,rTransferAmount,rFee) = _getRValues(tAmount,tFee,tBurn,tLiquidity,_getRate())
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_amount.mul(_burnFee).div(10 ** 2)
+_transfer(msg.sender,recipient,amount)
+_transferFromExcluded(sender,recipient,amount)
+require(bool,string)(vestinglock > 0,No time to transfer)
+require(bool,string)(amount <= bal,Don't transfer out of allowed money value)
+require(bool,string)(rAmount <= _rTotal,Amount must be less than total reflections)
+_transferToExcluded(sender,recipient,amount)
+true
+_rTotal = _rTotal.sub(rFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(tTransferAmount,tFee,tBurn,tLiquidity)
+rAmount.div(currentRate)
+_amount.mul(_liquidityFee).div(10 ** 2)
+i ++
+_tFeeTotal = _tFeeTotal.add(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_transferStandard(sender,recipient,amount)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3117)
+Visibility: public
+_allowances[owner][spender]
+Checking function: approve(address,uint256) returns(bool) (Slither line:3117)
+Visibility: public
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(_rTotal,_tTotal)
+Approval(owner,spender,amount)
+assert(bool)(a == 0 || c / a == b)
+rSupply.div(tSupply)
+c
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+saleIssueLock()
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(vestinglock > 0,No time to transfer)
+_tOwned[account]
+c
+tokenFromReflection(_rOwned[account])
+require(bool,string)(amount <= bal,Don't transfer out of allowed money value)
+(_rTotal,_tTotal)
+_approve(msg.sender,spender,amount)
+vestinglock = uint256(block.timestamp - lastRun) / month
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+true
+(rSupply,tSupply)
+require(bool,string)(rAmount <= _rTotal,Amount must be less than total reflections)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+rAmount.div(currentRate)
+i ++
+assert(bool)(b <= a)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+a - b
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: public
+Transfer(sender,recipient,tTransferAmount)
+(_rTotal,_tTotal)
+_tOwned[recipient] = _tOwned[recipient].add(tTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+(_rTotal,_tTotal)
+swapTokensForEth(half)
+None
+(rSupply,tSupply)
+require(bool,string)(from != address(0),ERC20: transfer from the zero address)
+addLiquidity(otherHalf,newBalance)
+_tOwned[sender] = _tOwned[sender].sub(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_previousTaxFee = _taxFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(to != address(0),ERC20: transfer to the zero address)
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+SwapAndLiquify(half,newBalance,otherHalf)
+_previousLiquidityFee = _liquidityFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(amount > 0,Transfer amount must be greater than zero)
+_taxFee = 0
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+lockTheSwap()
+assert(bool)(b <= a)
+_tOwned[sender] = _tOwned[sender].sub(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_liquidityFee = 0
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+a - b
+inSwapAndLiquify = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+assert(bool)(a == 0 || c / a == b)
+path[0] = address(this)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+inSwapAndLiquify = false
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+path[1] = uniswapV2Router.WETH()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+contractTokenBalance = _maxTxAmount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_approve(address(this),address(uniswapV2Router),tokenAmount)
+uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(tokenAmount,0,path,address(this),block.timestamp)
+_approve(address(this),address(uniswapV2Router),tokenAmount)
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+contractTokenBalance = numTokensSellToAddToLiquidity
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+uniswapV2Router.addLiquidityETH{value: ethAmount}(address(this),tokenAmount,0,0,owner,block.timestamp)
+vestinglock = uint256(block.timestamp - lastRun) / month
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+swapAndLiquify(contractTokenBalance)
+_tOwned[recipient] = _tOwned[recipient].add(tTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+assert(bool)(c >= a)
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account1] = _tOwned[account1].add(tFee / 2)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account2] = _tOwned[account2].add(tFee / 2)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_takeLiquidity(tLiquidity)
+_tokenTransfer(from,to,amount,takeFee)
+_tOwned[account3] = _tOwned[account3].add(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_reflectFee(rFee,tFee)
+_tOwned[account4] = _tOwned[account4].add(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_taxFee = _previousTaxFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+takeFee = false
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+restoreAllFee()
+_tTotal = _tTotal.sub(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_liquidityFee = _previousLiquidityFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_takeLiquidity(tLiquidity)
+_rOwned[address(this)] = _rOwned[address(this)].add(rLiquidity)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply.div(tSupply)
+(rAmount,rTransferAmount,rFee)
+_takeLiquidity(tLiquidity)
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_reflectFee(rFee,tFee)
+_reflectFee(rFee,tFee)
+Transfer(sender,recipient,tTransferAmount)
+_transferBothExcluded(sender,recipient,amount)
+Transfer(sender,recipient,tTransferAmount)
+_tOwned[address(this)] = _tOwned[address(this)].add(tLiquidity)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_tOwned[account]
+saleIssueLock()
+_transferStandard(sender,recipient,amount)
+tokenFromReflection(_rOwned[account])
+require(bool,string)(vestinglock > 0,No time to transfer)
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity)
+(tTransferAmount,tFee,tBurn,tLiquidity) = _getTValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_rOwned[recipient] = _rOwned[recipient].add(rTransferAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(amount <= bal,Don't transfer out of allowed money value)
+_takeLiquidity(tLiquidity)
+_amount.mul(_taxFee).div(10 ** 2)
+_transfer(sender,recipient,amount)
+_reflectFee(rFee,tFee)
+_approve(sender,msg.sender,_allowances[sender][msg.sender].sub(amount))
+Transfer(sender,recipient,tTransferAmount)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+true
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Approval(owner,spender,amount)
+removeAllFee()
+_rOwned[sender] = _rOwned[sender].sub(rAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rAmount,rTransferAmount,rFee) = _getRValues(tAmount,tFee,tBurn,tLiquidity,_getRate())
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_amount.mul(_burnFee).div(10 ** 2)
+_transferFromExcluded(sender,recipient,amount)
+require(bool,string)(rAmount <= _rTotal,Amount must be less than total reflections)
+_transferToExcluded(sender,recipient,amount)
+_rTotal = _rTotal.sub(rFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(tTransferAmount,tFee,tBurn,tLiquidity)
+rAmount.div(currentRate)
+_amount.mul(_liquidityFee).div(10 ** 2)
+i ++
+_tFeeTotal = _tFeeTotal.add(tFee)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_transferStandard(sender,recipient,amount)
+Checking function: increaseAllowance(address,uint256) returns(bool) (Slither line:3117)
+Visibility: public
+_approve(msg.sender,spender,_allowances[msg.sender][spender].add(addedValue))
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+true
+Approval(owner,spender,amount)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+assert(bool)(c >= a)
+Checking function: decreaseAllowance(address,uint256) returns(bool) (Slither line:3117)
+Visibility: public
+true
+_allowances[owner][spender] = amount
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(spender != address(0),ERC20: approve to the zero address)
+Approval(owner,spender,amount)
+require(bool,string)(owner != address(0),ERC20: approve from the zero address)
+assert(bool)(b <= a)
+_approve(msg.sender,spender,_allowances[msg.sender][spender].sub(subtractedValue))
+a - b
+Checking function: isExcludedFromReward(address) returns(bool) (Slither line:3117)
+Visibility: public
+_isExcluded[account]
+Checking function: totalFees() returns(uint256) (Slither line:3117)
+Visibility: public
+_tFeeTotal
+Checking function: reflectionFromToken(uint256,bool) returns(uint256) (Slither line:3117)
+Visibility: public
+(rAmount) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(_rTotal,_tTotal)
+assert(bool)(a == 0 || c / a == b)
+(rAmount,rTransferAmount,rFee)
+(rAmount,rTransferAmount,rFee) = _getRValues(tAmount,tFee,tBurn,tLiquidity,_getRate())
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply.div(tSupply)
+c
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+_amount.mul(_burnFee).div(10 ** 2)
+rTransferAmount
+(rTransferAmount) = _getValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+(_rTotal,_tTotal)
+(rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity)
+(tTransferAmount,tFee,tBurn,tLiquidity) = _getTValues(tAmount)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(rSupply,tSupply)
+require(bool,string)(tAmount <= _tTotal,Amount must be less than supply)
+_amount.mul(_taxFee).div(10 ** 2)
+(tTransferAmount,tFee,tBurn,tLiquidity)
+_amount.mul(_liquidityFee).div(10 ** 2)
+i ++
+assert(bool)(b <= a)
+rAmount
+a - b
+Checking function: tokenFromReflection(uint256) returns(uint256) (Slither line:3117)
+Visibility: public
+(_rTotal,_tTotal)
+rSupply.div(tSupply)
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+(_rTotal,_tTotal)
+(rSupply,tSupply)
+require(bool,string)(rAmount <= _rTotal,Amount must be less than total reflections)
+rAmount.div(currentRate)
+i ++
+assert(bool)(b <= a)
+a - b
+Checking function: excludeFromReward(address) returns() (Slither line:3117)
+Visibility: public
+_tOwned[account] = tokenFromReflection(_rOwned[account])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+(_rTotal,_tTotal)
+rSupply.div(tSupply)
+_excluded.push(account)
+(rSupply,tSupply) = _getCurrentSupply()
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+rSupply = rSupply.sub(_rOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+tSupply = tSupply.sub(_tOwned[_excluded[i]])
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+c
+(_rTotal,_tTotal)
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+(rSupply,tSupply)
+require(bool,string)(rAmount <= _rTotal,Amount must be less than total reflections)
+a - b
+require(bool,string)(! _isExcluded[account],Account is already excluded)
+rAmount.div(currentRate)
+_isExcluded[account] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+i ++
+assert(bool)(b <= a)
+Checking function: includeInReward(address) returns() (Slither line:3117)
+Visibility: external
+_tOwned[account] = 0
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+_isExcluded[account] = false
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(_isExcluded[account],Account is already excluded)
+_excluded.pop()
+i ++
+_excluded[i] = _excluded[_excluded.length - 1]
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: excludeFromFee(address) returns() (Slither line:3117)
+Visibility: public
+_isExcludedFromFee[account] = true
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+Checking function: includeInFee(address) returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+_isExcludedFromFee[account] = false
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+onlyOwner()
+Checking function: setLiquidityFeePercent(uint256) returns() (Slither line:3117)
+Visibility: external
+onlyOwner()
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+_liquidityFee = liquidityFee
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: setMaxTxPercent(uint256) returns() (Slither line:3117)
+Visibility: external
+_maxTxAmount = _tTotal.mul(maxTxPercent).div(10 ** 2)
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+onlyOwner()
+assert(bool)(a == 0 || c / a == b)
+c
+c
+Checking function: setSwapAndLiquifyEnabled(bool) returns() (Slither line:3117)
+Visibility: public
+onlyOwner()
+swapAndLiquifyEnabled = _enabled
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+SwapAndLiquifyEnabledUpdated(_enabled)
+Checking function: receive() returns() (Slither line:3117)
+Checking function: _reflectFee(uint256,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _getValues(uint256) returns(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:3117)
+Visibility: private
+Checking function: _getTValues(uint256) returns(uint256,uint256,uint256,uint256) (Slither line:3117)
+Visibility: private
+Checking function: _getRValues(uint256,uint256,uint256,uint256,uint256) returns(uint256,uint256,uint256) (Slither line:3117)
+Visibility: private
+Checking function: _getRate() returns(uint256) (Slither line:3117)
+Visibility: private
+Checking function: _getCurrentSupply() returns(uint256,uint256) (Slither line:3117)
+Visibility: private
+Checking function: _takeLiquidity(uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: calculateTaxFee(uint256) returns(uint256) (Slither line:3117)
+Visibility: private
+Checking function: calculateBurnFee(uint256) returns(uint256) (Slither line:3117)
+Visibility: private
+Checking function: calculateLiquidityFee(uint256) returns(uint256) (Slither line:3117)
+Visibility: private
+Checking function: removeAllFee() returns() (Slither line:3117)
+Visibility: private
+Checking function: restoreAllFee() returns() (Slither line:3117)
+Visibility: private
+Checking function: isExcludedFromFee(address) returns(bool) (Slither line:3117)
+Visibility: public
+_isExcludedFromFee[account]
+Checking function: _approve(address,address,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _transfer(address,address,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: swapAndLiquify(uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: swapTokensForEth(uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: addLiquidity(uint256,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _tokenTransfer(address,address,uint256,bool) returns() (Slither line:3117)
+Visibility: private
+Checking function: _transferStandard(address,address,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _transferToExcluded(address,address,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _transferFromExcluded(address,address,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: _transferBothExcluded(address,address,uint256) returns() (Slither line:3117)
+Visibility: private
+Checking function: saleIssueLock() returns() (Slither line:3117)
+Visibility: public
+vestinglock = uint256(block.timestamp - lastRun) / month
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: setOwner(address) returns() (Slither line:3117)
+Visibility: public
+require(bool,string)(owner == address(0),Already initalized)
+owner = to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: transferOwnership(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(_to != owner)
+onlyOwner()
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+require(bool)(_to != manager)
+owner = _to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool)(_to != address(0x0))
+ChangeOwner(from,_to)
+Checking function: transferManager(address) returns() (Slither line:3117)
+Visibility: public
+require(bool)(_to != manager)
+manager = _to
+is an Assignment Operation (Slither line:3206)
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+require(bool)(_to != address(0x0))
+ChangeManager(from,_to)
+require(bool)(_to != owner)
+onlyOwner()
+Checking function: totalSupply() returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: balanceOf(address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: transfer(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: allowance(address,address) returns(uint256) (Slither line:3117)
+Visibility: external
+Checking function: approve(address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+Checking function: transferFrom(address,address,uint256) returns(bool) (Slither line:3117)
+Visibility: external
+
+End FansOnlyCoin.find_setter_in_contract (Slither line:3315)
+
+
+Begin TokenLogic.find_getter_in_contract (Slither line:2964)
+
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 is a Variable object
+0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+Checking function: updateCodeAddress (Slither line:2978)
+Checking function: proxiableUUID (Slither line:2978)
+proxiableUUID returns bytes32 variable  (Slither line:2998)
+RETURN node expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3018)
+Checking function: constructor1 (Slither line:2978)
+Checking function: name (Slither line:2978)
+name returns string variable  (Slither line:2998)
+RETURN node expression: _name (Slither line:3018)
+Checking function: symbol (Slither line:2978)
+symbol returns string variable  (Slither line:2998)
+RETURN node expression: _symbol (Slither line:3018)
+Checking function: decimals (Slither line:2978)
+decimals returns uint8 variable  (Slither line:2998)
+RETURN node expression: _decimals (Slither line:3018)
+Checking function: totalSupply (Slither line:2978)
+totalSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: _tTotal (Slither line:3018)
+Checking function: balanceOf (Slither line:2978)
+balanceOf returns uint256 variable  (Slither line:2998)
+RETURN node expression: _tOwned[account] (Slither line:3018)
+RETURN node expression: tokenFromReflection(_rOwned[account]) (Slither line:3018)
+Checking function: transfer (Slither line:2978)
+transfer returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: allowance (Slither line:2978)
+allowance returns uint256 variable  (Slither line:2998)
+RETURN node expression: _allowances[owner][spender] (Slither line:3018)
+Checking function: approve (Slither line:2978)
+approve returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: transferFrom (Slither line:2978)
+transferFrom returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: increaseAllowance (Slither line:2978)
+increaseAllowance returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: decreaseAllowance (Slither line:2978)
+decreaseAllowance returns bool variable  (Slither line:2998)
+RETURN node expression: true (Slither line:3018)
+Checking function: isExcludedFromReward (Slither line:2978)
+isExcludedFromReward returns bool variable  (Slither line:2998)
+RETURN node expression: _isExcluded[account] (Slither line:3018)
+Checking function: totalFees (Slither line:2978)
+totalFees returns uint256 variable  (Slither line:2998)
+RETURN node expression: _tFeeTotal (Slither line:3018)
+Checking function: reflectionFromToken (Slither line:2978)
+reflectionFromToken returns uint256 variable  (Slither line:2998)
+RETURN node expression: rTransferAmount (Slither line:3018)
+RETURN node expression: rAmount (Slither line:3018)
+Checking function: tokenFromReflection (Slither line:2978)
+tokenFromReflection returns uint256 variable  (Slither line:2998)
+RETURN node expression: rAmount.div(currentRate) (Slither line:3018)
+Checking function: excludeFromReward (Slither line:2978)
+Checking function: includeInReward (Slither line:2978)
+Checking function: excludeFromFee (Slither line:2978)
+Checking function: includeInFee (Slither line:2978)
+Checking function: setLiquidityFeePercent (Slither line:2978)
+Checking function: setMaxTxPercent (Slither line:2978)
+Checking function: setSwapAndLiquifyEnabled (Slither line:2978)
+Checking function: receive (Slither line:2978)
+Checking function: _reflectFee (Slither line:2978)
+Checking function: _getValues (Slither line:2978)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+_getValues returns uint256 variable  (Slither line:2998)
+RETURN node expression: (rAmount,rTransferAmount,rFee,tTransferAmount,tFee,tLiquidity) (Slither line:3018)
+Checking function: _getTValues (Slither line:2978)
+_getTValues returns uint256 variable  (Slither line:2998)
+_getTValues returns uint256 variable  (Slither line:2998)
+_getTValues returns uint256 variable  (Slither line:2998)
+_getTValues returns uint256 variable  (Slither line:2998)
+RETURN node expression: (tTransferAmount,tFee,tBurn,tLiquidity) (Slither line:3018)
+Checking function: _getRValues (Slither line:2978)
+_getRValues returns uint256 variable  (Slither line:2998)
+_getRValues returns uint256 variable  (Slither line:2998)
+_getRValues returns uint256 variable  (Slither line:2998)
+RETURN node expression: (rAmount,rTransferAmount,rFee) (Slither line:3018)
+Checking function: _getRate (Slither line:2978)
+_getRate returns uint256 variable  (Slither line:2998)
+RETURN node expression: rSupply.div(tSupply) (Slither line:3018)
+Checking function: _getCurrentSupply (Slither line:2978)
+_getCurrentSupply returns uint256 variable  (Slither line:2998)
+_getCurrentSupply returns uint256 variable  (Slither line:2998)
+RETURN node expression: (_rTotal,_tTotal) (Slither line:3018)
+RETURN node expression: (rSupply,tSupply) (Slither line:3018)
+RETURN node expression: (_rTotal,_tTotal) (Slither line:3018)
+Checking function: _takeLiquidity (Slither line:2978)
+Checking function: calculateTaxFee (Slither line:2978)
+calculateTaxFee returns uint256 variable  (Slither line:2998)
+RETURN node expression: _amount.mul(_taxFee).div(10 ** 2) (Slither line:3018)
+Checking function: calculateBurnFee (Slither line:2978)
+calculateBurnFee returns uint256 variable  (Slither line:2998)
+RETURN node expression: _amount.mul(_burnFee).div(10 ** 2) (Slither line:3018)
+Checking function: calculateLiquidityFee (Slither line:2978)
+calculateLiquidityFee returns uint256 variable  (Slither line:2998)
+RETURN node expression: _amount.mul(_liquidityFee).div(10 ** 2) (Slither line:3018)
+Checking function: removeAllFee (Slither line:2978)
+Checking function: restoreAllFee (Slither line:2978)
+Checking function: isExcludedFromFee (Slither line:2978)
+isExcludedFromFee returns bool variable  (Slither line:2998)
+RETURN node expression: _isExcludedFromFee[account] (Slither line:3018)
+Checking function: _approve (Slither line:2978)
+Checking function: _transfer (Slither line:2978)
+Checking function: swapAndLiquify (Slither line:2978)
+Checking function: swapTokensForEth (Slither line:2978)
+Checking function: addLiquidity (Slither line:2978)
+Checking function: _tokenTransfer (Slither line:2978)
+Checking function: _transferStandard (Slither line:2978)
+Checking function: _transferToExcluded (Slither line:2978)
+Checking function: _transferFromExcluded (Slither line:2978)
+Checking function: _transferBothExcluded (Slither line:2978)
+Checking function: saleIssueLock (Slither line:2978)
+Checking function: setOwner (Slither line:2978)
+Checking function: transferOwnership (Slither line:2978)
+Checking function: transferManager (Slither line:2978)
+Checking function: updateCode (Slither line:2978)
+
+End TokenLogic.find_getter_in_contract (Slither line:3073)
+
+
+Begin TokenLogic.find_setter_in_contract (Slither line:3109)
+
+Expression: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 (Slither line:3112)
+Checking function: updateCode(address) returns() (Slither line:3117)
+Visibility: public
+sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+sstore(uint256,uint256)
+
+End TokenLogic.find_setter_in_contract (Slither line:3315)
+
+detect_storage_slot: Proxy
+Setter found in contract TokenLogic
+Found public function: constructor
+Found fallback
+Checking external function fallback
+functions_writing_to_variable: 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7
+functions_writing_to_variable: checking function TokenLogic._transferFromExcluded (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.symbol (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._approve (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._reflectFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.setLiquidityFeePercent (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._transferStandard (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.calculateLiquidityFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._takeLiquidity (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.decreaseAllowance (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.approve (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._getValues (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.swapTokensForEth (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.decimals (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.setMaxTxPercent (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.reflectionFromToken (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.setOwner (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.updateCodeAddress (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+functions_writing_to_variable: updateCodeAddress writes newAddress to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function TokenLogic.allowance (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._getRValues (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,contractLogic)
+functions_writing_to_variable: constructor writes contractLogic to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function TokenLogic.includeInReward (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._transfer (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.updateCode (proxy_features line:893)
+get_value_assigned: sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+functions_writing_to_variable: updateCode writes newAddress to 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7 using sstore (proxy_features line:993)
+functions_writing_to_variable: checking function TokenLogic.proxiableUUID (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.calculateTaxFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.removeAllFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._transferBothExcluded (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.transferOwnership (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.addLiquidity (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.totalSupply (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.tokenFromReflection (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.setSwapAndLiquifyEnabled (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.isExcludedFromReward (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._getTValues (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._transferToExcluded (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.excludeFromFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.increaseAllowance (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.transferFrom (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.constructor1 (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.calculateBurnFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.transferManager (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._getRate (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._tokenTransfer (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.balanceOf (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.approve (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.restoreAllFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.allowance (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.receive (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.swapAndLiquify (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.includeInFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic._getCurrentSupply (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.saleIssueLock (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.name (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.isExcludedFromFee (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.totalSupply (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.transfer (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.totalFees (proxy_features line:893)
+functions_writing_to_variable: checking function TokenLogic.excludeFromReward (proxy_features line:893)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function updateCodeAddress
+has_compatibility_checks: checking public function constructor
+require(bool,string)(success,Construction failed)
+has_compatibility_checks: condition success
+check_condition_from_expression: Identifier success
+has_compatibility_checks: checking public function updateCode
+require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_compatibility_checks: condition bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID()
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID()
+require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0x0,0x0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: contractLogic_fallback_asm_0 = sload(uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7)
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: success_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()() - 10000,contractLogic_fallback_asm_0,0x0,calldatasize()(),0,0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7,newAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),Not compatible)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == owner,Only owner is allowed to perform this action)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) updateCodeAddress(newCode)
+
+Begin Proxiable.is_proxy (Slither line:1425)
+
+
+End Proxiable.is_proxy (Slither line:1428)
+
+
+Begin Proxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxiable 
+
+End Proxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnerHelper.is_proxy (Slither line:1425)
+
+
+End OwnerHelper.is_proxy (Slither line:1428)
+
+
+Begin OwnerHelper.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnerHelper 
+
+End OwnerHelper.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IERC20.is_proxy (Slither line:1425)
+
+
+End IERC20.is_proxy (Slither line:1428)
+
+
+Begin IERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IERC20 
+
+End IERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Factory.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Factory.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Factory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Factory 
+
+End IUniswapV2Factory.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Pair.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Pair.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Pair.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Pair 
+
+End IUniswapV2Pair.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router01.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router01.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router01.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router01 
+
+End IUniswapV2Router01.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IUniswapV2Router02.is_proxy (Slither line:1425)
+
+
+End IUniswapV2Router02.is_proxy (Slither line:1428)
+
+
+Begin IUniswapV2Router02.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IUniswapV2Router02 
+
+End IUniswapV2Router02.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin FansOnlyCoin.is_proxy (Slither line:1425)
+
+
+End FansOnlyCoin.is_proxy (Slither line:1428)
+
+
+Begin FansOnlyCoin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: FansOnlyCoin 
+
+End FansOnlyCoin.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenLogic.is_proxy (Slither line:1425)
+
+
+End TokenLogic.is_proxy (Slither line:1428)
+
+
+Begin TokenLogic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenLogic 
+
+End TokenLogic.is_upgradeable_proxy (Slither line:1407)
+

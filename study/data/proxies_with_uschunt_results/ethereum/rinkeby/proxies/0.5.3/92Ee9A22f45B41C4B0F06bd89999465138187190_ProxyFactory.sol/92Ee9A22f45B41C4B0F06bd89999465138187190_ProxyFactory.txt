@@ -1,0 +1,336 @@
+
+Begin IGasToken.is_proxy (Slither line:1425)
+
+
+End IGasToken.is_proxy (Slither line:1428)
+
+
+Begin IGasToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGasToken 
+
+End IGasToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IBeacon.is_proxy (Slither line:1425)
+
+
+End IBeacon.is_proxy (Slither line:1428)
+
+
+Begin IBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IBeacon 
+
+End IBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    if eq(success, 0) (Slither line:1576)
+    { (Slither line:1576)
+        revert(returndata, returnDataLength) (Slither line:1576)
+    } (Slither line:1576)
+    return(returndata, returnDataLength) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    if eq(success, 0) (Slither line:1576)
+    { (Slither line:1576)
+        revert(returndata, returnDataLength) (Slither line:1576)
+    } (Slither line:1576)
+    return(returndata, returnDataLength) (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2727)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2763)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff) (Slither line:1576)
+    if eq(calldataload(0), 0xa619486e00000000000000000000000000000000000000000000000000000000) (Slither line:1576)
+    { (Slither line:1576)
+        mstore(0, masterCopy) (Slither line:1576)
+        return(0, 0x20) (Slither line:1576)
+    } (Slither line:1576)
+    returndata := mload(0x40) (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'masterCopy'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for masterCopy (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking masterCopy (Slither line:1689)
+masterCopy is a State Variable in contract Proxy (Slither line:1693)
+
+End Proxy.find_delegate_variable_by_name
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to masterCopy
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3109)
+
+Checking function: constructor(address) returns() (Slither line:3117)
+Checking function: fallback() returns() (Slither line:3117)
+
+End Proxy.find_setter_in_contract (Slither line:3315)
+
+
+Could not find implementation setter in Proxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2964)
+
+masterCopy is a Variable object
+Checking function: constructor (Slither line:2978)
+Checking function: fallback (Slither line:2978)
+
+End Proxy.find_getter_in_contract (Slither line:3073)
+
+Could not find implementation getter in Proxy (Slither line:1305)
+Checking for masterCopy at slot 0 in contract ProxyFactory (Slither line:1355)
+Found GSVEToken at slot 0 in contract ProxyFactory (Slither line:1362)
+Checking node of type NEW VARIABLE (Slither line:1395)
+beacon
+beacon = IBeacon(0x1370CAf8181771871cb493DFDC312cdeD17a2de8)
+Checking node of type NEW VARIABLE (Slither line:1395)
+returnDataLength
+None
+Checking node of type NEW VARIABLE (Slither line:1395)
+gsveBeaconGastoken
+gsveBeaconGastoken = beacon.getAddressGastoken(address(this))
+Checking node of type IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+success
+None
+Checking node of type NEW VARIABLE (Slither line:1395)
+returndata
+None
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+gasSpent
+gasSpent = 21000 + gasStart - gasleft()() + 16 * msg.data.length
+Checking node of type END_IF (Slither line:1395)
+Checking node of type IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+gsveBeaconAmount
+gsveBeaconAmount = beacon.getAddressGasTokenSaving(gsveBeaconGastoken)
+Checking node of type EXPRESSION (Slither line:1395)
+gasSpent = 21000 + gasStart - gasleft()() + 16 * msg.data.length
+Checking node of type EXPRESSION (Slither line:1395)
+IGasToken(gsveBeaconGastoken).freeFromUpTo(msg.sender,(gasSpent + 16000) / gsveBeaconAmount)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type INLINE ASM (Slither line:1395)
+Checking node of type ENTRY_POINT (Slither line:1395)
+Checking node of type END_IF (Slither line:1395)
+Checking node of type NEW VARIABLE (Slither line:1395)
+gasStart
+gasStart = gasleft()()
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+Checking external function fallback
+functions_writing_to_variable: masterCopy
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:893)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:893)
+functions_writing_to_variable: exp = require(bool,string)(_masterCopy != address(0),Invalid master copy address provided) (proxy_features line:904)
+functions_writing_to_variable: exp = masterCopy = _masterCopy (proxy_features line:904)
+functions_writing_to_variable: AssignmentOperation: masterCopy = _masterCopy (proxy_features line:907)
+functions_writing_to_variable: Identifier: masterCopy (proxy_features line:919)
+get_value_assigned: masterCopy = _masterCopy
+functions_writing_to_variable: constructor writes _masterCopy to masterCopy (proxy_features line:924)
+has_compatibility_checks: dependencies: ['_masterCopy']
+has_compatibility_checks: checking public function constructor
+require(bool,string)(_masterCopy != address(0),Invalid master copy address provided)
+has_compatibility_checks: condition _masterCopy != address(0)
+check_condition_from_expression: condition _masterCopy != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)
+    if eq(calldataload(0), 0xa619486e00000000000000000000000000000000000000000000000000000000)
+    {
+        mstore(0, masterCopy)
+        return(0, 0x20)
+    }
+    returndata := mload(0x40)
+    calldatacopy(0, 0, calldatasize())
+    success := delegatecall(gas(), masterCopy, 0, calldatasize(), 0, 0)
+    returndatacopy(returndata, 0, returndatasize())
+    returnDataLength := returndatasize()
+    mstore(0x40, add(0x40, add(0x200, mul(returndatasize(), 0x20))))
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: gasStart = gasleft()()
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found fallback
+
+Begin IProxyCreationCallback.is_proxy (Slither line:1425)
+
+
+End IProxyCreationCallback.is_proxy (Slither line:1428)
+
+
+Begin IProxyCreationCallback.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IProxyCreationCallback 
+
+End IProxyCreationCallback.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IProxy.is_proxy (Slither line:1425)
+
+
+End IProxy.is_proxy (Slither line:1428)
+
+
+Begin IProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IProxy 
+
+End IProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGSVEToken.is_proxy (Slither line:1425)
+
+
+End IGSVEToken.is_proxy (Slither line:1428)
+
+
+Begin IGSVEToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGSVEToken 
+
+End IGSVEToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IGSVEBeacon.is_proxy (Slither line:1425)
+
+
+End IGSVEBeacon.is_proxy (Slither line:1428)
+
+
+Begin IGSVEBeacon.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IGSVEBeacon 
+
+End IGSVEBeacon.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyFactory.is_proxy (Slither line:1425)
+
+
+End ProxyFactory.is_proxy (Slither line:1428)
+
+
+Begin ProxyFactory.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyFactory 
+
+End ProxyFactory.is_upgradeable_proxy (Slither line:1407)
+

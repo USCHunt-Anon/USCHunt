@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "OracleRegistryTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.7.6/742133180738679782538c9e66a03d0c0270ace8_OracleRegistryTrustMinimizedProxy.sol/742133180738679782538c9e66a03d0c0270ace8_OracleRegistryTrustMinimizedProxy.sol#10-70)",
+        "elements": [],
+        "description": "OracleRegistryTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.7.6/742133180738679782538c9e66a03d0c0270ace8_OracleRegistryTrustMinimizedProxy.sol/742133180738679782538c9e66a03d0c0270ace8_OracleRegistryTrustMinimizedProxy.sol#10-70) is an upgradeable proxy.\nLOGIC_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nMissing compatibility check in OracleRegistryTrustMinimizedProxy.proposeToAndCall(address,bytes)\nMissing compatibility check in OracleRegistryTrustMinimizedProxy.upgrade()\nMissing compatibility check in OracleRegistryTrustMinimizedProxy.cancelUpgrade()\nFound compatibility check in OracleRegistryTrustMinimizedProxy.proposeToAndCall(address,bytes)\n",
+        "id": "69e6e8a7693e563a9a313f17142380aa88273a13dadd0aee6e4c2b0108a41110",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "OracleRegistryTrustMinimizedProxy.LOGIC_SLOT",
+          "impl_address_setter": "OracleRegistryTrustMinimizedProxy.upgrade()",
+          "impl_address_getter": "OracleRegistryTrustMinimizedProxy._logic()",
+          "impl_address_location": "OracleRegistryTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies_and_implementations/0.7.6/742133180738679782538c9e66a03d0c0270ace8_OracleRegistryTrustMinimizedProxy.sol/742133180738679782538c9e66a03d0c0270ace8_OracleRegistryTrustMinimizedProxy.sol#10-70)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "OracleRegistryTrustMinimizedProxy.proposeToAndCall(address,bytes)": "require(bool)(newLogic.delegatecall(data))",
+              "OracleRegistryTrustMinimizedProxy.upgrade()": "missing",
+              "OracleRegistryTrustMinimizedProxy.cancelUpgrade()": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "changeAdmin(address)",
+              "upgrade()",
+              "cancelUpgrade()",
+              "prolongLock(uint256)",
+              "removeTrust()",
+              "proposeToAndCall(address,bytes)"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "block.number >= _nextLogicBlock()"
+          }
+        }
+      }
+    ]
+  }
+}

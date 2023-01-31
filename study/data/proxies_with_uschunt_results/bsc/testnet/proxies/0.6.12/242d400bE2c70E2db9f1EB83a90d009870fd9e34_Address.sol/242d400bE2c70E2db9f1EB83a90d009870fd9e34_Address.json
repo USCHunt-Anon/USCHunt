@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Game (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#194-229)",
+        "elements": [],
+        "description": "Game (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#194-229) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "738d1911b3cf937d93867433d6c28de74a5c09cbaf0383e84fcd0ed8995a39ef",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "NFTGame (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#231-258)",
+        "elements": [],
+        "description": "NFTGame (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#231-258) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "480cb9d8103cd1f6538e6b471ae4671cb21bf0b930d3c85580c6780c3cef8977",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "DUNE (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#260-297)",
+        "elements": [],
+        "description": "DUNE (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#260-297) is an upgradeable proxy.\nBASEGAME_SLOT was found in a different contract.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nFound compatibility checks in all upgrade functions.\n",
+        "id": "a12e363bb1039a628a01be46e0cd4b04031996a5dadfa77277cf8746d2064cc5",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "NFTGame.BASEGAME_SLOT",
+          "impl_address_setter": "DUNE.approre(address)",
+          "impl_address_getter": "NFTGame._basegame()",
+          "impl_address_location": "NFTGame (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.6.12/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol/242d400bE2c70E2db9f1EB83a90d009870fd9e34_Address.sol#231-258)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "DUNE.approre(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "NFTGame.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              },
+              "DUNE.constructor(address,address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Cannot set a proxy implementation to a non-contract address)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "approre(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

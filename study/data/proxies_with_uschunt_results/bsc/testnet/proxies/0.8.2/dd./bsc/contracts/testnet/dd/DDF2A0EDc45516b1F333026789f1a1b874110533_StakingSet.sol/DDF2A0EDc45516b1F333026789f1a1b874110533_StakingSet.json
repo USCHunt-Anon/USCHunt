@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "StakingSetProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/dd./bsc/contracts/testnet/dd/DDF2A0EDc45516b1F333026789f1a1b874110533_StakingSet.sol/DDF2A0EDc45516b1F333026789f1a1b874110533_StakingSet.sol#422-473)",
+        "elements": [],
+        "description": "StakingSetProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/dd./bsc/contracts/testnet/dd/DDF2A0EDc45516b1F333026789f1a1b874110533_StakingSet.sol/DDF2A0EDc45516b1F333026789f1a1b874110533_StakingSet.sol#422-473) is an upgradeable proxy.\ntarget is declared in the proxy.\ntarget is an address state variable\nFound compatibility checks in all upgrade functions.\nCan toggle delegatecall on/off: condition: gasleft()() <= 2300\n",
+        "id": "ac4da764697bf1e96ddb0792624d4130b8ca1a510050332fee93f8483c026f37",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "StakingSetProxy.target",
+          "impl_address_setter": "StakingSetProxy.setTarget(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "StakingSetProxy (../../smart-contract-sanctuary/bsc/contracts/testnet/sorted/0.8.2/dd./bsc/contracts/testnet/dd/DDF2A0EDc45516b1F333026789f1a1b874110533_StakingSet.sol/DDF2A0EDc45516b1F333026789f1a1b874110533_StakingSet.sol#422-473)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "StakingSetProxy.constructor(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Target not a contract)",
+                "is_correct": true
+              },
+              "StakingSetProxy.setTarget(address)": {
+                "check": "require(bool,string)(extcodesize(uint256)(account) > 0,Target not a contract)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!gasleft()() <= 2300",
+          "toggle_alternative_logic": "revert()()",
+          "immutable_functions": {
+            "erc165": [
+              "supportsInterface(bytes4)"
+            ],
+            "other": [
+              "getOwner()",
+              "transferOwnership(address)",
+              "acceptOwnership()",
+              "initialize(address,address,address,address)",
+              "setTarget(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

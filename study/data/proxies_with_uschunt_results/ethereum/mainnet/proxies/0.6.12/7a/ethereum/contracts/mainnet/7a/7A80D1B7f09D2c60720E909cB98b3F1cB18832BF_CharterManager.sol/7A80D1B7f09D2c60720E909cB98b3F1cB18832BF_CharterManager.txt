@@ -1,0 +1,207 @@
+
+Begin CharterManager.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CharterManager.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,size_fallback_asm_0) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+0
+size_fallback_asm_0
+
+End CharterManager.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CharterManager.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(ptr_fallback_asm_0,size_fallback_asm_0) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+ptr_fallback_asm_0
+size_fallback_asm_0
+
+End CharterManager.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CharterManager.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CharterManager.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking implementation (Slither line:1689)
+Checking wards (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in CharterManager.fallback (Slither line:1707)
+Expression: implementation (Slither line:1719)
+Identifier value: implementation (Slither line:1725)
+implementation is a State Variable in contract CharterManager (Slither line:1730)
+
+End CharterManager.find_delegate_variable_by_name
+
+
+End CharterManager.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CharterManager.is_proxy (Slither line:1476)
+
+
+Begin CharterManager.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CharterManager 
+CharterManager is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin CharterManager.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: rely(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+Rely(usr)
+wards[usr] = 1
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+auth()
+Checking function: deny(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+wards[usr] = 0
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Deny(usr)
+auth()
+Checking function: setImplementation(address) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+auth()
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End CharterManager.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setImplementation in contract: CharterManager (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin CharterManager.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: rely (Slither line:2988)
+Checking function: deny (Slither line:2988)
+Checking function: setImplementation (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End CharterManager.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in CharterManager (Slither line:1305)
+
+End CharterManager.is_upgradeable_proxy (Slither line:1407)
+
+Checking external function rely
+Checking external function deny
+Checking external function setImplementation
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function CharterManager.deny (proxy_features line:898)
+functions_writing_to_variable: checking function CharterManager.setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = SetImplementation(implementation_) (proxy_features line:909)
+functions_writing_to_variable: exp = auth() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed) (proxy_features line:909)
+functions_writing_to_variable: setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CharterManager.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CharterManager.rely (proxy_features line:898)
+functions_writing_to_variable: checking function CharterManager.fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation_']
+has_compatibility_checks: checking external function setImplementation
+require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+has_compatibility_checks: condition wards[msg.sender] == 1
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(ptr_fallback_asm_0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: ptr_fallback_asm_0 = mload(uint256)(0x40)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_impl,ptr_fallback_asm_0,calldatasize()(),0,0)
+Found public function: constructor
+Found external function: rely
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(wards[msg.sender] == 1,CharterManager/non-authed)
+has_time_delay: (node.type) EXPRESSION
+(Expression) auth()
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) SetImplementation(implementation_)
