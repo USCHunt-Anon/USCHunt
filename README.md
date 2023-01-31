@@ -1,3 +1,37 @@
+# USCHunt
+
+
+USCHunt is a tool for detecting, characterizing and classifying upgradeable smart contracts (USCs) for Ethereum-based blockchains. It is an augmented version of Slither, with a completely overhauled upgradeable proxy detection mechanism (found in the `Contract` class) as well as an all-new Slither detector. 
+
+This repository is made anonymously in support of the judging process for our [paper submission to USENIX '23](https://sec23fall.usenix.hotcrp.com/doc/sec23fall-paper415.pdf).
+
+## New Features
+
+* Overhauled `Contract.is_upgradeable_proxy` method drastically reduces false positives by not only searching for `delegatecall` in the fallback function, but also extracting the target address variable and performing dataflow analysis (across multiple contracts when necessary) to locate the function that sets the implementation address.
+* New `proxy-patterns` detector class performs rigorous classification of proxy patterns according to the thorough taxonomy presented in the paper, using a custom `ProxyFeatureExtraction` wrapper class for Contract objects in Slither.
+* A handmade collection of unique upgradeable proxies for testing, found in the `/tests/proxies/` directory.
+
+## Additional Analysis Tools
+
+* The shell script `sortbyversion.sh` can be used to prepare the dataset (see below) for large scale analysis by extracting the `pragma solidity` compiler version from the source code and sorting the files accordingly, which is necessary to tell `solc-select` which version to use before running Slither.
+* The shell script `script.sh` is used for running the large scale analysis on the dataset, and `time-script.sh` outputs the running time of each run of USCHunt detection to a text file for analyzing the average run time of our tool.
+* Several custom Python scripts were used to fix common compilation errors, often caused by the source code flattening process performed during verification.
+* A handful of custom Python scripts are used for retrieving both the current and previous implementation source code for a proxy. Because this relies on the contract being confirmed to be a proxy on Etherscan, we also provide `check_implementations.py` to perform this confirmation on all proxies for which an implementation could not be retrieved.
+* A Scrapy web scraper located in the `/contract_crawl/` directory, with the spider implemented in `/contract_crawl/sipders/scrapy_spider.py`, can be used to scrape both the native balance (e.g., ETH for Ethereum) and total ERC-20 token balance of each proxy found in the dataset, and the `compute_total_value_upgradeable.py` script computes the total value held by those which USCHunt reported as upgradeable.
+* Several custom Python scripts are provided for retrieving the deploy dates of contracts in the dataset and graphing the number of deployed proxies over time.
+* `proxy_stats.py` processes the results of the large scale analysis to count how many proxies have each of the features defined in our taxonomy.
+* `analyze_upgradeability_checks.py` processes the results of running Slither's `slither-check-upgradeability` tool, with our augmented upgradeability detection, on the upgradeable proxies detected in our initial analysis in order to count the number of storage layout clashes and function selector collisions detected.
+* `check_compatibility_checks.py` and `categorize_compatibility_checks.py` process the results of our large scale analysis to extract the checks performed in the upgrade function and classify them according to the categories listed in Table 8 of the paper.
+
+## Dataset
+
+Our study makes use of the [tintinweb/smart-contract-sanctuary](https://github.com/tintinweb/smart-contract-sanctuary) repository, which contains a constantly-updated collection of all publicly verified smart contract source code published to Etherscan or its sister sites. Furthermore, for contracts that are initially reported as proxies but for which upgradeability cannot be performed, we use the custom scripts provided to fetch the current implementation from the respective block explorer, as well as the previous implementation if one exists in order to detect storage layout clashes between the two implementations. We provide the subset of our dataset which were identified as proxies (upgradeable or not) in the `/study-data/` directory for the sake of reproducing our results.
+
+## Usage
+
+TO-DO
+
+-----
 # Slither, the Solidity source analyzer
 <img src="./logo.png" alt="Logo" width="500"/>
 
