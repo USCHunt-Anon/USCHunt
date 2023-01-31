@@ -13,6 +13,8 @@ This repository is made anonymously in support of the judging process for our [p
 
 ## Additional Analysis Tools
 
+The following tools/scripts located in the `/study/scripts/` directory were used to aid our large scale analysis and evaluate its results.
+
 * The shell script `sortbyversion.sh` can be used to prepare the dataset (see below) for large scale analysis by extracting the `pragma solidity` compiler version from the source code and sorting the files accordingly, which is necessary to tell `solc-select` which version to use before running Slither.
 * The shell script `script.sh` is used for running the large scale analysis on the dataset, and `time-script.sh` outputs the running time of each run of USCHunt detection to a text file for analyzing the average run time of our tool.
 * Several custom Python scripts were used to fix common compilation errors, often caused by the source code flattening process performed during verification.

@@ -206,7 +206,7 @@ for chain_name in api_config.keys():
     for chain_network in api_config[chain_name]["urls"].keys():
         if chain_network == "mainnet":
             continue
-        for root, d_names, f_names in os.walk(f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/"
+        for root, d_names, f_names in os.walk(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
                                               f"{chain_name}/contracts/{chain_network}/proxies"):
             proxyAddress = ""
             prev_implementation = ""

@@ -11,15 +11,15 @@ total_proxies_by_date = {}
 upgradeable_proxies_by_date = {}
 for chain in chain_names:
     upgradeable_addresses = ""
-    if os.path.exists(f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/"
+    if os.path.exists(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
                       f"{chain}/contracts/mainnet/upgradeable_addresses.txt"):
-        f = open(f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/"
+        f = open(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
                  f"{chain}/contracts/mainnet/upgradeable_addresses.txt", "r")
         upgradeable_addresses = f.read()
         f.close()
     total_proxies_by_date[chain] = {}
     upgradeable_proxies_by_date[chain] = {}
-    path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/" \
+    path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
            f"{chain}/contracts/mainnet/proxies/balances_and_dates.json"
     if os.path.exists(path):
         f = open(path, "r")

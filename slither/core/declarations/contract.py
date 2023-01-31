@@ -3270,7 +3270,7 @@ class Contract(SourceMapping):  # pylint: disable=too-many-public-methods
         if isinstance(other, str):
             return other == self.name
         if isinstance(other, Contract):
-            """ @webthethird Implemented to resolve false positives in upgradeability > checks > variables_order
+            """ @USCHunt Implemented to resolve false positives in upgradeability > checks > variables_order
                 get_summary()-> (str, list, list, list, list): 
                                 [name, inheritance, variables, function summaries, modifier summaries]
             """

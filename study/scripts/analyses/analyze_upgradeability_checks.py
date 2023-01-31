@@ -90,7 +90,7 @@ for chain in chain_names:
             "contracts": []
         }
     }
-    proxies_path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/{chain}" \
+    proxies_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}" \
                    f"/contracts/mainnet/proxies_and_impls_separate"
     for root, d_names, f_names in os.walk(proxies_path):
         for file_name in f_names:
@@ -140,7 +140,7 @@ for chain in chain_names:
                     if "'check': 'became-constant'" in str(results) and file_name not in data[chain]["became-constant"]["contracts"]:
                         data[chain]["became-constant"]["count"] += 1
                         data[chain]["became-constant"]["contracts"].append(file_name)
-output_path = "/home/webthethird/Documents/ethereum/smart-contract-sanctuary/slither_check_upgradeability_results.json"
+output_path = "/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/slither_check_upgradeability_results.json"
 out = open(output_path, "w")
 json_str = str(data).replace("'", '"')
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=False))

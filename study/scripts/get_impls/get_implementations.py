@@ -146,14 +146,14 @@ def impl_detector(proxyAddress, chain_name, chain_network):
         return None
 
 
-# f = open("/home/webthethird/Documents/ethereum/mainnet/proxies/a.txt")
+# f = open("/home/USCHunt/Documents/ethereum/mainnet/proxies/a.txt")
 # A = f.readlines() 
 
 # Write Implementation Source code in a Solidity file
 
 def chain_thread(chain_name):
     for net in api_config[chain_name]["urls"].keys():
-        for root, d_names, f_names in os.walk(f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/"
+        for root, d_names, f_names in os.walk(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
                                               f"{chain_name}/contracts/{net}/proxies"):
             proxyAddress = ""
             Implementation = ""

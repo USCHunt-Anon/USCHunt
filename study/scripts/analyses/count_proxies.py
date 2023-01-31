@@ -50,7 +50,7 @@ for chain in chain_names:
         'total': 0,
         'error': 0
     }
-    path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/{net}/sorted/"
+    path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/{net}/sorted/"
     for root, d_names, f_names in os.walk(path):
         for file_name in f_names:
             file_path = os.path.join(root, file_name)
@@ -92,11 +92,11 @@ for chain in chain_names:
     stats[chain][net]['upgradeable_proxy_ratio'] = (float(stats[chain][net]['upgradeable_proxies']) /
                                                     float(stats[chain][net]['total']))
     print(f"Statistics for {chain} {net} chain:\n{stats[chain][net]}")
-    o = open(f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/"
+    o = open(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
              f"{chain}/contracts/{net}/upgradeable_addresses.txt", "w")
     o.write(str(list_upgradeable).replace(",", "\n"))
     o.close()
-out = open("/home/webthethird/Documents/ethereum/smart-contract-sanctuary/proxy_counts.json", "w")
+out = open("/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/proxy_counts.json", "w")
 json_str = str(stats).replace("'", '"')
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
 out.close()

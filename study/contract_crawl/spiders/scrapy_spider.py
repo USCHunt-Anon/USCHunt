@@ -16,14 +16,14 @@ class ContractsSpider(scrapy.Spider):
     #start_urls = ['https://etherscan.io/contractsVerified']
     addresses = []
     data: dict = {"totals": {"count": 0, "native_balance": 0, "native_value": 0, "token_value": 0}}
-    # ethereum_path = "/home/webthethird/Documents/ethereum/smart-contract-sanctuary/ethereum/contracts/mainnet"
+    # ethereum_path = "/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/ethereum/contracts/mainnet"
     # proxy_dir = "/proxies/"
     price = 0.75
     # price = 302.17
     i = 7
     domain_name = allowed_domains[i]
     chain_name = chain_names[i]
-    proxies_path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/" \
+    proxies_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
                    f"{chain_name}/contracts/mainnet/proxies/"
 
     def start_requests(self):

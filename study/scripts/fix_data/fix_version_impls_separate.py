@@ -46,7 +46,7 @@ def rreplace(s, old, new, occurrence):
 
 for chain in chain_names:
     for net in network_names[chain]:
-        path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/{net}/proxies_and_impls_separate"
+        path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/{net}/proxies_and_impls_separate"
         if not os.path.exists(path):
             continue
         for root, d_names, f_names in os.walk(path):

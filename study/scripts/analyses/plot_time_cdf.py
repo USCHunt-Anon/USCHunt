@@ -103,7 +103,7 @@ def main():
 
     # ['593_830', '64_830', '76_830', '81_830', '5_93_O0_O3', '5_93_O1_O3', '5_93_O2_O3', '6_4_O0_O3', '6_4_O1_O3', '6_4_O2_O3', '7_6_O0_O3', '7_6_O1_O3', '7_6_O2_O3', '8_1_O0_O3', '8_1_O1_O3', '8_1_O2_O3', '8_30_O0_O3', '8_30_O1_O3', '8_30_O2_O3']
 
-    all_data = read_data("/home/webthethird/Downloads/sajad.txt")
+    all_data = read_data("/home/USCHunt/Downloads/sajad.txt")
     # pprint(all_data)
 
     # plot_bar(all_data)

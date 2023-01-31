@@ -157,7 +157,7 @@ def verify_proxy(proxy_address, chain_name, chain_network, api_key) -> int:
 def scan_100(chain_name, chain_network, api_key, suffix):
     print(f"Starting thread for addresses in missing_implementations_{suffix}.txt "
           f"on {chain_name} {chain_network} chain")
-    list_path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/" \
+    list_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
                 f"{chain_name}/contracts/{chain_network}/proxies/all_addresses_{suffix}"
     if os.path.exists(list_path):
         f = open(list_path, "r")
@@ -189,9 +189,9 @@ def scan_chain(chain_name):
         if chain_network not in results[chain_name].keys():
             results[chain_name][chain_network] = {}
         print(f"Starting thread for {chain_name} {chain_network} chain")
-        proxies_path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/" \
+        proxies_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
                        f"{chain_name}/contracts/{chain_network}/proxies"
-        list_path = f"/home/webthethird/Documents/ethereum/smart-contract-sanctuary/" \
+        list_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
                     f"{chain_name}/contracts/{chain_network}/proxies/all_addresses.txt"
         api_keys = api_config[chain_name]["keys"]
         num_keys = len(api_keys)
@@ -251,7 +251,7 @@ for chain_name in api_config.keys():
 for thread in chain_threads:
     thread.join()
 print("Complete!")
-out = open("/home/webthethird/Documents/ethereum/smart-contract-sanctuary/all_verification_results.json", "w")
+out = open("/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/all_verification_results.json", "w")
 json_str = str(results).replace("'", '"').replace('proxy"s', "proxy's")
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
 out.close()
