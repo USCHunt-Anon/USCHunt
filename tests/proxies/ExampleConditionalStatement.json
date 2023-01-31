@@ -1,0 +1,152 @@
+{
+    "condition": {
+        "argumentTypes": "None",
+        "id": 128,
+        "name": "useDELEGATECALL",
+        "nodeType": "Identifier",
+        "overloadedDeclarations": [],
+        "referencedDeclaration": 60,
+        "src": "5403:15:0",
+        "typeDescriptions": {
+            "typeIdentifier": "t_bool",
+            "typeString": "bool"
+        }
+    },
+    "falseBody": {
+        "id": 139,
+        "nodeType": "Block",
+        "src": "6070:720:0",
+        "statements": [
+            {
+                "expression": {
+                    "argumentTypes": "None",
+                    "arguments": [
+                        {
+                            "argumentTypes": "None",
+                            "expression": {
+                                "argumentTypes": "None",
+                                "id": 134,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 252,
+                                "src": "6257:3:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_message",
+                                    "typeString": "msg"
+                                }
+                            },
+                            "id": 135,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": "None",
+                            "src": "6257:10:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "argumentTypes": [
+                            {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        ],
+                        "expression": {
+                            "argumentTypes": "None",
+                            "id": 131,
+                            "name": "target",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 58,
+                            "src": "6233:6:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Proxyable_$237",
+                                "typeString": "contract Proxyable"
+                            }
+                        },
+                        "id": 133,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "setMessageSender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 218,
+                        "src": "6233:23:0",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
+                            "typeString": "function (address) external"
+                        }
+                    },
+                    "id": 136,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "6233:35:0",
+                    "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                    }
+                },
+                "id": 137,
+                "nodeType": "ExpressionStatement",
+                "src": "6233:35:0"
+            },
+            {
+                "externalReferences": [
+                    {
+                        "target_slot": {
+                            "declaration": 58,
+                            "isOffset": false,
+                            "isSlot": True,
+                            "src": "6531:11:0",
+                            "valueSize": 1
+                        }
+                    }
+                ],
+                "id": 138,
+                "nodeType": "InlineAssembly",
+                "operations": "{\n    let free_ptr := mload(0x40)\n    calldatacopy(free_ptr, 0, calldatasize())\n    let result := call(gas(), sload(target_slot), callvalue(), free_ptr, calldatasize(), 0, 0)\n    returndatacopy(free_ptr, 0, returndatasize())\n    if iszero(result)\n    {\n        revert(free_ptr, returndatasize())\n    }\n    return(free_ptr, returndatasize())\n}",
+                "src": "6282:508:0"
+            }
+        ]
+    },
+    "id": 140,
+    "nodeType": "IfStatement",
+    "src": "5399:1391:0",
+    "trueBody": {
+        "id": 130,
+        "nodeType": "Block",
+        "src": "5420:644:0",
+        "statements": [
+            {
+                "externalReferences": [
+                    {
+                        "target_slot": {
+                            "declaration": 58,
+                            "isOffset": false,
+                            "isSlot": True,
+                            "src": "5738:11:0",
+                            "valueSize": 1
+                        }
+                    }
+                ],
+                "id": 129,
+                "nodeType": "InlineAssembly",
+                "operations": "{\n    let free_ptr := mload(0x40)\n    calldatacopy(free_ptr, 0, calldatasize())\n    let result := delegatecall(gas(), sload(target_slot), free_ptr, calldatasize(), 0, 0)\n    returndatacopy(free_ptr, 0, returndatasize())\n    if iszero(result)\n    {\n        revert(free_ptr, returndatasize())\n    }\n    return(free_ptr, returndatasize())\n}",
+                "src": "5434:630:0"
+            }
+        ]
+    }
+}
