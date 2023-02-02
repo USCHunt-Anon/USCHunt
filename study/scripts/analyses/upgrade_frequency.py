@@ -4,6 +4,8 @@ import threading
 import time
 import requests
 import json
+import subprocess
+from dotenv import load_dotenv
 
 suffix_list = ['aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ah']
 
@@ -95,17 +97,22 @@ api_config = {
 results = {}
 
 
-def count_upgrades(proxy_address, chain_name, chain_network, setter, start_block: int, desc=False) -> int:
-    print(f"Counting upgrades at address {proxy_address} on {chain_name} {chain_network} chain starting from block {start_block}")
+def count_upgrades(proxy_address, chain_name, chain_network, setter, start_block: int, desc=False, beacon_address=None) -> int:
+    if beacon_address is None:
+        print(f"Counting upgrades at address {proxy_address} on {chain_name} {chain_network} "
+              f"chain starting from block {start_block}")
+    else:
+        print(f"Counting upgrades at beacon address {beacon_address} on {chain_name} {chain_network} "
+              f"chain starting from block {start_block}")
     upgrade_count = 0
     if chain_name != "tron":
         # headers = {
         #     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"
         # }
-        url =  f"https://{api_config[chain_name]['urls'][chain_network]}/api"\
+        url = f"https://{api_config[chain_name]['urls'][chain_network]}/api"\
                f"?module=account"\
                f"&action=txlist"\
-               f"&address={proxy_address}"\
+               f"&address={beacon_address if beacon_address is not None else proxy_address}"\
                f"&start_block={start_block}"\
                f"&end_block=99999999"\
                f"&page=1"\
@@ -155,9 +162,9 @@ def count_upgrades(proxy_address, chain_name, chain_network, setter, start_block
             if len(txs) == 10000 and not desc:
                 time.sleep(1)
                 if last_tx_block != start_block:
-                    upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, last_tx_block)
+                    upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, last_tx_block, beacon_address=beacon_address)
                 else:
-                    upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, start_block, True)
+                    upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, start_block, True, beacon_address=beacon_address)
     return upgrade_count
 
 
@@ -223,8 +230,13 @@ def scan_chain(chain_name):
                             continue
                         deploy_date = deploy_dates[proxyAddress]["deploy_date"]
                         canonical_setter = None
+                        beacon_slot = None
+                        beacon_var = None
                         for result in uschunt_results["results"]["detectors"]:
                             features: dict = result["features"]
+                            if "beacon_source_slot" in features.keys():
+                                if str(features["beacon_source_slot"]).startswith("0x"):
+                                    beacon_slot = features["beacon_source_slot"]
                             if "impl_address_setter" in features.keys():
                                 canonical_setter = features["impl_address_setter"]
                                 break
@@ -236,56 +248,30 @@ def scan_chain(chain_name):
                                 "setter_name": setter_name,
                                 "tx_count": 0
                             }
+                            if isinstance(beacon_slot, str) and chain_name == "ethereum":
+                                # Read beacon address from storage using known slot
+                                # Requires Foundry be installed, and an Infura RPC URL stored in .env
+                                bash_command = f'cast storage --rpc-url={rpc_url} {proxyAddress} {beacon_slot}'
+                                process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE, text=True)
+                                output, error = process.communicate()
+                                if error:
+                                    print(f"Error reading from storage for {address}: {name}")
+                                else:
+                                    beacon_address = "0x" + str(output).replace("\n", "")[26:]
+                                    print(f"{file} uses a beacon contract at address {beacon_address}")
+                                    results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
+                                        count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 0, beacon_address=beacon_address)
+                                    time.sleep(1)
+                                    continue
                             results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
                                 count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 0)
                             time.sleep(1)
-
-        # if not os.path.exists(list_path):
-        #     """Create a complete list of all proxy addresses"""
-        #     count = 0
-        #     f = open(list_path, "w")
-        #     for root, d_names, f_names in os.walk(proxies_path):
-        #         for file_name in f_names:
-        #             if file_name.endswith(".sol"):
-        #                 address = "0x" + file_name.split("_")[0]
-        #                 f.write(address + "\n")
-        #     f.close()
-        # """Check the length of the resulting list"""
-        # f = open(list_path, "r")
-        # address_list = f.readlines()
-        # f.close()
-        # """Split the list of addresses into equal chunks, one chunk per API key"""
-        # num_per_list = math.ceil(len(address_list)/num_keys)
-        # sublists = list(divide_chunks(address_list, num_per_list))
-        # for i in range(0, len(sublists)):
-        #     suffix = suffix_list[i]
-        #     sublist = sublists[i]
-        #     sublist_path = list_path.replace(".txt", f"_{suffix}")
-        #     f = open(sublist_path, "w")
-        #     f.writelines(sublist)
-        #     f.close()
-        # threads = []
-        # if os.path.exists(list_path):
-        #     for i in range(0, num_keys):
-        #         suffix = suffix_list[i]
-        #         api_key = api_keys[i]
-        #         if os.path.exists(list_path.replace(".txt", f"_{suffix}")):
-        #             thread = threading.Thread(target=scan_100, args=(chain_name, chain_network, api_key, suffix))
-        #             threads.append(thread)
-        #             thread.start()
-        #             time.sleep(60)
-        #     for thread in threads:
-        #         thread.join()
-        #         threads.remove(thread)
-        #     results_path = list_path.replace("all_addresses.txt", "verification_results.json")
-        #     out = open(results_path, "w")
-        #     json_str = str(results[chain_name][chain_network]).replace("'", '"').replace('proxy"s', "proxy's")
-        #     out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
-        #     out.close()
         print(f"Finished thread for {chain_name} {chain_network} chain")
 
 
 chain_threads = []
+load_dotenv()
+rpc_url = os.getenv("RPC_URL") # Infura RPC URL is for Ethereum only right now
 # Start scan_chain thread for each chain
 for chain_name in api_config.keys():
     thread = threading.Thread(target=scan_chain, args=([chain_name]))
