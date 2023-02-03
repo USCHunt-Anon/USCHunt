@@ -29,9 +29,6 @@ The following tools/scripts located in the `/study/scripts/` directory were used
 
 Our study makes use of the [tintinweb/smart-contract-sanctuary](https://github.com/tintinweb/smart-contract-sanctuary) repository, which contains a constantly-updated collection of all publicly verified smart contract source code published to Etherscan or its sister sites. Furthermore, for contracts that are initially reported as proxies but for which upgradeability cannot be performed, we use the custom scripts provided to fetch the current implementation from the respective block explorer, as well as the previous implementation if one exists in order to detect storage layout clashes between the two implementations. We provide the subset of our dataset (already sorted by version) which were identified as proxies (upgradeable or not) in the `/study/data/` directory for the sake of reproducing our results.
 
-## Usage
-
-TO-DO
 
 -----
 # Slither, the Solidity source analyzer
