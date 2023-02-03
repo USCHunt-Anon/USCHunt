@@ -97,7 +97,7 @@ api_config = {
 results = {}
 
 
-def count_upgrades(proxy_address, chain_name, chain_network, setter, start_block: int, desc=False, beacon_address=None) -> int:
+def count_upgrades(proxy_address, chain_name, chain_network, setter, start_block: int, beacon_address=None) -> int:
     if beacon_address is None:
         print(f"Counting upgrades at address {proxy_address} on {chain_name} {chain_network} "
               f"chain starting from block {start_block}")
@@ -117,82 +117,33 @@ def count_upgrades(proxy_address, chain_name, chain_network, setter, start_block
                f"&end_block=99999999"\
                f"&page=1"\
                f"&offset=10000"\
-               f"&sort={'desc' if desc else 'asc'}"\
+               f"&sort=desc"\
                f"&apikey={api_config[chain_name]['keys'][0]}"
         response = requests.post(url)
         try:
             result = json.loads(response.text)
-            # print(response.text)
             status = int(result.get("status"))
-            # guid = result.get("result")
-            # while guid == "Daily limit of 100 source code submissions reached":
-            #     print("Trying again in 6 hours...")
-            #     time.sleep(21600)
-            #     response = requests.post(url, data=data, headers=headers)
-            #     result = json.loads(response.text)
-            #     print(response.text)
-            #     status = int(result.get("status"))
-            #     guid = result.get("result")
         except json.decoder.JSONDecodeError:
             print(f"error on contract at {proxy_address}")
             print(response.text)
             status = 0
-            guid = None
         except AttributeError:
             print(f"error on contract at {proxy_address}")
             print(response.text)
             status = 0
-            guid = None
         if status == 1:
             txs = result["result"]
-            if start_block == 0:
-                results[chain_name][chain_network][proxy_address]["start_block"] = int(txs[0]["blockNumber"])
-            if desc:
-                last_tx_block = int(txs[0]["blockNumber"])
-            else:
-                last_tx_block = int(txs[len(txs) - 1]["blockNumber"])
+            first_tx_block = int(txs[len(txs) - 1]["blockNumber"])
+            results[chain_name][chain_network][proxy_address]["start_block"] = first_tx_block
+            last_tx_block = int(txs[0]["blockNumber"])
             results[chain_name][chain_network][proxy_address]["end_block"] = last_tx_block
-            if last_tx_block != start_block:
-                results[chain_name][chain_network][proxy_address]["tx_count"] += len(txs)
-                for tx in txs:
-                    if "functionName" in tx.keys() and setter in tx["functionName"]:
-                        upgrade_count += 1
+            results[chain_name][chain_network][proxy_address]["tx_count"] += len(txs)
+            for tx in txs:
+                if "functionName" in tx.keys() and setter in tx["functionName"]:
+                    upgrade_count += 1
             print(f"Found {upgrade_count} upgrades at address {proxy_address} on {chain_name} {chain_network} "
-                  f"between blocks {start_block} and {last_tx_block}")
-            if len(txs) == 10000 and not desc:
-                time.sleep(1)
-                if last_tx_block != start_block:
-                    upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, last_tx_block, beacon_address=beacon_address)
-                else:
-                    upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, start_block, True, beacon_address=beacon_address)
+                  f"between blocks {first_tx_block} and {last_tx_block}")
     return upgrade_count
-
-
-# def scan_100(chain_name, chain_network, api_key, suffix):
-#     print(f"Starting thread for addresses in missing_implementations_{suffix}.txt "
-#           f"on {chain_name} {chain_network} chain")
-#     list_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
-#                 f"{chain_name}/contracts/{chain_network}/proxies/all_addresses_{suffix}"
-#     if os.path.exists(list_path):
-#         f = open(list_path, "r")
-#         address_list = f.readlines()
-#         f.close()
-#         for address in address_list:
-#             if "balance" in address or "sorted" in address:
-#                 continue
-#             address = address.replace("\n", "")
-#             verify_proxy(address, chain_name, chain_network, api_key)
-#             time.sleep(900)
-#     print(f"Finished thread for addresses in all_addresses_{suffix} "
-#           f"on {chain_name} {chain_network} chain")
-
-
-# # Yield successive n-sized
-# # chunks from l.
-# def divide_chunks(lst, n):
-#     # looping till length l
-#     for i in range(0, len(lst), n):
-#         yield lst[i:i + n]
 
 
 def scan_chain(chain_name):
@@ -260,7 +211,7 @@ def scan_chain(chain_name):
                                     beacon_address = "0x" + str(output).replace("\n", "")[26:]
                                     print(f"{file} uses a beacon contract at address {beacon_address}")
                                     results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
-                                        count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 0, beacon_address=beacon_address)
+                                        count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 0, beacon_address)
                                     time.sleep(1)
                                     continue
                             results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
@@ -282,7 +233,7 @@ for chain_name in api_config.keys():
 for thread in chain_threads:
     thread.join()
 print("Complete!")
-out = open("../../artifacts/upgrade_counts.json", "w")
+out = open("../../artifacts/upgrade_counts_most_recent.json", "w")
 json_str = str(results).replace("'", '"')
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
 out.close()
