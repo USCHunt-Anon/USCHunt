@@ -4,7 +4,7 @@ import json
 chain_names = ['ethereum', 'arbitrum', 'avalanche', 'bsc', 'celo', 'fantom', 'optimism', 'polygon']
 
 for chain in chain_names:
-    path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/"
+    path = f"../../data/proxies_with_uschunt_results/{chain}/"
     for root, d_names, f_names in os.walk(path):
         if "0.4." in root:
             for file_name in f_names:

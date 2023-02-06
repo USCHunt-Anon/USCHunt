@@ -45,7 +45,7 @@ def rreplace(s, old, new, occurrence):
 
 for chain in chain_names:
     for net in network_names[chain]:
-        path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/{net}/reversed_order"
+        path = f"../../data/proxies_with_uschunt_results/{chain}/{net}/reversed_order"
         for root, d_names, f_names in os.walk(path):
             # if "0.4." in root:
             for file_name in f_names:

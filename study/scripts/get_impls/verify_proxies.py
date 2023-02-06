@@ -150,8 +150,7 @@ def verify_proxy(proxy_address, chain_name, chain_network, api_key) -> int:
 def scan_100(chain_name, chain_network, api_key, suffix):
     print(f"Starting thread for addresses in missing_implementations_{suffix}.txt "
           f"on {chain_name} {chain_network} chain")
-    list_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
-                f"{chain_name}/contracts/{chain_network}/proxies_and_implementations/" \
+    list_path = f"../../data/proxies_with_uschunt_results/{chain_name}/{chain_network}/proxies_and_implementations/" \
                 f"missing_implementations_{suffix}"
     if os.path.exists(list_path):
         f = open(list_path, "r")
@@ -181,11 +180,9 @@ def scan_chain(chain_name):
         if chain_network not in results[chain_name].keys():
             results[chain_name][chain_network] = {}
         print(f"Starting thread for {chain_name} {chain_network} chain")
-        list_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
-                    f"{chain_name}/contracts/{chain_network}/proxies_and_implementations/" \
+        list_path = f"../../data/proxies_with_uschunt_results/{chain_name}/{chain_network}/proxies_and_implementations/" \
                     f"missing_implementations.txt"
-        proxies_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
-                       f"{chain_name}/contracts/{chain_network}/proxies"
+        proxies_path = f"../../data/proxies_with_uschunt_results/{chain_name}/{chain_network}/proxies"
         threads = []
         api_keys = api_config[chain_name]["keys"]
         num_keys = len(api_keys)

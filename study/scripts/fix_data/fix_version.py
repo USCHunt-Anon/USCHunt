@@ -48,7 +48,7 @@ for chain in chain_names:
     for net in network_names[chain]:
         if net == "mainnet":
             continue
-        path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/{net}/reversed_order_again"
+        path = f"../../data/proxies_with_uschunt_results/{chain}/{net}/reversed_order_again"
         if not os.path.exists(path):
             continue
         for root, d_names, f_names in os.walk(path):

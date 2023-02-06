@@ -153,8 +153,7 @@ def impl_detector(proxyAddress, chain_name, chain_network):
 
 def chain_thread(chain_name):
     for net in api_config[chain_name]["urls"].keys():
-        for root, d_names, f_names in os.walk(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
-                                              f"{chain_name}/contracts/{net}/proxies"):
+        for root, d_names, f_names in os.walk(f"../../data/proxies_with_uschunt_results/{chain_name}/{net}/proxies"):
             proxyAddress = ""
             Implementation = ""
             if "/proxies/" in root:
