@@ -12,14 +12,12 @@ upgradeable_proxies_by_date = {}
 upgradeable_addresses = ""
 for chain in chain_names:
 
-    if os.path.exists(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
-                      f"{chain}/contracts/mainnet/upgradeable_addresses.txt"):
-        f = open(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
-                 f"{chain}/contracts/mainnet/upgradeable_addresses.txt", "r")
+    if os.path.exists(f"../../data/proxies_with_uschunt_results/{chain}/mainnet/upgradeable_addresses.txt"):
+        f = open(f"../../data/proxies_with_uschunt_results/{chain}/mainnet/upgradeable_addresses.txt", "r")
         upgradeable_addresses += f.read()
         f.close()
 
-path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/balances_and_dates.json"
+path = f"../../artifacts/balances_and_dates.json"
 if os.path.exists(path):
     f = open(path, "r")
     proxy_data: dict = json.loads(f.read())
@@ -86,16 +84,13 @@ if os.path.exists(path):
         x_chains[chain] = []
         y_chains[chain] = []
         upgradeable_addresses = ""
-        if os.path.exists(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
-                          f"{chain}/contracts/mainnet/upgradeable_addresses.txt"):
-            f = open(f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/"
-                     f"{chain}/contracts/mainnet/upgradeable_addresses.txt", "r")
+        if os.path.exists(f"../../data/proxies_with_uschunt_results/{chain}/mainnet/upgradeable_addresses.txt"):
+            f = open(f"../../data/proxies_with_uschunt_results/{chain}/mainnet/upgradeable_addresses.txt", "r")
             upgradeable_addresses = f.read()
             f.close()
         total_proxies_by_date[chain] = {}
         upgradeable_proxies_by_date[chain] = {}
-        path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
-               f"{chain}/contracts/mainnet/proxies/balances_and_dates.json"
+        path = f"../../data/proxies_with_uschunt_results/{chain}/mainnet/proxies/balances_and_dates.json"
         if os.path.exists(path):
             f = open(path, "r")
             proxy_data: dict = json.loads(f.read())

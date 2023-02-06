@@ -134,7 +134,7 @@ for chain in chain_names:
       "MasterCopy/Singleton": 0,
       "eip_1538": 0,
    }
-   path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/{chain}/contracts/mainnet/proxies/"
+   path = f"../../data/proxies_with_uschunt_results/{chain}/mainnet/proxies/"
    fname = []
    for root,d_names,f_names in os.walk(path):
       # print(f_names)

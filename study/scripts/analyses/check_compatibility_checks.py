@@ -63,7 +63,7 @@ for chain in chains.keys():
             "count_by_check_type": {},
             "total": 0,
         }
-        for root, d_names, f_names in os.walk(f"{chain}/contracts/{network}/proxies"):
+        for root, d_names, f_names in os.walk(f"../../data/proxies_with_uschunt_results/{chain}/{network}/proxies"):
             for file_name in f_names:
                 if file_name.endswith(".json"):
                     file_path = os.path.join(root, file_name)

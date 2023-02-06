@@ -14,8 +14,7 @@ for chain in chain_names:
             "missing_balance": 0
         }
     }
-    proxies_path = f"/home/USCHunt/Documents/ethereum/smart-contract-sanctuary/" \
-                   f"{chain}/contracts/mainnet/proxies/"
+    proxies_path = f"../../data/proxies_with_uschunt_results/{chain}/mainnet/proxies"
     f = open(proxies_path + "balances.json", "r")
     balances = json.loads(f.read())
     f.close()
