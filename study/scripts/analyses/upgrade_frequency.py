@@ -29,69 +29,69 @@ api_config = {
             # "ropsten": "api-ropsten.etherscan.io",
         }
     },
-    # "arbitrum": {
-    #     "keys": ["R39J7Z3H8HAW12VHRQR4859S7JHQ9ZK96T"],
-    #     "urls": {
-    #         "mainnet": "api.arbiscan.io",
-    #         "testnet": "api-testnet.arbiscan.io",
-    #     }
-    # },
-    # "avalanche": {
-    #     "keys": [
-    #         "Q5AYWBQGG3N6JM4RW87PY7HAPZB9SUZR6C",
-    #         "18P377JFB4588M4881359CPY5RH91J8CEZ"
-    #     ],
-    #     "urls": {
-    #         "mainnet": "api.snowtrace.io",
-    #         "testnet": "api-testnet.snowtrace.io",
-    #     }
-    # },
-    # "bsc": {
-    #     "keys": [
-    #         "QSVE8VDS51DMHDY8JNMB1G5JVF7QY49695",
-    #         "1JISCHPJAZIUBYMID8Z7V9EDVK2J73G4CF",
-    #         "YKMK2ESXGJHBJ4GHGMQ1NC489SBWGUS7HM",
-    #         "U8S2R1S8KW6GA49BP1BRTSHMJJ7C6U8RXN",
-    #         "1X3YYIZWMZMMR5YHQG9BSGRWCY6G15TU24",
-    #         "PPEF9F8AWKK52G2AQPR7ZJW28EQM1I9D6U"
-    #     ],
-    #     "urls": {
-    #         "mainnet": "api.bscscan.com",
-    #         "testnet": "api-testnet.bscscan.com",
-    #     }
-    # },
-    # "celo": {
-    #     "keys": ["WQ6ZT6AEWMUZ4HGA138GBBJ1JW82F33TSH"],
-    #     "urls": {
-    #         "mainnet": "api.celoscan.io",
-    #     }
-    # },
-    # "fantom": {
-    #     "keys": ["62JMQV4UM63BAK4AVTDHCRD2K6R6CGD3KR"],
-    #     "urls": {
-    #         "mainnet": "api.ftmscan.com",
-    #     }
-    # },
-    # "optimism": {
-    #     "keys": ["NTUJVM68N84UN9TGI9PM461BN6I7GDRHAZ"],
-    #     "urls": {
-    #         "mainnet": "api-optimistic.etherscan.io",
-    #     }
-    # },
-    # "polygon": {
-    #     "keys": [
-    #         "ISEYA25AATQI5YQMVS3EJZXTPJ847Y2TVK"
-    #         "XFP8E4P3PKTSZU53MEWDPGB9P6RUJS512M",
-    #         "C3GTPDFC5PW3GSRNMKYGDPRJV38K3QJ3YE",
-    #         "EKY8EVCWSGHN5ANHXC1Q6U2377B7Q21M9W",
-    #         "E55BX25VS9HSR1M1KCKT4UR93Y5K2SQYDY",
-    #         "GE5Q7DUZAHC46FC644S8SUH3NYPUXGPGCS"
-    #         ],
-    #     "urls": {
-    #         "mainnet": "api.polygonscan.com",
-    #         "mumbai": "api-testnet.polygonscan.com",
-    #     }
-    # },
+    "arbitrum": {
+        "keys": ["R39J7Z3H8HAW12VHRQR4859S7JHQ9ZK96T"],
+        "urls": {
+            "mainnet": "api.arbiscan.io",
+            # "testnet": "api-testnet.arbiscan.io",
+        }
+    },
+    "avalanche": {
+        "keys": [
+            "Q5AYWBQGG3N6JM4RW87PY7HAPZB9SUZR6C",
+            "18P377JFB4588M4881359CPY5RH91J8CEZ"
+        ],
+        "urls": {
+            "mainnet": "api.snowtrace.io",
+            # "testnet": "api-testnet.snowtrace.io",
+        }
+    },
+    "bsc": {
+        "keys": [
+            "QSVE8VDS51DMHDY8JNMB1G5JVF7QY49695",
+            "1JISCHPJAZIUBYMID8Z7V9EDVK2J73G4CF",
+            "YKMK2ESXGJHBJ4GHGMQ1NC489SBWGUS7HM",
+            "U8S2R1S8KW6GA49BP1BRTSHMJJ7C6U8RXN",
+            "1X3YYIZWMZMMR5YHQG9BSGRWCY6G15TU24",
+            "PPEF9F8AWKK52G2AQPR7ZJW28EQM1I9D6U"
+        ],
+        "urls": {
+            "mainnet": "api.bscscan.com",
+            # "testnet": "api-testnet.bscscan.com",
+        }
+    },
+    "celo": {
+        "keys": ["WQ6ZT6AEWMUZ4HGA138GBBJ1JW82F33TSH"],
+        "urls": {
+            "mainnet": "api.celoscan.io",
+        }
+    },
+    "fantom": {
+        "keys": ["62JMQV4UM63BAK4AVTDHCRD2K6R6CGD3KR"],
+        "urls": {
+            "mainnet": "api.ftmscan.com",
+        }
+    },
+    "optimism": {
+        "keys": ["NTUJVM68N84UN9TGI9PM461BN6I7GDRHAZ"],
+        "urls": {
+            "mainnet": "api-optimistic.etherscan.io",
+        }
+    },
+    "polygon": {
+        "keys": [
+            "ISEYA25AATQI5YQMVS3EJZXTPJ847Y2TVK"
+            "XFP8E4P3PKTSZU53MEWDPGB9P6RUJS512M",
+            "C3GTPDFC5PW3GSRNMKYGDPRJV38K3QJ3YE",
+            "EKY8EVCWSGHN5ANHXC1Q6U2377B7Q21M9W",
+            "E55BX25VS9HSR1M1KCKT4UR93Y5K2SQYDY",
+            "GE5Q7DUZAHC46FC644S8SUH3NYPUXGPGCS"
+            ],
+        "urls": {
+            "mainnet": "api.polygonscan.com",
+            # "mumbai": "api-testnet.polygonscan.com",
+        }
+    },
 }
 
 results = {}
