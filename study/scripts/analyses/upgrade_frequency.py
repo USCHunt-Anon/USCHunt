@@ -7,7 +7,6 @@ import json
 import subprocess
 from dotenv import load_dotenv
 
-
 api_config = {
     "ethereum": {
         "keys": [
@@ -28,75 +27,76 @@ api_config = {
             # "ropsten": "api-ropsten.etherscan.io",
         }
     },
-    # "arbitrum": {
-    #     "keys": ["R39J7Z3H8HAW12VHRQR4859S7JHQ9ZK96T"],
-    #     "urls": {
-    #         "mainnet": "api.arbiscan.io",
-    #         # "testnet": "api-testnet.arbiscan.io",
-    #     }
-    # },
-    # "avalanche": {
-    #     "keys": [
-    #         "Q5AYWBQGG3N6JM4RW87PY7HAPZB9SUZR6C",
-    #         "18P377JFB4588M4881359CPY5RH91J8CEZ"
-    #     ],
-    #     "urls": {
-    #         "mainnet": "api.snowtrace.io",
-    #         # "testnet": "api-testnet.snowtrace.io",
-    #     }
-    # },
-    # "bsc": {
-    #     "keys": [
-    #         "QSVE8VDS51DMHDY8JNMB1G5JVF7QY49695",
-    #         "1JISCHPJAZIUBYMID8Z7V9EDVK2J73G4CF",
-    #         "YKMK2ESXGJHBJ4GHGMQ1NC489SBWGUS7HM",
-    #         "U8S2R1S8KW6GA49BP1BRTSHMJJ7C6U8RXN",
-    #         "1X3YYIZWMZMMR5YHQG9BSGRWCY6G15TU24",
-    #         "PPEF9F8AWKK52G2AQPR7ZJW28EQM1I9D6U"
-    #     ],
-    #     "urls": {
-    #         "mainnet": "api.bscscan.com",
-    #         # "testnet": "api-testnet.bscscan.com",
-    #     }
-    # },
-    # "celo": {
-    #     "keys": ["WQ6ZT6AEWMUZ4HGA138GBBJ1JW82F33TSH"],
-    #     "urls": {
-    #         "mainnet": "api.celoscan.io",
-    #     }
-    # },
-    # "fantom": {
-    #     "keys": ["62JMQV4UM63BAK4AVTDHCRD2K6R6CGD3KR"],
-    #     "urls": {
-    #         "mainnet": "api.ftmscan.com",
-    #     }
-    # },
-    # "optimism": {
-    #     "keys": ["NTUJVM68N84UN9TGI9PM461BN6I7GDRHAZ"],
-    #     "urls": {
-    #         "mainnet": "api-optimistic.etherscan.io",
-    #     }
-    # },
-    # "polygon": {
-    #     "keys": [
-    #         "ISEYA25AATQI5YQMVS3EJZXTPJ847Y2TVK"
-    #         "XFP8E4P3PKTSZU53MEWDPGB9P6RUJS512M",
-    #         "C3GTPDFC5PW3GSRNMKYGDPRJV38K3QJ3YE",
-    #         "EKY8EVCWSGHN5ANHXC1Q6U2377B7Q21M9W",
-    #         "E55BX25VS9HSR1M1KCKT4UR93Y5K2SQYDY",
-    #         "GE5Q7DUZAHC46FC644S8SUH3NYPUXGPGCS"
-    #         ],
-    #     "urls": {
-    #         "mainnet": "api.polygonscan.com",
-    #         # "mumbai": "api-testnet.polygonscan.com",
-    #     }
-    # },
+    "arbitrum": {
+        "keys": ["R39J7Z3H8HAW12VHRQR4859S7JHQ9ZK96T"],
+        "urls": {
+            "mainnet": "api.arbiscan.io",
+            # "testnet": "api-testnet.arbiscan.io",
+        }
+    },
+    "avalanche": {
+        "keys": [
+            "Q5AYWBQGG3N6JM4RW87PY7HAPZB9SUZR6C",
+            "18P377JFB4588M4881359CPY5RH91J8CEZ"
+        ],
+        "urls": {
+            "mainnet": "api.snowtrace.io",
+            # "testnet": "api-testnet.snowtrace.io",
+        }
+    },
+    "bsc": {
+        "keys": [
+            "QSVE8VDS51DMHDY8JNMB1G5JVF7QY49695",
+            "1JISCHPJAZIUBYMID8Z7V9EDVK2J73G4CF",
+            "YKMK2ESXGJHBJ4GHGMQ1NC489SBWGUS7HM",
+            "U8S2R1S8KW6GA49BP1BRTSHMJJ7C6U8RXN",
+            "1X3YYIZWMZMMR5YHQG9BSGRWCY6G15TU24",
+            "PPEF9F8AWKK52G2AQPR7ZJW28EQM1I9D6U"
+        ],
+        "urls": {
+            "mainnet": "api.bscscan.com",
+            # "testnet": "api-testnet.bscscan.com",
+        }
+    },
+    "celo": {
+        "keys": ["WQ6ZT6AEWMUZ4HGA138GBBJ1JW82F33TSH"],
+        "urls": {
+            "mainnet": "api.celoscan.io",
+        }
+    },
+    "fantom": {
+        "keys": ["62JMQV4UM63BAK4AVTDHCRD2K6R6CGD3KR"],
+        "urls": {
+            "mainnet": "api.ftmscan.com",
+        }
+    },
+    "optimism": {
+        "keys": ["NTUJVM68N84UN9TGI9PM461BN6I7GDRHAZ"],
+        "urls": {
+            "mainnet": "api-optimistic.etherscan.io",
+        }
+    },
+    "polygon": {
+        "keys": [
+            "ISEYA25AATQI5YQMVS3EJZXTPJ847Y2TVK"
+            "XFP8E4P3PKTSZU53MEWDPGB9P6RUJS512M",
+            "C3GTPDFC5PW3GSRNMKYGDPRJV38K3QJ3YE",
+            "EKY8EVCWSGHN5ANHXC1Q6U2377B7Q21M9W",
+            "E55BX25VS9HSR1M1KCKT4UR93Y5K2SQYDY",
+            "GE5Q7DUZAHC46FC644S8SUH3NYPUXGPGCS"
+            ],
+        "urls": {
+            "mainnet": "api.polygonscan.com",
+            # "mumbai": "api-testnet.polygonscan.com",
+        }
+    },
 }
 
 results = {}
 
 
-def count_upgrades(proxy_address, chain_name, chain_network, setter, end_block: int, beacon_address=None, api_key_idx=0) -> int:
+def count_upgrades(proxy_address, chain_name, chain_network, setter, end_block: int, beacon_address=None,
+                   api_key_idx=0) -> int:
     # if beacon_address is None:
     #     print(f"Counting upgrades at address {proxy_address} on {chain_name} {chain_network} "
     #           f"chain up to block {end_block}")
@@ -108,8 +108,8 @@ def count_upgrades(proxy_address, chain_name, chain_network, setter, end_block: 
         headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"
         }
-        url = f"https://{api_config[chain_name]['urls'][chain_network]}/api"\
-               f"?module=account&action=txlist&apikey={api_config[chain_name]['keys'][api_key_idx]}"
+        url = f"https://{api_config[chain_name]['urls'][chain_network]}/api" \
+              f"?module=account&action=txlist&apikey={api_config[chain_name]['keys'][api_key_idx]}"
         data = {
             "address": beacon_address if beacon_address is not None else proxy_address,
             "startblock": 0,
@@ -118,8 +118,8 @@ def count_upgrades(proxy_address, chain_name, chain_network, setter, end_block: 
             "offset": 10000,
             "sort": "desc"
         }
-        response = requests.post(url, data=data)
         try:
+            response = requests.post(url, data=data)
             result = json.loads(response.text)
             status = int(result.get("status"))
         except json.decoder.JSONDecodeError:
@@ -132,13 +132,16 @@ def count_upgrades(proxy_address, chain_name, chain_network, setter, end_block: 
             status = 0
         except Exception:
             time.sleep(5)
-            return count_upgrades(proxy_address, chain_name, chain_network, setter, end_block, beacon_address, api_key_idx)
+            upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, end_block, beacon_address,
+                                            api_key_idx)
+            return upgrade_count
         if status == 1:
             txs = result["result"]
             first_tx_block = int(txs[len(txs) - 1]["blockNumber"])
             results[chain_name][chain_network][proxy_address]["start_block"] = first_tx_block
             last_tx_block = int(txs[0]["blockNumber"])
-            results[chain_name][chain_network][proxy_address]["end_block"] = last_tx_block
+            if "end_block" not in results[chain_name][chain_network][proxy_address].keys():
+                results[chain_name][chain_network][proxy_address]["end_block"] = last_tx_block
             results[chain_name][chain_network][proxy_address]["tx_count"] += len(txs)
             for tx in txs:
                 if "functionName" in tx.keys() and setter in tx["functionName"]:
@@ -146,6 +149,10 @@ def count_upgrades(proxy_address, chain_name, chain_network, setter, end_block: 
             print(f"Found {upgrade_count} upgrades at address {proxy_address} on {chain_name} {chain_network} "
                   f"between blocks {first_tx_block} and {last_tx_block}")
             if len(txs) == 10000 and first_tx_block != end_block:
+                if results[chain_name][chain_network][proxy_address]["tx_count"] >= 250000:
+                    # OpenSea's Wyvern Exchange has 8.7 million transactions, while USDC has 25.5 million.
+                    # It would take too long to search them all, so we cap it at 250,000 transactions
+                    return upgrade_count
                 next_key = (api_key_idx + 1) % len(api_config[chain_name]['keys'])
                 if beacon_address is None:
                     upgrade_count += count_upgrades(proxy_address, chain_name, chain_network, setter, first_tx_block,
@@ -202,7 +209,10 @@ def scan_chain(chain_name):
                                 canonical_setter = features["impl_address_setter"]
                                 break
                         if isinstance(canonical_setter, str):
-                            setter_name = canonical_setter.split(".", maxsplit=1)[1].split("(")[0]
+                            try:
+                                setter_name = canonical_setter.split(".", maxsplit=1)[1].split("(")[0]
+                            except IndexError:
+                                setter_name = canonical_setter
                             # print(f'{canonical_setter}: {setter_name}')
                             results[chain_name][chain_network][proxyAddress] = {
                                 "deploy_date": deploy_date,
@@ -221,7 +231,8 @@ def scan_chain(chain_name):
                                     beacon_address = "0x" + str(output).replace("\n", "")[26:]
                                     print(f"{file} uses a beacon contract at address {beacon_address}")
                                     results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
-                                        count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 99999999, beacon_address)
+                                        count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 99999999,
+                                                       beacon_address)
                                     time.sleep(1)
                                     continue
                             results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
@@ -232,7 +243,7 @@ def scan_chain(chain_name):
 
 chain_threads = []
 load_dotenv()
-rpc_url = os.getenv("RPC_URL") # Infura RPC URL is for Ethereum only right now
+rpc_url = os.getenv("RPC_URL")  # Infura RPC URL is for Ethereum only right now
 # Start scan_chain thread for each chain
 for chain_name in api_config.keys():
     thread = threading.Thread(target=scan_chain, args=([chain_name]))
@@ -243,7 +254,7 @@ for chain_name in api_config.keys():
 for thread in chain_threads:
     thread.join()
 print("Complete!")
-out = open("../../artifacts/upgrade_counts_most_recent.json", "w")
+out = open("../../artifacts/upgrade_counts_alt_chains.json", "w")
 json_str = str(results).replace("'", '"')
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
 out.close()
