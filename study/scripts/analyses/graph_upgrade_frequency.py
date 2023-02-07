@@ -42,17 +42,18 @@ for chain_name in data.keys():
     y_axis_all = np.array(tx_counts)
     y_axis_upgrades = np.array(upgrade_counts)
 
-    plt.bar(x_axis, y_axis_all, label='tx count', width=1)
-    plt.bar(x_axis, y_axis_upgrades, label='upgrade count', width=1)
+    plt.bar(x_axis, y_axis_all, label='tx count', width=1, align='edge')
+    plt.bar(x_axis, y_axis_upgrades, label='upgrade count', width=1, align='edge')
     plt.legend(loc='upper left')
     plt.title(f'Upgrades vs Total Txs ({chain_name})')
     plt.yscale("log")
+    plt.xticks(ticks=[len(x_axis)], labels=[f'{len(x_axis)}\ncontracts'])
     plt.show()
 
     total_tx_count = sum(tx_counts)
     total_upgrades = sum(upgrade_counts)
     upgrades_per_1000_txs = total_upgrades / total_tx_count * 1000
-    avg_upgrades_per_1000_blocks = sum(upgrades_per_1000_blocks)/len(upgrades_per_1000_blocks)
+    avg_upgrades_per_1000_blocks = total_upgrades/sum(block_spans) * 1000000
     print(f'Data for {chain_name}:')
-    print(f'Upgrades per 1000 txs:    {upgrades_per_1000_txs}')
-    print(f'Upgrades per 1000 blocks: {avg_upgrades_per_1000_blocks}')
+    print(f'Upgrades per 1000 txs:  {upgrades_per_1000_txs}')
+    print(f'Upgrades per 1M blocks: {avg_upgrades_per_1000_blocks}')
