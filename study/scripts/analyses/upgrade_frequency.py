@@ -8,25 +8,25 @@ import subprocess
 from dotenv import load_dotenv
 
 api_config = {
-    "ethereum": {
-        "keys": [
-            "WMXJBN6S7D838WIIN3M64UTA1IMN897HMV",
-            "3GRM2RBP872XEV26GUBMSTCHM828S1CVPE",
-            "3H6GK8YF3548IZ9MK7XNK5HH3EK8K8BSFR",
-            "V3RM37Z5EICQ4TZXDGGMW5M1XQVXM8Y484",
-            "HD96JWIU7N6DF3D8GGAICD6HIZJUGRWC86",
-            "UW4IWY38B912ZBVRDX5MUYSBVMEK37PSU2",
-            "XN9E8NVTAC7VHN2J9S9PM4WKMX44CFE6H8",
-            "AKC96T8STKUMVSZ9TQT34T9J3MN1PJVGDU"
-        ],
-        "urls": {
-            "mainnet": "api.etherscan.io",
-            # "goerli": "api-goerli.etherscan.io",
-            # "kovan": "api-kovan.etherscan.io",
-            # "rinkeby": "api-rinkeby.etherscan.io",
-            # "ropsten": "api-ropsten.etherscan.io",
-        }
-    },
+    # "ethereum": {
+    #     "keys": [
+    #         "WMXJBN6S7D838WIIN3M64UTA1IMN897HMV",
+    #         "3GRM2RBP872XEV26GUBMSTCHM828S1CVPE",
+    #         "3H6GK8YF3548IZ9MK7XNK5HH3EK8K8BSFR",
+    #         "V3RM37Z5EICQ4TZXDGGMW5M1XQVXM8Y484",
+    #         "HD96JWIU7N6DF3D8GGAICD6HIZJUGRWC86",
+    #         "UW4IWY38B912ZBVRDX5MUYSBVMEK37PSU2",
+    #         "XN9E8NVTAC7VHN2J9S9PM4WKMX44CFE6H8",
+    #         "AKC96T8STKUMVSZ9TQT34T9J3MN1PJVGDU"
+    #     ],
+    #     "urls": {
+    #         "mainnet": "api.etherscan.io",
+    #         # "goerli": "api-goerli.etherscan.io",
+    #         # "kovan": "api-kovan.etherscan.io",
+    #         # "rinkeby": "api-rinkeby.etherscan.io",
+    #         # "ropsten": "api-ropsten.etherscan.io",
+    #     }
+    # },
     "arbitrum": {
         "keys": ["R39J7Z3H8HAW12VHRQR4859S7JHQ9ZK96T"],
         "urls": {
@@ -219,9 +219,11 @@ def scan_chain(chain_name):
                                 "setter_name": setter_name,
                                 "tx_count": 0
                             }
-                            if isinstance(beacon_slot, str) and chain_name == "ethereum":
+                            if isinstance(beacon_slot, str) and chain_name != "fantom":
                                 # Read beacon address from storage using known slot
-                                # Requires Foundry be installed, and an Infura RPC URL stored in .env
+                                # Requires Foundry be installed, and an RPC URL stored in .env for each chain
+                                # For now, we do not have an RPC URL for Fantom
+                                rpc_url = os.getenv(f"RPC_URL_{str(chain_name).upper()}")
                                 bash_command = f'cast storage --rpc-url={rpc_url} {proxyAddress} {beacon_slot}'
                                 process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE, text=True)
                                 output, error = process.communicate()
@@ -229,12 +231,14 @@ def scan_chain(chain_name):
                                     print(f"Error reading from storage for {address}: {name}")
                                 else:
                                     beacon_address = "0x" + str(output).replace("\n", "")[26:]
-                                    print(f"{file} uses a beacon contract at address {beacon_address}")
-                                    results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
-                                        count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 99999999,
-                                                       beacon_address)
-                                    time.sleep(1)
-                                    continue
+                                    if beacon_address != "0x0000000000000000000000000000000000000000":
+                                        print(f"{file} on {chain_name} uses a beacon contract at address "
+                                              f"{beacon_address}")
+                                        results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
+                                            count_upgrades(proxyAddress, chain_name, chain_network, setter_name,
+                                                           99999999, beacon_address)
+                                        time.sleep(1)
+                                        continue
                             results[chain_name][chain_network][proxyAddress]["upgrade_count"] = \
                                 count_upgrades(proxyAddress, chain_name, chain_network, setter_name, 99999999)
                             time.sleep(1)
@@ -243,7 +247,6 @@ def scan_chain(chain_name):
 
 chain_threads = []
 load_dotenv()
-rpc_url = os.getenv("RPC_URL")  # Infura RPC URL is for Ethereum only right now
 # Start scan_chain thread for each chain
 for chain_name in api_config.keys():
     thread = threading.Thread(target=scan_chain, args=([chain_name]))
@@ -254,7 +257,7 @@ for chain_name in api_config.keys():
 for thread in chain_threads:
     thread.join()
 print("Complete!")
-out = open("../../artifacts/upgrade_counts.json", "w")
+out = open("../../artifacts/upgrade_counts_alt_chains.json", "w")
 json_str = str(results).replace("'", '"')
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
 out.close()
