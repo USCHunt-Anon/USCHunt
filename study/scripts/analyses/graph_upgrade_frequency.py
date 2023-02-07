@@ -19,7 +19,7 @@ for chain_name in data.keys():
     block_spans = []
 
     idx = 0
-    for address in eth_data.keys():
+    for address in sorted_data.keys():
         tx_count = int(sorted_data[address]["tx_count"])
         if tx_count == 0:
             continue
@@ -31,7 +31,7 @@ for chain_name in data.keys():
         upgrade_counts.append(upgrade_count)
         per_tx: float = upgrade_count/tx_count
         upgrades_per_tx.append(per_tx)
-        block_span = int(sorted_data[address]["end_block"]) - int(eth_data[address]["start_block"])
+        block_span = int(sorted_data[address]["end_block"]) - int(sorted_data[address]["start_block"])
         block_spans.append(block_span)
         if block_span == 0:
             block_span = 1
@@ -45,6 +45,7 @@ for chain_name in data.keys():
     plt.bar(x_axis, y_axis_all, label='tx count', width=1)
     plt.bar(x_axis, y_axis_upgrades, label='upgrade count', width=1)
     plt.legend(loc='upper left')
+    plt.title(f'Upgrades vs Total Txs ({chain_name})')
     plt.yscale("log")
     plt.show()
 
