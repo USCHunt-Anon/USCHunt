@@ -49,6 +49,7 @@ for chain_name in data.keys():
     plt.yscale("log")
     plt.xticks(ticks=[len(x_axis)], labels=[f'{len(x_axis)}\ncontracts'])
     plt.show()
+    plt.savefig(f'../../artifacts/upgrade_freq_{chain_name}.pdf')
 
     total_tx_count = sum(tx_counts)
     total_upgrades = sum(upgrade_counts)
