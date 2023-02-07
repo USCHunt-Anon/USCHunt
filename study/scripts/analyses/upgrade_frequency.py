@@ -254,7 +254,7 @@ for chain_name in api_config.keys():
 for thread in chain_threads:
     thread.join()
 print("Complete!")
-out = open("../../artifacts/upgrade_counts_alt_chains.json", "w")
+out = open("../../artifacts/upgrade_counts.json", "w")
 json_str = str(results).replace("'", '"')
 out.write(json.dumps(json.loads(json_str), indent=4, sort_keys=True))
 out.close()
