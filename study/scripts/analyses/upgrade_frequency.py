@@ -8,25 +8,25 @@ import subprocess
 from dotenv import load_dotenv
 
 api_config = {
-    # "ethereum": {
-    #     "keys": [
-    #         "WMXJBN6S7D838WIIN3M64UTA1IMN897HMV",
-    #         "3GRM2RBP872XEV26GUBMSTCHM828S1CVPE",
-    #         "3H6GK8YF3548IZ9MK7XNK5HH3EK8K8BSFR",
-    #         "V3RM37Z5EICQ4TZXDGGMW5M1XQVXM8Y484",
-    #         "HD96JWIU7N6DF3D8GGAICD6HIZJUGRWC86",
-    #         "UW4IWY38B912ZBVRDX5MUYSBVMEK37PSU2",
-    #         "XN9E8NVTAC7VHN2J9S9PM4WKMX44CFE6H8",
-    #         "AKC96T8STKUMVSZ9TQT34T9J3MN1PJVGDU"
-    #     ],
-    #     "urls": {
-    #         "mainnet": "api.etherscan.io",
-    #         # "goerli": "api-goerli.etherscan.io",
-    #         # "kovan": "api-kovan.etherscan.io",
-    #         # "rinkeby": "api-rinkeby.etherscan.io",
-    #         # "ropsten": "api-ropsten.etherscan.io",
-    #     }
-    # },
+    "ethereum": {
+        "keys": [
+            "WMXJBN6S7D838WIIN3M64UTA1IMN897HMV",
+            "3GRM2RBP872XEV26GUBMSTCHM828S1CVPE",
+            "3H6GK8YF3548IZ9MK7XNK5HH3EK8K8BSFR",
+            "V3RM37Z5EICQ4TZXDGGMW5M1XQVXM8Y484",
+            "HD96JWIU7N6DF3D8GGAICD6HIZJUGRWC86",
+            "UW4IWY38B912ZBVRDX5MUYSBVMEK37PSU2",
+            "XN9E8NVTAC7VHN2J9S9PM4WKMX44CFE6H8",
+            "AKC96T8STKUMVSZ9TQT34T9J3MN1PJVGDU"
+        ],
+        "urls": {
+            "mainnet": "api.etherscan.io",
+            # "goerli": "api-goerli.etherscan.io",
+            # "kovan": "api-kovan.etherscan.io",
+            # "rinkeby": "api-rinkeby.etherscan.io",
+            # "ropsten": "api-ropsten.etherscan.io",
+        }
+    },
     "arbitrum": {
         "keys": ["R39J7Z3H8HAW12VHRQR4859S7JHQ9ZK96T"],
         "urls": {
