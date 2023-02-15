@@ -8,6 +8,8 @@ from datetime import datetime
 f = open("../../artifacts/upgrade_counts.json", "r")
 data: dict = json.load(f)
 f.close()
+# all_chains: dict = {}
+
 for chain_name in data.keys():
     sorted_data = dict(sorted(data[chain_name]["mainnet"].items(), key=lambda x:x[1]['tx_count']))
     addresses = []
@@ -20,6 +22,7 @@ for chain_name in data.keys():
 
     idx = 0
     for address in sorted_data.keys():
+        # all_chains[address] = sorted_data[address]
         tx_count = int(sorted_data[address]["tx_count"])
         if tx_count == 0:
             continue
@@ -44,12 +47,12 @@ for chain_name in data.keys():
 
     plt.bar(x_axis, y_axis_all, label='tx count', width=1, align='edge')
     plt.bar(x_axis, y_axis_upgrades, label='upgrade count', width=1, align='edge')
-    plt.legend(loc='upper left')
-    plt.title(f'Upgrades vs Total Txs ({chain_name})')
+    # plt.legend(loc='upper left')
+    # plt.title(f'Upgrades vs Total Txs ({chain_name})')
     plt.yscale("log")
-    plt.xticks(ticks=[len(x_axis)], labels=[f'{len(x_axis)}\ncontracts'])
-    plt.show()
+    # plt.xticks(ticks=[len(x_axis)], labels=[f'{len(x_axis)}\ncontracts'])
     plt.savefig(f'../../artifacts/upgrade_freq_{chain_name}.pdf')
+    plt.show()
 
     total_tx_count = sum(tx_counts)
     total_upgrades = sum(upgrade_counts)
