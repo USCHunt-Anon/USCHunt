@@ -1,0 +1,212 @@
+
+Begin ShardsMarketAdminStorage.is_proxy (Slither line:1425)
+
+
+End ShardsMarketAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin ShardsMarketAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ShardsMarketAdminStorage 
+
+End ShardsMarketAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IShardsMarketStorge.is_proxy (Slither line:1425)
+
+
+End IShardsMarketStorge.is_proxy (Slither line:1428)
+
+
+Begin IShardsMarketStorge.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IShardsMarketStorge 
+
+End IShardsMarketStorge.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IShardsMarket.is_proxy (Slither line:1425)
+
+
+End IShardsMarket.is_proxy (Slither line:1428)
+
+
+Begin IShardsMarket.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IShardsMarket 
+
+End IShardsMarket.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ShardsMarketDelegator.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End ShardsMarketDelegator.is_proxy (Slither line:1476)
+
+
+Begin ShardsMarketDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ShardsMarketDelegator 
+ShardsMarketDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in ShardsMarketAdminStorage (Slither line:1204)
+
+
+Begin ShardsMarketAdminStorage.find_setter_in_contract (Slither line:3119)
+
+
+End ShardsMarketAdminStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ShardsMarketAdminStorage 
+Looking in ShardsMarketDelegator (Slither line:1213)
+
+Begin ShardsMarketDelegator.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address,address,address,address,address,address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End ShardsMarketDelegator.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: ShardsMarketDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ShardsMarketAdminStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+
+End ShardsMarketAdminStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin ShardsMarketDelegator.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _setAdmin (Slither line:2988)
+Checking function: _setGovernance (Slither line:2988)
+Checking function: delegateTo (Slither line:2988)
+delegateTo returns bytes variable  (Slither line:3008)
+RETURN node expression: returnData (Slither line:3028)
+Checking function: receive (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End ShardsMarketDelegator.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in ShardsMarketDelegator (Slither line:1305)
+or in ShardsMarketAdminStorage (Slither line:1319)
+
+Begin IShardsMarketStorge.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: slitherConstructorVariables (Slither line:2988)
+Checking function: slitherConstructorConstantVariables (Slither line:2988)
+
+End IShardsMarketStorge.find_getter_in_contract (Slither line:3083)
+
+
+End ShardsMarketDelegator.is_upgradeable_proxy (Slither line:1332)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(free_mem_ptr_fallback_asm_0,0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression mload(uint256)(0x40)
+impl_address_from_contract_call: arg is 0x40
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(free_mem_ptr_fallback_asm_0,returndatasize()())
+impl_address_from_contract_call: arg is free_mem_ptr_fallback_asm_0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking public function _setGovernance
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == governance,UNAUTHORIZED)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+Checking public function _setAdmin
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,UNAUTHORIZED)
+Checking public function _setGovernance
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == governance,UNAUTHORIZED)
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function ShardsMarketDelegator._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator.delegateTo (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function ShardsMarketDelegator._setGovernance (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator.receive (proxy_features line:898)
+functions_writing_to_variable: checking function ShardsMarketDelegator.constructor (proxy_features line:898)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1013)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+has_compatibility_checks: condition msg.sender == governance
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == governance,_setImplementation: Caller must be governance)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation

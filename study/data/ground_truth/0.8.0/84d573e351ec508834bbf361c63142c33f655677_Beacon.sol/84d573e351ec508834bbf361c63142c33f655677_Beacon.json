@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "BeaconProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol#18-57)",
+        "elements": [],
+        "description": "BeaconProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol#18-57) is an upgradeable proxy.\nlatestCopy was found in a different contract.\nlatestCopy is an address state variable.\nBeacon.latestCopy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol#457) gets value from a cross-contract call: beacon.latestCopy()\nBeacon appears to be a Beacon contract for the proxy\nThe address of Beacon is loaded from storage slot BEACON_SLOT = keccak256(bytes)(abi.encodePacked(fairmint.beaconproxy.beacon))\nMissing compatibility check in Beacon.upgradeTo(address)\nTo remove upgradeability, delete upgradeTo from Beacon\n",
+        "id": "00b959d7e33def69b125ed7bd6662d99a07926fbbe73b24e152189339af0423e",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Beacon.latestCopy",
+          "impl_address_setter": "Beacon.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Beacon (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.8.0/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol/84d573e351ec508834bbf361c63142c33f655677_Beacon.sol#455-486)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "beacon.latestCopy()",
+          "beacon": "Beacon",
+          "beacon_source_type": "bytes32 constant storage slot",
+          "beacon_source_slot": "keccak256(bytes)(abi.encodePacked(fairmint.beaconproxy.beacon))",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Beacon.upgradeTo(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove upgradeTo from Beacon"
+        }
+      }
+    ]
+  }
+}

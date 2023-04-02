@@ -1,0 +1,1488 @@
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+TemporaryVariable TMP_0 expression: _implementation() (Slither line:2760)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: (success) = _implementation().delegatecall(msg.data) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _implementation().delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+msg.data
+
+Found delegatecall in expression:
+_implementation().delegatecall (Slither line:2824)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OpenZeppelinUpgradesAddress.is_proxy (Slither line:1425)
+
+
+End OpenZeppelinUpgradesAddress.is_proxy (Slither line:1428)
+
+
+Begin OpenZeppelinUpgradesAddress.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OpenZeppelinUpgradesAddress 
+
+End OpenZeppelinUpgradesAddress.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BaseUpgradeabilityProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+TemporaryVariable TMP_5 expression: _implementation() (Slither line:2760)
+
+Begin BaseUpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End BaseUpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BaseUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: (success) = _implementation().delegatecall(msg.data) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _implementation().delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+msg.data
+
+Found delegatecall in expression:
+_implementation().delegatecall (Slither line:2824)
+
+
+End BaseUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting BaseUpgradeabilityProxy._delegate_variable = BaseUpgradeabilityProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End BaseUpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin BaseUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BaseUpgradeabilityProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+BaseUpgradeabilityProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in BaseUpgradeabilityProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: _willFallback (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable called impl (Slither line:3008)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+Begin BaseUpgradeabilityProxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+NEW VARIABLE: slot = IMPLEMENTATION_SLOT (Slither line:2888)
+ENTRY_POINT: None (Slither line:2888)
+INLINE ASM: None (Slither line:2888)
+
+End BaseUpgradeabilityProxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End BaseUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin UpgradeabilityProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+TemporaryVariable TMP_17 expression: _implementation() (Slither line:2760)
+
+Begin UpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End UpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: (success) = _implementation().delegatecall(msg.data) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _implementation().delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+msg.data
+
+Found delegatecall in expression:
+_implementation().delegatecall (Slither line:2824)
+
+
+End UpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting UpgradeabilityProxy._delegate_variable = UpgradeabilityProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End UpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+UpgradeabilityProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in BaseUpgradeabilityProxy (Slither line:1204)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BaseUpgradeabilityProxy 
+Looking in UpgradeabilityProxy (Slither line:1213)
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address,bytes) returns() (Slither line:3127)
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityProxy (Slither line:1220)
+Looking for setter in ProxyController (Slither line:1228)
+
+
+Begin ProxyController.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3127)
+Visibility: public
+pendingControllerImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+NewPendingImplementation(oldPendingImplementation,pendingControllerImplementation)
+_setImplementation(newPendingImplementation)
+uint256(Error.NO_ERROR)
+size > 0
+Failure(uint256(err),uint256(info),0)
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+uint256(err)
+    sstore(slot, newImplementation) (Slither line:3163)
+_setPendingImplementation reads and/or writes to variable slot (Slither line:3170)
+_setPendingImplementation reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3170)
+_setPendingImplementation reads and/or writes to variable OpenZeppelinUpgradesAddress (Slither line:3170)
+_setPendingImplementation reads and/or writes to variable newImplementation (Slither line:3170)
+
+End ProxyController.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setPendingImplementation in contract: ProxyController (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+End UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: UpgradeabilityProxy
+Setter found in contract ProxyController
+Found fallback
+Found public function: constructor
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: OpenZeppelinUpgradesAddress.isContract
+impl_address_from_contract_call: CallExpression _implementation().delegatecall(msg.data)
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function UpgradeabilityProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function ProxyController._acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.fail (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function UpgradeabilityProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._admin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.failOpaque (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: checking function ProxyController._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setPendingImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function ProxyController._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function ProxyController._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function ProxyController._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function ProxyController._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function UpgradeabilityProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: checking public function _setPendingImplementation
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: IF node exp = msg.sender != admin
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: skipping internal function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = _implementation().delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingControllerImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingControllerImplementation = newPendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingControllerImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newPendingImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(Error.NO_ERROR)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) Failure(uint256(err),uint256(info),0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(err)
+has_time_delay: (node.type) IF
+(Expression) msg.sender != admin
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) RETURN
+(Expression) fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK)
+
+Begin ArtemcontrollerErrorReporter.is_proxy (Slither line:1425)
+
+
+End ArtemcontrollerErrorReporter.is_proxy (Slither line:1428)
+
+
+Begin ArtemcontrollerErrorReporter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ArtemcontrollerErrorReporter 
+
+End ArtemcontrollerErrorReporter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenErrorReporter.is_proxy (Slither line:1425)
+
+
+End TokenErrorReporter.is_proxy (Slither line:1428)
+
+
+Begin TokenErrorReporter.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenErrorReporter 
+
+End TokenErrorReporter.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ControllerInterface.is_proxy (Slither line:1425)
+
+
+End ControllerInterface.is_proxy (Slither line:1428)
+
+
+Begin ControllerInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ControllerInterface 
+
+End ControllerInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CarefulMath.is_proxy (Slither line:1425)
+
+
+End CarefulMath.is_proxy (Slither line:1428)
+
+
+Begin CarefulMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CarefulMath 
+
+End CarefulMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Exponential.is_proxy (Slither line:1425)
+
+
+End Exponential.is_proxy (Slither line:1428)
+
+
+Begin Exponential.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Exponential 
+
+End Exponential.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EIP20Interface.is_proxy (Slither line:1425)
+
+
+End EIP20Interface.is_proxy (Slither line:1428)
+
+
+Begin EIP20Interface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EIP20Interface 
+
+End EIP20Interface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EIP20NonStandardInterface.is_proxy (Slither line:1425)
+
+
+End EIP20NonStandardInterface.is_proxy (Slither line:1428)
+
+
+Begin EIP20NonStandardInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EIP20NonStandardInterface 
+
+End EIP20NonStandardInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin InterestRateModel.is_proxy (Slither line:1425)
+
+
+End InterestRateModel.is_proxy (Slither line:1428)
+
+
+Begin InterestRateModel.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: InterestRateModel 
+
+End InterestRateModel.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AToken.is_proxy (Slither line:1425)
+
+
+End AToken.is_proxy (Slither line:1428)
+
+
+Begin AToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AToken 
+
+End AToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PriceOracle.is_proxy (Slither line:1425)
+
+
+End PriceOracle.is_proxy (Slither line:1428)
+
+
+Begin PriceOracle.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PriceOracle 
+
+End PriceOracle.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyCtrlAdminStorage.is_proxy (Slither line:1425)
+
+
+End ProxyCtrlAdminStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyCtrlAdminStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyCtrlAdminStorage 
+
+End ProxyCtrlAdminStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ControllerV1Storage.is_proxy (Slither line:1425)
+
+
+End ControllerV1Storage.is_proxy (Slither line:1428)
+
+
+Begin ControllerV1Storage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ControllerV1Storage 
+
+End ControllerV1Storage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin PermissionedTokenProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End PermissionedTokenProxy.find_delegatecall_in_asm (Slither line:1637)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+TemporaryVariable TMP_618 expression: _implementation() (Slither line:2760)
+
+Begin PermissionedTokenProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End PermissionedTokenProxy.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin PermissionedTokenProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: (success) = _implementation().delegatecall(msg.data) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _implementation().delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+msg.data
+
+Found delegatecall in expression:
+_implementation().delegatecall (Slither line:2824)
+
+
+End PermissionedTokenProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting PermissionedTokenProxy._delegate_variable = PermissionedTokenProxy._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End PermissionedTokenProxy.is_proxy (Slither line:1476)
+
+
+Begin PermissionedTokenProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: PermissionedTokenProxy 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+PermissionedTokenProxy is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in BaseUpgradeabilityProxy (Slither line:1204)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BaseUpgradeabilityProxy 
+Looking in PermissionedTokenProxy (Slither line:1213)
+
+Begin PermissionedTokenProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+_setImplementation(newImplementation)
+Upgraded(newImplementation)
+_upgradeTo(newImplementation)
+    sstore(slot, newImplementation) (Slither line:3163)
+upgradeTo reads and/or writes to variable slot (Slither line:3170)
+upgradeTo reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3170)
+upgradeTo reads and/or writes to variable OpenZeppelinUpgradesAddress (Slither line:3170)
+upgradeTo reads and/or writes to variable newImplementation (Slither line:3170)
+
+End PermissionedTokenProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: PermissionedTokenProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+End PermissionedTokenProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: PermissionedTokenProxy
+Setter found in contract PermissionedTokenProxy
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: OpenZeppelinUpgradesAddress.isContract
+impl_address_from_contract_call: CallExpression _implementation().delegatecall(msg.data)
+Checking public function upgradeTo
+Checking public function implementation
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function PermissionedTokenProxy._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function PermissionedTokenProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function PermissionedTokenProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function PermissionedTokenProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: constructor writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function PermissionedTokenProxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function PermissionedTokenProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function PermissionedTokenProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function PermissionedTokenProxy._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function PermissionedTokenProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function PermissionedTokenProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function PermissionedTokenProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function PermissionedTokenProxy._fallback (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: skipping internal function _setImplementation
+has_compatibility_checks: skipping internal function _upgradeTo
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = _implementation().delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found fallback
+Found public function: upgradeTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(newImplementation)
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+
+Begin ProxyController.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ProxyController.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End ProxyController.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ProxyController.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let free_mem_ptr := mload(0x40) (Slither line:1576)
+    returndatacopy(free_mem_ptr, 0, returndatasize()) (Slither line:1576)
+    switch success (Slither line:1576)
+    case 0 { (Slither line:1576)
+        revert(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+    default { (Slither line:1576)
+        return(free_mem_ptr, returndatasize()) (Slither line:1576)
+    } (Slither line:1576)
+} (Slither line:1576)
+
+End ProxyController.find_delegatecall_in_asm (Slither line:1637)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin ProxyController.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End ProxyController.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin ProxyController.find_delegatecall_in_asm (Slither line:1541)
+
+{ impl := sload(slot) } (Slither line:1576)
+
+End ProxyController.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+TemporaryVariable TMP_628 expression: _implementation() (Slither line:2760)
+
+Begin ProxyController.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+Looking in ASSEMBLY node (Slither line:2206)
+{ impl := sload(slot) }  (Slither line:2210)
+Return value set by sload in asm (Slither line:2212)
+Found storage slot: IMPLEMENTATION_SLOT (Slither line:2232)
+
+End ProxyController.find_delegate_from_call_exp (Slither line:2328)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin ProxyController.find_delegatecall_in_exp_node
+
+Found Expression Node: (success) = _implementation().delegatecall(msg.data) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: _implementation().delegatecall
+Type of call: tuple(bool,bytes memory) (Slither line:2817)
+Args:
+msg.data
+
+Found delegatecall in expression:
+_implementation().delegatecall (Slither line:2824)
+
+
+End ProxyController.find_delegatecall_in_exp_node (Slither line:2858)
+
+Setting ProxyController._delegate_variable = ProxyController._proxy_impl_slot: IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End ProxyController.is_proxy (Slither line:1476)
+
+
+Begin ProxyController.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyController 
+Call destination IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+ProxyController is delegating to IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in BaseUpgradeabilityProxy (Slither line:1204)
+
+
+Begin BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _upgradeTo(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _willFallback() returns() (Slither line:3127)
+Checking function: _fallback() returns() (Slither line:3127)
+
+End BaseUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BaseUpgradeabilityProxy 
+Looking in ProxyController (Slither line:1213)
+
+Begin ProxyController.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: _setPendingImplementation(address) returns(uint256) (Slither line:3127)
+Visibility: public
+pendingControllerImplementation = newPendingImplementation
+is an Assignment Operation (Slither line:3216)
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+NewPendingImplementation(oldPendingImplementation,pendingControllerImplementation)
+_setImplementation(newPendingImplementation)
+uint256(Error.NO_ERROR)
+size > 0
+Failure(uint256(err),uint256(info),0)
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+uint256(err)
+    sstore(slot, newImplementation) (Slither line:3163)
+_setPendingImplementation reads and/or writes to variable slot (Slither line:3170)
+_setPendingImplementation reads and/or writes to variable IMPLEMENTATION_SLOT (Slither line:3170)
+_setPendingImplementation reads and/or writes to variable OpenZeppelinUpgradesAddress (Slither line:3170)
+_setPendingImplementation reads and/or writes to variable newImplementation (Slither line:3170)
+
+End ProxyController.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setPendingImplementation in contract: ProxyController (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End BaseUpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: BaseUpgradeabilityProxy (Slither line:1285)
+
+End ProxyController.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: ProxyController
+Setter found in contract ProxyController
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: OpenZeppelinUpgradesAddress.isContract
+impl_address_from_contract_call: CallExpression _implementation().delegatecall(msg.data)
+Checking public function _setPendingImplementation
+Checking public function _acceptImplementation
+Checking public function _setPendingAdmin
+Checking public function _acceptAdmin
+Found 'msg.sender ==' in expression: msg.sender != pendingAdmin || msg.sender == address(0)
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function ProxyController._acceptAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.fail (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._admin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.failOpaque (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._setAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: exp = ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103 (proxy_features line:912)
+functions_writing_to_variable: checking function ProxyController._setPendingImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setPendingImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function ProxyController._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _upgradeTo writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+functions_writing_to_variable: checking function ProxyController._acceptImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._willFallback (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._setPendingAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function ProxyController._setImplementation (proxy_features line:898)
+functions_writing_to_variable: found sstore:
+    sstore(slot, newImplementation)
+(proxy_features line:953)
+newImplementation
+functions_writing_to_variable: _setImplementation writes newImplementation to IMPLEMENTATION_SLOT w/ sstore (proxy_features line:959)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function _setPendingImplementation
+require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition OpenZeppelinUpgradesAddress.isContract(newImplementation)
+check_condition_from_expression: condition size > 0
+has_compatibility_checks: IF node exp = msg.sender != admin
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: skipping internal function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = _implementation().delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found fallback
+Found public function: constructor
+Found public function: _setPendingImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldPendingImplementation = pendingControllerImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) pendingControllerImplementation = newPendingImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewPendingImplementation(oldPendingImplementation,pendingControllerImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(newPendingImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(Error.NO_ERROR)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) Failure(uint256(err),uint256(info),0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(OpenZeppelinUpgradesAddress.isContract(newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) RETURN
+(Expression) uint256(err)
+has_time_delay: (node.type) IF
+(Expression) msg.sender != admin
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = IMPLEMENTATION_SLOT
+has_time_delay: (node.type) RETURN
+(Expression) fail(Error.UNAUTHORIZED,FailureInfo.SET_PENDING_IMPLEMENTATION_OWNER_CHECK)

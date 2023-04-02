@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/3c092c4ba7f4cc7efcc6bc2cf0297d99bc58dfde_MinterAmm.sol/3c092c4ba7f4cc7efcc6bc2cf0297d99bc58dfde_MinterAmm.sol#1149-1189)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/3c092c4ba7f4cc7efcc6bc2cf0297d99bc58dfde_MinterAmm.sol/3c092c4ba7f4cc7efcc6bc2cf0297d99bc58dfde_MinterAmm.sol#1149-1189) is an upgradeable proxy.\nPROXY_MEM_SLOT is declared in the proxy.\nPROXY_MEM_SLOT is a state variable of type uint256\nFound compatibility checks in all upgrade functions.\nTo remove upgradeability, delete updateAMMImplementation from MinterAmm\n",
+        "id": "205cfe0e92f9e7d2a4f624578867716cd9b419338e31c41f925fc5a58b1a6e95",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Proxy.PROXY_MEM_SLOT",
+          "impl_address_setter": "MinterAmm.updateAMMImplementation(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.6.12/3c092c4ba7f4cc7efcc6bc2cf0297d99bc58dfde_MinterAmm.sol/3c092c4ba7f4cc7efcc6bc2cf0297d99bc58dfde_MinterAmm.sol#1149-1189)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "uint256",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "MinterAmm.updateAMMImplementation(address)": {
+                "check": "require(bool,string)(bytes32(PROXY_MEM_SLOT) == Proxiable(newAddress).proxiableUUID(),Not compatible)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateAMMImplementation from MinterAmm"
+        }
+      }
+    ]
+  }
+}

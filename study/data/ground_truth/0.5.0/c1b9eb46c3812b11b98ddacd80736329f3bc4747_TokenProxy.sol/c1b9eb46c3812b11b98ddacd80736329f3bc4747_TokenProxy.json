@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TokenProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.0/c1b9eb46c3812b11b98ddacd80736329f3bc4747_TokenProxy.sol/c1b9eb46c3812b11b98ddacd80736329f3bc4747_TokenProxy.sol#109-158)",
+        "elements": [],
+        "description": "TokenProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.0/c1b9eb46c3812b11b98ddacd80736329f3bc4747_TokenProxy.sol/c1b9eb46c3812b11b98ddacd80736329f3bc4747_TokenProxy.sol#109-158) is an upgradeable proxy.\nimplementation is declared in the proxy.\nimplementation is an address state variable\nFound compatibility checks in all upgrade functions.\n",
+        "id": "5eda4f065204cfa18836503ea7e95b929c8d59f763dbc7cea661e86b46d36333",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TokenProxy.implementation",
+          "impl_address_setter": "TokenProxy.upgradeTo(address)",
+          "impl_address_getter": "not found",
+          "impl_address_location": "TokenProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.0/c1b9eb46c3812b11b98ddacd80736329f3bc4747_TokenProxy.sol/c1b9eb46c3812b11b98ddacd80736329f3bc4747_TokenProxy.sol#109-158)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "master_copy_coupling": "missing implementation source",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "TokenProxy.upgradeTo(address)": {
+                "check": "require(bool,string)(_address != implementation,New implementation cannot be the same as old)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "pendingProxyOwner()",
+              "isProxyOwner()",
+              "transferProxyOwnership(address)",
+              "claimProxyOwnership()",
+              "initProxyOwnership(address)",
+              "upgradeTo(address)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

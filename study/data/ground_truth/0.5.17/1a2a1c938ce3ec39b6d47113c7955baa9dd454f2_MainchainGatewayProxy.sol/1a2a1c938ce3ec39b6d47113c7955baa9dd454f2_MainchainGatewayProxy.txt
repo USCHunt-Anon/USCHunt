@@ -1,0 +1,728 @@
+
+Begin HasAdmin.is_proxy (Slither line:1425)
+
+
+End HasAdmin.is_proxy (Slither line:1428)
+
+
+Begin HasAdmin.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: HasAdmin 
+
+End HasAdmin.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ProxyStorage.is_proxy (Slither line:1425)
+
+
+End ProxyStorage.is_proxy (Slither line:1428)
+
+
+Begin ProxyStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ProxyStorage 
+
+End ProxyStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking admin (Slither line:1689)
+Checking _proxyTo (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function Proxy.implementation(): RETURN _proxyTo (Slither line:2041)
+_proxyTo (Slither line:2048)
+implementation returns a variable of type address   called _proxyTo (Slither line:2193)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _proxyTo
+Looking for setter (Slither line:1200)
+
+Looking for setter in ProxyStorage (Slither line:1204)
+
+
+Begin ProxyStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+require(bool)(msg.sender == admin)
+onlyAdmin()
+require(bool)(_newAdmin != address(0))
+AdminChanged(admin,_newAdmin)
+admin = _newAdmin
+is an Assignment Operation (Slither line:3216)
+Checking function: removeAdmin() returns() (Slither line:3127)
+Visibility: external
+AdminRemoved(admin)
+require(bool)(msg.sender == admin)
+admin = address(0)
+is an Assignment Operation (Slither line:3216)
+onlyAdmin()
+
+End ProxyStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ProxyStorage 
+Looking in Proxy (Slither line:1213)
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_proxyTo
+Checking function: proxyType() returns(uint256) (Slither line:3127)
+Visibility: external
+2
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: updateProxyTo(address) returns() (Slither line:3127)
+Visibility: public
+_proxyTo = _newProxyTo
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: updateProxyTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyStorage.find_getter_in_contract (Slither line:2974)
+
+_proxyTo is a Variable object
+_newProxyTo
+Checking function: constructor (Slither line:2988)
+Checking function: changeAdmin (Slither line:2988)
+Checking function: removeAdmin (Slither line:2988)
+
+End ProxyStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_proxyTo is a Variable object
+_newProxyTo
+Checking function: constructor (Slither line:2988)
+Checking function: changeAdmin (Slither line:2988)
+Checking function: removeAdmin (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _proxyTo (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newProxyTo
+impl_address_from_contract_call: StateVariable _proxyTo
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression implementation()
+impl_address_from_contract_call: CallExpression require(bool)(_impl != address(0))
+impl_address_from_contract_call: arg is _impl != address(0)
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function removeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function removeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function implementation
+Checking external function proxyType
+Checking public function updateProxyTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function fallback
+functions_writing_to_variable: _proxyTo
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+get_value_assigned: _proxyTo = _newProxyTo
+functions_writing_to_variable: constructor writes _newProxyTo to _proxyTo (proxy_features line:1013)
+functions_writing_to_variable: checking function Proxy.proxyType (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.removeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.updateProxyTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_newProxyTo != address(0x0)) (proxy_features line:909)
+functions_writing_to_variable: exp = _proxyTo = _newProxyTo (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _proxyTo = _newProxyTo (proxy_features line:912)
+functions_writing_to_variable: Identifier: _proxyTo (proxy_features line:924)
+get_value_assigned: _proxyTo = _newProxyTo
+functions_writing_to_variable: exp = ProxyUpdated(_newProxyTo,_proxyTo) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:909)
+functions_writing_to_variable: updateProxyTo writes _newProxyTo to _proxyTo (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.changeAdmin (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_proxyTo', '_newProxyTo', '_proxyTo']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function updateProxyTo
+require(bool)(_newProxyTo != address(0x0))
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 { revert(ptr, size) }
+    default { return(ptr, size) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found external function: changeAdmin
+has_time_delay: (node.type) EXPRESSION
+(Expression) _proxyTo = _newProxyTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_newProxyTo != address(0x0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyUpdated(_newProxyTo,_proxyTo)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin IValidator.is_proxy (Slither line:1425)
+
+
+End IValidator.is_proxy (Slither line:1428)
+
+
+Begin IValidator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IValidator 
+
+End IValidator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Validator.is_proxy (Slither line:1425)
+
+
+End Validator.is_proxy (Slither line:1428)
+
+
+Begin Validator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Validator 
+
+End Validator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MainchainValidator.is_proxy (Slither line:1425)
+
+
+End MainchainValidator.is_proxy (Slither line:1428)
+
+
+Begin MainchainValidator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MainchainValidator 
+
+End MainchainValidator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Registry.is_proxy (Slither line:1425)
+
+
+End Registry.is_proxy (Slither line:1428)
+
+
+Begin Registry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Registry 
+
+End Registry.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MainchainGatewayStorage.is_proxy (Slither line:1425)
+
+
+End MainchainGatewayStorage.is_proxy (Slither line:1428)
+
+
+Begin MainchainGatewayStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MainchainGatewayStorage 
+
+End MainchainGatewayStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin MainchainGatewayProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin MainchainGatewayProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End MainchainGatewayProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin MainchainGatewayProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin MainchainGatewayProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking admin (Slither line:1689)
+Checking _proxyTo (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking registry (Slither line:1689)
+Checking depositCount (Slither line:1689)
+Checking deposits (Slither line:1689)
+Checking withdrawals (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in MainchainGatewayProxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin MainchainGatewayProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function Proxy.implementation(): RETURN _proxyTo (Slither line:2041)
+_proxyTo (Slither line:2048)
+implementation returns a variable of type address   called _proxyTo (Slither line:2193)
+
+End MainchainGatewayProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End MainchainGatewayProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End MainchainGatewayProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End MainchainGatewayProxy.is_proxy (Slither line:1476)
+
+
+Begin MainchainGatewayProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: MainchainGatewayProxy 
+MainchainGatewayProxy is delegating to _proxyTo
+Looking for setter (Slither line:1200)
+
+Looking for setter in ProxyStorage (Slither line:1204)
+
+
+Begin ProxyStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: _newProxyTo (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+require(bool)(msg.sender == admin)
+onlyAdmin()
+require(bool)(_newAdmin != address(0))
+AdminChanged(admin,_newAdmin)
+admin = _newAdmin
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+Checking function: removeAdmin() returns() (Slither line:3127)
+Visibility: external
+AdminRemoved(admin)
+require(bool)(msg.sender == admin)
+admin = address(0)
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+onlyAdmin()
+
+End ProxyStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in ProxyStorage 
+Looking in MainchainGatewayProxy (Slither line:1213)
+
+Begin MainchainGatewayProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: _newProxyTo (Slither line:3122)
+Checking function: constructor(address,address) returns() (Slither line:3127)
+Checking function: updateRegistry(address) returns() (Slither line:3127)
+Visibility: external
+registry = Registry(_registry)
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+require(bool)(msg.sender == admin)
+onlyAdmin()
+Checking function: pause() returns() (Slither line:3127)
+Visibility: public
+onlyAdmin()
+require(bool)(msg.sender == admin)
+paused = true
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+whenNotPaused()
+Paused()
+require(bool)(! paused)
+Checking function: unpause() returns() (Slither line:3127)
+Visibility: public
+whenPaused()
+Unpaused()
+require(bool)(msg.sender == admin)
+onlyAdmin()
+require(bool)(paused)
+paused = false
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: changeAdmin(address) returns() (Slither line:3127)
+Visibility: external
+onlyAdmin()
+require(bool)(msg.sender == admin)
+require(bool)(_newAdmin != address(0))
+AdminChanged(admin,_newAdmin)
+admin = _newAdmin
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+Checking function: removeAdmin() returns() (Slither line:3127)
+Visibility: external
+AdminRemoved(admin)
+require(bool)(msg.sender == admin)
+admin = address(0)
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+onlyAdmin()
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_proxyTo
+Checking function: proxyType() returns(uint256) (Slither line:3127)
+Visibility: external
+2
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: updateProxyTo(address) returns() (Slither line:3127)
+Visibility: public
+ProxyUpdated(_newProxyTo,_proxyTo)
+require(bool)(msg.sender == admin)
+onlyAdmin()
+_proxyTo = _newProxyTo
+is an Assignment Operation (Slither line:3216)
+_newProxyTo
+
+End MainchainGatewayProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: updateProxyTo in contract: MainchainGatewayProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin ProxyStorage.find_getter_in_contract (Slither line:2974)
+
+_proxyTo is a Variable object
+_newProxyTo
+Checking function: constructor (Slither line:2988)
+Checking function: changeAdmin (Slither line:2988)
+Checking function: removeAdmin (Slither line:2988)
+
+End ProxyStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin MainchainGatewayProxy.find_getter_in_contract (Slither line:2974)
+
+_proxyTo is a Variable object
+_newProxyTo
+Checking function: updateRegistry (Slither line:2988)
+Checking function: pause (Slither line:2988)
+Checking function: unpause (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: changeAdmin (Slither line:2988)
+Checking function: removeAdmin (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _proxyTo (Slither line:3028)
+
+End MainchainGatewayProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: MainchainGatewayProxy (Slither line:1285)
+
+End MainchainGatewayProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newProxyTo
+impl_address_from_contract_call: StateVariable _proxyTo
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression require(bool)(_impl != address(0))
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: CallExpression implementation()
+Checking external function updateRegistry
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function removeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function updateRegistry
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function changeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function removeAdmin
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function implementation
+Checking external function proxyType
+Checking public function updateProxyTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking external function fallback
+functions_writing_to_variable: _proxyTo
+functions_writing_to_variable: checking function MainchainGatewayProxy.removeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.constructor (proxy_features line:898)
+get_value_assigned: _proxyTo = _newProxyTo
+functions_writing_to_variable: constructor writes _newProxyTo to _proxyTo (proxy_features line:1013)
+functions_writing_to_variable: checking function MainchainGatewayProxy.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.pause (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.updateProxyTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_newProxyTo != address(0x0)) (proxy_features line:909)
+functions_writing_to_variable: exp = _proxyTo = _newProxyTo (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _proxyTo = _newProxyTo (proxy_features line:912)
+functions_writing_to_variable: Identifier: _proxyTo (proxy_features line:924)
+get_value_assigned: _proxyTo = _newProxyTo
+functions_writing_to_variable: exp = ProxyUpdated(_newProxyTo,_proxyTo) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:909)
+functions_writing_to_variable: updateProxyTo writes _newProxyTo to _proxyTo (proxy_features line:929)
+functions_writing_to_variable: checking function MainchainGatewayProxy.changeAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.proxyType (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.updateRegistry (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function MainchainGatewayProxy.constructor (proxy_features line:898)
+get_value_assigned: _proxyTo = _newProxyTo
+functions_writing_to_variable: constructor writes _newProxyTo to _proxyTo (proxy_features line:1013)
+has_compatibility_checks: dependencies: ['_proxyTo', '_newProxyTo']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function updateProxyTo
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+require(bool)(_newProxyTo != address(0x0))
+has_compatibility_checks: condition _newProxyTo != address(0x0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _newProxyTo != address(0x0)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    let size := returndatasize()
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 { revert(ptr, size) }
+    default { return(ptr, size) }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+Found external function: updateRegistry
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyUpdated(_newProxyTo,_proxyTo)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyAdmin()
+has_time_delay: (node.type) EXPRESSION
+(Expression) _proxyTo = _newProxyTo
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_newProxyTo != address(0x0))

@@ -1,0 +1,592 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DetailedToken.is_proxy (Slither line:1425)
+
+
+End DetailedToken.is_proxy (Slither line:1428)
+
+
+Begin DetailedToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DetailedToken 
+
+End DetailedToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KeyValueStorage.is_proxy (Slither line:1425)
+
+
+End KeyValueStorage.is_proxy (Slither line:1428)
+
+
+Begin KeyValueStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KeyValueStorage 
+
+End KeyValueStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), _impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _owner (Slither line:1689)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking data (Slither line:1703)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function Proxy.implementation(): RETURN _implementation (Slither line:2041)
+_implementation (Slither line:2048)
+implementation returns a variable of type address   called _implementation (Slither line:2193)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+Proxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+Checking function: constructor (Slither line:2988)
+Checking function: owner (Slither line:2988)
+owner returns address variable  (Slither line:3008)
+RETURN node expression: _owner (Slither line:3028)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: msg.sender == _owner (Slither line:3028)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End Proxy.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function owner
+Checking public function isOwner
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function implementation
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function Proxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_implementation != impl) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function Proxy.owner (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(_implementation != impl)
+has_compatibility_checks: condition _implementation != impl
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != impl
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), _impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+Found public function: owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_implementation != impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isOwner())
+
+Begin StorageStateful.is_proxy (Slither line:1425)
+
+
+End StorageStateful.is_proxy (Slither line:1428)
+
+
+Begin StorageStateful.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageStateful 
+
+End StorageStateful.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageConsumer.is_proxy (Slither line:1425)
+
+
+End StorageConsumer.is_proxy (Slither line:1428)
+
+
+Begin StorageConsumer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageConsumer 
+
+End StorageConsumer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin tokenRecipient.is_proxy (Slither line:1425)
+
+
+End tokenRecipient.is_proxy (Slither line:1428)
+
+
+Begin tokenRecipient.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: tokenRecipient 
+
+End tokenRecipient.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenVersion1.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TokenVersion1.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End TokenVersion1.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TokenVersion1.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), _impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin TokenVersion1.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _storage (Slither line:1689)
+Checking _owner (Slither line:1689)
+Checking _implementation (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking totalSupply (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in TokenVersion1.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin TokenVersion1.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function Proxy.implementation(): RETURN _implementation (Slither line:2041)
+_implementation (Slither line:2048)
+implementation returns a variable of type address   called _implementation (Slither line:2193)
+
+End TokenVersion1.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End TokenVersion1.find_delegate_variable_by_name (Slither line:1739)
+
+
+End TokenVersion1.find_delegatecall_in_asm (Slither line:1637)
+
+
+End TokenVersion1.is_proxy (Slither line:1476)
+
+
+Begin TokenVersion1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenVersion1 
+TokenVersion1 is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxy (Slither line:1204)
+
+
+Begin Proxy.find_setter_in_contract (Slither line:3119)
+
+Expression: impl (Slither line:3122)
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: upgradeTo(address) returns() (Slither line:3127)
+Visibility: public
+_implementation = impl
+is an Assignment Operation (Slither line:3216)
+impl
+
+End Proxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: Proxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxy.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+impl
+
+End Proxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: Proxy (Slither line:1285)
+
+End TokenVersion1.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: impl
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+impl_address_from_contract_call: CallExpression require(bool)(_impl != address(0))
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: CallExpression implementation()
+Checking public function implementation
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function owner
+Checking public function isOwner
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: msg.sender == _owner
+Checking public function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function TokenVersion1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_implementation != impl) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function TokenVersion1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.renounceOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_implementation != impl) (proxy_features line:909)
+functions_writing_to_variable: exp = _implementation = impl (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = impl (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = impl
+functions_writing_to_variable: exp = Upgraded(impl) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(isOwner()) (proxy_features line:909)
+functions_writing_to_variable: exp = msg.sender == _owner (proxy_features line:909)
+functions_writing_to_variable: upgradeTo writes impl to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function TokenVersion1._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function Proxy.owner (proxy_features line:898)
+functions_writing_to_variable: checking function TokenVersion1.owner (proxy_features line:898)
+has_compatibility_checks: dependencies: ['impl', 'impl']
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(_implementation != impl)
+has_compatibility_checks: condition _implementation != impl
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != impl
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(_implementation != impl)
+has_compatibility_checks: condition _implementation != impl
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition impl != impl
+require(bool)(isOwner())
+has_compatibility_checks: condition isOwner()
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), _impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = impl
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) RETURN
+(Expression) msg.sender == _owner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_implementation != impl)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(isOwner())
+
+Begin TokenDelegate.is_proxy (Slither line:1425)
+
+
+End TokenDelegate.is_proxy (Slither line:1428)
+
+
+Begin TokenDelegate.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenDelegate 
+
+End TokenDelegate.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenVersion2.is_proxy (Slither line:1425)
+
+
+End TokenVersion2.is_proxy (Slither line:1428)
+
+
+Begin TokenVersion2.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenVersion2 
+
+End TokenVersion2.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TokenVersion3.is_proxy (Slither line:1425)
+
+
+End TokenVersion3.is_proxy (Slither line:1428)
+
+
+Begin TokenVersion3.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TokenVersion3 
+
+End TokenVersion3.is_upgradeable_proxy (Slither line:1407)
+

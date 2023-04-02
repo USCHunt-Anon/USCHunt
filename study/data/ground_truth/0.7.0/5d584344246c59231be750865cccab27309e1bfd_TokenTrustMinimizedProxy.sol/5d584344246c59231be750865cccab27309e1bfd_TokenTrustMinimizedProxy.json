@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "TokenTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/5d584344246c59231be750865cccab27309e1bfd_TokenTrustMinimizedProxy.sol/5d584344246c59231be750865cccab27309e1bfd_TokenTrustMinimizedProxy.sol#28-101)",
+        "elements": [],
+        "description": "TokenTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/5d584344246c59231be750865cccab27309e1bfd_TokenTrustMinimizedProxy.sol/5d584344246c59231be750865cccab27309e1bfd_TokenTrustMinimizedProxy.sol#28-101) is an upgradeable proxy.\nLOGIC_SLOT is declared in the proxy.\n uses Unstructured Storage\n implements EIP-1967\n uses Transparent Proxy pattern\nMissing compatibility check in TokenTrustMinimizedProxy.proposeTo(address)\nMissing compatibility check in TokenTrustMinimizedProxy.upgrade()\nMissing compatibility check in TokenTrustMinimizedProxy.cancelUpgrade()\nFound compatibility check in TokenTrustMinimizedProxy.proposeToAndCall(address,bytes)\nFound compatibility check in TokenTrustMinimizedProxy.proposeToAndCall(address,bytes)\nFound compatibility check in TokenTrustMinimizedProxy.proposeTo(address)\n",
+        "id": "db78009318a8423382441cad30a17572aac82a0abbdb2fd035518bb239e29ba6",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "TokenTrustMinimizedProxy.LOGIC_SLOT",
+          "impl_address_setter": "TokenTrustMinimizedProxy.upgrade()",
+          "impl_address_getter": "TokenTrustMinimizedProxy._logic()",
+          "impl_address_location": "TokenTrustMinimizedProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.7.0/5d584344246c59231be750865cccab27309e1bfd_TokenTrustMinimizedProxy.sol/5d584344246c59231be750865cccab27309e1bfd_TokenTrustMinimizedProxy.sol#28-101)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "unstructured_storage": true,
+          "eip_1967": true,
+          "transparent": true,
+          "external_functions_require_specific_sender": true,
+          "fallback_receive_not_callable_by_specific_sender": true,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "TokenTrustMinimizedProxy.proposeTo(address)": "require(bool)(block.number >= _proposeBlock() && _isContract(nextLogic))",
+              "TokenTrustMinimizedProxy.upgrade()": "missing",
+              "TokenTrustMinimizedProxy.cancelUpgrade()": "missing",
+              "TokenTrustMinimizedProxy.proposeToAndCall(address,bytes)": "require(bool)(block.number >= _proposeBlock() && _isContract(nextLogic))"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "changeAdmin(address)",
+              "upgrade()",
+              "cancelUpgrade()",
+              "proposeTo(address)",
+              "prolongLock(uint256)",
+              "proposeToAndCall(address,bytes)"
+            ]
+          },
+          "time_delay": {
+            "has_delay": true,
+            "upgrade_condition": "block.number >= _nextLogicBlock()"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+
+Begin RewardsDistributorDelegatorStorage.is_proxy (Slither line:1425)
+
+
+End RewardsDistributorDelegatorStorage.is_proxy (Slither line:1428)
+
+
+Begin RewardsDistributorDelegatorStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RewardsDistributorDelegatorStorage 
+
+End RewardsDistributorDelegatorStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin RewardsDistributorDelegator.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+Found LowLevelCall (Slither line:2740)
+
+
+Found delegatecall in LowLevelCall (Slither line:2742)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+End RewardsDistributorDelegator.is_proxy (Slither line:1476)
+
+
+Begin RewardsDistributorDelegator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: RewardsDistributorDelegator 
+RewardsDistributorDelegator is delegating to implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in RewardsDistributorDelegatorStorage (Slither line:1204)
+
+
+Begin RewardsDistributorDelegatorStorage.find_setter_in_contract (Slither line:3119)
+
+
+End RewardsDistributorDelegatorStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in RewardsDistributorDelegatorStorage 
+Looking in RewardsDistributorDelegator (Slither line:1213)
+
+Begin RewardsDistributorDelegator.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(address,address,address) returns() (Slither line:3127)
+Checking function: _setImplementation(address) returns() (Slither line:3127)
+Visibility: public
+require(bool,string)(msg.sender == admin,RewardsDistributorDelegator::_setImplementation: admin only)
+implementation = implementation_
+is an Assignment Operation (Slither line:3216)
+
+End RewardsDistributorDelegator.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: _setImplementation in contract: RewardsDistributorDelegator (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin RewardsDistributorDelegatorStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+
+End RewardsDistributorDelegatorStorage.find_getter_in_contract (Slither line:3083)
+
+
+Begin RewardsDistributorDelegator.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+Checking function: constructor (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: delegateTo (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+
+End RewardsDistributorDelegator.find_getter_in_contract (Slither line:3083)
+
+Could not find implementation getter in RewardsDistributorDelegator (Slither line:1305)
+or in RewardsDistributorDelegatorStorage (Slither line:1319)
+Checking for implementation at slot 2 in contract RewardsDistributorDelegatorStorage (Slither line:1355)
+Found implementation at slot 2 in contract RewardsDistributorDelegatorStorage (Slither line:1362)
+
+Begin RewardsDistributorDelegatorStorage.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+implementation_
+
+End RewardsDistributorDelegatorStorage.find_getter_in_contract (Slither line:3083)
+
+impl_address_from_contract_call: implementation_
+impl_address_from_contract_call: StateVariable implementation
+impl_address_from_contract_call: getter is None
+impl_address_from_contract_call: CallExpression implementation.delegatecall(msg.data)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,RewardsDistributorDelegator::_setImplementation: admin only)
+Checking public function _setImplementation
+Found 'msg.sender ==' in expression: require(bool,string)(msg.sender == admin,RewardsDistributorDelegator::_setImplementation: admin only)
+Checking external function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function RewardsDistributorDelegator.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function RewardsDistributorDelegator._setImplementation (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(msg.sender == admin,RewardsDistributorDelegator::_setImplementation: admin only) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(implementation_ != address(0),RewardsDistributorDelegator::_setImplementation: invalid implementation address) (proxy_features line:909)
+functions_writing_to_variable: exp = oldImplementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: oldImplementation = implementation (proxy_features line:912)
+functions_writing_to_variable: exp = implementation = implementation_ (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = implementation_ (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: exp = NewImplementation(oldImplementation,implementation) (proxy_features line:909)
+functions_writing_to_variable: _setImplementation writes implementation_ to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function RewardsDistributorDelegator.constructor (proxy_features line:898)
+get_value_assigned: implementation = implementation_
+functions_writing_to_variable: constructor writes implementation_ to implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function RewardsDistributorDelegator.delegateTo (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation_', 'implementation_']
+has_compatibility_checks: checking public function _setImplementation
+require(bool,string)(msg.sender == admin,RewardsDistributorDelegator::_setImplementation: admin only)
+has_compatibility_checks: condition msg.sender == admin
+require(bool,string)(implementation_ != address(0),RewardsDistributorDelegator::_setImplementation: invalid implementation address)
+has_compatibility_checks: condition implementation_ != address(0)
+check_condition_from_expression: condition implementation_ != address(0)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: (success) = implementation.delegatecall(msg.data)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+Found public function: constructor
+Found public function: _setImplementation
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) oldImplementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(msg.sender == admin,RewardsDistributorDelegator::_setImplementation: admin only)
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = implementation_
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(implementation_ != address(0),RewardsDistributorDelegator::_setImplementation: invalid implementation address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) NewImplementation(oldImplementation,implementation)

@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#40-147)",
+        "elements": [],
+        "description": "Proxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#40-147) is a proxy, but doesn't seem upgradeable.\n",
+        "id": "cb70bcec6d81585d7521ef499de1dc4cc025c9eb09a62b94cfe4ec81796afff6",
+        "features": {
+          "upgradeable": false
+        }
+      },
+      {
+        "contract": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#196-216)",
+        "elements": [],
+        "description": "UpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#196-216) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nUpgradeabilityStorage._implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#162) gets value from a cross-contract call: Proxy(_impl).implementation()\nEternalStorageProxy appears to be a Beacon contract for the proxy\nThe address of EternalStorageProxy is stored as a state variable: UpgradeabilityStorage._implementation\n_implementation can be updated by the following function(s): ['UpgradeabilityStorage.setImplementation(address)', 'UpgradeabilityProxy._upgradeTo(uint256,address)']\nMissing compatibility check in UpgradeabilityStorage.setImplementation(address)\nMissing compatibility check in UpgradeabilityStorage.setImplementation(address)\nCan toggle delegatecall on/off: condition: _impl.call(0x5c60da1b)\n",
+        "id": "db7ee4876aa8135fdebab8c5543dbd854af095c81a645ff1ff5bba8118798d17",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityStorage._implementation",
+          "impl_address_setter": "UpgradeabilityStorage.setImplementation(address)",
+          "impl_address_getter": "UpgradeabilityStorage.implementation()",
+          "impl_address_location": "UpgradeabilityStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#157-184)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "Proxy(_impl).implementation()",
+          "beacon": "EternalStorageProxy",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "UpgradeabilityStorage._implementation",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "UpgradeabilityStorage.setImplementation(address), UpgradeabilityProxy._upgradeTo(uint256,address)",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "UpgradeabilityStorage.setImplementation(address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!_impl.call(0x5c60da1b)",
+          "toggle_alternative_logic": "_innerImpl = Proxy(_impl).implementation()",
+          "immutable_functions": {
+            "other": [
+              "version()",
+              "implementation()",
+              "setImplementation(address)",
+              "implementation()",
+              "setImplementation(address)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#256-318)",
+        "elements": [],
+        "description": "OwnedUpgradeabilityProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#256-318) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\nUpgradeabilityStorage._implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#162) gets value from a cross-contract call: Proxy(_impl).implementation()\nEternalStorageProxy appears to be a Beacon contract for the proxy\nThe address of EternalStorageProxy is stored as a state variable: UpgradeabilityStorage._implementation\n_implementation can be updated by the following function(s): ['UpgradeabilityProxy._upgradeTo(uint256,address)', 'UpgradeabilityStorage.setImplementation(address)']\nMissing compatibility check in UpgradeabilityStorage.setImplementation(address)\nMissing compatibility check in UpgradeabilityStorage.setImplementation(address)\nFound compatibility check in OwnedUpgradeabilityProxy.upgradeTo(uint256,address)\nFound compatibility check in OwnedUpgradeabilityProxy.upgradeToAndCall(uint256,address,bytes)\nCan toggle delegatecall on/off: condition: _impl.call(0x5c60da1b)\n",
+        "id": "0032b65d9eb65e27c9c79078698b8122ec24c99aeb532e61bf1ff20881ec966f",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityStorage._implementation",
+          "impl_address_setter": "UpgradeabilityStorage.setImplementation(address)",
+          "impl_address_getter": "UpgradeabilityStorage.implementation()",
+          "impl_address_location": "UpgradeabilityStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#157-184)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "impl_address_from_contract_call": "Proxy(_impl).implementation()",
+          "beacon": "EternalStorageProxy",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "UpgradeabilityStorage._implementation",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "UpgradeabilityProxy._upgradeTo(uint256,address), UpgradeabilityStorage.setImplementation(address)",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "UpgradeabilityStorage.setImplementation(address)": "missing",
+              "OwnedUpgradeabilityProxy.upgradeTo(uint256,address)": "require(bool)(_implementation != implementation)",
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(uint256,address,bytes)": "require(bool)(_implementation != implementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!_impl.call(0x5c60da1b)",
+          "toggle_alternative_logic": "this.setImplementation(_innerImpl)",
+          "immutable_functions": {
+            "other": [
+              "version()",
+              "implementation()",
+              "setImplementation(address)",
+              "implementation()",
+              "setImplementation(address)",
+              "upgradeabilityOwner()",
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(uint256,address)",
+              "upgradeToAndCall(uint256,address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "EternalStorageProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#332-333)",
+        "elements": [],
+        "description": "EternalStorageProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#332-333) is an upgradeable proxy.\n_implementation was found in a different contract.\n_implementation is an address state variable.\n uses Eternal Storage\nUpgradeabilityStorage._implementation (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#162) gets value from a cross-contract call: Proxy(_impl).implementation()\nEternalStorageProxy appears to be a Beacon contract for the proxy\nThe address of EternalStorageProxy is stored as a state variable: UpgradeabilityStorage._implementation\n_implementation can be updated by the following function(s): ['UpgradeabilityProxy._upgradeTo(uint256,address)', 'UpgradeabilityStorage.setImplementation(address)']\nMissing compatibility check in UpgradeabilityStorage.setImplementation(address)\nMissing compatibility check in UpgradeabilityStorage.setImplementation(address)\nFound compatibility check in OwnedUpgradeabilityProxy.upgradeToAndCall(uint256,address,bytes)\nFound compatibility check in OwnedUpgradeabilityProxy.upgradeTo(uint256,address)\nCan toggle delegatecall on/off: condition: _impl.call(0x5c60da1b)\n",
+        "id": "31a15963631c32d1d0d3fb154c5be7624e466c0f0eeb13662b8f14e11e6dfb7b",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradeabilityStorage._implementation",
+          "impl_address_setter": "UpgradeabilityStorage.setImplementation(address)",
+          "impl_address_getter": "UpgradeabilityStorage.implementation()",
+          "impl_address_location": "UpgradeabilityStorage (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.24/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol/17b09b22823f00bb9b8ee2d4632e332cadc29458_EternalStorageProxy.sol#157-184)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "address",
+          "eternal_storage": true,
+          "impl_address_from_contract_call": "Proxy(_impl).implementation()",
+          "beacon": "EternalStorageProxy",
+          "beacon_source_type": "address",
+          "beacon_source_variable": "UpgradeabilityStorage._implementation",
+          "beacon_source_constant": false,
+          "beacon_source_setters": "UpgradeabilityProxy._upgradeTo(uint256,address), UpgradeabilityStorage.setImplementation(address)",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "UpgradeabilityStorage.setImplementation(address)": "missing",
+              "OwnedUpgradeabilityProxy.upgradeToAndCall(uint256,address,bytes)": "require(bool)(_implementation != implementation)",
+              "OwnedUpgradeabilityProxy.upgradeTo(uint256,address)": "require(bool)(_implementation != implementation)"
+            }
+          },
+          "can_remove_upgradeability": false,
+          "can_toggle_delegatecall": true,
+          "toggle_delegatecall_condition": "!_impl.call(0x5c60da1b)",
+          "toggle_alternative_logic": "this.setImplementation(_innerImpl)",
+          "immutable_functions": {
+            "other": [
+              "proxyOwner()",
+              "transferProxyOwnership(address)",
+              "upgradeTo(uint256,address)",
+              "upgradeToAndCall(uint256,address,bytes)",
+              "version()",
+              "implementation()",
+              "setImplementation(address)",
+              "implementation()",
+              "setImplementation(address)",
+              "upgradeabilityOwner()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

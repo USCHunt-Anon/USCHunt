@@ -1,0 +1,335 @@
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ReentrancyGuard.is_proxy (Slither line:1425)
+
+
+End ReentrancyGuard.is_proxy (Slither line:1428)
+
+
+Begin ReentrancyGuard.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ReentrancyGuard 
+
+End ReentrancyGuard.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin GasTracker.is_proxy (Slither line:1425)
+
+
+End GasTracker.is_proxy (Slither line:1428)
+
+
+Begin GasTracker.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GasTracker 
+
+End GasTracker.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxObjects.is_proxy (Slither line:1425)
+
+
+End BZxObjects.is_proxy (Slither line:1428)
+
+
+Begin BZxObjects.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxObjects 
+
+End BZxObjects.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxStorage.is_proxy (Slither line:1425)
+
+
+End BZxStorage.is_proxy (Slither line:1428)
+
+
+Begin BZxStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxStorage 
+
+End BZxStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxiable.is_proxy (Slither line:1425)
+
+
+End Proxiable.is_proxy (Slither line:1428)
+
+
+Begin Proxiable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxiable 
+
+End Proxiable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BZxProxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BZxProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas(), target, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin BZxProxy.find_delegate_variable_from_name
+Searching for target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking reentrancyLock (Slither line:1689)
+Checking owner (Slither line:1689)
+Checking gasUsed (Slither line:1689)
+Checking MAX_UINT (Slither line:1689)
+Checking bZRxTokenContract (Slither line:1689)
+Checking vaultContract (Slither line:1689)
+Checking oracleRegistryContract (Slither line:1689)
+Checking bZxTo0xContract (Slither line:1689)
+Checking DEBUG_MODE (Slither line:1689)
+Checking orders (Slither line:1689)
+Checking orderList (Slither line:1689)
+Checking orderLender (Slither line:1689)
+Checking orderTraders (Slither line:1689)
+Checking orderFilledAmounts (Slither line:1689)
+Checking orderCancelledAmounts (Slither line:1689)
+Checking oracleAddresses (Slither line:1689)
+Checking loanPositions (Slither line:1689)
+Checking interestPaid (Slither line:1689)
+Checking loanList (Slither line:1689)
+Checking targets (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking target (Slither line:1703)
+target is a Local Variable in BZxProxy.fallback (Slither line:1707)
+Expression: targets[msg.sig] (Slither line:1719)
+targets is a State Variable in contract Proxiable (Slither line:1749)
+
+End BZxProxy.find_delegate_variable_by_name
+
+
+End BZxProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End BZxProxy.is_proxy (Slither line:1476)
+
+
+Begin BZxProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BZxProxy 
+BZxProxy is delegating to targets
+Looking for setter (Slither line:1200)
+
+Looking for setter in Proxiable (Slither line:1204)
+
+
+Begin Proxiable.find_setter_in_contract (Slither line:3119)
+
+Checking function: initialize(address) returns() (Slither line:3127)
+Checking function: _replaceContract(address) returns() (Slither line:3127)
+Visibility: internal
+
+End Proxiable.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in Proxiable 
+Looking in BZxProxy (Slither line:1213)
+
+Begin BZxProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: initialize(address) returns() (Slither line:3127)
+Checking function: replaceContract(address) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+require(bool,string)(_target.delegatecall(0xc4d66de8,_target),Proxiable::_replaceContract: failed)
+_replaceContract(_target)
+require(bool)(msg.sender == owner)
+Checking function: setTarget(string,address) returns(bytes4) (Slither line:3127)
+Visibility: public
+onlyOwner()
+targets[f] = _target
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+
+End BZxProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setTarget in contract: BZxProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin Proxiable.find_getter_in_contract (Slither line:2974)
+
+targets is a Variable object
+_target
+Checking function: _replaceContract (Slither line:2988)
+
+End Proxiable.find_getter_in_contract (Slither line:3083)
+
+
+Begin BZxProxy.find_getter_in_contract (Slither line:2974)
+
+targets is a Variable object
+_target
+Checking function: _replaceContract (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: renounceOwnership (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: _transferOwnership (Slither line:2988)
+Checking function: buildLoanOrderStruct (Slither line:2988)
+buildLoanOrderStruct returns BZxObjects.LoanOrder variable  (Slither line:3008)
+RETURN node expression: LoanOrder(addrs[0],addrs[1],addrs[2],addrs[3],addrs[4],addrs[5],uints[0],uints[1],uints[2],uints[3],uints[4],uints[5],uints[6],loanOrderHash) (Slither line:3028)
+Checking function: fallback (Slither line:2988)
+Checking function: initialize (Slither line:2988)
+Checking function: replaceContract (Slither line:2988)
+Checking function: setTarget (Slither line:2988)
+setTarget returns bytes4 variable  (Slither line:3008)
+RETURN node expression: f (Slither line:3028)
+Checking function: setBZxAddresses (Slither line:2988)
+Checking function: setDebugMode (Slither line:2988)
+Checking function: setBZRxToken (Slither line:2988)
+Checking function: setVault (Slither line:2988)
+Checking function: setOracleRegistry (Slither line:2988)
+Checking function: setOracleReference (Slither line:2988)
+Checking function: set0xExchangeWrapper (Slither line:2988)
+Checking function: getTarget (Slither line:2988)
+getTarget returns address variable  (Slither line:3008)
+RETURN node expression: targets[bytes4(keccak256()(abi.encodePacked(_funcId)))] (Slither line:3028)
+
+End BZxProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getTarget in contract: BZxProxy (Slither line:1285)
+
+End BZxProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _target
+impl_address_from_contract_call: StateVariable targets
+impl_address_from_contract_call: getter is getTarget
+getter.full_name = getTarget(string)
+Checking public function initialize
+Checking public function renounceOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function initialize
+Checking public function replaceContract
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setTarget
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setBZxAddresses
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setDebugMode
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setBZRxToken
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setVault
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setOracleRegistry
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function setOracleReference
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function set0xExchangeWrapper
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function getTarget
+Checking public function fallback
+functions_writing_to_variable: targets
+functions_writing_to_variable: checking function BZxProxy.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setBZRxToken (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy._transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setVault (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.initialize (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setOracleRegistry (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy._replaceContract (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.buildLoanOrderStruct (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.replaceContract (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setOracleReference (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setTarget (proxy_features line:898)
+functions_writing_to_variable: exp = f = bytes4(keccak256()(abi.encodePacked(_funcId))) (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: f = bytes4(keccak256()(abi.encodePacked(_funcId))) (proxy_features line:912)
+functions_writing_to_variable: exp = targets[f] = _target (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: targets[f] = _target (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: targets[f] (proxy_features line:920)
+functions_writing_to_variable: Identifier: targets (proxy_features line:924)
+get_value_assigned: targets[f] = _target
+functions_writing_to_variable: exp = f (proxy_features line:909)
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == owner) (proxy_features line:909)
+functions_writing_to_variable: setTarget writes _target to targets (proxy_features line:929)
+functions_writing_to_variable: checking function BZxProxy.set0xExchangeWrapper (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setBZxAddresses (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.getTarget (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.setDebugMode (proxy_features line:898)
+functions_writing_to_variable: checking function BZxProxy.renounceOwnership (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_target']
+has_compatibility_checks: checking public function setTarget
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas(), target, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize()
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: target = targets[msg.sig]
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: initialize
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) f = bytes4(keccak256()(abi.encodePacked(_funcId)))
+has_time_delay: (node.type) EXPRESSION
+(Expression) targets[f] = _target
+has_time_delay: (node.type) RETURN
+(Expression) f
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)

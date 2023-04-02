@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "main (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.23/682664463c7e9b9182f9b6a8172f374785825c12_main.sol/682664463c7e9b9182f9b6a8172f374785825c12_main.sol#83-141)",
+        "elements": [],
+        "description": "main (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.23/682664463c7e9b9182f9b6a8172f374785825c12_main.sol/682664463c7e9b9182f9b6a8172f374785825c12_main.sol#83-141) is an upgradeable proxy.\nreferences was found in a different contract.\nreferences is a mapping of type mapping(bytes32 => address)\nreferences is a mapping of type mapping(bytes32 => address)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "491699d1100e41c25e0c968dcb7d73d90a6c8ed9c8dca82c5dffb8a0deb995e2",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "References.references",
+          "impl_address_setter": "main.setReference(address,bytes32)",
+          "impl_address_getter": "main.getReference(bytes32)",
+          "impl_address_location": "References (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.4.23/682664463c7e9b9182f9b6a8172f374785825c12_main.sol/682664463c7e9b9182f9b6a8172f374785825c12_main.sol#19-23)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes32 => address)",
+          "impl_mapping_from_msg_sig": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "main.setReference(address,bytes32)": {
+                "check": "require(bool,string)(authorized[_address][_authorization] || authorized[_address][PRESIDENT],Not authorized to access!)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "isAuthorized(address,bytes32)",
+              "toggleAuthorization(address,bytes32)",
+              "setReference(address,bytes32)",
+              "getReference(bytes32)"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

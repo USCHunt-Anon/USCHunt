@@ -1,0 +1,279 @@
+
+Begin References.is_proxy (Slither line:1425)
+
+
+End References.is_proxy (Slither line:1428)
+
+
+Begin References.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: References 
+
+End References.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AuthorizedList.is_proxy (Slither line:1425)
+
+
+End AuthorizedList.is_proxy (Slither line:1428)
+
+
+Begin AuthorizedList.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AuthorizedList 
+
+End AuthorizedList.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Authorized.is_proxy (Slither line:1425)
+
+
+End Authorized.is_proxy (Slither line:1428)
+
+
+Begin Authorized.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Authorized 
+
+End Authorized.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin main.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin main.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let _calldata := mload(0x40) (Slither line:1576)
+    mstore(0x40, add(_calldata, calldatasize())) (Slither line:1576)
+    calldatacopy(_calldata, 0x0, calldatasize()) (Slither line:1576)
+    switch delegatecall(gas(), _target, _calldata, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin main.find_delegate_variable_from_name
+Searching for _target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking references (Slither line:1689)
+Checking PRESIDENT (Slither line:1689)
+Checking STAFF_MEMBER (Slither line:1689)
+Checking AIR_DROP (Slither line:1689)
+Checking INTERNAL (Slither line:1689)
+Checking authorized (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _target (Slither line:1703)
+_target is a Local Variable in main.fallback (Slither line:1707)
+Expression: references[bytes32(0)] (Slither line:1719)
+references is a State Variable in contract References (Slither line:1749)
+
+End main.find_delegate_variable_by_name
+
+
+End main.find_delegatecall_in_asm (Slither line:1637)
+
+
+End main.is_proxy (Slither line:1476)
+
+
+Begin main.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: main 
+main is delegating to references
+Looking for setter (Slither line:1200)
+
+Looking for setter in References (Slither line:1204)
+
+
+Begin References.find_setter_in_contract (Slither line:3119)
+
+
+End References.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in References 
+Looking in main (Slither line:1213)
+
+Begin main.find_setter_in_contract (Slither line:3119)
+
+Checking function: main(address,address) returns() (Slither line:3127)
+Checking function: setReference(address,bytes32) returns() (Slither line:3127)
+Visibility: external
+require(bool,string)(_address != address(0),setReference: Unexpectedly _address is 0x0)
+ifAuthorized(msg.sender,PRESIDENT)
+StorageUpgrade(references[_key],_address)
+delete references[_key]
+require(bool,string)(authorized[_address][_authorization] || authorized[_address][PRESIDENT],Not authorized to access!)
+LogicUpgrade(references[bytes32(0)],_address)
+references[_key] = _address
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+
+End main.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setReference in contract: main (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin References.find_getter_in_contract (Slither line:2974)
+
+references is a Variable object
+_address
+
+End References.find_getter_in_contract (Slither line:3083)
+
+
+Begin main.find_getter_in_contract (Slither line:2974)
+
+references is a Variable object
+_address
+Checking function: Authorized (Slither line:2988)
+Checking function: isAuthorized (Slither line:2988)
+isAuthorized returns bool variable  (Slither line:3008)
+RETURN node expression: authorized[_address][_authorization] (Slither line:3028)
+Checking function: toggleAuthorization (Slither line:2988)
+Checking function: main (Slither line:2988)
+Checking function: setReference (Slither line:2988)
+Checking function: getReference (Slither line:2988)
+getReference returns address variable  (Slither line:3008)
+RETURN node expression: references[_key] (Slither line:3028)
+
+End main.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getReference in contract: main (Slither line:1285)
+
+End main.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _address
+impl_address_from_contract_call: StateVariable references
+impl_address_from_contract_call: getter is getReference
+getter.full_name = getReference(bytes32)
+Checking public function isAuthorized
+Checking public function toggleAuthorization
+Checking external function setReference
+Checking external function getReference
+Checking external function fallback
+functions_writing_to_variable: references
+functions_writing_to_variable: checking function main.Authorized (proxy_features line:898)
+functions_writing_to_variable: checking function main.toggleAuthorization (proxy_features line:898)
+functions_writing_to_variable: checking function main.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function main.setReference (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_address != address(0),setReference: Unexpectedly _address is 0x0) (proxy_features line:909)
+functions_writing_to_variable: exp = _key == bytes32(0) (proxy_features line:909)
+functions_writing_to_variable: exp = LogicUpgrade(references[bytes32(0)],_address) (proxy_features line:909)
+functions_writing_to_variable: exp = StorageUpgrade(references[_key],_address) (proxy_features line:909)
+functions_writing_to_variable: exp = references[_key] != address(0) (proxy_features line:909)
+functions_writing_to_variable: exp = delete references[_key] (proxy_features line:909)
+functions_writing_to_variable: exp = references[_key] = _address (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: references[_key] = _address (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: references[_key] (proxy_features line:920)
+functions_writing_to_variable: Identifier: references (proxy_features line:924)
+get_value_assigned: references[_key] = _address
+functions_writing_to_variable: exp = ifAuthorized(msg.sender,PRESIDENT) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(authorized[_address][_authorization] || authorized[_address][PRESIDENT],Not authorized to access!) (proxy_features line:909)
+functions_writing_to_variable: setReference writes _address to references (proxy_features line:929)
+functions_writing_to_variable: checking function main.main (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(_logic != address(0),main: Unexpectedly logic address is 0x0.) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(_storage != address(0),main: Unexpectedly storage address is 0x0.) (proxy_features line:909)
+functions_writing_to_variable: exp = references[bytes32(0)] = _logic (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: references[bytes32(0)] = _logic (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: references[bytes32(0)] (proxy_features line:920)
+functions_writing_to_variable: Identifier: references (proxy_features line:924)
+get_value_assigned: references[bytes32(0)] = _logic
+functions_writing_to_variable: exp = references[bytes32(1)] = _storage (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: references[bytes32(1)] = _storage (proxy_features line:912)
+functions_writing_to_variable: IndexAccess: references[bytes32(1)] (proxy_features line:920)
+functions_writing_to_variable: Identifier: references (proxy_features line:924)
+get_value_assigned: references[bytes32(1)] = _storage
+functions_writing_to_variable: exp = Authorized() (proxy_features line:909)
+functions_writing_to_variable: main writes _storage to references (proxy_features line:929)
+functions_writing_to_variable: checking function main.isAuthorized (proxy_features line:898)
+functions_writing_to_variable: checking function main.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function main.getReference (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_storage', '_logic', '_address', 'REF_33']
+has_compatibility_checks: checking external function setReference
+require(bool,string)(_address != address(0),setReference: Unexpectedly _address is 0x0)
+has_compatibility_checks: condition _address != address(0)
+check_condition_from_expression: modifier calls: ['ifAuthorized(msg.sender,PRESIDENT)']
+check_condition_from_expression: condition _address != address(0)
+has_compatibility_checks: IF node exp = _key == bytes32(0)
+require(bool,string)(authorized[_address][_authorization] || authorized[_address][PRESIDENT],Not authorized to access!)
+has_compatibility_checks: condition authorized[_address][_authorization] || authorized[_address][PRESIDENT]
+check_condition_from_expression: modifier calls: ['ifAuthorized(msg.sender,PRESIDENT)']
+check_condition_from_expression: condition authorized[_address][_authorization] || authorized[_address][PRESIDENT]
+has_compatibility_checks: IF node exp = references[_key] != address(0)
+has_compatibility_checks: skipping constructor
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let _calldata := mload(0x40)
+    mstore(0x40, add(_calldata, calldatasize()))
+    calldatacopy(_calldata, 0x0, calldatasize())
+    switch delegatecall(gas(), _target, _calldata, calldatasize(), 0, 0)
+    case 0 {
+        revert(0, 0)
+    }
+    default {
+        let _returndata := mload(0x40)
+        returndatacopy(_returndata, 0, returndatasize())
+        mstore(0x40, add(_returndata, returndatasize()))
+        return(_returndata, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _target = references[bytes32(0)]
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: Authorized
+Found public function: isAuthorized
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_address != address(0),setReference: Unexpectedly _address is 0x0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ifAuthorized(msg.sender,PRESIDENT)
+has_time_delay: (node.type) EXPRESSION
+(Expression) StorageUpgrade(references[_key],_address)
+has_time_delay: (node.type) IF
+(Expression) _key == bytes32(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) delete references[_key]
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(authorized[_address][_authorization] || authorized[_address][PRESIDENT],Not authorized to access!)
+has_time_delay: (node.type) EXPRESSION
+(Expression) LogicUpgrade(references[bytes32(0)],_address)
+has_time_delay: (node.type) IF
+(Expression) references[_key] != address(0)
+has_time_delay: (node.type) EXPRESSION
+(Expression) references[_key] = _address

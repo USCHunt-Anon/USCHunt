@@ -1,0 +1,936 @@
+
+Begin EternalStorage.is_proxy (Slither line:1425)
+
+
+End EternalStorage.is_proxy (Slither line:1428)
+
+
+Begin EternalStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EternalStorage 
+
+End EternalStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin AddressUtils.is_proxy (Slither line:1425)
+
+
+End AddressUtils.is_proxy (Slither line:1428)
+
+
+Begin AddressUtils.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: AddressUtils 
+
+End AddressUtils.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in Proxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin Proxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End Proxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeabilityStorage.is_proxy (Slither line:1425)
+
+
+End UpgradeabilityStorage.is_proxy (Slither line:1428)
+
+
+Begin UpgradeabilityStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityStorage 
+
+End UpgradeabilityStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeabilityProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin UpgradeabilityProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _version (Slither line:1689)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in UpgradeabilityProxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin UpgradeabilityProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function UpgradeabilityStorage.implementation(): RETURN _implementation (Slither line:2041)
+_implementation (Slither line:2048)
+implementation returns a variable of type address   called _implementation (Slither line:2193)
+
+End UpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End UpgradeabilityProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End UpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityProxy 
+UpgradeabilityProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityStorage (Slither line:1204)
+
+
+Begin UpgradeabilityStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: version() returns(uint256) (Slither line:3127)
+Visibility: external
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End UpgradeabilityStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityStorage 
+Looking in UpgradeabilityProxy (Slither line:1213)
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: _upgradeTo(uint256,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: version() returns(uint256) (Slither line:3127)
+Visibility: external
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+Checking function: fallback() returns() (Slither line:3127)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityProxy (Slither line:1220)
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: _upgradeTo(uint256,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: version() returns(uint256) (Slither line:3127)
+Visibility: external
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+Checking function: fallback() returns() (Slither line:3127)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find implementation setter in UpgradeabilityProxy (Slither line:1269)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityStorage.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+Checking function: version (Slither line:2988)
+version returns uint256 variable  (Slither line:3008)
+RETURN node expression: _version (Slither line:3028)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End UpgradeabilityStorage.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: UpgradeabilityStorage (Slither line:1285)
+
+Begin UpgradeabilityProxy.getter_return_is_non_constant (Slither line:2883)
+
+Found getter function but not setter
+Checking if getter calls any other function
+ENTRY_POINT: None (Slither line:2888)
+RETURN: _implementation (Slither line:2888)
+
+End UpgradeabilityProxy.getter_return_is_non_constant (Slither line:2942)
+
+
+End UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+
+Begin UpgradeabilityOwnerStorage.is_proxy (Slither line:1425)
+
+
+End UpgradeabilityOwnerStorage.is_proxy (Slither line:1428)
+
+
+Begin UpgradeabilityOwnerStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityOwnerStorage 
+
+End UpgradeabilityOwnerStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin OwnedUpgradeabilityProxy.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin OwnedUpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End OwnedUpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin OwnedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin OwnedUpgradeabilityProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking _upgradeabilityOwner (Slither line:1689)
+Checking _version (Slither line:1689)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in OwnedUpgradeabilityProxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin OwnedUpgradeabilityProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function UpgradeabilityStorage.implementation(): RETURN _implementation (Slither line:2041)
+_implementation (Slither line:2048)
+implementation returns a variable of type address   called _implementation (Slither line:2193)
+
+End OwnedUpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End OwnedUpgradeabilityProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End OwnedUpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End OwnedUpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin OwnedUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: OwnedUpgradeabilityProxy 
+OwnedUpgradeabilityProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityStorage (Slither line:1204)
+
+
+Begin UpgradeabilityStorage.find_setter_in_contract (Slither line:3119)
+
+Checking function: version() returns(uint256) (Slither line:3127)
+Visibility: external
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End UpgradeabilityStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityStorage 
+Looking in OwnedUpgradeabilityProxy (Slither line:1213)
+
+Begin OwnedUpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferProxyOwnership(address) returns() (Slither line:3127)
+Visibility: external
+onlyUpgradeabilityOwner()
+_upgradeabilityOwner
+require(bool)(msg.sender == upgradeabilityOwner())
+ProxyOwnershipTransferred(upgradeabilityOwner(),newOwner)
+require(bool)(newOwner != address(0))
+_upgradeabilityOwner = newUpgradeabilityOwner
+is an Assignment Operation (Slither line:3216)
+setUpgradeabilityOwner(newOwner)
+Checking function: upgradeTo(uint256,address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(_implementation != implementation)
+_upgradeabilityOwner
+require(bool)(AddressUtils.isContract(implementation))
+require(bool)(msg.sender == upgradeabilityOwner())
+require(bool)(version > _version)
+_version = version
+is an Assignment Operation (Slither line:3216)
+_upgradeTo(version,implementation)
+_implementation = implementation
+is an Assignment Operation (Slither line:3216)
+
+End OwnedUpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: OwnedUpgradeabilityProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityStorage.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+implementation
+Checking function: version (Slither line:2988)
+version returns uint256 variable  (Slither line:3008)
+RETURN node expression: _version (Slither line:3028)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End UpgradeabilityStorage.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: UpgradeabilityStorage (Slither line:1285)
+
+End OwnedUpgradeabilityProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: implementation
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: AddressUtils.isContract
+impl_address_from_contract_call: CallExpression implementation()
+impl_address_from_contract_call: CallExpression require(bool)(_impl != address(0))
+impl_address_from_contract_call: arg is _impl != address(0)
+Checking external function version
+Checking public function implementation
+Checking public function implementation
+Checking public function upgradeabilityOwner
+Checking external function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking public function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.transferProxyOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_implementation != implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(AddressUtils.isContract(implementation)) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(version > _version) (proxy_features line:909)
+functions_writing_to_variable: exp = _version = version (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _version = version (proxy_features line:912)
+functions_writing_to_variable: exp = _implementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = implementation
+functions_writing_to_variable: exp = Upgraded(version,implementation) (proxy_features line:909)
+functions_writing_to_variable: _upgradeTo writes implementation to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: _implementation = implementation
+functions_writing_to_variable: upgradeToAndCall writes implementation to _implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.setUpgradeabilityOwner (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.version (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.upgradeabilityOwner (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.upgradeTo (proxy_features line:898)
+get_value_assigned: _implementation = implementation
+functions_writing_to_variable: upgradeTo writes implementation to _implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function OwnedUpgradeabilityProxy.implementation (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation', 'implementation', 'implementation']
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool)(_implementation != implementation)
+has_compatibility_checks: condition _implementation != implementation
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition implementation != implementation
+require(bool)(AddressUtils.isContract(implementation))
+has_compatibility_checks: condition AddressUtils.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition size > 0
+require(bool)(msg.sender == upgradeabilityOwner())
+has_compatibility_checks: condition msg.sender == upgradeabilityOwner()
+require(bool)(version > _version)
+has_compatibility_checks: condition version > _version
+require(bool)(address(this).call.value(msg.value)(data))
+has_compatibility_checks: condition address(this).call.value(msg.value)(data)
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(_implementation != implementation)
+has_compatibility_checks: condition _implementation != implementation
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition implementation != implementation
+require(bool)(AddressUtils.isContract(implementation))
+has_compatibility_checks: condition AddressUtils.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition size > 0
+require(bool)(msg.sender == upgradeabilityOwner())
+has_compatibility_checks: condition msg.sender == upgradeabilityOwner()
+require(bool)(version > _version)
+has_compatibility_checks: condition version > _version
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    mstore(0x40, add(ptr, returndatasize()))
+    returndatacopy(ptr, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(ptr, returndatasize())
+    }
+    default {
+        return(ptr, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+Found external function: version
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_implementation != implementation)
+has_time_delay: (node.type) RETURN
+(Expression) _upgradeabilityOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(AddressUtils.isContract(implementation))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == upgradeabilityOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(version > _version)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _version = version
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(version,implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = implementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyUpgradeabilityOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(version,implementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: comparing (Identifier) version to _version
+
+Begin EternalStorageProxy.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin EternalStorageProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End EternalStorageProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EternalStorageProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let ptr := mload(0x40) (Slither line:1576)
+    calldatacopy(ptr, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin EternalStorageProxy.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking uintStorage (Slither line:1689)
+Checking stringStorage (Slither line:1689)
+Checking addressStorage (Slither line:1689)
+Checking bytesStorage (Slither line:1689)
+Checking boolStorage (Slither line:1689)
+Checking intStorage (Slither line:1689)
+Checking _upgradeabilityOwner (Slither line:1689)
+Checking _version (Slither line:1689)
+Checking _implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in EternalStorageProxy.fallback (Slither line:1707)
+Expression: implementation() (Slither line:1719)
+
+Begin EternalStorageProxy.find_delegate_from_call_exp
+
+implementation() (Slither line:2003)
+called = implementation (Slither line:2010)
+Return node of function UpgradeabilityStorage.implementation(): RETURN _implementation (Slither line:2041)
+_implementation (Slither line:2048)
+implementation returns a variable of type address   called _implementation (Slither line:2193)
+
+End EternalStorageProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End EternalStorageProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End EternalStorageProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EternalStorageProxy.is_proxy (Slither line:1476)
+
+
+Begin EternalStorageProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EternalStorageProxy 
+EternalStorageProxy is delegating to _implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityStorage (Slither line:1204)
+
+
+Begin UpgradeabilityStorage.find_setter_in_contract (Slither line:3119)
+
+Expression: implementation (Slither line:3122)
+Checking function: version() returns(uint256) (Slither line:3127)
+Visibility: external
+_version
+Checking function: implementation() returns(address) (Slither line:3127)
+Visibility: public
+_implementation
+
+End UpgradeabilityStorage.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityStorage 
+Looking in EternalStorageProxy (Slither line:1213)
+
+Begin EternalStorageProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: implementation (Slither line:3122)
+Checking function: constructor() returns() (Slither line:3127)
+Checking function: transferProxyOwnership(address) returns() (Slither line:3127)
+Visibility: external
+_upgradeabilityOwner
+require(bool)(msg.sender == upgradeabilityOwner())
+ProxyOwnershipTransferred(upgradeabilityOwner(),newOwner)
+_upgradeabilityOwner = newUpgradeabilityOwner
+is an Assignment Operation (Slither line:3216)
+implementation
+require(bool)(newOwner != address(0))
+setUpgradeabilityOwner(newOwner)
+onlyUpgradeabilityOwner()
+Checking function: upgradeTo(uint256,address) returns() (Slither line:3127)
+Visibility: public
+onlyUpgradeabilityOwner()
+Upgraded(version,implementation)
+size > 0
+require(bool)(_implementation != implementation)
+_upgradeabilityOwner
+require(bool)(AddressUtils.isContract(implementation))
+require(bool)(msg.sender == upgradeabilityOwner())
+require(bool)(version > _version)
+_version = version
+is an Assignment Operation (Slither line:3216)
+implementation
+_upgradeTo(version,implementation)
+_implementation = implementation
+is an Assignment Operation (Slither line:3216)
+implementation
+
+End EternalStorageProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: EternalStorageProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityStorage.find_getter_in_contract (Slither line:2974)
+
+_implementation is a Variable object
+implementation
+Checking function: version (Slither line:2988)
+version returns uint256 variable  (Slither line:3008)
+RETURN node expression: _version (Slither line:3028)
+Checking function: implementation (Slither line:2988)
+implementation returns address variable  (Slither line:3008)
+RETURN node expression: _implementation (Slither line:3028)
+
+End UpgradeabilityStorage.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: implementation in contract: UpgradeabilityStorage (Slither line:1285)
+
+End EternalStorageProxy.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: implementation
+impl_address_from_contract_call: StateVariable _implementation
+impl_address_from_contract_call: getter is implementation
+getter.full_name = implementation()
+library call: AddressUtils.isContract
+impl_address_from_contract_call: CallExpression require(bool)(_impl != address(0))
+impl_address_from_contract_call: arg is _impl != address(0)
+impl_address_from_contract_call: CallExpression implementation()
+Checking external function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking external function transferProxyOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking external function upgradeToAndCall
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == upgradeabilityOwner())
+Checking external function version
+Checking public function implementation
+Checking public function implementation
+Checking public function upgradeabilityOwner
+Checking public function fallback
+functions_writing_to_variable: _implementation
+functions_writing_to_variable: checking function EternalStorageProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy.setUpgradeabilityOwner (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy.upgradeToAndCall (proxy_features line:898)
+get_value_assigned: _implementation = implementation
+functions_writing_to_variable: upgradeToAndCall writes implementation to _implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function EternalStorageProxy.upgradeTo (proxy_features line:898)
+get_value_assigned: _implementation = implementation
+functions_writing_to_variable: upgradeTo writes implementation to _implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function EternalStorageProxy.version (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy.upgradeabilityOwner (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_implementation != implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(AddressUtils.isContract(implementation)) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(version > _version) (proxy_features line:909)
+functions_writing_to_variable: exp = _version = version (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _version = version (proxy_features line:912)
+functions_writing_to_variable: exp = _implementation = implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _implementation = implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: _implementation (proxy_features line:924)
+get_value_assigned: _implementation = implementation
+functions_writing_to_variable: exp = Upgraded(version,implementation) (proxy_features line:909)
+functions_writing_to_variable: _upgradeTo writes implementation to _implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EternalStorageProxy.implementation (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy.transferProxyOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function EternalStorageProxy.implementation (proxy_features line:898)
+has_compatibility_checks: dependencies: ['implementation', 'implementation', 'implementation']
+has_compatibility_checks: checking external function upgradeToAndCall
+require(bool)(address(this).call.value(msg.value)(data))
+has_compatibility_checks: condition address(this).call.value(msg.value)(data)
+require(bool)(_implementation != implementation)
+has_compatibility_checks: condition _implementation != implementation
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition implementation != implementation
+require(bool)(AddressUtils.isContract(implementation))
+has_compatibility_checks: condition AddressUtils.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition size > 0
+require(bool)(msg.sender == upgradeabilityOwner())
+has_compatibility_checks: condition msg.sender == upgradeabilityOwner()
+require(bool)(version > _version)
+has_compatibility_checks: condition version > _version
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(_implementation != implementation)
+has_compatibility_checks: condition _implementation != implementation
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition implementation != implementation
+require(bool)(AddressUtils.isContract(implementation))
+has_compatibility_checks: condition AddressUtils.isContract(implementation)
+check_condition_from_expression: modifier calls: ['onlyUpgradeabilityOwner()']
+check_condition_from_expression: condition size > 0
+require(bool)(msg.sender == upgradeabilityOwner())
+has_compatibility_checks: condition msg.sender == upgradeabilityOwner()
+require(bool)(version > _version)
+has_compatibility_checks: condition version > _version
+has_compatibility_checks: skipping internal function _upgradeTo
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let ptr := mload(0x40)
+    calldatacopy(ptr, 0, calldatasize())
+    let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+    mstore(0x40, add(ptr, returndatasize()))
+    returndatacopy(ptr, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(ptr, returndatasize())
+    }
+    default {
+        return(ptr, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = implementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+Found public function: constructor
+Found external function: transferProxyOwnership
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyUpgradeabilityOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(version,implementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(_implementation != implementation)
+has_time_delay: (node.type) RETURN
+(Expression) _upgradeabilityOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(AddressUtils.isContract(implementation))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == upgradeabilityOwner())
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(version > _version)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _version = version
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(version,implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _implementation = implementation
+has_time_delay: comparing (Identifier) version to _version

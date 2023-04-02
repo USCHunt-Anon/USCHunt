@@ -1,0 +1,1553 @@
+
+Begin DeCashProxyInterface.is_proxy (Slither line:1425)
+
+
+End DeCashProxyInterface.is_proxy (Slither line:1428)
+
+
+Begin DeCashProxyInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DeCashProxyInterface 
+
+End DeCashProxyInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DeCashStorageInterface.is_proxy (Slither line:1425)
+
+
+End DeCashStorageInterface.is_proxy (Slither line:1428)
+
+
+Begin DeCashStorageInterface.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DeCashStorageInterface 
+
+End DeCashStorageInterface.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DeCashBase.is_proxy (Slither line:1425)
+
+
+End DeCashBase.is_proxy (Slither line:1428)
+
+
+Begin DeCashBase.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DeCashBase 
+
+End DeCashBase.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+gas()()
+implementation
+0
+calldatasize()()
+0
+0
+
+Found delegatecall in expression:
+delegatecall(uint256,uint256,uint256,uint256,uint256,uint256) (Slither line:2824)
+
+Destination is implementation (Slither line:2828)
+dest.value: implementation (Slither line:2831)
+Expression: None (Slither line:2836)
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+CallExpression: _beforeFallback() (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_23606_255_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2802)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:2802)
+Expression called: calldatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+calldatasize()()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin DeCashProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DeCashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End DeCashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DeCashProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End DeCashProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin DeCashProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End DeCashProxy.find_delegatecall_in_asm (Slither line:1637)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DeCashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _beforeFallback() (Slither line:2802)
+Expression called: _beforeFallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End DeCashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DeCashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: impl = sload(uint256)(slot) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+slot
+
+End DeCashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DeCashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End DeCashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DeCashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End DeCashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin DeCashProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: return(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: return(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End DeCashProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin DeCashProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin DeCashProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking version (Slither line:1689)
+Checking _decashStorage (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in DeCashProxy._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin DeCashProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+AssignmentOperation: impl = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2140)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+
+End DeCashProxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: _IMPLEMENTATION_SLOT (Slither line:1811)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End DeCashProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End DeCashProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting DeCashProxy._delegate_variable = DeCashProxy._proxy_impl_slot: _IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End DeCashProxy.is_proxy (Slither line:1476)
+
+
+Begin DeCashProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: DeCashProxy 
+Call destination _IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+_IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+DeCashProxy is delegating to _IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+
+Begin DeCashProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: upgrade(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(slot,_address)
+sstore(uint256,uint256)
+
+End DeCashProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgrade in contract: DeCashProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DeCashProxy.find_getter_in_contract (Slither line:2974)
+
+_IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+Checking function: receive (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: _beforeFallback (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: isOwner (Slither line:2988)
+isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _isOwner(_address) (Slither line:3028)
+Checking function: isAdmin (Slither line:2988)
+isAdmin returns bool variable  (Slither line:3008)
+RETURN node expression: _isAdmin(_address) (Slither line:3028)
+Checking function: isSuperUser (Slither line:2988)
+isSuperUser returns bool variable  (Slither line:3008)
+RETURN node expression: _isSuperUser(_address) (Slither line:3028)
+Checking function: isDelegator (Slither line:2988)
+isDelegator returns bool variable  (Slither line:3008)
+RETURN node expression: _isDelegator(_address) (Slither line:3028)
+Checking function: isFeeRecipient (Slither line:2988)
+isFeeRecipient returns bool variable  (Slither line:3008)
+RETURN node expression: _isFeeRecipient(_address) (Slither line:3028)
+Checking function: isBlacklisted (Slither line:2988)
+isBlacklisted returns bool variable  (Slither line:3008)
+RETURN node expression: _isBlacklisted(_address) (Slither line:3028)
+Checking function: _getContractAddress (Slither line:2988)
+_getContractAddress returns address variable  (Slither line:3008)
+RETURN node expression: contractAddress (Slither line:3028)
+Checking function: _getContractName (Slither line:2988)
+_getContractName returns string variable  (Slither line:3008)
+RETURN node expression: contractName (Slither line:3028)
+Checking function: _roleHas (Slither line:2988)
+_roleHas returns bool variable  (Slither line:3008)
+RETURN node expression: _getBool(keccak256(bytes)(abi.encodePacked(access.role,_role,_address))) (Slither line:3028)
+Checking function: _isOwner (Slither line:2988)
+_isOwner returns bool variable  (Slither line:3008)
+RETURN node expression: _roleHas(owner,_address) (Slither line:3028)
+Checking function: _isAdmin (Slither line:2988)
+_isAdmin returns bool variable  (Slither line:3008)
+RETURN node expression: _roleHas(admin,_address) (Slither line:3028)
+Checking function: _isSuperUser (Slither line:2988)
+_isSuperUser returns bool variable  (Slither line:3008)
+RETURN node expression: _roleHas(admin,_address) || _isOwner(_address) (Slither line:3028)
+Checking function: _isDelegator (Slither line:2988)
+_isDelegator returns bool variable  (Slither line:3008)
+RETURN node expression: _roleHas(delegator,_address) || _isOwner(_address) (Slither line:3028)
+Checking function: _isFeeRecipient (Slither line:2988)
+_isFeeRecipient returns bool variable  (Slither line:3008)
+RETURN node expression: _roleHas(fee,_address) || _isOwner(_address) (Slither line:3028)
+Checking function: _isBlacklisted (Slither line:2988)
+_isBlacklisted returns bool variable  (Slither line:3008)
+RETURN node expression: _roleHas(blacklisted,_address) && ! _isOwner(_address) (Slither line:3028)
+Checking function: _getAddress (Slither line:2988)
+_getAddress returns address variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getAddress(_key) (Slither line:3028)
+Checking function: _getUint (Slither line:2988)
+_getUint returns uint256 variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getUint(_key) (Slither line:3028)
+Checking function: _getString (Slither line:2988)
+_getString returns string variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getString(_key) (Slither line:3028)
+Checking function: _getBytes (Slither line:2988)
+_getBytes returns bytes variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getBytes(_key) (Slither line:3028)
+Checking function: _getBool (Slither line:2988)
+_getBool returns bool variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getBool(_key) (Slither line:3028)
+Checking function: _getInt (Slither line:2988)
+_getInt returns int256 variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getInt(_key) (Slither line:3028)
+Checking function: _getBytes32 (Slither line:2988)
+_getBytes32 returns bytes32 variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getBytes32(_key) (Slither line:3028)
+Checking function: _getAddressS (Slither line:2988)
+_getAddressS returns address variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getAddress(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _getUintS (Slither line:2988)
+_getUintS returns uint256 variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getUint(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _getStringS (Slither line:2988)
+_getStringS returns string variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getString(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _getBytesS (Slither line:2988)
+_getBytesS returns bytes variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getBytes(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _getBoolS (Slither line:2988)
+_getBoolS returns bool variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getBool(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _getIntS (Slither line:2988)
+_getIntS returns int256 variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getInt(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _getBytes32S (Slither line:2988)
+_getBytes32S returns bytes32 variable  (Slither line:3008)
+RETURN node expression: _decashStorage.getBytes32(keccak256(bytes)(abi.encodePacked(_key))) (Slither line:3028)
+Checking function: _setAddress (Slither line:2988)
+Checking function: _setUint (Slither line:2988)
+Checking function: _setString (Slither line:2988)
+Checking function: _setBytes (Slither line:2988)
+Checking function: _setBool (Slither line:2988)
+Checking function: _setInt (Slither line:2988)
+Checking function: _setBytes32 (Slither line:2988)
+Checking function: _setAddressS (Slither line:2988)
+Checking function: _setUintS (Slither line:2988)
+Checking function: _setStringS (Slither line:2988)
+Checking function: _setBytesS (Slither line:2988)
+Checking function: _setBoolS (Slither line:2988)
+Checking function: _setIntS (Slither line:2988)
+Checking function: _setBytes32S (Slither line:2988)
+Checking function: _deleteAddress (Slither line:2988)
+Checking function: _deleteUint (Slither line:2988)
+Checking function: _deleteString (Slither line:2988)
+Checking function: _deleteBytes (Slither line:2988)
+Checking function: _deleteBool (Slither line:2988)
+Checking function: _deleteInt (Slither line:2988)
+Checking function: _deleteBytes32 (Slither line:2988)
+Checking function: _deleteAddressS (Slither line:2988)
+Checking function: _deleteUintS (Slither line:2988)
+Checking function: _deleteStringS (Slither line:2988)
+Checking function: _deleteBytesS (Slither line:2988)
+Checking function: _deleteBoolS (Slither line:2988)
+Checking function: _deleteIntS (Slither line:2988)
+Checking function: _deleteBytes32S (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: upgrade (Slither line:2988)
+Checking function: initialize (Slither line:2988)
+Checking function: _setImplementation (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable called impl (Slither line:3008)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+_implementation contains assembly (Slither line:3051)
+
+End DeCashProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: DeCashProxy (Slither line:1285)
+
+End DeCashProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: DeCashProxy
+Setter found in contract DeCashProxy
+Checking external function isOwner
+Checking external function isAdmin
+Checking external function isSuperUser
+Checking external function isDelegator
+Checking external function isFeeRecipient
+Checking external function isBlacklisted
+Checking public function upgrade
+Checking external function initialize
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: _IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function DeCashProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isFeeRecipient (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getContractName (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteIntS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.initialize (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: initialize writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DeCashProxy._isAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getUint (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isFeeRecipient (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBool (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setString (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBool (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: _setImplementation writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DeCashProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isBlacklisted (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isSuperUser (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._roleHas (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteStringS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isSuperUser (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getString (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isBlacklisted (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setStringS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteUint (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setIntS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getContractAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isDelegator (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteString (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: _IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function DeCashProxy.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isDelegator (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getStringS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getIntS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setUint (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBool (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.upgrade (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: upgrade writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DeCashProxy._setBoolS (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking external function initialize
+require(bool,string)(! _getBool(keccak256(bytes)(abi.encodePacked(proxy.init,address(this)))),Proxy already initialized)
+has_compatibility_checks: condition ! _getBool(keccak256(bytes)(abi.encodePacked(proxy.init,address(this))))
+require(bool,string)(_isOwner(msg.sender),Account is not the owner)
+has_compatibility_checks: condition _isOwner(msg.sender)
+require(bool,string)(Address.isContract(_address),address is not a contract)
+has_compatibility_checks: condition Address.isContract(_address)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: checking public function upgrade
+require(bool,string)(_contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName))),Invalid or outdated contract)
+has_compatibility_checks: condition _contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName)))
+require(bool,string)(Address.isContract(_address),address is not a contract)
+has_compatibility_checks: condition Address.isContract(_address)
+check_condition_from_expression: modifier calls: ['onlyLatestContract(upgrade,msg.sender)']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found external function: receive
+Found fallback
+Found external function: isOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,_address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName))),Invalid or outdated contract)
+has_time_delay: (node.type) RETURN
+(Expression) _decashStorage.getAddress(_key)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyUpgraded(_address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyLatestContract(upgrade,msg.sender)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(_address),address is not a contract)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = _IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)
+
+Begin GBPDProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GBPDProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:2802)
+Expression called: returndatacopy(uint256,uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+0
+returndatasize()()
+
+End GBPDProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GBPDProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: switch_expr_23606_255_0__delegate_asm_0 = result__delegate_asm_0 (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+
+End GBPDProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GBPDProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End GBPDProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GBPDProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End GBPDProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+Begin GBPDProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+End GBPDProxy.find_delegatecall_in_asm (Slither line:1637)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GBPDProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: impl = sload(uint256)(slot) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: sload(uint256)
+Type of call: uint256 (Slither line:2817)
+Args:
+slot
+
+End GBPDProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GBPDProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End GBPDProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin GBPDProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: revert(uint256,uint256)(0,returndatasize()()) (Slither line:2802)
+Expression called: revert(uint256,uint256)
+Type of call:  (Slither line:2817)
+Args:
+0
+returndatasize()()
+
+End GBPDProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin GBPDProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin GBPDProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking version (Slither line:1689)
+Checking _decashStorage (Slither line:1689)
+Checking _IMPLEMENTATION_SLOT (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in GBPDProxy._delegate (Slither line:1805)
+CallExpression: returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()()) (Slither line:1819)
+AssignmentOperation: result__delegate_asm_0 (Slither line:1811)
+AssignmentOperation: _IMPLEMENTATION_SLOT (Slither line:1811)
+CallExpression: _fallback() (Slither line:1819)
+AssignmentOperation: sload(uint256)(slot) (Slither line:1811)
+CallExpression: sload(uint256)(slot) (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin GBPDProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+AssignmentOperation: impl = sload(uint256)(slot) (Slither line:2117)
+CallExpression: sload(uint256) (Slither line:2123)
+Found storage slot: _IMPLEMENTATION_SLOT (Slither line:2140)
+_implementation returns a variable of type address   called impl (Slither line:2193)
+_implementation contains assembly - looking for sload (Slither line:2199)
+
+End GBPDProxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: revert(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: return(uint256,uint256)(0,returndatasize()()) (Slither line:1819)
+CallExpression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()()) (Slither line:1819)
+CallExpression: _beforeFallback() (Slither line:1819)
+AssignmentOperation: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1811)
+CallExpression: delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0) (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End GBPDProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+End GBPDProxy.find_delegatecall_in_asm (Slither line:1637)
+
+Setting GBPDProxy._delegate_variable = GBPDProxy._proxy_impl_slot: _IMPLEMENTATION_SLOT (Slither line:1473)
+
+
+End GBPDProxy.is_proxy (Slither line:1476)
+
+
+Begin GBPDProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: GBPDProxy 
+Call destination _IMPLEMENTATION_SLOT is constant (Slither line:1146)
+
+_IMPLEMENTATION_SLOT is the implementation storage slot (Slither line:1149)
+
+GBPDProxy is delegating to _IMPLEMENTATION_SLOT
+Looking for setter (Slither line:1200)
+
+Looking for setter in DeCashProxy (Slither line:1204)
+
+
+Begin DeCashProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (Slither line:3122)
+Checking function: constructor(address) returns() (Slither line:3127)
+Checking function: upgrade(address) returns() (Slither line:3127)
+Visibility: public
+sstore(uint256,uint256)(slot,_address)
+sstore(uint256,uint256)
+
+End DeCashProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgrade in contract: DeCashProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin DeCashProxy.find_getter_in_contract (Slither line:2974)
+
+_IMPLEMENTATION_SLOT is a Variable object
+0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+
+End DeCashProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: DeCashProxy (Slither line:1285)
+
+End GBPDProxy.is_upgradeable_proxy (Slither line:1293)
+
+detect_storage_slot: GBPDProxy
+Setter found in contract DeCashProxy
+impl_address_from_contract_call: 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+impl_address_from_contract_call: StateVariable _IMPLEMENTATION_SLOT
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression returndatacopy(uint256,uint256,uint256)(0,0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression sload(uint256)(slot)
+impl_address_from_contract_call: arg is slot
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression revert(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression return(uint256,uint256)(0,returndatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is returndatasize()()
+impl_address_from_contract_call: CallExpression returndatasize()()
+impl_address_from_contract_call: CallExpression calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is 0
+impl_address_from_contract_call: arg is calldatasize()()
+impl_address_from_contract_call: CallExpression calldatasize()()
+impl_address_from_contract_call: CallExpression _beforeFallback()
+impl_address_from_contract_call: CallExpression delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+impl_address_from_contract_call: arg is gas()()
+impl_address_from_contract_call: CallExpression gas()()
+Checking public function upgrade
+Checking external function initialize
+Checking public function upgrade
+Checking external function initialize
+Checking external function isOwner
+Checking external function isAdmin
+Checking external function isSuperUser
+Checking external function isDelegator
+Checking external function isFeeRecipient
+Checking external function isBlacklisted
+Checking external function receive
+Checking external function fallback
+functions_writing_to_variable: _IMPLEMENTATION_SLOT
+functions_writing_to_variable: checking function DeCashProxy._getContractName (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBool (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteAddress (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getIntS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setBool (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._roleHas (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setStringS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteUint (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteIntS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteString (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getUintS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.upgrade (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: upgrade writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function GBPDProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.upgrade (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: upgrade writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DeCashProxy.initialize (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: initialize writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DeCashProxy._isAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBool (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.initialize (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: initialize writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function GBPDProxy._getStringS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setUint (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: _setImplementation writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function DeCashProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isSuperUser (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setIntS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setImplementation (proxy_features line:898)
+get_value_assigned: sstore(uint256,uint256)(slot,_address)
+functions_writing_to_variable: _setImplementation writes _address to _IMPLEMENTATION_SLOT using sstore (proxy_features line:998)
+functions_writing_to_variable: checking function GBPDProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setString (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isDelegator (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getStringS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setStringS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setBytes (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isFeeRecipient (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setString (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.isDelegator (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteString (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteUintS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getAddress (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isSuperUser (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteStringS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._isBlacklisted (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytes (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.isFeeRecipient (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.receive (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._isAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getUint (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: _IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function DeCashProxy._deleteBytesS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteBool (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isDelegator (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getIntS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBool (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.isBlacklisted (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBoolS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteInt (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setIntS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._isSuperUser (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getString (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isFeeRecipient (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteIntS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getUint (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setInt (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getContractAddress (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._isDelegator (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._setBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._deleteBytes32S (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.isBlacklisted (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getString (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setBytes32 (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.isAdmin (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getContractName (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._beforeFallback (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteAddress (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._isFeeRecipient (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getBool (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteUintS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getContractAddress (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: exp = _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc (proxy_features line:912)
+functions_writing_to_variable: Identifier: _IMPLEMENTATION_SLOT (proxy_features line:924)
+get_value_assigned: _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc
+functions_writing_to_variable: checking function DeCashProxy.isOwner (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._getBytes (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setUint (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy.isSuperUser (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._roleHas (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteStringS (proxy_features line:898)
+functions_writing_to_variable: checking function DeCashProxy._setAddressS (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._deleteUint (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._isBlacklisted (proxy_features line:898)
+functions_writing_to_variable: checking function GBPDProxy._getInt (proxy_features line:898)
+has_compatibility_checks: dependencies: []
+has_compatibility_checks: checking public function upgrade
+require(bool,string)(_contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName))),Invalid or outdated contract)
+has_compatibility_checks: condition _contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName)))
+require(bool,string)(Address.isContract(_address),address is not a contract)
+has_compatibility_checks: condition Address.isContract(_address)
+check_condition_from_expression: modifier calls: ['onlyLatestContract(upgrade,msg.sender)']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: checking public function upgrade
+require(bool,string)(Address.isContract(_address),address is not a contract)
+has_compatibility_checks: condition Address.isContract(_address)
+check_condition_from_expression: modifier calls: ['onlyLatestContract(upgrade,msg.sender)']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+require(bool,string)(_contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName))),Invalid or outdated contract)
+has_compatibility_checks: condition _contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName)))
+has_compatibility_checks: checking external function initialize
+require(bool,string)(! _getBool(keccak256(bytes)(abi.encodePacked(proxy.init,address(this)))),Proxy already initialized)
+has_compatibility_checks: condition ! _getBool(keccak256(bytes)(abi.encodePacked(proxy.init,address(this))))
+require(bool,string)(_isOwner(msg.sender),Account is not the owner)
+has_compatibility_checks: condition _isOwner(msg.sender)
+require(bool,string)(Address.isContract(_address),address is not a contract)
+has_compatibility_checks: condition Address.isContract(_address)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+has_compatibility_checks: checking external function initialize
+require(bool,string)(Address.isContract(_address),address is not a contract)
+has_compatibility_checks: condition Address.isContract(_address)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition extcodesize(uint256)(account) > 0
+require(bool,string)(_isOwner(msg.sender),Account is not the owner)
+has_compatibility_checks: condition _isOwner(msg.sender)
+require(bool,string)(! _getBool(keccak256(bytes)(abi.encodePacked(proxy.init,address(this)))),Proxy already initialized)
+has_compatibility_checks: condition ! _getBool(keccak256(bytes)(abi.encodePacked(proxy.init,address(this))))
+has_compatibility_checks: skipping private function _setImplementation
+has_compatibility_checks: skipping private function _setImplementation
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result__delegate_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),implementation,0,calldatasize()(),0,0)
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+Found public function: constructor
+Found public function: upgrade
+has_time_delay: (node.type) EXPRESSION
+(Expression) sstore(uint256,uint256)(slot,_address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(_contractAddress == _getAddress(keccak256(bytes)(abi.encodePacked(contract.address,_contractName))),Invalid or outdated contract)
+has_time_delay: (node.type) RETURN
+(Expression) _decashStorage.getAddress(_key)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _setImplementation(_address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) ProxyUpgraded(_address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyLatestContract(upgrade,msg.sender)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(_address),address is not a contract)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) NEW VARIABLE
+(Expression) slot = _IMPLEMENTATION_SLOT
+has_time_delay: (node.type) EXPRESSION
+(Expression) size = extcodesize(uint256)(account)

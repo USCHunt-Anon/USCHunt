@@ -1,0 +1,361 @@
+
+Begin EtherDeltaI.is_proxy (Slither line:1425)
+
+
+End EtherDeltaI.is_proxy (Slither line:1428)
+
+
+Begin EtherDeltaI.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EtherDeltaI 
+
+End EtherDeltaI.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KindMath.is_proxy (Slither line:1425)
+
+
+End KindMath.is_proxy (Slither line:1428)
+
+
+Begin KindMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KindMath 
+
+End KindMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin KeyValueStorage.is_proxy (Slither line:1425)
+
+
+End KeyValueStorage.is_proxy (Slither line:1428)
+
+
+Begin KeyValueStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: KeyValueStorage 
+
+End KeyValueStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageStateful.is_proxy (Slither line:1425)
+
+
+End StorageStateful.is_proxy (Slither line:1428)
+
+
+Begin StorageStateful.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageStateful 
+
+End StorageStateful.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StorageConsumer.is_proxy (Slither line:1425)
+
+
+End StorageConsumer.is_proxy (Slither line:1428)
+
+
+Begin StorageConsumer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StorageConsumer 
+
+End StorageConsumer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Token.is_proxy (Slither line:1425)
+
+
+End Token.is_proxy (Slither line:1428)
+
+
+Begin Token.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Token 
+
+End Token.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin EnclavesDEXProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin EnclavesDEXProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas, impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin EnclavesDEXProxy.find_delegate_variable_from_name
+Searching for impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking keyValueStorage (Slither line:1689)
+Checking admin (Slither line:1689)
+Checking feeAccount (Slither line:1689)
+Checking etherDeltaInfo (Slither line:1689)
+Checking feeTake (Slither line:1689)
+Checking feeAmountThreshold (Slither line:1689)
+Checking etherDelta (Slither line:1689)
+Checking useEIP712 (Slither line:1689)
+Checking tradeABIHash (Slither line:1689)
+Checking withdrawABIHash (Slither line:1689)
+Checking freezeTrading (Slither line:1689)
+Checking depositTokenLock (Slither line:1689)
+Checking nonceCheck (Slither line:1689)
+Checking tokens (Slither line:1689)
+Checking orders (Slither line:1689)
+Checking orderFills (Slither line:1689)
+Checking implementation (Slither line:1689)
+Checking proposedImplementation (Slither line:1689)
+Checking proposedTimestamp (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking impl (Slither line:1703)
+impl is a Local Variable in EnclavesDEXProxy.fallback (Slither line:1707)
+Expression: getImplementation() (Slither line:1719)
+
+Begin EnclavesDEXProxy.find_delegate_from_call_exp
+
+getImplementation() (Slither line:2003)
+called = getImplementation (Slither line:2010)
+Return node of function EnclavesDEXProxy.getImplementation(): RETURN implementation (Slither line:2041)
+implementation (Slither line:2048)
+getImplementation returns a variable of type address   called implementation (Slither line:2193)
+
+End EnclavesDEXProxy.find_delegate_from_call_exp (Slither line:2328)
+
+Call Expression
+End EnclavesDEXProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End EnclavesDEXProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End EnclavesDEXProxy.is_proxy (Slither line:1476)
+
+
+Begin EnclavesDEXProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: EnclavesDEXProxy 
+EnclavesDEXProxy is delegating to implementation
+Looking for setter (Slither line:1200)
+
+
+Begin EnclavesDEXProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: EnclavesDEXProxy(address,address,address,address,uint256,uint256,address,bytes32,bytes32) returns() (Slither line:3127)
+Checking function: getImplementation() returns(address) (Slither line:3127)
+Visibility: public
+implementation
+Checking function: proposeUpgrade(address) returns() (Slither line:3127)
+Visibility: public
+proposedImplementation = _proposedImplementation
+is an Assignment Operation (Slither line:3216)
+onlyAdmin()
+require(bool)(msg.sender == admin)
+proposedTimestamp = now + 1209600
+is an Assignment Operation (Slither line:3216)
+require(bool)(implementation != _proposedImplementation)
+UpgradedProposed(proposedImplementation,now)
+require(bool)(_proposedImplementation != address(0))
+Checking function: upgrade() returns() (Slither line:3127)
+Visibility: public
+implementation = proposedImplementation
+is an Assignment Operation (Slither line:3216)
+
+End EnclavesDEXProxy.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgrade in contract: EnclavesDEXProxy (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin EnclavesDEXProxy.find_getter_in_contract (Slither line:2974)
+
+implementation is a Variable object
+proposedImplementation
+Checking function: StorageConsumer (Slither line:2988)
+Checking function: EnclavesDEXProxy (Slither line:2988)
+Checking function: getImplementation (Slither line:2988)
+getImplementation returns address variable  (Slither line:3008)
+RETURN node expression: implementation (Slither line:3028)
+
+End EnclavesDEXProxy.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: getImplementation in contract: EnclavesDEXProxy (Slither line:1285)
+
+End EnclavesDEXProxy.is_upgradeable_proxy (Slither line:1293)
+
+Checking public function getImplementation
+Checking public function proposeUpgrade
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function upgrade
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == admin)
+Checking public function fallback
+functions_writing_to_variable: implementation
+functions_writing_to_variable: checking function EnclavesDEXProxy.EnclavesDEXProxy (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(_implementation != address(0)) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = _implementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = _implementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = _implementation
+functions_writing_to_variable: exp = admin = _admin (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: admin = _admin (proxy_features line:912)
+functions_writing_to_variable: exp = feeAccount = _feeAccount (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: feeAccount = _feeAccount (proxy_features line:912)
+functions_writing_to_variable: exp = feeTake = _feeTake (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: feeTake = _feeTake (proxy_features line:912)
+functions_writing_to_variable: exp = feeAmountThreshold = _feeAmountThreshold (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: feeAmountThreshold = _feeAmountThreshold (proxy_features line:912)
+functions_writing_to_variable: exp = etherDelta = _etherDelta (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: etherDelta = _etherDelta (proxy_features line:912)
+functions_writing_to_variable: exp = tradeABIHash = _tradeABIHash (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: tradeABIHash = _tradeABIHash (proxy_features line:912)
+functions_writing_to_variable: exp = withdrawABIHash = _withdrawABIHash (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: withdrawABIHash = _withdrawABIHash (proxy_features line:912)
+functions_writing_to_variable: exp = etherDeltaInfo.feeMake = EtherDeltaI(etherDelta).feeMake() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: etherDeltaInfo.feeMake = EtherDeltaI(etherDelta).feeMake() (proxy_features line:912)
+functions_writing_to_variable: exp = etherDeltaInfo.feeTake = EtherDeltaI(etherDelta).feeTake() (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: etherDeltaInfo.feeTake = EtherDeltaI(etherDelta).feeTake() (proxy_features line:912)
+functions_writing_to_variable: exp = StorageConsumer(_storageAddress) (proxy_features line:909)
+functions_writing_to_variable: EnclavesDEXProxy writes _implementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EnclavesDEXProxy.proposeUpgrade (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.upgrade (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(proposedImplementation != address(0)) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(proposedTimestamp < now) (proxy_features line:909)
+functions_writing_to_variable: exp = implementation = proposedImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: implementation = proposedImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: implementation (proxy_features line:924)
+get_value_assigned: implementation = proposedImplementation
+functions_writing_to_variable: exp = Upgraded(implementation) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:909)
+functions_writing_to_variable: upgrade writes proposedImplementation to implementation (proxy_features line:929)
+functions_writing_to_variable: checking function EnclavesDEXProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.StorageConsumer (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_implementation', 'proposedImplementation']
+functions_writing_to_variable: proposedImplementation
+functions_writing_to_variable: checking function EnclavesDEXProxy.EnclavesDEXProxy (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.proposeUpgrade (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool)(implementation != _proposedImplementation) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(_proposedImplementation != address(0)) (proxy_features line:909)
+functions_writing_to_variable: exp = proposedImplementation = _proposedImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: proposedImplementation = _proposedImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: proposedImplementation (proxy_features line:924)
+get_value_assigned: proposedImplementation = _proposedImplementation
+functions_writing_to_variable: exp = proposedTimestamp = now + 1209600 (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: proposedTimestamp = now + 1209600 (proxy_features line:912)
+functions_writing_to_variable: exp = UpgradedProposed(proposedImplementation,now) (proxy_features line:909)
+functions_writing_to_variable: exp = onlyAdmin() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == admin) (proxy_features line:909)
+functions_writing_to_variable: proposeUpgrade writes _proposedImplementation to proposedImplementation (proxy_features line:929)
+functions_writing_to_variable: checking function EnclavesDEXProxy.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.upgrade (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.getImplementation (proxy_features line:898)
+functions_writing_to_variable: checking function EnclavesDEXProxy.StorageConsumer (proxy_features line:898)
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking public function upgrade
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+require(bool)(proposedImplementation != address(0))
+has_compatibility_checks: condition proposedImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition proposedImplementation != address(0)
+require(bool)(proposedTimestamp < now)
+has_compatibility_checks: condition proposedTimestamp < now
+has_compatibility_checks: checking public function proposeUpgrade
+require(bool)(msg.sender == admin)
+has_compatibility_checks: condition msg.sender == admin
+require(bool)(implementation != _proposedImplementation)
+has_compatibility_checks: condition implementation != _proposedImplementation
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition proposedImplementation != _proposedImplementation
+require(bool)(_proposedImplementation != address(0))
+has_compatibility_checks: condition _proposedImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyAdmin()']
+check_condition_from_expression: condition _proposedImplementation != address(0)
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas, impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: impl = getImplementation()
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found public function: StorageConsumer
+Found public function: EnclavesDEXProxy
+Found public function: getImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) implementation = proposedImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(implementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == admin)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(proposedImplementation != address(0))
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(proposedTimestamp < now)
+has_time_delay: found condition using `now`: proposedTimestamp < now
+has_time_delay: comparing (Identifier) proposedTimestamp to now
+has_time_delay: function proposeUpgrade assigns now + 1209600 to proposedTimestamp
+has_time_delay: assigned (BinaryOperation) now + 1209600
+delay_duration_from_binary_operation: (BinaryOperation) now + 1209600
+delay_duration_from_binary_operation: right side (Literal) 2
+has_time_delay: time delay = 2 weeks

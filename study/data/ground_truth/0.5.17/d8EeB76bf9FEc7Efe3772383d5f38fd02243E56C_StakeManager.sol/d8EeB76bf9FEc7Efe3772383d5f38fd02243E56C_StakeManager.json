@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "contract": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#3464-3548)",
+        "elements": [],
+        "description": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#3464-3548) is an upgradeable proxy.\nIMPLEMENTATION_SLOT is declared in the proxy.\n uses Unstructured Storage\n uses non-standard slot: keccak256(bytes)(matic.network.proxy.implementation)\nFound compatibility checks in all upgrade functions.\n",
+        "id": "01f8ca8d9d52a7dbb0ae3f37a46413d5916e0e9c772a1bbef5306ee6890fd55e",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "UpgradableProxy.IMPLEMENTATION_SLOT",
+          "impl_address_setter": "UpgradableProxy.updateImplementation(address)",
+          "impl_address_getter": "UpgradableProxy.loadImplementation()",
+          "impl_address_location": "UpgradableProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#3464-3548)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "bytes32 constant storage slot",
+          "impl_address_slot": "keccak256(bytes)(matic.network.proxy.implementation)",
+          "unstructured_storage": true,
+          "eip_1967": false,
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": true,
+            "functions": {
+              "UpgradableProxy.updateImplementation(address)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              },
+              "UpgradableProxy.updateAndCall(address,bytes)": {
+                "check": "require(bool,string)(_newProxyTo != address(0x0),INVALID_PROXY_ADDRESS)",
+                "is_correct": true
+              }
+            }
+          },
+          "can_remove_upgradeability": false,
+          "immutable_functions": {
+            "other": [
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()",
+              "owner()",
+              "implementation()",
+              "transferOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)"
+            ]
+          }
+        }
+      },
+      {
+        "contract": "ValidatorShareProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#3556-3562)",
+        "elements": [],
+        "description": "ValidatorShareProxy (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#3556-3562) is an upgradeable proxy.\ncontractMap was found in a different contract.\ncontractMap is a mapping of type mapping(bytes32 => address)\ncontractMap is a mapping of type mapping(bytes32 => address)\nRegistry.contractMap (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#998) gets value from a cross-contract call: Registry(super.loadImplementation()).getValidatorShareAddress()\nRegistry appears to be a Registry contract for the proxy\nThe address of Registry comes from the value of UpgradableProxy.loadImplementation()._impl (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#3505)\nMissing compatibility check in Registry.updateContractMap(bytes32,address)\nTo remove upgradeability, delete updateContractMap from Registry\n",
+        "id": "f1980e7f36fe373e7a30baa0e5780303920bfffd8bc0d5da95748c1bc1f3f475",
+        "features": {
+          "upgradeable": true,
+          "impl_address_variable": "Registry.contractMap",
+          "impl_address_setter": "Registry.updateContractMap(bytes32,address)",
+          "impl_address_getter": "Registry.getValidatorShareAddress()",
+          "impl_address_location": "Registry (../../smart-contract-sanctuary/ethereum/contracts/mainnet/proxies/0.5.17/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol/d8EeB76bf9FEc7Efe3772383d5f38fd02243E56C_StakeManager.sol#984-1115)",
+          "impl_address_scope": "StateVariable",
+          "impl_address_type": "mapping(bytes32 => address)",
+          "impl_mapping_from_msg_sig": false,
+          "impl_address_from_contract_call": "Registry(super.loadImplementation()).getValidatorShareAddress()",
+          "registry": "Registry",
+          "registry_source_type": "address",
+          "registry_source_variable": "_impl",
+          "transparent": false,
+          "external_functions_require_specific_sender": false,
+          "fallback_receive_not_callable_by_specific_sender": false,
+          "compatibility_checks": {
+            "has_all_checks": false,
+            "functions": {
+              "Registry.updateContractMap(bytes32,address)": "missing"
+            }
+          },
+          "can_remove_upgradeability": true,
+          "how_to_remove_upgradeability": "remove updateContractMap from Registry",
+          "immutable_functions": {
+            "other": [
+              "owner()",
+              "implementation()",
+              "transferOwnership(address)",
+              "updateImplementation(address)",
+              "updateAndCall(address,bytes)",
+              "proxyType()",
+              "implementation()",
+              "proxyType()",
+              "implementation()"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

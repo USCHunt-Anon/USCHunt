@@ -1,0 +1,2105 @@
+
+Begin ERC20Basic.is_proxy (Slither line:1425)
+
+
+End ERC20Basic.is_proxy (Slither line:1428)
+
+
+Begin ERC20Basic.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20Basic 
+
+End ERC20Basic.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin ERC20.is_proxy (Slither line:1425)
+
+
+End ERC20.is_proxy (Slither line:1428)
+
+
+Begin ERC20.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: ERC20 
+
+End ERC20.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Address.is_proxy (Slither line:1425)
+
+
+End Address.is_proxy (Slither line:1428)
+
+
+Begin Address.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Address 
+
+End Address.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Proxy.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin Proxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin Proxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in Proxy._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin Proxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End Proxy.find_delegate_from_call_exp (Slither line:2328)
+
+CallExpression: _fallback() (Slither line:1819)
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End Proxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End Proxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End Proxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin Proxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End Proxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End Proxy.is_proxy (Slither line:1476)
+
+
+Begin Proxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Proxy 
+
+End Proxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin UpgradeabilityProxy.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End UpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin UpgradeabilityProxy.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking __version (Slither line:1689)
+Checking __implementation (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in UpgradeabilityProxy._delegate (Slither line:1805)
+CallExpression: _fallback() (Slither line:1819)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin UpgradeabilityProxy.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Got abstract function, looking for overriding function (Slither line:2025)
+Failure (Slither line:2033)
+_implementation returns a variable of type address   (Slither line:2193)
+Return value is LocalVariable:  (Slither line:2266)
+has no expression (Slither line:2326)
+
+End UpgradeabilityProxy.find_delegate_from_call_exp (Slither line:2328)
+
+_delegate contains assembly, searching for sload (Slither line:1875)
+
+End UpgradeabilityProxy.find_delegate_variable_from_name (Slither line:1949)
+
+
+Begin UpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2683)
+
+
+End UpgradeabilityProxy.find_delegate_sloaded_from_hardcoded_slot (Slither line:2710)
+
+
+End UpgradeabilityProxy.find_delegatecall_in_asm (Slither line:1637)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin UpgradeabilityProxy.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End UpgradeabilityProxy.find_delegatecall_in_exp_node (Slither line:2858)
+
+
+End UpgradeabilityProxy.is_proxy (Slither line:1476)
+
+
+Begin UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: UpgradeabilityProxy 
+
+End UpgradeabilityProxy.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Ownable.is_proxy (Slither line:1425)
+
+
+End Ownable.is_proxy (Slither line:1428)
+
+
+Begin Ownable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Ownable 
+
+End Ownable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BasicToken.is_proxy (Slither line:1425)
+
+
+End BasicToken.is_proxy (Slither line:1428)
+
+
+Begin BasicToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BasicToken 
+
+End BasicToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin StandardToken.is_proxy (Slither line:1425)
+
+
+End StandardToken.is_proxy (Slither line:1428)
+
+
+Begin StandardToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: StandardToken 
+
+End StandardToken.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin Pausable.is_proxy (Slither line:1425)
+
+
+End Pausable.is_proxy (Slither line:1428)
+
+
+Begin Pausable.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: Pausable 
+
+End Pausable.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BlackList.is_proxy (Slither line:1425)
+
+
+End BlackList.is_proxy (Slither line:1428)
+
+
+Begin BlackList.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BlackList 
+
+End BlackList.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin TetherToken.is_proxy (Slither line:1425)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TetherToken.find_delegatecall_in_exp_node
+
+Found Expression Node: _delegate(_implementation()) (Slither line:2802)
+Expression called: _delegate
+Type of call: tuple() (Slither line:2817)
+Args:
+_implementation()
+
+End TetherToken.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin TetherToken.find_delegatecall_in_exp_node
+
+Found Expression Node: _fallback() (Slither line:2802)
+Expression called: _fallback
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End TetherToken.find_delegatecall_in_exp_node (Slither line:2858)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin TetherToken.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin TetherToken.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking _totalSupply (Slither line:1689)
+Checking balances (Slither line:1689)
+Checking allowed (Slither line:1689)
+Checking MAX_UINT (Slither line:1689)
+Checking isBlackListed (Slither line:1689)
+Checking __version (Slither line:1689)
+Checking __implementation (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking deprecated (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in TetherToken._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin TetherToken.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function TetherToken._implementation(): RETURN __implementation (Slither line:2041)
+__implementation (Slither line:2048)
+_implementation returns a variable of type address   called __implementation (Slither line:2193)
+
+End TetherToken.find_delegate_from_call_exp (Slither line:2328)
+
+
+End TetherToken.find_delegate_variable_from_name (Slither line:1949)
+
+
+End TetherToken.find_delegatecall_in_asm (Slither line:1637)
+
+
+End TetherToken.is_proxy (Slither line:1476)
+
+
+Begin TetherToken.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: TetherToken 
+TetherToken is delegating to __implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityProxy (Slither line:1204)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Checking function: _upgradeTo(string,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityProxy 
+Looking in TetherToken (Slither line:1213)
+
+Begin TetherToken.find_setter_in_contract (Slither line:3119)
+
+Checking function: constructor(uint256,string,string,uint256) returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: transfer(address,uint256) returns() (Slither line:3127)
+Visibility: public
+isDeprecated()
+_delegate(_implementation())
+require(bool)(! paused)
+_fallback()
+__implementation
+balances[msg.sender] = balances[msg.sender].sub(_value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+assert(bool)(c >= a)
+balances[_to] = balances[_to].add(_value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+c
+Transfer(msg.sender,_to,_value)
+require(bool)(! isBlackListed[msg.sender])
+super.transfer(_to,_value)
+onlyPayloadSize(2 * 32)
+assert(bool)(b <= a)
+require(bool)(! (msg.data.length < size + 4))
+whenNotPaused()
+a - b
+Checking function: transferFrom(address,address,uint256) returns() (Slither line:3127)
+Visibility: public
+whenNotPaused()
+balances[_from] = balances[_from].sub(_value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_delegate(_implementation())
+allowed[_from][msg.sender] = _allowance.sub(_value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+isDeprecated()
+require(bool)(! paused)
+balances[_to] = balances[_to].add(_value)
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+Transfer(_from,_to,_value)
+_fallback()
+onlyPayloadSize(3 * 32)
+__implementation
+assert(bool)(c >= a)
+c
+assert(bool)(b <= a)
+require(bool)(! (msg.data.length < size + 4))
+require(bool)(! isBlackListed[_from])
+a - b
+super.transferFrom(_from,_to,_value)
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+super.balanceOf(who)
+balances[_owner]
+Checking function: approve(address,uint256) returns() (Slither line:3127)
+Visibility: public
+require(bool)(! ((_value != 0) && (allowed[msg.sender][_spender] != 0)))
+allowed[msg.sender][_spender] = _value
+is an Assignment Operation (Slither line:3216)
+Left side is an IndexAccess (Slither line:3245)
+_delegate(_implementation())
+Approval(msg.sender,_spender,_value)
+onlyPayloadSize(2 * 32)
+super.approve(_spender,_value)
+_fallback()
+onlyPayloadSize(2 * 32)
+__implementation
+isDeprecated()
+require(bool)(! (msg.data.length < size + 4))
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+super.allowance(_owner,_spender)
+allowed[_owner][_spender]
+Checking function: upgradeTo(string,address) returns() (Slither line:3127)
+Visibility: public
+__implementation = _newImplementation
+is an Assignment Operation (Slither line:3216)
+
+End TetherToken.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: TetherToken (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+__implementation is a Variable object
+_newImplementation
+Checking function: _fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: _upgradeTo (Slither line:2988)
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Begin TetherToken.find_getter_in_contract (Slither line:2974)
+
+__implementation is a Variable object
+_newImplementation
+Checking function: _upgradeTo (Slither line:2988)
+Checking function: _fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: getBlackListStatus (Slither line:2988)
+getBlackListStatus returns bool variable  (Slither line:3008)
+RETURN node expression: isBlackListed[_maker] (Slither line:3028)
+Checking function: addBlackList (Slither line:2988)
+Checking function: removeBlackList (Slither line:2988)
+Checking function: destroyBlackFunds (Slither line:2988)
+Checking function: transfer (Slither line:2988)
+Checking function: balanceOf (Slither line:2988)
+balanceOf returns uint256 variable called balance (Slither line:3008)
+RETURN node expression: balances[_owner] (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: transferOwnership (Slither line:2988)
+Checking function: approveOwnership (Slither line:2988)
+Checking function: transferFrom (Slither line:2988)
+Checking function: approve (Slither line:2988)
+Checking function: allowance (Slither line:2988)
+allowance returns uint256 variable called remaining (Slither line:3008)
+RETURN node expression: allowed[_owner][_spender] (Slither line:3028)
+Checking function: pause (Slither line:2988)
+Checking function: unpause (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable  (Slither line:3008)
+RETURN node expression: __implementation (Slither line:3028)
+
+End TetherToken.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: TetherToken (Slither line:1285)
+
+End TetherToken.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newImplementation
+impl_address_from_contract_call: StateVariable __implementation
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: SafeMath.sub
+library call: SafeMath.add
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression _fallback()
+Checking external function getBlackListStatus
+Checking public function addBlackList
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removeBlackList
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function destroyBlackFunds
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transfer
+Checking public function balanceOf
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function approveOwnership
+Checking public function transferFrom
+Checking public function approve
+Checking public function allowance
+Checking public function allowance
+Checking public function transferFrom
+Checking public function approve
+Checking public function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transfer
+Checking public function transferFrom
+Checking public function balanceOf
+Checking public function approve
+Checking public function allowance
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function totalSupply
+Checking public function issue
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function redeem
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function fallback
+functions_writing_to_variable: __implementation
+functions_writing_to_variable: checking function TetherToken._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.addBlackList (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.upgradeTo (proxy_features line:898)
+get_value_assigned: __implementation = _newImplementation
+functions_writing_to_variable: upgradeTo writes _newImplementation to __implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function TetherToken.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.removeBlackList (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.issue (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.pause (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.destroyBlackFunds (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current) (proxy_features line:909)
+functions_writing_to_variable: exp = __version = _newVersion (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: __version = _newVersion (proxy_features line:912)
+functions_writing_to_variable: exp = __implementation = _newImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: __implementation = _newImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: __implementation (proxy_features line:924)
+get_value_assigned: __implementation = _newImplementation
+functions_writing_to_variable: exp = Upgraded(_newVersion,_newImplementation) (proxy_features line:909)
+functions_writing_to_variable: _upgradeTo writes _newImplementation to __implementation (proxy_features line:929)
+functions_writing_to_variable: checking function TetherToken.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.redeem (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.approveOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.approve (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function TetherToken.getBlackListStatus (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImplementation', '_newImplementation']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+has_compatibility_checks: condition __implementation != _newImplementation && _newImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition __implementation != _newImplementation && _newImplementation != address(0)
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition Address.isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+has_compatibility_checks: condition bytes(_newVersion).length > 0
+require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+has_compatibility_checks: condition keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion))
+has_compatibility_checks: skipping internal function _upgradeTo
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found fallback
+Found external function: getBlackListStatus
+has_time_delay: (node.type) EXPRESSION
+(Expression) __implementation = _newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(_newVersion,_newImplementation)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(_newVersion,_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) deprecated = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Deprecate(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+has_time_delay: (node.type) EXPRESSION
+(Expression) __version = _newVersion
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+
+Begin CFXQ.is_proxy (Slither line:1425)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CFXQ.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin CFXQ.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking _totalSupply (Slither line:1689)
+Checking balances (Slither line:1689)
+Checking allowed (Slither line:1689)
+Checking MAX_UINT (Slither line:1689)
+Checking isBlackListed (Slither line:1689)
+Checking __version (Slither line:1689)
+Checking __implementation (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking deprecated (Slither line:1689)
+Checking planNumber (Slither line:1689)
+Checking planTime (Slither line:1689)
+Checking planAmount (Slither line:1689)
+Checking plan (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in CFXQ._delegate (Slither line:1805)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin CFXQ.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function TetherToken._implementation(): RETURN __implementation (Slither line:2041)
+__implementation (Slither line:2048)
+_implementation returns a variable of type address   called __implementation (Slither line:2193)
+
+End CFXQ.find_delegate_from_call_exp (Slither line:2328)
+
+
+End CFXQ.find_delegate_variable_from_name (Slither line:1949)
+
+
+End CFXQ.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CFXQ.is_proxy (Slither line:1476)
+
+
+Begin CFXQ.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CFXQ 
+CFXQ is delegating to __implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityProxy (Slither line:1204)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImplementation (Slither line:3122)
+Checking function: _upgradeTo(string,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityProxy 
+Looking in CFXQ (Slither line:1213)
+
+Begin CFXQ.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImplementation (Slither line:3122)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: addPlan(uint256,uint256) returns() (Slither line:3127)
+Visibility: public
+planAmount[planNumber] = total
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+_totalSupply = _totalSupply.add(total)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+__implementation
+AddPlan(planNumber,time,total)
+onlyOwner()
+_fallback()
+isDeprecated()
+require(bool)(msg.sender == owner)
+assert(bool)(c >= a)
+_delegate(_implementation())
+c
+planNumber ++
+planTime[planNumber] = time
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+Checking function: deliverPlan(address,uint256,uint256) returns() (Slither line:3127)
+Visibility: public
+onlyOwner()
+__implementation
+isDeprecated()
+_fallback()
+require(bool)(msg.sender == owner)
+assert(bool)(c >= a)
+_delegate(_implementation())
+require(bool)(amount <= planAmount[_planNumber])
+c
+plan[investor][_planNumber] = plan[investor][_planNumber].add(amount)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+planAmount[_planNumber] = planAmount[_planNumber].sub(amount)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+assert(bool)(b <= a)
+DeliverPlan(_planNumber,amount,investor)
+a - b
+Checking function: releaseAllPlans() returns() (Slither line:3127)
+Visibility: public
+i ++
+__implementation
+balances[tx.origin] = balances[tx.origin].add(allPlanAmount)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+_fallback()
+allPlanAmount = allPlanAmount.add(_plan[tx.origin][i])
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+PlanReleased(i,_plan[tx.origin][i],tx.origin)
+delete plan[tx.origin][i]
+assert(bool)(c >= a)
+_delegate(_implementation())
+c
+isDeprecated()
+Checking function: allPlanAmount(address) returns(uint256) (Slither line:3127)
+Visibility: public
+amount
+i ++
+amount += plan[investor][i]
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+Checking function: planAmount(address,uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+plan[investor][_planNumber]
+Checking function: canRelease(uint256) returns(bool) (Slither line:3127)
+Visibility: public
+false
+true
+Checking function: constructor(uint256,string,string,uint256) returns() (Slither line:3127)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: constructor(uint256,string,string,uint256) returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: transfer(address,uint256) returns() (Slither line:3127)
+Visibility: public
+__implementation
+require(bool)(! paused)
+balances[msg.sender] = balances[msg.sender].sub(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+balances[_to] = balances[_to].add(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+_fallback()
+Transfer(msg.sender,_to,_value)
+require(bool)(! isBlackListed[msg.sender])
+super.transfer(_to,_value)
+onlyPayloadSize(2 * 32)
+whenNotPaused()
+isDeprecated()
+assert(bool)(c >= a)
+_delegate(_implementation())
+require(bool)(! (msg.data.length < size + 4))
+c
+assert(bool)(b <= a)
+a - b
+Checking function: transferFrom(address,address,uint256) returns() (Slither line:3127)
+Visibility: public
+onlyPayloadSize(3 * 32)
+require(bool)(! paused)
+__implementation
+_fallback()
+require(bool)(! isBlackListed[_from])
+super.transferFrom(_from,_to,_value)
+whenNotPaused()
+balances[_from] = balances[_from].sub(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+assert(bool)(c >= a)
+_delegate(_implementation())
+require(bool)(! (msg.data.length < size + 4))
+c
+isDeprecated()
+allowed[_from][msg.sender] = _allowance.sub(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+assert(bool)(b <= a)
+balances[_to] = balances[_to].add(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+a - b
+Transfer(_from,_to,_value)
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+balances[_owner]
+super.balanceOf(who)
+Checking function: approve(address,uint256) returns() (Slither line:3127)
+Visibility: public
+onlyPayloadSize(2 * 32)
+__implementation
+isDeprecated()
+_fallback()
+require(bool)(! ((_value != 0) && (allowed[msg.sender][_spender] != 0)))
+_delegate(_implementation())
+allowed[msg.sender][_spender] = _value
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+require(bool)(! (msg.data.length < size + 4))
+Approval(msg.sender,_spender,_value)
+onlyPayloadSize(2 * 32)
+super.approve(_spender,_value)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+super.allowance(_owner,_spender)
+allowed[_owner][_spender]
+Checking function: upgradeTo(string,address) returns() (Slither line:3127)
+Visibility: public
+size > 0
+require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+_upgradeTo(_newVersion,_newImplementation)
+require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+deprecated = true
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+Deprecate(_newImplementation)
+require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+__version = _newVersion
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+onlyOwner()
+require(bool)(msg.sender == owner)
+__implementation = _newImplementation
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+
+End CFXQ.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: CFXQ (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+__implementation is a Variable object
+_newImplementation
+Checking function: _fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: _upgradeTo (Slither line:2988)
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Begin CFXQ.find_getter_in_contract (Slither line:2974)
+
+__implementation is a Variable object
+_newImplementation
+Checking function: constructor (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable  (Slither line:3008)
+RETURN node expression: __implementation (Slither line:3028)
+
+End CFXQ.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: CFXQ (Slither line:1285)
+
+End CFXQ.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newImplementation
+impl_address_from_contract_call: StateVariable __implementation
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: SafeMath.sub
+library call: SafeMath.add
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression _fallback()
+Checking public function transfer
+Checking public function transferFrom
+Checking public function balanceOf
+Checking public function approve
+Checking public function allowance
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function totalSupply
+Checking public function issue
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function redeem
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function getBlackListStatus
+Checking public function addBlackList
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removeBlackList
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function destroyBlackFunds
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transfer
+Checking public function balanceOf
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function approveOwnership
+Checking public function transferFrom
+Checking public function approve
+Checking public function allowance
+Checking public function allowance
+Checking public function transferFrom
+Checking public function approve
+Checking public function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function addPlan
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function deliverPlan
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function releaseAllPlans
+Checking public function allPlanAmount
+Checking public function planAmount
+Checking public function canRelease
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: __implementation
+functions_writing_to_variable: checking function CFXQ.canRelease (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.addBlackList (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.addPlan (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.issue (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.approve (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.pause (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.deliverPlan (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.removeBlackList (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.upgradeTo (proxy_features line:898)
+get_value_assigned: __implementation = _newImplementation
+functions_writing_to_variable: upgradeTo writes _newImplementation to __implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function CFXQ.redeem (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.releaseAllPlans (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.destroyBlackFunds (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.allPlanAmount (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current) (proxy_features line:909)
+functions_writing_to_variable: exp = __version = _newVersion (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: __version = _newVersion (proxy_features line:912)
+functions_writing_to_variable: exp = __implementation = _newImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: __implementation = _newImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: __implementation (proxy_features line:924)
+get_value_assigned: __implementation = _newImplementation
+functions_writing_to_variable: exp = Upgraded(_newVersion,_newImplementation) (proxy_features line:909)
+functions_writing_to_variable: _upgradeTo writes _newImplementation to __implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CFXQ.approve (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.planAmount (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.approveOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.approve (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQ.getBlackListStatus (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImplementation', '_newImplementation']
+has_compatibility_checks: checking public function upgradeTo
+require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+has_compatibility_checks: condition __implementation != _newImplementation && _newImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition __implementation != _newImplementation && _newImplementation != address(0)
+require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition Address.isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+has_compatibility_checks: condition bytes(_newVersion).length > 0
+require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+has_compatibility_checks: condition keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion))
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+has_compatibility_checks: skipping internal function _upgradeTo
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found public function: constructor
+Found public function: transfer
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(_newVersion,_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) deprecated = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Deprecate(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+has_time_delay: (node.type) EXPRESSION
+(Expression) __version = _newVersion
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) EXPRESSION
+(Expression) __implementation = _newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(_newVersion,_newImplementation)
+
+Begin CFXQV1.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CFXQV1.find_delegatecall_in_exp_node
+
+Found Expression Node: releaseAllPlans() (Slither line:2802)
+Expression called: releaseAllPlans
+Type of call: tuple() (Slither line:2817)
+Args:
+
+End CFXQV1.find_delegatecall_in_exp_node (Slither line:2858)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CFXQV1.find_delegatecall_in_exp_node
+
+Found Expression Node: isDeprecated() (Slither line:2802)
+Expression called: isDeprecated
+Type of call: Modifier (Slither line:2817)
+Args:
+
+End CFXQV1.find_delegatecall_in_exp_node (Slither line:2858)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CFXQV1.find_delegatecall_in_exp_node
+
+Found Expression Node: balances[tx.origin] = balances[tx.origin].add(allPlanAmount) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: balances[tx.origin].add
+Type of call: uint256 (Slither line:2817)
+Args:
+allPlanAmount
+
+End CFXQV1.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+END_IF (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CFXQV1.find_delegatecall_in_exp_node
+
+Found Expression Node: allPlanAmount = allPlanAmount.add(_plan[tx.origin][i]) (Slither line:2802)
+Expression Type: = (Slither line:2805)
+Checking right side of assignment expression... (Slither line:2813)
+Expression called: allPlanAmount.add
+Type of call: uint256 (Slither line:2817)
+Args:
+_plan[tx.origin][i]
+
+End CFXQV1.find_delegatecall_in_exp_node (Slither line:2858)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CFXQV1.find_delegatecall_in_exp_node
+
+Found Expression Node: PlanReleased(i,_plan[tx.origin][i],tx.origin) (Slither line:2802)
+Expression called: PlanReleased
+Type of call: tuple() (Slither line:2817)
+Args:
+i
+_plan[tx.origin][i]
+tx.origin
+
+End CFXQV1.find_delegatecall_in_exp_node (Slither line:2858)
+
+BEGIN_LOOP (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin CFXQV1.find_delegatecall_in_exp_node
+
+Found Expression Node: delete plan[tx.origin][i] (Slither line:2802)
+Expression Type: delete (Slither line:2805)
+
+End CFXQV1.find_delegatecall_in_exp_node (Slither line:2858)
+
+END_LOOP (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CFXQV1.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    calldatacopy(0, 0, calldatasize()) (Slither line:1576)
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called 'implementation'
+Looking for corresponding Variable
+Current function: _delegate
+
+Begin CFXQV1.find_delegate_variable_from_name
+Searching for implementation (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking owner (Slither line:1689)
+Checking newOwner (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking _totalSupply (Slither line:1689)
+Checking balances (Slither line:1689)
+Checking allowed (Slither line:1689)
+Checking MAX_UINT (Slither line:1689)
+Checking isBlackListed (Slither line:1689)
+Checking __version (Slither line:1689)
+Checking __implementation (Slither line:1689)
+Checking name (Slither line:1689)
+Checking symbol (Slither line:1689)
+Checking decimals (Slither line:1689)
+Checking deprecated (Slither line:1689)
+Checking planNumber (Slither line:1689)
+Checking planTime (Slither line:1689)
+Checking planAmount (Slither line:1689)
+Checking plan (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking implementation (Slither line:1800)
+implementation is a Parameter in CFXQV1._delegate (Slither line:1805)
+CallExpression: releaseAllPlans() (Slither line:1819)
+AssignmentOperation: 0 (Slither line:1811)
+CallExpression: isDeprecated() (Slither line:1819)
+AssignmentOperation: balances[tx.origin].add(allPlanAmount) (Slither line:1811)
+CallExpression: balances[tx.origin].add(allPlanAmount) (Slither line:1819)
+called is a MemberAccess: balances[tx.origin].add
+called.expression = balances[tx.origin] (Slither line:1822)
+AssignmentOperation: planNumber (Slither line:1811)
+AssignmentOperation: planTime (Slither line:1811)
+AssignmentOperation: allPlanAmount.add(_plan[tx.origin][i]) (Slither line:1811)
+CallExpression: allPlanAmount.add(_plan[tx.origin][i]) (Slither line:1819)
+called is a MemberAccess: allPlanAmount.add
+called.expression = allPlanAmount (Slither line:1822)
+AssignmentOperation: plan (Slither line:1811)
+CallExpression: PlanReleased(i,_plan[tx.origin][i],tx.origin) (Slither line:1819)
+AssignmentOperation: a + b (Slither line:1811)
+CallExpression: _delegate(_implementation()) (Slither line:1819)
+Found where _delegate is called: _delegate(_implementation()) (Slither line:1832)
+The value passed to parameter #0 is _implementation() (Slither line:1835)
+
+Begin CFXQV1.find_delegate_from_call_exp
+
+_implementation() (Slither line:2003)
+called = _implementation (Slither line:2010)
+Return node of function TetherToken._implementation(): RETURN __implementation (Slither line:2041)
+__implementation (Slither line:2048)
+_implementation returns a variable of type address   called __implementation (Slither line:2193)
+
+End CFXQV1.find_delegate_from_call_exp (Slither line:2328)
+
+
+End CFXQV1.find_delegate_variable_from_name (Slither line:1949)
+
+
+End CFXQV1.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CFXQV1.is_proxy (Slither line:1476)
+
+
+Begin CFXQV1.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CFXQV1 
+CFXQV1 is delegating to __implementation
+Looking for setter (Slither line:1200)
+
+Looking for setter in UpgradeabilityProxy (Slither line:1204)
+
+
+Begin UpgradeabilityProxy.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImplementation (Slither line:3122)
+Checking function: _upgradeTo(string,address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: _fallback() returns() (Slither line:3127)
+Checking function: _delegate(address) returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+
+End UpgradeabilityProxy.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in UpgradeabilityProxy 
+Looking in CFXQV1 (Slither line:1213)
+
+Begin CFXQV1.find_setter_in_contract (Slither line:3119)
+
+Expression: _newImplementation (Slither line:3122)
+Checking function: constructor(uint256,string,string,uint256) returns() (Slither line:3127)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: slitherConstructorConstantVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: addPlan(uint256,uint256) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+__implementation
+_totalSupply = _totalSupply.add(total)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+AddPlan(planNumber,time,total)
+onlyOwner()
+isDeprecated()
+_delegate(_implementation())
+assert(bool)(c >= a)
+c
+planNumber ++
+_fallback()
+planAmount[planNumber] = total
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+planTime[planNumber] = time
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+Checking function: deliverPlan(address,uint256,uint256) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+__implementation
+isDeprecated()
+onlyOwner()
+_delegate(_implementation())
+require(bool)(amount <= planAmount[_planNumber])
+assert(bool)(c >= a)
+plan[investor][_planNumber] = plan[investor][_planNumber].add(amount)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+c
+planAmount[_planNumber] = planAmount[_planNumber].sub(amount)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+_fallback()
+DeliverPlan(_planNumber,amount,investor)
+assert(bool)(b <= a)
+a - b
+Checking function: releaseAllPlans() returns() (Slither line:3127)
+Visibility: public
+__implementation
+balances[tx.origin] = balances[tx.origin].add(allPlanAmount)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+allPlanAmount = allPlanAmount.add(_plan[tx.origin][i])
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+PlanReleased(i,_plan[tx.origin][i],tx.origin)
+delete plan[tx.origin][i]
+_delegate(_implementation())
+assert(bool)(c >= a)
+isDeprecated()
+c
+_fallback()
+i ++
+Checking function: allPlanAmount(address) returns(uint256) (Slither line:3127)
+Visibility: public
+i ++
+amount += plan[investor][i]
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+amount
+Checking function: planAmount(address,uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+plan[investor][_planNumber]
+Checking function: canRelease(uint256) returns(bool) (Slither line:3127)
+Visibility: public
+true
+false
+Checking function: constructor(uint256,string,string,uint256) returns() (Slither line:3127)
+Checking function: constructor(uint256,string,string,uint256) returns() (Slither line:3127)
+Checking function: _implementation() returns(address) (Slither line:3127)
+Visibility: internal
+Checking function: transfer(address,uint256) returns() (Slither line:3127)
+Visibility: public
+__implementation
+balances[msg.sender] = balances[msg.sender].sub(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+balances[_to] = balances[_to].add(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+require(bool)(! (msg.data.length < size + 4))
+require(bool)(! isBlackListed[msg.sender])
+Transfer(msg.sender,_to,_value)
+super.transfer(_to,_value)
+onlyPayloadSize(2 * 32)
+whenNotPaused()
+isDeprecated()
+require(bool)(! paused)
+_delegate(_implementation())
+assert(bool)(c >= a)
+c
+_fallback()
+assert(bool)(b <= a)
+a - b
+Checking function: transferFrom(address,address,uint256) returns() (Slither line:3127)
+Visibility: public
+onlyPayloadSize(3 * 32)
+__implementation
+require(bool)(! (msg.data.length < size + 4))
+require(bool)(! isBlackListed[_from])
+super.transferFrom(_from,_to,_value)
+require(bool)(! paused)
+whenNotPaused()
+balances[_from] = balances[_from].sub(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+_delegate(_implementation())
+assert(bool)(c >= a)
+allowed[_from][msg.sender] = _allowance.sub(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+isDeprecated()
+c
+_fallback()
+balances[_to] = balances[_to].add(_value)
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+assert(bool)(b <= a)
+Transfer(_from,_to,_value)
+a - b
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: public
+super.balanceOf(who)
+balances[_owner]
+Checking function: approve(address,uint256) returns() (Slither line:3127)
+Visibility: public
+__implementation
+isDeprecated()
+require(bool)(! (msg.data.length < size + 4))
+require(bool)(! ((_value != 0) && (allowed[msg.sender][_spender] != 0)))
+allowed[msg.sender][_spender] = _value
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+_delegate(_implementation())
+Approval(msg.sender,_spender,_value)
+onlyPayloadSize(2 * 32)
+_fallback()
+super.approve(_spender,_value)
+onlyPayloadSize(2 * 32)
+Checking function: allowance(address,address) returns(uint256) (Slither line:3127)
+Visibility: public
+allowed[_owner][_spender]
+super.allowance(_owner,_spender)
+Checking function: upgradeTo(string,address) returns() (Slither line:3127)
+Visibility: public
+require(bool)(msg.sender == owner)
+size > 0
+require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+_upgradeTo(_newVersion,_newImplementation)
+require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+deprecated = true
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+Deprecate(_newImplementation)
+require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+onlyOwner()
+__version = _newVersion
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+__implementation = _newImplementation
+is an Assignment Operation (Slither line:3216)
+_newImplementation
+
+End CFXQV1.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: upgradeTo in contract: CFXQV1 (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Begin UpgradeabilityProxy.find_getter_in_contract (Slither line:2974)
+
+__implementation is a Variable object
+_newImplementation
+Checking function: _fallback (Slither line:2988)
+Checking function: _delegate (Slither line:2988)
+Checking function: fallback (Slither line:2988)
+Checking function: _upgradeTo (Slither line:2988)
+
+End UpgradeabilityProxy.find_getter_in_contract (Slither line:3083)
+
+
+Begin CFXQV1.find_getter_in_contract (Slither line:2974)
+
+__implementation is a Variable object
+_newImplementation
+Checking function: fallback (Slither line:2988)
+Checking function: addPlan (Slither line:2988)
+Checking function: deliverPlan (Slither line:2988)
+Checking function: releaseAllPlans (Slither line:2988)
+Checking function: allPlanAmount (Slither line:2988)
+allPlanAmount returns uint256 variable called balance (Slither line:3008)
+RETURN node expression: amount (Slither line:3028)
+Checking function: planAmount (Slither line:2988)
+planAmount returns uint256 variable called balance (Slither line:3008)
+RETURN node expression: plan[investor][_planNumber] (Slither line:3028)
+Checking function: canRelease (Slither line:2988)
+canRelease returns bool variable  (Slither line:3008)
+RETURN node expression: true (Slither line:3028)
+RETURN node expression: false (Slither line:3028)
+Checking function: constructor (Slither line:2988)
+Checking function: constructor (Slither line:2988)
+Checking function: _implementation (Slither line:2988)
+_implementation returns address variable  (Slither line:3008)
+RETURN node expression: __implementation (Slither line:3028)
+
+End CFXQV1.find_getter_in_contract (Slither line:3083)
+
+
+Implementation retrieved by function: _implementation in contract: CFXQV1 (Slither line:1285)
+
+End CFXQV1.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _newImplementation
+impl_address_from_contract_call: StateVariable __implementation
+impl_address_from_contract_call: getter is _implementation
+getter.full_name = _implementation()
+library call: SafeMath.sub
+library call: SafeMath.add
+library call: Address.isContract
+impl_address_from_contract_call: CallExpression releaseAllPlans()
+impl_address_from_contract_call: CallExpression isDeprecated()
+impl_address_from_contract_call: CallExpression balances[tx.origin].add(allPlanAmount)
+impl_address_from_contract_call: CallExpression allPlanAmount.add(_plan[tx.origin][i])
+impl_address_from_contract_call: CallExpression PlanReleased(i,_plan[tx.origin][i],tx.origin)
+impl_address_from_contract_call: arg is i
+impl_address_from_contract_call: arg is _plan[tx.origin][i]
+impl_address_from_contract_call: arg is tx.origin
+impl_address_from_contract_call: CallExpression _delegate(_implementation())
+impl_address_from_contract_call: arg is _implementation()
+impl_address_from_contract_call: CallExpression _implementation()
+impl_address_from_contract_call: CallExpression assert(bool)(c >= a)
+impl_address_from_contract_call: arg is c >= a
+impl_address_from_contract_call: CallExpression isDeprecated()
+impl_address_from_contract_call: CallExpression _fallback()
+impl_address_from_contract_call: CallExpression require(bool)(msg.value == 0)
+impl_address_from_contract_call: arg is msg.value == 0
+Checking public function addPlan
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function deliverPlan
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function releaseAllPlans
+Checking public function allPlanAmount
+Checking public function planAmount
+Checking public function canRelease
+Checking public function transfer
+Checking public function transferFrom
+Checking public function balanceOf
+Checking public function approve
+Checking public function allowance
+Checking public function upgradeTo
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function totalSupply
+Checking public function issue
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function redeem
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function getBlackListStatus
+Checking public function addBlackList
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function removeBlackList
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function destroyBlackFunds
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function transfer
+Checking public function balanceOf
+Checking public function totalSupply
+Checking public function balanceOf
+Checking public function transfer
+Checking public function transferOwnership
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function approveOwnership
+Checking public function transferFrom
+Checking public function approve
+Checking public function allowance
+Checking public function allowance
+Checking public function transferFrom
+Checking public function approve
+Checking public function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking public function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == owner)
+Checking external function fallback
+Checking external function fallback
+functions_writing_to_variable: __implementation
+functions_writing_to_variable: checking function CFXQV1.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transferOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.deliverPlan (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1._upgradeTo (proxy_features line:898)
+functions_writing_to_variable: exp = require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string) (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current) (proxy_features line:909)
+functions_writing_to_variable: exp = __version = _newVersion (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: __version = _newVersion (proxy_features line:912)
+functions_writing_to_variable: exp = __implementation = _newImplementation (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: __implementation = _newImplementation (proxy_features line:912)
+functions_writing_to_variable: Identifier: __implementation (proxy_features line:924)
+get_value_assigned: __implementation = _newImplementation
+functions_writing_to_variable: exp = Upgraded(_newVersion,_newImplementation) (proxy_features line:909)
+functions_writing_to_variable: _upgradeTo writes _newImplementation to __implementation (proxy_features line:929)
+functions_writing_to_variable: checking function CFXQV1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.approve (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.approveOwnership (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.approve (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.getBlackListStatus (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.canRelease (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transfer (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.addBlackList (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.releaseAllPlans (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.approve (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.issue (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1._implementation (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.pause (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1._fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.slitherConstructorConstantVariables (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.removeBlackList (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.constructor (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.allowance (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.transferFrom (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.upgradeTo (proxy_features line:898)
+get_value_assigned: __implementation = _newImplementation
+functions_writing_to_variable: upgradeTo writes _newImplementation to __implementation (proxy_features line:1013)
+functions_writing_to_variable: checking function CFXQV1.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.redeem (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.totalSupply (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.allPlanAmount (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1._delegate (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.addPlan (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.destroyBlackFunds (proxy_features line:898)
+functions_writing_to_variable: checking function CFXQV1.planAmount (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_newImplementation', '_newImplementation']
+has_compatibility_checks: skipping internal function _upgradeTo
+has_compatibility_checks: checking public function upgradeTo
+require(bool)(msg.sender == owner)
+has_compatibility_checks: condition msg.sender == owner
+require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+has_compatibility_checks: condition __implementation != _newImplementation && _newImplementation != address(0)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition __implementation != _newImplementation && _newImplementation != address(0)
+require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_compatibility_checks: condition Address.isContract(_newImplementation)
+check_condition_from_expression: modifier calls: ['onlyOwner()']
+check_condition_from_expression: condition size > 0
+require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+has_compatibility_checks: condition bytes(_newVersion).length > 0
+require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+has_compatibility_checks: condition keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion))
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    calldatacopy(0, 0, calldatasize())
+    let result := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)
+    returndatacopy(0, 0, returndatasize())
+    switch result
+    case 0 {
+        revert(0, returndatasize())
+    }
+    default {
+        return(0, returndatasize())
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+Found fallback
+Found public function: addPlan
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == owner)
+has_time_delay: (node.type) RETURN
+(Expression) size > 0
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(__implementation != _newImplementation && _newImplementation != address(0),Old address is not allowed and implementation address should not be 0x)
+has_time_delay: (node.type) EXPRESSION
+(Expression) _upgradeTo(_newVersion,_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(Address.isContract(_newImplementation),Cannot set a proxy implementation to a non-contract address)
+has_time_delay: (node.type) EXPRESSION
+(Expression) deprecated = true
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(bytes(_newVersion).length > 0,Version should not be empty string)
+has_time_delay: (node.type) EXPRESSION
+(Expression) Deprecate(_newImplementation)
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool,string)(keccak256()(abi.encodePacked(__version)) != keccak256()(abi.encodePacked(_newVersion)),New version equals to current)
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) __version = _newVersion
+has_time_delay: (node.type) EXPRESSION
+(Expression) __implementation = _newImplementation
+has_time_delay: (node.type) EXPRESSION
+(Expression) Upgraded(_newVersion,_newImplementation)

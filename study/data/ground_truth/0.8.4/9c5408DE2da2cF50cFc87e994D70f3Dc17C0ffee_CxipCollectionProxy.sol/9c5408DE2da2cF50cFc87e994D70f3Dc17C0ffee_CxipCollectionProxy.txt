@@ -1,0 +1,118 @@
+
+Begin IRegistry.is_proxy (Slither line:1425)
+
+
+End IRegistry.is_proxy (Slither line:1428)
+
+
+Begin IRegistry.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: IRegistry 
+
+End IRegistry.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin CxipCollectionProxy.is_proxy (Slither line:1425)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin CxipCollectionProxy.find_delegatecall_in_asm (Slither line:1541)
+
+
+Found delegatecall in YulFunctionCall (Slither line:1563)
+Destination param is called '_target'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin CxipCollectionProxy.find_delegate_variable_from_name
+Searching for _target (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+
+Searching Local Variables (Slither line:1698)
+Checking _target (Slither line:1703)
+_target is a Local Variable in CxipCollectionProxy.fallback (Slither line:1707)
+Expression: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource() (Slither line:1719)
+
+Begin CxipCollectionProxy.find_delegate_from_call_exp
+
+IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource() (Slither line:2003)
+called = IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource (Slither line:2010)
+Called member of IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade) (Slither line:2017)
+
+Begin CxipCollectionProxy.find_delegate_from_member_access
+
+Expression: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource() (Slither line:2358)
+IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade) (Slither line:2371)
+getCollectionSource is a member of the contract type: IRegistry (Slither line:2416)
+Which is an interface (Slither line:2420)
+Could not find a contract that inherits IRegistry (Slither line:2441)
+
+End CxipCollectionProxy.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End CxipCollectionProxy.find_delegate_variable_by_name (Slither line:1739)
+
+
+End CxipCollectionProxy.find_delegatecall_in_asm (Slither line:1637)
+
+
+End CxipCollectionProxy.is_proxy (Slither line:1476)
+
+
+Begin CxipCollectionProxy.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: CxipCollectionProxy 
+Local Variable: _target (Slither line:1164)
+IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade) (Slither line:1171)
+Call destination IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource() is hidden in an interface (Slither line:1192)
+
+detect_storage_slot: CxipCollectionProxy
+Expression for _target: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource()
+Called: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource
+impl_address_from_contract_call: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource()
+called: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource
+found MemberAccess: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource
+TypeConversion: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade)
+find_registry_address_source: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource()
+MemberAccess: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource
+TypeConversion: IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade)
+Checking external function fallback
+functions_writing_to_variable: _target
+has_compatibility_checks: dependencies: ['TMP_0', 'TMP_1']
+can_toggle_delegatecall_on_off: found delegatecall in EXPRESSION node: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: calldatacopy(uint256,uint256,uint256)(0,0,calldatasize()())
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _target = IRegistry(0x3d0Ac6CDcd6252684Fa459E7A03Dd1ceaCc01Ade).getCollectionSource()
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: result_fallback_asm_0 = delegatecall(uint256,uint256,uint256,uint256,uint256,uint256)(gas()(),_target,0,calldatasize()(),0,0)
+Found fallback
