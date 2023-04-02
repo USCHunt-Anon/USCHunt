@@ -1,0 +1,1286 @@
+
+Begin BdpBaseData.is_proxy (Slither line:1425)
+
+
+End BdpBaseData.is_proxy (Slither line:1428)
+
+
+Begin BdpBaseData.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpBaseData 
+
+End BdpBaseData.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpContracts.is_proxy (Slither line:1425)
+
+
+End BdpContracts.is_proxy (Slither line:1428)
+
+
+Begin BdpContracts.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpContracts 
+
+End BdpContracts.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpEntryPoint.is_proxy (Slither line:1425)
+
+EXPRESSION (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Begin BdpEntryPoint.find_delegatecall_in_exp_node
+
+Found Expression Node: require(bool)(_impl != address(0)) (Slither line:2802)
+Expression called: require(bool)
+Type of call: tuple() (Slither line:2817)
+Args:
+_impl != address(0)
+
+End BdpEntryPoint.find_delegatecall_in_exp_node (Slither line:2858)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BdpEntryPoint.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas, _impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin BdpEntryPoint.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ownerAddress (Slither line:1689)
+Checking managerAddress (Slither line:1689)
+Checking contracts (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking setupComplete (Slither line:1689)
+Checking version (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking data (Slither line:1703)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in BdpEntryPoint.fallback (Slither line:1707)
+Expression: BdpContracts.getBdpController(contracts) (Slither line:1719)
+
+Begin BdpEntryPoint.find_delegate_from_call_exp
+
+BdpContracts.getBdpController(contracts) (Slither line:2003)
+called = BdpContracts.getBdpController (Slither line:2010)
+Called member of BdpContracts (Slither line:2017)
+
+Begin BdpEntryPoint.find_delegate_from_member_access
+
+Expression: BdpContracts.getBdpController(contracts) (Slither line:2358)
+BdpContracts (Slither line:2371)
+getBdpController is a member of the contract type: BdpContracts (Slither line:2416)
+Looking for getBdpController in BdpContracts (Slither line:2523)
+Found the function called getBdpController (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: _contracts[1] (Slither line:2544)
+Return expression is an IndexAccess on variable _contracts (Slither line:2587)
+_contracts is a LocalVariable (Slither line:2596)
+
+Begin BdpEntryPoint.find_delegate_variable_from_name
+Searching for _contracts (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ownerAddress (Slither line:1689)
+Checking managerAddress (Slither line:1689)
+Checking contracts (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking setupComplete (Slither line:1689)
+Checking version (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _contracts (Slither line:1800)
+_contracts is a Parameter in BdpContracts.getBdpController (Slither line:1805)
+CallExpression: require(bool)(_impl != address(0)) (Slither line:1819)
+AssignmentOperation: msg.data (Slither line:1811)
+AssignmentOperation: BdpContracts.getBdpController(contracts) (Slither line:1811)
+CallExpression: BdpContracts.getBdpController(contracts) (Slither line:1819)
+called is a MemberAccess: BdpContracts.getBdpController
+called.expression = BdpContracts (Slither line:1822)
+argument #0 = contracts (Slither line:1826)
+
+End BdpEntryPoint.find_delegate_variable_from_name (Slither line:1949)
+
+Found the source of _contracts's value: contracts (Slither line:2602)
+
+End BdpEntryPoint.find_delegate_from_member_access (Slither line:2645)
+
+
+End BdpEntryPoint.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End BdpEntryPoint.find_delegate_variable_by_name (Slither line:1739)
+
+
+End BdpEntryPoint.find_delegatecall_in_asm (Slither line:1637)
+
+
+End BdpEntryPoint.is_proxy (Slither line:1476)
+
+
+Begin BdpEntryPoint.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpEntryPoint 
+BdpEntryPoint is delegating to contracts
+Looking for setter (Slither line:1200)
+
+Looking for setter in BdpBaseData (Slither line:1204)
+
+
+Begin BdpBaseData.find_setter_in_contract (Slither line:3119)
+
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End BdpBaseData.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BdpBaseData 
+Looking in BdpEntryPoint (Slither line:1213)
+
+Begin BdpEntryPoint.find_setter_in_contract (Slither line:3119)
+
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: BdpEntryPoint(address[16],bytes8) returns() (Slither line:3127)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End BdpEntryPoint.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BdpEntryPoint (Slither line:1220)
+Looking for setter in BdpBase (Slither line:1228)
+
+
+Begin BdpBase.find_setter_in_contract (Slither line:3119)
+
+Checking function: setOwner(address) returns() (Slither line:3127)
+Visibility: external
+require(bool)(_newOwner != address(0))
+ownerAddress = _newOwner
+is an Assignment Operation (Slither line:3216)
+require(bool)(msg.sender == ownerAddress)
+onlyOwner()
+Checking function: setManager(address) returns() (Slither line:3127)
+Visibility: external
+managerAddress = _newManager
+is an Assignment Operation (Slither line:3216)
+onlyOwner()
+require(bool)(msg.sender == ownerAddress)
+require(bool)(_newManager != address(0))
+Checking function: setContracts(address[16]) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+require(bool)(msg.sender == ownerAddress)
+contracts = _contracts
+is an Assignment Operation (Slither line:3216)
+
+End BdpBase.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setContracts in contract: BdpBase (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: getBdpController in contract: BdpContracts (Slither line:1285)
+
+End BdpEntryPoint.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _contracts
+impl_address_from_contract_call: StateVariable contracts
+impl_address_from_contract_call: getter is getBdpController
+getter.full_name = getBdpController(address[16])
+library call: BdpContracts.getBdpController
+Found getBdpController in BdpEntryPoint.all_library_calls
+Checking public function fallback
+functions_writing_to_variable: contracts
+functions_writing_to_variable: checking function BdpBase.pause (proxy_features line:898)
+functions_writing_to_variable: checking function BdpBase.setSetupComplete (proxy_features line:898)
+functions_writing_to_variable: checking function BdpBase.setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function BdpEntryPoint.BdpEntryPoint (proxy_features line:898)
+functions_writing_to_variable: exp = ownerAddress = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: ownerAddress = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = managerAddress = msg.sender (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: managerAddress = msg.sender (proxy_features line:912)
+functions_writing_to_variable: exp = contracts = _contracts (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: contracts = _contracts (proxy_features line:912)
+functions_writing_to_variable: Identifier: contracts (proxy_features line:924)
+get_value_assigned: contracts = _contracts
+functions_writing_to_variable: exp = setupComplete = true (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: setupComplete = true (proxy_features line:912)
+functions_writing_to_variable: exp = version = _version (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: version = _version (proxy_features line:912)
+functions_writing_to_variable: BdpEntryPoint writes _contracts to contracts (proxy_features line:929)
+functions_writing_to_variable: checking function BdpBase.setContracts (proxy_features line:898)
+functions_writing_to_variable: exp = contracts = _contracts (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: contracts = _contracts (proxy_features line:912)
+functions_writing_to_variable: Identifier: contracts (proxy_features line:924)
+get_value_assigned: contracts = _contracts
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: setContracts writes _contracts to contracts (proxy_features line:929)
+functions_writing_to_variable: checking function BdpBase.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function BdpBase.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function BdpBase.kill (proxy_features line:898)
+functions_writing_to_variable: checking function BdpEntryPoint.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function BdpBase.setManager (proxy_features line:898)
+functions_writing_to_variable: checking function BdpEntryPoint.slitherConstructorVariables (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_contracts', '_contracts']
+has_compatibility_checks: skipping constructor
+has_compatibility_checks: checking external function setContracts
+require(bool)(msg.sender == ownerAddress)
+has_compatibility_checks: condition msg.sender == ownerAddress
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas, _impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = BdpContracts.getBdpController(contracts)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+Found fallback
+Found public function: BdpEntryPoint
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == ownerAddress)
+has_time_delay: (node.type) EXPRESSION
+(Expression) contracts = _contracts
+
+Begin BdpBase.is_proxy (Slither line:1425)
+
+
+End BdpBase.is_proxy (Slither line:1428)
+
+
+Begin BdpBase.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpBase 
+
+End BdpBase.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin SafeMath.is_proxy (Slither line:1425)
+
+
+End SafeMath.is_proxy (Slither line:1428)
+
+
+Begin SafeMath.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: SafeMath 
+
+End SafeMath.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpDataStorage.is_proxy (Slither line:1425)
+
+
+End BdpDataStorage.is_proxy (Slither line:1428)
+
+
+Begin BdpDataStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpDataStorage 
+
+End BdpDataStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpImageStorage.is_proxy (Slither line:1425)
+
+
+End BdpImageStorage.is_proxy (Slither line:1428)
+
+
+Begin BdpImageStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpImageStorage 
+
+End BdpImageStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpOwnershipStorage.is_proxy (Slither line:1425)
+
+
+End BdpOwnershipStorage.is_proxy (Slither line:1428)
+
+
+Begin BdpOwnershipStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpOwnershipStorage 
+
+End BdpOwnershipStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpPriceStorage.is_proxy (Slither line:1425)
+
+
+End BdpPriceStorage.is_proxy (Slither line:1428)
+
+
+Begin BdpPriceStorage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpPriceStorage 
+
+End BdpPriceStorage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpCalculator.is_proxy (Slither line:1425)
+
+
+End BdpCalculator.is_proxy (Slither line:1428)
+
+
+Begin BdpCalculator.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpCalculator 
+
+End BdpCalculator.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpImage.is_proxy (Slither line:1425)
+
+
+End BdpImage.is_proxy (Slither line:1428)
+
+
+Begin BdpImage.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpImage 
+
+End BdpImage.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpOwnership.is_proxy (Slither line:1425)
+
+
+End BdpOwnership.is_proxy (Slither line:1428)
+
+
+Begin BdpOwnership.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpOwnership 
+
+End BdpOwnership.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpCrud.is_proxy (Slither line:1425)
+
+
+End BdpCrud.is_proxy (Slither line:1428)
+
+
+Begin BdpCrud.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpCrud 
+
+End BdpCrud.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpTransfer.is_proxy (Slither line:1425)
+
+
+End BdpTransfer.is_proxy (Slither line:1428)
+
+
+Begin BdpTransfer.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpTransfer 
+
+End BdpTransfer.is_upgradeable_proxy (Slither line:1407)
+
+
+Begin BdpController.is_proxy (Slither line:1425)
+
+RETURN (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+ENTRY_POINT (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+NEW VARIABLE (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+INLINE ASM (Slither line:1433)
+
+Begin Contract.find_delegatecall_in_ir (Slither line:2737)
+
+
+End Contract.find_delegatecall_in_ir (Slither line:2773)
+
+
+Found Assembly Node (Slither line:1447)
+
+
+Begin BdpController.find_delegatecall_in_asm (Slither line:1541)
+
+{ (Slither line:1576)
+    let result := delegatecall(gas, _impl, add(data, 0x20), mload(data), 0, 0) (Slither line:1576)
+
+Found delegatecall in inline asm (Slither line:1622)
+Destination param is called '_impl'
+Looking for corresponding Variable
+Current function: fallback
+
+Begin BdpController.find_delegate_variable_from_name
+Searching for _impl (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ownerAddress (Slither line:1689)
+Checking managerAddress (Slither line:1689)
+Checking contracts (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking setupComplete (Slither line:1689)
+Checking version (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+Checking data (Slither line:1703)
+Checking _impl (Slither line:1703)
+_impl is a Local Variable in BdpController.fallback (Slither line:1707)
+Expression: BdpContracts.getBdpControllerHelper(contracts) (Slither line:1719)
+
+Begin BdpController.find_delegate_from_call_exp
+
+BdpContracts.getBdpControllerHelper(contracts) (Slither line:2003)
+called = BdpContracts.getBdpControllerHelper (Slither line:2010)
+Called member of BdpContracts (Slither line:2017)
+
+Begin BdpController.find_delegate_from_member_access
+
+Expression: BdpContracts.getBdpControllerHelper(contracts) (Slither line:2358)
+BdpContracts (Slither line:2371)
+getBdpControllerHelper is a member of the contract type: BdpContracts (Slither line:2416)
+Looking for getBdpControllerHelper in BdpContracts (Slither line:2523)
+Found the function called getBdpControllerHelper (Slither line:2527)
+Returns a variable of type address (Slither line:2532)
+Found RETURN node: _contracts[3] (Slither line:2544)
+Return expression is an IndexAccess on variable _contracts (Slither line:2587)
+_contracts is a LocalVariable (Slither line:2596)
+
+Begin BdpController.find_delegate_variable_from_name
+Searching for _contracts (Slither line:1674)
+
+Searching State Variables (Slither line:1687)
+Checking ownerAddress (Slither line:1689)
+Checking managerAddress (Slither line:1689)
+Checking contracts (Slither line:1689)
+Checking paused (Slither line:1689)
+Checking setupComplete (Slither line:1689)
+Checking version (Slither line:1689)
+
+Searching Local Variables (Slither line:1698)
+
+Searching Parameter Variables (Slither line:1797)
+Checking _contracts (Slither line:1800)
+_contracts is a Parameter in BdpContracts.getBdpControllerHelper (Slither line:1805)
+AssignmentOperation: msg.data (Slither line:1811)
+AssignmentOperation: BdpContracts.getBdpControllerHelper(contracts) (Slither line:1811)
+CallExpression: BdpContracts.getBdpControllerHelper(contracts) (Slither line:1819)
+called is a MemberAccess: BdpContracts.getBdpControllerHelper
+called.expression = BdpContracts (Slither line:1822)
+argument #0 = contracts (Slither line:1826)
+
+End BdpController.find_delegate_variable_from_name (Slither line:1949)
+
+Found the source of _contracts's value: contracts (Slither line:2602)
+
+End BdpController.find_delegate_from_member_access (Slither line:2645)
+
+
+End BdpController.find_delegate_from_call_exp (Slither line:2019)
+
+Call Expression
+End BdpController.find_delegate_variable_by_name (Slither line:1739)
+
+
+End BdpController.find_delegatecall_in_asm (Slither line:1637)
+
+
+End BdpController.is_proxy (Slither line:1476)
+
+
+Begin BdpController.is_upgradeable_proxy (Slither line:1136)
+
+Checking contract: BdpController 
+BdpController is delegating to contracts
+Looking for setter (Slither line:1200)
+
+Looking for setter in BdpBaseData (Slither line:1204)
+
+
+Begin BdpBaseData.find_setter_in_contract (Slither line:3119)
+
+Expression: _contracts (Slither line:3122)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+
+End BdpBaseData.find_setter_in_contract (Slither line:3345)
+
+
+Could not find setter in BdpBaseData 
+Looking in BdpController (Slither line:1213)
+
+Begin BdpController.find_setter_in_contract (Slither line:3119)
+
+Expression: _contracts (Slither line:3122)
+Checking function: name() returns(string) (Slither line:3127)
+Visibility: external
+The Billion Dollar Picture
+Checking function: symbol() returns(string) (Slither line:3127)
+Visibility: external
+BDP
+Checking function: tokenURI(uint256) returns(string) (Slither line:3127)
+Visibility: external
+tokenURIBytes[37] = bytes1(48 + (_tokenId / 1000) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+tokenURIBytes[34] = bytes1(48 + (_tokenId / 1000000) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+tokenURIBytes[38] = bytes1(48 + (_tokenId / 100) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+_tokenURI = https://www.billiondollarpicture.com/#0000000
+is an Assignment Operation (Slither line:3216)
+_contracts
+tokenURIBytes[35] = bytes1(48 + (_tokenId / 100000) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+tokenURIBytes[39] = bytes1(48 + (_tokenId / 10) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+tokenURIBytes[36] = bytes1(48 + (_tokenId / 10000) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+tokenURIBytes[40] = bytes1(48 + (_tokenId / 1) % 10)
+is an Assignment Operation (Slither line:3216)
+_contracts
+Checking function: createRegion(uint256,uint256,uint256,uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+ownStorage.setTokenIdsIndex(_tokenId,tokenIdsLength.sub(1))
+require(bool)(_x2 < 1000 && _x1 <= _x2)
+ownStorage.pushOwnedToken(_to,_tokenId)
+require(bool)(_y2 < 1000 && _y1 <= _y2)
+ownStorage.setOwnedTokensIndex(_tokenId,ownedTokensLength)
+_contracts[6]
+ownStorage.incrementOwnedArea(_to,area)
+(area) = BdpCalculator.calculateArea(_contracts,_tokenId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+dataStorage.setRegionCoordinates(regionId,_x1,_y1,_x2,_y2)
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(_to != address(0))
+dataStorage.setRegionBlockUpdatedAt(regionId,block.number)
+_contracts[4]
+addToken(_contracts,_to,_tokenId)
+dataStorage.setRegionUpdatedAt(regionId,block.timestamp)
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+BdpCrud.createRegion(contracts,msg.sender,_x1,_y1,_x2,_y2)
+Transfer(address(0),_to,_tokenId)
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(msg.sender == ownerAddress || msg.sender == managerAddress)
+BdpOwnership.mint(_contracts,_to,regionId)
+require(bool)(ownStorage.getTokenOwner(_tokenId) == address(0))
+onlyAuthorized()
+regionId
+ownStorage.setTokenOwner(_tokenId,_to)
+assert(bool)(b <= a)
+a - b
+Checking function: deleteRegion(uint256) returns(uint256) (Slither line:3127)
+Visibility: public
+dataStorage.deleteRegionData(_regionId)
+clearApproval(_contracts,owner,_tokenId)
+removeToken(_contracts,owner,_tokenId)
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(_contracts)).setTokenApproval(_tokenId,0)
+Transfer(owner,address(0),_tokenId)
+Approval(_owner,0,_tokenId)
+_contracts[6]
+ownStorage.decrementOwnedArea(_from,area)
+_ownStorage.setTokenIdByIndex(tokenIndex,lastTokenId)
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(owner != address(0))
+BdpCrud.deleteRegion(contracts,_regionId)
+_ownStorage.setTokenIdByIndex(lastTokenIdIndex,0)
+owner
+_ownStorage.setOwnedTokensIndex(lastOwnedToken,ownedTokenIndex)
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+_contracts[4]
+_ownStorage.decrementTokenIdsLength()
+require(bool)(ownerOf(_contracts,_tokenId) == _from)
+onlyAuthorized()
+_ownStorage.setOwnedToken(_from,ownedTokenIndex,lastOwnedToken)
+a - b
+_ownStorage.setTokenIdsIndex(_tokenId,0)
+_ownStorage.setOwnedToken(_from,lastOwnedTokenIndex,0)
+ownStorage.setTokenOwner(_tokenId,0)
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(msg.sender == ownerAddress || msg.sender == managerAddress)
+_ownStorage.setTokenIdsIndex(lastTokenId,tokenIndex)
+removeFromTokenIds(ownStorage,_tokenId)
+_ownStorage.decrementOwnedTokensLength(_from)
+require(bool)(ownerOf(_contracts,_tokenId) == _owner)
+_ownStorage.setOwnedTokensIndex(_tokenId,0)
+require(bool)(regionPurchasePixelPrice == 0)
+removeFromOwnedToken(ownStorage,_from,_tokenId)
+assert(bool)(b <= a)
+BdpOwnership.burn(_contracts,_regionId)
+(area) = BdpCalculator.calculateArea(_contracts,_tokenId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+Checking function: setupRegion(uint256,uint256,uint256[],bool,uint8[128]) returns() (Slither line:3127)
+Visibility: public
+purchasedAt + 86400
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+_dataStorage.setRegionCurrentImageId(_regionId,_imageId)
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+_dataStorage.setRegionCurrentImageId(_regionId,nextImageId)
+imageStorage.setImageCurrentRegionId(_imageId,_regionId)
+imageStorage.setImageCurrentRegionId(nextImageId,_regionId)
+_dataStorage.setRegionNextImageId(_regionId,0)
+_dataStorage.setRegionCurrentImageId(_regionId,0)
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+(width,height) = BdpCalculator.calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+(updatedAt,purchasedAt) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionUpdatedAtPurchasedAt(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+imageStorage.setImageData(imageId,1,_imageData)
+_dataStorage.setRegionCurrentImageId(_regionId,imageId)
+imageStorage.setImageCurrentRegionId(imageId,_regionId)
+require(bool)((_imageId == 0 && _imageData.length == 0 && ! _swapImages && ! _clearImage) || (_imageId != 0 && _imageData.length == 0 && ! _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length != 0 && ! _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length == 0 && _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length == 0 && ! _swapImages && _clearImage))
+0
+require(bool)(_imageId == 0 || ((msg.sender == imageStorage.getImageOwner(_imageId)) && (imageStorage.getImageCurrentRegionId(_imageId) == 0)))
+_contracts[5]
+BdpCrud.setupRegion(contracts,_regionId,_imageId,_imageData,_swapImages,_url)
+require(bool)(! _swapImages || imageStorage.imageUploadComplete(nextImageId))
+whenContractActive()
+_contracts[6]
+require(bool)(BdpOwnership.ownerOf(_contracts,_regionId) == msg.sender)
+require(bool)(_imageId != 0 || _imageData.length != 0 || _swapImages || _url.length != 0)
+require(bool)(block.timestamp < BdpCalculator.calculateSetupAllowedUntil(_contracts,_regionId))
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+BdpImage.checkImageInput(_contracts,_regionId,_imageId,_imageData,_swapImages,false)
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+_updateRegionImage(_contracts,dataStorage,_regionId,_imageId,_imageData,_swapImages,false)
+_updateRegionUrl(dataStorage,_regionId,_url,false)
+dataStorage.setRegionBlockUpdatedAt(_regionId,block.number)
+dataStorage.setRegionUpdatedAt(_regionId,block.timestamp)
+_dataStorage.setRegionUrl(_regionId,_url)
+_dataStorage.setRegionUrl(_regionId,emptyUrl)
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(owner != address(0))
+require(bool)(! paused && setupComplete)
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+owner
+_contracts[4]
+Checking function: updateRegion(uint256,uint256,uint256[],bool,bool,uint8[128],bool,address) returns() (Slither line:3127)
+Visibility: public
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(_contracts)).setTokenApproval(_tokenId,0)
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+_dataStorage.setRegionCurrentImageId(_regionId,_imageId)
+_count += area
+is an Assignment Operation (Slither line:3216)
+_contracts
+Approval(_owner,0,_tokenId)
+calculateMarketPixelPrice(_contracts,countPurchasedPixels(_contracts))
+(area) = calculateArea(_contracts,i)
+is an Assignment Operation (Slither line:3216)
+_contracts
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+_dataStorage.setRegionCurrentImageId(_regionId,nextImageId)
+imageStorage.setImageCurrentRegionId(_imageId,_regionId)
+imageStorage.setImageCurrentRegionId(nextImageId,_regionId)
+_ownStorage.setTokenIdByIndex(tokenIndex,lastTokenId)
+_dataStorage.setRegionNextImageId(_regionId,0)
+_ownStorage.setTokenIdByIndex(lastTokenIdIndex,0)
+_ownStorage.setOwnedTokensIndex(lastOwnedToken,ownedTokenIndex)
+_ownStorage.decrementTokenIdsLength()
+a - b
+_ownStorage.setTokenIdsIndex(_tokenId,0)
+require(bool)(ownStorage.getTokenOwner(_tokenId) == address(0))
+_ownStorage.setTokenIdsIndex(lastTokenId,tokenIndex)
+require(bool)(msg.value >= _updateFee)
+ownStorage.setTokenOwner(_tokenId,_to)
+_dataStorage.setRegionCurrentImageId(_regionId,0)
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+imageStorage.setImageCurrentRegionId(currentImageId,0)
+(width,height) = BdpCalculator.calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(BdpOwnership.ownerOf(_contracts,_regionId) == msg.sender)
+ownStorage.setTokenIdsIndex(_tokenId,tokenIdsLength.sub(1))
+BdpImage.checkImageInput(_contracts,_regionId,_imageId,_imageData,_swapImages,_clearImage)
+msg.sender.transfer(change)
+ownStorage.pushOwnedToken(_to,_tokenId)
+divPoint
+ownStorage.setOwnedTokensIndex(_tokenId,ownedTokensLength)
+require(bool)(regionCurrentPixelPrice != 0)
+ownStorage.incrementOwnedArea(_to,area)
+(area) = BdpCalculator.calculateArea(_contracts,_tokenId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+divPoint + mod * (BdpPriceStorage(BdpContracts.getBdpPriceStorage(_contracts)).getPricePoint(div + 1) - divPoint) * (pricePointsLength - 1) / 1000000
+imageStorage.setImageData(imageId,1,_imageData)
+_processUpdateFee(_contracts,marketPixelPrice * area / 20)
+_dataStorage.setRegionCurrentImageId(_regionId,imageId)
+forwardUpdateFeesTo.transfer(_updateFee)
+_ownStorage.setOwnedToken(_from,ownedTokenIndex,lastOwnedToken)
+(area) = BdpCalculator.calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+imageStorage.setImageCurrentRegionId(imageId,_regionId)
+_ownStorage.setOwnedToken(_from,lastOwnedTokenIndex,0)
+_ownStorage.decrementOwnedTokensLength(_from)
+require(bool)((_imageId == 0 && _imageData.length == 0 && ! _swapImages && ! _clearImage) || (_imageId != 0 && _imageData.length == 0 && ! _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length != 0 && ! _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length == 0 && _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length == 0 && ! _swapImages && _clearImage))
+require(bool)(ownerOf(_contracts,_tokenId) == _owner)
+_ownStorage.setOwnedTokensIndex(_tokenId,0)
+require(bool)(_imageId == 0 || ((msg.sender == imageStorage.getImageOwner(_imageId)) && (imageStorage.getImageCurrentRegionId(_imageId) == 0)))
+_updateRegionImage(_contracts,dataStorage,_regionId,_imageId,_imageData,_swapImages,_clearImage)
+require(bool)(_to != address(0))
+_updateRegionUrl(dataStorage,_regionId,_url,_deleteUrl)
+_contracts[5]
+require(bool)(_to != ownerOf(_contracts,_tokenId))
+_updateRegionOwner(_contracts,_regionId,_newOwner)
+require(bool)(ownerOf(_contracts,_tokenId) == _from)
+require(bool)(! _swapImages || imageStorage.imageUploadComplete(nextImageId))
+clearApproval(_contracts,_from,_tokenId)
+dataStorage.setRegionBlockUpdatedAt(_regionId,block.number)
+removeToken(_contracts,_from,_tokenId)
+dataStorage.setRegionCurrentPixelPrice(_regionId,marketPixelPrice)
+addToken(_contracts,_to,_tokenId)
+_contracts[6]
+Transfer(_from,_to,_tokenId)
+dataStorage.setRegionUpdatedAt(_regionId,block.timestamp)
+require(bool)(ownerOf(_contracts,_tokenId) == _from)
+BdpOwnership.clearApprovalAndTransfer(_contracts,msg.sender,_newOwner,_regionId)
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+_contracts[7]
+ownStorage.setTokenOwner(_tokenId,0)
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+removeFromTokenIds(ownStorage,_tokenId)
+removeFromOwnedToken(ownStorage,_from,_tokenId)
+BdpCrud.updateRegion(contracts,_regionId,_imageId,_imageData,_swapImages,_clearImage,_url,_deleteUrl,_newOwner)
+ownStorage.decrementOwnedArea(_from,area)
+(area) = BdpCalculator.calculateArea(_contracts,_tokenId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+whenContractActive()
+_dataStorage.setRegionUrl(_regionId,_url)
+_dataStorage.setRegionUrl(_regionId,emptyUrl)
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(owner != address(0))
+require(bool)(! paused && setupComplete)
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+owner
+_contracts[4]
+assert(bool)(b <= a)
+i ++
+Checking function: updateRegionPixelPrice(uint256,uint256) returns() (Slither line:3127)
+Visibility: public
+require(bool)(BdpOwnership.ownerOf(_contracts,_regionId) == msg.sender)
+_count += area
+is an Assignment Operation (Slither line:3216)
+_contracts
+msg.sender.transfer(change)
+calculateMarketPixelPrice(_contracts,countPurchasedPixels(_contracts))
+(area) = calculateArea(_contracts,i)
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(regionCurrentPixelPrice != 0)
+divPoint
+_contracts[6]
+divPoint + mod * (BdpPriceStorage(BdpContracts.getBdpPriceStorage(_contracts)).getPricePoint(div + 1) - divPoint) * (pricePointsLength - 1) / 1000000
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(owner != address(0))
+require(bool)(! paused && setupComplete)
+require(bool)(_pixelPrice >= marketPixelPrice)
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+owner
+_processUpdateFee(_contracts,_pixelPrice * area / 20)
+forwardUpdateFeesTo.transfer(_updateFee)
+_contracts[4]
+i ++
+(area) = BdpCalculator.calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+_contracts[7]
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(msg.value >= _updateFee)
+BdpCrud.updateRegionPixelPrice(contracts,_regionId,_pixelPrice)
+whenContractActive()
+dataStorage.setRegionCurrentPixelPrice(_regionId,_pixelPrice)
+Checking function: checkImageInput(uint256,uint256,uint256[],bool,bool) returns() (Slither line:3127)
+Visibility: public
+_contracts[5]
+require(bool)((_imageId == 0 && _imageData.length == 0 && ! _swapImages && ! _clearImage) || (_imageId != 0 && _imageData.length == 0 && ! _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length != 0 && ! _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length == 0 && _swapImages && ! _clearImage) || (_imageId == 0 && _imageData.length == 0 && ! _swapImages && _clearImage))
+_contracts[4]
+require(bool)(_imageId == 0 || ((msg.sender == imageStorage.getImageOwner(_imageId)) && (imageStorage.getImageCurrentRegionId(_imageId) == 0)))
+require(bool)(! _swapImages || imageStorage.imageUploadComplete(nextImageId))
+BdpImage.checkImageInput(contracts,_regionId,_imageId,_imageData,_swapImages,_clearImage)
+Checking function: setNextImagePart(uint256,uint16,uint16,uint16,uint256[]) returns() (Slither line:3127)
+Visibility: public
+_contracts[5]
+require(bool)(_imageData.length != 0)
+BdpImage.setNextImagePart(contracts,_regionId,_part,_partsCount,_imageDescriptor,_imageData)
+dataStorage.setRegionNextImageId(_regionId,nextImageId)
+require(bool)(_part > 0)
+whenContractActive()
+require(bool)(_part <= _partsCount)
+_contracts[6]
+imageStorage.setImageData(nextImageId,_part,_imageData)
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(owner != address(0))
+require(bool)(! paused && setupComplete)
+nextImageId = imageStorage.createImage(msg.sender,_regionId,uint16(width),uint16(height),_partsCount,_imageDescriptor)
+is an Assignment Operation (Slither line:3216)
+_contracts
+owner
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+(width,height) = BdpCalculator.calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+_contracts[4]
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(BdpOwnership.ownerOf(_contracts,_regionId) == msg.sender)
+Checking function: ownerOf(uint256) returns(address) (Slither line:3127)
+Visibility: external
+require(bool)(owner != address(0))
+BdpOwnership.ownerOf(contracts,_tokenId)
+owner
+_contracts[6]
+Checking function: totalSupply() returns(uint256) (Slither line:3127)
+Visibility: external
+_contracts[6]
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(contracts)).getTokenIdsLength()
+Checking function: balanceOf(address) returns(uint256) (Slither line:3127)
+Visibility: external
+_contracts[6]
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(_contracts)).getOwnedTokensLength(_owner)
+BdpOwnership.balanceOf(contracts,_owner)
+Checking function: tokenOfOwnerByIndex(address,uint256) returns(uint256) (Slither line:3127)
+Visibility: external
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(contracts)).getOwnedToken(_owner,_index)
+_contracts[6]
+Checking function: tokenByIndex(uint256) returns(uint256) (Slither line:3127)
+Visibility: external
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(contracts)).getTokenIdByIndex(_index)
+_contracts[6]
+Checking function: getOwnedArea(address) returns(uint256) (Slither line:3127)
+Visibility: public
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(contracts)).getOwnedArea(_owner)
+_contracts[6]
+Checking function: purchase(uint256) returns() (Slither line:3127)
+Visibility: external
+BdpOwnershipStorage(BdpContracts.getBdpOwnershipStorage(_contracts)).setTokenApproval(_tokenId,0)
+Approval(_owner,0,_tokenId)
+_count += area
+is an Assignment Operation (Slither line:3216)
+_contracts
+pixelPrice * 3
+(area) = calculateArea(_contracts,i)
+is an Assignment Operation (Slither line:3216)
+_contracts
+calculateRegionInitialSalePixelPrice(_contracts,_regionId)
+_ownStorage.setTokenIdByIndex(tokenIndex,lastTokenId)
+_ownStorage.setTokenIdByIndex(lastTokenIdIndex,0)
+_ownStorage.decrementTokenIdsLength()
+a - b
+BdpTransfer.purchase(contracts,_regionId)
+_ownStorage.setTokenIdsIndex(_tokenId,0)
+require(bool)(ownStorage.getTokenOwner(_tokenId) == address(0))
+_ownStorage.setTokenIdsIndex(lastTokenId,tokenIndex)
+whenContractActive()
+ownStorage.setTokenOwner(_tokenId,_to)
+ownStorage.setTokenIdsIndex(_tokenId,tokenIdsLength.sub(1))
+(area) = BdpCalculator.calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+ownStorage.pushOwnedToken(_to,_tokenId)
+ownStorage.setOwnedTokensIndex(_tokenId,ownedTokensLength)
+divPoint
+ownStorage.incrementOwnedArea(_to,area)
+(area) = BdpCalculator.calculateArea(_contracts,_tokenId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+divPoint + mod * (BdpPriceStorage(BdpContracts.getBdpPriceStorage(_contracts)).getPricePoint(div + 1) - divPoint) * (pricePointsLength - 1) / 1000000
+require(bool)(msg.value >= regionPrice)
+_ownStorage.setOwnedToken(_from,ownedTokenIndex,lastOwnedToken)
+BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).setRegionCurrentPixelPrice(_regionId,pixelPrice)
+_ownStorage.setOwnedToken(_from,lastOwnedTokenIndex,0)
+_ownStorage.decrementOwnedTokensLength(_from)
+require(bool)(ownerOf(_contracts,_tokenId) == _owner)
+_ownStorage.setOwnedTokensIndex(_tokenId,0)
+msg.sender.transfer(change)
+_ownStorage.setOwnedTokensIndex(lastOwnedToken,ownedTokenIndex)
+require(bool)(_to != address(0))
+require(bool)(_to != ownerOf(_contracts,_tokenId))
+calculateAveragePixelPrice(_contracts,purchasedPixels,purchasedPixels + area)
+BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).setRegionBlockUpdatedAt(_regionId,block.number)
+require(bool)(ownerOf(_contracts,_tokenId) == _from)
+(area) = calculateArea(_contracts,_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).setRegionUpdatedAt(_regionId,block.timestamp)
+clearApproval(_contracts,_from,_tokenId)
+BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).setRegionPurchasedAt(_regionId,block.timestamp)
+removeToken(_contracts,_from,_tokenId)
+BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).setRegionPurchasedPixelPrice(_regionId,pixelPrice)
+addToken(_contracts,_to,_tokenId)
+_contracts[6]
+BdpOwnership.clearApprovalAndTransfer(_contracts,BdpOwnership.ownerOf(_contracts,_regionId),msg.sender,_regionId)
+Transfer(_from,_to,_tokenId)
+require(bool)(ownerOf(_contracts,_tokenId) == _from)
+_width = x2 - x1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+_contracts[7]
+ownStorage.setTokenOwner(_tokenId,0)
+(x1,y1,x2,y2) = BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionCoordinates(_regionId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+BdpOwnership.ownerOf(_contracts,_regionId).transfer(etherToPreviousOwner)
+removeFromTokenIds(ownStorage,_tokenId)
+removeFromOwnedToken(ownStorage,_from,_tokenId)
+ownStorage.decrementOwnedArea(_from,area)
+(area) = BdpCalculator.calculateArea(_contracts,_tokenId)
+is an Assignment Operation (Slither line:3216)
+_contracts
+_price = (calculateMarketPixelPrice(_contracts,_a) + calculateMarketPixelPrice(_contracts,_b)) / 2
+is an Assignment Operation (Slither line:3216)
+_contracts
+forwardUpdateFeesTo.transfer(regionPrice - etherToPreviousOwner)
+_height = y2 - y1 + 1
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(owner != address(0))
+require(bool)(! paused && setupComplete)
+_area = _width * _height
+is an Assignment Operation (Slither line:3216)
+_contracts
+owner
+_contracts[4]
+i ++
+forwardPurchaseFeesTo.transfer(regionPrice)
+require(bool)(BdpDataStorage(BdpContracts.getBdpDataStorage(_contracts)).getRegionUpdatedAt(_regionId) > 0)
+assert(bool)(b <= a)
+Checking function: withdrawBalance() returns() (Slither line:3127)
+Visibility: external
+ownerAddress.transfer(this.balance)
+onlyOwner()
+require(bool)(msg.sender == ownerAddress)
+Checking function: fallback() returns() (Slither line:3127)
+Checking function: BdpController(bytes8) returns() (Slither line:3127)
+Checking function: slitherConstructorVariables() returns() (Slither line:3127)
+Visibility: internal
+Checking function: setOwner(address) returns() (Slither line:3127)
+Visibility: external
+require(bool)(_newOwner != address(0))
+ownerAddress = _newOwner
+is an Assignment Operation (Slither line:3216)
+_contracts
+require(bool)(msg.sender == ownerAddress)
+onlyOwner()
+Checking function: setManager(address) returns() (Slither line:3127)
+Visibility: external
+managerAddress = _newManager
+is an Assignment Operation (Slither line:3216)
+_contracts
+onlyOwner()
+require(bool)(msg.sender == ownerAddress)
+require(bool)(_newManager != address(0))
+Checking function: setContracts(address[16]) returns() (Slither line:3127)
+Visibility: external
+onlyOwner()
+contracts = _contracts
+is an Assignment Operation (Slither line:3216)
+_contracts
+
+End BdpController.find_setter_in_contract (Slither line:3345)
+
+
+Implementation set by function: setContracts in contract: BdpController (Slither line:1264)
+Looking for getter (Slither line:1273)
+
+
+Implementation retrieved by function: getBdpControllerHelper in contract: BdpContracts (Slither line:1285)
+
+End BdpController.is_upgradeable_proxy (Slither line:1293)
+
+impl_address_from_contract_call: _contracts
+impl_address_from_contract_call: StateVariable contracts
+impl_address_from_contract_call: getter is getBdpControllerHelper
+getter.full_name = getBdpControllerHelper(address[16])
+library call: BdpImage.setNextImagePart
+library call: BdpOwnership.balanceOf
+library call: BdpCalculator.calculateArea
+library call: BdpCalculator.calculateCurrentMarketPixelPrice
+library call: BdpCrud.setupRegion
+library call: BdpContracts.getBdpControllerHelper
+Found getBdpControllerHelper in BdpController.all_library_calls
+Checking external function setOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setManager
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setContracts
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress || msg.sender == managerAddress)
+Checking external function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setSetupComplete
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking public function kill
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setOwner
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setManager
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setContracts
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function pause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress || msg.sender == managerAddress)
+Checking external function unpause
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function setSetupComplete
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking public function kill
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking external function name
+Checking external function symbol
+Checking external function tokenURI
+Checking public function createRegion
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress || msg.sender == managerAddress)
+Checking public function deleteRegion
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress || msg.sender == managerAddress)
+Checking public function setupRegion
+Found 'msg.sender ==' in expression: require(bool)(_imageId == 0 || ((msg.sender == imageStorage.getImageOwner(_imageId)) && (imageStorage.getImageCurrentRegionId(_imageId) == 0)))
+Checking public function updateRegion
+Found 'msg.sender ==' in expression: require(bool)(_imageId == 0 || ((msg.sender == imageStorage.getImageOwner(_imageId)) && (imageStorage.getImageCurrentRegionId(_imageId) == 0)))
+Checking public function updateRegionPixelPrice
+Checking public function checkImageInput
+Found 'msg.sender ==' in expression: require(bool)(_imageId == 0 || ((msg.sender == imageStorage.getImageOwner(_imageId)) && (imageStorage.getImageCurrentRegionId(_imageId) == 0)))
+Checking public function setNextImagePart
+Checking external function ownerOf
+Checking external function totalSupply
+Checking external function balanceOf
+Checking external function tokenOfOwnerByIndex
+Checking external function tokenByIndex
+Checking public function getOwnedArea
+Checking external function purchase
+Checking external function withdrawBalance
+Found 'msg.sender ==' in expression: require(bool)(msg.sender == ownerAddress)
+Checking public function fallback
+functions_writing_to_variable: contracts
+functions_writing_to_variable: checking function BdpController.pause (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.balanceOf (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.setupRegion (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.BdpController (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.tokenOfOwnerByIndex (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.updateRegion (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.name (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.tokenByIndex (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.updateRegionPixelPrice (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.fallback (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.unpause (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.setOwner (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.symbol (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.getOwnedArea (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.checkImageInput (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.setSetupComplete (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.setManager (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.slitherConstructorVariables (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.tokenURI (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.purchase (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.setNextImagePart (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.kill (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.createRegion (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.withdrawBalance (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.ownerOf (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.setContracts (proxy_features line:898)
+functions_writing_to_variable: exp = contracts = _contracts (proxy_features line:909)
+functions_writing_to_variable: AssignmentOperation: contracts = _contracts (proxy_features line:912)
+functions_writing_to_variable: Identifier: contracts (proxy_features line:924)
+get_value_assigned: contracts = _contracts
+functions_writing_to_variable: exp = onlyOwner() (proxy_features line:909)
+functions_writing_to_variable: exp = require(bool)(msg.sender == ownerAddress) (proxy_features line:909)
+functions_writing_to_variable: setContracts writes _contracts to contracts (proxy_features line:929)
+functions_writing_to_variable: checking function BdpController.deleteRegion (proxy_features line:898)
+functions_writing_to_variable: checking function BdpController.totalSupply (proxy_features line:898)
+has_compatibility_checks: dependencies: ['_contracts']
+has_compatibility_checks: checking external function setContracts
+require(bool)(msg.sender == ownerAddress)
+has_compatibility_checks: condition msg.sender == ownerAddress
+can_toggle_delegatecall_on_off: found delegatecall in ASSEMBLY node: {
+    let result := delegatecall(gas, _impl, add(data, 0x20), mload(data), 0, 0)
+    let size := returndatasize
+    let ptr := mload(0x40)
+    returndatacopy(ptr, 0, size)
+    switch result
+    case 0 {
+        revert(ptr, size)
+    }
+    default {
+        return(ptr, size)
+    }
+}
+can_toggle_delegatecall_on_off:
+ dominator node type: ENTRY_POINT
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: data = msg.data
+can_toggle_delegatecall_on_off:
+ dominator node type: NEW VARIABLE
+ dominator expression: _impl = BdpContracts.getBdpControllerHelper(contracts)
+can_toggle_delegatecall_on_off:
+ dominator node type: INLINE ASM
+ dominator expression: None
+can_toggle_delegatecall_on_off:
+ dominator node type: EXPRESSION
+ dominator expression: require(bool)(_impl != address(0))
+Found external function: setOwner
+has_time_delay: (node.type) EXPRESSION
+(Expression) onlyOwner()
+has_time_delay: (node.type) EXPRESSION
+(Expression) contracts = _contracts
+has_time_delay: (node.type) EXPRESSION
+(Expression) require(bool)(msg.sender == ownerAddress)
